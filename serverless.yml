@@ -1,0 +1,203 @@
+service: ai-services-multi
+
+provider:
+  name: aws
+  region: ${env:AWS_REGION, 'ap-south-1'}
+  stage: ${env:STAGE}
+  memorySize: 1024
+  timeout: 29
+
+  
+  logs:
+    lambda: false
+
+  environment:
+    OPENAI_API_KEY: ${env:OPENAI_API_KEY}
+    PINECONE_API_KEY: ${env:PINECONE_API_KEY}
+    PYTHONIOENCODING: "utf-8"
+    PINECONE_INDEX_NAME: ${env:PINECONE_INDEX_NAME}
+    EMBED_MODEL: ${env:EMBED_MODEL}
+    GEMINI_API_KEY: ${env:GEMINI_API_KEY}
+    MCQ_QUEUE_URL: !Ref McqGenerationQueue
+
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "s3:GetObject"
+            - "s3:PutObject"
+            - "s3:ListBucket"
+          Resource: "*"
+
+        - Effect: "Allow"
+          Action:
+            - "logs:CreateLogGroup"
+            - "logs:CreateLogStream"
+            - "logs:PutLogEvents"
+          Resource: "arn:aws:logs:*:*:*"
+
+        - Effect: "Allow"
+          Action:
+            - "secretsmanager:GetSecretValue"
+          Resource: "*"
+
+        - Effect: "Allow"
+          Action:
+            - "sqs:SendMessage"
+            - "sqs:ReceiveMessage"
+            - "sqs:DeleteMessage"
+            - "sqs:GetQueueAttributes"
+            - "sqs:GetQueueUrl"
+          Resource:
+            - !GetAtt McqGenerationQueue.Arn
+
+functions:
+  generateMcqs:
+    name: generate-mcqs-${self:provider.stage}
+    image: 471112784201.dkr.ecr.ap-south-1.amazonaws.com/mcq_generator:${env:IMAGE_TAG}
+    memorySize: 2048
+    timeout: 500
+    ephemeralStorageSize: 5120
+    events:
+      - http:
+          path: /generate-mcqs
+          method: post
+          cors: true
+      - sqs:
+          arn: !GetAtt McqGenerationQueue.Arn
+          batchSize: 5
+          functionResponseType: ReportBatchItemFailures
+
+  resumeParser:
+    name: resume-parser-${self:provider.stage}
+    image: 471112784201.dkr.ecr.ap-south-1.amazonaws.com/resume_parser:${env:IMAGE_TAG}
+    memorySize: 2048
+    timeout: 900
+    ephemeralStorageSize: 5120
+    events:
+      - http:
+          path: /parse-resume
+          method: post
+          cors: true
+
+  generateRoadmap:
+    name: generate-roadmap-${self:provider.stage}
+    image: 471112784201.dkr.ecr.ap-south-1.amazonaws.com/roadmap_generator:${env:IMAGE_TAG}
+    memorySize: 2048
+    timeout: 500
+    ephemeralStorageSize: 5120
+    events:
+      - http:
+          path: /generate-roadmap
+          method: post
+          cors: true
+
+  # Thumbnail Generator 
+  generateThumbnail:
+    name: thumbnail-generator-${self:provider.stage}
+    image: 471112784201.dkr.ecr.ap-south-1.amazonaws.com/thumbnail_generator:${env:IMAGE_TAG}
+    memorySize: 1024
+    timeout: 300
+    ephemeralStorageSize: 5120
+    events:
+      - http:
+          path: /generate-thumbnail
+          method: post
+          cors: true
+
+  generateHandwrittenNotes:
+    name: generate-handwritten-notes-${self:provider.stage}
+    image: 471112784201.dkr.ecr.ap-south-1.amazonaws.com/handwritten_generator:${env:IMAGE_TAG}
+    memorySize: 2048  
+    timeout: 300      
+    ephemeralStorageSize: 5120
+    events:
+      - http:
+          path: /generate-handwritten-notes
+          method: post
+          cors: true
+
+resources:
+  Resources:
+    McqGenerationQueue:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: mcq-generation-queue-${self:provider.stage}
+        VisibilityTimeout: 600
+        MessageRetentionPeriod: 1209600
+        ReceiveMessageWaitTimeSeconds: 20
+        RedrivePolicy:
+          deadLetterTargetArn: !GetAtt McqGenerationDLQ.Arn
+          maxReceiveCount: 3
+
+    McqGenerationDLQ:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: mcq-generation-dlq-${self:provider.stage}
+        MessageRetentionPeriod: 1209600
+
+    McqOutputBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: mcq-outputs-${self:provider.stage}-${aws:accountId}
+        LifecycleConfiguration:
+          Rules:
+            - Id: DeleteOldMcqs
+              Status: Enabled
+              ExpirationInDays: 90
+        VersioningConfiguration:
+          Status: Enabled
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: true
+
+    # Log Groups
+    GenerateMcqsLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        LogGroupName: /aws/lambda/generate-mcqs-${self:provider.stage}
+        RetentionInDays: 14
+
+    ResumeParserLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        LogGroupName: /aws/lambda/resume-parser-${self:provider.stage}
+        RetentionInDays: 14
+
+    GenerateRoadmapLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        LogGroupName: /aws/lambda/generate-roadmap-${self:provider.stage}
+        RetentionInDays: 14
+
+    GenerateThumbnailLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        LogGroupName: /aws/lambda/generate-thumbnail-${self:provider.stage}
+        RetentionInDays: 14
+
+    GenerateHandwrittenNotesLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        LogGroupName: /aws/lambda/generate-handwritten-notes-${self:provider.stage}
+        RetentionInDays: 14
+    
+    # DLQ Alarm
+    McqDLQAlarm:
+      Type: AWS::CloudWatch::Alarm
+      Properties:
+        AlarmName: mcq-generation-dlq-alarm-${self:provider.stage}
+        AlarmDescription: Alert when messages arrive in MCQ generation DLQ
+        MetricName: ApproximateNumberOfMessagesVisible
+        Namespace: AWS/SQS
+        Statistic: Sum
+        Period: 300
+        EvaluationPeriods: 1
+        Threshold: 1
+        ComparisonOperator: GreaterThanOrEqualToThreshold
+        Dimensions:
+          - Name: QueueName
+            Value: !GetAtt McqGenerationDLQ.QueueName
