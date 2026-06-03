@@ -1,0 +1,1004 @@
+{
+  "id": "7a2172f5-20d2-48c0-baca-b4de50050974",
+  "user_id": "user_007",
+  "ai_session_id": "ai_sess_20260603155810_c9441b4b",
+  "ai_roadmap_id": "ai_roadmap_20260603155810_3bbd890f",
+  "target_role": "Full Stack Engineer",
+  "icp_type": "high",
+  "language": "en",
+  "starting_milestone": "P1",
+  "current_active_milestone": "P1",
+  "vision_profile": {
+    "current_state": "Siddharth is a 26-year-old Frontend Developer with 3 years of experience in React, TypeScript, HTML, CSS, and Redux, earning 76000 monthly in Mumbai.",
+    "main_blocker": "His primary blocker is a lack of backend development skills, specifically Node.js, database design, authentication, and deployment workflows, which limits his career progression and salary potential.",
+    "vision_12mo": "Within 12 months, Siddharth aims to be a proficient Full Stack Engineer, capable of independently building, securing, and deploying applications, commanding a monthly salary of 145000, and qualifying for better product company roles.",
+    "top_motivation": "He is highly motivated to gain full ownership of the development stack, reduce dependency on backend teammates, and unlock significantly higher earning potential and career opportunities in product companies."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T15:59:04.928883",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "P1",
+      "identity_label": "Node.js Backend Foundations",
+      "identity_statement": "Lay a strong foundation in Node.js and Express.js to build robust backend APIs and understand core server-side logic.",
+      "market_value_display": "Backend API Developer (Entry)",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P1M1",
+          "title": "Node.js Core & Express.js Basics",
+          "description": "Master the fundamentals of Node.js runtime and build your first web server with Express.js.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_P1M1S1",
+              "title": "Node.js Fundamentals",
+              "description": "Understand the Node.js runtime environment, event loop, modules, and basic file system operations.",
+              "difficulty": 0.15,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S1",
+                  "title": "Introduction to Node.js and Event Loop",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S1",
+                  "title": "Build a Simple Node.js CLI Tool",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P1M1S2",
+              "title": "Express.js API Development",
+              "description": "Learn to create RESTful APIs using the Express.js framework, including routing, middleware, and request/response handling.",
+              "difficulty": 0.25,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S2",
+                  "title": "Building REST APIs with Express.js",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S2",
+                  "title": "Develop a Basic CRUD API with Express",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M2",
+          "title": "API Design & Error Handling",
+          "description": "Design well-structured RESTful APIs and implement robust error handling strategies.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_P1M2S1",
+              "title": "RESTful API Principles",
+              "description": "Understand best practices for designing RESTful APIs, including resource naming, HTTP methods, and status codes.",
+              "difficulty": 0.28,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S1",
+                  "title": "Designing Effective RESTful APIs",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S1",
+                  "title": "Refactor an API to Follow REST Principles",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P1M2S2",
+              "title": "Basic Error Handling & Validation",
+              "description": "Implement middleware for error handling and input validation in Express.js applications.",
+              "difficulty": 0.32,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S2",
+                  "title": "Express.js Error Handling and Joi Validation",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S2",
+                  "title": "Add Validation and Custom Error Responses to an API",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P2",
+      "identity_label": "Data Persistence & Management",
+      "identity_statement": "Master database design, interaction with SQL and NoSQL databases, and efficient data management for your applications.",
+      "market_value_display": "Full Stack Engineer (Junior)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P2M1",
+          "title": "Relational Database Design & SQL",
+          "description": "Learn to design relational schemas and interact with databases using SQL, focusing on PostgreSQL.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_P2M1S1",
+              "title": "Relational Database Concepts & SQL",
+              "description": "Understand relational database theory, SQL syntax for CRUD operations, and basic schema design principles.",
+              "difficulty": 0.38,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S1",
+                  "title": "SQL Fundamentals and Database Normalization",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S1",
+                  "title": "Design a Database Schema for an E-commerce App",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P2M1S2",
+              "title": "PostgreSQL Integration with Node.js",
+              "description": "Connect Node.js applications to PostgreSQL databases and perform queries using raw SQL or a basic client.",
+              "difficulty": 0.45,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P2M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S2",
+                  "title": "Connecting Node.js to PostgreSQL",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S2",
+                  "title": "Build a User Management API with PostgreSQL",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M2",
+          "title": "ORM & NoSQL Databases",
+          "description": "Utilize Object-Relational Mappers (ORMs) for simplified database interaction and explore NoSQL alternatives.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_P2M2S1",
+              "title": "ORM with Prisma/Sequelize",
+              "description": "Learn to use an ORM (e.g., Prisma or Sequelize) to interact with relational databases in a type-safe and efficient manner.",
+              "difficulty": 0.52,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P2M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S1",
+                  "title": "Getting Started with Prisma ORM in Node.js",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S1",
+                  "title": "Migrate a Raw SQL API to Use Prisma",
+                  "difficulty": 0.58,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P2M2S2",
+              "title": "NoSQL Database Basics (MongoDB)",
+              "description": "Understand the concepts of NoSQL databases, specifically MongoDB, and integrate it into a Node.js application.",
+              "difficulty": 0.58,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P2M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S2",
+                  "title": "Introduction to MongoDB with Mongoose",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S2",
+                  "title": "Build a Blog API using MongoDB and Mongoose",
+                  "difficulty": 0.62,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P3",
+      "identity_label": "Secure & Robust Backend Systems",
+      "identity_statement": "Implement robust authentication, authorization, and advanced error handling to build secure and production-ready backend services.",
+      "market_value_display": "Full Stack Engineer (Mid-level)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P3M1",
+          "title": "Authentication & Authorization",
+          "description": "Secure your APIs with industry-standard authentication and authorization mechanisms.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_P3M1S1",
+              "title": "JWT Authentication",
+              "description": "Implement JSON Web Token (JWT) based authentication for user login and secure API access.",
+              "difficulty": 0.65,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P2M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S1",
+                  "title": "Implementing JWT Authentication in Node.js",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S1",
+                  "title": "Add User Registration and Login to an Existing API",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P3M1S2",
+              "title": "Role-Based Authorization",
+              "description": "Implement authorization logic to control access to API resources based on user roles and permissions.",
+              "difficulty": 0.72,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S2",
+                  "title": "Role-Based Access Control (RBAC) in Express",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S2",
+                  "title": "Secure Admin Routes with RBAC Middleware",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M2",
+          "title": "Testing & Advanced Error Handling",
+          "description": "Ensure code quality with comprehensive testing and build resilient systems with advanced error management.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_P3M2S1",
+              "title": "Unit & Integration Testing (Jest/Supertest)",
+              "description": "Write unit tests for individual components and integration tests for API endpoints using Jest and Supertest.",
+              "difficulty": 0.78,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S1",
+                  "title": "Testing Node.js APIs with Jest and Supertest",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S1",
+                  "title": "Write Tests for a CRUD API with Authentication",
+                  "difficulty": 0.82,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P3M2S2",
+              "title": "Logging & Monitoring",
+              "description": "Implement effective logging strategies and understand basic monitoring principles for backend applications.",
+              "difficulty": 0.85,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S2",
+                  "title": "Structured Logging with Winston in Node.js",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S2",
+                  "title": "Integrate a Logging Library into an Express App",
+                  "difficulty": 0.88,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P4",
+      "identity_label": "Deployment & Full Stack Integration",
+      "identity_statement": "Learn to containerize, deploy, and integrate your backend services with frontend applications, completing your full stack journey.",
+      "market_value_display": "Full Stack Engineer (Senior Potential)",
+      "sequence_order": 4,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P4M1",
+          "title": "Containerization with Docker",
+          "description": "Package your applications using Docker for consistent deployment across different environments.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_P4M1S1",
+              "title": "Docker Fundamentals",
+              "description": "Understand Docker concepts, write Dockerfiles, and manage containers for Node.js applications.",
+              "difficulty": 0.75,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S1",
+                  "title": "Docker for Node.js Developers",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S1",
+                  "title": "Dockerize an Express.js API with a Database",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P4M1S2",
+              "title": "Docker Compose for Multi-Container Apps",
+              "description": "Orchestrate multi-container applications (e.g., backend + database) using Docker Compose.",
+              "difficulty": 0.82,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P4M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S2",
+                  "title": "Managing Services with Docker Compose",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S2",
+                  "title": "Set up a Full Stack Development Environment with Docker Compose",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M2",
+          "title": "Cloud Deployment & CI/CD",
+          "description": "Deploy your containerized applications to cloud platforms and automate your deployment pipeline.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_P4M2S1",
+              "title": "Cloud Deployment (AWS/Heroku)",
+              "description": "Deploy Node.js applications to cloud platforms like AWS (EC2/ECS) or Heroku, managing environment variables and scaling.",
+              "difficulty": 0.88,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P4M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S1",
+                  "title": "Deploying Node.js Apps to AWS EC2/ECS",
+                  "duration_minutes": 45,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S1",
+                  "title": "Deploy a Dockerized Full Stack App to a Cloud Provider",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P4M2S2",
+              "title": "CI/CD for Full Stack Applications",
+              "description": "Set up Continuous Integration and Continuous Deployment pipelines for automated testing and deployment.",
+              "difficulty": 0.9,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P4M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S2",
+                  "title": "Automating Deployments with GitHub Actions",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S2",
+                  "title": "Configure a CI/CD Pipeline for a Full Stack Project",
+                  "difficulty": 0.92,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T15:59:04.928883",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T15:59:04.928883",
+  "updated_at": "2026-06-03T15:59:04.928883",
+  "confirmed_at": "2026-06-03T15:59:04.928883",
+  "published_at": null
+}

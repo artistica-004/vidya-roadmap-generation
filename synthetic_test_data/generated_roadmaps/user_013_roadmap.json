@@ -1,0 +1,1105 @@
+{
+  "id": "5161558b-4353-4af9-8409-507a3f2fae32",
+  "user_id": "user_013",
+  "ai_session_id": "ai_sess_20260603160638_c59c9560",
+  "ai_roadmap_id": "ai_roadmap_20260603160638_6a435fa6",
+  "target_role": "Python Intern",
+  "icp_type": "low",
+  "language": "en",
+  "starting_milestone": "L1",
+  "current_active_milestone": "L1",
+  "vision_profile": {
+    "current_state": "Pooja is a 20-year-old part-time Data Entry Operator in Dhanbad, earning 9000/month, with basic computer skills but low confidence in coding. She wants to break into tech.",
+    "main_blocker": "Her biggest fear is getting stuck in low-paid data entry due to a lack of coding confidence and a clear path to learn Python and build projects.",
+    "vision_12mo": "Within 12 months, Pooja aims to become a confident Python Intern, earning 20000/month, actively contributing to tech projects, and proving to her family that a tech career is achievable.",
+    "top_motivation": "She is highly motivated to contribute to her household expenses and inspire her family by successfully transitioning into the technology field."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:09:59.503028",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "L1",
+      "identity_label": "Python ki Pehli Kadam (First Steps in Python)",
+      "identity_statement": "Iss milestone mein, aap Python ki buniyadi baatein seekhengi aur coding mein apna pehla confidence build karengi. Chaliye shuru karte hain!",
+      "market_value_display": "Basic Python Understanding",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L1M1",
+          "title": "Python Setup aur Basics",
+          "description": "Python ko install karna, pehla code likhna, aur variables ko samajhna.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M1S1",
+              "title": "Python Setup aur Hello World",
+              "description": "Apne mobile par Python environment set up karna aur apna pehla 'Hello World' program likhna.",
+              "difficulty": 0.1,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S1",
+                  "title": "Mobile par Python kaise install karein aur run karein",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S1",
+                  "title": "Apna pehla Python program likho",
+                  "difficulty": 0.1,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M1S2",
+              "title": "Variables aur Data Types (Numbers, Text)",
+              "description": "Data ko store karne ke liye variables ka use karna aur alag-alag data types (jaise numbers, text) ko samajhna.",
+              "difficulty": 0.15,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S2",
+                  "title": "Variables aur Data Types ko samjho",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S2",
+                  "title": "Apni age aur naam variables mein store karo",
+                  "difficulty": 0.15,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M2",
+          "title": "Logic Banana Seekho",
+          "description": "Programs mein decision lena aur kaam ko baar-baar karna (loops) seekhna.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M2S1",
+              "title": "Conditional Statements (if-else)",
+              "description": "Conditions ke hisaab se code run karna (jaise 'agar yeh ho toh yeh karo, warna woh karo').",
+              "difficulty": 0.25,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S1",
+                  "title": "If-Else statements: Decisions kaise lein?",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S1",
+                  "title": "Ek simple age checker banao",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M2S2",
+              "title": "Loops (for, while)",
+              "description": "Ek hi kaam ko baar-baar karne ke liye loops ka use karna, jaise numbers print karna.",
+              "difficulty": 0.3,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S2",
+                  "title": "For aur While loops: Kaam ko repeat kaise karein?",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S2",
+                  "title": "1 se 10 tak numbers print karo",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M3",
+          "title": "Data ke Saath Khelna",
+          "description": "Text aur lists jaise data structures ko manage karna seekhna.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M3S1",
+              "title": "Strings ko Handle Karna",
+              "description": "Text (strings) ko kaise banate hain, unhe jodte hain, aur unmein changes karte hain.",
+              "difficulty": 0.35,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S1",
+                  "title": "Strings: Text ke saath kaam karna",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S1",
+                  "title": "Apne naam ko ulta print karo",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M3S2",
+              "title": "Lists aur Tuples",
+              "description": "Ek se zyada items ko ek saath store karne ke liye Lists aur Tuples ka use karna.",
+              "difficulty": 0.4,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S2",
+                  "title": "Lists aur Tuples: Data collections ko samjho",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S2",
+                  "title": "Apne pasandida fruits ki list banao",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L2",
+      "identity_label": "Practical Python aur Problem Solving",
+      "identity_statement": "Ab jab aapne basics seekh liye hain, iss milestone mein aap practical skills develop karengi aur real-world problems solve karna seekhengi. Aap kar sakti hain!",
+      "market_value_display": "Basic Python Developer (Intern Level)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L2M1",
+          "title": "Functions aur Reusability",
+          "description": "Apne code ko organize karna aur use dobara use karna seekhna.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M1S1",
+              "title": "Functions Banana",
+              "description": "Apne code ke blocks ko functions mein organize karna, jisse code clean aur reusable ho.",
+              "difficulty": 0.45,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S1",
+                  "title": "Functions: Code ko organize kaise karein?",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S1",
+                  "title": "Ek function banao jo do numbers ko add kare",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M1S2",
+              "title": "Function Arguments aur Return Values",
+              "description": "Functions ko input dena (arguments) aur unse output lena (return values) seekhna.",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M1S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S2",
+                  "title": "Arguments aur Return Values: Functions ko smart banao",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S2",
+                  "title": "Ek function banao jo user ka naam greet kare",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M2",
+          "title": "Data ko Organize Karna",
+          "description": "Complex data ko store aur manage karne ke liye advanced data structures ka use karna.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M2S1",
+              "title": "Dictionaries ka Use",
+              "description": "Key-value pairs mein data store karne ke liye Dictionaries ko samajhna aur use karna (jaise phonebook).",
+              "difficulty": 0.55,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M1S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S1",
+                  "title": "Dictionaries: Data ko organize karne ka naya tareeka",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S1",
+                  "title": "Ek student ki details dictionary mein store karo",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M2S2",
+              "title": "Sets aur Unka Upyog",
+              "description": "Unique items store karne aur mathematical set operations karne ke liye Sets ka use.",
+              "difficulty": 0.6,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M2S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S2",
+                  "title": "Sets: Unique items ko manage karna",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S2",
+                  "title": "Do lists mein common items dhundo",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M3",
+          "title": "Files se Dosti",
+          "description": "Files se data read aur write karna seekhna, jo data entry ke liye useful hai.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M3S1",
+              "title": "Text Files Read/Write Karna",
+              "description": "Text files se data padhna aur unmein data likhna, jaise notes save karna.",
+              "difficulty": 0.65,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M2S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S1",
+                  "title": "Files se data kaise padhein aur likhein?",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S1",
+                  "title": "Ek text file mein apni daily tasks likho",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M3S2",
+              "title": "CSV Files ke Saath Kaam",
+              "description": "Excel jaisi CSV files ko Python se read aur write karna, jo data entry mein bahut kaam aata hai.",
+              "difficulty": 0.7,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S2",
+                  "title": "CSV files: Excel data ko Python se handle karna",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S2",
+                  "title": "Ek CSV file se student marks padho aur total calculate karo",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L3",
+      "identity_label": "Internship ke Liye Taiyari (Internship Readiness)",
+      "identity_statement": "Yeh milestone aapko Python Intern banne ke liye ready karega. Aap projects banayengi, code share karengi, aur interview ke liye prepare karengi. Aap apni manzil ke bahut kareeb hain!",
+      "market_value_display": "Python Intern (20,000+ INR/month)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L3M1",
+          "title": "Web se Data Lana",
+          "description": "Internet se data fetch karna aur use apne programs mein use karna.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M1S1",
+              "title": "Basic API Requests",
+              "description": "Web APIs se data request karna, jaise weather information ya public data.",
+              "difficulty": 0.75,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S1",
+                  "title": "APIs kya hain aur unse data kaise lein?",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S1",
+                  "title": "Ek public API se current time fetch karo",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M1S2",
+              "title": "JSON Data Handle Karna",
+              "description": "API se milne wale JSON data ko Python mein use karna aur samajhna.",
+              "difficulty": 0.8,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M1S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S2",
+                  "title": "JSON data ko Python mein kaise parse karein?",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S2",
+                  "title": "Weather API se JSON data extract karo",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M2",
+          "title": "Code Share Karna (Git & GitHub)",
+          "description": "Apne projects ko manage karna aur dusron ke saath share karna seekhna, jo industry standard hai.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M2S1",
+              "title": "Git Basics",
+              "description": "Version control system Git ka use karna, apne code changes ko track karne ke liye.",
+              "difficulty": 0.85,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M1S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S1",
+                  "title": "Git kya hai aur kaise use karein?",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S1",
+                  "title": "Ek naya Git repository initialize karo",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M2S2",
+              "title": "GitHub par Projects Upload Karna",
+              "description": "Apne Python projects ko GitHub par upload karna aur ek online portfolio banana.",
+              "difficulty": 0.9,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M2S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S2",
+                  "title": "GitHub par apna pehla project kaise daalein?",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S2",
+                  "title": "Apna 'Hello World' project GitHub par push karo",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M3",
+          "title": "Internship ke Liye Taiyari",
+          "description": "Practical projects banana aur internship ke liye resume aur interview skills develop karna.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M3S1",
+              "title": "Simple Python Projects Banana",
+              "description": "Jo skills seekhi hain, unka use karke chote projects banana, jaise calculator ya to-do list.",
+              "difficulty": 0.9,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M2S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S1",
+                  "title": "Apna pehla mini-project kaise banayein?",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S1",
+                  "title": "Ek simple command-line calculator banao",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M3S2",
+              "title": "Resume aur Interview Tips",
+              "description": "Ek strong resume banana aur internship interviews ke liye prepare karna, jisse aapko job mil sake.",
+              "difficulty": 0.9,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M3S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S2",
+                  "title": "Internship ke liye resume aur interview kaise crack karein?",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S2",
+                  "title": "Apne skills aur projects ko resume mein highlight karo",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:09:59.503028",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:09:59.503028",
+  "updated_at": "2026-06-03T16:09:59.503028",
+  "confirmed_at": "2026-06-03T16:09:59.503028",
+  "published_at": null
+}

@@ -1,0 +1,932 @@
+{
+  "id": "43513619-2295-4d25-ae79-3d3340edfb18",
+  "user_id": "user_018",
+  "ai_session_id": "ai_sess_20260603161502_075afab4",
+  "ai_roadmap_id": "ai_roadmap_20260603161502_1b79139d",
+  "target_role": "Data Analyst Trainee",
+  "icp_type": "low",
+  "language": "en",
+  "starting_milestone": "L1",
+  "current_active_milestone": "L1",
+  "vision_profile": {
+    "current_state": "Nikhil is a 22-year-old Civil Engineering fresher from Patna with basic Excel and presentation skills, currently struggling to find suitable civil site jobs due to low pay and relocation requirements.",
+    "main_blocker": "His biggest challenge is transitioning from a civil engineering background to data analysis, fearing recruiters will see him as confused, and lacking core data skills like SQL, advanced Excel, and Power BI.",
+    "vision_12mo": "Within 12 months, Nikhil aims to successfully land a Data Analyst Trainee role with a monthly salary of ₹28,000, confidently applying his new skills in Excel, SQL, and Power BI to solve real-world data problems.",
+    "top_motivation": "He is highly motivated to secure a faster and more rewarding career start, avoiding the low pay and remote relocation often associated with entry-level civil engineering positions."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:15:59.141523",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "L1",
+      "identity_label": "Data Foundations: Excel & SQL Basics",
+      "identity_statement": "Build a strong base in data handling with Excel and SQL, turning raw data into initial insights.",
+      "market_value_display": "Entry-level Data Handling (2-3 LPA)",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L1M1",
+          "title": "Excel for Practical Data Analysis",
+          "description": "Master essential Excel functions and techniques to clean, organize, and visualize data effectively.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_L1M1S1",
+              "title": "Excel Navigation & Basic Formulas",
+              "description": "Learn to navigate Excel efficiently and use fundamental formulas (SUM, AVG, COUNT) for quick calculations.",
+              "difficulty": 0.15,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S1",
+                  "title": "Excel Basics: Interface aur Pehle Formulas",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S1",
+                  "title": "Sales Data ka Total Nikalo",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L1M1S2",
+              "title": "Data Cleaning & Formatting in Excel",
+              "description": "Apply techniques like Text-to-Columns, Remove Duplicates, and conditional formatting to clean messy datasets.",
+              "difficulty": 0.25,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S2",
+                  "title": "Excel mein Data Clean Kaise Karein",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S2",
+                  "title": "Customer List se Duplicates Hatao",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L1M1S3",
+              "title": "Basic Data Visualization in Excel",
+              "description": "Create simple charts (bar, line, pie) and use Pivot Tables to summarize and visualize data.",
+              "difficulty": 0.3,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S3",
+                  "title": "Excel Charts aur Pivot Tables ka Jaadu",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S3",
+                  "title": "Monthly Sales Report Chart Banao",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M2",
+          "title": "SQL Fundamentals for Data Retrieval",
+          "description": "Learn the basics of SQL to extract and filter data from databases, a core skill for any data analyst.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_L1M2S1",
+              "title": "SQL SELECT & WHERE Clauses",
+              "description": "Write basic SQL queries to select specific columns and filter data based on conditions.",
+              "difficulty": 0.35,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M1S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S1",
+                  "title": "SQL ka Pehla Kadam: SELECT aur WHERE",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S1",
+                  "title": "Customers from Patna Dhundo",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L1M2S2",
+              "title": "SQL Joins & Table Relationships",
+              "description": "Combine data from multiple tables using INNER, LEFT, and RIGHT JOINs to get a complete picture.",
+              "difficulty": 0.45,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S2",
+                  "title": "SQL Joins: Tables ko Jodna Seekho",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S2",
+                  "title": "Orders aur Customer Details Ek Saath Dekho",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L2",
+      "identity_label": "Data Storytelling: Power BI & Advanced SQL",
+      "identity_statement": "Master data visualization and advanced querying to tell compelling stories with data.",
+      "market_value_display": "Junior Data Analyst (3-4 LPA)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L2M1",
+          "title": "Power BI for Interactive Dashboards",
+          "description": "Learn to connect data, create stunning visualizations, and build interactive dashboards in Power BI.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_L2M1S1",
+              "title": "Power BI Interface & Data Import",
+              "description": "Understand the Power BI Desktop interface and import data from various sources like Excel and SQL.",
+              "difficulty": 0.5,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S1",
+                  "title": "Power BI Intro: Data Kaise Load Karein",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S1",
+                  "title": "Sales Data Power BI mein Import Karo",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L2M1S2",
+              "title": "Creating Basic Power BI Dashboards",
+              "description": "Design and build interactive dashboards using various visualizations, filters, and slicers.",
+              "difficulty": 0.55,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S2",
+                  "title": "Power BI Dashboards: Data ko Bolna Sikhao",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S2",
+                  "title": "Monthly Performance Dashboard Banao",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M2",
+          "title": "Advanced SQL for Deeper Insights",
+          "description": "Go beyond basic queries to perform complex aggregations and use subqueries for advanced data analysis.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_L2M2S1",
+              "title": "SQL Aggregations & Grouping",
+              "description": "Use aggregate functions (COUNT, SUM, AVG) with GROUP BY and HAVING to summarize data.",
+              "difficulty": 0.6,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S1",
+                  "title": "SQL Aggregations: Data ko Summarize Karein",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S1",
+                  "title": "Har Product Category ka Total Sales Nikalo",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L2M2S2",
+              "title": "SQL Subqueries & CTEs",
+              "description": "Write complex queries using subqueries and Common Table Expressions (CTEs) for multi-step analysis.",
+              "difficulty": 0.65,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S2",
+                  "title": "SQL Subqueries aur CTEs: Advanced Data Analysis",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S2",
+                  "title": "Top 5 Customers ke Orders Dekho",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M3",
+          "title": "Practical Data Cleaning & Validation",
+          "description": "Develop robust strategies for identifying and rectifying data quality issues across various datasets.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_L2M3S1",
+              "title": "Advanced Data Cleaning Techniques",
+              "description": "Implement advanced methods to handle missing values, outliers, and inconsistent data formats.",
+              "difficulty": 0.7,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S1",
+                  "title": "Data Cleaning ke Advanced Tarike",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S1",
+                  "title": "Messy Survey Data ko Clean Karo",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L2M3S2",
+              "title": "Data Validation & Error Handling",
+              "description": "Set up validation rules and implement strategies to prevent and handle data entry errors effectively.",
+              "difficulty": 0.75,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S2",
+                  "title": "Data Validation aur Errors ko Handle Karna",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S2",
+                  "title": "New Data Entry Form ke Liye Validation Rules",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L3",
+      "identity_label": "Portfolio & Job Readiness",
+      "identity_statement": "Showcase your skills with a strong portfolio and prepare to ace your interviews, confidently telling your career story.",
+      "market_value_display": "Data Analyst Trainee (3.36 LPA Target)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L3M1",
+          "title": "Building Your Data Portfolio",
+          "description": "Create compelling data projects from start to finish and present them effectively to potential employers.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_L3M1S1",
+              "title": "End-to-End Data Project",
+              "description": "Complete a full data analysis project from data acquisition, cleaning, analysis, to dashboard creation.",
+              "difficulty": 0.8,
+              "estimated_hours": 10,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M1S2",
+                  "SK_L2M2S2",
+                  "SK_L2M3S2"
+                ],
+                "minimum_mastery": 0.8,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S1",
+                  "title": "Apna Pehla Data Project Kaise Banayein",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S1",
+                  "title": "E-commerce Sales Analysis Project",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L3M1S2",
+              "title": "Portfolio Presentation & Storytelling",
+              "description": "Learn to effectively present your projects and communicate insights, highlighting your impact.",
+              "difficulty": 0.85,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M1S1"
+                ],
+                "minimum_mastery": 0.8,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S2",
+                  "title": "Apne Projects ko Kaise Present Karein",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S2",
+                  "title": "Project Presentation Mock Session",
+                  "difficulty": 0.88,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M2",
+          "title": "Interview & Communication Skills",
+          "description": "Prepare for data analyst interviews, craft a compelling career narrative, and boost your confidence.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_L3M2S1",
+              "title": "Data Analyst Interview Prep",
+              "description": "Practice common technical and behavioral interview questions, and optimize your resume for data roles.",
+              "difficulty": 0.88,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M1S2"
+                ],
+                "minimum_mastery": 0.8,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S1",
+                  "title": "Data Analyst Interview ki Taiyari",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S1",
+                  "title": "Mock Interview: Technical Questions",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L3M2S2",
+              "title": "Crafting Your Career Story",
+              "description": "Develop a clear narrative to explain your transition from civil engineering to data analysis, highlighting transferable skills and motivation.",
+              "difficulty": 0.9,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M2S1"
+                ],
+                "minimum_mastery": 0.8,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S2",
+                  "title": "Apni Career Story Kaise Sunayein",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S2",
+                  "title": "Role-Play: 'Why Data Analyst?'",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:15:59.141523",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:15:59.141523",
+  "updated_at": "2026-06-03T16:15:59.141523",
+  "confirmed_at": "2026-06-03T16:15:59.141523",
+  "published_at": null
+}

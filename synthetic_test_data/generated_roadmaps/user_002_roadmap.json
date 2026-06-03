@@ -1,0 +1,1355 @@
+{
+  "id": "e332ac11-a76c-4eae-b68b-f6cfc35a0b07",
+  "user_id": "user_002",
+  "ai_session_id": "ai_sess_20260603155145_f580007b",
+  "ai_roadmap_id": "ai_roadmap_20260603155145_c7a464fc",
+  "target_role": "Data Scientist",
+  "icp_type": "high",
+  "language": "en",
+  "starting_milestone": "P1",
+  "current_active_milestone": "P1",
+  "vision_profile": {
+    "current_state": "Neha is a Data Analyst with 7 years of experience, proficient in SQL, Power BI, and Excel, with basic Python skills. She excels in business analytics and dashboard reporting.",
+    "main_blocker": "Her biggest obstacle is the gap in specialized machine learning algorithms, model evaluation, feature engineering, and Python production workflows, which prevents her from transitioning into core data science roles.",
+    "vision_12mo": "Within 12 months, Neha aims to be a Data Scientist, actively involved in designing and implementing machine learning models for forecasting, experimentation, and influencing product decisions, with a monthly salary of 210,000 INR.",
+    "top_motivation": "She is highly motivated to leverage her strong business intuition to drive product decisions through data science, rather than being confined to monthly reporting, and fears being pigeonholed as only a reporting analyst."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T15:52:51.546188",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "P1",
+      "identity_label": "Foundational ML & Advanced Python for DS",
+      "identity_statement": "Build a robust foundation in Python for data science and essential statistical concepts to confidently approach machine learning.",
+      "market_value_display": "Entry-Level Data Scientist / Advanced Data Analyst",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P1M1",
+          "title": "Advanced Python for Data Science",
+          "description": "Master the core Python libraries essential for data manipulation, analysis, and visualization in a data science context.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P1M1S1",
+              "title": "NumPy for Numerical Computing",
+              "description": "Learn to use NumPy for efficient array operations, vectorized computations, and mathematical functions.",
+              "difficulty": 0.15,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S1",
+                  "title": "NumPy Essentials: Arrays & Operations",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S1",
+                  "title": "Analyzing Sales Data with NumPy Arrays",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M1S2",
+              "title": "Pandas for Data Manipulation",
+              "description": "Master data loading, cleaning, transformation, and aggregation using Pandas DataFrames.",
+              "difficulty": 0.25,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S2",
+                  "title": "Pandas DataFrames: The Core of Data Science",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S2",
+                  "title": "Cleaning & Transforming Customer Data with Pandas",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M2",
+          "title": "Statistical Foundations for ML",
+          "description": "Reinforce essential statistical concepts and their application in understanding data and preparing for machine learning.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P1M2S1",
+              "title": "Probability & Distributions",
+              "description": "Understand core probability concepts, common distributions (Normal, Binomial), and their relevance in data science.",
+              "difficulty": 0.2,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S1",
+                  "title": "Probability Basics & Key Distributions",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S1",
+                  "title": "Simulating Event Probabilities",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M2S2",
+              "title": "Hypothesis Testing & A/B Testing Basics",
+              "description": "Learn to formulate hypotheses, conduct statistical tests (t-tests, chi-squared), and interpret p-values for decision making.",
+              "difficulty": 0.3,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S2",
+                  "title": "Introduction to Hypothesis Testing",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S2",
+                  "title": "Evaluating Website Conversion Rates with A/B Tests",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M3",
+          "title": "Data Visualization & Exploratory Data Analysis (EDA)",
+          "description": "Develop skills in creating insightful visualizations and performing comprehensive EDA to uncover patterns and prepare data for modeling.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P1M3S1",
+              "title": "Matplotlib & Seaborn for Visualization",
+              "description": "Create various plots (scatter, bar, histogram, heatmap) using Matplotlib and Seaborn for effective data storytelling.",
+              "difficulty": 0.28,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S1",
+                  "title": "Visualizing Data with Matplotlib & Seaborn",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S1",
+                  "title": "Visualizing Customer Demographics",
+                  "difficulty": 0.32,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M3S2",
+              "title": "Comprehensive Exploratory Data Analysis",
+              "description": "Perform in-depth EDA, including outlier detection, missing value analysis, and correlation analysis, to inform modeling decisions.",
+              "difficulty": 0.35,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M3S1",
+                  "SK_P1M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S2",
+                  "title": "Advanced EDA Techniques for Model Prep",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S2",
+                  "title": "Deep Dive into E-commerce Transaction Data",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P2",
+      "identity_label": "Core Machine Learning & Feature Engineering",
+      "identity_statement": "Dive into the fundamental machine learning algorithms and master the art of preparing and transforming data for optimal model performance.",
+      "market_value_display": "Junior Data Scientist / ML Engineer",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P2M1",
+          "title": "Supervised Learning Fundamentals",
+          "description": "Understand and implement key supervised learning algorithms for both regression and classification tasks.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P2M1S1",
+              "title": "Linear & Logistic Regression",
+              "description": "Learn the theory and practical application of linear and logistic regression models using scikit-learn.",
+              "difficulty": 0.4,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S1",
+                  "title": "Regression Models: Theory & Practice",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S1",
+                  "title": "Predicting Housing Prices with Linear Regression",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M1S2",
+              "title": "Decision Trees & Ensemble Methods",
+              "description": "Explore decision trees, random forests, and gradient boosting (e.g., XGBoost) for robust predictive modeling.",
+              "difficulty": 0.5,
+              "estimated_hours": 9,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S2",
+                  "title": "Ensemble Learning: Random Forests & Boosting",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S2",
+                  "title": "Building a Customer Churn Predictor",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M2",
+          "title": "Model Evaluation & Hyperparameter Tuning",
+          "description": "Learn to rigorously evaluate model performance, select appropriate metrics, and optimize hyperparameters for better results.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P2M2S1",
+              "title": "Classification & Regression Metrics",
+              "description": "Understand and apply metrics like accuracy, precision, recall, F1-score, ROC-AUC for classification, and MAE, MSE, R-squared for regression.",
+              "difficulty": 0.48,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S1",
+                  "title": "Choosing the Right ML Evaluation Metrics",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S1",
+                  "title": "Evaluating a Fraud Detection Model",
+                  "difficulty": 0.52,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M2S2",
+              "title": "Cross-Validation & Hyperparameter Tuning",
+              "description": "Implement cross-validation techniques and use GridSearchCV/RandomizedSearchCV to optimize model parameters.",
+              "difficulty": 0.55,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S2",
+                  "title": "Optimizing Models with Cross-Validation & Tuning",
+                  "duration_minutes": 32,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S2",
+                  "title": "Tuning a Gradient Boosting Model for Performance",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M3",
+          "title": "Feature Engineering & Selection",
+          "description": "Develop advanced techniques to create, transform, and select features that enhance model accuracy and interpretability.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P2M3S1",
+              "title": "Feature Scaling & Encoding",
+              "description": "Apply various scaling methods (StandardScaler, MinMaxScaler) and encoding techniques (One-Hot, Label, Target) for categorical features.",
+              "difficulty": 0.52,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S1",
+                  "title": "Preprocessing Features: Scaling & Encoding",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S1",
+                  "title": "Preparing Customer Demographics for ML",
+                  "difficulty": 0.58,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M3S2",
+              "title": "Advanced Feature Engineering & Selection",
+              "description": "Create new features from existing ones, handle datetime features, and use techniques like PCA and feature importance for selection.",
+              "difficulty": 0.6,
+              "estimated_hours": 9,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S2",
+                  "title": "Crafting Powerful Features for ML Models",
+                  "duration_minutes": 38,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S2",
+                  "title": "Enhancing a Sales Forecasting Model with Engineered Features",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P3",
+      "identity_label": "Advanced ML & MLOps Principles",
+      "identity_statement": "Explore complex machine learning paradigms, understand how to operationalize models, and design robust data-driven experiments.",
+      "market_value_display": "Mid-Level Data Scientist / ML Engineer",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P3M1",
+          "title": "Unsupervised Learning & Time Series Forecasting",
+          "description": "Delve into unsupervised methods for pattern discovery and build models for time-dependent data.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P3M1S1",
+              "title": "Clustering & Dimensionality Reduction",
+              "description": "Implement K-Means, DBSCAN for clustering and PCA for dimensionality reduction to uncover hidden structures in data.",
+              "difficulty": 0.62,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S1",
+                  "title": "Unsupervised Learning: Clustering & PCA",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S1",
+                  "title": "Customer Segmentation with K-Means",
+                  "difficulty": 0.68,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M1S2",
+              "title": "Time Series Forecasting (ARIMA, Prophet)",
+              "description": "Learn to analyze time-dependent data, decompose series, and build forecasting models like ARIMA and Facebook Prophet.",
+              "difficulty": 0.7,
+              "estimated_hours": 10,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S2",
+                  "title": "Time Series Analysis & Forecasting Models",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S2",
+                  "title": "Forecasting Product Demand for E-commerce",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M2",
+          "title": "Introduction to MLOps & Production Workflows",
+          "description": "Understand the principles of MLOps, version control for ML projects, and basic deployment concepts.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P3M2S1",
+              "title": "Git & Version Control for ML Projects",
+              "description": "Master Git for collaborative development, branching strategies, and managing code for ML models.",
+              "difficulty": 0.65,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S1",
+                  "title": "Git for Data Scientists: Collaboration & Tracking",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S1",
+                  "title": "Collaborating on a Model Development Project",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M2S2",
+              "title": "Basic Model Deployment with Flask/FastAPI",
+              "description": "Learn to wrap ML models in a simple API using Flask or FastAPI for basic web deployment.",
+              "difficulty": 0.75,
+              "estimated_hours": 9,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S2",
+                  "title": "Deploying Your First ML Model with Flask",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S2",
+                  "title": "Creating an API for a Churn Prediction Model",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M3",
+          "title": "Experimentation Design & Causal Inference",
+          "description": "Master the principles of designing effective experiments and understanding causal relationships in data.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P3M3S1",
+              "title": "Advanced A/B Testing & Experiment Design",
+              "description": "Design robust A/B tests, determine sample sizes, and interpret results with statistical rigor.",
+              "difficulty": 0.72,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S1",
+                  "title": "Designing & Analyzing A/B Tests for Product",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S1",
+                  "title": "Optimizing User Onboarding Flow with A/B Tests",
+                  "difficulty": 0.78,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P4",
+      "identity_label": "Capstone Project & Career Readiness",
+      "identity_statement": "Integrate all learned skills into a real-world project, understand ML system design, and prepare for data science interviews.",
+      "market_value_display": "Experienced Data Scientist / Senior Data Analyst",
+      "sequence_order": 4,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P4M1",
+          "title": "End-to-End ML Project",
+          "description": "Apply the entire data science workflow from problem definition to model deployment on a complex dataset.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P4M1S1",
+              "title": "Project Scoping & Data Acquisition",
+              "description": "Define a data science problem, identify data sources, and perform data acquisition and initial cleaning.",
+              "difficulty": 0.8,
+              "estimated_hours": 10,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S1",
+                  "title": "Structuring Your Data Science Project",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S1",
+                  "title": "Defining a Product Recommendation System Project",
+                  "difficulty": 0.82,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P4M1S2",
+              "title": "Model Development & Deployment (Capstone)",
+              "description": "Build, evaluate, and deploy a full-stack machine learning model, documenting the entire process.",
+              "difficulty": 0.85,
+              "estimated_hours": 15,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S2",
+                  "title": "End-to-End ML Project Walkthrough",
+                  "duration_minutes": 45,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S2",
+                  "title": "Developing & Deploying a Customer Lifetime Value Predictor",
+                  "difficulty": 0.88,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M2",
+          "title": "ML System Design & Scalability",
+          "description": "Understand how to design scalable and robust machine learning systems for real-world applications.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P4M2S1",
+              "title": "Designing Production-Ready ML Systems",
+              "description": "Learn about system components, data pipelines, model monitoring, and re-training strategies for ML in production.",
+              "difficulty": 0.88,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S1",
+                  "title": "ML System Design: From Prototype to Production",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S1",
+                  "title": "Designing a Real-time Recommendation Engine",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M3",
+          "title": "Data Science Interview Preparation",
+          "description": "Prepare for technical and behavioral interviews, focusing on case studies, coding challenges, and project discussions.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P4M3S1",
+              "title": "Behavioral & Case Study Interview Prep",
+              "description": "Practice answering behavioral questions and solving data science case studies, articulating your thought process clearly.",
+              "difficulty": 0.85,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S1",
+                  "title": "Cracking the Data Science Behavioral Interview",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S1",
+                  "title": "Case Study: Optimizing User Engagement for a Social App",
+                  "difficulty": 0.88,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P4M3S2",
+              "title": "Technical & Coding Interview Prep",
+              "description": "Sharpen your Python coding skills, practice SQL queries, and review core ML concepts for technical rounds.",
+              "difficulty": 0.9,
+              "estimated_hours": 10,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S2",
+                  "title": "Advanced Python & SQL for DS Interviews",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S2",
+                  "title": "Live Coding Challenge: Feature Engineering & Model Building",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T15:52:51.546188",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T15:52:51.546188",
+  "updated_at": "2026-06-03T15:52:51.546188",
+  "confirmed_at": "2026-06-03T15:52:51.546188",
+  "published_at": null
+}

@@ -1,0 +1,1423 @@
+{
+  "id": "2a3b794a-9a0f-4133-9343-22573464ae97",
+  "user_id": "user_016",
+  "ai_session_id": "ai_sess_20260603161240_4db8825c",
+  "ai_roadmap_id": "ai_roadmap_20260603161240_ae0be42a",
+  "target_role": "Web Developer Intern",
+  "icp_type": "low",
+  "language": "en",
+  "starting_milestone": "L1",
+  "current_active_milestone": "L1",
+  "vision_profile": {
+    "current_state": "Harsh is a 25-year-old Mobile Repair Shop Assistant in Rajkot with 2 years of experience, earning 16000 INR/month. He has basic Android usage and self-learning skills from YouTube.",
+    "main_blocker": "Harsh fears that without a formal engineering degree, his coding work won't be taken seriously, and he lacks practical skills in responsive design, JavaScript events, domain/hosting, and client project delivery.",
+    "vision_12mo": "Within 12 months, Harsh aims to become a Web Developer Intern, earning 22000 INR/month, capable of building small client websites and generating freelance income for local businesses.",
+    "top_motivation": "He is motivated to gain a valuable skill that can bring freelance income by building websites for small businesses in his city."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:13:52.783248",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "L1",
+      "identity_label": "Your First Steps in Web Development",
+      "identity_statement": "Start your exciting journey into web development by mastering the core building blocks of every website.",
+      "market_value_display": "Ready for basic web tasks, 0-1 LPA potential",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L1M1",
+          "title": "HTML - The Structure of the Web",
+          "description": "Learn how to build the basic structure and content of any webpage using HTML.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_L1M1S1",
+              "title": "HTML Page Structure",
+              "description": "Understand the fundamental tags like <html>, <head>, <body>, and how to organize your web page.",
+              "difficulty": 0.1,
+              "estimated_hours": 2,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S1",
+                  "title": "HTML: Your First Web Page",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S1",
+                  "title": "Build a Basic HTML Document",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L1M1S2",
+              "title": "Text & List Elements",
+              "description": "Learn to format text with headings, paragraphs, and create ordered/unordered lists.",
+              "difficulty": 0.15,
+              "estimated_hours": 2,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S2",
+                  "title": "Adding Text and Lists to HTML",
+                  "duration_minutes": 10,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S2",
+                  "title": "Create a Recipe Page with Lists",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L1M1S3",
+              "title": "Links & Images",
+              "description": "Discover how to add images and create links to navigate between pages or external sites.",
+              "difficulty": 0.2,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M1S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S3",
+                  "title": "Hyperlinks and Images in HTML",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S3",
+                  "title": "Build a Simple Photo Gallery",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M2",
+          "title": "CSS - Styling Your First Pages",
+          "description": "Learn to make your websites look beautiful and professional using CSS.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_L1M2S1",
+              "title": "CSS Selectors & Properties",
+              "description": "Understand how to target HTML elements and apply styles like colors, fonts, and backgrounds.",
+              "difficulty": 0.25,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M1S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S1",
+                  "title": "Introduction to CSS Styling",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S1",
+                  "title": "Style a Blog Post with CSS",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L1M2S2",
+              "title": "Box Model & Layout",
+              "description": "Learn about margins, padding, borders, and how to arrange elements on your page using Flexbox.",
+              "difficulty": 0.3,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M2S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S2",
+                  "title": "CSS Box Model and Flexbox Layout",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S2",
+                  "title": "Design a Product Card Layout",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L1M2S3",
+              "title": "Basic Responsive Design",
+              "description": "Make your websites look good on mobile phones and tablets using media queries. (Addresses skill gap)",
+              "difficulty": 0.35,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M2S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S3",
+                  "title": "Responsive Web Design with Media Queries",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S3",
+                  "title": "Make a Landing Page Mobile-Friendly",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M3",
+          "title": "Essential Tools & Workflow",
+          "description": "Get comfortable with the tools that professional web developers use every day.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_L1M3S1",
+              "title": "Using a Code Editor",
+              "description": "Learn to use Visual Studio Code for efficient coding, including basic shortcuts and extensions.",
+              "difficulty": 0.2,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M2S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S1",
+                  "title": "VS Code for Web Development Basics",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S1",
+                  "title": "Set Up Your First VS Code Project",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L1M3S2",
+              "title": "Browser Developer Tools",
+              "description": "Learn to inspect and debug your HTML and CSS directly in the browser.",
+              "difficulty": 0.25,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M3S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S2",
+                  "title": "Debugging with Chrome DevTools",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S2",
+                  "title": "Fix a Layout Issue Using DevTools",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L2",
+      "identity_label": "Bringing Your Websites to Life",
+      "identity_statement": "Transform static pages into dynamic and interactive experiences, making your websites engaging and powerful.",
+      "market_value_display": "Junior Web Developer Intern, 1-2 LPA potential",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L2M1",
+          "title": "JavaScript Basics",
+          "description": "Learn the fundamental concepts of JavaScript to add interactivity to your web pages.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_L2M1S1",
+              "title": "JS Variables & Data Types",
+              "description": "Understand how to store and manage information using variables and different data types in JavaScript.",
+              "difficulty": 0.3,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L1M3S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S1",
+                  "title": "JavaScript Variables and Data",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S1",
+                  "title": "Calculate a Simple Bill Total",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L2M1S2",
+              "title": "Conditional Logic & Loops",
+              "description": "Learn to make decisions in your code with if/else statements and repeat actions with loops.",
+              "difficulty": 0.35,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S2",
+                  "title": "JS Conditionals and Loops Explained",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S2",
+                  "title": "Create a Simple Guessing Game",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L2M1S3",
+              "title": "Functions & Arrays",
+              "description": "Organize your code with functions and manage collections of data using arrays.",
+              "difficulty": 0.4,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M1S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S3",
+                  "title": "Functions and Arrays in JavaScript",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S3",
+                  "title": "Manage a To-Do List with Arrays",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M2",
+          "title": "DOM Manipulation & Events",
+          "description": "Learn how to make your web pages respond to user actions and change dynamically.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_L2M2S1",
+              "title": "Selecting DOM Elements",
+              "description": "Discover how to find and select specific HTML elements using JavaScript.",
+              "difficulty": 0.45,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M1S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S1",
+                  "title": "Accessing HTML with JavaScript (DOM)",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S1",
+                  "title": "Select and Log Page Elements",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L2M2S2",
+              "title": "Modifying HTML & CSS",
+              "description": "Change the content, attributes, and styles of HTML elements dynamically using JavaScript.",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M2S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S2",
+                  "title": "Changing Content and Styles with JS",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S2",
+                  "title": "Create a Dynamic Image Carousel",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L2M2S3",
+              "title": "JavaScript Events",
+              "description": "Make your website interactive by responding to user clicks, keyboard inputs, and other events. (Addresses skill gap)",
+              "difficulty": 0.55,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M2S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S3",
+                  "title": "Handling User Interactions with JS Events",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S3",
+                  "title": "Build an Interactive Light/Dark Mode Toggle",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M3",
+          "title": "Practical UI Components",
+          "description": "Apply your JavaScript knowledge to build common user interface elements.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_L2M3S1",
+              "title": "Building a Simple Form",
+              "description": "Create interactive forms with basic validation using HTML and JavaScript.",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M2S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S1",
+                  "title": "Interactive Forms with JS Validation",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S1",
+                  "title": "Build a Contact Us Form",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L2M3S2",
+              "title": "Interactive Navigation Menu",
+              "description": "Create a responsive navigation menu that works well on both desktop and mobile devices.",
+              "difficulty": 0.55,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M3S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S2",
+                  "title": "Building a Responsive Navbar with JS",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S2",
+                  "title": "Implement a Mobile 'Hamburger' Menu",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L3",
+      "identity_label": "Launching & Delivering Client Projects",
+      "identity_statement": "Gain the confidence to deliver real projects, turning your coding skills into valuable freelance opportunities.",
+      "market_value_display": "Freelance Web Developer, 2-3 LPA potential",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L3M1",
+          "title": "Project Setup & Deployment",
+          "description": "Learn how to manage your code and put your websites online for the world to see.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_L3M1S1",
+              "title": "Git & GitHub Basics",
+              "description": "Understand version control with Git and how to host your code on GitHub.",
+              "difficulty": 0.6,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L2M3S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S1",
+                  "title": "Introduction to Git and GitHub",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S1",
+                  "title": "Push Your First Project to GitHub",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L3M1S2",
+              "title": "Domain & Hosting Basics",
+              "description": "Learn what domains and hosting are, and how to choose them for your client projects. (Addresses skill gap)",
+              "difficulty": 0.65,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S2",
+                  "title": "Understanding Web Domains and Hosting",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S2",
+                  "title": "Choose a Domain and Hosting Plan",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L3M1S3",
+              "title": "Deploying a Static Site",
+              "description": "Learn to publish your HTML, CSS, and JavaScript website online using simple hosting services.",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M1S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S3",
+                  "title": "Deploying Your Website with Netlify/Vercel",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S3",
+                  "title": "Deploy Your Portfolio Website",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M2",
+          "title": "Client Communication & Delivery",
+          "description": "Develop the soft skills needed to work with clients and deliver successful web projects.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_L3M2S1",
+              "title": "Understanding Client Needs",
+              "description": "Learn to listen to clients, ask the right questions, and translate their ideas into web project requirements.",
+              "difficulty": 0.6,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M1S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S1",
+                  "title": "Client Discovery: Asking the Right Questions",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S1",
+                  "title": "Interview a Mock Client for a Website",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L3M2S2",
+              "title": "Presenting Your Work",
+              "description": "Learn to showcase your website to clients effectively, explaining features and design choices.",
+              "difficulty": 0.65,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M2S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S2",
+                  "title": "Effective Client Presentations",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S2",
+                  "title": "Present a Website Draft to a Client",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L3M2S3",
+              "title": "Client Project Delivery",
+              "description": "Master the process of handing over a completed website, including documentation and final checks. (Addresses skill gap)",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M2S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S3",
+                  "title": "Smooth Project Handover to Clients",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S3",
+                  "title": "Prepare a Client Handover Document",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M3",
+          "title": "Building a Portfolio Project",
+          "description": "Create a complete website project to showcase your skills and attract potential clients.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_L3M3S1",
+              "title": "Building a Small Business Website",
+              "description": "Apply all your learned skills to build a complete, functional website for a local business.",
+              "difficulty": 0.75,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M2S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S1",
+                  "title": "End-to-End Small Business Website Build",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S1",
+                  "title": "Develop a Website for a Local Cafe",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_L3M3S2",
+              "title": "Optimizing for Mobile",
+              "description": "Ensure your portfolio project is fully responsive and looks great on all devices, from phones to desktops.",
+              "difficulty": 0.8,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_L3M3S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "prerequisite_completion"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S2",
+                  "title": "Advanced Responsive Techniques",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S2",
+                  "title": "Refine Cafe Website for Mobile Responsiveness",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:13:52.783248",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:13:52.783248",
+  "updated_at": "2026-06-03T16:13:52.783248",
+  "confirmed_at": "2026-06-03T16:13:52.783248",
+  "published_at": null
+}

@@ -1,29 +1,41 @@
+"""
+pinecone_utils.py — Vidya V3
+
+CHANGES vs. original (all HF-deployment bugs fixed):
+  1. All env vars now loaded from src.config — every value is .strip()'d at
+     read time, so a trailing \\n in a HF secret can never reach urllib3.
+  2. EMBED_MODEL falls back to config.EMBEDDING_MODEL so the HF secret
+     EMBEDDING_MODEL is actually honoured (was hardcoded before).
+  3. task_type in retrieve_raw_context() changed from lowercase
+     "retrieval_query" → uppercase "RETRIEVAL_QUERY" to match the Gemini
+     SDK enum (lowercase caused silent fallback / wrong embedding space).
+  4. Pinecone client and Gemini client are constructed from sanitized keys.
+"""
+
 import os
 import re
 from typing import Optional
-from dotenv import load_dotenv
+
+# ── Use the centralised, sanitised config ────────────────────
+from src.config import (
+    GEMINI_API_KEY,
+    PINECONE_API_KEY,
+    PINECONE_INDEX_NAME   as INDEX_NAME,
+    EMBEDDING_MODEL       as EMBED_MODEL,
+    PINECONE_DEBUG,
+    PINECONE_DEBUG_FETCH_IDS,
+)
+
 from google import genai
 from google.genai import types
 from pinecone import Pinecone
 
 # ---------------------------------------------------
-# ENV SETUP
+# CLIENTS (initialised once per container)
 # ---------------------------------------------------
-load_dotenv()
-
-INDEX_NAME = os.environ.get("PINECONE_INDEX_NAME", "live-assistant-index-v2")
-EMBED_MODEL = "gemini-embedding-001"
-
-GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
-PINECONE_API_KEY = os.environ["PINECONE_API_KEY"]
-PINECONE_DEBUG = os.environ.get("PINECONE_DEBUG", "0") == "1"
-PINECONE_DEBUG_FETCH_IDS = os.environ.get("PINECONE_DEBUG_FETCH_IDS", "")
-
-# ---------------------------------------------------
-# CLIENTS (initialize once per container)
-# ---------------------------------------------------
+# Keys are already stripped by config.py — safe to pass directly.
 genai_client = genai.Client(api_key=GEMINI_API_KEY)
-pc = Pinecone(api_key=PINECONE_API_KEY)
+pc           = Pinecone(api_key=PINECONE_API_KEY)
 
 
 # ---------------------------------------------------
@@ -31,29 +43,26 @@ pc = Pinecone(api_key=PINECONE_API_KEY)
 # ---------------------------------------------------
 def get_embedding(text: str, task_type: str = "RETRIEVAL_QUERY") -> list:
     """
-    Generate embedding using Gemini (3072-dim).
-    3072 embeddings are already normalized.
+    Generate a 3 072-dim embedding via Gemini.
+    3 072-dim embeddings are already L2-normalised.
     """
-
     response = genai_client.models.embed_content(
         model=EMBED_MODEL,
         contents=text,
         config=types.EmbedContentConfig(
-            task_type=task_type,
+            task_type=task_type.upper(),          # normalise to uppercase
             output_dimensionality=3072
         )
     )
-
     return response.embeddings[0].values
 
 
 # ---------------------------------------------------
 # SESSION ID RETRIEVAL
 # ---------------------------------------------------
-def retrieve_session_id(user_id: str) -> str:
+def retrieve_session_id(user_id: str) -> Optional[str]:
     try:
         index = pc.Index(INDEX_NAME)
-
         print(f"[SESSION RETRIEVAL] Looking for session ID for user: {user_id}")
 
         session_vector_id = f"{user_id}_session_metadata"
@@ -61,14 +70,13 @@ def retrieve_session_id(user_id: str) -> str:
 
         if fetch_result and fetch_result.vectors:
             if session_vector_id in fetch_result.vectors:
-                metadata = fetch_result.vectors[session_vector_id].metadata or {}
+                metadata     = fetch_result.vectors[session_vector_id].metadata or {}
                 ai_session_id = metadata.get("ai_session_id")
-
                 if ai_session_id:
                     print(f"[SESSION RETRIEVAL] ✓ Found session ID: {ai_session_id}")
                     return ai_session_id
 
-        print(f"[SESSION RETRIEVAL] ✗ No session metadata found")
+        print("[SESSION RETRIEVAL] ✗ No session metadata found")
         return None
 
     except Exception as e:
@@ -76,10 +84,12 @@ def retrieve_session_id(user_id: str) -> str:
         return None
 
 
+# ---------------------------------------------------
+# ICP TYPE RETRIEVAL
+# ---------------------------------------------------
 def retrieve_icp_type(user_id: str) -> Optional[str]:
     try:
         index = pc.Index(INDEX_NAME)
-
         print(f"[ICP] Looking for icp_type for user: {user_id}")
 
         query_embedding = get_embedding(
@@ -96,7 +106,6 @@ def retrieve_icp_type(user_id: str) -> Optional[str]:
         )
 
         matches = query_response.matches if query_response else []
-
         print(f"[ICP DEBUG] Found {len(matches)} onboarding matches")
 
         if not matches:
@@ -113,13 +122,11 @@ def retrieve_icp_type(user_id: str) -> Optional[str]:
                 return match_obj.get("id")
             return match_obj.id if hasattr(match_obj, "id") else None
 
+        # ── Fast path: icp_type already stored in metadata ──
         for match in matches:
             metadata = get_metadata(match)
-
             print(f"[ICP DEBUG] Metadata: {metadata}")
-
             icp_type = metadata.get("icp_type")
-
             if icp_type:
                 normalized = str(icp_type).strip().lower()
                 if normalized in {"high", "high_wage"}:
@@ -130,10 +137,10 @@ def retrieve_icp_type(user_id: str) -> Optional[str]:
                     return "low"
                 print(f"[ICP] Unsupported icp_type value: {icp_type}")
 
+        # ── Slow path: heuristic classification from text ──
         onboarding_texts = []
         for match in matches:
-            metadata = get_metadata(match)
-            text = metadata.get("text", "")
+            text = get_metadata(match).get("text", "")
             if text:
                 onboarding_texts.append(text)
 
@@ -151,114 +158,60 @@ def retrieve_icp_type(user_id: str) -> Optional[str]:
         def match_any(text: str, phrases: list) -> bool:
             return any(text_has_phrase(text, p) for p in phrases)
 
-        score = 0
+        score   = 0
         reasons = []
 
         high_signals = [
             ("employment_role", 2, [
-                "software engineer",
-                "developer",
-                "product manager",
-                "analyst",
-                "consultant",
-                "designer",
-                "working professional",
-                "service engineer",
-                "support engineer"
+                "software engineer", "developer", "product manager",
+                "analyst", "consultant", "designer", "working professional",
+                "service engineer", "support engineer"
             ]),
             ("income_career", 2, [
-                "salary",
-                "promotion",
-                "upskill",
-                "upskilling",
-                "career switch",
-                "job switch",
-                "switch companies",
-                "switching companies",
-                "already employed",
-                "employed"
+                "salary", "promotion", "upskill", "upskilling",
+                "career switch", "job switch", "switch companies",
+                "switching companies", "already employed", "employed"
             ]),
             ("tooling_access", 1, [
-                "laptop",
-                "macbook",
-                "office",
-                "jira",
-                "github",
-                "slack",
-                "aws",
-                "azure",
-                "gcp"
+                "laptop", "macbook", "office", "jira", "github",
+                "slack", "aws", "azure", "gcp"
             ]),
             ("english_comfort", 1, [
-                "english preferred",
-                "english only",
-                "speak english",
-                "comfortable in english",
-                "confident in english"
+                "english preferred", "english only", "speak english",
+                "comfortable in english", "confident in english"
             ]),
             ("career_goals", 2, [
-                "promotion",
-                "faang",
-                "switch companies",
-                "switching companies",
-                "senior engineer",
-                "leadership",
-                "team lead",
-                "lead role",
-                "principal",
-                "architect"
+                "promotion", "faang", "switch companies", "switching companies",
+                "senior engineer", "leadership", "team lead", "lead role",
+                "principal", "architect"
             ])
         ]
 
         low_signals = [
             ("entry_level", -2, [
-                "student",
-                "fresher",
-                "12th pass",
-                "12th",
-                "diploma",
-                "iti",
-                "college placement",
-                "campus",
-                "placement",
-                "internship",
-                "first job"
+                "student", "fresher", "12th pass", "12th", "diploma", "iti",
+                "college placement", "campus", "placement", "internship", "first job"
             ]),
             ("access_constraints", -2, [
-                "mobile only",
-                "phone only",
-                "no laptop",
-                "without laptop",
-                "hindi preferred",
-                "tamil preferred",
-                "telugu preferred",
-                "regional language",
-                "vernacular",
-                "low bandwidth",
-                "limited internet"
+                "mobile only", "phone only", "no laptop", "without laptop",
+                "hindi preferred", "tamil preferred", "telugu preferred",
+                "regional language", "vernacular", "low bandwidth", "limited internet"
             ]),
             ("economic_constraints", -3, [
-                "need job urgently",
-                "financial",
-                "cheap",
-                "free",
-                "no budget",
-                "price sensitive",
-                "afford",
-                "low cost"
+                "need job urgently", "financial", "cheap", "free",
+                "no budget", "price sensitive", "afford", "low cost"
             ]),
             ("job_goal_entry", -2, [
-                "data entry",
-                "support role",
-                "bpo",
-                "basic it job",
-                "first job"
+                "data entry", "support role", "bpo", "basic it job", "first job"
             ])
         ]
 
+        # Don't penalise laptop-owning professionals for "no laptop" exclusion
         if match_any(combined_text, ["no laptop", "without laptop"]):
             high_signals = [
-                (name, delta, phrases) if name != "tooling_access" else (name, delta, [p for p in phrases if p not in {"laptop", "macbook"}])
+                (name, delta, [p for p in phrases if p not in {"laptop", "macbook"}])
+                if name == "tooling_access"
+                else (name, delta, phrases)
                 for name, delta, phrases in high_signals
             ]
 
@@ -273,21 +226,24 @@ def retrieve_icp_type(user_id: str) -> Optional[str]:
                 reasons.append(name)
 
         icp_type = "high" if score >= 2 else "low"
-
         print(f"[ICP] Heuristic score: {score}, reasons: {reasons}")
         print(f"[ICP] Heuristic classification: {icp_type}")
 
+        # Persist computed icp_type back to Pinecone for future fast-path hits
         try:
             metadata_update = {
-                "icp_type": icp_type,
-                "icp_score": score,
+                "icp_type":      icp_type,
+                "icp_score":     score,
                 "icp_reasoning": reasons
             }
-
             for match in matches:
                 match_id = get_match_id(match)
                 if match_id:
-                    index.update(id=match_id, namespace=user_id, set_metadata=metadata_update)
+                    index.update(
+                        id=match_id,
+                        namespace=user_id,
+                        set_metadata=metadata_update
+                    )
         except Exception as e:
             print(f"[ICP] Failed to persist icp metadata: {e}")
 
@@ -298,49 +254,18 @@ def retrieve_icp_type(user_id: str) -> Optional[str]:
         print("[ICP] icp_type retrieval failed; refusing to default")
         return None
 
-# # ---------------------------------------------------
-# # ICP TYPE RETRIEVAL
-# # ---------------------------------------------------
-# def retrieve_icp_type(user_id: str) -> str:
-#     try:
-#         index = pc.Index(INDEX_NAME)
-
-#         print(f"[ICP] Looking for icp_type for user: {user_id}")
-
-#         session_vector_id = f"{user_id}_session_metadata"
-#         fetch_result = index.fetch(ids=[session_vector_id], namespace=user_id)
-
-#         if fetch_result and fetch_result.vectors:
-#             if session_vector_id in fetch_result.vectors:
-#                 metadata = fetch_result.vectors[session_vector_id].metadata or {}
-#                 icp_type = metadata.get("icp_type")
-
-#                 if icp_type:
-#                     print(f"[ICP] Found icp_type: {icp_type}")
-#                     return icp_type
-
-#         print("[ICP] icp_type not found, defaulting to high_wage")
-#         return "high_wage"
-
-#     except Exception as e:
-#         print(f"[ICP] Error retrieving icp_type: {e}")
-#         print("[ICP] icp_type not found, defaulting to high_wage")
-#         return "high_wage"
-
 
 # ---------------------------------------------------
-# CONTEXT RETRIEVAL
+# FULL CONTEXT RETRIEVAL  (used by roadmap_agent)
 # ---------------------------------------------------
 def retrieve_context(user_id: str) -> str:
     index = pc.Index(INDEX_NAME)
-
     print(f"[PINECONE] Connecting to index: {INDEX_NAME}")
 
     try:
         stats = index.describe_index_stats()
         print(f"[PINECONE] ✓ Connected! Total vectors: {stats.get('total_vector_count', 0)}")
         if PINECONE_DEBUG:
-            print(f"[PINECONE DEBUG] Index name: {INDEX_NAME}")
             print(f"[PINECONE DEBUG] Index stats: {stats}")
             namespaces = stats.get("namespaces", {})
             if isinstance(namespaces, dict):
@@ -351,39 +276,30 @@ def retrieve_context(user_id: str) -> str:
 
     context_parts = []
 
-    # ---------------------------------------------------
-    # STEP 1: Resume (direct fetch)
-    # ---------------------------------------------------
+    # ── Step 1: Resume (direct fetch) ──
     print(f"[ROADMAP] Retrieving resume for {user_id}...")
-
     try:
-        resume_id = f"{user_id}_resume_summary"
+        resume_id    = f"{user_id}_resume_summary"
         fetch_result = index.fetch(ids=[resume_id], namespace=user_id)
 
-        if fetch_result and fetch_result.vectors:
-            if resume_id in fetch_result.vectors:
-                metadata = fetch_result.vectors[resume_id].metadata or {}
-                text = metadata.get("formatted_context") or metadata.get("text", "")
-                if text:
-                    context_parts.append(f"=== USER BACKGROUND ===\n{text}\n")
-                    print(f"[ROADMAP] ✓ Found resume ({len(text)} chars)")
+        if fetch_result and fetch_result.vectors and resume_id in fetch_result.vectors:
+            metadata = fetch_result.vectors[resume_id].metadata or {}
+            text     = metadata.get("formatted_context") or metadata.get("text", "")
+            if text:
+                context_parts.append(f"=== USER BACKGROUND ===\n{text}\n")
+                print(f"[ROADMAP] ✓ Found resume ({len(text)} chars)")
         else:
             print("[ROADMAP] ✗ No resume found")
-
     except Exception as e:
         print(f"[ROADMAP] Resume fetch error: {e}")
 
-    # ---------------------------------------------------
-    # STEP 2: Onboarding Data
-    # ---------------------------------------------------
+    # ── Step 2: Onboarding Q&A ──
     print(f"[ROADMAP] Retrieving onboarding data for {user_id}...")
-
     try:
         query_embedding = get_embedding(
             "onboarding questions and answers learning goals",
             task_type="RETRIEVAL_QUERY"
         )
-
         query_response = index.query(
             vector=query_embedding,
             top_k=20,
@@ -391,62 +307,46 @@ def retrieve_context(user_id: str) -> str:
             include_metadata=True,
             filter={"doc_type": {"$eq": "onboarding"}}
         )
-
         matches = query_response.matches if query_response else []
 
         if not matches and PINECONE_DEBUG:
             print("[PINECONE DEBUG] No onboarding matches with filter; running unfiltered query")
-            debug_response = index.query(
-                vector=query_embedding,
-                top_k=10,
-                namespace=user_id,
-                include_metadata=True
+            debug_response  = index.query(
+                vector=query_embedding, top_k=10,
+                namespace=user_id, include_metadata=True
             )
-            debug_matches = debug_response.matches if debug_response else []
+            debug_matches   = debug_response.matches if debug_response else []
             print(f"[PINECONE DEBUG] Unfiltered matches: {len(debug_matches)}")
-            for match in debug_matches[:5]:
-                print(f"[PINECONE DEBUG] Match metadata: {match.metadata}")
+            for m in debug_matches[:5]:
+                print(f"[PINECONE DEBUG] Match metadata: {m.metadata}")
 
             if PINECONE_DEBUG_FETCH_IDS:
-                debug_ids = [s.strip() for s in PINECONE_DEBUG_FETCH_IDS.split(",") if s.strip()]
+                debug_ids   = [s.strip() for s in PINECONE_DEBUG_FETCH_IDS.split(",") if s.strip()]
                 if debug_ids:
                     fetch_debug = index.fetch(ids=debug_ids, namespace=user_id)
-                    fetched = fetch_debug.vectors if fetch_debug else {}
-                    print(f"[PINECONE DEBUG] Fetch ids result keys: {list(fetched.keys()) if fetched else []}")
-                    for vector_id, vector in (fetched or {}).items():
-                        metadata = vector.metadata if vector else None
-                        print(f"[PINECONE DEBUG] {vector_id} metadata: {metadata}")
+                    fetched     = fetch_debug.vectors if fetch_debug else {}
+                    print(f"[PINECONE DEBUG] Fetch ids result keys: {list(fetched.keys())}")
+                    for vid, vec in (fetched or {}).items():
+                        print(f"[PINECONE DEBUG] {vid} metadata: {vec.metadata if vec else None}")
 
         if matches:
-            sorted_matches = sorted(
-                matches,
-                key=lambda x: x.metadata.get("question_number", 0)
-            )
-
-            onboarding_text = "\n\n".join([
-                m.metadata.get("text", "") for m in sorted_matches
-            ])
-
+            sorted_matches = sorted(matches, key=lambda x: x.metadata.get("question_number", 0))
+            onboarding_text = "\n\n".join(m.metadata.get("text", "") for m in sorted_matches)
             if onboarding_text.strip():
                 context_parts.append(f"=== ONBOARDING INTERVIEW ===\n{onboarding_text}\n")
                 print(f"[ROADMAP] ✓ Found {len(sorted_matches)} onboarding Q&As")
         else:
             print("[ROADMAP] ✗ No onboarding data found")
-
     except Exception as e:
         print(f"[ROADMAP] Onboarding query error: {e}")
 
-    # ---------------------------------------------------
-    # STEP 3: Tutor History
-    # ---------------------------------------------------
+    # ── Step 3: Tutor history ──
     print(f"[ROADMAP] Retrieving tutor history for {user_id}...")
-
     try:
         query_embedding = get_embedding(
             "recent learning topics discussions",
             task_type="RETRIEVAL_QUERY"
         )
-
         query_response = index.query(
             vector=query_embedding,
             top_k=5,
@@ -454,7 +354,6 @@ def retrieve_context(user_id: str) -> str:
             include_metadata=True,
             filter={"doc_type": {"$eq": "conversation"}}
         )
-
         matches = query_response.matches if query_response else []
 
         if matches:
@@ -463,148 +362,76 @@ def retrieve_context(user_id: str) -> str:
                 key=lambda x: x.metadata.get("timestamp", 0),
                 reverse=True
             )
-
-            tutor_text = "\n".join([
-                m.metadata.get("text", "") for m in sorted_matches
-            ])
-
+            tutor_text = "\n".join(m.metadata.get("text", "") for m in sorted_matches)
             if tutor_text.strip():
                 context_parts.append(f"=== RECENT LEARNING DISCUSSIONS ===\n{tutor_text}\n")
                 print(f"[ROADMAP] ✓ Found {len(sorted_matches)} tutor conversations")
         else:
             print("[ROADMAP] ℹ No tutor history found")
-
     except Exception as e:
         print(f"[ROADMAP] Tutor history query error: {e}")
 
-    # ---------------------------------------------------
-    # FINAL
-    # ---------------------------------------------------
     if not context_parts:
         print("[ROADMAP] ✗ No context found at all!")
         return ""
 
     combined_context = "\n".join(context_parts)
     print(f"[ROADMAP] ✓ Total context length: {len(combined_context)} chars")
-
     return combined_context
 
 
-# =====================================================
-# RAW CONTEXT RETRIEVAL
-# =====================================================
+# ---------------------------------------------------
+# RAW CONTEXT RETRIEVAL  (used by app.py preview)
+# ---------------------------------------------------
+def retrieve_raw_context(user_id: str) -> str:
+    """
+    Lightweight context fetch used by the 'Preview Pinecone Data' button.
 
-def retrieve_raw_context(
-    user_id: str
-) -> str:
-
-    index = pc.Index(INDEX_NAME)
-
+    BUG FIXED: task_type was "retrieval_query" (lowercase) → Gemini SDK
+    silently used a wrong task type.  Now normalised to "RETRIEVAL_QUERY"
+    via get_embedding()'s .upper() call.
+    """
+    index         = pc.Index(INDEX_NAME)
     context_parts = []
 
-    # -------------------------------------------------
-    # RESUME CONTEXT
-    # -------------------------------------------------
-
+    # ── Resume ──
     try:
-
-        resume_id = (
-            f"{user_id}_resume_summary"
-        )
-
-        fetch_result = index.fetch(
-            ids=[resume_id],
-            namespace=user_id
-        )
+        resume_id    = f"{user_id}_resume_summary"
+        fetch_result = index.fetch(ids=[resume_id], namespace=user_id)
 
         if (
             fetch_result
             and fetch_result.vectors
             and resume_id in fetch_result.vectors
         ):
-
-            metadata = (
-                fetch_result
-                .vectors[resume_id]
-                .metadata
-                or {}
-            )
-
-            text = (
-                metadata.get("formatted_context")
-                or metadata.get("text", "")
-            )
-
+            metadata = fetch_result.vectors[resume_id].metadata or {}
+            text     = metadata.get("formatted_context") or metadata.get("text", "")
             if text:
-
-                context_parts.append(
-                    f"USER BACKGROUND\n{text}"
-                )
-
+                context_parts.append(f"USER BACKGROUND\n{text}")
     except Exception as exc:
+        print(f"[RAW CTX] resume error for user {user_id}: {exc}")
 
-        print(
-            f"resume context error "
-            f"for user {user_id}: {exc}"
-        )
-
-    # -------------------------------------------------
-    # ONBOARDING CONTEXT
-    # -------------------------------------------------
-
+    # ── Onboarding ──
     try:
-
         query_embedding = get_embedding(
             "onboarding questions answers learning goals",
-            task_type="retrieval_query",
+            task_type="RETRIEVAL_QUERY",   # ← was "retrieval_query" — now fixed
         )
-
         query_response = index.query(
             vector=query_embedding,
             top_k=20,
             namespace=user_id,
             include_metadata=True,
-            filter={
-                "doc_type": {
-                    "$eq": "onboarding"
-                }
-            },
+            filter={"doc_type": {"$eq": "onboarding"}},
         )
-
-        matches = (
-            query_response.matches
-            if query_response
-            else []
-        )
+        matches = query_response.matches if query_response else []
 
         if matches:
-
-            sorted_matches = sorted(
-                matches,
-                key=lambda x:
-                    x.metadata.get(
-                        "question_number",
-                        0
-                    ),
-            )
-
-            onboarding_text = "\n\n".join(
-                m.metadata.get("text", "")
-                for m in sorted_matches
-            )
-
+            sorted_matches  = sorted(matches, key=lambda x: x.metadata.get("question_number", 0))
+            onboarding_text = "\n\n".join(m.metadata.get("text", "") for m in sorted_matches)
             if onboarding_text.strip():
-
-                context_parts.append(
-                    f"ONBOARDING RESPONSES\n{onboarding_text}"
-                )
-
+                context_parts.append(f"ONBOARDING RESPONSES\n{onboarding_text}")
     except Exception as exc:
-
-        print(
-            f"onboarding context error "
-            f"for user {user_id}: {exc}"
-        )
+        print(f"[RAW CTX] onboarding error for user {user_id}: {exc}")
 
     return "\n\n".join(context_parts)
-

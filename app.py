@@ -4,20 +4,16 @@ import sys
 import os
 import traceback
 
-from dotenv import load_dotenv
-
 # =====================================================
-# LOAD ENV
-# =====================================================
-
-load_dotenv()
-
-# =====================================================
-# FIX IMPORT PATH
+# LOAD CENTRALISED CONFIG FIRST
+# (strips trailing whitespace / newlines from all secrets)
 # =====================================================
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(CURRENT_DIR)
+sys.path.insert(0, CURRENT_DIR)
+
+from src.config import log_config_status, GEMINI_API_KEY, GOOGLE_API_KEY
+log_config_status()          # prints key-status summary to HF logs on every cold start
 
 # =====================================================
 # IMPORTS
@@ -60,7 +56,8 @@ if "roadmap_data" not in st.session_state:
 # GEMINI CONFIG
 # =====================================================
 
-gemini_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+# Keys already sanitised (stripped) by config.py
+gemini_key = GEMINI_API_KEY or GOOGLE_API_KEY
 
 if not gemini_key:
     st.error("❌ Missing GEMINI_API_KEY or GOOGLE_API_KEY in .env")
@@ -634,13 +631,18 @@ if st.session_state.roadmap_data:
 
                                 bkt = mastery_state.get("bkt", {})
                                 if bkt:
-                                    with st.expander("🔬 BKT Parameters"):
+                                    show_bkt = st.checkbox(
+                                        "🔬 Show BKT Parameters",
+                                        key=f"bkt_{s_id}"
+                                    )
+                                    if show_bkt:
                                         b1, b2, b3, b4 = st.columns(4)
                                         b1.metric("Prior",      bkt.get("prior", "—"))
                                         b2.metric("Learn Rate", bkt.get("learn_rate", "—"))
                                         b3.metric("Guess",      bkt.get("guess", "—"))
                                         b4.metric("Slip",       bkt.get("slip", "—"))
 
+                                        
     stored = roadmap_data.get("pinecone_stored", None)
     if stored is True:
         st.success("✅ Roadmap saved to Pinecone successfully")
@@ -656,64 +658,6 @@ if st.session_state.roadmap_data:
         label="⬇ Download Roadmap JSON",
         data=json.dumps(roadmap_data, indent=2),
         file_name="vidya_roadmap_v3.json",
-        mime="application/json"
+        mime="application/json",
+        key="download_roadmap_json"
     )
-
-    st.download_button(
-    label="⬇ Download Roadmap JSON",
-    data=json.dumps(roadmap_data, indent=2),
-    file_name="vidya_roadmap_v3.json",
-    mime="application/json"
-)
-
-# ============================================================
-# Pinecone Debug Section
-# ============================================================
-
-st.divider()
-st.subheader("🔎 Debug: Verify Pinecone Storage")
-
-check_uid = st.text_input(
-    "User ID to check",
-    value="ai_generated_user",
-    key="debug_uid"
-)
-
-if st.button("🔍 Check Pinecone"):
-    from src.pinecone_utils import pc, INDEX_NAME
-
-    index = pc.Index(INDEX_NAME)
-
-    results = index.query(
-        vector=[0.0] * 768,
-        top_k=20,
-        namespace=check_uid,
-        include_metadata=True
-    )
-
-    matches = results.get("matches", [])
-
-    roadmap_matches = [
-        m for m in matches
-        if m["metadata"].get("doc_type")
-        in ("roadmap", "roadmap_summary")
-    ]
-
-    if not roadmap_matches:
-        st.error(f"❌ No roadmap vectors found for '{check_uid}'")
-    else:
-        st.success(f"✅ Found {len(roadmap_matches)} roadmap(s)")
-
-        for m in roadmap_matches:
-            meta = m["metadata"]
-
-            st.write(f"### {m['id']}")
-
-            st.json({
-                "doc_type": meta.get("doc_type"),
-                "target_role": meta.get("target_role"),
-                "icp_type": meta.get("icp_type"),
-                "generated_at": meta.get("generated_at"),
-                "full_roadmap_stored": meta.get("full_roadmap_stored"),
-                "milestone_labels": meta.get("milestone_labels")
-            })

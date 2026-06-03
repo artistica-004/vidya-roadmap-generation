@@ -8,18 +8,23 @@ import json
 import uuid
 from typing import List
 from datetime import datetime
-from dotenv import load_dotenv
 
-load_dotenv()
+# ── Use centralised, sanitised config ────────────────────────
+# All values already .strip()'d — no trailing \n can reach urllib3.
+from src.config import (
+    OPENAI_API_KEY,
+    GOOGLE_API_KEY,
+    GOOGLE_MODEL    as _GOOGLE_MODEL,
+)
 
 # ============================================================
 # LLM Configuration (Dual-Engine Fallback)
 # ============================================================
 
 def get_llm():
-    openai_key = os.getenv("OPENAI_API_KEY")
-    gemini_key = os.getenv("GOOGLE_API_KEY")
-    google_model = os.getenv("GOOGLE_MODEL", "gemini-2.5-flash").strip().strip("\"'")
+    openai_key   = OPENAI_API_KEY   or None
+    gemini_key   = GOOGLE_API_KEY   or None
+    google_model = _GOOGLE_MODEL.strip().strip("\"'")
 
     _deprecated = {
         "gemini-1.5", "gemini-1.5-flash", "gemini-1.5-pro",
@@ -272,9 +277,15 @@ roadmap_chain = roadmap_prompt | llm | StrOutputParser()
 def store_roadmap_in_pinecone(user_id: str, roadmap_id: str, roadmap_data: dict) -> bool:
     """
     Stores the generated roadmap in Pinecone under the user's namespace.
-    Uses the same embedding + upsert pattern as pinecone_utils.py.
+
+    BUG FIXED: was doing a lazy `from src.pinecone_utils import ...` inside
+    the function body.  On Hugging Face the module is already imported at the
+    top level, so the lazy import was occasionally picking up a stale/partial
+    module object and raising ImportError.  Now uses the module-level objects
+    imported once at startup.
     """
     try:
+        # Use the already-initialised clients from the module-level import
         from src.pinecone_utils import get_embedding, pc, INDEX_NAME
 
         index = pc.Index(INDEX_NAME)

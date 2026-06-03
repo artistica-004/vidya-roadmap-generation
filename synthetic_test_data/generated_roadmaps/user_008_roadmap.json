@@ -1,0 +1,1146 @@
+{
+  "id": "5145c414-9856-40a2-906e-ec01b287ed56",
+  "user_id": "user_008",
+  "ai_session_id": "ai_sess_20260603155911_f96b2066",
+  "ai_roadmap_id": "ai_roadmap_20260603155911_1e6d0980",
+  "target_role": "Analytics Engineering Lead",
+  "icp_type": "high",
+  "language": "en",
+  "starting_milestone": "P1",
+  "current_active_milestone": "P1",
+  "vision_profile": {
+    "current_state": "An experienced Business Intelligence Developer leveraging traditional tools and a foundational understanding of SQL and Snowflake, seeking to modernize her skill set.",
+    "main_blocker": "Lack of hands-on experience with modern data stack tools like dbt and Airflow, and structured knowledge in analytics engineering best practices and leadership methodologies.",
+    "vision_12mo": "Leading an analytics engineering team, designing and implementing robust data solutions using a modern data stack, and driving data strategy with confidence and expertise.",
+    "top_motivation": "To transition her extensive 8 years of BI experience into a cutting-edge analytics engineering leadership role, ensuring career relevance and significant growth in a rapidly evolving data landscape, and overcoming the fear of being replaced by younger talent."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:00:14.916888",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "P1",
+      "identity_label": "Modern Data Foundations & dbt Core",
+      "identity_statement": "Establish a strong foundation in the modern data stack and master dbt Core to kickstart your analytics engineering journey.",
+      "market_value_display": "Transitioning BI to Modern Data Roles",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P1M1",
+          "title": "Introduction to Analytics Engineering",
+          "description": "Understand the landscape of modern data engineering and the role of analytics engineering within it, focusing on key concepts and tools.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P1M1S1",
+              "title": "Modern Data Stack Concepts",
+              "description": "Explore the components and architecture of a modern data stack, including ELT, data lakes, data warehouses, and data governance.",
+              "difficulty": 0.15,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S1",
+                  "title": "The Evolution of the Modern Data Stack",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S1",
+                  "title": "Designing a Basic Modern Data Pipeline",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M1S2",
+              "title": "dbt Core Fundamentals",
+              "description": "Learn the core concepts of dbt (data build tool), including project setup, models, sources, and basic transformations.",
+              "difficulty": 0.25,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S2",
+                  "title": "Getting Started with dbt Core",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S2",
+                  "title": "Build Your First dbt Project",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M2",
+          "title": "SQL for Data Transformation",
+          "description": "Deepen your SQL skills specifically for data transformation within an analytics engineering context, optimizing for performance and maintainability.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P1M2S1",
+              "title": "Advanced SQL for Data Modeling",
+              "description": "Master complex SQL constructs like CTEs, window functions, and subqueries for efficient data transformation and modeling.",
+              "difficulty": 0.3,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S1",
+                  "title": "Optimizing SQL for dbt Models",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S1",
+                  "title": "Refactor a Legacy SQL Query with CTEs",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M3",
+          "title": "Version Control & Collaboration",
+          "description": "Learn essential version control practices with Git and GitHub, crucial for collaborative analytics engineering projects.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P1M3S1",
+              "title": "Git & GitHub for Data Teams",
+              "description": "Understand Git commands, branching strategies, pull requests, and collaborative workflows for dbt projects.",
+              "difficulty": 0.35,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S1",
+                  "title": "Collaborative dbt Development with Git",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S1",
+                  "title": "Resolve a Merge Conflict in a dbt Model",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P2",
+      "identity_label": "Advanced Data Modeling & Orchestration",
+      "identity_statement": "Design robust data warehouses and automate your data pipelines, building on your dbt expertise.",
+      "market_value_display": "Data Modeler & Pipeline Engineer",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P2M1",
+          "title": "Data Warehouse Design Principles",
+          "description": "Dive deep into data warehousing methodologies, focusing on designing scalable and performant data models.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P2M1S1",
+              "title": "Dimensional Modeling (Kimball)",
+              "description": "Master the principles of dimensional modeling, including facts, dimensions, star schemas, and snowflake schemas.",
+              "difficulty": 0.4,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S1",
+                  "title": "Dimensional Modeling: Star Schema Design",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S1",
+                  "title": "Design a Star Schema for Sales Data",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M1S2",
+              "title": "Data Vault Modeling Concepts",
+              "description": "Understand Data Vault 2.0 principles for agile and scalable data warehousing, including hubs, links, and satellites.",
+              "difficulty": 0.45,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S2",
+                  "title": "Introduction to Data Vault 2.0",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S2",
+                  "title": "Identify Hubs and Links in a Source System",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M2",
+          "title": "Advanced dbt Implementation",
+          "description": "Leverage advanced dbt features to build more complex, maintainable, and efficient data transformations.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P2M2S1",
+              "title": "dbt Jinja & Macros",
+              "description": "Utilize Jinja templating and dbt macros to create reusable, dynamic, and DRY (Don't Repeat Yourself) dbt code.",
+              "difficulty": 0.5,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M2S1",
+                  "SK_P1M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S1",
+                  "title": "Dynamic dbt Models with Jinja",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S1",
+                  "title": "Create a Reusable Macro for Incremental Loads",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M2S2",
+              "title": "dbt Packages & Hooks",
+              "description": "Explore how to use and create dbt packages for modularity and implement hooks for custom operations during dbt runs.",
+              "difficulty": 0.55,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S2",
+                  "title": "Extending dbt with Packages and Hooks",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S2",
+                  "title": "Integrate a Community dbt Package",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M3",
+          "title": "Workflow Orchestration",
+          "description": "Automate and manage complex data pipelines using Apache Airflow, ensuring reliable and scheduled data delivery.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P2M3S1",
+              "title": "Apache Airflow Basics",
+              "description": "Learn to define, schedule, and monitor data workflows using Airflow DAGs, operators, and sensors.",
+              "difficulty": 0.6,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S1",
+                  "title": "Introduction to Airflow DAGs",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S1",
+                  "title": "Orchestrate a dbt Run with Airflow",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P3",
+      "identity_label": "Analytics Engineering Best Practices & Cloud Integration",
+      "identity_statement": "Implement robust data quality, CI/CD, and cloud integrations to build production-grade analytics solutions.",
+      "market_value_display": "Senior Analytics Engineer",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P3M1",
+          "title": "Data Quality & Testing",
+          "description": "Ensure data reliability and accuracy through comprehensive testing and observability practices within your data pipelines.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P3M1S1",
+              "title": "Data Quality & Observability",
+              "description": "Learn strategies for monitoring data quality, detecting anomalies, and implementing data observability tools.",
+              "difficulty": 0.65,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S1",
+                  "title": "Building a Data Observability Framework",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S1",
+                  "title": "Identify and Resolve a Data Quality Issue",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M1S2",
+              "title": "dbt Testing & Assertions",
+              "description": "Implement dbt's built-in tests and custom data assertions to validate data integrity and model correctness.",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S2",
+                  "title": "Advanced dbt Testing Strategies",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S2",
+                  "title": "Write Custom dbt Tests for Business Rules",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M2",
+          "title": "CI/CD for Data Pipelines",
+          "description": "Automate the deployment and testing of your data transformations using Continuous Integration and Continuous Delivery principles.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P3M2S1",
+              "title": "CI/CD Principles for Data",
+              "description": "Understand the core concepts of CI/CD and how they apply to data pipelines, including automated testing and deployment.",
+              "difficulty": 0.75,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M3S1",
+                  "SK_P2M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S1",
+                  "title": "CI/CD for Data: Best Practices",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S1",
+                  "title": "Design a CI/CD Workflow for a dbt Project",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M2S2",
+              "title": "Implementing CI/CD with dbt & Airflow",
+              "description": "Set up automated testing and deployment pipelines for dbt projects using tools like GitHub Actions and Airflow.",
+              "difficulty": 0.8,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S2",
+                  "title": "Automating dbt Deployments with GitHub Actions",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S2",
+                  "title": "Configure a CI/CD Pipeline for a dbt Project",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M3",
+          "title": "Cloud Data Platform Integration",
+          "description": "Optimize your data solutions by leveraging advanced features of cloud data warehouses like Snowflake.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P3M3S1",
+              "title": "Snowflake Advanced Features",
+              "description": "Explore advanced Snowflake capabilities such as Zero-Copy Cloning, Time Travel, Streams, Tasks, and external functions.",
+              "difficulty": 0.85,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S1",
+                  "title": "Leveraging Snowflake for Modern AE",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S1",
+                  "title": "Implement a Data Versioning Strategy with Snowflake Time Travel",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P4",
+      "identity_label": "Leadership, Stakeholder Management & System Design",
+      "identity_statement": "Develop the strategic and leadership skills necessary to excel as an Analytics Engineering Lead, driving impactful data initiatives.",
+      "market_value_display": "Analytics Engineering Lead",
+      "sequence_order": 4,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P4M1",
+          "title": "Strategic Data Leadership",
+          "description": "Cultivate essential leadership qualities, focusing on effective communication and project management within data teams.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P4M1S1",
+              "title": "Stakeholder Management & Communication",
+              "description": "Learn to effectively communicate complex technical concepts to non-technical stakeholders and manage expectations.",
+              "difficulty": 0.88,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S1",
+                  "title": "Mastering Stakeholder Communication for Data Leaders",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S1",
+                  "title": "Present a Data Project Roadmap to Executives",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P4M1S2",
+              "title": "Data Project Management",
+              "description": "Apply agile methodologies and project management best practices to lead and deliver successful analytics engineering initiatives.",
+              "difficulty": 0.9,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S2",
+                  "title": "Agile Practices for Data Teams",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S2",
+                  "title": "Plan and Prioritize Features for a New Data Product",
+                  "difficulty": 0.92,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M2",
+          "title": "Data Governance & Security",
+          "description": "Understand and implement robust data governance and security frameworks essential for leading data initiatives.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P4M2S1",
+              "title": "Data Governance & Compliance",
+              "description": "Learn to establish data policies, standards, and processes to ensure data quality, privacy, and regulatory compliance.",
+              "difficulty": 0.92,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S1",
+                  "title": "Building a Data Governance Program",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S1",
+                  "title": "Develop a Data Access Policy for Sensitive Data",
+                  "difficulty": 0.93,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M3",
+          "title": "Analytics Engineering System Design",
+          "description": "Master the art of designing scalable, resilient, and efficient end-to-end analytics engineering systems.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P4M3S1",
+              "title": "End-to-End AE System Design",
+              "description": "Design comprehensive analytics engineering solutions, integrating data ingestion, transformation, storage, and consumption layers.",
+              "difficulty": 0.95,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M2S2",
+                  "SK_P3M3S1",
+                  "SK_P4M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S1",
+                  "title": "Architecting Scalable Analytics Engineering Systems",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S1",
+                  "title": "Design an Analytics Platform for a New Business Unit",
+                  "difficulty": 0.98,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:00:14.916888",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:00:14.916888",
+  "updated_at": "2026-06-03T16:00:14.916888",
+  "confirmed_at": "2026-06-03T16:00:14.916888",
+  "published_at": null
+}
