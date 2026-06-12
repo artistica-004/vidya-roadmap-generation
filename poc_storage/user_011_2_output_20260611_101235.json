@@ -1,0 +1,1576 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_011",
+  "roadmap_id": "ai_roadmap_20260611101105_6d479223",
+  "generated_at": "2026-06-11T10:12:35.569223",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260611101105_6d479223",
+    "user_id": "user_011",
+    "icp_type": "low",
+    "target_role": "Junior Frontend Developer",
+    "language": "en",
+    "starting_milestone": "P1",
+    "current_active_milestone": "P1",
+    "vision_profile": {
+      "current_state": "Ritika is a final-year B.Sc Math student with basic computer skills, eager to start a career in web development.",
+      "main_blocker": "Her biggest fear is being disadvantaged compared to peers from larger cities with better resources and English proficiency.",
+      "top_motivation": "She is highly motivated to achieve financial independence to support her family before her younger brother begins college."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-11T10:12:31.861514",
+      "version": "v3.1",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "P1",
+        "label": "P1",
+        "identity_label": "Foundations for Web Development",
+        "identity_statement": "Build a strong base with core programming and web concepts, preparing you for the exciting world of web development.",
+        "market_value_display": "Fresher — not yet earning from this skill",
+        "sequence_order": 1,
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "module_id": "P1M1",
+            "title": "Basic Programming & Logic",
+            "description": "Learn the fundamental building blocks of programming and how to think like a developer, using concepts from the AI Ready Course.",
+            "sequence_order": 1,
+            "skills": [
+              {
+                "skill_id": "SKILL_P1M1S1",
+                "title": "Introduction to Algorithms",
+                "description": "Understand what algorithms are and how they help solve problems step-by-step, a core skill for any developer.",
+                "difficulty": 0.15,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M1S1",
+                    "title": "Algorithms: The Recipe for Code",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M1S1",
+                    "title": "Daily Problem Solving with Algorithms",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M1S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M1S2",
+                "title": "Variables and Data Types",
+                "description": "Learn how to store and manage different kinds of information in your programs, like numbers and text.",
+                "difficulty": 0.2,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M1S1"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M1S2",
+                    "title": "Storing Info: Variables & Data Types",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M1S2",
+                    "title": "Organizing Your Grocery List Data",
+                    "difficulty": 0.35,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M1S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M1S3",
+                "title": "Control Flow (If/Else, Loops)",
+                "description": "Master how to make your programs make decisions and repeat actions, essential for dynamic applications.",
+                "difficulty": 0.25,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M1S2"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M1S3",
+                    "title": "Program Decisions: If, Else, Loops",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M1S3",
+                    "title": "Automating Daily Tasks with Logic",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M1S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P1M2",
+            "title": "Computer Science Essentials",
+            "description": "Dive into fundamental computer science concepts that underpin all software development, enhancing your problem-solving abilities.",
+            "sequence_order": 2,
+            "skills": [
+              {
+                "skill_id": "SKILL_P1M2S1",
+                "title": "Problem Solving Techniques",
+                "description": "Develop effective strategies to break down complex problems and find efficient solutions, a crucial skill for any developer.",
+                "difficulty": 0.2,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M1S3"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M2S1",
+                    "title": "Mastering Problem Solving for Devs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M2S1",
+                    "title": "Solving a Real-World Logic Puzzle",
+                    "difficulty": 0.35,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M2S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M2S2",
+                "title": "Basic Data Structures",
+                "description": "Understand how to organize data efficiently using lists and arrays, making your programs faster and more powerful.",
+                "difficulty": 0.25,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M2S1"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M2S2",
+                    "title": "Organizing Data: Lists and Arrays",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M2S2",
+                    "title": "Managing a Library's Book Collection",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M2S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M2S3",
+                "title": "Computational Thinking",
+                "description": "Learn to break down problems, recognize patterns, and design solutions, a mindset crucial for all programming.",
+                "difficulty": 0.3,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M2S2"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M2S3",
+                    "title": "Thinking Like a Computer Scientist",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M2S3",
+                    "title": "Designing a Simple Game Logic",
+                    "difficulty": 0.45,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M2S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P1M3",
+            "title": "Introduction to Web Concepts",
+            "description": "Get a clear picture of how the internet and web applications work, from your browser to the server.",
+            "sequence_order": 3,
+            "skills": [
+              {
+                "skill_id": "SKILL_P1M3S1",
+                "title": "How the Internet Works",
+                "description": "Explore the basic infrastructure of the internet and how information travels across the globe.",
+                "difficulty": 0.2,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M2S3"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M3S1",
+                    "title": "The Internet Explained Simply",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M3S1",
+                    "title": "Tracing Your Online Journey",
+                    "difficulty": 0.35,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M3S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M3S2",
+                "title": "Web Browsers and Servers",
+                "description": "Understand the roles of browsers (like Chrome) and servers in delivering web content to you.",
+                "difficulty": 0.25,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M3S1"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M3S2",
+                    "title": "Browsers & Servers: Your Web Guides",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M3S2",
+                    "title": "How a Website Appears on Your Screen",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M3S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M3S3",
+                "title": "URLs and HTTP Basics",
+                "description": "Learn about web addresses (URLs) and the rules (HTTP) that allow your browser to talk to websites.",
+                "difficulty": 0.3,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M3S2"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M3S3",
+                    "title": "URLs & HTTP: The Web's Language",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M3S3",
+                    "title": "Decoding a Web Address Request",
+                    "difficulty": 0.45,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M3S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "P2",
+        "label": "P2",
+        "identity_label": "Understanding Web Systems",
+        "identity_statement": "Gain insight into how web applications are structured and how different parts communicate to deliver a seamless user experience.",
+        "market_value_display": "₹10-15K/month",
+        "sequence_order": 2,
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "module_id": "P2M1",
+            "title": "Client-Server Interaction",
+            "description": "Explore the core communication patterns between the user's device (client) and the web server, using High Level System Design principles.",
+            "sequence_order": 1,
+            "skills": [
+              {
+                "skill_id": "SKILL_P2M1S1",
+                "title": "Client-Server Model",
+                "description": "Understand the fundamental architecture where clients request services from servers, forming the backbone of the web.",
+                "difficulty": 0.35,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M3S3"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M1S1",
+                    "title": "The Client-Server Dance",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M1S1",
+                    "title": "Ordering Food Online: A Client-Server Story",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M1S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M1S2",
+                "title": "Request-Response Cycle",
+                "description": "Learn how your browser sends requests and receives responses from a server, making web pages interactive.",
+                "difficulty": 0.4,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M1S1"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M1S2",
+                    "title": "The Web's Conversation: Request-Response",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M1S2",
+                    "title": "Submitting a Form and Getting Feedback",
+                    "difficulty": 0.55,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M1S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M1S3",
+                "title": "Frontend vs. Backend Roles",
+                "description": "Clearly differentiate between what users see and interact with (frontend) and the server-side logic (backend).",
+                "difficulty": 0.45,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M1S2"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M1S3",
+                    "title": "Frontend & Backend: Who Does What?",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M1S3",
+                    "title": "Building a Simple Online Store",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M1S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P2M2",
+            "title": "Data Flow in Web Apps",
+            "description": "Understand how data moves, is processed, and stored within a web application, from user input to database storage.",
+            "sequence_order": 2,
+            "skills": [
+              {
+                "skill_id": "SKILL_P2M2S1",
+                "title": "Data Transmission Basics",
+                "description": "Learn the fundamental ways data is sent and received over the internet, ensuring secure and efficient communication.",
+                "difficulty": 0.4,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M1S3"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M2S1",
+                    "title": "Sending Data Across the Web",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M2S1",
+                    "title": "Securely Sending Your Login Details",
+                    "difficulty": 0.55,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M2S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M2S2",
+                "title": "Introduction to Databases",
+                "description": "Discover what databases are and why they are essential for storing and managing information in web applications.",
+                "difficulty": 0.45,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M2S1"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M2S2",
+                    "title": "Databases: The Memory of the Web",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M2S2",
+                    "title": "Storing User Profiles for a Social App",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M2S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M2S3",
+                "title": "Data Storage & Retrieval Concepts",
+                "description": "Understand how data is saved and fetched from databases, crucial for displaying dynamic content on websites.",
+                "difficulty": 0.5,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M2S2"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M2S3",
+                    "title": "Saving & Getting Data from Databases",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M2S3",
+                    "title": "Updating Your Profile Picture Online",
+                    "difficulty": 0.65,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M2S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P2M3",
+            "title": "Basic System Architecture",
+            "description": "Learn about different ways web applications are built and scaled, from simple setups to complex distributed systems.",
+            "sequence_order": 3,
+            "skills": [
+              {
+                "skill_id": "SKILL_P2M3S1",
+                "title": "Monolithic vs. Microservices",
+                "description": "Compare traditional all-in-one application designs with modern, smaller, independent service architectures.",
+                "difficulty": 0.5,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M2S3"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M3S1",
+                    "title": "Big App vs. Small Apps: Monoliths & Microservices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M3S1",
+                    "title": "Designing a Growing E-commerce Platform",
+                    "difficulty": 0.65,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M3S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M3S2",
+                "title": "Load Balancing & Scalability",
+                "description": "Learn how web applications handle many users at once and grow to serve more traffic efficiently.",
+                "difficulty": 0.55,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M3S1"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M3S2",
+                    "title": "Handling Many Users: Scaling Web Apps",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M3S2",
+                    "title": "Managing Traffic for a Popular News Site",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M3S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M3S3",
+                "title": "Caching Fundamentals",
+                "description": "Discover how caching speeds up websites by storing frequently accessed data closer to the user.",
+                "difficulty": 0.6,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M3S2"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M3S3",
+                    "title": "Caching: Making Websites Faster",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M3S3",
+                    "title": "Improving Performance for a Weather App",
+                    "difficulty": 0.75,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M3S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "P3",
+        "label": "P3",
+        "identity_label": "Building Blocks of Modern Apps",
+        "identity_statement": "Learn about the essential components that make up modern web applications, from APIs to database design, and how they fit together.",
+        "market_value_display": "₹15-25K/month",
+        "sequence_order": 3,
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "module_id": "P3M1",
+            "title": "API Fundamentals",
+            "description": "Understand how different software systems communicate with each other using APIs, a critical skill for frontend developers.",
+            "sequence_order": 1,
+            "skills": [
+              {
+                "skill_id": "SKILL_P3M1S1",
+                "title": "What are APIs?",
+                "description": "Discover how Application Programming Interfaces (APIs) allow different software to talk to each other, like a waiter in a restaurant.",
+                "difficulty": 0.65,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M3S3"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M1S1",
+                    "title": "APIs: Software Talking to Software",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M1S1",
+                    "title": "Integrating a Map into Your Website",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M1S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M1S2",
+                "title": "RESTful API Concepts",
+                "description": "Learn about REST, a popular and powerful way to design APIs for web services, making them easy to use.",
+                "difficulty": 0.7,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M1S1"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M1S2",
+                    "title": "REST APIs: The Web's Standard",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M1S2",
+                    "title": "Fetching Product Info for an Online Store",
+                    "difficulty": 0.85,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M1S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M1S3",
+                "title": "API Communication & Data Formats",
+                "description": "Understand how data is exchanged through APIs, focusing on common formats like JSON, which is key for frontend.",
+                "difficulty": 0.75,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M1S2"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M1S3",
+                    "title": "JSON & API Data Exchange",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M1S3",
+                    "title": "Reading Data from a Weather API",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M1S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P3M2",
+            "title": "Data Storage Concepts",
+            "description": "Deepen your understanding of different database types and how to design them for efficient data management.",
+            "sequence_order": 2,
+            "skills": [
+              {
+                "skill_id": "SKILL_P3M2S1",
+                "title": "Relational Databases",
+                "description": "Learn about structured databases like SQL, where data is organized in tables with relationships.",
+                "difficulty": 0.7,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M1S3"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M2S1",
+                    "title": "SQL Databases: Structured Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M2S1",
+                    "title": "Designing a Database for Student Records",
+                    "difficulty": 0.85,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M2S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M2S2",
+                "title": "NoSQL Databases",
+                "description": "Explore flexible, non-relational databases that are great for handling large amounts of unstructured data.",
+                "difficulty": 0.75,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M2S1"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M2S2",
+                    "title": "NoSQL: Flexible Data Storage",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M2S2",
+                    "title": "Storing Blog Posts with Tags and Comments",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M2S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M2S3",
+                "title": "Database Schema Design Basics",
+                "description": "Learn how to plan and structure your database to ensure data is stored efficiently and can be easily accessed.",
+                "difficulty": 0.8,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M2S2"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M2S3",
+                    "title": "Designing Your Database Blueprint",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M2S3",
+                    "title": "Creating a Database for an Event Management System",
+                    "difficulty": 0.95,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M2S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P3M3",
+            "title": "Project Planning & Design Basics",
+            "description": "Understand the lifecycle of software development and key design principles that make applications user-friendly and effective.",
+            "sequence_order": 3,
+            "skills": [
+              {
+                "skill_id": "SKILL_P3M3S1",
+                "title": "Software Development Lifecycle",
+                "description": "Learn the different stages involved in building software, from planning to deployment and maintenance.",
+                "difficulty": 0.75,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M2S3"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M3S1",
+                    "title": "The Journey of Software Development",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M3S1",
+                    "title": "Planning a New Feature for an App",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M3S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M3S2",
+                "title": "User Stories & Requirements",
+                "description": "Learn how to define what a software needs to do from the user's perspective, guiding development.",
+                "difficulty": 0.8,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M3S1"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M3S2",
+                    "title": "What Users Want: User Stories",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M3S2",
+                    "title": "Writing Requirements for a Chat App",
+                    "difficulty": 0.95,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M3S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M3S3",
+                "title": "Basic UI/UX Principles",
+                "description": "Understand the basics of designing user interfaces (UI) and user experiences (UX) to make applications easy and pleasant to use.",
+                "difficulty": 0.85,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M3S2"
+                  ],
+                  "minimum_mastery": 0.75,
+                  "unlock_type": "skill_mastery"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M3S3",
+                    "title": "Making Apps User-Friendly: UI/UX",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M3S3",
+                    "title": "Improving the Design of a Mobile App",
+                    "difficulty": 1.0,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M3S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

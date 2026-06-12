@@ -1,0 +1,1580 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "ai_generated_user",
+  "roadmap_id": "ai_roadmap_20260611100844_b2259dcc",
+  "generated_at": "2026-06-11T10:09:57.816688",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260611100844_b2259dcc",
+    "user_id": "ai_generated_user",
+    "icp_type": "low",
+    "target_role": "AI Developer Intern",
+    "language": "en",
+    "starting_milestone": "P1",
+    "current_active_milestone": "P1",
+    "vision_profile": {
+      "current_state": "Priya is a final-year B.Tech student with theoretical AI knowledge but struggles with practical application and building a portfolio.",
+      "main_blocker": "Her biggest obstacle is translating theoretical AI concepts into practical, portfolio-worthy projects and understanding industry expectations.",
+      "top_motivation": "She is highly motivated to secure an AI developer internship to gain hands-on experience and boost her confidence before graduation."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-11T10:09:52.829638",
+      "version": "v3.1",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "P1",
+        "label": "P1",
+        "identity_label": "Building Your AI Foundation",
+        "identity_statement": "You're bridging the gap from theory to hands-on coding, setting up your essential toolkit for practical AI development.",
+        "market_value_display": "Fresher — not yet earning from this skill",
+        "sequence_order": 1,
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "module_id": "P1M1",
+            "title": "Setting Up Your AI Workbench",
+            "description": "Master the foundational programming and environment setup crucial for any AI project.",
+            "sequence_order": 1,
+            "skills": [
+              {
+                "skill_id": "SKILL_P1M1S1",
+                "title": "Python for AI & Data",
+                "description": "Learn essential Python programming concepts and syntax specifically tailored for AI and data manipulation.",
+                "difficulty": 0.1,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M1S1",
+                    "title": "Python Basics for AI",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M1S1",
+                    "title": "Coding a Basic Data Operation",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M1S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M1S2",
+                "title": "Essential Libraries (NumPy, Pandas)",
+                "description": "Get hands-on with NumPy for numerical operations and Pandas for data manipulation, key tools in AI.",
+                "difficulty": 0.15,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M1S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M1S2",
+                    "title": "NumPy & Pandas Crash Course",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M1S2",
+                    "title": "Analyzing a Small Dataset with Pandas",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M1S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M1S3",
+                "title": "Jupyter Notebooks & Environments",
+                "description": "Learn to use Jupyter Notebooks for interactive coding and manage your development environments effectively.",
+                "difficulty": 0.2,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M1S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M1S3",
+                    "title": "Jupyter & Virtual Environments",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M1S3",
+                    "title": "Setting Up a Project in Jupyter",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M1S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P1M2",
+            "title": "Understanding Data for AI",
+            "description": "Learn how to prepare and analyze data, a critical first step before building any AI model.",
+            "sequence_order": 2,
+            "skills": [
+              {
+                "skill_id": "SKILL_P1M2S1",
+                "title": "Data Collection & Cleaning Basics",
+                "description": "Understand how to acquire data and perform initial cleaning to ensure quality for your models.",
+                "difficulty": 0.2,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M1S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M2S1",
+                    "title": "Intro to Data Cleaning",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M2S1",
+                    "title": "Cleaning a Messy Dataset",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M2S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M2S2",
+                "title": "Exploratory Data Analysis (EDA)",
+                "description": "Learn to visualize and summarize data to uncover patterns and insights before modeling.",
+                "difficulty": 0.25,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M2S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M2S2",
+                    "title": "EDA with Matplotlib & Seaborn",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M2S2",
+                    "title": "Finding Insights in a Sales Dataset",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M2S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M2S3",
+                "title": "Feature Engineering Fundamentals",
+                "description": "Discover how to create new, more informative features from raw data to improve model performance.",
+                "difficulty": 0.3,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M2S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M2S3",
+                    "title": "Intro to Feature Engineering",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M2S3",
+                    "title": "Creating Features for a Housing Price Model",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M2S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P1M3",
+            "title": "Your First ML Models",
+            "description": "Implement and understand basic machine learning models, laying the groundwork for more complex AI applications.",
+            "sequence_order": 3,
+            "skills": [
+              {
+                "skill_id": "SKILL_P1M3S1",
+                "title": "Supervised Learning Basics",
+                "description": "Grasp the core concepts of supervised learning, where models learn from labeled data.",
+                "difficulty": 0.3,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M2S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M3S1",
+                    "title": "What is Supervised Learning?",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M3S1",
+                    "title": "Identifying Supervised Learning Problems",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M3S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M3S2",
+                "title": "Training Simple Regression Models",
+                "description": "Implement and train basic regression models to predict continuous values.",
+                "difficulty": 0.35,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M3S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M3S2",
+                    "title": "Linear Regression in Scikit-learn",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M3S2",
+                    "title": "Predicting House Prices with Regression",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M3S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P1M3S3",
+                "title": "Training Simple Classification Models",
+                "description": "Build and train basic classification models to categorize data into distinct classes.",
+                "difficulty": 0.35,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M3S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P1M3S3",
+                    "title": "Logistic Regression & Decision Trees",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P1M3S3",
+                    "title": "Classifying Iris Species",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P1M3S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "P2",
+        "label": "P2",
+        "identity_label": "Crafting Your First AI Projects",
+        "identity_statement": "You're now building more robust AI models, evaluating their performance, and creating small, complete projects for your portfolio.",
+        "market_value_display": "₹10-15K/month",
+        "sequence_order": 2,
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "module_id": "P2M1",
+            "title": "Intermediate Machine Learning",
+            "description": "Dive deeper into model performance, common challenges, and more advanced traditional ML techniques.",
+            "sequence_order": 1,
+            "skills": [
+              {
+                "skill_id": "SKILL_P2M1S1",
+                "title": "Model Evaluation & Metrics",
+                "description": "Learn to accurately assess your model's performance using various metrics for regression and classification.",
+                "difficulty": 0.35,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M3S2",
+                    "SKILL_P1M3S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M1S1",
+                    "title": "Metrics for ML Models",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M1S1",
+                    "title": "Evaluating a Churn Prediction Model",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M1S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M1S2",
+                "title": "Overfitting & Regularization",
+                "description": "Understand and combat common issues like overfitting using techniques such as regularization.",
+                "difficulty": 0.4,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M1S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M1S2",
+                    "title": "Understanding Overfitting",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M1S2",
+                    "title": "Applying Regularization to a Model",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M1S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M1S3",
+                "title": "Ensemble Methods Introduction",
+                "description": "Explore how combining multiple models can lead to more powerful and accurate predictions.",
+                "difficulty": 0.45,
+                "estimated_hours": 5,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M1S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M1S3",
+                    "title": "Bagging & Boosting Basics",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M1S3",
+                    "title": "Implementing a Random Forest Classifier",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M1S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P2M2",
+            "title": "Building Practical ML Pipelines",
+            "description": "Learn to structure your machine learning projects from data preparation to basic model deployment.",
+            "sequence_order": 2,
+            "skills": [
+              {
+                "skill_id": "SKILL_P2M2S1",
+                "title": "Data Preprocessing with Scikit-learn",
+                "description": "Utilize Scikit-learn for efficient data scaling, encoding, and transformation.",
+                "difficulty": 0.4,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P1M2S3",
+                    "SKILL_P2M1S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M2S1",
+                    "title": "Scikit-learn Preprocessing Tools",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M2S1",
+                    "title": "Preprocessing Data for a ML Model",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M2S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M2S2",
+                "title": "Model Training & Hyperparameter Tuning",
+                "description": "Optimize your models by understanding and tuning hyperparameters for better performance.",
+                "difficulty": 0.45,
+                "estimated_hours": 5,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M2S1",
+                    "SKILL_P2M1S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M2S2",
+                    "title": "Grid Search & Cross-Validation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M2S2",
+                    "title": "Tuning a Gradient Boosting Model",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M2S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M2S3",
+                "title": "Basic Model Persistence & Deployment",
+                "description": "Learn to save your trained models and understand the basics of making them available for use.",
+                "difficulty": 0.5,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M2S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M2S3",
+                    "title": "Saving & Loading Models (Pickle/Joblib)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M2S3",
+                    "title": "Deploying a Simple Prediction API",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M2S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P2M3",
+            "title": "Introduction to Deep Learning",
+            "description": "Get started with the powerful world of neural networks and deep learning architectures.",
+            "sequence_order": 3,
+            "skills": [
+              {
+                "skill_id": "SKILL_P2M3S1",
+                "title": "Neural Network Fundamentals",
+                "description": "Understand the basic building blocks of neural networks: neurons, layers, and activation functions.",
+                "difficulty": 0.45,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M1S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M3S1",
+                    "title": "How Neural Networks Work",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M3S1",
+                    "title": "Designing a Simple Neural Network",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M3S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M3S2",
+                "title": "Building Simple ANNs with Keras/TensorFlow",
+                "description": "Implement and train basic Artificial Neural Networks using popular frameworks like Keras or TensorFlow.",
+                "difficulty": 0.5,
+                "estimated_hours": 5,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M3S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M3S2",
+                    "title": "Keras for Beginners",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M3S2",
+                    "title": "Building an ANN for MNIST Classification",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M3S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P2M3S3",
+                "title": "Intro to Convolutional Neural Networks",
+                "description": "Discover CNNs, a powerful type of neural network especially effective for image data.",
+                "difficulty": 0.55,
+                "estimated_hours": 5,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M3S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P2M3S3",
+                    "title": "CNNs Explained",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P2M3S3",
+                    "title": "Building a Simple CNN for Image Recognition",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P2M3S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "P3",
+        "label": "P3",
+        "identity_label": "Showcasing Your AI Expertise",
+        "identity_statement": "You're now specializing in advanced AI, building impressive portfolio projects, and getting ready to ace your internship applications.",
+        "market_value_display": "₹15-25K/month",
+        "sequence_order": 3,
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "module_id": "P3M1",
+            "title": "Advanced Model Architectures",
+            "description": "Explore more complex neural network designs and the exciting field of generative AI.",
+            "sequence_order": 1,
+            "skills": [
+              {
+                "skill_id": "SKILL_P3M1S1",
+                "title": "Recurrent Neural Networks Basics",
+                "description": "Understand RNNs and their application in sequential data like text or time series.",
+                "difficulty": 0.6,
+                "estimated_hours": 5,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M3S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M1S1",
+                    "title": "Intro to RNNs and LSTMs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M1S1",
+                    "title": "Predicting Stock Prices with an RNN",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M1S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M1S2",
+                "title": "Transfer Learning for Computer Vision",
+                "description": "Leverage pre-trained models to quickly build high-performing computer vision applications.",
+                "difficulty": 0.65,
+                "estimated_hours": 6,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P2M3S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M1S2",
+                    "title": "Transfer Learning with ResNet",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M1S2",
+                    "title": "Classifying Custom Images with Transfer Learning",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M1S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M1S3",
+                "title": "Generative Models Fundamentals",
+                "description": "Explore the basics of models that can create new data, like GANs and VAEs.",
+                "difficulty": 0.7,
+                "estimated_hours": 6,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M1S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M1S3",
+                    "title": "Intro to GANs and VAEs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M1S3",
+                    "title": "Generating Simple Images with a GAN",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M1S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P3M2",
+            "title": "Building Portfolio-Ready Projects",
+            "description": "Create impactful, end-to-end AI projects that will make your internship applications shine.",
+            "sequence_order": 2,
+            "skills": [
+              {
+                "skill_id": "SKILL_P3M2S1",
+                "title": "End-to-End Image Classification Project",
+                "description": "Develop a complete project from data acquisition to model deployment for image classification.",
+                "difficulty": 0.7,
+                "estimated_hours": 7,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M1S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M2S1",
+                    "title": "Project Walkthrough: Image Classifier",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M2S1",
+                    "title": "Building a Custom Image Classifier",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M2S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M2S2",
+                "title": "Simple Text Generation Project",
+                "description": "Create a project that generates new text using a basic generative AI model.",
+                "difficulty": 0.75,
+                "estimated_hours": 7,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M1S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M2S2",
+                    "title": "Project Walkthrough: Text Generator",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M2S2",
+                    "title": "Developing a Story Generator",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M2S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M2S3",
+                "title": "Presenting AI Projects & Code",
+                "description": "Learn to effectively showcase your projects, explain your code, and highlight your contributions.",
+                "difficulty": 0.8,
+                "estimated_hours": 5,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M2S1",
+                    "SKILL_P3M2S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M2S3",
+                    "title": "Creating a Project Portfolio",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M2S3",
+                    "title": "Preparing a Project Demo",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M2S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          },
+          {
+            "module_id": "P3M3",
+            "title": "Internship Readiness",
+            "description": "Prepare for the internship application process, from understanding roles to acing interviews.",
+            "sequence_order": 3,
+            "skills": [
+              {
+                "skill_id": "SKILL_P3M3S1",
+                "title": "Understanding AI Developer Roles",
+                "description": "Gain clarity on what AI developer interns do and the different specializations within the field.",
+                "difficulty": 0.8,
+                "estimated_hours": 3,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M2S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M3S1",
+                    "title": "AI Intern Job Descriptions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M3S1",
+                    "title": "Analyzing AI Job Postings",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M3S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M3S2",
+                "title": "Crafting an AI-focused Resume & Cover Letter",
+                "description": "Build a compelling resume and cover letter that highlights your AI skills and projects.",
+                "difficulty": 0.85,
+                "estimated_hours": 4,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M3S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M3S2",
+                    "title": "Resume Tips for AI Interns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M3S2",
+                    "title": "Tailoring Your Resume for an AI Role",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M3S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_P3M3S3",
+                "title": "AI Interview Preparation (Technical & Behavioral)",
+                "description": "Prepare for common technical questions, coding challenges, and behavioral interviews for AI internships.",
+                "difficulty": 0.9,
+                "estimated_hours": 5,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_P3M3S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "mastery_based"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_P3M3S3",
+                    "title": "Common AI Interview Questions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_P3M3S3",
+                    "title": "Mock AI Technical Interview",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_P3M3S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

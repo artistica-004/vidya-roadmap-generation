@@ -435,3 +435,109 @@ def retrieve_raw_context(user_id: str) -> str:
         print(f"[RAW CTX] onboarding error for user {user_id}: {exc}")
 
     return "\n\n".join(context_parts)
+
+# ============================================================
+# POC MEMORY HELPERS
+# ============================================================
+
+def fetch_poc_record(
+    user_id: str,
+    record_id: str
+) -> str:
+    """
+    Fetch a single record from Pinecone namespace.
+    """
+
+    try:
+        index = pc.Index(INDEX_NAME)
+
+        result = index.fetch(
+            ids=[record_id],
+            namespace=user_id
+        )
+
+        if (
+            result
+            and result.vectors
+            and record_id in result.vectors
+        ):
+            metadata = (
+                result.vectors[record_id].metadata
+                or {}
+            )
+
+            return metadata.get("text", "")
+
+        return ""
+
+    except Exception as e:
+        print(
+            f"[POC MEMORY] Fetch failed "
+            f"for {record_id}: {e}"
+        )
+        return ""
+
+
+def save_poc_record(
+    user_id: str,
+    record_id: str,
+    text: str
+) -> bool:
+    """
+    Save a single text record into Pinecone.
+    """
+
+    try:
+        import json
+
+        index = pc.Index(INDEX_NAME)
+
+        metadata = {
+            "user_id": user_id,
+            "text": text,
+            "doc_type": "poc_memory"
+        }
+
+        metadata_size = len(
+            json.dumps(metadata).encode("utf-8")
+        )
+
+        print(
+            f"[POC MEMORY] {record_id} metadata size: "
+            f"{metadata_size} bytes"
+        )
+
+        if metadata_size > 40000:
+            print(
+                f"[POC MEMORY] Skipping save for "
+                f"{record_id}. Metadata exceeds "
+                f"Pinecone limit."
+            )
+            return False
+
+        dummy_vector = [1.0] + [0.0] * 3071
+
+        index.upsert(
+            vectors=[
+                {
+                    "id": record_id,
+                    "values": dummy_vector,
+                    "metadata": metadata
+                }
+            ],
+            namespace=user_id
+        )
+
+        print(
+            f"[POC MEMORY] Saved "
+            f"{record_id}"
+        )
+
+        return True
+
+    except Exception as e:
+        print(
+            f"[POC MEMORY] Save failed "
+            f"for {record_id}: {e}"
+        )
+        return False

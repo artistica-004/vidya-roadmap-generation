@@ -1,0 +1,2948 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_020",
+  "roadmap_id": "ai_roadmap_20260612075444_63f4f952",
+  "generated_at": "2026-06-12T07:58:47.723634",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260612075444_63f4f952",
+    "user_id": "user_020",
+    "icp_type": "low",
+    "level": "beginner",
+    "target_role": "IT Helpdesk Technician",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "vision_profile": {
+      "current_state": "Vivek is a 23-year-old B.Sc CS graduate operating a cyber cafe, already solving basic computer problems for customers.",
+      "main_blocker": "His biggest obstacle is the lack of formal recognition and structured learning paths to transition his practical skills into a professional IT role.",
+      "top_motivation": "He is highly motivated to convert his daily problem-solving experience into a recognized IT Helpdesk position with a stable salary and career growth."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-12T07:58:41.809317",
+      "version": "v3.1",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Foundational IT Support & Problem Solving",
+        "sal": "Unpaid/stipend",
+        "o": "You can confidently handle basic IT support tasks, troubleshoot common hardware/software issues, and provide excellent customer service.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are building a strong foundation, formalizing your existing skills into a recognized IT support professional.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "IT Fundamentals & Hardware Basics",
+            "free": true,
+            "vis": "real_tutor+ppt",
+            "lessons": [
+              "Introduction to IT Support Role",
+              "Computer Components & Peripherals",
+              "Basic Hardware Handling & Setup",
+              "Printer Installation & Troubleshooting",
+              "Common Software Installation (e.g., MS Office)",
+              "Preventive Maintenance Tips"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "hardware_basics",
+                "title": "Basic Hardware Handling",
+                "p": 80,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.8,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Understanding PC Components",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Diagnosing a Non-Booting PC",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "printer_support",
+                "title": "Printer Setup & Troubleshooting",
+                "p": 75,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.75,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Installing Printer Drivers",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Resolving Network Printer Issues",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "software_installation",
+                "title": "Software Installation & Updates",
+                "p": 70,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.7,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Installing MS Office Suite",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Troubleshooting Software Conflicts",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A customer reports their new printer isn't connecting to their laptop. Walk through the steps to diagnose and resolve the issue, considering both hardware and software aspects."
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Problem Solving & Diagnostics",
+            "free": true,
+            "vis": "code+ppt",
+            "lessons": [
+              "The Troubleshooting Methodology",
+              "Gathering Information & Active Listening",
+              "Formulating Hypotheses & Testing",
+              "Escalation Procedures",
+              "Documentation Best Practices",
+              "Basic Command Line Tools (ping, ipconfig - conceptual)"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "troubleshooting_methodology",
+                "title": "Structured Troubleshooting",
+                "p": 65,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.65,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "The 6-Step Troubleshooting Process",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Diagnosing Intermittent Internet Connectivity",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "diagnostic_tools",
+                "title": "Basic Diagnostic Tools",
+                "p": 55,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.55,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Using Ping and Ipconfig",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Verifying Network Connectivity",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "documentation",
+                "title": "IT Documentation & Reporting",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Creating Effective Troubleshooting Logs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Documenting a Resolved Issue",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M1.3",
+            "title": "Customer Service & Communication",
+            "free": false,
+            "vis": "ppt+animation",
+            "lessons": [
+              "Active Listening & Empathy in IT Support",
+              "Setting Expectations & Managing User Frustration",
+              "Clear & Concise Communication (Verbal & Written)",
+              "Handling Difficult Customers",
+              "Follow-up & Feedback Loops",
+              "Professional Etiquette"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M3_S1",
+                "n": "customer_communication",
+                "title": "Effective Customer Communication",
+                "p": 70,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.7,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S1",
+                    "title": "Communicating Technical Issues Simply",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S1",
+                    "title": "Calming an Upset User",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S2",
+                "n": "empathy_support",
+                "title": "Empathy in Technical Support",
+                "p": 60,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.6,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S2",
+                    "title": "Building Rapport with Users",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S2",
+                    "title": "Handling a Repetitive Issue",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S3",
+                "n": "conflict_resolution",
+                "title": "Conflict Resolution in Support",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S3",
+                    "title": "De-escalation Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S3",
+                    "title": "Mediating a Dispute with a Vendor",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Operating System & Software Essentials",
+        "sal": "₹3-5 LPA",
+        "o": "You can manage operating system basics, install and configure software effectively, and apply basic scripting for IT tasks.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are becoming proficient in the core software environments that users interact with daily.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Operating System Fundamentals",
+            "free": false,
+            "vis": "ppt+code",
+            "lessons": [
+              "Introduction to OS Types (Windows, Linux, macOS - conceptual)",
+              "File Systems & Permissions",
+              "User & Group Management (conceptual)",
+              "Process & Service Management",
+              "Disk Management & Storage",
+              "System Monitoring & Event Logs"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "os_basics",
+                "title": "Operating System Navigation",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Exploring Windows File Explorer & Settings",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Locating System Information",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "user_management",
+                "title": "User & Permissions Management",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Creating and Managing Local User Accounts",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Granting Folder Access Permissions",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "process_management",
+                "title": "Process & Service Control",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Using Task Manager to End Processes",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Troubleshooting a Frozen Application",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A user reports their computer is running extremely slow. Using system monitoring tools, identify potential culprits (CPU, RAM, Disk usage) and suggest initial troubleshooting steps."
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "Software Deployment & Management",
+            "free": false,
+            "vis": "real_tutor+code",
+            "lessons": [
+              "Software Lifecycle & Versioning",
+              "Application Installation & Uninstallation",
+              "Driver Management & Updates",
+              "Patch Management & Security Updates",
+              "Troubleshooting Software Conflicts",
+              "Remote Software Deployment (conceptual)"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "software_deployment",
+                "title": "Software Deployment Basics",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Installing Applications from Various Sources",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Resolving a Failed Software Installation",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "driver_management",
+                "title": "Driver Management",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Updating and Rolling Back Device Drivers",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Diagnosing a Display Driver Issue",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "patch_management",
+                "title": "Patch Management Basics",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Understanding Windows Update Settings",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Resolving a Failed System Update",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M2.3",
+            "title": "Basic Scripting for IT Tasks",
+            "free": false,
+            "vis": "notebook+code",
+            "lessons": [
+              "Introduction to Python for IT Automation (from Python for AI)",
+              "Basic Syntax & Variables",
+              "File Operations (read, write, delete)",
+              "Automating Repetitive Tasks (e.g., log parsing)",
+              "Error Handling in Scripts",
+              "Running Scripts & Scheduling"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M3_S1",
+                "n": "python_basics",
+                "title": "Python Fundamentals",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S1",
+                    "title": "Variables and Data Types in Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S1",
+                    "title": "Writing a Simple 'Hello World' Script",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S2",
+                "n": "file_automation",
+                "title": "Automating File Operations",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S2",
+                    "title": "Reading and Writing Text Files with Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S2",
+                    "title": "Creating a Script to Backup Log Files",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S3",
+                "n": "script_scheduling",
+                "title": "Scheduling Basic Scripts",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S3",
+                    "title": "Using Task Scheduler for Python Scripts",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S3",
+                    "title": "Automating Daily System Health Checks",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M03",
+        "label": "M03",
+        "t": "Network Fundamentals for Helpdesk",
+        "sal": "₹4-6 LPA",
+        "o": "You can diagnose and resolve common network connectivity issues, understand basic network infrastructure, and assist with network configurations.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are mastering the backbone of all modern IT systems: networking.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M3.1",
+            "title": "Networking & Communication Basics",
+            "free": false,
+            "vis": "ppt+animation",
+            "lessons": [
+              "Introduction to Networking (High Level System Design)",
+              "OSI Model & TCP/IP Stack (Simplified)",
+              "IP Addressing & Subnetting Basics",
+              "DNS & DHCP Fundamentals",
+              "Common Network Devices (Routers, Switches, Access Points)",
+              "Wireless Networking Concepts"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M1_S1",
+                "n": "network_fundamentals",
+                "title": "Network Basic Concepts",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S1",
+                    "title": "Understanding IP Addresses and MAC Addresses",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S1",
+                    "title": "Explaining DHCP to a Non-Technical User",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S2",
+                "n": "ip_subnetting",
+                "title": "IP Addressing & Subnetting",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S2",
+                    "title": "Calculating Subnet Masks",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S2",
+                    "title": "Assigning Static IP Addresses",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S3",
+                "n": "network_devices",
+                "title": "Basic Network Devices",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S3",
+                    "title": "Configuring a Basic Wireless Router",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S3",
+                    "title": "Troubleshooting a Wi-Fi Dead Zone",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A user cannot access a shared network drive. Describe your troubleshooting steps, starting from checking local network settings to verifying server connectivity."
+              }
+            ]
+          },
+          {
+            "id": "M3.2",
+            "title": "Network Troubleshooting Tools & Techniques",
+            "free": false,
+            "vis": "code+real_tutor",
+            "lessons": [
+              "Advanced Command Line Network Tools (tracert, netstat)",
+              "Using Network Scanners (conceptual)",
+              "Packet Sniffing Basics (conceptual)",
+              "Troubleshooting DNS Resolution Issues",
+              "Diagnosing Wi-Fi Connectivity Problems",
+              "Basic Cable & Hardware Testing"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M2_S1",
+                "n": "network_diagnostics",
+                "title": "Network Diagnostic Tools",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S1",
+                    "title": "Using Tracert to Map Network Paths",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S1",
+                    "title": "Identifying Network Bottlenecks",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S2",
+                "n": "dns_troubleshooting",
+                "title": "DNS Troubleshooting",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S2",
+                    "title": "Using NSLOOKUP for DNS Resolution",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S2",
+                    "title": "Resolving 'Website Not Found' Errors",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S3",
+                "n": "lan_troubleshooting",
+                "title": "LAN Troubleshooting",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S3",
+                    "title": "Diagnosing Physical Network Issues",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S3",
+                    "title": "Troubleshooting a Slow Local Network",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M04",
+        "label": "M04",
+        "t": "Cybersecurity Hygiene & Best Practices",
+        "sal": "₹5-7 LPA",
+        "o": "You can identify common security threats, implement basic cybersecurity measures, and educate users on safe computing practices.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are becoming the first line of defense against digital threats, protecting users and systems.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M4.1",
+            "title": "Introduction to Cybersecurity",
+            "free": false,
+            "vis": "ppt+animation",
+            "lessons": [
+              "Fundamentals of Information Security (from High Level System Design - Security)",
+              "Common Cyber Threats (Malware, Phishing, Ransomware)",
+              "Antivirus & Anti-Malware Solutions",
+              "Firewall Concepts & Configuration (basic)",
+              "Password Management & Best Practices",
+              "Data Backup & Recovery Principles"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M1_S1",
+                "n": "cyber_threats",
+                "title": "Identifying Cyber Threats",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S1",
+                    "title": "Recognizing Phishing Emails",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S1",
+                    "title": "Responding to a Suspected Malware Infection",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S2",
+                "n": "antivirus_management",
+                "title": "Antivirus & Firewall Management",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S2",
+                    "title": "Configuring Windows Defender Firewall",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S2",
+                    "title": "Blocking Malicious Websites",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S3",
+                "n": "password_security",
+                "title": "Password & Account Security",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S3",
+                    "title": "Implementing Multi-Factor Authentication",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S3",
+                    "title": "Educating Users on Strong Passwords",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A user clicked on a suspicious link and now their browser is redirecting to unknown sites. Outline the immediate steps to contain the issue and clean the system."
+              }
+            ]
+          },
+          {
+            "id": "M4.2",
+            "title": "Data Protection & User Security",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "lessons": [
+              "User Awareness Training & Best Practices",
+              "Physical Security for Devices",
+              "Data Encryption Basics (conceptual)",
+              "Secure Data Disposal",
+              "Incident Response Fundamentals (Helpdesk role)",
+              "Privacy Concerns & Regulations (basic overview)"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M2_S1",
+                "n": "user_security_awareness",
+                "title": "User Security Awareness",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S1",
+                    "title": "Conducting Basic Security Training for Users",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S1",
+                    "title": "Advising on Safe Email Practices",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S2",
+                "n": "data_backup_recovery",
+                "title": "Data Backup & Recovery",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S2",
+                    "title": "Setting Up Automated Backups",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S2",
+                    "title": "Recovering Lost Files from Backup",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S3",
+                "n": "incident_response_basics",
+                "title": "Basic Incident Response",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S3",
+                    "title": "Reporting a Security Breach",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S3",
+                    "title": "Handling a Data Leak Scare",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M05",
+        "label": "M05",
+        "t": "IT Service Management Principles",
+        "sal": "₹6-9 LPA",
+        "o": "You can effectively manage IT service requests, utilize ticketing systems, and contribute to IT service improvement processes.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are streamlining IT operations, making support efficient and user-friendly.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M5.1",
+            "title": "IT Service Management & Documentation",
+            "free": false,
+            "vis": "ppt+animation",
+            "lessons": [
+              "Introduction to IT Service Management (ITSM) & ITIL (conceptual)",
+              "Incident Management Workflow",
+              "Service Request Fulfillment",
+              "Problem Management Basics",
+              "Change Management Overview",
+              "Knowledge Base Creation & Usage"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M1_S1",
+                "n": "incident_management",
+                "title": "Incident Management Workflow",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S1",
+                    "title": "Logging and Prioritizing Incidents",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S1",
+                    "title": "Managing a High-Priority System Outage",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S2",
+                "n": "service_request_fulfillment",
+                "title": "Service Request Fulfillment",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S2",
+                    "title": "Processing New User Onboarding Requests",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S2",
+                    "title": "Setting Up a New Workstation",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S3",
+                "n": "knowledge_base_management",
+                "title": "Knowledge Base Contribution",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S3",
+                    "title": "Writing Effective Troubleshooting Articles",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S3",
+                    "title": "Creating a FAQ for Common Printer Issues",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical business application is down for multiple users. Describe your immediate actions, communication plan, and how you would escalate this incident according to ITSM principles."
+              }
+            ]
+          },
+          {
+            "id": "M5.2",
+            "title": "Collaboration & IT Tools",
+            "free": false,
+            "vis": "real_tutor+code",
+            "lessons": [
+              "Team Collaboration Tools (e.g., Slack, Teams - conceptual)",
+              "Remote Access Tools (TeamViewer, RDP - conceptual)",
+              "Asset Management Basics",
+              "Vendor Management & Support",
+              "Feedback & Continuous Improvement (from Collaboration & Tools)",
+              "Basic Project Management for IT Tasks"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M2_S1",
+                "n": "remote_support_tools",
+                "title": "Remote Support Tools",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S1",
+                    "title": "Using Remote Desktop Protocol (RDP)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S1",
+                    "title": "Assisting a Remote User with a Software Issue",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S2",
+                "n": "asset_management_basics",
+                "title": "IT Asset Management",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S2",
+                    "title": "Tracking IT Inventory",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S2",
+                    "title": "Auditing Software Licenses",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S3",
+                "n": "vendor_management",
+                "title": "Vendor & External Support",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S3",
+                    "title": "Working with Hardware Vendors",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S3",
+                    "title": "Coordinating with Software Support",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M06",
+        "label": "M06",
+        "t": "Advanced Troubleshooting & Support",
+        "sal": "₹7-10 LPA",
+        "o": "You can resolve complex, multi-faceted IT issues, manage advanced system configurations, and mentor junior support staff.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are evolving into a seasoned troubleshooter, tackling the most challenging IT puzzles.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M6.1",
+            "title": "Advanced Diagnostic Techniques",
+            "free": false,
+            "vis": "code+ppt",
+            "lessons": [
+              "Advanced System Monitoring & Performance Tuning",
+              "Registry Editing (with caution)",
+              "Boot Process Troubleshooting",
+              "Data Recovery from Failed Drives (conceptual)",
+              "Virtualization Basics for Troubleshooting",
+              "Advanced Scripting for Automation (Python for AI)"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M06_M1_S1",
+                "n": "advanced_system_diagnostics",
+                "title": "Advanced System Diagnostics",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S1",
+                    "title": "Analyzing System Performance Logs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M1_S1",
+                    "title": "Diagnosing Intermittent System Crashes",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M1_S2",
+                "n": "boot_troubleshooting",
+                "title": "Boot Process Troubleshooting",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S2",
+                    "title": "Using Advanced Boot Options",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M1_S2",
+                    "title": "Resolving a 'No Boot Device Found' Error",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M1_S3",
+                "n": "advanced_scripting",
+                "title": "Advanced Scripting for IT",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S3",
+                    "title": "Writing Scripts for System Configuration",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M1_S3",
+                    "title": "Automating User Account Creation",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical server is experiencing intermittent network drops, but only during peak hours. Detail your approach to diagnose this complex issue, considering both hardware and software factors."
+              }
+            ]
+          },
+          {
+            "id": "M6.2",
+            "title": "Remote Support & Advanced Tools",
+            "free": false,
+            "vis": "real_tutor+code",
+            "lessons": [
+              "Advanced Remote Access & Management",
+              "Cloud-Based IT Tools (conceptual)",
+              "Mobile Device Management (MDM) Basics",
+              "Virtual Desktop Infrastructure (VDI) Overview",
+              "Troubleshooting Remote Connectivity Issues",
+              "Security Considerations for Remote Support"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M06_M2_S1",
+                "n": "advanced_remote_support",
+                "title": "Advanced Remote Support",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S1",
+                    "title": "Managing Remote Desktops with PowerShell",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M2_S1",
+                    "title": "Troubleshooting VPN Connectivity for Remote Users",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M2_S2",
+                "n": "cloud_it_tools",
+                "title": "Cloud-Based IT Tools",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S2",
+                    "title": "Overview of Microsoft 365 Admin Center",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M2_S2",
+                    "title": "Managing User Accounts in a Cloud Environment",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M2_S3",
+                "n": "mdm_basics",
+                "title": "Mobile Device Management",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S3",
+                    "title": "Enrolling Devices in MDM Solutions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M2_S3",
+                    "title": "Wiping a Lost Company Phone",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M07",
+        "label": "M07",
+        "t": "Career Readiness & Professional Development",
+        "sal": "₹8-12 LPA",
+        "o": "You are fully prepared for IT Helpdesk interviews, can articulate your value, and have a clear path for continuous professional growth in IT.",
+        "sc_n": 0,
+        "iv": 1,
+        "identity_statement": "You are not just a technician, but a valuable asset ready to grow and lead in the IT world.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M7.1",
+            "title": "Interview Skills & Resume Building",
+            "free": false,
+            "vis": "ppt+animation",
+            "lessons": [
+              "Crafting an Impactful IT Helpdesk Resume",
+              "Writing a Compelling Cover Letter",
+              "Behavioral Interview Questions (STAR Method)",
+              "Technical Interview Questions for Helpdesk",
+              "Mock Interview Practice & Feedback",
+              "Networking for IT Professionals (from Capstone & Career Readiness)"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M07_M1_S1",
+                "n": "resume_optimization",
+                "title": "Resume & Cover Letter",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M1_S1",
+                    "title": "Highlighting Cyber Cafe Experience on Resume",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M07_M1_S1",
+                    "title": "Tailoring Resume for a Specific Job Posting",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M07_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M1_S2",
+                "n": "behavioral_interview",
+                "title": "Behavioral Interview Skills",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M1_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M1_S2",
+                    "title": "Practicing the STAR Method",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M07_M1_S2",
+                    "title": "Answering 'Tell me about a time you failed'",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M07_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M1_S3",
+                "n": "technical_interview",
+                "title": "Technical Interview Prep",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M1_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M1_S3",
+                    "title": "Common Helpdesk Technical Questions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M07_M1_S3",
+                    "title": "Explaining DNS Resolution to an Interviewer",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M07_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe a challenging technical problem you've solved. How did you approach it, what tools did you use, and what was the outcome?"
+              }
+            ]
+          },
+          {
+            "id": "M7.2",
+            "title": "Continuous Learning & Career Growth",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "lessons": [
+              "Certifications for IT Helpdesk (CompTIA A+, Network+)",
+              "Specialization Paths in IT (Networking, Security, Cloud)",
+              "Building a Professional Network",
+              "Staying Updated with IT Trends",
+              "Mentorship & Leadership in IT",
+              "Personal Branding for IT Professionals"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M07_M2_S1",
+                "n": "it_certifications",
+                "title": "IT Certifications Roadmap",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M2_S1",
+                    "title": "Overview of CompTIA A+ Certification",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M07_M2_S1",
+                    "title": "Choosing the Right Certification Path",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M07_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M2_S2",
+                "n": "career_specialization",
+                "title": "IT Career Specialization",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M2_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M2_S2",
+                    "title": "Exploring Network Administrator Roles",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M07_M2_S2",
+                    "title": "Planning Your Next Career Step",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M07_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M2_S3",
+                "n": "professional_networking",
+                "title": "Professional Networking",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M2_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M2_S3",
+                    "title": "Leveraging LinkedIn for Career Growth",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M07_M2_S3",
+                    "title": "Attending an Online IT Conference",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M07_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      }
+    ]
+  }
+}
