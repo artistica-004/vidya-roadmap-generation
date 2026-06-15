@@ -1,0 +1,2590 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_005",
+  "roadmap_id": "ai_roadmap_20260613100848_d23b20bd",
+  "generated_at": "2026-06-13T10:11:01.036573",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260613100848_d23b20bd",
+    "user_id": "user_005",
+    "icp_type": "high",
+    "level": "beginner",
+    "target_role": "SDET Lead",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "vision_profile": {
+      "current_state": "Karan is a QA Automation Engineer with 5 years of experience, proficient in Selenium, Java, and basic Jenkins, but seeks to transition from scripting to a lead SDET role.",
+      "main_blocker": "His biggest obstacle is the lack of deep knowledge in test framework architecture, API contract testing, CI/CD pipeline integration, and performance testing basics.",
+      "top_motivation": "He is highly motivated to elevate the perception of QA work to a true engineering discipline and avoid repetitive automation tasks by mastering architectural and backend testing skills."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-13T10:10:47.211172",
+      "version": "v3.1",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Foundational SDET Principles & Modern Automation",
+        "sal": "₹10-15 LPA",
+        "o": "You can write clean, object-oriented automation scripts in Python, understand core design patterns, and apply fundamental testing methodologies effectively.",
+        "sc_n": 1,
+        "iv": 1,
+        "identity_statement": "You are building a robust engineering foundation, transforming your automation skills into a strategic asset for quality.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Python for Automation & Scripting",
+            "free": true,
+            "vis": "code+real_tutor",
+            "lessons": [
+              "Python Fundamentals for Automation",
+              "Data Structures & Algorithms in Python",
+              "File I/O & Error Handling",
+              "Introduction to Python Testing Libraries (Pytest)",
+              "Environment Setup & Virtual Environments",
+              "Basic Web Scraping for Test Data"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "python_basics",
+                "title": "Python Programming Fundamentals",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Introduction to Python Syntax & Data Types",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Debugging a Python Automation Script",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "python_data_structures",
+                "title": "Python Data Structures and Algorithms",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.22,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Lists, Tuples, Dictionaries, and Sets",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "pytest_basics",
+                "title": "Pytest for Unit & Integration Testing",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Writing Test Cases with Pytest",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "You encounter a flaky test in a new Python automation suite. Analyze the code to identify potential race conditions or incorrect assertions and propose a fix."
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "OOP & Design Patterns for Test Automation",
+            "free": true,
+            "vis": "real_tutor+ppt",
+            "lessons": [
+              "SOLID Principles in Test Code",
+              "Page Object Model (POM) Best Practices",
+              "Factory Method Pattern for Test Data Generation",
+              "Singleton Pattern for Driver Management",
+              "Builder Pattern for Complex Test Objects",
+              "Strategy Pattern for Different Test Environments"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "oop_principles",
+                "title": "Object-Oriented Programming Principles",
+                "p": 65,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Encapsulation, Inheritance, Polymorphism",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "solid_principles",
+                "title": "SOLID Principles for Maintainable Code",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Applying Single Responsibility Principle to Test Classes",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "design_patterns_automation",
+                "title": "Design Patterns in Test Automation",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Implementing Page Object Model with Factory Pattern",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M1.3",
+            "title": "Core Testing Methodologies & Tools",
+            "free": false,
+            "vis": "ppt+animation",
+            "lessons": [
+              "Test Pyramid & Agile Testing Principles",
+              "Exploratory Testing Techniques",
+              "Test Case Management & Reporting",
+              "Introduction to Version Control (Git)",
+              "Collaboration Tools for QA Teams",
+              "Test Data Generation Strategies"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M3_S1",
+                "n": "test_methodologies",
+                "title": "Modern Test Methodologies",
+                "p": 80,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S1",
+                    "title": "Understanding the Test Pyramid and its Application",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S2",
+                "n": "git_basics",
+                "title": "Version Control with Git",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S2",
+                    "title": "Basic Git Commands: Commit, Push, Pull, Branch",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S3",
+                "n": "test_reporting",
+                "title": "Test Reporting & Metrics",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S3",
+                    "title": "Generating Allure Reports for Test Results",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Explain the concept of the Test Pyramid and how it guides your test automation strategy."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Advanced API & Backend Testing",
+        "sal": "₹12-18 LPA",
+        "o": "You can effectively test RESTful APIs, implement contract testing, and perform basic database validations, ensuring robust backend quality.",
+        "sc_n": 1,
+        "iv": 1,
+        "identity_statement": "You are mastering the art of backend quality, ensuring the robustness and reliability of core system services.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "API Design & Contract Testing",
+            "free": false,
+            "vis": "notebook+code",
+            "lessons": [
+              "RESTful API Principles & Best Practices",
+              "API Testing with Postman & Newman (Advanced)",
+              "Introduction to API Contract Testing (Pact)",
+              "Designing Testable APIs",
+              "Authentication & Authorization Testing for APIs",
+              "Error Handling & Status Code Validation"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "rest_api_testing",
+                "title": "RESTful API Testing",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.22,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Deep Dive into HTTP Methods and Status Codes",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "api_contract_testing",
+                "title": "API Contract Testing with Pact",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Consumer-Driven Contract Testing Fundamentals",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "api_security_testing",
+                "title": "API Security & Authorization Testing",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Testing OAuth2 and JWT Authentication",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new API endpoint is returning inconsistent data. You suspect a contract violation. How would you use contract testing to diagnose and report the issue?"
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "Data Handling & Database Testing",
+            "free": false,
+            "vis": "code+ppt",
+            "lessons": [
+              "SQL Fundamentals for Testers",
+              "Database Schema Validation",
+              "Data Integrity & Consistency Testing",
+              "Testing Stored Procedures & Triggers",
+              "NoSQL Database Basics for Testing",
+              "Test Data Management Strategies for Databases"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "sql_for_testing",
+                "title": "SQL for Database Testing",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Advanced SQL Queries for Data Validation",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "data_integrity_testing",
+                "title": "Data Integrity & Consistency Testing",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Verifying ACID Properties in Database Transactions",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "nosql_testing_basics",
+                "title": "NoSQL Database Testing Basics",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Testing Document-Oriented Databases (MongoDB)",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe how you would approach testing a complex database migration, ensuring data integrity and minimal downtime."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M03",
+        "label": "M03",
+        "t": "Building Scalable Test Frameworks",
+        "sal": "₹15-22 LPA",
+        "o": "You can design and implement robust, maintainable, and scalable test automation frameworks, integrating various test types and reporting mechanisms.",
+        "sc_n": 1,
+        "iv": 1,
+        "identity_statement": "You are the architect of quality, building the foundational structures that ensure software excellence at scale.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M3.1",
+            "title": "Test Framework Architecture",
+            "free": false,
+            "vis": "animation+code",
+            "lessons": [
+              "Modular Test Framework Design",
+              "Integrating UI, API, and Database Tests",
+              "Reporting & Logging in Frameworks",
+              "Configuration Management for Test Environments",
+              "Extensibility & Plugin Architecture",
+              "Cross-Browser & Mobile Testing Integration"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M1_S1",
+                "n": "test_framework_design",
+                "title": "Scalable Test Framework Design",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S1",
+                    "title": "Designing a Hybrid Test Automation Framework",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S2",
+                "n": "multi_level_testing",
+                "title": "Integrating Multi-Level Tests",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S2",
+                    "title": "Orchestrating UI, API, and DB Tests in a Single Run",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S3",
+                "n": "framework_extensibility",
+                "title": "Framework Extensibility & Maintainability",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S3",
+                    "title": "Implementing a Plugin Architecture for New Test Types",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "You need to design a new test automation framework from scratch. Outline your architectural considerations and key components."
+              }
+            ]
+          },
+          {
+            "id": "M3.2",
+            "title": "Test Data Management & Mocking",
+            "free": false,
+            "vis": "code+real_tutor",
+            "lessons": [
+              "Strategies for Realistic Test Data Generation",
+              "Data Anonymization & Security in Testing",
+              "Mocking & Stubbing for API Dependencies",
+              "Virtualizing Services for Integration Tests",
+              "Managing Test Data Lifecycles",
+              "Data-Driven Testing Frameworks"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M2_S1",
+                "n": "test_data_generation",
+                "title": "Advanced Test Data Generation",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S1",
+                    "title": "Generating Synthetic Data with Faker Library",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S2",
+                "n": "mocking_stubbing",
+                "title": "Mocking & Stubbing External Services",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S2",
+                    "title": "Using WireMock for API Service Virtualization",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S3",
+                "n": "data_driven_testing",
+                "title": "Data-Driven Testing Implementation",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S3",
+                    "title": "Implementing Data-Driven Tests with CSV/Excel",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Your team needs to test a new feature that relies on an external payment gateway. How would you use mocking to enable efficient and reliable testing without hitting the actual gateway?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M04",
+        "label": "M04",
+        "t": "CI/CD Integration & Performance Testing",
+        "sal": "₹18-25 LPA",
+        "o": "You can integrate test automation seamlessly into CI/CD pipelines, monitor test health, and conduct foundational performance tests to identify bottlenecks.",
+        "sc_n": 1,
+        "iv": 1,
+        "identity_statement": "You are the guardian of continuous quality, ensuring every code change enhances system stability and performance.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M4.1",
+            "title": "CI/CD for Test Automation",
+            "free": false,
+            "vis": "ppt+code",
+            "lessons": [
+              "CI/CD Fundamentals & DevOps Principles",
+              "Integrating Jenkins with Test Frameworks",
+              "Pipeline as Code (Jenkinsfile)",
+              "Automated Deployment & Rollback Strategies",
+              "Test Orchestration in CI/CD",
+              "Monitoring Test Results in Pipelines"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M1_S1",
+                "n": "ci_cd_integration",
+                "title": "CI/CD Pipeline Integration",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S1",
+                    "title": "Setting up a Jenkins Pipeline for End-to-End Tests",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S2",
+                "n": "pipeline_as_code",
+                "title": "Pipeline as Code (Jenkinsfile)",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S2",
+                    "title": "Writing Declarative Jenkins Pipelines for Test Stages",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S3",
+                "n": "test_orchestration",
+                "title": "Test Orchestration & Reporting in CI",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S3",
+                    "title": "Configuring Parallel Test Execution in Jenkins",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "How would you set up a CI/CD pipeline to automatically run UI, API, and performance tests for a new feature branch before merging to main?"
+              }
+            ]
+          },
+          {
+            "id": "M4.2",
+            "title": "Performance Testing Basics",
+            "free": false,
+            "vis": "notebook+ppt",
+            "lessons": [
+              "Introduction to Performance Testing Types (Load, Stress, Soak)",
+              "Key Performance Indicators (KPIs) for Web Applications",
+              "Using JMeter for Basic Load Testing",
+              "Analyzing Performance Test Results",
+              "Identifying Performance Bottlenecks",
+              "Scalability Testing Concepts"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M2_S1",
+                "n": "performance_testing_intro",
+                "title": "Introduction to Performance Testing",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S1",
+                    "title": "Understanding Load, Stress, and Soak Testing",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S2",
+                "n": "jmeter_basics",
+                "title": "Basic Load Testing with JMeter",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S2",
+                    "title": "Creating a Simple API Load Test Plan in JMeter",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S3",
+                "n": "performance_analysis",
+                "title": "Analyzing Performance Test Results",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S3",
+                    "title": "Interpreting Throughput, Latency, and Error Rates",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical API is experiencing slow response times under peak load. You've run a JMeter test. What metrics would you prioritize for analysis, and where would you start looking for the root cause?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M05",
+        "label": "M05",
+        "t": "Distributed Systems & Microservices Testing",
+        "sal": "₹22-30 LPA",
+        "o": "You can effectively test complex microservices architectures and distributed systems, addressing challenges like eventual consistency, service discovery, and inter-service communication.",
+        "sc_n": 1,
+        "iv": 1,
+        "identity_statement": "You are the quality guardian of complex systems, ensuring seamless interactions and robust performance across distributed environments.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M5.1",
+            "title": "Microservices Testing Strategies",
+            "free": false,
+            "vis": "real_tutor+code",
+            "lessons": [
+              "Testing Microservices End-to-End",
+              "Consumer-Driven Contract Testing for Microservices",
+              "Service Virtualization for Microservices",
+              "Testing Event-Driven Architectures",
+              "Fault Injection Testing for Resilience",
+              "Observability & Monitoring for Microservices"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M1_S1",
+                "n": "microservices_e2e_testing",
+                "title": "End-to-End Testing Microservices",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S1",
+                    "title": "Strategies for Testing a Multi-Service Workflow",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S2",
+                "n": "event_driven_testing",
+                "title": "Testing Event-Driven Architectures",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S2",
+                    "title": "Validating Message Queues and Event Streams",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S3",
+                "n": "chaos_engineering_basics",
+                "title": "Introduction to Chaos Engineering",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S3",
+                    "title": "Injecting Faults to Test System Resilience",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new microservice is introduced. How would you ensure its integration with existing services is robust, considering potential network latency and service failures?"
+              }
+            ]
+          },
+          {
+            "id": "M5.2",
+            "title": "Concurrency & Fault Tolerance Testing",
+            "free": false,
+            "vis": "code+real_tutor",
+            "lessons": [
+              "Concurrency Issues in Distributed Systems",
+              "Testing for Race Conditions & Deadlocks",
+              "Fault Tolerance Patterns (Circuit Breaker, Retry)",
+              "Implementing Resilience Testing",
+              "Distributed Tracing for Debugging",
+              "Performance Testing Distributed Systems"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M2_S1",
+                "n": "concurrency_testing",
+                "title": "Concurrency Testing",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S1",
+                    "title": "Identifying and Testing Race Conditions",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S2",
+                "n": "fault_tolerance_testing",
+                "title": "Fault Tolerance & Resilience Testing",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S2",
+                    "title": "Testing Circuit Breaker and Retry Mechanisms",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S3",
+                "n": "distributed_tracing",
+                "title": "Distributed Tracing for Debugging",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S3",
+                    "title": "Using Jaeger/Zipkin for End-to-End Request Tracing",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "How do you ensure data consistency and handle eventual consistency scenarios when testing a distributed system with multiple microservices?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M06",
+        "label": "M06",
+        "t": "SDET Leadership & Quality Strategy",
+        "sal": "₹28-38 LPA",
+        "o": "You can define and implement comprehensive quality strategies, lead automation teams, establish quality gates, and drive a culture of quality across the development lifecycle.",
+        "sc_n": 1,
+        "iv": 1,
+        "identity_statement": "You are a visionary leader, shaping the future of quality engineering and empowering teams to deliver exceptional software.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M6.1",
+            "title": "Test Strategy & Quality Gates",
+            "free": false,
+            "vis": "ppt+animation",
+            "lessons": [
+              "Developing a Comprehensive Test Strategy",
+              "Defining Quality Gates in SDLC",
+              "Risk-Based Testing Approaches",
+              "Test Metrics & Dashboards for Leadership",
+              "Shift-Left Testing Principles",
+              "Managing Technical Debt in Automation"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M06_M1_S1",
+                "n": "quality_strategy_development",
+                "title": "Quality Strategy Development",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S1",
+                    "title": "Crafting a Test Strategy for a New Product Launch",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M1_S2",
+                "n": "quality_gates_definition",
+                "title": "Defining & Implementing Quality Gates",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S2",
+                    "title": "Establishing Automated Quality Gates in CI/CD",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M1_S3",
+                "n": "risk_based_testing",
+                "title": "Risk-Based Testing & Prioritization",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.06,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S3",
+                    "title": "Conducting a Test Risk Assessment Workshop",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "As an SDET Lead, how would you influence a development team to adopt a 'shift-left' testing approach and integrate quality earlier in the development cycle?"
+              }
+            ]
+          },
+          {
+            "id": "M6.2",
+            "title": "Advanced Test Design & Mentorship",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "lessons": [
+              "Advanced Test Case Design Techniques (Pairwise, Boundary Value)",
+              "Testability in System Design",
+              "Mentoring & Coaching Junior SDETs",
+              "Building a Culture of Quality",
+              "Interviewing & Hiring SDET Talent",
+              "Communicating Quality to Stakeholders"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M06_M2_S1",
+                "n": "advanced_test_design",
+                "title": "Advanced Test Design Techniques",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S1",
+                    "title": "Applying Pairwise Testing for Complex Configurations",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M2_S2",
+                "n": "testability_in_design",
+                "title": "Designing for Testability",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.06,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S2",
+                    "title": "Architecting Systems with Test Hooks and Observability",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M2_S3",
+                "n": "mentorship_quality_culture",
+                "title": "Mentorship & Building a Quality Culture",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S3",
+                    "title": "Strategies for Mentoring Junior SDETs and Fostering Collaboration",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new junior SDET joins your team. Design a 3-month onboarding plan focused on developing their automation and architectural thinking skills."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M07",
+        "label": "M07",
+        "t": "Architectural Thinking for Quality Engineering",
+        "sal": "₹35-50 LPA+",
+        "o": "You can drive enterprise-level quality architecture, implement advanced testing techniques, and innovate in the field of quality engineering, influencing product and system design.",
+        "sc_n": 1,
+        "iv": 1,
+        "identity_statement": "You are a pioneering architect, continuously innovating and setting new benchmarks for quality and reliability in complex systems.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M7.1",
+            "title": "Enterprise Quality Architecture",
+            "free": false,
+            "vis": "code+ppt",
+            "lessons": [
+              "Designing a Global Quality Strategy",
+              "Security Testing in SDET (OWASP Top 10)",
+              "Performance Engineering & Optimization",
+              "Cost-Benefit Analysis of Test Automation",
+              "Compliance & Regulatory Testing",
+              "Disaster Recovery & Business Continuity Testing"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M07_M1_S1",
+                "n": "global_quality_strategy",
+                "title": "Enterprise Quality Strategy",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M1_S1",
+                    "title": "Developing a Quality Roadmap for a Large Organization",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M07_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M1_S2",
+                "n": "security_testing_sdett",
+                "title": "Security Testing for SDETs",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.06,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M1_S2",
+                    "title": "Automating OWASP Top 10 Vulnerability Checks",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M07_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M1_S3",
+                "n": "performance_engineering",
+                "title": "Performance Engineering & Optimization",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M1_S3",
+                    "title": "Advanced Performance Bottleneck Identification & Resolution",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M07_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Your company is expanding into a new regulated industry. How would you adapt the existing quality architecture and test strategy to ensure compliance and meet new security requirements?"
+              }
+            ]
+          },
+          {
+            "id": "M7.2",
+            "title": "AI in Testing & Future Trends",
+            "free": false,
+            "vis": "notebook+code",
+            "lessons": [
+              "AI/ML for Test Case Generation",
+              "Predictive Analytics for Defect Prevention",
+              "Self-Healing Automation Frameworks",
+              "Exploring Low-Code/No-Code Test Automation",
+              "Quantum Computing & Its Impact on Testing",
+              "Ethical AI in Testing"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M07_M2_S1",
+                "n": "ai_ml_test_generation",
+                "title": "AI/ML for Test Case Generation",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.06,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M2_S1",
+                    "title": "Leveraging Generative AI for Test Data and Scenarios",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M07_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M2_S2",
+                "n": "self_healing_automation",
+                "title": "Self-Healing Automation Frameworks",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M2_S2",
+                    "title": "Implementing AI-Powered Element Locators",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M07_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M2_S3",
+                "n": "future_of_testing",
+                "title": "Future Trends in Quality Engineering",
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M2_S3",
+                    "title": "Exploring Quantum Computing's Impact on Test Automation",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M07_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "How do you envision the role of an SDET evolving with the increasing adoption of AI and machine learning in software development and testing?"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -90,10 +90,8 @@ TIER_ORDER_M = ["M01", "M02", "M03", "M04", "M05", "M06", "M07"]
 def get_milestone_label(ms: dict, icp_val: str, seq: int) -> str:
     """Always return M01-M07 style label."""
     label = ms.get("label", ms.get("milestone_label", "")).strip()
-    # Accept M01-M07 style directly
     if label and label.upper().startswith("M") and label[1:].isdigit():
         return label.upper()
-    # Fallback: generate M01 style from sequence
     return f"M{seq:02d}"
 
 
@@ -101,7 +99,6 @@ def get_salary_for_milestone(ms: dict, ms_label: str, icp_val: str, target_role:
     """
     Priority: 1) ms["sal"] field (LLM-generated), 2) role overlay, 3) market dict fallback.
     """
-    # 1. Prefer the LLM-generated salary from the milestone object itself
     sal_from_ms = ms.get("sal", "").strip()
     if sal_from_ms:
         return {
@@ -111,9 +108,7 @@ def get_salary_for_milestone(ms: dict, ms_label: str, icp_val: str, target_role:
             "matched": True,
         }
 
-    # 2. Role overlay
     is_low   = icp_val in ("low", "low_wage")
-    # Normalise label to M01..M07 index
     try:
         tier_idx = TIER_ORDER_M.index(ms_label)
     except ValueError:
@@ -133,7 +128,6 @@ def get_salary_for_milestone(ms: dict, ms_label: str, icp_val: str, target_role:
                     "matched": True,
                 }
 
-    # 3. Generic market dict fallback
     base = (ICP_B_MARKET if is_low else ICP_A_MARKET).get(
         ms_label, (ICP_B_MARKET if is_low else ICP_A_MARKET)["M01"]
     )
@@ -412,7 +406,6 @@ html, body, [data-testid="stAppViewContainer"] {
     margin-bottom: 8px;
 }
 
-/* Lesson list inside module */
 .lesson-list {
     list-style: none;
     padding: 0;
@@ -431,7 +424,6 @@ html, body, [data-testid="stAppViewContainer"] {
     border: 1px solid #1a1a2e;
 }
 
-/* Science (scenario/interview) badge */
 .science-badge {
     display: inline-flex;
     align-items: center;
@@ -453,7 +445,6 @@ html, body, [data-testid="stAppViewContainer"] {
     border: 1px solid #166534;
 }
 
-/* Module meta chips */
 .mod-chip {
     display: inline-flex;
     align-items: center;
@@ -584,10 +575,10 @@ onboarding_json_chain = onboarding_json_prompt | llm | StrOutputParser()
 # =====================================================
 # SIDEBAR
 # =====================================================
-st.sidebar.markdown("## ⚙️ Test Settings")
-weekly_hours = st.sidebar.slider("Weekly Hours", 2, 20, 5)
-st.sidebar.markdown("---")
-st.sidebar.caption("Vidya V3 · Roadmap Lab · Gemini + Pinecone + BKT")
+# st.sidebar.markdown("## ⚙️ Test Settings")
+# weekly_hours = st.sidebar.slider("Weekly Hours", 2, 20, 5)
+# st.sidebar.markdown("---")
+# st.sidebar.caption("Vidya V3 · Roadmap Lab · Gemini + Pinecone + BKT")
 
 # =====================================================
 # HERO
@@ -805,7 +796,6 @@ if st.session_state.roadmap_data:
         for m in milestones
         for mod in m.get("modules", [])
     )
-    # NEW: total lessons count
     total_lessons = sum(
         len(mod.get("lessons", []))
         for m in milestones
@@ -836,12 +826,39 @@ if st.session_state.roadmap_data:
         "senior":       "background:#2d0d0d;color:#f87171;border:1px solid #7a1e1e",
     }
     level_style = level_style_map.get(level_val, level_style_map["beginner"])
+
+    # ── v2.2 CHANGE 1: ICP-aware level labels ──
+    # ICP-A (student): Beginner / Intermediate / Advanced
+    # ICP-B (professional): Career Switcher / Intermediate / Senior
     level_label_map = {
-        "beginner":     "🌱 Beginner",
-        "intermediate": "⚡ Intermediate",
-        "senior":       "🔥 Senior",
+        "a": {   # ICP-A: Student / Fresher (is_low=True)
+            "beginner":     "🌱 Beginner",
+            "intermediate": "⚡ Intermediate",
+            "senior":       "🔥 Advanced",         # internship done ≠ industry "Senior"
+        },
+        "b": {   # ICP-B: Working Professional (is_low=False)
+            "beginner":     "🌱 Career Switcher",  # switching domain, not starting life
+            "intermediate": "⚡ Intermediate",
+            "senior":       "🔥 Senior",
+        },
     }
-    level_label = level_label_map.get(level_val, "🌱 Beginner")
+    icp_key    = "a" if is_low else "b"
+    level_label = level_label_map[icp_key].get(level_val, "🌱 Beginner")
+
+    # ── v2.2 CHANGE 2: ICP-aware ZPD context banner copy ──
+    LEVEL_BANNER_TEXT = {
+        "a": {   # ICP-A: Student / Fresher
+            "beginner":     "No prior coding experience — onboarding confirms this from your diagnostic responses. You start from the very beginning.",
+            "intermediate": "You've written code before — college projects, self-study, or tutorials. Foundations are skipped. You start where it gets real.",
+            "senior":       "You've shipped something real — an internship, a live project, a hackathon win. You start at the level that matches what you've already proved.",
+        },
+        "b": {   # ICP-B: Working Professional
+            "beginner":     "You're switching domains — your experience is real but in a different field. The roadmap starts at domain foundations, not career foundations.",
+            "intermediate": "You have domain experience — 1 to 3 years doing this professionally. Foundations are auto-completed. You start where your ZPD actually is.",
+            "senior":       "You're already senior. The roadmap skips everything you've earned. You start at the level that leads to principal, lead, or CTO track.",
+        },
+    }
+    level_banner = LEVEL_BANNER_TEXT[icp_key].get(level_val, "")
 
     st.markdown(
         f'<span class="icp-badge" style="{icp_style}">{icp_label}</span>'
@@ -849,7 +866,16 @@ if st.session_state.roadmap_data:
         unsafe_allow_html=True
     )
 
-    # ── Stats strip (5 boxes now) ──
+    # Render the ZPD context banner under the badges
+    if level_banner:
+        st.markdown(
+            f'<div style="background:#0f0f1c;border:1px solid #1e1e32;border-radius:12px;'
+            f'padding:12px 16px;margin:10px 0 4px 0;font-size:13px;color:#a0a0c8;'
+            f'line-height:1.6;">{level_banner}</div>',
+            unsafe_allow_html=True
+        )
+
+    # ── Stats strip (5 boxes) ──
     stat_colors = ["#a78bfa", "#60a5fa", "#34d399", "#fbbf24", "#f472b6"]
     st.markdown(f"""
     <div class="stat-grid">
@@ -913,6 +939,32 @@ if st.session_state.roadmap_data:
 
     # ── Milestones ──
     if milestones:
+        # ── v2.2 CHANGE 3: Consultation video banner before milestones ──
+        st.markdown(f"""
+<div style="background:linear-gradient(135deg,#1E3FA8 0%,#2D5BE3 60%,#3B6FFF 100%);
+     border-radius:16px;padding:18px 22px;margin-bottom:20px;
+     display:flex;align-items:center;gap:14px;
+     box-shadow:0 4px 20px rgba(45,91,227,0.25);">
+  <div style="width:44px;height:44px;border-radius:50%;
+       background:rgba(255,255,255,0.15);display:flex;
+       align-items:center;justify-content:center;
+       font-size:18px;color:#fff;flex-shrink:0;
+       border:1.5px solid rgba(255,255,255,0.25);">▶</div>
+  <div style="flex:1;">
+    <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;">
+      Your Career Consultation is ready
+    </div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;">
+      A personalised video built from your onboarding — your roadmap, your language, your next step.
+    </div>
+  </div>
+  <div style="padding:9px 20px;border-radius:10px;background:#fff;color:#2D5BE3;
+       font-size:12px;font-weight:700;white-space:nowrap;cursor:pointer;">
+    Watch now ▶
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
         st.markdown(
             '<div class="sec-title">🏆 Your Learning Journey</div>',
             unsafe_allow_html=True
@@ -923,9 +975,7 @@ if st.session_state.roadmap_data:
         for idx, ms in enumerate(milestones):
             seq       = ms.get("sequence_order", idx + 1)
             m_id      = get_milestone_label(ms, icp_val, seq)
-            # Use "t" (HTML-style) then fall back to identity_label
             m_label   = ms.get("t", ms.get("identity_label", m_id))
-            # Use "o" (HTML-style outcome) then fall back to identity_statement
             m_stmt    = ms.get("o", ms.get("identity_statement", ""))
             modules   = ms.get("modules", [])
             raw_ms_id = ms.get("milestone_id", f"M{seq:02d}")
@@ -937,7 +987,6 @@ if st.session_state.roadmap_data:
             border_col  = c2 if not is_active else "#34d399"
             glow        = f"box-shadow:0 0 24px {border_col}28;" if is_active else ""
 
-            # sc_n and iv from milestone (HTML fields)
             sc_n = ms.get("sc_n", 0)
             iv   = ms.get("iv", 0)
             scenario_chip = (
@@ -983,7 +1032,6 @@ if st.session_state.roadmap_data:
 
             # ── Modules ──
             for mod in modules:
-                # Support both HTML-style ("id", "title") and old-style ("module_id", "title")
                 mod_id    = mod.get("id", mod.get("module_id", f"MOD{seq}"))
                 mod_title = mod.get("title", f"Module {mod.get('sequence_order', '?')}")
                 mod_desc  = mod.get("description", "")
@@ -991,10 +1039,9 @@ if st.session_state.roadmap_data:
                 is_free   = mod.get("free", False)
                 vis_type  = mod.get("vis", "")
                 skills    = mod.get("skills", [])
-                lessons   = mod.get("lessons", [])         # NEW — HTML lessons array
-                science   = mod.get("science", [])         # NEW — HTML science array
+                lessons   = mod.get("lessons", [])
+                science   = mod.get("science", [])
 
-                # Build expander header
                 free_tag = " 🔓 Free" if is_free else " 🔒"
                 expander_label = (
                     f"📦 {mod_id}. {mod_title}{free_tag}"
@@ -1003,7 +1050,6 @@ if st.session_state.roadmap_data:
 
                 with st.expander(expander_label):
 
-                    # Module meta chips
                     chips_html = ""
                     if vis_type:
                         chips_html += f'<span class="mod-chip">🖥 {vis_type}</span>'
@@ -1021,7 +1067,7 @@ if st.session_state.roadmap_data:
                             unsafe_allow_html=True
                         )
 
-                    # ── Lessons list (NEW) ──
+                    # ── Lessons list ──
                     if lessons:
                         st.markdown(
                             '<div style="font-size:12px;font-weight:700;color:#6b7280;'
@@ -1035,7 +1081,7 @@ if st.session_state.roadmap_data:
                         )
                         st.markdown(lessons_html, unsafe_allow_html=True)
 
-                    # ── Science: Scenarios / Interviews (NEW) ──
+                    # ── Science: Scenarios / Interviews ──
                     if science:
                         science_html = ""
                         for sci in science:
@@ -1067,13 +1113,11 @@ if st.session_state.roadmap_data:
                         )
 
                     for skill in skills:
-                        # Support both HTML-style ("n", "p") and old-style BKT fields
                         s_title = skill.get("title", skill.get("n", ""))
                         s_desc  = skill.get("description", "")
 
-                        # Mastery: HTML uses "p" (0–100 int), old BKT uses mastery_state dict
                         mastery_state = skill.get("mastery_state", {})
-                        p_val         = skill.get("p", None)   # HTML-style 0–100
+                        p_val         = skill.get("p", None)
 
                         if p_val is not None:
                             curr_mastery   = p_val / 100.0
@@ -1092,7 +1136,6 @@ if st.session_state.roadmap_data:
 
                         bg, border, state_lbl = skill_state_color(s_state)
 
-                        # Content tags — support both old content_flow and new HTML-style
                         content_flow  = skill.get("content_flow", {})
                         video    = content_flow.get("video", {})
                         scenario = content_flow.get("scenario", {})

@@ -1,0 +1,2280 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "001",
+  "roadmap_id": "ai_roadmap_20260615113028_076800a8",
+  "generated_at": "2026-06-15T11:35:18.329777",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260615113028_076800a8",
+    "user_id": "001",
+    "icp_type": "high",
+    "level": "beginner",
+    "target_role": "Senior Full Stack Engineer (System Design Specialist)",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "vision_profile": {
+      "current_state": "A Senior Full Stack Engineer with 5+ years of experience in cloud architecture and microservices, proficient in a wide range of modern technologies.",
+      "main_blocker": "Needs to deepen expertise in system design, specifically in choosing the right architecture, to excel further and secure promotions.",
+      "top_motivation": "To achieve promotion to a higher engineering role and significantly improve architectural decision-making in current and future projects."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-15T11:35:04.925659",
+      "version": "v3.1",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Foundations of Architectural Thinking",
+        "sal": "₹15-20 LPA",
+        "o": "You understand core system design principles, non-functional requirements, and can articulate trade-offs for basic architectural choices.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are laying the groundwork for becoming a master architect, building a robust understanding of how systems are truly built.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Foundations of System Design",
+            "free": true,
+            "vis": "real_tutor+ppt",
+            "lessons": [
+              "What is System Design?",
+              "Functional vs. Non-Functional Requirements",
+              "Scalability, Availability, Reliability",
+              "Latency, Throughput, Consistency",
+              "CAP Theorem Explained",
+              "Trade-offs in System Design",
+              "Introduction to Architectural Styles",
+              "Monolithic vs. Microservices Overview"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "system_design_basics",
+                "title": "System Design Fundamentals",
+                "p": 70,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Understanding Core System Design Concepts",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Analyzing Requirements for a New Feature",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "nfr_identification",
+                "title": "Non-Functional Requirements Identification",
+                "p": 65,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Defining Scalability, Availability, and Reliability",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Choosing NFRs for an E-commerce Platform",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "architectural_tradeoffs",
+                "title": "Architectural Trade-offs Analysis",
+                "p": 60,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.6,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Evaluating Monolith vs. Microservices Trade-offs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Deciding on Consistency Models",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "You are tasked with designing a new feature for an existing application. Analyze the functional and non-functional requirements and propose an initial architectural direction, justifying your trade-offs."
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Networking & Communication Essentials",
+            "free": true,
+            "vis": "ppt+animation",
+            "lessons": [
+              "OSI Model & TCP/IP Stack",
+              "HTTP/HTTPS Protocols",
+              "Load Balancers: Types & Use Cases",
+              "DNS: How it Works",
+              "Proxies: Reverse & Forward",
+              "CDN: Content Delivery Networks",
+              "API Gateways: Role & Benefits",
+              "Message Queues vs. Event Streams"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "network_protocols",
+                "title": "Network Protocols & Layers",
+                "p": 80,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.22,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Deep Dive into TCP/IP and HTTP",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Troubleshooting Network Latency",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "load_balancing",
+                "title": "Load Balancing & DNS",
+                "p": 75,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.2,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Implementing Load Balancers for High Availability",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Designing a Global DNS Strategy",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "api_gateways",
+                "title": "API Gateways & Message Queues",
+                "p": 70,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Choosing Between Message Queues and Event Streams",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Implementing an API Gateway for Microservices",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Core Components & Data Management",
+        "sal": "₹18-25 LPA",
+        "o": "You can design robust data storage solutions, define clear APIs, and understand their impact on overall system architecture.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are mastering the fundamental building blocks of any scalable system, ensuring data integrity and efficient communication.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Databases & Storage",
+            "free": false,
+            "vis": "code+ppt",
+            "lessons": [
+              "SQL vs. NoSQL Databases",
+              "Relational Database Design (Normalization)",
+              "NoSQL Database Types (Key-Value, Document, Columnar, Graph)",
+              "Database Sharding & Replication",
+              "Indexing Strategies",
+              "Data Warehousing & Data Lakes",
+              "Object Storage (S3-like)",
+              "Choosing the Right Database"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "database_selection",
+                "title": "Database Selection & Design",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "SQL vs. NoSQL: When to Use Which",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Designing a Database for a Social Media App",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "data_modeling",
+                "title": "Data Modeling & Indexing",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Advanced Relational Database Normalization",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Optimizing Queries with Proper Indexing",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "distributed_storage",
+                "title": "Distributed Storage Solutions",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Implementing Database Sharding and Replication",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Scaling a Database for Millions of Users",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Design the data storage layer for a new real-time analytics platform. Consider data volume, velocity, variety, and choose appropriate database types and scaling strategies."
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "API Design & Service Layer",
+            "free": false,
+            "vis": "code+real_tutor",
+            "lessons": [
+              "RESTful API Principles",
+              "GraphQL vs. REST",
+              "API Versioning Strategies",
+              "Authentication & Authorization (OAuth, JWT)",
+              "API Documentation (OpenAPI/Swagger)",
+              "Idempotency & Error Handling",
+              "Service-Oriented Architecture (SOA) Principles",
+              "Designing for API Evolution"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "rest_api_design",
+                "title": "RESTful API Design",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Mastering REST API Best Practices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Designing a Resource-Oriented API for a Blog",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "graphql_vs_rest",
+                "title": "GraphQL & API Alternatives",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "When to Choose GraphQL Over REST",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Migrating a REST API to GraphQL",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "api_security",
+                "title": "API Security & Versioning",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.2,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Implementing JWT for API Authentication",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Handling API Versioning for Backward Compatibility",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M03",
+        "label": "M03",
+        "t": "Distributed Systems & Microservices Mastery",
+        "sal": "₹22-30 LPA",
+        "o": "You can design and implement distributed systems, breaking down monolithic applications into scalable microservices.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are evolving into an architect capable of orchestrating complex, independent services into a cohesive, high-performing system.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M3.1",
+            "title": "Distributed Systems",
+            "free": false,
+            "vis": "ppt+animation",
+            "lessons": [
+              "Challenges of Distributed Systems",
+              "Distributed Consensus (Paxos, Raft)",
+              "Distributed Transactions (2PC, Saga)",
+              "Event-Driven Architecture",
+              "Distributed Caching",
+              "Service Discovery & Registration",
+              "Distributed Tracing & Logging",
+              "Fault Tolerance & Resilience Patterns"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M1_S1",
+                "n": "distributed_challenges",
+                "title": "Distributed Systems Challenges",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S1",
+                    "title": "Understanding Consistency in Distributed Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S1",
+                    "title": "Designing for Data Consistency Across Regions",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S2",
+                "n": "distributed_consensus",
+                "title": "Distributed Consensus & Transactions",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S2",
+                    "title": "Implementing Raft for Distributed State Management",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S2",
+                    "title": "Handling Distributed Transactions with Saga Pattern",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S3",
+                "n": "event_driven_arch",
+                "title": "Event-Driven Architectures",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S3",
+                    "title": "Designing Systems with Kafka and Event Streams",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S3",
+                    "title": "Building an Event-Sourced Order Processing System",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "You need to design a distributed payment processing system that ensures atomicity and consistency across multiple services. Propose an architecture and explain how you'd handle failures."
+              }
+            ]
+          },
+          {
+            "id": "M3.2",
+            "title": "Microservices Architecture",
+            "free": false,
+            "vis": "animation+code",
+            "lessons": [
+              "Principles of Microservices",
+              "Domain-Driven Design (DDD) for Microservices",
+              "Service Decomposition Strategies",
+              "Inter-service Communication Patterns (Sync vs. Async)",
+              "Data Management in Microservices (Database per Service)",
+              "Containerization with Docker",
+              "Orchestration with Kubernetes",
+              "Serverless Architectures (FaaS)"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M2_S1",
+                "n": "microservices_principles",
+                "title": "Microservices Principles",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S1",
+                    "title": "Decomposing a Monolith into Microservices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S1",
+                    "title": "Identifying Service Boundaries using DDD",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S2",
+                "n": "container_orchestration",
+                "title": "Containerization & Orchestration",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S2",
+                    "title": "Deploying Microservices with Kubernetes",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S2",
+                    "title": "Scaling a Microservice with Kubernetes HPA",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S3",
+                "n": "serverless_arch",
+                "title": "Serverless Architectures",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.18,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S3",
+                    "title": "Building Event-Driven Serverless Functions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S3",
+                    "title": "Choosing Between Kubernetes and Serverless for a New Service",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M04",
+        "label": "M04",
+        "t": "Scalability & Performance Optimization",
+        "sal": "₹28-38 LPA",
+        "o": "You can identify performance bottlenecks, implement caching strategies, and design highly scalable and responsive systems.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are becoming the engineer who can make systems perform under extreme load, ensuring a seamless user experience.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M4.1",
+            "title": "Scalability & Performance",
+            "free": false,
+            "vis": "notebook+code",
+            "lessons": [
+              "Vertical vs. Horizontal Scaling",
+              "Database Scaling Patterns (Sharding, Replication)",
+              "Caching Strategies (Client, CDN, Server-Side)",
+              "Load Balancing Algorithms",
+              "Queueing & Rate Limiting",
+              "Performance Metrics & Monitoring",
+              "Benchmarking & Stress Testing",
+              "Asynchronous Processing & Batch Jobs"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M1_S1",
+                "n": "scaling_strategies",
+                "title": "System Scaling Strategies",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S1",
+                    "title": "Designing for Extreme Horizontal Scalability",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S1",
+                    "title": "Scaling a High-Traffic E-commerce Checkout Service",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S2",
+                "n": "caching_techniques",
+                "title": "Advanced Caching Techniques",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S2",
+                    "title": "Implementing Distributed Caching with Redis",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S2",
+                    "title": "Invalidating Cache for Real-time Data",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S3",
+                "n": "performance_tuning",
+                "title": "Performance Tuning & Monitoring",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.06,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S3",
+                    "title": "Benchmarking and Identifying Bottlenecks",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S3",
+                    "title": "Optimizing a Slow Database Query in Production",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical service is experiencing high latency under peak load. Analyze the potential causes, propose a scaling strategy, and outline how you would implement caching to alleviate the issue."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M05",
+        "label": "M05",
+        "t": "Reliability, Security & Observability",
+        "sal": "₹35-45 LPA",
+        "o": "You can design systems that are resilient to failures, secure against threats, and fully observable for proactive issue resolution.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are the guardian of system integrity, building trust through robust security and ensuring continuous operation.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M5.1",
+            "title": "Security",
+            "free": false,
+            "vis": "real_tutor+code",
+            "lessons": [
+              "Threat Modeling & Risk Assessment",
+              "Common Vulnerabilities (OWASP Top 10)",
+              "Authentication & Authorization Best Practices",
+              "Data Encryption (At Rest, In Transit)",
+              "Network Security (Firewalls, VPNs, VPCs)",
+              "Secure Coding Practices",
+              "Identity and Access Management (IAM)",
+              "Security Auditing & Compliance"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M1_S1",
+                "n": "threat_modeling",
+                "title": "Threat Modeling & Risk Assessment",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S1",
+                    "title": "Conducting a Comprehensive Threat Model",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S1",
+                    "title": "Identifying Security Vulnerabilities in a Microservice",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S2",
+                "n": "data_security",
+                "title": "Data Encryption & Network Security",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.06,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S2",
+                    "title": "Implementing End-to-End Encryption",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S2",
+                    "title": "Securing a Multi-Tier Application with VPCs and Firewalls",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S3",
+                "n": "iam_best_practices",
+                "title": "IAM & Secure Coding",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S3",
+                    "title": "Implementing Role-Based Access Control (RBAC)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S3",
+                    "title": "Reviewing Code for Common Security Flaws",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new payment gateway integration requires strict security. Design the authentication, authorization, and data encryption mechanisms, considering potential attack vectors."
+              }
+            ]
+          },
+          {
+            "id": "M5.2",
+            "title": "Reliability & Observability",
+            "free": false,
+            "vis": "ppt+code",
+            "lessons": [
+              "High Availability & Disaster Recovery",
+              "Fault Tolerance Patterns (Circuit Breaker, Bulkhead)",
+              "Chaos Engineering Principles",
+              "Monitoring & Alerting Strategies",
+              "Logging Best Practices (Structured Logging)",
+              "Distributed Tracing (OpenTelemetry)",
+              "Metrics Collection (Prometheus, Grafana)",
+              "Site Reliability Engineering (SRE) Principles"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M2_S1",
+                "n": "disaster_recovery",
+                "title": "High Availability & DR",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S1",
+                    "title": "Designing a Multi-Region Disaster Recovery Plan",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S1",
+                    "title": "Implementing Active-Passive vs. Active-Active DR",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S2",
+                "n": "fault_tolerance",
+                "title": "Fault Tolerance Patterns",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.06,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S2",
+                    "title": "Applying Circuit Breaker and Bulkhead Patterns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S2",
+                    "title": "Designing for Graceful Degradation in Microservices",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S3",
+                "n": "observability_stack",
+                "title": "Observability Stack (Logging, Tracing, Metrics)",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.12,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S3",
+                    "title": "Implementing Distributed Tracing with OpenTelemetry",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S3",
+                    "title": "Setting up Proactive Monitoring and Alerting for Critical Services",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M06",
+        "label": "M06",
+        "t": "Advanced Architectural Patterns & Trade-offs",
+        "sal": "₹40-55 LPA",
+        "o": "You can evaluate and apply complex architectural patterns, understand their trade-offs, and design systems for specific industry needs, including AI integration.",
+        "sc_n": 1,
+        "iv": 0,
+        "identity_statement": "You are now a strategic thinker, capable of selecting and adapting sophisticated architectural patterns to solve novel and challenging problems.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M6.1",
+            "title": "Case Studies",
+            "free": false,
+            "vis": "ppt+animation",
+            "lessons": [
+              "Designing a URL Shortener",
+              "Designing a Chat System",
+              "Designing a News Feed System",
+              "Designing a Ride-Sharing App",
+              "Designing an E-commerce Platform",
+              "Designing a Distributed Cache",
+              "Designing a Recommendation System",
+              "Designing a Global Data Store"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M06_M1_S1",
+                "n": "url_shortener_design",
+                "title": "URL Shortener System Design",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.06,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S1",
+                    "title": "Deep Dive into URL Shortener Architecture",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M1_S1",
+                    "title": "Optimizing a URL Shortener for High Throughput",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M1_S2",
+                "n": "chat_system_design",
+                "title": "Real-time Chat System Design",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S2",
+                    "title": "Architecting a Scalable Chat Application",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M1_S2",
+                    "title": "Handling Message Delivery Guarantees in a Chat System",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M1_S3",
+                "n": "news_feed_design",
+                "title": "News Feed System Design",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S3",
+                    "title": "Building a Personalized News Feed",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M1_S3",
+                    "title": "Designing for Fan-out on Write vs. Fan-out on Read",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Design a system for a global online gaming platform that needs to handle millions of concurrent users, low latency, and high availability for game state synchronization and leaderboards."
+              }
+            ]
+          },
+          {
+            "id": "M6.2",
+            "title": "AI-Powered Systems",
+            "free": false,
+            "vis": "notebook+ppt",
+            "lessons": [
+              "Integrating AI/ML Models into Production",
+              "MLOps Principles & Tools",
+              "Real-time Inference Architectures",
+              "Batch Processing for ML",
+              "Data Pipelines for AI",
+              "Feature Stores",
+              "Monitoring AI Model Performance",
+              "Ethical AI & Bias in Systems"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M06_M2_S1",
+                "n": "ml_integration",
+                "title": "ML Model Integration",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.06,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S1",
+                    "title": "Architecting Real-time ML Inference Services",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M2_S1",
+                    "title": "Designing a System for Online Fraud Detection with ML",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M2_S2",
+                "n": "mlops_pipelines",
+                "title": "MLOps & Data Pipelines",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S2",
+                    "title": "Building Robust MLOps Pipelines",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M2_S2",
+                    "title": "Automating Model Retraining and Deployment",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M06_M2_S3",
+                "n": "ai_system_monitoring",
+                "title": "AI System Monitoring & Ethics",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.1,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S3",
+                    "title": "Monitoring AI Model Drift and Performance",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M2_S3",
+                    "title": "Addressing Bias in an AI-Powered Hiring System",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          }
+        ]
+      },
+      {
+        "milestone_id": "M07",
+        "label": "M07",
+        "t": "Capstone & Strategic Architectural Leadership",
+        "sal": "₹50-70 LPA+",
+        "o": "You are proficient in leading complex system design initiatives, making strategic architectural decisions, and excelling in high-level system design interviews.",
+        "sc_n": 0,
+        "iv": 1,
+        "identity_statement": "You are now a recognized architectural leader, capable of shaping the technical direction of products and mentoring future generations of engineers.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "modules": [
+          {
+            "id": "M7.1",
+            "title": "Capstone & Career Readiness",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "lessons": [
+              "End-to-End System Design Project",
+              "Architectural Decision Records (ADRs)",
+              "Communicating Complex Designs",
+              "Leadership in System Design",
+              "Mentoring Junior Engineers",
+              "System Design Interview Strategies",
+              "Behavioral Interview Preparation",
+              "Career Pathing for Architects"
+            ],
+            "skills": [
+              {
+                "skill_id": "SKILL_M07_M1_S1",
+                "n": "e2e_system_design",
+                "title": "End-to-End System Design Project",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.08,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M1_S1",
+                    "title": "Designing a Large-Scale Distributed System from Scratch",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M07_M1_S1",
+                    "title": "Leading an Architectural Review for a New Product",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M07_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M1_S2",
+                "n": "architectural_leadership",
+                "title": "Architectural Leadership & Communication",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.08,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M1_S2",
+                    "title": "Writing Effective Architectural Decision Records",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M07_M1_S2",
+                    "title": "Presenting a Complex System Design to Stakeholders",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M07_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M07_M1_S3",
+                "n": "system_design_interview",
+                "title": "System Design Interview Mastery",
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.03,
+                    "learn_rate": 0.08,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M07_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M07_M1_S3",
+                    "title": "Advanced System Design Interview Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M07_M1_S3",
+                    "title": "Mock Interview: Design a Global Video Streaming Service",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M07_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "You are asked to design a highly available and scalable online gaming platform. Walk through the design process, considering all aspects from data storage to real-time communication and fault tolerance."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

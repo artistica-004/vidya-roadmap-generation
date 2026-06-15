@@ -1,7 +1,7 @@
 import json
 from src.pinecone_utils import fetch_poc_record
 
-user_id = "user_008"
+user_id = "test_user_1781247180787"
 
 records = {
     "ONBOARDING_CONVERSATION": f"{user_id}_onboarding_conversation",

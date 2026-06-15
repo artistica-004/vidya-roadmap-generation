@@ -1084,21 +1084,46 @@ def run_pipeline(
                 "icp_type": icp_type,
                 "level":    level,
             })
+            # DEBUG START
+            print(f"\nRAW OUTPUT LENGTH = {len(result)}")
+            print("\n========== RAW LLM OUTPUT START ==========\n")
+            print(result[:5000])
+            print("\n========== RAW LLM OUTPUT END ==========\n")
+            print("\n========== RAW LLM OUTPUT LAST 3000 CHARS ==========\n")
+            print(result[-3000:])
+            print("\n===================================================\n")
+            # DEBUG END
             clean_result = repair_json(result)
             roadmap_data = json.loads(clean_result)
-
-            # ── Inject runtime IDs ─────────────────────────────
+            # ==========================================
+            # AUTO FIX sc_n / iv COUNTS
+            # ==========================================
+            for milestone in roadmap_data.get("milestones", []):
+                scenario_count = 0
+                interview_count = 0
+                for mod in milestone.get("modules", []):
+                    for sci in mod.get("science", []):
+                        if sci.get("type") == "Scenario":
+                            scenario_count += 1
+                        elif sci.get("type") == "Interview":
+                            interview_count += 1
+                milestone["sc_n"] = scenario_count
+                milestone["iv"] = interview_count
+            # ==========================================
+            # Inject runtime IDs
+            # ==========================================
             now = datetime.utcnow().isoformat()
             roadmap_data["roadmap_id"]                              = ai_roadmap_id
             roadmap_data["user_id"]                                 = user_id
             roadmap_data.setdefault("level", level)
             roadmap_data.setdefault("roadmap_meta", {})["generated_at"] = now
-
             # ── Inject label field into each milestone if missing ──
+            print("\n========== MODULE SKILL COUNT DEBUG ==========")
             for ms in roadmap_data.get("milestones", []):
-                if "label" not in ms:
-                    ms["label"] = ms.get("milestone_id", "")
-
+                for mod in ms.get("modules", []):
+                    if len(mod.get("skills", [])) < 3:
+                        print(json.dumps(mod, indent=2))
+            print("=============================================\n")
             # ── Validate structure ─────────────────────────────
             validate_roadmap_structure(roadmap_data)
 
@@ -1131,6 +1156,19 @@ def run_pipeline(
             }
 
             save_poc_record(
+    user_id=user_id,
+    record_id=f"{user_id}_onboarding_conversation",
+    text=json.dumps(roadmap_summary)
+)
+
+            save_poc_record(
+            user_id=user_id,
+            record_id=f"{user_id}_roadmap_conversation",
+            text=json.dumps(roadmap_summary)
+)
+
+
+            save_poc_record(
                 user_id=user_id,
                 record_id=f"{user_id}_roadmap_output",
                 text=json.dumps(
@@ -1138,6 +1176,7 @@ def run_pipeline(
                     ensure_ascii=False
                 )
             )
+            
 
             # ── POC local storage ──────────────────────────────  (UNCHANGED)
             print("\n[ROADMAP AGENT] Writing POC storage artifacts...")
