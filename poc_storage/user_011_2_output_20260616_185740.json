@@ -1,0 +1,2499 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_011",
+  "roadmap_id": "ai_roadmap_20260616185515_e51c57e3",
+  "generated_at": "2026-06-16T18:57:40.213678",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260616185515_e51c57e3",
+    "user_id": "user_011",
+    "icp_type": "low",
+    "level": "beginner",
+    "target_role": "Junior Frontend Developer",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "milestone_count_rationale": "4 milestones: Ritika is a beginner with 0 experience and a wide gap from student to Junior Frontend Developer. 14 hours/week and low confidence necessitate smaller, safer steps to build foundational programming, system interaction, application building, and job readiness skills gradually.",
+    "vision_profile": {
+      "current_state": "A final-year B.Sc Math student with no professional experience, seeking to enter the tech industry.",
+      "main_blocker": "Lack of foundational frontend development skills (HTML, CSS, JavaScript) and fear of competition from peers with more resources.",
+      "top_motivation": "Achieving financial independence to support her family before her younger brother starts college."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-16T18:57:32.181197",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Web Foundations Apprentice",
+        "sal": "Unpaid/stipend",
+        "o": "You can write basic programs, manage code with version control, and understand the fundamental building blocks of software development, ready to explore web-specific technologies.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "3 modules are needed to cover foundational programming logic, basic data handling, and essential collaboration tools for any aspiring developer.",
+        "identity_statement": "You are building the core programming muscles that will power your future web applications, taking your first confident steps into the world of development.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Personal Digital Resume Page",
+          "vibe_layers": [
+            "planning",
+            "solution",
+            "architecture"
+          ],
+          "description": "Design and implement a simple, static personal resume web page. You will structure content, apply basic styling, and ensure it's version-controlled. This project focuses on applying foundational programming logic (e.g., for dynamic content generation if applicable) and setting up a professional development workflow.",
+          "deliverable": "A deployed static website URL and a link to the GitHub repository containing the project code.",
+          "seeded_errors": [
+            "The deployed page has broken links due to incorrect relative paths in the HTML structure."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Python for AI",
+            "ai_first_layer": "planning",
+            "free": true,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "3 skills are sufficient to cover the absolute basics of programming syntax, control flow, and function definition, essential for any coding journey.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "basic_python_syntax",
+                "title": "Basic Python Syntax & Data Types",
+                "lessons": [
+                  "Variables and Basic Data Types",
+                  "Operators and Expressions",
+                  "Input/Output Operations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Python Variables and Data Types",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Debugging a Simple Python Script",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "control_flow",
+                "title": "Control Flow & Looping",
+                "lessons": [
+                  "Conditional Statements (if/else)",
+                  "For and While Loops",
+                  "Break, Continue, and Pass"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Python Conditional Logic",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Optimizing Loop Performance",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "functions_modularity",
+                "title": "Functions and Modularity",
+                "lessons": [
+                  "Defining and Calling Functions",
+                  "Function Arguments and Return Values",
+                  "Introduction to Modules and Packages"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Creating Reusable Functions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Refactoring for Modularity",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M1.2",
+            "title": "Algorithms & Data Handling",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "notebook+code",
+            "skill_count_rationale": "3 skills are essential to grasp fundamental data structures and basic problem-solving techniques, which are critical for managing and manipulating data in any application.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "core_data_structures",
+                "title": "Core Data Structures",
+                "lessons": [
+                  "Understanding Lists and Arrays",
+                  "Working with Dictionaries and Maps",
+                  "Introduction to Sets and Tuples"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Python Lists and Their Operations",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Choosing the Right Data Structure for User Data",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "basic_algorithms",
+                "title": "Basic Algorithms & Logic",
+                "lessons": [
+                  "Searching Algorithms (Linear, Binary)",
+                  "Sorting Algorithms (Bubble, Selection)",
+                  "Recursion Fundamentals"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Introduction to Searching Algorithms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Optimizing Data Retrieval for a Large Dataset",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "problem_solving_techniques",
+                "title": "Problem Solving Techniques",
+                "lessons": [
+                  "Decomposition and Abstraction",
+                  "Pattern Recognition",
+                  "Testing and Debugging Strategies"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Breaking Down Complex Problems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Identifying the Root Cause of a Program Crash",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical function in your program is returning incorrect results for certain inputs, but only intermittently. You need to identify the logical flaw and fix it under pressure."
+              }
+            ]
+          },
+          {
+            "id": "M1.3",
+            "title": "Collaboration & Tools",
+            "ai_first_layer": "planning",
+            "free": true,
+            "vis": "ppt+code",
+            "skill_count_rationale": "3 skills are crucial for understanding version control, collaborative workflows, and basic code quality, which are non-negotiable for any professional developer.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M3_S1",
+                "n": "git_basics",
+                "title": "Version Control with Git",
+                "lessons": [
+                  "Introduction to Git and Repositories",
+                  "Committing Changes and History",
+                  "Branching and Merging Fundamentals"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S1",
+                    "title": "Getting Started with Git",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S1",
+                    "title": "Recovering Lost Commits in Git",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S2",
+                "n": "github_workflow",
+                "title": "GitHub & Collaborative Workflow",
+                "lessons": [
+                  "Creating and Cloning Repositories",
+                  "Pushing, Pulling, and Fetching",
+                  "Introduction to Pull Requests"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S2",
+                    "title": "Working with GitHub Remotes",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S2",
+                    "title": "Resolving a Complex Merge Conflict",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S3",
+                "n": "code_review_basics",
+                "title": "Code Review & Best Practices",
+                "lessons": [
+                  "Importance of Clean Code",
+                  "Basic Code Formatting Standards",
+                  "Giving and Receiving Feedback"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S3",
+                    "title": "Writing Readable Code",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S3",
+                    "title": "Reviewing a Peer's Pull Request for Clarity",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Explain the importance of version control in a team environment and describe a typical Git workflow for contributing to a project."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Interactive Web Developer Trainee",
+        "sal": "₹3-5 LPA",
+        "o": "You can design structured code, interact with external APIs, and understand network communication, enabling you to build web pages that fetch and display dynamic data.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "3 modules are crucial to transition from basic programming to building interactive web components, focusing on code structure, API integration, and underlying network principles.",
+        "identity_statement": "You are now learning how web applications 'talk' and organize themselves, transforming static pages into dynamic, responsive experiences.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Dynamic Recipe Finder",
+          "vibe_layers": [
+            "architecture",
+            "solution",
+            "planning"
+          ],
+          "description": "Build a web application that fetches recipe data from a public API (e.g., TheMealDB API) and displays it dynamically. Users should be able to search for recipes and view details. This project emphasizes API consumption, dynamic content rendering, and structured code design.",
+          "deliverable": "A deployed web application URL, GitHub repository, and a brief architectural overview document.",
+          "seeded_errors": [
+            "The application fails to display images from the API due to incorrect URL parsing or CORS issues."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "OOP & SOLID Principles",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "skill_count_rationale": "3 skills are fundamental for writing maintainable, scalable, and understandable code, which is vital for larger frontend applications.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "object_oriented_concepts",
+                "title": "Object-Oriented Programming Concepts",
+                "lessons": [
+                  "Classes and Objects",
+                  "Encapsulation and Abstraction",
+                  "Inheritance and Polymorphism"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Introduction to OOP",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Refactoring a Procedural Script into OOP",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "solid_principles",
+                "title": "SOLID Principles for Design",
+                "lessons": [
+                  "Single Responsibility Principle",
+                  "Open/Closed Principle",
+                  "Liskov Substitution Principle"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Understanding SRP",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Applying OCP to a UI Component",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "design_patterns_intro",
+                "title": "Introduction to Design Patterns",
+                "lessons": [
+                  "The Factory Pattern",
+                  "The Singleton Pattern",
+                  "The Observer Pattern"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Introduction to Factory Pattern",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Implementing Observer for UI Events",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M2.2",
+            "title": "API Design & Service Layer",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "3 skills are essential for understanding how to interact with backend services, which is the backbone of most dynamic web applications.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "restful_apis",
+                "title": "Introduction to RESTful APIs",
+                "lessons": [
+                  "What is an API and REST?",
+                  "HTTP Methods (GET, POST, PUT, DELETE)",
+                  "API Endpoints and Resources"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Basics of REST APIs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Designing API Endpoints for a Blog Application",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "consuming_apis",
+                "title": "Consuming External APIs",
+                "lessons": [
+                  "Making HTTP Requests (e.g., using fetch/requests)",
+                  "Handling JSON Data",
+                  "Asynchronous Operations (Promises/Callbacks)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Fetching Data with HTTP Requests",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Debugging a Failed API Call in Production",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "api_error_handling",
+                "title": "API Error Handling & Security Basics",
+                "lessons": [
+                  "Common API Error Codes",
+                  "Implementing Robust Error Handling",
+                  "Basic Authentication Concepts"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Handling API Failures Gracefully",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Securing a Public API Key in a Frontend App",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A user reports that your web application is showing outdated data even after refreshing. You suspect a caching issue or an API problem. Diagnose and resolve the data inconsistency."
+              }
+            ]
+          },
+          {
+            "id": "M2.3",
+            "title": "Networking & Communication",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "3 skills are necessary to understand the fundamental protocols and tools that govern how web applications communicate, providing a deeper insight into web development.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M3_S1",
+                "n": "http_https_basics",
+                "title": "HTTP/HTTPS Fundamentals",
+                "lessons": [
+                  "The Request-Response Cycle",
+                  "HTTP Headers and Status Codes",
+                  "Introduction to HTTPS and Security"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S1",
+                    "title": "How HTTP Works",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S1",
+                    "title": "Diagnosing a 404 Error in a Web Application",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S2",
+                "n": "dns_web_hosting",
+                "title": "DNS & Web Hosting Concepts",
+                "lessons": [
+                  "How DNS Works",
+                  "Domain Names and IP Addresses",
+                  "Introduction to Web Hosting"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S2",
+                    "title": "The Role of DNS in Web Access",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S2",
+                    "title": "Troubleshooting a Website Not Resolving",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S3",
+                "n": "browser_dev_tools",
+                "title": "Browser Developer Tools",
+                "lessons": [
+                  "Inspecting Elements and Styles",
+                  "Network Tab for API Debugging",
+                  "Console for JavaScript Errors"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S3",
+                    "title": "Mastering the Browser Console",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S3",
+                    "title": "Diagnosing a Frontend Rendering Issue with DevTools",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe the journey of a web request from the browser to the server and back, explaining the role of DNS and HTTP along the way."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M03",
+        "label": "M03",
+        "t": "Frontend Application Builder",
+        "sal": "₹4-6 LPA",
+        "o": "You can build robust and performant web application components, implement testing strategies, and understand distributed system concepts, preparing you for complex frontend development.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "3 modules are necessary to advance from basic interactivity to building scalable, testable, and modular frontend applications, covering performance, quality assurance, and architectural thinking.",
+        "identity_statement": "You are now architecting and optimizing web applications, ensuring they are fast, reliable, and easy to maintain, just like a seasoned builder.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Interactive E-commerce Product Catalog",
+          "vibe_layers": [
+            "solution",
+            "architecture",
+            "planning"
+          ],
+          "description": "Develop a multi-page e-commerce product catalog with client-side routing, basic state management (e.g., for a shopping cart), and user authentication (mock). Focus on component reusability, performance, and robust error handling. Integrate with a mock API for product data.",
+          "deliverable": "A deployed web application URL, GitHub repository, and a document outlining performance optimizations and testing strategy.",
+          "seeded_errors": [
+            "The shopping cart state is not persistent across page navigations, leading to lost items."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M3.1",
+            "title": "Scalability & Performance",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "ppt+code",
+            "skill_count_rationale": "3 skills are critical for building high-performing web applications that provide a smooth user experience, covering optimization techniques and asynchronous patterns.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M1_S1",
+                "n": "frontend_performance_metrics",
+                "title": "Frontend Performance Metrics",
+                "lessons": [
+                  "Core Web Vitals (LCP, FID, CLS)",
+                  "Measuring Page Load Time",
+                  "Tools for Performance Auditing (Lighthouse)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S1",
+                    "title": "Understanding Core Web Vitals",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S1",
+                    "title": "Improving LCP for a Slow-Loading Hero Image",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S2",
+                "n": "caching_strategies",
+                "title": "Caching Strategies for Frontend",
+                "lessons": [
+                  "Browser Caching Mechanisms",
+                  "Service Workers for Offline Access",
+                  "Content Delivery Networks (CDNs) Basics"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S2",
+                    "title": "Leveraging Browser Cache",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S2",
+                    "title": "Implementing a Service Worker for a PWA",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S3",
+                "n": "async_operations",
+                "title": "Advanced Asynchronous Operations",
+                "lessons": [
+                  "Promises and Async/Await Patterns",
+                  "Throttling and Debouncing",
+                  "Web Workers for Background Tasks"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S3",
+                    "title": "Mastering Async/Await",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S3",
+                    "title": "Preventing UI Freezes with Web Workers",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M3.2",
+            "title": "Testing, Logging & DevOps Foundations",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "notebook+code",
+            "skill_count_rationale": "3 skills are essential for ensuring the quality, reliability, and maintainability of frontend applications through systematic testing and effective debugging.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M2_S1",
+                "n": "unit_testing",
+                "title": "Unit Testing Frontend Components",
+                "lessons": [
+                  "Introduction to Unit Testing",
+                  "Writing Testable Code",
+                  "Using Testing Frameworks (conceptual)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S1",
+                    "title": "Basics of Unit Testing",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S1",
+                    "title": "Writing Unit Tests for a Complex UI Widget",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S2",
+                "n": "integration_testing",
+                "title": "Integration Testing & E2E Basics",
+                "lessons": [
+                  "Integration Testing Concepts",
+                  "Mocking API Responses",
+                  "Introduction to End-to-End Testing"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S2",
+                    "title": "Testing Component Interactions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S2",
+                    "title": "Debugging a Failed Integration Test for User Login",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S3",
+                "n": "debugging_logging",
+                "title": "Advanced Debugging & Logging",
+                "lessons": [
+                  "Using Breakpoints and Watchers",
+                  "Structured Logging for Frontend",
+                  "Error Monitoring Tools (conceptual)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S3",
+                    "title": "Effective Debugging with Browser DevTools",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S3",
+                    "title": "Diagnosing a Production Bug from User Reports and Logs",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical user flow in your application is intermittently failing in production, but passes all local tests. You need to analyze production logs and user reports to pinpoint the elusive bug."
+              }
+            ]
+          },
+          {
+            "id": "M3.3",
+            "title": "Microservices Architecture",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "animation+code",
+            "skill_count_rationale": "3 skills are important for understanding how large applications are broken down into smaller, manageable parts, which directly applies to component-based frontend development.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M3_S1",
+                "n": "component_based_design",
+                "title": "Component-Based Design Principles",
+                "lessons": [
+                  "What are UI Components?",
+                  "Designing Reusable Components",
+                  "Component Lifecycle Concepts"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S1",
+                    "title": "Introduction to UI Components",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S1",
+                    "title": "Designing a Flexible Card Component for Multiple Uses",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S2",
+                "n": "state_management_principles",
+                "title": "State Management Principles",
+                "lessons": [
+                  "Local vs. Global State",
+                  "Passing Data Between Components",
+                  "Introduction to State Management Patterns"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S2",
+                    "title": "Managing Component State",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S2",
+                    "title": "Centralizing State for a Complex Form",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S3",
+                "n": "cross_service_communication",
+                "title": "Cross-Service Communication (Conceptual)",
+                "lessons": [
+                  "Understanding Microfrontend Concepts",
+                  "Event-Driven Architectures (Frontend Context)",
+                  "API Gateways and Orchestration (Frontend View)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S3",
+                    "title": "Introduction to Microfrontends",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S3",
+                    "title": "Designing Communication Between Independent UI Widgets",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Explain how you would break down a complex user interface into smaller, reusable components, and how these components would communicate with each other."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M04",
+        "label": "M04",
+        "t": "Junior Frontend Developer",
+        "sal": "₹5-8 LPA",
+        "o": "You are ready to apply for entry-level frontend developer roles, having built and deployed a portfolio project, and prepared for technical interviews.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "3 modules are essential for consolidating all learned skills, deploying a professional portfolio, and preparing comprehensively for the job market, including interviews.",
+        "identity_statement": "You are now a job-ready Junior Frontend Developer, equipped with a strong portfolio and the confidence to tackle real-world challenges and secure your first role.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Personalized Dashboard Application",
+          "vibe_layers": [
+            "planning",
+            "architecture",
+            "solution"
+          ],
+          "description": "Build and deploy a personalized dashboard web application that integrates data from multiple (mock) sources (e.g., weather, news, to-do list). This capstone project requires you to apply all learned skills, including API integration, component design, state management, performance considerations, and robust error handling. The goal is a polished, deployable application for your portfolio.",
+          "deliverable": "A fully deployed web application URL, a comprehensive GitHub repository, a detailed project README, and a short presentation video.",
+          "seeded_errors": [
+            "The dashboard frequently crashes when fetching data from one of the external APIs due to unhandled network errors or malformed responses."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M4.1",
+            "title": "Cloud & Deployment",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "code+ppt",
+            "skill_count_rationale": "3 skills are crucial for taking a web application from local development to a live, accessible product, covering hosting, automation, and basic monitoring.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M1_S1",
+                "n": "static_site_hosting",
+                "title": "Static Site Hosting & CDNs",
+                "lessons": [
+                  "Options for Static Site Deployment (e.g., Netlify, Vercel)",
+                  "Configuring Custom Domains",
+                  "Leveraging CDNs for Global Reach"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S1",
+                    "title": "Deploying with Netlify",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S1",
+                    "title": "Troubleshooting a Failed Deployment to a Static Host",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S2",
+                "n": "ci_cd_basics",
+                "title": "CI/CD Basics for Frontend",
+                "lessons": [
+                  "Introduction to Continuous Integration",
+                  "Automating Builds and Tests",
+                  "Continuous Deployment Workflows"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S2",
+                    "title": "Setting Up CI for Frontend",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S2",
+                    "title": "Fixing a Broken CI Pipeline After a Code Change",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S3",
+                "n": "monitoring_deployed_apps",
+                "title": "Monitoring Deployed Applications",
+                "lessons": [
+                  "Basic Application Performance Monitoring (APM)",
+                  "Error Tracking and Alerting",
+                  "User Experience Monitoring"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S3",
+                    "title": "Introduction to APM Tools",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S3",
+                    "title": "Responding to a Production Performance Alert",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Your deployed web application is experiencing a sudden spike in error rates and slow response times. You need to use monitoring tools to identify the root cause and implement a quick fix."
+              }
+            ]
+          },
+          {
+            "id": "M4.2",
+            "title": "Case Studies",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "ppt+real_tutor",
+            "skill_count_rationale": "3 skills are important for developing critical thinking about real-world systems, learning from existing solutions, and understanding the trade-offs involved in architectural decisions.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M2_S1",
+                "n": "analyzing_system_architectures",
+                "title": "Analyzing Real-World Web Architectures",
+                "lessons": [
+                  "Deconstructing Popular Web Applications",
+                  "Identifying Frontend/Backend Separation",
+                  "Understanding Data Flow in Complex Systems"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S1",
+                    "title": "Case Study: E-commerce Platform",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S1",
+                    "title": "Proposing a Frontend Architecture for a New Social Media Feature",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S2",
+                "n": "identifying_tradeoffs",
+                "title": "Identifying Architectural Trade-offs",
+                "lessons": [
+                  "Performance vs. Maintainability",
+                  "Scalability vs. Complexity",
+                  "Security vs. User Experience"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S2",
+                    "title": "Balancing Performance and Maintainability",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S2",
+                    "title": "Choosing Between SSR and CSR for a Content-Heavy Site",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S3",
+                "n": "learning_from_failures",
+                "title": "Learning from System Failures",
+                "lessons": [
+                  "Post-Mortem Analysis Principles",
+                  "Common Frontend Pitfalls",
+                  "Designing for Resilience"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S3",
+                    "title": "Analyzing Past Outages",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S3",
+                    "title": "Preventing a Repeat of a Major Frontend Outage",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M4.3",
+            "title": "Capstone & Career Readiness",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "skill_count_rationale": "3 skills are paramount for successfully navigating the job search process, from showcasing work to performing well in interviews.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M3_S1",
+                "n": "portfolio_building",
+                "title": "Building a Strong Developer Portfolio",
+                "lessons": [
+                  "Showcasing Your Best Projects",
+                  "Writing Effective Project Descriptions",
+                  "Personal Branding for Developers"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S1",
+                    "title": "Crafting Your Developer Portfolio",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S1",
+                    "title": "Tailoring Your Portfolio for a Specific Job Application",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M3_S2",
+                "n": "resume_cover_letter",
+                "title": "Resume & Cover Letter Crafting",
+                "lessons": [
+                  "Structuring a Technical Resume",
+                  "Writing Impactful Bullet Points",
+                  "Customizing Cover Letters"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S2",
+                    "title": "Writing a Winning Tech Resume",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S2",
+                    "title": "Optimizing Your Resume for an ATS",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M3_S3",
+                "n": "mock_interviews",
+                "title": "Technical & Behavioral Interview Prep",
+                "lessons": [
+                  "Common Frontend Interview Questions",
+                  "Behavioral Interview Strategies",
+                  "Live Coding Practice and Feedback"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S3",
+                    "title": "Acing Frontend Technical Interviews",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S3",
+                    "title": "Handling a Challenging Live Coding Problem",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "You are asked to design a simple 'To-Do List' application during a live coding interview. Explain your thought process, data structures, and how you would handle user interactions and persistence."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "fits_life": {
+      "fits": true,
+      "fits_at_default_16w": true,
+      "duration_weeks": 16,
+      "budget_hours": 179.2,
+      "demand_hours": 111.0,
+      "weekly_hours_needed": 8.7,
+      "breakdown": {
+        "video_hours": 27.0,
+        "mastery_hours": 54.0,
+        "scenario_hours": 2.0,
+        "interview_hours": 4.0,
+        "project_hours": 24.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default_16w": true,
+        "duration_weeks": 16,
+        "budget_hours": 179.2,
+        "demand_hours": 111.0,
+        "weekly_hours_needed": 8.7,
+        "breakdown": {
+          "video_hours": 27.0,
+          "mastery_hours": 54.0,
+          "scenario_hours": 2.0,
+          "interview_hours": 4.0,
+          "project_hours": 24.0
+        }
+      },
+      "starts_where_they_are": {
+        "pass": true,
+        "reason": "ZPD starting-point check passed"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 14% (5/36). Full JD validation pending.",
+        "filler_ratio": 0.139,
+        "total_skills": 36
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 36 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "AI-first check passed — all milestones have multi-layer AI work"
+      }
+    },
+    "quality_validators": {
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": true,
+        "reason": "All projects have meaningful implementation + deployment"
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "No forbidden skills for this target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "35 catalog violation(s)",
+        "violations": [
+          "Skill 'basic_python_syntax' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'control_flow' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'functions_modularity' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'core_data_structures' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'basic_algorithms' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'problem_solving_techniques' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'git_basics' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'github_workflow' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'code_review_basics' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'object_oriented_concepts' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'solid_principles' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'design_patterns_intro' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'restful_apis' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'consuming_apis' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'api_error_handling' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'http_https_basics' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'dns_web_hosting' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'browser_dev_tools' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'async_operations' in M3.1 not found in any AVAILABLE_COURSES",
+          "Module 'M3.2' ('Testing, Logging & DevOps Foundations') resembles unavailable course 'devops'",
+          "Skill 'unit_testing' in M3.2 not found in any AVAILABLE_COURSES",
+          "Skill 'integration_testing' in M3.2 not found in any AVAILABLE_COURSES",
+          "Skill 'debugging_logging' in M3.2 not found in any AVAILABLE_COURSES",
+          "Skill 'component_based_design' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'state_management_principles' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'cross_service_communication' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'static_site_hosting' in M4.1 not found in any AVAILABLE_COURSES",
+          "Skill 'ci_cd_basics' in M4.1 not found in any AVAILABLE_COURSES",
+          "Skill 'monitoring_deployed_apps' in M4.1 not found in any AVAILABLE_COURSES",
+          "Skill 'analyzing_system_architectures' in M4.2 not found in any AVAILABLE_COURSES",
+          "Skill 'identifying_tradeoffs' in M4.2 not found in any AVAILABLE_COURSES",
+          "Skill 'learning_from_failures' in M4.2 not found in any AVAILABLE_COURSES",
+          "Skill 'portfolio_building' in M4.3 not found in any AVAILABLE_COURSES",
+          "Skill 'resume_cover_letter' in M4.3 not found in any AVAILABLE_COURSES",
+          "Skill 'mock_interviews' in M4.3 not found in any AVAILABLE_COURSES"
+        ]
+      }
+    }
+  }
+}

@@ -133,23 +133,30 @@ def validate_roadmap_payload(roadmap: dict[str, Any]) -> None:
     milestones = roadmap.get("milestones")
     if not isinstance(milestones, list) or not milestones:
         raise ValueError("Roadmap must include a non-empty milestones array")
-    if len(milestones) > 4:
-        raise ValueError(f"Roadmap has too many milestones: {len(milestones)}")
+    # Milestone count is now dynamic (2–7) per the updated Roadmap Generation Science spec.
+    # The LLM determines count from capability gap; we only enforce bounds.
+    ms_count = len(milestones)
+    if ms_count < 2:
+        raise ValueError(f"Roadmap has too few milestones: {ms_count} (minimum 2)")
+    if ms_count > 7:
+        raise ValueError(f"Roadmap has too many milestones: {ms_count} (maximum 7)")
 
     seen_skills: set[str] = set()
     for milestone in milestones:
         modules = milestone.get("modules")
         if not isinstance(modules, list) or not modules:
             raise ValueError(f"Milestone {milestone.get('milestone_id')} has no modules")
-        if len(modules) > 3:
+        # Milestone module count is now dynamic (2–4).  This is a wide guard;
+        # the authoritative check is in validate_roadmap_structure().
+        if len(modules) > 4:
             raise ValueError(f"Milestone {milestone.get('milestone_id')} has too many modules")
 
         for module in modules:
             skills = module.get("skills")
             if not isinstance(skills, list) or not skills:
                 raise ValueError(f"Module {module.get('module_id')} has no skills")
-            if len(skills) > 3:
-                raise ValueError(f"Module {module.get('module_id')} has too many skills")
+            if len(skills) > 8:
+                raise ValueError(f"Module {module.get('module_id')} has too many skills ({len(skills)} > 8)")
 
             for skill in skills:
                 skill_id = skill.get("skill_id")
