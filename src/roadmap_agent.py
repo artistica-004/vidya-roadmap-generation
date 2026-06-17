@@ -487,6 +487,12 @@ apply ZPD rules using level only.
 
 CAPABILITY GAP ENGINE OUTPUT
 
+gap_score:
+{gap_score}
+
+gap_reasoning:
+{gap_reasoning}
+
 recommended_milestones:
 {recommended_milestones}
 
@@ -566,7 +572,7 @@ Constraints:
   - Never generate 1 module or more than 4 modules.
   - Do NOT generate modules merely to satisfy a count — each module must
     represent a distinct, coherent capability cluster.
-  - Every milestone has EXACTLY 1 Scenario (sc_n=1) and EXACTLY 1 Interview
+  - Every milestone has EXACTLY 1 Interview (iv=1) and between 3 and 7 Scenarios (sc_n=3-7)
     (iv=1). These two science items are placed in separate modules. Any modules
     beyond those two must have "science": [].
   - Every milestone must include a "module_count_rationale" field explaining
@@ -639,10 +645,9 @@ Project format:
 
 RULE 7 — SCIENCE ARRAY (SCENARIO / INTERVIEW — PER MILESTONE):
 !! CRITICAL !!
-Every milestone must contain EXACTLY 1 Scenario AND EXACTLY 1 Interview.
-The Scenario and Interview may be placed in any module across the milestone
-(in separate modules).  Validation enforces sc_n=1 and iv=1 at the milestone
-level regardless of which modules carry them.
+Every milestone must contain between 3 and 7 Scenarios AND EXACTLY 1 Interview.
+Scenarios are distributed across modules (any module may carry multiple Scenarios).
+Validation enforces sc_n between 3-7 and iv=1 at the milestone level.
 
 Rules for science items:
   - "Scenario" = a realistic production/debugging situation the learner must resolve.
@@ -651,9 +656,9 @@ Rules for science items:
     NOT toy exercises. NOT hypotheticals.
   - "Interview" = an interview question testing the milestone identity.
     Must test the ability to PERFORM the role, not recall trivia.
-  - Only 2 modules per milestone carry science: one with "Scenario", one with "Interview".
-  - All other modules must have "science": [].
-  - The milestone-level sc_n must equal 1. The milestone-level iv must equal 1.
+  - A module may have 0 to 3 science items. Multiple Scenarios may share a module.
+  - The Interview must be in a module that has no Scenario (separate modules).
+  - The milestone-level sc_n must be between 3 and 7. The milestone-level iv must equal 1.
 
 RULE 8 — MODULE METADATA (HTML-ALIGNED):
 Each module must include:
@@ -719,7 +724,7 @@ Each milestone must include:
          reflecting existing professional experience.
   - "o": one-sentence outcome statement — what the learner can DO and DEMONSTRATE
     to a hiring manager after this milestone.
-  - "sc_n": must equal 1 (exactly one Scenario per milestone).
+  - "sc_n": must be between 3 and 7 (3–7 Scenarios per milestone).
   - "iv": must equal 1 (exactly one Interview per milestone).
   - "identity_statement": 1-sentence motivational framing (Possible Selves model).
   - "checkpoint_rule": {{"required_mastery": 0.9, "checkpoint_type": "mock_interview"}}
@@ -758,7 +763,9 @@ prior ~0.05-0.15 (harder content = lower prior). target_mastery is always 0.9.
 
 RULE 14 — STRICT JSON ONLY:
 Return ONLY raw valid JSON. No markdown. No code fences. No comments. No
-explanations.
+explanations. All double quotes inside string values MUST be escaped with
+backslash (e.g. "description": "Learn \\"Python\\" fundamentals"). No trailing
+commas before }} or ]. Every property must have a comma separator.
 
 === OUTPUT STRUCTURE ===
 
@@ -791,7 +798,7 @@ explanations.
       "t": "string — market-recognized identity, e.g. AI Foundations Engineer",
       "sal": "string — salary band, e.g. Unpaid/stipend or ₹6-9 LPA",
       "o": "string — 1-sentence outcome: what the learner can DO and demonstrate",
-      "sc_n": 1,
+      "sc_n": 3,
       "iv": 1,
       "module_count_rationale": "string — why this milestone has N modules (capability breadth rationale)",
       "identity_statement": "string — 1-sentence Possible Selves motivational framing",
@@ -839,8 +846,8 @@ explanations.
                 "current_mastery": 0.0,
                 "target_mastery": 0.9,
                 "bkt": {{
-                  "prior": 0.15,
-                  "learn_rate": 0.25,
+                  "prior": 0.15,  # DYNAMIC — see RULE 13
+                  "learn_rate": 0.25,  # DYNAMIC — see RULE 13
                   "guess": 0.1,
                   "slip": 0.05
                 }}
@@ -898,9 +905,9 @@ IMPORTANT REMINDERS:
 - Module count per milestone: 2–4 (determined by capability breadth — see RULE 4).
 - Every module has 3–8 skills (dynamic, see RULE 5).
 - Every skill has EXACTLY 3 lessons (inside the skill object, NOT at module level).
-- Every milestone has EXACTLY 1 Scenario (sc_n=1) and EXACTLY 1 Interview (iv=1).
-  Place the Scenario and Interview in two separate modules. Modules beyond those
-  two must have "science": [].
+- Every milestone has between 3 and 7 Scenarios (sc_n=3-7) and EXACTLY 1 Interview (iv=1).
+  Distribute Scenarios across modules (any module may hold multiple). The Interview
+  must be in a module separate from any Scenario module.
 - All content_id values must be globally unique (e.g. VID_M01_M1_S1, SCN_M02_M2_S3).
 - All skill_id values must be globally unique (e.g. SKILL_M01_M1_S1).
 - skill unlock_rules.requires must reference skill_ids that appear EARLIER in
@@ -928,7 +935,127 @@ def _build_chain():
     """
     return roadmap_prompt | llm | StrOutputParser()
 
+
 # ============================================================
+# BKT Computation  (MD Section 15 — Skill-aware)
+# ============================================================
+
+_ADVANCED_KEYWORDS = {
+    "advanced", "complex", "distributed", "architecture", "design", "deep",
+    "optimization", "scalable", "microservices", "kubernetes", "docker",
+    "system design", "architect", "performance", "security", "integration",
+    "deployment", "ci/cd", "monitoring", "observability", "refactoring",
+    "patterns", "principles", "algorithms", "data structure",
+}
+
+def _estimate_skill_difficulty(skill: dict, skill_index: int = 0, total_skills: int = 1) -> float:
+    """Estimate difficulty from skill name/title keywords + position."""
+    name = ((skill.get("n") or "") + " " + (skill.get("title") or "")).lower()
+    keyword_matches = sum(1 for kw in _ADVANCED_KEYWORDS if kw in name)
+    difficulty = min(keyword_matches * 0.1, 0.5)
+    if total_skills > 1:
+        position_factor = skill_index / (total_skills - 1)
+        difficulty += position_factor * 0.15
+    return min(difficulty, 0.6)
+
+
+def _compute_domain_overlap(skill: dict, known_skills: list) -> float:
+    """How much overlap between this skill and user's known_skills."""
+    if not known_skills:
+        return 0.0
+    name = ((skill.get("n") or "") + " " + (skill.get("title") or "")).lower()
+    name_words = set(name.split())
+    for ks in known_skills:
+        ks_lower = ks.lower().strip()
+        if ks_lower in name or name == ks_lower:
+            return 1.0
+        ks_words = set(ks_lower.split())
+        if name_words & ks_words:
+            return 0.5
+    return 0.0
+
+
+def compute_bkt_prior(
+    skill: dict,
+    user_signals: dict,
+    milestone_index: int,
+    total_milestones: int,
+    skill_index: int = 0,
+    total_skills: int = 1,
+) -> float:
+    """BKT prior = milestone baseline + difficulty/experience/domain adjustments."""
+    if total_milestones <= 1:
+        milestone_base = 0.15
+    else:
+        progress = milestone_index / (total_milestones - 1)
+        milestone_base = 0.25 - progress * 0.20
+
+    difficulty = _estimate_skill_difficulty(skill, skill_index, total_skills)
+    difficulty_adj = -difficulty * 0.10
+
+    years = user_signals.get("years_experience", 0)
+    exp_factor = min(years / 10, 1.0)
+    exp_adj = exp_factor * 0.08
+
+    overlap = _compute_domain_overlap(skill, user_signals.get("known_skills", []))
+    overlap_adj = overlap * 0.10
+
+    prior = milestone_base + difficulty_adj + exp_adj + overlap_adj
+    return round(max(0.01, min(0.50, prior)), 3)
+
+
+def compute_learn_rate(
+    skill: dict,
+    user_signals: dict,
+    milestone_index: int,
+    total_milestones: int,
+    skill_index: int = 0,
+    total_skills: int = 1,
+) -> float:
+    """BKT learn_rate = milestone baseline + difficulty/experience/domain adjustments."""
+    if total_milestones <= 1:
+        milestone_base = 0.25
+    else:
+        progress = milestone_index / (total_milestones - 1)
+        milestone_base = 0.15 + progress * 0.20
+
+    difficulty = _estimate_skill_difficulty(skill, skill_index, total_skills)
+    difficulty_adj = -difficulty * 0.08
+
+    years = user_signals.get("years_experience", 0)
+    exp_factor = min(years / 10, 1.0)
+    exp_adj = exp_factor * 0.06
+
+    overlap = _compute_domain_overlap(skill, user_signals.get("known_skills", []))
+    overlap_adj = overlap * 0.05
+
+    lr = milestone_base + difficulty_adj + exp_adj + overlap_adj
+    return round(max(0.05, min(0.50, lr)), 3)
+
+
+def inject_bkt_values(roadmap_data: dict) -> None:
+    """Overwrite BKT prior/learn_rate across all skills with skill-aware values."""
+    milestones = roadmap_data.get("milestones", [])
+    total_ms = len(milestones)
+    user_signals = {
+        "years_experience": roadmap_data.get("years_experience", 0),
+        "known_skills": roadmap_data.get("known_skills", []),
+    }
+    for ms_idx, ms in enumerate(milestones):
+        for mod in ms.get("modules", []):
+            skills = mod.get("skills", [])
+            total_sk = len(skills)
+            for sk_idx, skill in enumerate(skills):
+                prior = compute_bkt_prior(
+                    skill, user_signals, ms_idx, total_ms, sk_idx, total_sk,
+                )
+                lr = compute_learn_rate(
+                    skill, user_signals, ms_idx, total_ms, sk_idx, total_sk,
+                )
+                bkt = skill.get("mastery_state", {}).get("bkt", {})
+                if bkt:
+                    bkt["prior"] = prior
+                    bkt["learn_rate"] = lr
 # Pinecone Storage for Roadmap   (UNCHANGED)
 # ============================================================
 
@@ -959,10 +1086,14 @@ def store_roadmap_in_pinecone(user_id: str, roadmap_id: str, roadmap_data: dict)
 
         roadmap_json_str   = json.dumps(roadmap_data)
         MAX_METADATA_BYTES = 38000
+        json_bytes = len(roadmap_json_str.encode("utf-8"))
+        print(f"[PINECONE STORE] payload_size={json_bytes}  "
+              f"namespace={user_id}  vector_id={user_id}_roadmap_{roadmap_id}")
 
-        if len(roadmap_json_str.encode("utf-8")) > MAX_METADATA_BYTES:
+        if json_bytes > MAX_METADATA_BYTES:
             print("[PINECONE STORE] ⚠ Roadmap JSON too large — storing summary only")
             store_payload = {
+                "text":               embed_text,
                 "roadmap_id":          roadmap_id,
                 "user_id":             user_id,
                 "target_role":         target_role,
@@ -974,6 +1105,7 @@ def store_roadmap_in_pinecone(user_id: str, roadmap_id: str, roadmap_data: dict)
             }
         else:
             store_payload = {
+                "text":               embed_text,
                 "roadmap_id":          roadmap_id,
                 "user_id":             user_id,
                 "target_role":         target_role,
@@ -996,7 +1128,9 @@ def store_roadmap_in_pinecone(user_id: str, roadmap_id: str, roadmap_data: dict)
             namespace=user_id,
         )
 
-        print(f"[PINECONE STORE] ✓ Stored — vector_id: {vector_id}")
+        print(f"[PINECONE UPSERT SUCCESS] vector_id={vector_id} "
+              f"namespace={user_id} "
+              f"full_roadmap_stored={store_payload.get('full_roadmap_stored', False)}")
         return True
 
     except ImportError as e:
@@ -1010,10 +1144,137 @@ def store_roadmap_in_pinecone(user_id: str, roadmap_id: str, roadmap_data: dict)
 
 
 # ============================================================
-# JSON Repair Utility   (UNCHANGED)
+# JSON Repair Utility   (PRODUCTION-GRADE)
 # ============================================================
 
+# ── Phase 2: Bracket balancing (fix truncation) ─────────────
+def _balance_brackets(s: str) -> str:
+    """Append missing closing brackets to fix truncated JSON."""
+    stack = []
+    in_str = False
+    esc = False
+    for ch in s:
+        if esc:
+            esc = False
+            continue
+        if ch == '\\':
+            esc = True
+            continue
+        if ch == '"':
+            in_str = not in_str
+            continue
+        if in_str:
+            continue
+        if ch == '{':
+            stack.append('}')
+        elif ch == '[':
+            stack.append(']')
+        elif ch == '}':
+            if stack and stack[-1] == '}':
+                stack.pop()
+        elif ch == ']':
+            if stack and stack[-1] == ']':
+                stack.pop()
+    if stack:
+        s += ''.join(reversed(stack))
+    return s
+
+
+# ── Phase 3: Missing comma insertion ────────────────────────
+_RE_FIX_MISSING_COMMAS = [
+    (re.compile(r'}([ \t]*){'),        r'},\1{'),
+    (re.compile(r'}([ \t]*)\['),       r'},\1['),
+    (re.compile(r']([ \t]*){'),        r'],\1{'),
+    (re.compile(r']([ \t]*)\['),       r'],\1['),
+    (re.compile(r'}([ \t]*)"'),        r'},\1"'),
+    (re.compile(r']([ \t]*)"'),        r'],\1"'),
+    (re.compile(r'(\d+)([ \t]*)"(?!\s*[}\]])'), r'\1,\2"'),
+    (re.compile(r'(true|false|null)([ \t]*)"'), r'\1,\2"'),
+    (re.compile(r'(true|false|null)([ \t]*){'), r'\1,\2{'),
+    (re.compile(r'(\d+)\s+(\d+)'),     r'\1, \2'),
+]
+
+
+def _fix_missing_commas(s: str) -> str:
+    """Insert missing commas between adjacent JSON values.
+
+    Each pattern is applied iteratively (up to 10 rounds) so that
+    overlapping fixes (e.g. ``[1 2 3]``) converge.
+    """
+    for pattern, replacement in _RE_FIX_MISSING_COMMAS:
+        for _ in range(10):
+            prev = s
+            s = pattern.sub(replacement, s)
+            if s == prev:
+                break
+    return s
+
+
+# ── Phase 4: Unescaped quote repair ─────────────────────────
+def _get_next_non_ws(s: str, pos: int) -> str:
+    """Return the next non-whitespace character starting at *pos*."""
+    for i in range(pos, len(s)):
+        if s[i] not in (' ', '\t', '\n', '\r'):
+            return s[i]
+    return ''
+
+
+def _fix_unescaped_quotes(s: str) -> str:
+    """Escape unescaped double quotes inside string values.
+
+    Strategy — scan character by character.  When we find an unescaped
+    ``"`` inside a string, check the *next non-whitespace* character.
+    If it is a JSON structural delimiter (``,`` ``}`` ``]`` ``:`` EOF)
+    the quote is a genuine string terminator.  Otherwise it is a literal
+    quote that should be escaped — this handles the common LLM mistake
+    ``"description": "Uses "AI" technology"``.
+    """
+    result = []
+    in_string = False
+    i = 0
+    n = len(s)
+    while i < n:
+        ch = s[i]
+        if ch == '\\':
+            result.append(ch)
+            if i + 1 < n:
+                result.append(s[i + 1])
+                i += 2
+            continue
+        if ch == '"':
+            if not in_string:
+                result.append('"')
+                in_string = True
+            else:
+                next_nws = _get_next_non_ws(s, i + 1)
+                if next_nws in (',', '}', ']', ':', ''):
+                    result.append('"')
+                    in_string = False
+                else:
+                    result.append('\\"')
+            i += 1
+            continue
+        result.append(ch)
+        i += 1
+    return ''.join(result)
+
+
 def repair_json(raw: str) -> str:
+    """Multi-phase JSON repair for LLM output.
+
+    Phases (each verified by ``json.loads`` before proceeding):
+
+      0.  Strip markdown fences & extract outermost ``{…}`` block.
+      1.  Remove trailing commas before ``}`` / ``]``.
+      2.  Balance brackets (fix truncation).
+      3.  Insert missing commas between adjacent values.
+      4.  Escape unescaped quotes inside string values.
+
+    Returns the best valid JSON found; if no phase produces valid
+    JSON the Phase-2 (balanced-brackets) result is returned as a
+    best-effort.
+    """
+    # ── Phase 0: Basic cleanup ──────────────────────────────
     clean = raw.strip()
     if "```" in clean:
         clean = clean.replace("```json", "").replace("```", "").strip()
@@ -1021,7 +1282,53 @@ def repair_json(raw: str) -> str:
     end   = clean.rfind("}") + 1
     if start != -1 and end > 0:
         clean = clean[start:end]
+
+    # ── Phase 1: Trailing commas ────────────────────────────
+    clean = _strip_trailing_commas(clean)
+
+    try:
+        json.loads(clean)
+        return clean
+    except json.JSONDecodeError:
+        pass
+
+    # ── Phase 2: Bracket balancing ──────────────────────────
+    clean = _balance_brackets(clean)
+    clean = _strip_trailing_commas(clean)
+
+    try:
+        json.loads(clean)
+        return clean
+    except json.JSONDecodeError:
+        pass
+
+    # ── Phase 3: Missing commas ─────────────────────────────
+    clean = _fix_missing_commas(clean)
+    clean = _strip_trailing_commas(clean)
+
+    try:
+        json.loads(clean)
+        return clean
+    except json.JSONDecodeError:
+        pass
+
+    # ── Phase 4: Unescaped quotes ───────────────────────────
+    clean = _fix_unescaped_quotes(clean)
+
+    try:
+        json.loads(clean)
+        return clean
+    except json.JSONDecodeError:
+        pass
+
+    # Best effort — at least brackets are balanced
     return clean
+
+
+def _strip_trailing_commas(s: str) -> str:
+    s = re.sub(r',\s*}', '}', s)
+    s = re.sub(r',\s*]', ']', s)
+    return s
 
 
 # ============================================================
@@ -1040,8 +1347,8 @@ def validate_roadmap_structure(data: dict) -> None:
       - each milestone has between MIN_MODULES and MAX_MODULES modules
       - each module has MIN_SKILLS..MAX_SKILLS skills (dynamic)
       - each skill has EXACTLY 3 lessons (inside skill object)
-      - each module's "science" array has 0 or 1 item ("Scenario" or "Interview"; only 2 modules carry the milestone's 1 Scenario + 1 Interview)
-      - each milestone has sc_n == 1 and iv == 1
+      - each module's "science" array has 0-3 items ("Scenario" or "Interview"; Scenarios may share a module, Interview must be in a separate module)
+      - each milestone has 3 <= sc_n <= 7 and iv == 1
       - skill_id uniqueness and acyclic/backward-only prerequisite refs
       - project: title, description, deliverable, seeded_errors, ≥2 vibe_layers
       - at least 2 distinct ai_first_layers per milestone
@@ -1162,17 +1469,16 @@ def validate_roadmap_structure(data: dict) -> None:
                     f"{MAX_SKILLS} skills, got {skill_count}"
                 )
 
-            # ── science: 0 or 1 item per module ──
+            # ── science: 0-3 items per module ──
             science = mod.get("science", [])
             if not isinstance(science, list):
                 raise ValueError(f"Module {mod_id}: science must be a list")
-            if len(science) > 1:
+            if len(science) > 3:
                 raise ValueError(
-                    f"Module {mod_id}: science array must have 0 or 1 item, "
+                    f"Module {mod_id}: science array must have 0-3 items, "
                     f"got {len(science)}"
                 )
-            if len(science) == 1:
-                sci      = science[0]
+            for sci in science:
                 sci_type = sci.get("type")
                 if sci_type not in ("Scenario", "Interview"):
                     raise ValueError(
@@ -1247,10 +1553,10 @@ def validate_roadmap_structure(data: dict) -> None:
                 f"AI-first layers. Found: {sorted(ai_first_layers)}"
             )
 
-        # ── sc_n must equal 1, iv must equal 1 ──
-        if scenario_count != 1:
+        # ── sc_n must be 3-7, iv must equal 1 ──
+        if scenario_count < 3 or scenario_count > 7:
             raise ValueError(
-                f"Milestone {m_id}: must have EXACTLY 1 Scenario across its "
+                f"Milestone {m_id}: must have between 3 and 7 Scenarios across its "
                 f"modules, got {scenario_count}"
             )
         if interview_count != 1:
@@ -1920,6 +2226,24 @@ def build_customer_profile(context: str) -> dict:
         pass
 
     # Regex fallbacks for fields not found in JSON
+    if "current_identity" not in profile["_provenance"]:
+        ci_match = re.search(
+            r"(?:current(?:\s+role|_role)|Current role)[:\s]+(.+)",
+            context, re.IGNORECASE,
+        )
+        if ci_match:
+            profile["current_identity"] = ci_match.group(1).strip()
+            profile["_provenance"]["current_identity"] = "regex"
+
+    if "target_identity" not in profile["_provenance"]:
+        ti_match = re.search(
+            r"(?:target(?:\s+role|_role|_identity|goal)|Target role|Primary goal)[:\s]+(.+)",
+            context, re.IGNORECASE,
+        )
+        if ti_match:
+            profile["target_identity"] = ti_match.group(1).strip()
+            profile["_provenance"]["target_identity"] = "regex"
+
     if "years_experience" not in profile["_provenance"]:
         ye_match = re.search(r"[Yy]ears?\s*(?:of\s+)?experience[:\s]+(\d+)", context)
         if ye_match:
@@ -1937,6 +2261,35 @@ def build_customer_profile(context: str) -> dict:
         if tl_match:
             profile["timeline_days"] = max(int(tl_match.group(1)), 7)
             profile["_provenance"]["timeline_days"] = "regex"
+
+    # current_salary_lpa — regex from "Current salary monthly: <amount>"
+    if "current_salary_lpa" not in profile["_provenance"]:
+        sal_match = re.search(
+            r"[Cc]urrent\s+salary\s+monthly[:\s]+(\d+(?:\.\d+)?)",
+            context,
+        )
+        if not sal_match:
+            sal_match = re.search(
+                r"[Cc]urrent\s+salary\s+lpa[:\s]+(\d+(?:\.\d+)?)",
+                context,
+            )
+        if sal_match:
+            monthly = float(sal_match.group(1))
+            profile["current_salary_lpa"] = round(monthly * 12 / 100000, 1)
+            profile["_provenance"]["current_salary_lpa"] = "regex_monthly_salary"
+
+    # known_skills — regex from "Known skills: <comma-separated list>"
+    if "known_skills" not in profile["_provenance"]:
+        ks_match = re.search(
+            r"[Kk]nown\s+skills[:\s]+(.+)",
+            context,
+        )
+        if ks_match:
+            raw = ks_match.group(1).strip()
+            parsed = [s.strip() for s in raw.split(",") if s.strip()]
+            if parsed:
+                profile["known_skills"] = parsed
+                profile["_provenance"]["known_skills"] = "regex"
 
     return profile
 
@@ -2437,11 +2790,47 @@ def run_pipeline(
                 f"[TIME BUDGET] estimated_total_hours recomputed = "
                 f"{roadmap_data['estimated_total_hours']}"
             )
+            # ── Budget enforcement: reduce milestones if demand > budget ──
+            _budget_enforced = False
+            if budget_hrs > 0:
+                current_estimated = roadmap_data["estimated_total_hours"]
+                if current_estimated > budget_hrs:
+                    milestones_before = len(roadmap_data.get("milestones", []))
+                    # Calculate target milestone count proportionally
+                    target_ms = max(
+                        MIN_MILESTONES,
+                        int(milestones_before * budget_hrs / current_estimated)
+                    )
+                    if target_ms < milestones_before:
+                        print(
+                            f"[BUDGET ENFORCEMENT] demand={current_estimated}h > "
+                            f"budget={budget_hrs}h — reducing milestones from "
+                            f"{milestones_before} to {target_ms}"
+                        )
+                        roadmap_data["milestones"] = roadmap_data["milestones"][:target_ms]
+                        roadmap_data["milestone_count_rationale"] = (
+                            f"Reduced to {target_ms} milestone(s) from {milestones_before} "
+                            f"due to time budget ({budget_hrs}h) relative to demand "
+                            f"({current_estimated}h)."
+                        )
+                        # Re-count after reduction
+                        lc, sc, sci, ivc, pc = _count_roadmap_units(roadmap_data)
+                        roadmap_data["estimated_total_hours"] = round(
+                            lc * 0.25 + sc * 1.5 + sci * 0.5 + ivc * 1.0 + pc * 6.0, 1
+                        )
+                        _budget_enforced = True
+                        print(
+                            f"[BUDGET ENFORCEMENT] After reduction: "
+                            f"{target_ms} milestone(s), "
+                            f"estimated={roadmap_data['estimated_total_hours']}h"
+                        )
             # ==========================================
             # AUTO FIX — SCIENCE DISTRIBUTION
             # ==========================================
-            # Ensures every milestone has exactly 1 Scenario + 1 Interview,
-            # in separate modules, with all other modules having science=[].
+            # Ensures every milestone has 3-7 Scenarios + exactly 1 Interview,
+            # Scenarios may share modules, Interview in separate module.
+            _MIN_SCENARIOS = 3
+            _MAX_SCENARIOS = 7
             for milestone in roadmap_data.get("milestones", []):
                 modules = milestone.get("modules", [])
 
@@ -2452,20 +2841,21 @@ def run_pipeline(
                     sci_list = mod.get("science", [])
                     if not isinstance(sci_list, list):
                         sci_list = []
-                    for sci in sci_list[:]:  # iterate copy for safe removal
+                    for sci in sci_list[:]:
                         t = sci.get("type")
                         if t == "Scenario":
                             scenario_modules.append(mod)
                         elif t == "Interview":
                             interview_modules.append(mod)
 
-                # ── Fix: >1 Scenario → keep first, drop extras ──
-                if len(scenario_modules) > 1:
-                    keep = scenario_modules[0]
-                    for mod in scenario_modules[1:]:
+                # ── Fix: >7 Scenarios → cap at 7 ──
+                total_scenarios = len(scenario_modules)
+                if total_scenarios > _MAX_SCENARIOS:
+                    excess = scenario_modules[_MAX_SCENARIOS:]
+                    for mod in excess:
                         mod["science"] = [s for s in mod.get("science", [])
                                           if s.get("type") != "Scenario"]
-                    scenario_modules = [keep]
+                    scenario_modules = scenario_modules[:_MAX_SCENARIOS]
 
                 # ── Fix: >1 Interview → keep first, drop extras ──
                 if len(interview_modules) > 1:
@@ -2478,38 +2868,60 @@ def run_pipeline(
                 # ── Fix: Scenario and Interview in same module → move Interview ──
                 if scenario_modules and interview_modules and scenario_modules[0] is interview_modules[0]:
                     same_mod = scenario_modules[0]
-                    # Remove Interview from the shared module
                     same_mod["science"] = [s for s in same_mod.get("science", [])
                                            if s.get("type") != "Interview"]
                     interview_modules = []
-                    # Find another module for Interview
                     for mod in modules:
-                        if mod is not same_mod and not mod.get("science"):
-                            mod["science"] = [{"type": "Interview", "desc": "Interview question assessing milestone competency"}]
+                        if mod is not same_mod and not any(
+                            s.get("type") == "Interview" for s in mod.get("science", [])
+                        ):
+                            mod.setdefault("science", []).append(
+                                {"type": "Interview", "desc": "Interview question assessing milestone competency"}
+                            )
                             interview_modules = [mod]
                             break
 
-                # ── Fix: 0 Scenario → inject ──
-                if not scenario_modules:
+                # ── Fix: <3 Scenarios → inject up to _MIN_SCENARIOS ──
+                if len(scenario_modules) < _MIN_SCENARIOS:
+                    needed = _MIN_SCENARIOS - len(scenario_modules)
                     for mod in modules:
-                        if not mod.get("science"):
-                            mod["science"] = [{"type": "Scenario", "desc": "Production debugging scenario for milestone skills"}]
-                            scenario_modules = [mod]
+                        while needed > 0:
+                            sci_list = mod.get("science", [])
+                            if not isinstance(sci_list, list):
+                                sci_list = []
+                                mod["science"] = sci_list
+                            if len(sci_list) < 3:
+                                sci_list.append(
+                                    {"type": "Scenario", "desc": "Production debugging scenario for milestone skills"}
+                                )
+                                scenario_modules.append(mod)
+                                needed -= 1
+                            else:
+                                break
+                        if needed <= 0:
                             break
 
                 # ── Fix: 0 Interview → inject ──
                 if not interview_modules:
                     for mod in modules:
-                        if not mod.get("science") and (not scenario_modules or mod is not scenario_modules[0]):
-                            mod["science"] = [{"type": "Interview", "desc": "Interview question assessing milestone competency"}]
+                        has_interview = any(
+                            s.get("type") == "Interview" for s in mod.get("science", [])
+                        )
+                        if not has_interview and (
+                            not scenario_modules
+                            or all(s.get("type") != "Scenario" for s in mod.get("science", []))
+                        ):
+                            mod.setdefault("science", []).append(
+                                {"type": "Interview", "desc": "Interview question assessing milestone competency"}
+                            )
                             interview_modules = [mod]
                             break
 
-                # ── Fix: any module has >1 science items → truncate to 1 ──
+                # ── Fix: any module has >3 science items → truncate to 3 ──
                 for mod in modules:
                     sci_list = mod.get("science", [])
-                    if isinstance(sci_list, list) and len(sci_list) > 1:
-                        mod["science"] = sci_list[:1]
+                    if isinstance(sci_list, list) and len(sci_list) > 3:
+                        mod["science"] = sci_list[:3]
 
                 # ── Recalculate sc_n / iv ──
                 sc = sum(1 for mod in modules
@@ -2530,6 +2942,7 @@ def run_pipeline(
             # output for these; they come from our own detection logic.
             roadmap_data["level"]    = level
             roadmap_data["icp_type"] = icp_type
+            roadmap_data["years_experience"] = years_experience
             roadmap_data["current_salary_lpa"] = current_salary_lpa
             roadmap_data["known_skills"] = known_skills
             roadmap_data["capability_gap"] = gap_analysis
@@ -2538,6 +2951,8 @@ def run_pipeline(
             apply_salary_floor_repair(roadmap_data)
             # ── Known-skill auto-completion ─────────────────────
             apply_known_skill_autocomplete(roadmap_data, known_skills)
+            # ── Dynamic BKT injection ──────────────────────────
+            inject_bkt_values(roadmap_data)
             # ── Customer profile debug ──────────────────────────
             print("========== CUSTOMER PROFILE ==========")
             print(f"  current_identity       : {customer_profile.get('current_identity', 'N/A')}")
@@ -2816,17 +3231,37 @@ def run_pipeline(
                 f"skills={_rd_skill_count}"
             )
 
-            # ── Store in Pinecone ──────────────────────────────  (UNCHANGED)
-            print("\n[ROADMAP AGENT] Storing roadmap in Pinecone...")
+            # ── Store in Pinecone ──────────────────────────────
+            print(f"\n[ROADMAP AGENT] Storing roadmap in Pinecone...")
             stored = store_roadmap_in_pinecone(user_id, ai_roadmap_id, roadmap_data)
             if stored:
                 print("[ROADMAP AGENT] ✓ Roadmap persisted to Pinecone")
+                # ── Immediate verification fetch ────────────────
+                try:
+                    from src.pinecone_utils import pc, INDEX_NAME
+                    verify_index = pc.Index(INDEX_NAME)
+                    vector_id = f"{user_id}_roadmap_{ai_roadmap_id}"
+                    verify_result = verify_index.fetch(
+                        ids=[vector_id],
+                        namespace=user_id,
+                    )
+                    if (verify_result and verify_result.vectors
+                            and vector_id in verify_result.vectors):
+                        print(f"[VERIFY] roadmap vector stored and verified "
+                              f"(vector_id={vector_id})")
+                    else:
+                        raise RuntimeError(
+                            f"Verification fetch FAILED for roadmap vector "
+                            f"(vector_id={vector_id}, namespace={user_id})"
+                        )
+                except Exception as ve:
+                    print(f"[VERIFY] Roadmap verification fetch error: {ve}")
+                    raise
             else:
-                print("[ROADMAP AGENT] ⚠ Roadmap generated but NOT stored in Pinecone")
+                raise RuntimeError("store_roadmap_in_pinecone returned False")
 
-            # ── Save POC cross-POC records ─────────────────────────────  (UNCHANGED)
+            # ── Save POC cross-POC records ─────────────────────────────
             # roadmap_conversation — lightweight record (no duplicate payload)
-                  # ── Save POC cross-POC records ─────────────────────────────
 
             roadmap_summary = {
                 "roadmap_id": ai_roadmap_id,
@@ -2846,22 +3281,48 @@ def run_pipeline(
             # run for the same user to detect level='beginner'
             # because the overwritten record had no years_experience.
 
-            save_poc_record(
-                user_id=user_id,
-                record_id=f"{user_id}_roadmap_conversation",
-                text=json.dumps(roadmap_summary),
-            )
+            for record_suffix, ensure_ascii in [
+                ("roadmap_conversation", True),
+                ("roadmap_output",      False),
+            ]:
+                record_id = f"{user_id}_{record_suffix}"
+                payload   = json.dumps(roadmap_summary, ensure_ascii=ensure_ascii)
+                payload_bytes = len(payload.encode("utf-8"))
+                print(f"[ROADMAP SAVE] {record_id}  "
+                      f"namespace={user_id}  size={payload_bytes}")
 
-
-            save_poc_record(
-                user_id=user_id,
-                record_id=f"{user_id}_roadmap_output",
-                text=json.dumps(
-                    roadmap_summary,
-                    ensure_ascii=False
+                ok = save_poc_record(
+                    user_id=user_id,
+                    record_id=record_id,
+                    text=payload,
                 )
-            )
-            
+                if not ok:
+                    raise RuntimeError(
+                        f"save_poc_record failed for {record_id} "
+                        f"(user_id={user_id}, {payload_bytes} bytes)"
+                    )
+
+                # ── Immediate verification fetch ────────────────
+                verify = fetch_poc_record(user_id=user_id, record_id=record_id)
+                if not verify:
+                    raise RuntimeError(
+                        f"Verification fetch FAILED for {record_id} "
+                        f"(user_id={user_id}, namespace={user_id}) — "
+                        f"record not found after upsert"
+                    )
+
+            # ── Final safety check: re-fetch all 3 records ──────
+            print(f"\n[ROADMAP AGENT] Final safety check — re-fetching all records...")
+            for rid in [
+                f"{user_id}_roadmap_conversation",
+                f"{user_id}_roadmap_output",
+                f"{user_id}_roadmap_{ai_roadmap_id}",
+            ]:
+                fetched = fetch_poc_record(user_id=user_id, record_id=rid)
+                if not fetched:
+                    print(f"[ROADMAP SAVE] ⚠ Final safety fetch MISSING: {rid}")
+                else:
+                    print(f"[ROADMAP SAVE] ✓ Final safety fetch OK: {rid} ({len(fetched)} chars)")
 
             # ── POC local storage ──────────────────────────────  (UNCHANGED)
             print("\n[ROADMAP AGENT] Writing POC storage artifacts...")
@@ -2911,6 +3372,22 @@ def run_pipeline(
 
         except json.JSONDecodeError as e:
             print(f"[ROADMAP AGENT] ✗ JSON parse error (attempt {attempt}): {e}")
+            # ── Diagnostic: show 500 chars before/after error position ──
+            err_pos = e.pos
+            raw_for_debug = clean_result
+            line_no = raw_for_debug[:err_pos].count("\n") + 1
+            col_no = err_pos - raw_for_debug[:err_pos].rfind("\n")
+            ctx_start = max(err_pos - 500, 0)
+            ctx_end = min(err_pos + 500, len(raw_for_debug))
+            before = raw_for_debug[ctx_start:err_pos]
+            after = raw_for_debug[err_pos:ctx_end]
+            print(f"  line={line_no}  column={col_no}  pos={err_pos}")
+            print(f"  raw_input_length={len(raw_for_debug)}")
+            print(f"  --- 500 BEFORE ---")
+            print(before)
+            print(f"  --- ^^^ ERROR AT pos {err_pos} ^^^ ---")
+            print(after)
+            print(f"  --- 500 AFTER ---")
             if attempt == max_attempts:
                 return {
                     "error":         f"Invalid JSON from LLM: {str(e)}",

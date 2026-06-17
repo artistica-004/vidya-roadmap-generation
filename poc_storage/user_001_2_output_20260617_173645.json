@@ -1,0 +1,1005 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_001",
+  "roadmap_id": "ai_roadmap_20260617173521_92301cea",
+  "generated_at": "2026-06-17T17:36:45.045639",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260617173521_92301cea",
+    "user_id": "user_001",
+    "icp_type": "high",
+    "level": "senior",
+    "target_role": "Senior Backend Engineer",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 43.0,
+    "budget_hours": 89.6,
+    "milestone_count_rationale": "2 milestones: Aarav is a senior-level engineer with 6 years of experience. The gap to Senior Backend Engineer is focused on specific, advanced system design and distributed systems capabilities, which can be covered efficiently in two targeted identity transformations within the allocated 7 hours/week.",
+    "vision_profile": {
+      "current_state": "Aarav is a Backend Engineer proficient in Java, Spring Boot, REST APIs, PostgreSQL, and Redis, capable of executing assigned tickets.",
+      "main_blocker": "His biggest fear is that weak system design depth will block him in senior engineering interviews, preventing him from owning larger engineering decisions.",
+      "top_motivation": "He is highly motivated to move into a senior backend role to own larger engineering decisions instead of only executing tickets assigned by senior architects."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-17T17:36:24.142457",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Distributed Systems Architect",
+        "sal": "₹20-25 LPA",
+        "o": "Learner can design, implement, and troubleshoot scalable and resilient distributed systems, demonstrating mastery of advanced messaging and data patterns.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "2 modules are sufficient to cover the core distributed systems concepts and advanced messaging/data patterns required for this identity, balancing depth with Aarav's available time.",
+        "identity_statement": "You are becoming the architect who designs the backbone of highly available and scalable applications, mastering the complexities of distributed systems.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Build a Scalable Event-Driven Microservice Platform",
+          "vibe_layers": [
+            "planning",
+            "architecture",
+            "solution"
+          ],
+          "description": "Design and implement a multi-service application using event-driven architecture, incorporating message queues (like Kafka) for inter-service communication and demonstrating horizontal scalability. This project will solidify your understanding of distributed system principles and advanced messaging patterns.",
+          "deliverable": "Deployed application on a local environment, comprehensive architecture diagrams, and a brief design document outlining key decisions and trade-offs.",
+          "seeded_errors": [
+            "A race condition in a distributed transaction leading to data inconsistency across services that the learner must identify and resolve using appropriate synchronization or eventual consistency patterns."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Core Distributed Systems & Scalability",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "3 skills provide a focused approach to the foundational principles of distributed systems, scalability, and fault tolerance, essential for a Distributed Systems Architect.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "distributed_system_fundamentals",
+                "title": "Distributed System Fundamentals",
+                "auto_completed": false,
+                "why_this_skill": "Understanding the core principles of distributed systems is crucial for designing robust and scalable backend services, a key requirement for senior roles.",
+                "lessons": [
+                  "CAP Theorem & Consistency Models",
+                  "Distributed Consensus Algorithms (e.g., Paxos, Raft)",
+                  "Service Discovery & Load Balancing"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Introduction to Distributed Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Diagnosing a Distributed System Outage",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "scalability_performance_patterns",
+                "title": "Scalability & Performance Patterns",
+                "auto_completed": false,
+                "why_this_skill": "Senior engineers must design systems that can handle increasing loads efficiently. Mastering scalability patterns is essential for high-performance backend services.",
+                "lessons": [
+                  "Horizontal vs. Vertical Scaling",
+                  "Caching Strategies (e.g., CDN, Distributed Cache)",
+                  "Database Sharding & Replication"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Designing for High Scalability",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Optimizing a Latency-Sensitive API",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "concurrency_fault_tolerance",
+                "title": "Concurrency & Fault Tolerance",
+                "auto_completed": false,
+                "why_this_skill": "Building resilient systems requires deep understanding of concurrent operations and how to design for failure, minimizing impact and ensuring continuous service.",
+                "lessons": [
+                  "Distributed Transaction Management",
+                  "Circuit Breakers & Bulkheads",
+                  "Idempotency & Retries"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Designing Resilient Distributed Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Handling Cascading Failures in Microservices",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical microservice is experiencing intermittent timeouts, leading to data inconsistencies. Diagnose the root cause, which involves a distributed lock contention, and propose a solution."
+              },
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Advanced Messaging & Data Patterns",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "code+ppt",
+            "skill_count_rationale": "3 skills are necessary to cover the critical aspects of distributed messaging (Kafka), data management, and API communication patterns, directly addressing Aarav's skill gaps.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "kafka_architecture_implementation",
+                "title": "Kafka Architecture & Implementation",
+                "auto_completed": false,
+                "why_this_skill": "Kafka is a cornerstone of modern distributed systems for event streaming. Deep understanding of its architecture and best practices is a critical skill gap for senior backend roles.",
+                "lessons": [
+                  "Kafka Core Concepts (Topics, Partitions, Brokers)",
+                  "Producer & Consumer Design Patterns",
+                  "Kafka Streams & KSQL Basics"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Building Event-Driven Systems with Kafka",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Troubleshooting Kafka Consumer Lag",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "distributed_data_management",
+                "title": "Distributed Data Management",
+                "auto_completed": false,
+                "why_this_skill": "Managing data consistency and availability across distributed services is a complex challenge. Senior engineers must master patterns for reliable data handling.",
+                "lessons": [
+                  "Eventual Consistency vs. Strong Consistency",
+                  "Saga Pattern for Distributed Transactions",
+                  "Data Partitioning & Consistency in NoSQL"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Ensuring Data Integrity in Distributed Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Resolving Data Skew in a Distributed Database",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "api_gateway_service_mesh",
+                "title": "API Gateway & Service Mesh",
+                "auto_completed": false,
+                "why_this_skill": "For complex microservice architectures, API Gateways and Service Meshes are critical for managing traffic, security, and observability, enabling senior engineers to build robust systems.",
+                "lessons": [
+                  "API Gateway Patterns & Implementations",
+                  "Service Mesh Concepts (e.g., Istio, Linkerd)",
+                  "Traffic Management & Observability with Service Mesh"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Managing Microservices with API Gateways and Service Mesh",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Implementing Rate Limiting with an API Gateway",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new microservice deployment is causing unexpected latency spikes in downstream services. Investigate how a misconfigured API Gateway or Service Mesh policy could be the culprit and propose a fix."
+              },
+              {
+                "type": "Interview",
+                "desc": "Design a highly available and scalable notification service that can send millions of messages per second across multiple channels (email, SMS, push notifications). Discuss your choices for messaging queues, database, and fault tolerance."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Cloud-Native Backend Lead",
+        "sal": "₹25-30 LPA",
+        "o": "Learner can lead the design and implementation of cloud-native backend solutions, driving technical decisions, ensuring operational excellence, and producing high-quality technical design documentation.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "2 modules are designed to cover advanced cloud architecture, deployment patterns, and critical technical leadership skills like design documentation, directly addressing Aarav's remaining skill gaps and target identity.",
+        "identity_statement": "You are evolving into a technical leader, guiding teams to build resilient, scalable, and cost-effective cloud-native backend systems, and shaping engineering decisions.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Cloud-Native E-commerce Backend Re-architecture",
+          "vibe_layers": [
+            "planning",
+            "architecture",
+            "solution"
+          ],
+          "description": "Re-architect a traditional e-commerce backend into a resilient, scalable, and cost-effective cloud-native solution on AWS, leveraging serverless functions, managed databases, and CI/CD pipelines. This project will demonstrate your ability to apply cloud architecture patterns and deployment strategies.",
+          "deliverable": "Deployed cloud infrastructure (e.g., via IaC like CloudFormation/Terraform), a detailed technical design document, and a presentation of architectural choices and trade-offs.",
+          "seeded_errors": [
+            "An improperly configured IAM role causing a critical serverless function to fail silently in production, requiring the learner to debug permissions and access policies."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Cloud Architecture & Deployment Patterns",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "3 skills are focused on critical cloud architecture concepts, AWS deployment strategies, and observability, directly addressing Aarav's cloud architecture and AWS deployment gaps.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "aws_deployment_strategies",
+                "title": "AWS Deployment Strategies",
+                "auto_completed": false,
+                "why_this_skill": "Mastering AWS deployment patterns is essential for senior backend engineers to build and manage scalable, reliable, and cost-effective cloud-native applications.",
+                "lessons": [
+                  "Infrastructure as Code (IaC) with AWS CloudFormation",
+                  "CI/CD Pipelines for AWS Deployments",
+                  "Blue/Green & Canary Deployments on AWS"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Advanced AWS Deployment Patterns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Automating Multi-Region AWS Deployments",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "serverless_container_orchestration",
+                "title": "Serverless & Container Orchestration",
+                "auto_completed": false,
+                "why_this_skill": "Modern cloud architectures heavily rely on serverless computing and container orchestration. Senior engineers must understand how to leverage these for efficiency and scalability.",
+                "lessons": [
+                  "AWS Lambda & API Gateway for Serverless",
+                  "Kubernetes Fundamentals & Deployment Strategies",
+                  "ECS vs. EKS for Container Orchestration"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Building Scalable Backends with Serverless and Containers",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Optimizing a Costly Serverless Application",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "observability_monitoring",
+                "title": "Observability & Monitoring",
+                "auto_completed": false,
+                "why_this_skill": "For senior engineers, proactive monitoring and deep observability are critical for maintaining system health, debugging complex issues, and ensuring operational excellence in production.",
+                "lessons": [
+                  "Logging, Metrics, and Tracing Best Practices",
+                  "Implementing Distributed Tracing (e.g., OpenTelemetry)",
+                  "Alerting Strategies & Incident Response"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Building Observable Cloud-Native Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Debugging a Production Incident with Tracing Data",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A newly deployed microservice on AWS Lambda is experiencing unexpected cold starts and high invocation costs. Analyze CloudWatch logs and X-Ray traces to identify the root cause and propose cost-effective optimizations."
+              },
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "Technical Design & Leadership",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "ppt+code",
+            "skill_count_rationale": "3 skills are crucial for developing the leadership capabilities of a Senior Backend Engineer, focusing on effective technical communication, system design interview mastery, and strategic decision-making.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "technical_design_documentation",
+                "title": "Technical Design Documentation",
+                "auto_completed": false,
+                "why_this_skill": "Clear and concise technical design documentation is a hallmark of senior engineers, enabling effective communication, knowledge sharing, and informed decision-making across teams.",
+                "lessons": [
+                  "Architecture Decision Records (ADRs)",
+                  "UML & C4 Model for System Design",
+                  "Writing Effective Design Proposals"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Crafting Impactful Technical Design Documents",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Reviewing a Flawed System Design Document",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "system_design_interview_prep",
+                "title": "System Design Interview Prep",
+                "auto_completed": false,
+                "why_this_skill": "Excelling in system design interviews is the primary hurdle for senior backend roles. This skill directly addresses Aarav's biggest fear and prepares him for success.",
+                "lessons": [
+                  "Common System Design Interview Patterns",
+                  "Structuring Your System Design Approach",
+                  "Handling Follow-up Questions & Edge Cases"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Mastering the System Design Interview",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Critiquing a System Design Solution",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "tradeoff_analysis_decision_making",
+                "title": "Trade-off Analysis & Decision Making",
+                "auto_completed": false,
+                "why_this_skill": "Senior engineers are expected to make informed technical decisions, weighing various factors like cost, performance, and complexity. This skill hones that critical leadership ability.",
+                "lessons": [
+                  "Cost-Benefit Analysis for Architectural Choices",
+                  "Prioritizing Non-Functional Requirements",
+                  "Communicating Technical Decisions Effectively"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Making Strategic Technical Decisions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Evaluating Database Migration Strategies",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new feature requires real-time data processing, but the existing batch processing system is insufficient. Propose and justify a new architecture, including a detailed trade-off analysis between different streaming technologies and their impact on cost, latency, and operational complexity."
+              },
+              {
+                "type": "Interview",
+                "desc": "You are tasked with designing a global, highly available ride-sharing service like Uber. Walk through your system design, focusing on data consistency, geo-distribution, and handling peak traffic loads."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "current_salary_lpa": 0,
+    "known_skills": [],
+    "capability_gap": {
+      "gap_score": 0.2,
+      "recommended_milestones": 2,
+      "recommended_modules_per_milestone": 2,
+      "recommended_skill_density": 3,
+      "reasoning": "Gap analysis: identity_distance=0.10; experience_mod=0.10; time_mod=1.00; skill_mod=0.00; gap_score=0.20. Recommend 2 milestone(s), 2 module(s) per milestone, 3 skill(s) per module."
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": true,
+      "duration_weeks": 16,
+      "budget_hours": 89.6,
+      "demand_hours": 44.0,
+      "weekly_hours_needed": 3.4,
+      "breakdown": {
+        "video_hours": 9.0,
+        "mastery_hours": 18.0,
+        "scenario_hours": 3.0,
+        "interview_hours": 2.0,
+        "project_hours": 12.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": true,
+        "duration_weeks": 16,
+        "budget_hours": 89.6,
+        "demand_hours": 44.0,
+        "weekly_hours_needed": 3.4,
+        "breakdown": {
+          "video_hours": 9.0,
+          "mastery_hours": 18.0,
+          "scenario_hours": 3.0,
+          "interview_hours": 2.0,
+          "project_hours": 12.0
+        }
+      },
+      "time_budget": {
+        "pass": true,
+        "reason": "estimated 43.0h within 125% of budget 89.6h",
+        "budget_hours": 89.6,
+        "estimated_total_hours": 43.0
+      },
+      "starts_where_they_are": {
+        "pass": false,
+        "reason": "Level='senior' but every M01 skill has p=0. ZPD rule requires pre-existing mastery priors for non-beginner learners."
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "beginner or no known_skills — skip check"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 8% (1/12). Full JD validation pending.",
+        "filler_ratio": 0.083,
+        "total_skills": 12
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 12 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "AI-first check passed — all milestones have multi-layer AI work"
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "current_salary_lpa not available"
+      },
+      "capability_gap_alignment": {
+        "pass": true,
+        "reason": "capability_gap alignment OK"
+      }
+    },
+    "quality_validators": {
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": true,
+        "reason": "All projects have meaningful implementation + deployment"
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "All skills appear relevant for the target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "9 catalog violation(s)",
+        "violations": [
+          "Skill 'distributed_system_fundamentals' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'distributed_data_management' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'api_gateway_service_mesh' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'aws_deployment_strategies' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'serverless_container_orchestration' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'observability_monitoring' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'technical_design_documentation' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'system_design_interview_prep' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'tradeoff_analysis_decision_making' in M2.2 not found in any AVAILABLE_COURSES"
+        ]
+      }
+    }
+  }
+}

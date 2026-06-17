@@ -14,6 +14,8 @@ CHANGES vs. original (all HF-deployment bugs fixed):
 
 import os
 import re
+import gzip
+import base64
 from typing import Optional
 
 # ── Use the centralised, sanitised config ────────────────────
@@ -446,6 +448,9 @@ def fetch_poc_record(
 ) -> str:
     """
     Fetch a single record from Pinecone namespace.
+
+    Handles both uncompressed and gzip-compressed records
+    (``compressed=True`` in metadata).
     """
 
     try:
@@ -466,8 +471,33 @@ def fetch_poc_record(
                 or {}
             )
 
-            return metadata.get("text", "")
+            text = metadata.get("text", "")
 
+            if metadata.get("compressed"):
+                try:
+                    text = gzip.decompress(
+                        base64.b64decode(text)
+                    ).decode("utf-8")
+                except Exception as ce:
+                    print(
+                        f"[PINECONE FETCH] Decompression failed "
+                        f"for {record_id}: {ce}"
+                    )
+                    return ""
+
+            print(
+                f"[FETCH VERIFY SUCCESS] "
+                f"{record_id} "
+                f"namespace={user_id} "
+                f"length={len(text)}"
+            )
+            return text
+
+        print(
+            f"[PINECONE FETCH VERIFY FAILED] "
+            f"record_id={record_id} "
+            f"namespace={user_id} — not found"
+        )
         return ""
 
     except Exception as e:
@@ -485,17 +515,48 @@ def save_poc_record(
 ) -> bool:
     """
     Save a single text record into Pinecone.
+
+    * Metadata under 35 KB is stored as plain ``text``.
+    * Metadata 35–40 KB is gzip-compressed + base64-encoded and
+      stored with ``compressed=True``.
+    * Metadata over 40 KB (even after compression) is rejected.
     """
+    MAX_RAW    = 35000
+    MAX_AFTER  = 40000
 
     try:
         import json
 
         index = pc.Index(INDEX_NAME)
 
+        compressed  = False
+        store_text  = text
+        raw_bytes   = len(text.encode("utf-8"))
+
+        if raw_bytes > MAX_RAW:
+            compressed_bytes = gzip.compress(text.encode("utf-8"))
+            compressed_text  = base64.b64encode(compressed_bytes).decode()
+            compressed_size  = len(compressed_text.encode("utf-8"))
+            print(
+                f"[POC MEMORY] {record_id} raw={raw_bytes} -> "
+                f"compressed={compressed_size} bytes"
+            )
+            if compressed_size <= MAX_AFTER:
+                store_text  = compressed_text
+                compressed  = True
+            else:
+                print(
+                    f"[POC MEMORY] SKIP {record_id} — "
+                    f"compressed size {compressed_size} still exceeds "
+                    f"{MAX_AFTER} limit"
+                )
+                return False
+
         metadata = {
             "user_id": user_id,
-            "text": text,
-            "doc_type": "poc_memory"
+            "text": store_text,
+            "doc_type": "poc_memory",
+            "compressed": compressed,
         }
 
         metadata_size = len(
@@ -503,17 +564,10 @@ def save_poc_record(
         )
 
         print(
-            f"[POC MEMORY] {record_id} metadata size: "
-            f"{metadata_size} bytes"
+            f"[POC MEMORY] {record_id} "
+            f"namespace={user_id} "
+            f"metadata_size={metadata_size}"
         )
-
-        if metadata_size > 40000:
-            print(
-                f"[POC MEMORY] Skipping save for "
-                f"{record_id}. Metadata exceeds "
-                f"Pinecone limit."
-            )
-            return False
 
         dummy_vector = [1.0] + [0.0] * 3071
 
@@ -529,8 +583,9 @@ def save_poc_record(
         )
 
         print(
-            f"[POC MEMORY] Saved "
-            f"{record_id}"
+            f"[UPSERT SUCCESS] {record_id} "
+            f"namespace={user_id} "
+            f"size={metadata_size}"
         )
 
         return True
