@@ -8,6 +8,7 @@ from src.pinecone_utils import (
     fetch_poc_record,
     save_poc_record,
 )
+from src.capability_gap import compute_gap_score
 import copy
 import math
 import os
@@ -377,7 +378,7 @@ _AVAILABLE_COURSES_TEXT = "\n".join(
 _UNAVAILABLE_COURSES_TEXT = "\n".join(f"  - {c}" for c in UNAVAILABLE_COURSES)
 
 roadmap_prompt = PromptTemplate(
-    input_variables=["context", "icp_type", "level"],
+    input_variables=["context", "icp_type", "level", "hours_per_week", "timeline_days", "budget_hrs", "known_skills", "current_identity", "target_identity", "current_salary_lpa", "self_efficacy", "gap_score", "recommended_milestones", "recommended_modules_per_milestone", "recommended_skill_density", "gap_reasoning"],
     template="""
 You are an expert AI career transformation roadmap architect for Vidya V3.
 
@@ -396,6 +397,125 @@ USER ICP TYPE:
 
 USER LEVEL (detected from onboarding — resume parse + voice + behavioral signals):
 {level}
+
+CURRENT IDENTITY:
+{current_identity}
+
+TARGET IDENTITY:
+{target_identity}
+
+ROADMAP PURPOSE:
+
+Transform the learner from CURRENT IDENTITY
+to TARGET IDENTITY.
+
+Every milestone must represent a meaningful identity transition.
+
+CURRENT SALARY:
+{current_salary_lpa} LPA
+
+SALARY FLOOR RULE:
+
+If icp_type="high":
+
+M01 salary band must never be below current_salary_lpa.
+
+SELF-EFFICACY:
+{self_efficacy}
+
+Rules:
+
+0.0 - 0.4:
+
+* smaller milestones
+* more scaffolding
+* safer progression
+
+0.4 - 0.7:
+
+* balanced progression
+
+0.7 - 1.0:
+
+* larger capability jumps
+* fewer scaffolding steps
+
+TIME BUDGET (HARD CONSTRAINT):
+
+User has {hours_per_week} hrs/week
+and {timeline_days} days available.
+
+budget_hrs =
+{hours_per_week} × ({timeline_days}/7) × 0.8
+============================================
+
+{budget_hrs} hrs
+
+Before generating milestones, estimate roadmap demand:
+
+demand_hrs =
+  (skills × 1.5)
+  + (scenarios × 0.5)
+  + (interviews × 1.0)
+  + (lessons × 0.25)
+  + (projects × 6.0)
+
+Rules:
+* If demand exceeds budget, reduce milestone count first.
+* Keep milestone count within 2-7 bounds.
+* Smaller budgets should generally produce smaller roadmaps.
+* Larger budgets may justify more milestones.
+* Never ignore the user's available time.
+
+STARTING POINT (HARD CONSTRAINT):
+
+Known skills from onboarding:
+{known_skills}
+
+For each skill already known:
+
+* mark auto_completed=true
+* assign realistic mastery prior p=65-90
+* do not teach from scratch
+* do not start Module 1 with content already mastered
+* use the next logical capability step
+
+Starting professionals at skills they already have is a major churn trigger.
+
+If known_skills = "none provided":
+apply ZPD rules using level only.
+
+CAPABILITY GAP ENGINE OUTPUT
+
+recommended_milestones:
+{recommended_milestones}
+
+recommended_modules_per_milestone:
+{recommended_modules_per_milestone}
+
+recommended_skill_density:
+{recommended_skill_density}
+
+HARD RULES
+
+1.
+Generate EXACTLY
+{recommended_milestones}
+milestones.
+
+2.
+Generate EXACTLY
+{recommended_modules_per_milestone}
+modules inside EACH milestone.
+
+3.
+Generate EXACTLY
+{recommended_skill_density}
+skills inside EACH module.
+
+Deviation is forbidden.
+
+Validation will reject outputs that do not match these counts.
 
 === GENERATION RULES (STRICT — ALL MUST BE FOLLOWED) ===
 
@@ -651,6 +771,8 @@ explanations.
   "language": "en",
   "starting_milestone": "M01",
   "current_active_milestone": "M01",
+  "estimated_total_hours": 0,
+  "budget_hours": {budget_hrs},
   "milestone_count_rationale": "string — explanation of why this milestone count was chosen (gap, time, level)",
   "vision_profile": {{
     "current_state": "string — 1 sentence: current identity of the learner",
@@ -704,6 +826,8 @@ explanations.
               "skill_id": "SKILL_M01_M1_S1",
               "n": "python",
               "title": "string — human readable skill title",
+              "auto_completed": false,
+              "why_this_skill": "string explaining why this skill matters in the current hiring market",
               "lessons": [
                 "string — specific lesson title 1",
                 "string — specific lesson title 2",
@@ -1153,7 +1277,6 @@ def validate_roadmap_structure(data: dict) -> None:
 # ============================================================
 
 # Roadmap Bible constants — tune here, affects all profiles
-_FL_DEFAULT_WEEKS  = 16    # target programme duration
 _FL_REALISM_BUFFER = 0.8   # 80 % of available time is productive learning
 _FL_MAX_WEEKS      = 52    # 1 year upper-bound; beyond this = truly infeasible
 
@@ -1180,7 +1303,7 @@ def _count_roadmap_units(roadmap_data: dict) -> tuple:
     return lessons, skills, scenarios, interviews, projects
 
 
-def fits_life_check(roadmap_data: dict, weekly_hours: int) -> dict:
+def fits_life_check(roadmap_data: dict, weekly_hours: int, timeline_days: int = 112) -> dict:
     """
     Roadmap Bible validator: fits_life  (adaptive duration edition).
 
@@ -1195,7 +1318,7 @@ def fits_life_check(roadmap_data: dict, weekly_hours: int) -> dict:
     The new design NEVER raises.  Instead:
 
       1. Calculate demand from the roadmap units.
-      2. If demand ≤ budget at _FL_DEFAULT_WEEKS          → fits at 16 weeks.
+      2. If demand ≤ budget at timeline_days             → fits at timeline_days.
       3. Else compute the minimum duration to fit:
              duration_weeks = ceil(demand / (weekly_hours × 0.8))
       4. If duration_weeks ≤ _FL_MAX_WEEKS (52)           → fits=True, extended
@@ -1210,13 +1333,14 @@ def fits_life_check(roadmap_data: dict, weekly_hours: int) -> dict:
     {
         "fits":                 bool,
         "duration_weeks":       int,    # actual weeks at weekly_hours
-        "budget_hours":         float,  # weekly_hours × duration_weeks × 0.8
+        "budget_hours":         float,  # weekly_hours × timeline_days × 0.8
         "demand_hours":         float,
-        "weekly_hours_needed":  float,  # hrs/wk to finish in _FL_DEFAULT_WEEKS
+        "weekly_hours_needed":  float,  # hrs/wk to finish in timeline_days
         "breakdown": { ... }
     }
     """
     weekly_hours = max(int(weekly_hours or 1), 1)   # guard against 0 / None
+    timeline_days = max(int(timeline_days or 112), 7)
 
     lessons, skills, scenarios, interviews, projects = _count_roadmap_units(
         roadmap_data
@@ -1234,11 +1358,11 @@ def fits_life_check(roadmap_data: dict, weekly_hours: int) -> dict:
         1,
     )
 
-    # ── Adaptive duration ─────────────────────────────────────────
-    default_budget = round(weekly_hours * _FL_DEFAULT_WEEKS * _FL_REALISM_BUFFER, 1)
+    # ── Adaptive duration using timeline_days ─────────────────
+    default_budget = round(weekly_hours * (timeline_days / 7) * _FL_REALISM_BUFFER, 1)
 
     if demand_hours <= default_budget or demand_hours == 0:
-        duration_weeks = _FL_DEFAULT_WEEKS
+        duration_weeks = int(timeline_days / 7)
         fits           = True
     else:
         # weeks needed = demand / (hours_per_week × realism_buffer)
@@ -1248,14 +1372,14 @@ def fits_life_check(roadmap_data: dict, weekly_hours: int) -> dict:
 
     budget_hours = round(weekly_hours * duration_weeks * _FL_REALISM_BUFFER, 1)
 
-    # weekly_hours_needed = hrs/wk required to complete in the default 16-week window
+    # weekly_hours_needed = hrs/wk required to complete in timeline_days
     weekly_hours_needed = round(
-        demand_hours / (_FL_DEFAULT_WEEKS * _FL_REALISM_BUFFER), 1
+        demand_hours / ((timeline_days / 7) * _FL_REALISM_BUFFER), 1
     ) if demand_hours > 0 else 0.0
 
     return {
         "fits":                fits,
-        "fits_at_default_16w": fits if duration_weeks == _FL_DEFAULT_WEEKS else False,
+        "fits_at_default":     fits if duration_weeks == int(timeline_days / 7) else False,
         "duration_weeks":      duration_weeks,
         "budget_hours":        budget_hours,
         "demand_hours":        demand_hours,
@@ -1543,7 +1667,93 @@ def _ai_first_check(roadmap_data: dict) -> dict:
     return {"pass": True, "reason": "AI-first check passed — all milestones have multi-layer AI work"}
 
 
-def run_roadmap_bible_validators(roadmap_data: dict, weekly_hours: int) -> dict:
+def _time_budget_check(roadmap_data: dict) -> dict:
+    budget = roadmap_data.get("budget_hours", 0) or 0
+    estimated = roadmap_data.get("estimated_total_hours", 0) or 0
+    if budget <= 0:
+        return {"pass": True, "reason": "budget not available, skipping check", "budget_hours": budget, "estimated_total_hours": estimated}
+    if estimated > budget * 1.25:
+        return {
+            "pass": False,
+            "reason": f"estimated {estimated}h exceeds 125% of budget {budget}h",
+            "budget_hours": budget,
+            "estimated_total_hours": estimated,
+        }
+    return {
+        "pass": True,
+        "reason": f"estimated {estimated}h within 125% of budget {budget}h",
+        "budget_hours": budget,
+        "estimated_total_hours": estimated,
+    }
+
+
+def _known_skill_skip_check(roadmap_data: dict) -> dict:
+    level = roadmap_data.get("level", "beginner")
+    known = roadmap_data.get("known_skills", [])
+    if level == "beginner" or not known:
+        return {"pass": True, "reason": "beginner or no known_skills — skip check"}
+    violations = []
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                n = skill.get("n", "")
+                title = skill.get("title", "")
+                if any(normalize_skill_match(v, ks) for v in (n, title) for ks in known):
+                    if not skill.get("auto_completed"):
+                        violations.append(
+                            f"{skill.get('skill_id', '?')} ('{skill.get('n')}') "
+                            f"is a known skill but auto_completed is not true"
+                        )
+                    if (skill.get("p") or 0) < 65:
+                        violations.append(
+                            f"{skill.get('skill_id', '?')} ('{skill.get('n')}') "
+                            f"known skill has p={skill.get('p')} (< 65)"
+                        )
+    if violations:
+        return {"pass": False, "reason": "; ".join(violations)}
+    return {"pass": True, "reason": "all known skills correctly auto-completed"}
+
+
+def _capability_gap_alignment_check(roadmap_data: dict) -> dict:
+    gap = roadmap_data.get("capability_gap", {})
+    expected_ms = gap.get("recommended_milestones")
+    expected_mod = gap.get("recommended_modules_per_milestone")
+    expected_skill = gap.get("recommended_skill_density")
+    if expected_ms is None or expected_mod is None or expected_skill is None:
+        return {"pass": True, "reason": "capability_gap data not available — skip check"}
+
+    milestones = roadmap_data.get("milestones", [])
+    actual_ms = len(milestones)
+    violations = []
+
+    if actual_ms != expected_ms:
+        violations.append(
+            f"expected {expected_ms} milestone(s), got {actual_ms}"
+        )
+
+    for ms in milestones:
+        mid = ms.get("milestone_id", "?")
+        modules = ms.get("modules", [])
+        actual_mod = len(modules)
+        if actual_mod != expected_mod:
+            violations.append(
+                f"Milestone {mid}: expected {expected_mod} module(s), got {actual_mod}"
+            )
+        for mod in modules:
+            mod_id = mod.get("id", "?")
+            skills = mod.get("skills", [])
+            actual_skill = len(skills)
+            if actual_skill != expected_skill:
+                violations.append(
+                    f"Module {mod_id}: expected {expected_skill} skill(s), got {actual_skill}"
+                )
+
+    if violations:
+        return {"pass": False, "reason": "; ".join(violations)}
+    return {"pass": True, "reason": "capability_gap alignment OK"}
+
+
+def run_roadmap_bible_validators(roadmap_data: dict, weekly_hours: int, timeline_days: int = 112) -> dict:
     """
     Run all six Roadmap Bible validators in sequence.
 
@@ -1559,12 +1769,16 @@ def run_roadmap_bible_validators(roadmap_data: dict, weekly_hours: int) -> dict:
     are caught and recorded as pass=False with a reason.
     """
     _validators = [
-        ("fits_life",             lambda: fits_life_check(roadmap_data, weekly_hours)),
+        ("fits_life",             lambda: fits_life_check(roadmap_data, weekly_hours, timeline_days)),
+        ("time_budget",           lambda: _time_budget_check(roadmap_data)),
         ("starts_where_they_are", lambda: _starts_where_they_are_check(roadmap_data)),
+        ("known_skill_skip",      lambda: _known_skill_skip_check(roadmap_data)),
         ("laugh_test",            lambda: _laugh_test_check(roadmap_data)),
         ("no_spectators",         lambda: _no_spectators_check(roadmap_data)),
         ("dag_clean",             lambda: _dag_clean_check(roadmap_data)),
         ("ai_first",              lambda: _ai_first_check(roadmap_data)),
+        ("salary_floor",          lambda: _salary_floor_check(roadmap_data)),
+        ("capability_gap_alignment", lambda: _capability_gap_alignment_check(roadmap_data)),
     ]
 
     results = {}
@@ -1624,6 +1838,184 @@ def extract_weekly_hours(context: str) -> int | None:
         if m:
             return int(m.group(1))
     return None
+
+
+def build_customer_profile(context: str) -> dict:
+    profile = {
+        "current_identity": "",
+        "target_identity": "",
+        "years_experience": 0,
+        "weekly_hours_available": 5,
+        "timeline_days": 112,
+        "current_salary_lpa": 0,
+        "known_skills": [],
+        "self_efficacy": 0.5,
+        "_provenance": {},
+    }
+    try:
+        parsed = json.loads(context)
+        if isinstance(parsed, dict):
+            # years_experience
+            ye = parsed.get("years_experience")
+            if ye is not None:
+                profile["years_experience"] = int(ye)
+                profile["_provenance"]["years_experience"] = "onboarding_json"
+
+            # weekly_hours_available
+            wh = parsed.get("weekly_hours_available")
+            if wh is not None:
+                profile["weekly_hours_available"] = int(wh)
+                profile["_provenance"]["weekly_hours_available"] = "onboarding_json"
+
+            # timeline_days
+            tl = parsed.get("timeline_days")
+            if tl is not None:
+                profile["timeline_days"] = max(int(tl), 7)
+                profile["_provenance"]["timeline_days"] = "onboarding_json"
+
+            # current_salary_lpa
+            sal = parsed.get("current_salary_lpa")
+            if sal is not None:
+                profile["current_salary_lpa"] = float(sal)
+                profile["_provenance"]["current_salary_lpa"] = "onboarding_json"
+            else:
+                monthly = parsed.get("current_salary_monthly")
+                if monthly:
+                    profile["current_salary_lpa"] = round(float(monthly) * 12 / 100000, 1)
+                    profile["_provenance"]["current_salary_lpa"] = "monthly_salary_conversion"
+
+            # known_skills
+            ks = parsed.get("known_skills")
+            if isinstance(ks, list):
+                profile["known_skills"] = [str(s) for s in ks]
+                profile["_provenance"]["known_skills"] = "onboarding_json"
+            elif isinstance(ks, str):
+                profile["known_skills"] = [s.strip() for s in ks.split(",") if s.strip()]
+                profile["_provenance"]["known_skills"] = "onboarding_json"
+
+            # self_efficacy
+            se = parsed.get("self_efficacy")
+            if se is not None:
+                profile["self_efficacy"] = float(se)
+                profile["_provenance"]["self_efficacy"] = "onboarding_json"
+
+            # current_identity
+            ci = parsed.get("current_identity")
+            if ci:
+                profile["current_identity"] = str(ci)
+                profile["_provenance"]["current_identity"] = "onboarding_json"
+            else:
+                cr = parsed.get("current_role")
+                if cr:
+                    profile["current_identity"] = str(cr)
+                    profile["_provenance"]["current_identity"] = "current_role_fallback"
+
+            # target_identity
+            ti = parsed.get("target_identity") or parsed.get("primary_goal") or parsed.get("target_role")
+            if ti:
+                profile["target_identity"] = str(ti)
+                profile["_provenance"]["target_identity"] = "onboarding_json"
+
+    except (json.JSONDecodeError, TypeError, ValueError):
+        pass
+
+    # Regex fallbacks for fields not found in JSON
+    if "years_experience" not in profile["_provenance"]:
+        ye_match = re.search(r"[Yy]ears?\s*(?:of\s+)?experience[:\s]+(\d+)", context)
+        if ye_match:
+            profile["years_experience"] = int(ye_match.group(1))
+            profile["_provenance"]["years_experience"] = "regex"
+
+    if "weekly_hours_available" not in profile["_provenance"]:
+        wh_match = extract_weekly_hours(context)
+        if wh_match is not None:
+            profile["weekly_hours_available"] = wh_match
+            profile["_provenance"]["weekly_hours_available"] = "regex"
+
+    if "timeline_days" not in profile["_provenance"]:
+        tl_match = re.search(r"timeline\s*days?\s*:?\s*(\d+)", context)
+        if tl_match:
+            profile["timeline_days"] = max(int(tl_match.group(1)), 7)
+            profile["_provenance"]["timeline_days"] = "regex"
+
+    return profile
+
+
+def parse_salary_value(s: str) -> float:
+    if not s:
+        return 0.0
+    m = re.search(r"(?:₹)?\s*([\d]+(?:\.\d+)?)", s)
+    if m:
+        return float(m.group(1))
+    return 0.0
+
+
+def apply_salary_floor_repair(roadmap_data: dict) -> None:
+    if roadmap_data.get("icp_type") != "high":
+        return
+    current_sal = roadmap_data.get("current_salary_lpa", 0)
+    if not current_sal:
+        return
+    milestones = roadmap_data.get("milestones", [])
+    if not milestones:
+        return
+    m01 = milestones[0]
+    old_sal = m01.get("sal", "")
+    parsed = parse_salary_value(old_sal)
+    if parsed >= current_sal:
+        return
+    m01["sal"] = f"₹{current_sal}+ LPA"
+    m01["salary_floor_applied"] = True
+    print(
+        f"[SALARY FLOOR] Auto-corrected M01 salary: "
+        f"old={old_sal}  new=₹{current_sal}+ LPA"
+    )
+
+
+def normalize_skill_match(skill_value: str, known_skill: str) -> bool:
+    skill_value = (skill_value or "").lower().strip()
+    known_skill = (known_skill or "").lower().strip()
+    return (
+        skill_value == known_skill
+        or known_skill in skill_value
+        or skill_value in known_skill
+    )
+
+
+def apply_known_skill_autocomplete(roadmap_data: dict, known_skills: list[str]) -> None:
+    if not known_skills:
+        return
+    auto_count = 0
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                n = skill.get("n", "")
+                title = skill.get("title", "")
+                if any(normalize_skill_match(v, ks) for v in (n, title) for ks in known_skills):
+                    skill["auto_completed"] = True
+                    if skill.get("p", 0) < 65:
+                        skill["p"] = 65
+                    auto_count += 1
+    roadmap_data["auto_completed_count"] = auto_count
+
+
+def _salary_floor_check(roadmap_data: dict) -> dict:
+    if roadmap_data.get("icp_type") != "high":
+        return {"pass": True, "reason": "not applicable for low ICP"}
+    current_sal = roadmap_data.get("current_salary_lpa", 0)
+    if not current_sal:
+        return {"pass": True, "reason": "current_salary_lpa not available"}
+    milestones = roadmap_data.get("milestones", [])
+    if not milestones:
+        return {"pass": True, "reason": "no milestones to check"}
+    m01_sal = milestones[0].get("sal", "0")
+    parsed = parse_salary_value(m01_sal)
+    if parsed < current_sal:
+        return {
+            "pass": False,
+            "reason": f"M01 salary ({m01_sal}) below current salary ({current_sal} LPA)",
+        }
+    return {"pass": True, "reason": "salary floor satisfied"}
 
 
 # ============================================================
@@ -1939,47 +2331,39 @@ def run_pipeline(
         print(f"[ROADMAP AGENT] ✓ Context: {len(context)} chars")
 
     # ============================================================
-    # EXTRACTION  — years_experience & weekly_hours_available
+    # CUSTOMER PROFILE  (Bible §12, Science §20)
     # ============================================================
-    # Strategy: always try both JSON and regex independently.
-    # Prefer regex value when JSON gives 0/default but text has a real value.
+    customer_profile = build_customer_profile(context)
+    years_experience        = customer_profile["years_experience"]
+    weekly_hours_available  = customer_profile["weekly_hours_available"]
+    timeline_days           = customer_profile["timeline_days"]
+    current_salary_lpa      = customer_profile["current_salary_lpa"]
+    known_skills            = customer_profile["known_skills"]
 
-    json_ye = json_wh = None
-    try:
-        parsed_ctx = json.loads(context)
-        if isinstance(parsed_ctx, dict):
-            json_ye = int(parsed_ctx.get("years_experience", 0))
-            json_wh = int(parsed_ctx.get("weekly_hours_available", 5))
-    except (json.JSONDecodeError, TypeError, ValueError):
-        pass
+    # ── Compute budget_hours ──────────────────────────────────
+    budget_hrs = round(
+        weekly_hours_available * (timeline_days / 7) * 0.8, 1
+    )
 
-    regex_ye = None
-    ye = re.search(r"[Yy]ears?\s*(?:of\s+)?experience[:\s]+(\d+)", context)
-    if ye:
-        regex_ye = int(ye.group(1))
-    regex_wh = extract_weekly_hours(context)
+    # ── Capability gap analysis ───────────────────────────────
+    gap_analysis = compute_gap_score(
+        current_identity=customer_profile.get("current_identity", ""),
+        target_identity=customer_profile.get("target_identity", ""),
+        years_experience=years_experience,
+        weekly_hours_available=weekly_hours_available,
+        timeline_days=timeline_days,
+        known_skills=known_skills,
+    )
+    print("========== CAPABILITY GAP ==========")
+    print(json.dumps(gap_analysis, indent=2))
+    print("=====================================")
 
-    if json_ye is not None:
-        years_experience = json_ye
-    if regex_ye is not None and (json_ye is None or regex_ye > json_ye):
-        years_experience = regex_ye
-    if json_wh is not None:
-        weekly_hours_available = json_wh
-    if regex_wh is not None and (json_wh is None or regex_wh > json_wh):
-        weekly_hours_available = regex_wh
-
-    # ── Diagnostic logging ────────────────────────────────────
     print(f"[ROADMAP AGENT] years_experience={years_experience}, weekly_hours_available={weekly_hours_available}")
-    if json_ye is not None:
-        print(f"[ROADMAP AGENT]   source: years_experience from JSON (value={json_ye})")
-    if regex_ye is not None:
-        print(f"[ROADMAP AGENT]   source: years_experience from regex (value={regex_ye})")
-    if json_ye is None and regex_ye is None:
-        print(f"[ROADMAP AGENT]   source: years_experience from fallback/default")
-    if json_wh is not None:
-        print(f"[ROADMAP AGENT]   source: weekly_hours from JSON (value={json_wh})")
-    if regex_wh is not None:
-        print(f"[ROADMAP AGENT]   source: weekly_hours from regex (value={regex_wh})")
+    print(f"[ROADMAP AGENT] timeline_days={timeline_days} budget_hours={budget_hrs}")
+    if current_salary_lpa:
+        print(f"[ROADMAP AGENT] current_salary_lpa={current_salary_lpa}")
+    if known_skills:
+        print(f"[ROADMAP AGENT] known_skills={known_skills}")
 
     # ============================================================
     # LEVEL DETECTION  (README §2 — Dynamic starting point)
@@ -2007,10 +2391,27 @@ def run_pipeline(
         try:
             print(f"[ROADMAP AGENT] Attempt {attempt}/{max_attempts}...")
 
+            known_skills_str = ", ".join(known_skills) if known_skills else "none provided"
+            current_identity_str = customer_profile.get("current_identity", "") or "not specified"
+            target_identity_str = customer_profile.get("target_identity", "") or "not specified"
+            self_efficacy_str = str(customer_profile.get("self_efficacy", 0.5))
             result       = _build_chain().invoke({
                 "context":  context,
                 "icp_type": icp_type,
                 "level":    level,
+                "hours_per_week": str(weekly_hours_available),
+                "timeline_days":  str(timeline_days),
+                "budget_hrs":     str(budget_hrs),
+                "known_skills":   known_skills_str,
+                "current_identity":   current_identity_str,
+                "target_identity":    target_identity_str,
+                "current_salary_lpa": str(current_salary_lpa),
+                "self_efficacy":      self_efficacy_str,
+                "gap_score":                        str(gap_analysis["gap_score"]),
+                "recommended_milestones":           str(gap_analysis["recommended_milestones"]),
+                "recommended_modules_per_milestone": str(gap_analysis["recommended_modules_per_milestone"]),
+                "recommended_skill_density":         str(gap_analysis["recommended_skill_density"]),
+                "gap_reasoning":                     gap_analysis["reasoning"],
             })
             # DEBUG START
             print(f"\nRAW OUTPUT LENGTH = {len(result)}")
@@ -2023,6 +2424,19 @@ def run_pipeline(
             # DEBUG END
             clean_result = repair_json(result)
             roadmap_data = json.loads(clean_result)
+            # ── Pipeline fallbacks for time-budget fields ──────
+            roadmap_data["timeline_days"] = timeline_days
+            if "budget_hours" not in roadmap_data:
+                roadmap_data["budget_hours"] = budget_hrs
+            # Always overwrite estimated_total_hours from actual counts
+            lc, sc, sci, ivc, pc = _count_roadmap_units(roadmap_data)
+            roadmap_data["estimated_total_hours"] = round(
+                lc * 0.25 + sc * 1.5 + sci * 0.5 + ivc * 1.0 + pc * 6.0, 1
+            )
+            print(
+                f"[TIME BUDGET] estimated_total_hours recomputed = "
+                f"{roadmap_data['estimated_total_hours']}"
+            )
             # ==========================================
             # AUTO FIX — SCIENCE DISTRIBUTION
             # ==========================================
@@ -2116,7 +2530,49 @@ def run_pipeline(
             # output for these; they come from our own detection logic.
             roadmap_data["level"]    = level
             roadmap_data["icp_type"] = icp_type
+            roadmap_data["current_salary_lpa"] = current_salary_lpa
+            roadmap_data["known_skills"] = known_skills
+            roadmap_data["capability_gap"] = gap_analysis
             roadmap_data.setdefault("roadmap_meta", {})["generated_at"] = now
+            # ── Salary floor auto-repair ────────────────────────
+            apply_salary_floor_repair(roadmap_data)
+            # ── Known-skill auto-completion ─────────────────────
+            apply_known_skill_autocomplete(roadmap_data, known_skills)
+            # ── Customer profile debug ──────────────────────────
+            print("========== CUSTOMER PROFILE ==========")
+            print(f"  current_identity       : {customer_profile.get('current_identity', 'N/A')}")
+            print(f"  years_experience       : {years_experience}")
+            print(f"  weekly_hours_available : {weekly_hours_available}")
+            print(f"  timeline_days          : {timeline_days}")
+            print(f"  current_salary_lpa     : {current_salary_lpa}")
+            print(f"  known_skills           : {known_skills}")
+            print(f"  self_efficacy          : {customer_profile.get('self_efficacy', 0.5)}")
+            print(f"  provenance             : {customer_profile.get('_provenance', {})}")
+            print("=====================================")
+            # ── Auto-completion debug ───────────────────────────
+            _ac = roadmap_data.get("auto_completed_count", 0)
+            print("========== AUTO COMPLETION ==========")
+            print(f"  known_skills_count : {len(known_skills)}")
+            print(f"  auto_completed_count: {_ac}")
+            print("=====================================")
+            # ── Salary floor debug ─────────────────────────────
+            if icp_type == "high" and current_salary_lpa:
+                m01_sal = (roadmap_data.get("milestones") or [{}])[0].get("sal", "N/A")
+                print(
+                    f"[SALARY FLOOR] icp_type={icp_type} "
+                    f"current_salary_lpa={current_salary_lpa} "
+                    f"M01.sal={m01_sal}"
+                )
+            # ── Time budget debug ──────────────────────────────
+            _dbg_est = roadmap_data.get("estimated_total_hours", 0)
+            _dbg_util = round(_dbg_est / budget_hrs * 100, 1) if budget_hrs > 0 else 0
+            print("========== TIME BUDGET ==========")
+            print(f"  Weekly Hours    : {weekly_hours_available}")
+            print(f"  Timeline Days   : {timeline_days}")
+            print(f"  Budget Hours    : {budget_hrs}")
+            print(f"  Estimated Demand: {_dbg_est}")
+            print(f"  Utilization     : {_dbg_util}%")
+            print("================================")
             # ── Inject label field into each milestone if missing ──
             print("\n========== MODULE SKILL COUNT DEBUG ==========")
             for ms in roadmap_data.get("milestones", []):
@@ -2124,24 +2580,50 @@ def run_pipeline(
                     if len(mod.get("skills", [])) < 3:
                         print(json.dumps(mod, indent=2))
             print("=============================================\n")
-            # ── AUTO REPAIR: skill count and lesson count per module ───
+            # ── AUTO REPAIR: module count, skill count, lesson count ───
             # Runs after sc_n/iv fix and ID injection but BEFORE
             # validate_roadmap_structure(), so the validator always receives
             # structurally valid arrays.
-            # Safe because:
-            #   - Only touches modules/skills whose counts are out of range.
-            #   - Duplicate skills get globally unique skill_ids (uuid suffix).
-            #   - Truncation keeps the first MAX_SKILLS skills, preserving prerequisite order.
-            #   - Lesson padding uses safe placeholder strings; no semantic content lost.
+            # Uses capability_gap recommendations as the target; falls back
+            # to MIN_SKILLS/MAX_SKILLS bounds if gap data is unavailable.
+            _gap = roadmap_data.get("capability_gap", {})
+            _target_skill = _gap.get("recommended_skill_density", MIN_SKILLS)
+            _target_mod   = _gap.get("recommended_modules_per_milestone", MIN_MODULES)
+            # Clamp to bounds to keep downstream validators happy
+            _target_skill = max(MIN_SKILLS, min(_target_skill, MAX_SKILLS))
+            _target_mod   = max(MIN_MODULES, min(_target_mod, MAX_MODULES))
             for ms in roadmap_data.get("milestones", []):
+                modules = ms.get("modules", [])
+                # ── Module count repair ─────────────────────────────
+                orig_mod_count = len(modules)
+                if 0 < orig_mod_count < _target_mod:
+                    while len(modules) < _target_mod:
+                        donor = copy.deepcopy(modules[-1])
+                        donor_id = donor.get("id", "MOD_REPAIR")
+                        donor["id"] = f"{donor_id}_repair_{uuid.uuid4().hex[:4]}"
+                        for skill in donor.get("skills", []):
+                            sid = skill.get("skill_id", "SKILL_REPAIR")
+                            skill["skill_id"] = f"{sid}_rep_{uuid.uuid4().hex[:4]}"
+                        modules.append(donor)
+                    ms["modules"] = modules
+                    print(
+                        f"[AUTO REPAIR] Milestone {ms.get('milestone_id')} had "
+                        f"{orig_mod_count} module(s) -> repaired to {_target_mod}"
+                    )
+                elif orig_mod_count > _target_mod:
+                    ms["modules"] = modules[:_target_mod]
+                    print(
+                        f"[AUTO REPAIR] Milestone {ms.get('milestone_id')} had "
+                        f"{orig_mod_count} modules -> truncated to {_target_mod}"
+                    )
+                # ── Skill count repair per module ────────────────────
                 for mod in ms.get("modules", []):
                     skills     = mod.get("skills", [])
                     mod_id     = mod.get("id", "?")
                     orig_count = len(skills)
-
-                    # ── Too few skills: duplicate last skill until we reach MIN_SKILLS ──
-                    if 0 < orig_count < MIN_SKILLS:
-                        while len(skills) < MIN_SKILLS:
+                    # Too few: duplicate last skill until target count
+                    if 0 < orig_count < _target_skill:
+                        while len(skills) < _target_skill:
                             donor         = copy.deepcopy(skills[-1])
                             unique_suffix = uuid.uuid4().hex[:6]
                             donor["skill_id"] = (
@@ -2168,25 +2650,22 @@ def run_pipeline(
                         mod["skills"] = skills
                         print(
                             f"[AUTO REPAIR] Module {mod_id} had "
-                            f"{orig_count} skill(s) -> repaired to {MIN_SKILLS}"
+                            f"{orig_count} skill(s) -> repaired to {_target_skill}"
                         )
-
-                    # ── No skills at all: cannot synthesise; validator will reject ──
+                    # No skills at all: cannot synthesise; validator will reject
                     elif orig_count == 0:
                         print(
                             f"[AUTO REPAIR] Module {mod_id} has 0 skills — "
                             f"cannot repair; validator will reject"
                         )
-
-                    # ── Too many skills: truncate to MAX_SKILLS ──
-                    elif orig_count > MAX_SKILLS:
-                        mod["skills"] = skills[:MAX_SKILLS]
+                    # Too many skills: truncate to target
+                    elif orig_count > _target_skill:
+                        mod["skills"] = skills[:_target_skill]
                         print(
                             f"[AUTO REPAIR] Module {mod_id} had "
-                            f"{orig_count} skills -> truncated to {MAX_SKILLS}"
+                            f"{orig_count} skills -> truncated to {_target_skill}"
                         )
-
-                    # ── Per-skill lesson repair: each skill must have exactly 3 ──
+                    # Per-skill lesson repair: each skill must have exactly 3
                     for skill in mod.get("skills", []):
                         skill_id = skill.get("skill_id", "?")
                         lessons  = skill.get("lessons", [])
@@ -2210,6 +2689,32 @@ def run_pipeline(
                                 f"[AUTO REPAIR] Skill {skill_id} had "
                                 f"{orig_lesson_count} lessons -> truncated to 3"
                             )
+            # ── Gap alignment debug ────────────────────────────
+            _gap_dbg = roadmap_data.get("capability_gap", {})
+            _dbg_ms_count = len(roadmap_data.get("milestones", []))
+            _dbg_mod_counts = [
+                len(ms.get("modules", []))
+                for ms in roadmap_data.get("milestones", [])
+            ]
+            _dbg_skill_counts = [
+                len(mod.get("skills", []))
+                for ms in roadmap_data.get("milestones", [])
+                for mod in ms.get("modules", [])
+            ]
+            _gap_pass = (
+                _dbg_ms_count == _gap_dbg.get("recommended_milestones")
+                and all(m == _gap_dbg.get("recommended_modules_per_milestone") for m in _dbg_mod_counts)
+                and all(s == _gap_dbg.get("recommended_skill_density") for s in _dbg_skill_counts)
+            ) if _gap_dbg.get("recommended_milestones") else True
+            print("========== GAP ALIGNMENT ==========")
+            print(f"  Expected Milestones : {_gap_dbg.get('recommended_milestones', 'N/A')}")
+            print(f"  Actual Milestones   : {_dbg_ms_count}")
+            print(f"  Expected Modules    : {_gap_dbg.get('recommended_modules_per_milestone', 'N/A')}")
+            print(f"  Actual Modules      : {_dbg_mod_counts}")
+            print(f"  Expected Skills     : {_gap_dbg.get('recommended_skill_density', 'N/A')}")
+            print(f"  Actual Skills       : {_dbg_skill_counts}")
+            print(f"  {'PASS' if _gap_pass else 'FAIL'}")
+            print("================================")
             # ── Structural validation ──────────────────────────
             validate_roadmap_structure(roadmap_data)
 
@@ -2218,7 +2723,7 @@ def run_pipeline(
             # fits_life is now advisory: it adapts duration instead
             # of hard-failing (Bug 5 fix).
             bible_results = run_roadmap_bible_validators(
-                roadmap_data, weekly_hours_available
+                roadmap_data, weekly_hours_available, timeline_days
             )
             roadmap_data["fits_life"]        = bible_results.get("fits_life", {})
             roadmap_data["bible_validators"] = bible_results
@@ -2380,6 +2885,9 @@ def run_pipeline(
                 "language":                 roadmap_data.get("language", "en"),
                 "starting_milestone":           roadmap_data.get("starting_milestone", ""),
                 "current_active_milestone":     roadmap_data.get("current_active_milestone", ""),
+                "timeline_days":                roadmap_data.get("timeline_days"),
+                "budget_hours":                 roadmap_data.get("budget_hours"),
+                "estimated_total_hours":        roadmap_data.get("estimated_total_hours"),
                 "milestone_count_rationale":    roadmap_data.get("milestone_count_rationale", ""),
                 "vision_profile":               roadmap_data.get("vision_profile", {}),
                 "roadmap_meta":             roadmap_data.get("roadmap_meta", {}),

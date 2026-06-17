@@ -1,0 +1,3996 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_011",
+  "roadmap_id": "ai_roadmap_20260617070439_5b655a4f",
+  "generated_at": "2026-06-17T07:08:02.304798",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260617070439_5b655a4f",
+    "user_id": "user_011",
+    "icp_type": "low",
+    "level": "beginner",
+    "target_role": "Junior Frontend Developer",
+    "language": "hinglish",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 157.5,
+    "budget_hours": 179.2,
+    "milestone_count_rationale": "3 milestones: Given Ritika's budget of 179.2 hours and the comprehensive skill gap from student to Junior Frontend Developer, 3 identity-transforming milestones provide a balanced progression without exceeding the available time, ensuring achievable steps for a beginner with low confidence. This count also fits within the calculated demand of 157.5 hours.",
+    "vision_profile": {
+      "current_state": "A final-year B.Sc Math student with basic computer skills, eager to start a career in tech.",
+      "main_blocker": "Lack of foundational programming and web development skills, coupled with low confidence and fear of competition from peers with more resources.",
+      "top_motivation": "To achieve financial independence quickly to support her family before her younger brother starts college."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-17T07:07:55.789415",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Foundational Web Programmer",
+        "sal": "Unpaid/stipend",
+        "o": "After this milestone, Ritika can write basic, structured code in JavaScript, create simple static web pages with HTML, and style them using CSS, demonstrating foundational web development principles.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "4 modules are chosen to cover the breadth of foundational programming logic, structured content, basic styling, and an introduction to software quality, which are essential for any web developer.",
+        "identity_statement": "You are building the bedrock of your programming journey, transforming from a student into a logical thinker who can instruct computers to create web experiences.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Personal Static Portfolio Page",
+          "vibe_layers": [
+            "planning",
+            "solution",
+            "architecture"
+          ],
+          "description": "Build a simple, multi-page static portfolio website using HTML and CSS to showcase your basic information and skills. The site should be responsive for mobile viewing.",
+          "deliverable": "A deployed static website URL and its source code repository.",
+          "seeded_errors": [
+            "A CSS rule intended for mobile layout breaks on larger screens due to incorrect media query application.",
+            "An HTML element is improperly nested, causing layout issues and accessibility warnings."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "JavaScript Fundamentals & Logic",
+            "ai_first_layer": "planning",
+            "free": true,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "5 skills are necessary to cover core programming concepts, data types, control flow, and functions, which are the building blocks for any interactive web application.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "js_variables_datatypes",
+                "title": "JavaScript Variables & Data Types",
+                "auto_completed": false,
+                "why_this_skill": "Understanding variables and data types is fundamental for storing and manipulating information in any programming language, crucial for dynamic web content.",
+                "lessons": [
+                  "Declaring Variables (var, let, const)",
+                  "Primitive Data Types (String, Number, Boolean)",
+                  "Complex Data Types (Objects, Arrays)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "JavaScript Variables & Data Types Explained",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Debugging Variable Scope Issues",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "js_operators_expressions",
+                "title": "JavaScript Operators & Expressions",
+                "auto_completed": false,
+                "why_this_skill": "Operators are essential for performing calculations, comparisons, and logical operations, forming the core of any program's decision-making and data manipulation.",
+                "lessons": [
+                  "Arithmetic & Assignment Operators",
+                  "Comparison & Logical Operators",
+                  "Ternary Operator & Type Coercion"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Mastering JS Operators",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Optimizing Conditional Logic",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "js_control_flow",
+                "title": "JavaScript Control Flow",
+                "auto_completed": false,
+                "why_this_skill": "Control flow statements dictate the order in which instructions are executed, enabling programs to make decisions and repeat actions, crucial for dynamic user interfaces.",
+                "lessons": [
+                  "Conditional Statements (if/else, switch)",
+                  "Looping Constructs (for, while, do-while)",
+                  "Break & Continue Statements"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "JS Control Flow Essentials",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Refactoring Nested Conditionals",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S4",
+                "n": "js_functions",
+                "title": "JavaScript Functions",
+                "auto_completed": false,
+                "why_this_skill": "Functions are reusable blocks of code that perform specific tasks, promoting modularity and reducing redundancy, vital for building maintainable web applications.",
+                "lessons": [
+                  "Defining & Calling Functions",
+                  "Function Parameters & Return Values",
+                  "Arrow Functions & Scope"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S4",
+                    "title": "Functions: Your Code's Building Blocks",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S4",
+                    "title": "Creating Reusable UI Components",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S5",
+                "n": "js_error_handling_debugging",
+                "title": "JavaScript Error Handling & Debugging",
+                "auto_completed": false,
+                "why_this_skill": "Effective error handling and debugging are critical for identifying and fixing issues in web applications, ensuring a smooth user experience and robust code.",
+                "lessons": [
+                  "Try-Catch Blocks for Error Management",
+                  "Using Browser Developer Tools",
+                  "Common JavaScript Errors & Solutions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S5",
+                    "title": "Debugging JS with DevTools",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S5",
+                    "title": "Identifying Runtime Errors in a Script",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M1.2",
+            "title": "Structured Web Content (HTML)",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "code+ppt",
+            "skill_count_rationale": "5 skills are needed to thoroughly cover the fundamentals of HTML, from basic document structure to semantic elements and form creation, enabling the learner to build meaningful web pages.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "html_document_structure",
+                "title": "HTML Document Structure",
+                "auto_completed": false,
+                "why_this_skill": "Understanding the basic structure of an HTML document is the first step to creating any web page, defining its content and metadata.",
+                "lessons": [
+                  "DOCTYPE & HTML Tag",
+                  "Head Section: Metadata & Links",
+                  "Body Section: Content"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "HTML Basics: Your First Web Page",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Fixing a Broken HTML Layout",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "html_text_images_links",
+                "title": "HTML Text, Images & Links",
+                "auto_completed": false,
+                "why_this_skill": "These are the core content elements of any web page, enabling the display of information, visual media, and navigation between pages.",
+                "lessons": [
+                  "Headings, Paragraphs & Lists",
+                  "Embedding Images & Videos",
+                  "Hyperlinks & Navigation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Adding Content to Your Webpage",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Broken Image Paths & Accessibility",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "html_semantic_elements",
+                "title": "HTML Semantic Elements",
+                "auto_completed": false,
+                "why_this_skill": "Using semantic HTML improves accessibility, SEO, and code readability, making web pages more meaningful for both users and search engines.",
+                "lessons": [
+                  "Header, Nav, Main, Footer",
+                  "Section, Article, Aside",
+                  "Div vs. Semantic Tags"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Making Sense with Semantic HTML",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Improving Page Structure for Screen Readers",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S4",
+                "n": "html_forms_input",
+                "title": "HTML Forms & Input Elements",
+                "auto_completed": false,
+                "why_this_skill": "Forms are crucial for user interaction, allowing data submission, login, and feedback, making them a cornerstone of dynamic web applications.",
+                "lessons": [
+                  "Form Tag & Attributes",
+                  "Input Types (text, email, password, etc.)",
+                  "Labels, Placeholders & Validation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S4",
+                    "title": "Building Interactive Forms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S4",
+                    "title": "Form Submission Issues & User Feedback",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S5",
+                "n": "html_accessibility_basics",
+                "title": "HTML Accessibility Basics",
+                "auto_completed": false,
+                "why_this_skill": "Ensuring web pages are accessible to all users, including those with disabilities, is a critical ethical and legal requirement for modern web development.",
+                "lessons": [
+                  "ARIA Attributes Introduction",
+                  "Keyboard Navigation & Focus Management",
+                  "Color Contrast & Readability"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S5",
+                    "title": "Building Inclusive Web Experiences",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S5",
+                    "title": "Making a Navigation Menu Accessible",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A client reports that their website's navigation menu is unusable for visually impaired users. You need to identify the accessibility issues in the HTML structure and propose ARIA attribute fixes."
+              }
+            ]
+          },
+          {
+            "id": "M1.3",
+            "title": "Styling Web Content (CSS)",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "5 skills are essential to cover the core aspects of CSS, from basic styling and selectors to advanced layout techniques and responsive design, enabling the creation of visually appealing and adaptable web interfaces.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M3_S1",
+                "n": "css_selectors_properties",
+                "title": "CSS Selectors & Properties",
+                "auto_completed": false,
+                "why_this_skill": "Selectors are how you target HTML elements to apply styles, and properties define those styles, forming the foundation of all visual design on the web.",
+                "lessons": [
+                  "Type, Class & ID Selectors",
+                  "Basic Text & Color Properties",
+                  "Box Model (Margin, Border, Padding)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S1",
+                    "title": "CSS Fundamentals: Styling Your First Element",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S1",
+                    "title": "Conflicting Styles & Specificity",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S2",
+                "n": "css_layout_flexbox",
+                "title": "CSS Layout with Flexbox",
+                "auto_completed": false,
+                "why_this_skill": "Flexbox is a powerful and widely used CSS module for arranging items in one dimension, making it indispensable for creating flexible and responsive layouts.",
+                "lessons": [
+                  "Flex Container & Flex Items",
+                  "Main & Cross Axis Alignment",
+                  "Flex Grow, Shrink & Basis"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S2",
+                    "title": "Mastering Flexbox for Layouts",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S2",
+                    "title": "Centering Elements with Flexbox",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S3",
+                "n": "css_layout_grid",
+                "title": "CSS Layout with Grid",
+                "auto_completed": false,
+                "why_this_skill": "CSS Grid is the most powerful layout system for two-dimensional layouts, enabling complex web designs with ease and precision, especially for entire page structures.",
+                "lessons": [
+                  "Grid Container & Grid Items",
+                  "Grid Template Columns & Rows",
+                  "Grid Areas & Responsiveness"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S3",
+                    "title": "Building Complex Layouts with CSS Grid",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S3",
+                    "title": "Creating a Responsive Dashboard Layout",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S4",
+                "n": "css_responsive_design",
+                "title": "CSS Responsive Design",
+                "auto_completed": false,
+                "why_this_skill": "Responsive design ensures websites look and function well across all devices and screen sizes, which is critical for reaching a broad audience and providing a consistent user experience.",
+                "lessons": [
+                  "Viewport Meta Tag",
+                  "Media Queries for Breakpoints",
+                  "Mobile-First Design Principles"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S4",
+                    "title": "Building Websites for All Devices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S4",
+                    "title": "Debugging Mobile Layout Issues",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S5",
+                "n": "css_animations_transitions",
+                "title": "CSS Animations & Transitions",
+                "auto_completed": false,
+                "why_this_skill": "Adding animations and transitions enhances user experience by providing visual feedback and making interfaces more engaging and intuitive.",
+                "lessons": [
+                  "CSS Transitions for Smooth Changes",
+                  "Keyframe Animations Basics",
+                  "Transform Properties (translate, scale, rotate)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S5",
+                    "title": "Adding Life to Your Webpages",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S5",
+                    "title": "Optimizing Animation Performance",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M1.4",
+            "title": "Basic Software Quality & Deployment",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "5 skills are included to introduce essential practices for ensuring code quality, version control, and basic deployment, which are critical for any professional developer.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M4_S1",
+                "n": "git_basics",
+                "title": "Git & Version Control Basics",
+                "auto_completed": false,
+                "why_this_skill": "Git is indispensable for tracking code changes, collaborating with teams, and managing different versions of a project, a core tool for all developers.",
+                "lessons": [
+                  "Initializing a Git Repository",
+                  "Committing Changes & History",
+                  "Basic Branching & Merging"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S1",
+                    "title": "Introduction to Git for Developers",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S1",
+                    "title": "Resolving a Merge Conflict",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S2",
+                "n": "github_fundamentals",
+                "title": "GitHub Fundamentals",
+                "auto_completed": false,
+                "why_this_skill": "GitHub is the industry standard platform for hosting Git repositories, enabling collaboration, code review, and project management in open source and professional settings.",
+                "lessons": [
+                  "Creating & Cloning Repositories",
+                  "Pushing & Pulling Changes",
+                  "Pull Requests & Code Review Workflow"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S2",
+                    "title": "Collaborating with GitHub",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S2",
+                    "title": "Submitting a Pull Request for Review",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S3",
+                "n": "static_site_deployment",
+                "title": "Static Site Deployment",
+                "auto_completed": false,
+                "why_this_skill": "Deploying a static website is the simplest way to make your web projects live and shareable, a crucial step for showcasing your work to potential employers.",
+                "lessons": [
+                  "Hosting Options (GitHub Pages, Netlify)",
+                  "Connecting Repository to Hosting",
+                  "Custom Domains & SSL"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S3",
+                    "title": "Deploying Your First Website",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S3",
+                    "title": "Debugging a Failed Deployment",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S4",
+                "n": "code_linting_formatting",
+                "title": "Code Linting & Formatting",
+                "auto_completed": false,
+                "why_this_skill": "Consistent code style improves readability, reduces errors, and facilitates collaboration, making your code professional and easier to maintain.",
+                "lessons": [
+                  "Introduction to ESLint & Prettier",
+                  "Configuring Linting Rules",
+                  "Automating Formatting with Hooks"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S4",
+                    "title": "Writing Clean & Consistent Code",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S4",
+                    "title": "Integrating Linting into a Project",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S5",
+                "n": "basic_web_security",
+                "title": "Basic Web Security Practices",
+                "auto_completed": false,
+                "why_this_skill": "Understanding basic security principles is crucial for preventing common vulnerabilities and building robust, trustworthy web applications.",
+                "lessons": [
+                  "HTTPS & SSL Certificates",
+                  "Cross-Site Scripting (XSS) Prevention",
+                  "Content Security Policy (CSP)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S5",
+                    "title": "Securing Your Web Applications",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S5",
+                    "title": "Preventing XSS in User Input",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Explain the importance of version control with Git and how you would deploy a simple static website to a hosting service like GitHub Pages."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Interactive Web Developer",
+        "sal": "₹3-5 LPA",
+        "o": "After this milestone, Ritika can build dynamic web pages that interact with users and external APIs, manage asynchronous operations, and display data effectively, forming the core of a modern web application.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "4 modules are selected to cover the critical aspects of client-side interactivity, data fetching, and advanced JavaScript patterns necessary for building dynamic web applications.",
+        "identity_statement": "You are now bringing your web pages to life, transforming static content into interactive experiences that communicate with the world.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Public API Data Fetcher",
+          "vibe_layers": [
+            "architecture",
+            "solution",
+            "planning"
+          ],
+          "description": "Develop a single-page application that fetches data from a public API (e.g., weather API, joke API) and displays it dynamically. Include features like user input for search/filtering and error handling.",
+          "deliverable": "A deployed web application URL, its source code repository, and a brief documentation of the API integration.",
+          "seeded_errors": [
+            "The application fails to display data when the API returns an error, showing a blank screen instead of a user-friendly message.",
+            "Asynchronous API calls are not handled correctly, leading to race conditions or incorrect data display."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "DOM Manipulation & Event Handling",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "5 skills are crucial for enabling dynamic user interfaces by allowing JavaScript to interact with and modify the HTML structure and respond to user actions.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "dom_selection_modification",
+                "title": "DOM Selection & Modification",
+                "auto_completed": false,
+                "why_this_skill": "Directly manipulating the Document Object Model (DOM) is how JavaScript changes the content, structure, and style of a web page in response to user actions or data.",
+                "lessons": [
+                  "Selecting Elements (getElementById, querySelector)",
+                  "Changing Content (innerHTML, textContent)",
+                  "Modifying Attributes & Styles"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S5",
+                    "SKILL_M01_M2_S5",
+                    "SKILL_M01_M3_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Interacting with the Web Page (DOM)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Dynamically Updating a Shopping Cart",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "js_event_listeners",
+                "title": "JavaScript Event Listeners",
+                "auto_completed": false,
+                "why_this_skill": "Event listeners are how web pages respond to user interactions like clicks, key presses, and form submissions, making applications interactive and engaging.",
+                "lessons": [
+                  "Adding & Removing Event Listeners",
+                  "Common Event Types (click, submit, keyup)",
+                  "Event Object & Event Delegation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Responding to User Actions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Implementing a Toggle Button",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "form_validation_js",
+                "title": "Client-Side Form Validation with JS",
+                "auto_completed": false,
+                "why_this_skill": "Client-side validation provides immediate feedback to users, improving usability and reducing unnecessary server requests, a key part of a good user experience.",
+                "lessons": [
+                  "Basic Input Validation (required, patterns)",
+                  "Custom Validation Logic",
+                  "Displaying Validation Messages"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Validating User Input in Forms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Building a Real-time Password Validator",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S4",
+                "n": "js_local_storage",
+                "title": "JavaScript Local Storage",
+                "auto_completed": false,
+                "why_this_skill": "Local storage allows web applications to store data directly in the user's browser, enabling features like saving user preferences or maintaining session state without server interaction.",
+                "lessons": [
+                  "Storing & Retrieving Data",
+                  "JSON.stringify & JSON.parse",
+                  "Use Cases & Limitations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S4",
+                    "title": "Persisting Data in the Browser",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S4",
+                    "title": "Saving User Preferences Locally",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S5",
+                "n": "js_modules",
+                "title": "JavaScript Modules",
+                "auto_completed": false,
+                "why_this_skill": "Modules allow for organizing code into reusable, encapsulated units, improving maintainability, scalability, and collaboration in larger projects.",
+                "lessons": [
+                  "ES Modules (import/export)",
+                  "Module Bundlers Introduction (Webpack/Parcel)",
+                  "Code Splitting for Performance"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S5",
+                    "title": "Organizing Your JavaScript Code",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S5",
+                    "title": "Refactoring a Monolithic Script into Modules",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M2.2",
+            "title": "Asynchronous JavaScript & APIs",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "ppt+code",
+            "skill_count_rationale": "5 skills are critical for understanding how web applications fetch data from external sources and handle operations that don't complete immediately, which is fundamental for dynamic content.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "js_async_callbacks",
+                "title": "Asynchronous JavaScript & Callbacks",
+                "auto_completed": false,
+                "why_this_skill": "Asynchronous programming is essential for web applications to fetch data, handle user input, and perform long-running tasks without freezing the user interface.",
+                "lessons": [
+                  "Understanding Asynchronous Operations",
+                  "Callback Functions & Callback Hell",
+                  "setTimeout & setInterval"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Introduction to Async JavaScript",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Managing Multiple Asynchronous Tasks",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "js_promises",
+                "title": "JavaScript Promises",
+                "auto_completed": false,
+                "why_this_skill": "Promises provide a cleaner and more manageable way to handle asynchronous operations compared to callbacks, improving code readability and error handling.",
+                "lessons": [
+                  "Creating & Consuming Promises",
+                  "Promise Chaining (.then, .catch, .finally)",
+                  "Promise.all & Promise.race"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Simplifying Async with Promises",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Refactoring Callbacks to Promises",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "js_async_await",
+                "title": "JavaScript Async/Await",
+                "auto_completed": false,
+                "why_this_skill": "Async/await provides an even more readable and synchronous-looking syntax for handling Promises, making complex asynchronous code much easier to write and understand.",
+                "lessons": [
+                  "Async Functions & Await Keyword",
+                  "Error Handling with Try-Catch in Async/Await",
+                  "Parallel vs. Sequential Async Operations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Modern Async with Async/Await",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Fetching Data from Multiple Endpoints",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S4",
+                "n": "fetch_api",
+                "title": "Working with the Fetch API",
+                "auto_completed": false,
+                "why_this_skill": "The Fetch API is the modern standard for making network requests in the browser, enabling web applications to communicate with servers and retrieve dynamic data.",
+                "lessons": [
+                  "Making GET Requests",
+                  "Handling JSON Responses",
+                  "POST, PUT, DELETE Requests"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S4",
+                    "title": "Fetching Data from APIs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S4",
+                    "title": "Displaying Data from a Public API",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S5",
+                "n": "error_handling_apis",
+                "title": "Error Handling in API Calls",
+                "auto_completed": false,
+                "why_this_skill": "Robust error handling for API calls ensures that your application gracefully manages network issues, server errors, and invalid responses, providing a better user experience.",
+                "lessons": [
+                  "Handling Network Errors",
+                  "Checking HTTP Status Codes",
+                  "Displaying User-Friendly Error Messages"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S5",
+                    "title": "Graceful API Error Management",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S5",
+                    "title": "Implementing a Retry Mechanism for Failed API Calls",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A user reports that your web application sometimes shows outdated data or fails to load content. You suspect an issue with asynchronous API calls. Diagnose and fix the problem to ensure data consistency and reliability."
+              }
+            ]
+          },
+          {
+            "id": "M2.3",
+            "title": "Modern JavaScript Features",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "notebook+code",
+            "skill_count_rationale": "5 skills are included to cover modern JavaScript syntax and features that improve code readability, conciseness, and efficiency, aligning with current industry practices.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M3_S1",
+                "n": "es6_features",
+                "title": "ES6+ Features (Destructuring, Spread/Rest)",
+                "auto_completed": false,
+                "why_this_skill": "Modern JavaScript features like destructuring and spread/rest operators simplify common programming tasks, making code cleaner and more efficient.",
+                "lessons": [
+                  "Object & Array Destructuring",
+                  "Spread Operator for Arrays & Objects",
+                  "Rest Parameters in Functions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S1",
+                    "title": "Leveraging Modern JS Syntax",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S1",
+                    "title": "Simplifying Function Arguments with Destructuring",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S2",
+                "n": "js_array_methods",
+                "title": "Advanced Array Methods",
+                "auto_completed": false,
+                "why_this_skill": "Proficiency with array methods like map, filter, and reduce is essential for efficient data manipulation and transformation, a common task in frontend development.",
+                "lessons": [
+                  "Map, Filter, Reduce",
+                  "ForEach, Find, Some, Every",
+                  "Chaining Array Methods"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S2",
+                    "title": "Efficient Data Manipulation with Arrays",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S2",
+                    "title": "Filtering and Displaying a List of Products",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S3",
+                "n": "js_object_oriented_programming",
+                "title": "JavaScript Object-Oriented Programming",
+                "auto_completed": false,
+                "why_this_skill": "Understanding OOP principles in JavaScript allows for building more structured, reusable, and maintainable codebases, especially in larger applications.",
+                "lessons": [
+                  "Objects & Prototypes",
+                  "Classes & Constructors",
+                  "Inheritance & Polymorphism"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S3",
+                    "title": "OOP Concepts in JavaScript",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S3",
+                    "title": "Designing a Class for UI Components",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S4",
+                "n": "functional_programming_js",
+                "title": "Functional Programming Concepts in JS",
+                "auto_completed": false,
+                "why_this_skill": "Functional programming paradigms promote writing predictable, testable, and reusable code, which is highly beneficial for complex frontend applications.",
+                "lessons": [
+                  "Pure Functions & Side Effects",
+                  "Immutability & Higher-Order Functions",
+                  "Composing Functions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S4",
+                    "title": "Functional JavaScript for Cleaner Code",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S4",
+                    "title": "Refactoring a Stateful Component to Pure Functions",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S5",
+                "n": "js_design_patterns",
+                "title": "Common JavaScript Design Patterns",
+                "auto_completed": false,
+                "why_this_skill": "Learning design patterns provides proven solutions to common software design problems, leading to more robust, scalable, and maintainable applications.",
+                "lessons": [
+                  "Module Pattern for Encapsulation",
+                  "Factory Pattern for Object Creation",
+                  "Observer Pattern for Event Management"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S5",
+                    "title": "Applying Design Patterns in JS",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S5",
+                    "title": "Implementing a Pub/Sub System for UI Events",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M2.4",
+            "title": "Data Presentation & Visualization",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "animation+code",
+            "skill_count_rationale": "5 skills are included to cover the essential techniques for effectively presenting and visualizing data on the frontend, enhancing user understanding and engagement.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M4_S1",
+                "n": "data_display_tables",
+                "title": "Displaying Tabular Data",
+                "auto_completed": false,
+                "why_this_skill": "Presenting data clearly in tables is a fundamental requirement for many business applications, ensuring information is organized and easy to read.",
+                "lessons": [
+                  "HTML Tables & Semantics",
+                  "Dynamic Table Generation with JS",
+                  "Sorting & Filtering Table Data"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S1",
+                    "title": "Presenting Data in Tables",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S1",
+                    "title": "Building a Sortable Product Table",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S2",
+                "n": "data_display_lists_cards",
+                "title": "Displaying Data in Lists & Cards",
+                "auto_completed": false,
+                "why_this_skill": "Lists and cards are versatile UI patterns for displaying collections of items, commonly used in e-commerce, social feeds, and content aggregators.",
+                "lessons": [
+                  "Dynamic List Rendering",
+                  "Designing Reusable Card Components",
+                  "Infinite Scrolling & Pagination"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S2",
+                    "title": "Building Dynamic Content Displays",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S2",
+                    "title": "Implementing a Filterable Image Gallery",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S3",
+                "n": "basic_charting_libraries",
+                "title": "Basic Charting with Libraries",
+                "auto_completed": false,
+                "why_this_skill": "Visualizing data with charts makes complex information digestible and actionable, a key skill for dashboards and analytical applications.",
+                "lessons": [
+                  "Introduction to Chart.js",
+                  "Creating Bar & Line Charts",
+                  "Customizing Chart Appearance"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S3",
+                    "title": "Visualizing Data with Chart.js",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S3",
+                    "title": "Displaying Real-time Stock Data on a Chart",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S4",
+                "n": "data_filtering_sorting_ui",
+                "title": "Frontend Data Filtering & Sorting UI",
+                "auto_completed": false,
+                "why_this_skill": "Providing intuitive filtering and sorting options directly on the frontend enhances user control and improves the discoverability of information within large datasets.",
+                "lessons": [
+                  "Implementing Search Functionality",
+                  "Dropdowns & Checkboxes for Filters",
+                  "Client-Side Sorting Algorithms"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S4",
+                    "title": "Building Interactive Data Controls",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S4",
+                    "title": "Creating a Multi-filter Product Catalog",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S5",
+                "n": "user_feedback_ui",
+                "title": "User Feedback & Loading States UI",
+                "auto_completed": false,
+                "why_this_skill": "Providing clear feedback and managing loading states improves the perceived performance and usability of web applications, reducing user frustration.",
+                "lessons": [
+                  "Loading Spinners & Skeletons",
+                  "Toast Notifications & Modals",
+                  "Empty State Handling"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S5",
+                    "title": "Enhancing User Experience with Feedback",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S5",
+                    "title": "Implementing a Global Loading Indicator",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe how you would build a dynamic product listing page that fetches data from an API, allows users to filter and sort products, and handles loading states and errors gracefully."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M03",
+        "label": "M03",
+        "t": "Junior Frontend Developer Apprentice",
+        "sal": "₹5-7 LPA",
+        "o": "After this milestone, Ritika can contribute to a frontend codebase, build small features, understand the development lifecycle, and is ready for an entry-level Junior Frontend Developer role.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "4 modules are designed to consolidate learned skills, introduce professional development practices, and prepare the learner for the job market, including advanced tools and interview readiness.",
+        "identity_statement": "You are now a capable Junior Frontend Developer, ready to apply your skills in a professional setting and build impactful web experiences.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Interactive Task Manager Web App",
+          "vibe_layers": [
+            "planning",
+            "architecture",
+            "solution"
+          ],
+          "description": "Build a full-featured interactive task manager web application. It should allow users to add, edit, delete, and mark tasks as complete. Implement local storage for persistence and a responsive design.",
+          "deliverable": "A deployed web application URL, its well-documented source code repository, and a short presentation demonstrating its features and your design choices.",
+          "seeded_errors": [
+            "Tasks added to the list disappear after a page refresh due to incorrect local storage implementation.",
+            "The task editing functionality introduces a bug where all tasks are updated instead of just the selected one."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M3.1",
+            "title": "Frontend Build Tools & Ecosystem",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "code+ppt",
+            "skill_count_rationale": "5 skills are included to familiarize the learner with essential tools and concepts in the modern frontend ecosystem, crucial for efficient development and deployment.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M1_S1",
+                "n": "npm_yarn_basics",
+                "title": "NPM & Yarn Package Managers",
+                "auto_completed": false,
+                "why_this_skill": "Package managers are fundamental for managing project dependencies, installing libraries, and running scripts, a daily task for frontend developers.",
+                "lessons": [
+                  "Initializing a Project with npm/yarn",
+                  "Installing & Managing Dependencies",
+                  "Running Scripts & Publishing Packages"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S1",
+                    "title": "Managing Project Dependencies",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S1",
+                    "title": "Resolving Dependency Conflicts",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S2",
+                "n": "module_bundlers",
+                "title": "Module Bundlers (Webpack/Vite)",
+                "auto_completed": false,
+                "why_this_skill": "Bundlers optimize frontend assets for production, improving performance and enabling the use of modern JavaScript features across different browsers.",
+                "lessons": [
+                  "Introduction to Webpack/Vite",
+                  "Configuring Basic Bundling",
+                  "Asset Management & Optimizations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S2",
+                    "title": "Optimizing Frontend Assets",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S2",
+                    "title": "Setting Up a Basic Build Pipeline",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S3",
+                "n": "transpilers_babel",
+                "title": "Transpilers (Babel)",
+                "auto_completed": false,
+                "why_this_skill": "Transpilers allow developers to write modern JavaScript code while ensuring compatibility with older browsers, broadening the reach of web applications.",
+                "lessons": [
+                  "Why Transpilation is Needed",
+                  "Babel Configuration & Presets",
+                  "Integrating Babel with Bundlers"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S3",
+                    "title": "Ensuring Browser Compatibility",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S3",
+                    "title": "Debugging a Cross-Browser JavaScript Issue",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S4",
+                "n": "css_preprocessors",
+                "title": "CSS Preprocessors (Sass/Less)",
+                "auto_completed": false,
+                "why_this_skill": "CSS preprocessors extend CSS with programming features, making stylesheets more maintainable, reusable, and scalable for larger projects.",
+                "lessons": [
+                  "Introduction to Sass/SCSS",
+                  "Variables, Mixins & Nesting",
+                  "Compiling Preprocessor Code"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S4",
+                    "title": "Advanced CSS with Preprocessors",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S4",
+                    "title": "Refactoring a Large CSS File with Sass",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S5",
+                "n": "frontend_testing_basics",
+                "title": "Frontend Testing Basics",
+                "auto_completed": false,
+                "why_this_skill": "Writing tests ensures the reliability and correctness of your frontend code, preventing regressions and building confidence in your deployments.",
+                "lessons": [
+                  "Introduction to Unit Testing (Jest)",
+                  "Writing Basic Component Tests",
+                  "Test-Driven Development (TDD) Concepts"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S5",
+                    "title": "Ensuring Code Quality with Tests",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S5",
+                    "title": "Writing Unit Tests for a JavaScript Utility Function",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M3.2",
+            "title": "Web Performance & Optimization",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "skill_count_rationale": "5 skills are included to cover essential techniques for improving the speed and responsiveness of web applications, which directly impacts user experience and SEO.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M2_S1",
+                "n": "performance_metrics",
+                "title": "Web Performance Metrics",
+                "auto_completed": false,
+                "why_this_skill": "Understanding key performance metrics allows developers to measure, monitor, and improve the speed and responsiveness of web applications, crucial for user satisfaction.",
+                "lessons": [
+                  "Core Web Vitals (LCP, FID, CLS)",
+                  "First Contentful Paint (FCP)",
+                  "Time to Interactive (TTI)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S1",
+                    "title": "Measuring Your Website's Speed",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S1",
+                    "title": "Analyzing a Slow-Loading Page with Lighthouse",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S2",
+                "n": "image_optimization",
+                "title": "Image Optimization",
+                "auto_completed": false,
+                "why_this_skill": "Optimizing images is one of the most impactful ways to improve web performance, reducing page load times and bandwidth usage.",
+                "lessons": [
+                  "Image Formats (JPEG, PNG, WebP)",
+                  "Responsive Images (srcset, sizes)",
+                  "Lazy Loading Images"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S2",
+                    "title": "Making Images Load Faster",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S2",
+                    "title": "Reducing Page Load Time by Optimizing Images",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S3",
+                "n": "code_splitting_lazy_loading",
+                "title": "Code Splitting & Lazy Loading",
+                "auto_completed": false,
+                "why_this_skill": "These techniques reduce the initial load time of web applications by only loading necessary code when it's needed, improving perceived performance.",
+                "lessons": [
+                  "Dynamic Imports in JavaScript",
+                  "Route-Based Code Splitting",
+                  "Lazy Loading Components/Modules"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S3",
+                    "title": "Loading Code Only When Needed",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S3",
+                    "title": "Implementing Lazy Loading for an Image Gallery",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S4",
+                "n": "caching_strategies",
+                "title": "Browser Caching Strategies",
+                "auto_completed": false,
+                "why_this_skill": "Effective caching reduces server load and improves page load times for returning users by storing assets locally in the browser.",
+                "lessons": [
+                  "HTTP Caching Headers",
+                  "Service Workers & Offline Capabilities",
+                  "Cache-Control Directives"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S4",
+                    "title": "Speeding Up Websites with Caching",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S4",
+                    "title": "Making a Web App Work Offline with Service Workers",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S5",
+                "n": "critical_rendering_path",
+                "title": "Critical Rendering Path Optimization",
+                "auto_completed": false,
+                "why_this_skill": "Optimizing the critical rendering path ensures that the most important content of a web page is displayed as quickly as possible, improving user perception of speed.",
+                "lessons": [
+                  "Understanding Render-Blocking Resources",
+                  "Inlining Critical CSS",
+                  "Asynchronous JavaScript Loading"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S5",
+                    "title": "Prioritizing Content for Faster Renders",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S5",
+                    "title": "Improving Initial Page Load Speed for a News Website",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A client complains that their e-commerce website loads slowly, especially on mobile devices, leading to high bounce rates. You need to identify performance bottlenecks using browser tools and propose optimization strategies."
+              }
+            ]
+          },
+          {
+            "id": "M3.3",
+            "title": "Professional Development & Collaboration",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "5 skills are included to equip the learner with essential soft skills and tools for effective collaboration, problem-solving, and continuous learning in a professional development environment.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M3_S1",
+                "n": "effective_communication",
+                "title": "Effective Communication for Developers",
+                "auto_completed": false,
+                "why_this_skill": "Clear and concise communication is vital for collaborating with teammates, understanding requirements, and explaining technical concepts to non-technical stakeholders.",
+                "lessons": [
+                  "Writing Clear Documentation",
+                  "Participating in Code Reviews",
+                  "Presenting Technical Solutions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S1",
+                    "title": "Communicating Effectively in Tech",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S1",
+                    "title": "Explaining a Complex Bug to a Project Manager",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S2",
+                "n": "problem_solving_strategies",
+                "title": "Advanced Problem-Solving Strategies",
+                "auto_completed": false,
+                "why_this_skill": "Developing strong problem-solving skills is crucial for tackling complex technical challenges and efficiently debugging issues in real-world projects.",
+                "lessons": [
+                  "Decomposition & Abstraction",
+                  "Algorithmic Thinking for UI Problems",
+                  "Systematic Debugging Approaches"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S2",
+                    "title": "Mastering Technical Problem Solving",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S2",
+                    "title": "Diagnosing a Performance Regression in a Large Application",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S3",
+                "n": "agile_development",
+                "title": "Agile Development & Scrum Basics",
+                "auto_completed": false,
+                "why_this_skill": "Understanding Agile methodologies like Scrum is essential for working effectively in most modern software development teams, facilitating iterative and collaborative work.",
+                "lessons": [
+                  "Agile Principles & Values",
+                  "Scrum Roles & Ceremonies",
+                  "User Stories & Backlog Management"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S3",
+                    "title": "Working in Agile Teams",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S3",
+                    "title": "Participating in a Sprint Planning Meeting",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S4",
+                "n": "continuous_learning",
+                "title": "Continuous Learning & Tech Trends",
+                "auto_completed": false,
+                "why_this_skill": "The tech industry evolves rapidly; a commitment to continuous learning ensures developers stay relevant and adapt to new technologies and best practices.",
+                "lessons": [
+                  "Staying Updated with Frontend Trends",
+                  "Effective Self-Learning Techniques",
+                  "Contributing to Open Source"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S4",
+                    "title": "Navigating the Evolving Tech Landscape",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S4",
+                    "title": "Evaluating a New Frontend Framework for a Project",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S5",
+                "n": "personal_branding_networking",
+                "title": "Personal Branding & Networking",
+                "auto_completed": false,
+                "why_this_skill": "Building a professional brand and network is crucial for career growth, discovering opportunities, and connecting with mentors and peers in the industry.",
+                "lessons": [
+                  "Crafting a Developer Resume",
+                  "Building an Online Portfolio",
+                  "Networking Strategies (LinkedIn, Meetups)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S5",
+                    "title": "Launching Your Developer Career",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S5",
+                    "title": "Preparing for a Technical Interview",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M3.4",
+            "title": "Interview Readiness & Portfolio Polish",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "notebook+ppt",
+            "skill_count_rationale": "5 skills are included to provide targeted preparation for job applications, technical interviews, and showcasing a polished portfolio, directly addressing the goal of securing an entry-level role.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M4_S1",
+                "n": "resume_cover_letter",
+                "title": "Resume & Cover Letter Crafting",
+                "auto_completed": false,
+                "why_this_skill": "A well-crafted resume and cover letter are your first impression, crucial for standing out to recruiters and securing interview opportunities.",
+                "lessons": [
+                  "Tailoring Resume for Frontend Roles",
+                  "Writing Compelling Cover Letters",
+                  "Highlighting Projects & Skills"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S1",
+                    "title": "Creating Impactful Job Application Documents",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S1",
+                    "title": "Customizing a Resume for a Junior Frontend Role",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M4_S2",
+                "n": "behavioral_interview_prep",
+                "title": "Behavioral Interview Preparation",
+                "auto_completed": false,
+                "why_this_skill": "Behavioral interviews assess soft skills and cultural fit, which are as important as technical skills for securing a job and thriving in a team.",
+                "lessons": [
+                  "STAR Method for Answering Questions",
+                  "Common Behavioral Questions",
+                  "Showcasing Teamwork & Problem-Solving"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M4_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S2",
+                    "title": "Acing Your Behavioral Interview",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S2",
+                    "title": "Practicing 'Tell me about a time you failed' question",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M4_S3",
+                "n": "technical_interview_prep",
+                "title": "Technical Interview Preparation",
+                "auto_completed": false,
+                "why_this_skill": "Technical interviews are the primary way companies assess coding proficiency and problem-solving abilities, requiring focused practice and understanding of common questions.",
+                "lessons": [
+                  "Frontend-Specific Interview Questions",
+                  "Whiteboard Coding Practice",
+                  "Explaining Project Architectures"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M4_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S3",
+                    "title": "Cracking the Coding Interview",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S3",
+                    "title": "Solving a JavaScript Array Manipulation Problem",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M4_S4",
+                "n": "portfolio_presentation",
+                "title": "Portfolio Presentation & Storytelling",
+                "auto_completed": false,
+                "why_this_skill": "Effectively presenting your projects and the story behind them helps interviewers understand your skills, thought process, and contributions.",
+                "lessons": [
+                  "Structuring Project Demos",
+                  "Highlighting Challenges & Solutions",
+                  "Discussing Technical Decisions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M4_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S4",
+                    "title": "Showcasing Your Projects Effectively",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S4",
+                    "title": "Presenting Your Task Manager Project to a Mock Interviewer",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M4_S5",
+                "n": "job_search_strategies",
+                "title": "Effective Job Search Strategies",
+                "auto_completed": false,
+                "why_this_skill": "Knowing how to effectively search for jobs, apply strategically, and follow up increases your chances of securing an entry-level position.",
+                "lessons": [
+                  "Leveraging Job Boards & Company Websites",
+                  "Networking for Referrals",
+                  "Interview Follow-up & Negotiation Basics"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M4_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S5",
+                    "title": "Navigating the Frontend Job Market",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S5",
+                    "title": "Crafting a Personalized Job Application Strategy",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "You are in a final round interview for a Junior Frontend Developer role. The interviewer asks you to walk through your most challenging project, explaining the technical decisions and how you overcame obstacles."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "current_salary_lpa": 0,
+    "known_skills": [],
+    "capability_gap": {
+      "gap_score": 0.765,
+      "recommended_milestones": 5,
+      "recommended_modules_per_milestone": 4,
+      "recommended_skill_density": 5,
+      "reasoning": "Gap analysis: identity_distance=0.60; experience_mod=0.30; time_mod=0.85; skill_mod=0.00; gap_score=0.77. Recommend 5 milestone(s), 4 module(s) per milestone, 5 skill(s) per module."
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": true,
+      "duration_weeks": 16,
+      "budget_hours": 179.2,
+      "demand_hours": 157.5,
+      "weekly_hours_needed": 12.3,
+      "breakdown": {
+        "video_hours": 45.0,
+        "mastery_hours": 90.0,
+        "scenario_hours": 1.5,
+        "interview_hours": 3.0,
+        "project_hours": 18.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": true,
+        "duration_weeks": 16,
+        "budget_hours": 179.2,
+        "demand_hours": 157.5,
+        "weekly_hours_needed": 12.3,
+        "breakdown": {
+          "video_hours": 45.0,
+          "mastery_hours": 90.0,
+          "scenario_hours": 1.5,
+          "interview_hours": 3.0,
+          "project_hours": 18.0
+        }
+      },
+      "time_budget": {
+        "pass": true,
+        "reason": "estimated 157.5h within 125% of budget 179.2h",
+        "budget_hours": 179.2,
+        "estimated_total_hours": 157.5
+      },
+      "starts_where_they_are": {
+        "pass": true,
+        "reason": "ZPD starting-point check passed"
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "beginner or no known_skills — skip check"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 8% (5/60). Full JD validation pending.",
+        "filler_ratio": 0.083,
+        "total_skills": 60
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 60 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "AI-first check passed — all milestones have multi-layer AI work"
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "not applicable for low ICP"
+      }
+    },
+    "quality_validators": {
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": true,
+        "reason": "All projects have meaningful implementation + deployment"
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "No forbidden skills for this target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "54 catalog violation(s)",
+        "violations": [
+          "Skill 'js_variables_datatypes' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'js_operators_expressions' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'js_control_flow' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'js_functions' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'js_error_handling_debugging' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'html_document_structure' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'html_text_images_links' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'html_semantic_elements' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'html_accessibility_basics' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'css_selectors_properties' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'css_layout_flexbox' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'css_layout_grid' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'css_responsive_design' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'css_animations_transitions' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'git_basics' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'github_fundamentals' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'static_site_deployment' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'basic_web_security' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'dom_selection_modification' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'js_event_listeners' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'js_modules' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'js_async_callbacks' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'js_promises' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'js_async_await' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'fetch_api' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'error_handling_apis' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'es6_features' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'js_array_methods' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'js_object_oriented_programming' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'functional_programming_js' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'js_design_patterns' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'data_display_tables' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'data_display_lists_cards' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'basic_charting_libraries' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'data_filtering_sorting_ui' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'user_feedback_ui' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'npm_yarn_basics' in M3.1 not found in any AVAILABLE_COURSES",
+          "Skill 'module_bundlers' in M3.1 not found in any AVAILABLE_COURSES",
+          "Skill 'transpilers_babel' in M3.1 not found in any AVAILABLE_COURSES",
+          "Skill 'css_preprocessors' in M3.1 not found in any AVAILABLE_COURSES",
+          "Skill 'frontend_testing_basics' in M3.1 not found in any AVAILABLE_COURSES",
+          "Skill 'image_optimization' in M3.2 not found in any AVAILABLE_COURSES",
+          "Skill 'code_splitting_lazy_loading' in M3.2 not found in any AVAILABLE_COURSES",
+          "Skill 'critical_rendering_path' in M3.2 not found in any AVAILABLE_COURSES",
+          "Skill 'effective_communication' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'problem_solving_strategies' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'agile_development' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'continuous_learning' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'personal_branding_networking' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'resume_cover_letter' in M3.4 not found in any AVAILABLE_COURSES",
+          "Skill 'behavioral_interview_prep' in M3.4 not found in any AVAILABLE_COURSES",
+          "Skill 'technical_interview_prep' in M3.4 not found in any AVAILABLE_COURSES",
+          "Skill 'portfolio_presentation' in M3.4 not found in any AVAILABLE_COURSES",
+          "Skill 'job_search_strategies' in M3.4 not found in any AVAILABLE_COURSES"
+        ]
+      }
+    }
+  }
+}

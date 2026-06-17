@@ -168,6 +168,40 @@ def milestone_emoji(seq: int) -> str:
 
 
 # =====================================================
+# HELPER: Lesson Extraction
+# =====================================================
+
+def extract_module_lessons(module):
+    """
+    Return all lesson strings inside a module regardless of
+    where lessons are stored.
+
+    Search order:
+      A) module["lessons"]
+      B) skill["lessons"] for every skill
+      C) skill["content_flow"]["video"]["lessons"] if present
+    """
+    result = []
+    # A — module-level lessons
+    raw = module.get("lessons")
+    if isinstance(raw, list):
+        result.extend(raw)
+    # B — skill-level lessons
+    for skill in module.get("skills", []):
+        raw = skill.get("lessons")
+        if isinstance(raw, list):
+            result.extend(raw)
+    # C — content_flow video lessons
+    for skill in module.get("skills", []):
+        flow = skill.get("content_flow", {})
+        video = flow.get("video", {})
+        raw = video.get("lessons")
+        if isinstance(raw, list):
+            result.extend(raw)
+    return result
+
+
+# =====================================================
 # PAGE CONFIG
 # =====================================================
 st.set_page_config(
@@ -542,7 +576,7 @@ GOAL: {goal}
 
 REQUIRED JSON FIELDS (spec-aligned — Vidya V3 onboarding signals only):
 {{
-  "full_name": "realistic Indian name",
+  "full_name": "realistic name",
   "age": integer,
   "location": "Indian city",
   "education": "highest qualification",
@@ -796,11 +830,20 @@ if st.session_state.roadmap_data:
         for m in milestones
         for mod in m.get("modules", [])
     )
+    # Debug: inspect first module structure
+    if milestones:
+        mod = milestones[0]["modules"][0]
+        print("LESSON DEBUG")
+        print(json.dumps(mod, indent=2)[:5000])
+        if mod.get("skills"):
+            print("FIRST SKILL:")
+            print(json.dumps(mod["skills"][0], indent=2)[:3000])
     total_lessons = sum(
-        len(mod.get("lessons", []))
+        len(extract_module_lessons(mod))
         for m in milestones
         for mod in m.get("modules", [])
     )
+    print(f"[LESSON AUDIT] Total lessons: {total_lessons}")
 
     target_role = (
         rd.get("target_role", "")
@@ -1039,7 +1082,7 @@ if st.session_state.roadmap_data:
                 is_free   = mod.get("free", False)
                 vis_type  = mod.get("vis", "")
                 skills    = mod.get("skills", [])
-                lessons   = mod.get("lessons", [])
+                lessons   = extract_module_lessons(mod)
                 science   = mod.get("science", [])
 
                 free_tag = " 🔓 Free" if is_free else " 🔒"

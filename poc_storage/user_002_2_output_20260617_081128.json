@@ -1,0 +1,4106 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_002",
+  "roadmap_id": "ai_roadmap_20260617080810_e37fdf74",
+  "generated_at": "2026-06-17T08:11:28.032986",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260617080810_e37fdf74",
+    "user_id": "user_002",
+    "icp_type": "high",
+    "level": "senior",
+    "target_role": "Data Scientist",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 170.5,
+    "budget_hours": 102.4,
+    "milestone_count_rationale": "5 milestones: Neha is a senior data analyst with 7 years of experience, a strong business intuition, and a clear goal to transition into data science involving forecasting, experimentation, and machine learning. This requires a comprehensive but focused transformation from reporting to advanced ML and production. The 5 milestones provide a balanced progression for a senior professional to acquire new identities and bridge significant skill gaps within a structured timeframe, despite the demand exceeding the strict budget, ensuring all critical areas are covered for a full transformation.",
+    "vision_profile": {
+      "current_state": "A skilled Data Analyst proficient in reporting and business analytics, eager to transition into advanced data science.",
+      "main_blocker": "The fear of being pigeonholed as a reporting analyst, preventing her from engaging with machine learning and product-influencing work.",
+      "top_motivation": "To leverage her strong business intuition to influence product decisions through data science, rather than just generating monthly reports."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-17T08:11:19.662316",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Applied ML Foundations Engineer",
+        "sal": "₹15-18 LPA",
+        "o": "The learner can design and implement foundational machine learning models, preprocess complex datasets, and articulate model choices for business problems, moving beyond descriptive analytics.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "3 modules are necessary to cover the foundational shift from data analysis to applied machine learning, encompassing advanced Python for ML, core supervised learning algorithms, and essential data preprocessing techniques.",
+        "identity_statement": "You are becoming an Applied ML Foundations Engineer, equipped to build predictive models and transform raw data into actionable insights.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Predictive Model for Customer Churn",
+          "vibe_layers": [
+            "planning",
+            "architecture",
+            "solution"
+          ],
+          "description": "Build an end-to-end machine learning pipeline to predict customer churn for a telecom company. This involves data cleaning, feature engineering, model selection, training, and initial evaluation.",
+          "deliverable": "A Jupyter Notebook or Python script demonstrating the full ML pipeline, including model training, evaluation metrics, and a brief report on findings.",
+          "seeded_errors": [
+            "The initial feature set leads to severe data leakage, causing unrealistically high model accuracy that must be identified and corrected."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Advanced Python for Data & ML",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "4 skills are essential to elevate existing basic Python knowledge to a professional level for data science, focusing on critical libraries and data manipulation techniques.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "numpy_pandas_mastery",
+                "title": "NumPy & Pandas for Data Science",
+                "auto_completed": false,
+                "why_this_skill": "Mastery of NumPy and Pandas is fundamental for efficient data manipulation and analysis, forming the bedrock for all subsequent machine learning tasks in a data scientist's role.",
+                "lessons": [
+                  "Advanced Indexing & Slicing",
+                  "Data Aggregation & GroupBy Operations",
+                  "Performance Optimization with Vectorization"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Advanced NumPy & Pandas Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Optimizing Large Dataset Operations",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "python_data_structures",
+                "title": "Efficient Python Data Structures",
+                "auto_completed": false,
+                "why_this_skill": "Understanding and applying efficient data structures is crucial for writing performant and scalable data science code, especially when dealing with large datasets and complex algorithms.",
+                "lessons": [
+                  "Lists, Tuples, Sets, Dictionaries Deep Dive",
+                  "Collections Module for Specialized Structures",
+                  "Memory Management & Performance Considerations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Python Data Structures for Scalable DS",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Debugging a Memory-Intensive Script",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "scikit_learn_basics",
+                "title": "Scikit-learn Fundamentals",
+                "auto_completed": false,
+                "why_this_skill": "Scikit-learn is the industry standard for classical machine learning in Python, essential for implementing and experimenting with various algorithms efficiently.",
+                "lessons": [
+                  "Estimator API: Fit, Predict, Transform",
+                  "Preprocessing with Scikit-learn",
+                  "Model Selection & Cross-Validation Basics"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Introduction to Scikit-learn for ML",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Choosing the Right Preprocessor",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S4",
+                "n": "data_visualization_advanced",
+                "title": "Advanced Data Visualization with Matplotlib/Seaborn",
+                "auto_completed": false,
+                "why_this_skill": "Effective data visualization is crucial for exploratory data analysis, communicating insights, and understanding model behavior, bridging the gap between technical work and business stakeholders.",
+                "lessons": [
+                  "Customizing Plots for Publication",
+                  "Interactive Visualizations with Plotly",
+                  "Visualizing High-Dimensional Data"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S4",
+                    "title": "Advanced Visualization for ML Insights",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S4",
+                    "title": "Communicating Model Performance Visually",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Core Supervised Learning Algorithms",
+            "ai_first_layer": "planning",
+            "free": true,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "4 skills are crucial for understanding and implementing the most common supervised learning algorithms, forming the core of predictive modeling.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "linear_regression_advanced",
+                "title": "Advanced Linear & Logistic Regression",
+                "auto_completed": false,
+                "why_this_skill": "These foundational models are critical for understanding basic predictive relationships and serve as benchmarks for more complex algorithms, essential for any data scientist.",
+                "lessons": [
+                  "Regularization Techniques (L1, L2)",
+                  "Interpreting Model Coefficients",
+                  "Generalized Linear Models (GLMs)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Deep Dive into Linear Models",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Diagnosing Overfitting in Regression",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "decision_trees_ensembles",
+                "title": "Decision Trees & Ensemble Methods",
+                "auto_completed": false,
+                "why_this_skill": "Decision trees and ensemble methods like Random Forests and Gradient Boosting are powerful, widely used, and highly interpretable, making them indispensable for robust predictive modeling.",
+                "lessons": [
+                  "CART Algorithm & Pruning",
+                  "Bagging vs. Boosting Principles",
+                  "Hyperparameter Tuning for Tree Models"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Ensemble Learning for Robust Models",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Mitigating Bias in Tree-Based Models",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "support_vector_machines",
+                "title": "Support Vector Machines (SVMs)",
+                "auto_completed": false,
+                "why_this_skill": "SVMs are powerful for classification and regression, particularly effective in high-dimensional spaces, and a key algorithm in a data scientist's toolkit.",
+                "lessons": [
+                  "Linear vs. Non-linear Kernels",
+                  "Margin Maximization & Support Vectors",
+                  "Practical Applications & Limitations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Understanding SVMs and Kernels",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Optimizing SVM for Imbalanced Data",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S4",
+                "n": "k_nearest_neighbors",
+                "title": "K-Nearest Neighbors (KNN)",
+                "auto_completed": false,
+                "why_this_skill": "KNN is a simple yet effective non-parametric algorithm for classification and regression, valuable for its intuitive approach and as a baseline model.",
+                "lessons": [
+                  "Distance Metrics & Neighborhood Selection",
+                  "Curse of Dimensionality in KNN",
+                  "Weighted KNN & Performance Tuning"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S4",
+                    "title": "KNN for Classification and Regression",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S4",
+                    "title": "Scaling Data for KNN Performance",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M1.3",
+            "title": "Data Preprocessing & Feature Engineering",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "notebook+code",
+            "skill_count_rationale": "4 skills are critical for transforming raw data into a format suitable for machine learning models, directly addressing a key skill gap.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M3_S1",
+                "n": "missing_data_imputation",
+                "title": "Handling Missing Data",
+                "auto_completed": false,
+                "why_this_skill": "Missing data is ubiquitous in real-world datasets; mastering imputation techniques is essential for building robust models and avoiding data loss.",
+                "lessons": [
+                  "Types of Missingness (MAR, MCAR, MNAR)",
+                  "Statistical Imputation Methods",
+                  "Advanced Imputation with ML Models"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S1",
+                    "title": "Strategies for Missing Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S1",
+                    "title": "Choosing Imputation for Time Series Data",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S2",
+                "n": "categorical_encoding",
+                "title": "Categorical Feature Encoding",
+                "auto_completed": false,
+                "why_this_skill": "Converting categorical variables into numerical representations is a fundamental step for most ML algorithms, directly impacting model performance and interpretability.",
+                "lessons": [
+                  "One-Hot Encoding & Label Encoding",
+                  "Target Encoding & Feature Hashing",
+                  "Handling High Cardinality Features"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S2",
+                    "title": "Encoding Categorical Variables",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S2",
+                    "title": "Encoding Product Categories for a Recommender",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S3",
+                "n": "feature_scaling_transformation",
+                "title": "Feature Scaling & Transformation",
+                "auto_completed": false,
+                "why_this_skill": "Scaling and transforming features are vital for optimizing algorithm performance, preventing dominance by certain features, and meeting model assumptions.",
+                "lessons": [
+                  "Standardization vs. Normalization",
+                  "Power Transforms (Box-Cox, Yeo-Johnson)",
+                  "Discretization & Binning Techniques"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S3",
+                    "title": "Feature Scaling and Distribution Transforms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S3",
+                    "title": "Handling Skewed Features for Linear Models",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S4",
+                "n": "feature_generation",
+                "title": "Feature Generation & Selection",
+                "auto_completed": false,
+                "why_this_skill": "Creating new, informative features and selecting the most relevant ones is a critical skill for improving model performance and interpretability, directly impacting business outcomes.",
+                "lessons": [
+                  "Polynomial & Interaction Features",
+                  "Time-Based & Domain-Specific Features",
+                  "Filter, Wrapper, & Embedded Methods"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S4",
+                    "title": "Crafting Powerful Features",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S4",
+                    "title": "Feature Engineering for Fraud Detection",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Explain the trade-offs between different feature engineering techniques for a dataset with mixed numerical and categorical features, and how you'd choose the best approach for a business problem."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Predictive Analytics Specialist",
+        "sal": "₹18-22 LPA",
+        "o": "The learner can build, evaluate, and optimize advanced predictive models, including time series forecasts, and design robust experimentation strategies to drive business insights.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "3 modules are crucial for a Predictive Analytics Specialist, covering advanced model evaluation, unsupervised learning for pattern discovery, and specialized time series forecasting with experimentation design.",
+        "identity_statement": "You are evolving into a Predictive Analytics Specialist, capable of uncovering deeper patterns in data and forecasting future trends with confidence.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Sales Forecasting & Impact Analysis",
+          "vibe_layers": [
+            "planning",
+            "architecture",
+            "solution"
+          ],
+          "description": "Develop a time series forecasting model for product sales, incorporating external factors. Design an A/B test to evaluate the impact of a new marketing campaign on sales.",
+          "deliverable": "A Python notebook with the forecasting model, performance metrics, and a detailed plan for the A/B test, including power analysis and success metrics.",
+          "seeded_errors": [
+            "The A/B test design suffers from a 'peeking' problem, leading to premature conclusion and incorrect interpretation of campaign effectiveness."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Model Evaluation & Validation",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "code+ppt",
+            "skill_count_rationale": "4 skills are essential for rigorously evaluating machine learning models, ensuring their reliability and suitability for real-world applications, directly addressing a key skill gap.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "regression_classification_metrics",
+                "title": "Regression & Classification Metrics",
+                "auto_completed": false,
+                "why_this_skill": "Choosing and interpreting the correct metrics is paramount for understanding model performance, especially in scenarios with imbalanced data or specific business costs.",
+                "lessons": [
+                  "RMSE, MAE, R-squared for Regression",
+                  "Accuracy, Precision, Recall, F1-Score",
+                  "ROC Curves & AUC for Classification"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Advanced Model Evaluation Metrics",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Evaluating a Fraud Detection Model",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "cross_validation_bootstrapping",
+                "title": "Advanced Cross-Validation & Bootstrapping",
+                "auto_completed": false,
+                "why_this_skill": "Robust validation techniques are crucial for estimating model generalization performance accurately and avoiding overfitting, a core skill for reliable data science.",
+                "lessons": [
+                  "K-Fold, Stratified K-Fold, Leave-One-Out",
+                  "Time Series Cross-Validation",
+                  "Bootstrapping for Confidence Intervals"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Robust Model Validation Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Validating a Model with Limited Data",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "hyperparameter_tuning",
+                "title": "Hyperparameter Tuning & Optimization",
+                "auto_completed": false,
+                "why_this_skill": "Optimizing hyperparameters is key to extracting maximum performance from machine learning models, directly impacting the effectiveness of predictive solutions.",
+                "lessons": [
+                  "Grid Search & Random Search",
+                  "Bayesian Optimization with Optuna/Hyperopt",
+                  "Automated ML (AutoML) Concepts"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Advanced Hyperparameter Optimization",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Tuning a Complex Ensemble Model",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S4",
+                "n": "model_interpretability_xai",
+                "title": "Model Interpretability & XAI",
+                "auto_completed": false,
+                "why_this_skill": "Understanding why a model makes certain predictions is crucial for trust, debugging, and compliance, especially for influencing product decisions.",
+                "lessons": [
+                  "Feature Importance (Permutation, SHAP, LIME)",
+                  "Partial Dependence Plots (PDPs)",
+                  "Counterfactual Explanations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S4",
+                    "title": "Explainable AI for Business Insights",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S4",
+                    "title": "Explaining a Loan Approval Decision",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "Unsupervised Learning & Dimensionality Reduction",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "notebook+ppt",
+            "skill_count_rationale": "4 skills are necessary to master unsupervised learning, enabling the discovery of hidden patterns and efficient data representation, which is vital for advanced analytics.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "clustering_algorithms",
+                "title": "Clustering Algorithms (K-Means, DBSCAN)",
+                "auto_completed": false,
+                "why_this_skill": "Clustering is essential for customer segmentation, anomaly detection, and exploratory data analysis, enabling data scientists to uncover natural groupings in data.",
+                "lessons": [
+                  "K-Means & Elbow Method",
+                  "DBSCAN for Density-Based Clustering",
+                  "Hierarchical Clustering & Dendrograms"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Unsupervised Clustering Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Segmenting Customer Behavior",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "dimensionality_reduction",
+                "title": "Dimensionality Reduction (PCA, t-SNE)",
+                "auto_completed": false,
+                "why_this_skill": "Reducing data dimensionality is crucial for visualization, mitigating the curse of dimensionality, and improving model efficiency and performance.",
+                "lessons": [
+                  "Principal Component Analysis (PCA)",
+                  "t-SNE & UMAP for Visualization",
+                  "Feature Selection vs. Feature Extraction"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Techniques for Dimensionality Reduction",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Reducing Features for Image Data",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "anomaly_outlier_detection",
+                "title": "Anomaly & Outlier Detection",
+                "auto_completed": false,
+                "why_this_skill": "Identifying anomalies is critical for fraud detection, system monitoring, and quality control, enabling data scientists to detect unusual patterns that require attention.",
+                "lessons": [
+                  "Statistical Methods for Outliers",
+                  "Isolation Forest & One-Class SVM",
+                  "Time Series Anomaly Detection"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Detecting Anomalies in Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Detecting Credit Card Fraud",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S4",
+                "n": "association_rule_mining",
+                "title": "Association Rule Mining",
+                "auto_completed": false,
+                "why_this_skill": "Discovering relationships between variables (e.g., market basket analysis) provides valuable business insights for recommendation systems and strategic planning.",
+                "lessons": [
+                  "Apriori Algorithm & Concepts",
+                  "Support, Confidence, Lift Metrics",
+                  "Applications in Retail & Web Analytics"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S4",
+                    "title": "Market Basket Analysis with Apriori",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S4",
+                    "title": "Optimizing Product Placement in E-commerce",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M2.3",
+            "title": "Time Series Forecasting & Experimentation Design",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "4 skills are crucial for mastering time series forecasting and designing robust experiments, enabling the learner to predict future trends and validate hypotheses effectively.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M3_S1",
+                "n": "time_series_fundamentals",
+                "title": "Time Series Fundamentals & Decomposition",
+                "auto_completed": false,
+                "why_this_skill": "Understanding time series components (trend, seasonality, noise) is foundational for accurate forecasting and analyzing temporal data patterns.",
+                "lessons": [
+                  "Stationarity & Autocorrelation",
+                  "Additive & Multiplicative Decomposition",
+                  "Handling Missing Values in Time Series"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S1",
+                    "title": "Decomposing Time Series Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S1",
+                    "title": "Identifying Seasonality in Sales Data",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S2",
+                "n": "arima_prophet_forecasting",
+                "title": "ARIMA & Prophet Forecasting Models",
+                "auto_completed": false,
+                "why_this_skill": "These are industry-standard models for time series forecasting, enabling accurate predictions for business planning and resource allocation.",
+                "lessons": [
+                  "ARIMA/SARIMA Model Building",
+                  "Facebook Prophet for Business Forecasting",
+                  "Evaluating Time Series Forecasts"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S2",
+                    "title": "Practical Time Series Forecasting",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S2",
+                    "title": "Forecasting Website Traffic Spikes",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S3",
+                "n": "ab_testing_design",
+                "title": "A/B Testing & Experimentation Design",
+                "auto_completed": false,
+                "why_this_skill": "Designing and analyzing A/B tests is crucial for data-driven product development and validating the impact of changes, directly influencing product decisions.",
+                "lessons": [
+                  "Hypothesis Testing & Statistical Significance",
+                  "Sample Size Calculation & Power Analysis",
+                  "Interpreting A/B Test Results"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S3",
+                    "title": "Designing Robust A/B Tests",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S3",
+                    "title": "Analyzing a Product Feature Rollout",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S4",
+                "n": "causal_inference_basics",
+                "title": "Causal Inference Fundamentals",
+                "auto_completed": false,
+                "why_this_skill": "Moving beyond correlation to causation is critical for making truly impactful product and business decisions, a key differentiator for senior data scientists.",
+                "lessons": [
+                  "Randomized Controlled Trials (RCTs)",
+                  "Quasi-Experimental Designs",
+                  "Difference-in-Differences & Regression Discontinuity"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.1,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S4",
+                    "title": "Introduction to Causal Inference",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S4",
+                    "title": "Measuring the Impact of a Policy Change",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe how you would design an A/B test to evaluate the impact of a new recommendation algorithm on user engagement, including key metrics and potential pitfalls."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M03",
+        "label": "M03",
+        "t": "MLOps & Production Workflow Engineer",
+        "sal": "₹22-26 LPA",
+        "o": "The learner can deploy, monitor, and maintain machine learning models in production environments, ensuring reliability, scalability, and efficient MLOps practices.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "3 modules are essential for an MLOps & Production Workflow Engineer, focusing on MLOps fundamentals, cloud deployment strategies, and continuous model monitoring and maintenance.",
+        "identity_statement": "You are transforming into an MLOps & Production Workflow Engineer, bridging the gap between model development and real-world impact by deploying and managing ML systems.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "ML Model Deployment & Monitoring Pipeline",
+          "vibe_layers": [
+            "architecture",
+            "solution",
+            "planning"
+          ],
+          "description": "Deploy a trained machine learning model (e.g., the churn prediction model from M01) as a REST API using Flask/FastAPI, containerize it with Docker, and set up basic monitoring for data drift and model performance.",
+          "deliverable": "A deployed API endpoint, Dockerfile, and a dashboard/script demonstrating model monitoring, including alerts for performance degradation.",
+          "seeded_errors": [
+            "The deployed model experiences significant data drift in production, leading to a sudden drop in prediction accuracy that must be detected and diagnosed using monitoring tools."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M3.1",
+            "title": "MLOps Fundamentals & Model Serving",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "4 skills are vital for understanding the core principles of MLOps and how to serve machine learning models effectively, addressing the Python production workflows gap.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M1_S1",
+                "n": "mlops_principles",
+                "title": "MLOps Principles & Lifecycle",
+                "auto_completed": false,
+                "why_this_skill": "MLOps is critical for bringing ML models from research to reliable production, ensuring continuous integration, delivery, and deployment of ML systems.",
+                "lessons": [
+                  "CI/CD for Machine Learning",
+                  "ML Experiment Tracking & Versioning",
+                  "Reproducibility in ML Workflows"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S1",
+                    "title": "Introduction to MLOps",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S1",
+                    "title": "Designing a CI/CD Pipeline for ML",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S2",
+                "n": "model_api_development",
+                "title": "Model API Development (Flask/FastAPI)",
+                "auto_completed": false,
+                "why_this_skill": "Creating robust APIs for ML models is essential for integrating them into applications and making predictions accessible to other services.",
+                "lessons": [
+                  "Building REST APIs with Flask",
+                  "High-Performance APIs with FastAPI",
+                  "Request/Response Validation & Error Handling"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S2",
+                    "title": "Serving ML Models with APIs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S2",
+                    "title": "Optimizing API Latency for Real-time Predictions",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S3",
+                "n": "containerization_docker",
+                "title": "Containerization with Docker",
+                "auto_completed": false,
+                "why_this_skill": "Docker is essential for creating reproducible and portable ML environments, simplifying deployment and ensuring consistency across development and production.",
+                "lessons": [
+                  "Dockerfile Best Practices",
+                  "Docker Compose for Multi-Container Apps",
+                  "Container Orchestration Basics"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S3",
+                    "title": "Docker for Reproducible ML",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S3",
+                    "title": "Debugging a Dockerized ML Application",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S4",
+                "n": "model_registry_versioning",
+                "title": "Model Registry & Versioning",
+                "auto_completed": false,
+                "why_this_skill": "Managing different versions of models and their metadata is crucial for reproducibility, auditing, and seamless deployment of updated models.",
+                "lessons": [
+                  "MLflow for Experiment Tracking",
+                  "Model Registry Concepts",
+                  "Artifact Management for ML"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S4",
+                    "title": "Managing ML Models with MLflow",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S4",
+                    "title": "Rolling Back to a Previous Model Version",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M3.2",
+            "title": "Cloud Deployment for ML",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "skill_count_rationale": "4 skills are necessary for deploying and managing machine learning workloads on cloud platforms, a critical aspect of modern MLOps and production workflows.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M2_S1",
+                "n": "aws_sagemaker_basics",
+                "title": "AWS SageMaker Fundamentals",
+                "auto_completed": false,
+                "why_this_skill": "AWS SageMaker provides a comprehensive platform for building, training, and deploying ML models at scale, a highly sought-after cloud skill.",
+                "lessons": [
+                  "SageMaker Notebook Instances & Studio",
+                  "Managed Training Jobs",
+                  "Batch & Real-time Endpoints"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S1",
+                    "title": "Introduction to AWS SageMaker",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S1",
+                    "title": "Deploying a Model to SageMaker Endpoint",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S2",
+                "n": "cloud_storage_data_lakes",
+                "title": "Cloud Storage & Data Lakes (S3)",
+                "auto_completed": false,
+                "why_this_skill": "Efficiently managing and accessing data in the cloud is foundational for any ML project, especially at scale, using services like AWS S3.",
+                "lessons": [
+                  "S3 Bucket Configuration & Security",
+                  "Data Lake Architectures",
+                  "Data Versioning & Governance in Cloud"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S2",
+                    "title": "Scalable Cloud Data Storage",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S2",
+                    "title": "Designing a Data Lake for ML Training",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S3",
+                "n": "serverless_ml_lambda",
+                "title": "Serverless ML with AWS Lambda",
+                "auto_completed": false,
+                "why_this_skill": "Serverless functions are ideal for event-driven ML inference, batch processing, and cost-effective deployment of specific model components.",
+                "lessons": [
+                  "Lambda Function Development for ML",
+                  "API Gateway Integration",
+                  "Cost Optimization with Serverless"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S3",
+                    "title": "Deploying ML Inference with Lambda",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S3",
+                    "title": "Building a Real-time Image Classifier API",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S4",
+                "n": "cloud_security_compliance",
+                "title": "Cloud Security & Compliance for ML",
+                "auto_completed": false,
+                "why_this_skill": "Ensuring the security and compliance of ML systems in the cloud is paramount for protecting sensitive data and adhering to regulations.",
+                "lessons": [
+                  "IAM Roles & Policies for ML",
+                  "Data Encryption at Rest & In Transit",
+                  "Compliance Standards (GDPR, HIPAA) in ML"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S4",
+                    "title": "Securing ML Workloads in AWS",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S4",
+                    "title": "Implementing Data Privacy for a Healthcare ML Model",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical ML prediction service deployed on AWS Lambda starts experiencing intermittent failures and high latency. Diagnose the potential causes, which could range from cold starts to resource limits or external API dependencies, and propose solutions."
+              }
+            ]
+          },
+          {
+            "id": "M3.3",
+            "title": "Model Monitoring & Maintenance",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "animation+code",
+            "skill_count_rationale": "4 skills are crucial for ensuring the long-term health and performance of deployed machine learning models, covering monitoring, retraining, and incident response.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M3_S1",
+                "n": "data_model_drift_detection",
+                "title": "Data & Model Drift Detection",
+                "auto_completed": false,
+                "why_this_skill": "Detecting data and model drift is essential for maintaining model accuracy and relevance in dynamic real-world environments, preventing silent failures.",
+                "lessons": [
+                  "Concept Drift vs. Data Drift",
+                  "Statistical Tests for Drift Detection",
+                  "Implementing Drift Monitoring Tools"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S1",
+                    "title": "Monitoring for Data and Model Drift",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S1",
+                    "title": "Diagnosing a Sudden Drop in Model Performance",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S2",
+                "n": "ml_monitoring_alerting",
+                "title": "ML Monitoring & Alerting Systems",
+                "auto_completed": false,
+                "why_this_skill": "Setting up robust monitoring and alerting is crucial for proactive identification of issues in production ML systems, minimizing downtime and impact.",
+                "lessons": [
+                  "Key Performance Indicators for ML Models",
+                  "Setting Up Alerting with CloudWatch/Prometheus",
+                  "Dashboarding with Grafana/Power BI for ML"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S2",
+                    "title": "Building ML Monitoring Dashboards",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S2",
+                    "title": "Responding to a Critical Model Alert",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S3",
+                "n": "automated_retraining_pipelines",
+                "title": "Automated Retraining Pipelines",
+                "auto_completed": false,
+                "why_this_skill": "Automating model retraining is crucial for adapting to changing data patterns and maintaining optimal model performance without manual intervention.",
+                "lessons": [
+                  "Triggering Retraining on Drift Detection",
+                  "Data Versioning for Retraining",
+                  "A/B Testing Retrained Models"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S3",
+                    "title": "Building Automated ML Pipelines",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S3",
+                    "title": "Implementing a Scheduled Retraining Workflow",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S4",
+                "n": "incident_response_ml",
+                "title": "Incident Response for ML Systems",
+                "auto_completed": false,
+                "why_this_skill": "Having a clear incident response plan is crucial for quickly addressing and resolving issues in production ML systems, minimizing business impact.",
+                "lessons": [
+                  "Defining SLOs & SLAs for ML",
+                  "Runbooks for Common ML Incidents",
+                  "Post-Mortem Analysis for ML Failures"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.07,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S4",
+                    "title": "ML System Reliability and Incident Management",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S4",
+                    "title": "Managing a Production Model Outage",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe your approach to monitoring a critical machine learning model in production. What metrics would you track, and how would you set up alerts to ensure its reliability and performance?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M04",
+        "label": "M04",
+        "t": "Advanced Data Science Architect",
+        "sal": "₹26-30 LPA",
+        "o": "The learner can design and implement complex machine learning systems, including deep learning solutions, and architect scalable data science platforms to solve challenging business problems.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "3 modules are crucial for an Advanced Data Science Architect, covering deep learning fundamentals, advanced feature engineering for complex models, and high-level system design for ML applications.",
+        "identity_statement": "You are becoming an Advanced Data Science Architect, capable of designing sophisticated ML solutions and leading the technical vision for complex data products.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Deep Learning-Powered Recommendation System",
+          "vibe_layers": [
+            "architecture",
+            "planning",
+            "solution"
+          ],
+          "description": "Design and implement a deep learning-based recommendation system (e.g., for movies or products). This involves data preparation, neural network architecture design, training, and evaluation, considering scalability and real-time inference.",
+          "deliverable": "A Python codebase for the recommendation system, including model definition, training script, and a brief architectural overview of how it would be deployed.",
+          "seeded_errors": [
+            "The neural network architecture suffers from vanishing gradients during training, leading to poor convergence and low performance that must be diagnosed and fixed by adjusting activation functions or network depth."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M4.1",
+            "title": "Deep Learning Fundamentals",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "notebook+code",
+            "skill_count_rationale": "4 skills are essential for grasping the core concepts of deep learning, from neural network architecture to training and optimization, enabling the development of advanced AI solutions.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M1_S1",
+                "n": "neural_network_basics",
+                "title": "Neural Network Architecture & Training",
+                "auto_completed": false,
+                "why_this_skill": "Deep learning is at the forefront of AI, and understanding neural network fundamentals is crucial for building advanced models for complex data types like images and text.",
+                "lessons": [
+                  "Perceptrons & Activation Functions",
+                  "Backpropagation & Gradient Descent",
+                  "Loss Functions & Optimizers"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S1",
+                    "title": "Building Your First Neural Network",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S1",
+                    "title": "Debugging a Non-Converging Neural Network",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S2",
+                "n": "tensorflow_keras_pytorch",
+                "title": "TensorFlow/Keras & PyTorch",
+                "auto_completed": false,
+                "why_this_skill": "Proficiency in leading deep learning frameworks is essential for implementing, training, and deploying state-of-the-art neural networks.",
+                "lessons": [
+                  "Keras Sequential & Functional API",
+                  "PyTorch Tensors & Autograd",
+                  "Model Checkpointing & Early Stopping"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S2",
+                    "title": "Deep Learning with Keras and PyTorch",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S2",
+                    "title": "Migrating a Keras Model to PyTorch",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S3",
+                "n": "convolutional_neural_networks",
+                "title": "Convolutional Neural Networks (CNNs)",
+                "auto_completed": false,
+                "why_this_skill": "CNNs are the backbone of modern computer vision, enabling powerful image recognition, object detection, and other visual AI applications.",
+                "lessons": [
+                  "Convolutional Layers & Pooling",
+                  "Transfer Learning & Fine-tuning CNNs",
+                  "Advanced CNN Architectures (ResNet, VGG)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S3",
+                    "title": "Building Image Classifiers with CNNs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S3",
+                    "title": "Optimizing a CNN for Edge Devices",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S4",
+                "n": "recurrent_neural_networks",
+                "title": "Recurrent Neural Networks (RNNs) & LSTMs",
+                "auto_completed": false,
+                "why_this_skill": "RNNs and LSTMs are fundamental for processing sequential data like text and time series, enabling applications in NLP, speech recognition, and advanced forecasting.",
+                "lessons": [
+                  "RNN Architecture & Vanishing Gradients",
+                  "LSTMs & GRUs for Long-Term Dependencies",
+                  "Sequence-to-Sequence Models"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S4",
+                    "title": "RNNs for Sequential Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S4",
+                    "title": "Building a Text Generation Model",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M4.2",
+            "title": "Advanced Feature Engineering & Pipelines",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "4 skills are necessary for mastering advanced feature engineering techniques and building robust data pipelines, crucial for complex ML projects and maintaining data quality.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M2_S1",
+                "n": "automated_feature_engineering",
+                "title": "Automated Feature Engineering",
+                "auto_completed": false,
+                "why_this_skill": "Automating feature engineering reduces manual effort and can discover complex interactions, leading to more powerful models and faster iteration cycles.",
+                "lessons": [
+                  "Featuretools for Automated Feature Creation",
+                  "Deep Feature Synthesis",
+                  "Genetic Algorithms for Feature Selection"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S1",
+                    "title": "Automating Feature Creation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S1",
+                    "title": "Generating Features for a Complex Dataset",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S2",
+                "n": "feature_stores",
+                "title": "Feature Stores & Management",
+                "auto_completed": false,
+                "why_this_skill": "Feature stores standardize and centralize feature engineering, ensuring consistency between training and inference, and improving collaboration in data science teams.",
+                "lessons": [
+                  "Concepts of Feature Stores",
+                  "Online vs. Offline Feature Serving",
+                  "Building a Simple Feature Store"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S2",
+                    "title": "Managing Features with a Feature Store",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S2",
+                    "title": "Designing a Feature Store for Real-time Fraud Detection",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S3",
+                "n": "data_validation_testing",
+                "title": "Data Validation & Testing",
+                "auto_completed": false,
+                "why_this_skill": "Ensuring data quality through validation and testing is critical for preventing errors in ML models and maintaining the integrity of data pipelines.",
+                "lessons": [
+                  "Data Schema Validation",
+                  "Statistical Data Quality Checks",
+                  "Great Expectations for Data Testing"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S3",
+                    "title": "Ensuring Data Quality in ML Pipelines",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S3",
+                    "title": "Debugging a Data Ingestion Pipeline Failure",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S4",
+                "n": "data_pipeline_orchestration",
+                "title": "Data Pipeline Orchestration (Airflow)",
+                "auto_completed": false,
+                "why_this_skill": "Orchestrating complex data pipelines is essential for managing dependencies, scheduling tasks, and ensuring the timely delivery of data for ML models.",
+                "lessons": [
+                  "Airflow DAGs & Operators",
+                  "Scheduling & Monitoring Workflows",
+                  "Error Handling & Retries in Pipelines"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S4",
+                    "title": "Orchestrating ML Data Pipelines with Airflow",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S4",
+                    "title": "A Nightly Data Pipeline Fails Before Morning Reports",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M4.3",
+            "title": "System Design for ML Applications",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "ppt+code",
+            "skill_count_rationale": "4 skills are essential for designing scalable and robust machine learning systems, covering architectural patterns, distributed computing, and performance optimization.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M3_S1",
+                "n": "ml_system_architecture",
+                "title": "ML System Architecture Patterns",
+                "auto_completed": false,
+                "why_this_skill": "Understanding common architectural patterns for ML systems is crucial for designing scalable, reliable, and maintainable solutions.",
+                "lessons": [
+                  "Batch vs. Real-time Inference Architectures",
+                  "Online Learning Systems",
+                  "Microservices for ML"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S1",
+                    "title": "Architecting Scalable ML Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S1",
+                    "title": "Designing a Real-time Fraud Detection System",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M3_S2",
+                "n": "distributed_ml_training",
+                "title": "Distributed ML Training",
+                "auto_completed": false,
+                "why_this_skill": "Training large-scale ML models often requires distributed computing, a key skill for handling big data and complex deep learning architectures.",
+                "lessons": [
+                  "Data Parallelism vs. Model Parallelism",
+                  "Horovod & Distributed TensorFlow/PyTorch",
+                  "Cloud-based Distributed Training Services"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M3_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S2",
+                    "title": "Scaling ML Training with Distributed Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S2",
+                    "title": "Optimizing Distributed Training for a Large Language Model",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M3_S3",
+                "n": "performance_optimization_ml",
+                "title": "Performance Optimization for ML Inference",
+                "auto_completed": false,
+                "why_this_skill": "Optimizing model inference speed and resource usage is critical for real-time applications and cost-effective deployment of ML solutions.",
+                "lessons": [
+                  "Model Quantization & Pruning",
+                  "TensorRT & ONNX Runtime",
+                  "Batching & Caching Strategies"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M3_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S3",
+                    "title": "Speeding Up ML Model Inference",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S3",
+                    "title": "Reducing Latency for a High-Traffic Recommendation API",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M04_M3_S4",
+                "n": "data_governance_ml",
+                "title": "Data Governance for ML",
+                "auto_completed": false,
+                "why_this_skill": "Establishing robust data governance practices is essential for ensuring data quality, privacy, and compliance across all ML initiatives.",
+                "lessons": [
+                  "Data Cataloging & Metadata Management",
+                  "Data Lineage & Audit Trails",
+                  "Access Control & Data Masking"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S4",
+                    "title": "Ensuring Data Integrity for ML",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S4",
+                    "title": "Implementing Data Governance for a New ML Product",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "You need to design a scalable and fault-tolerant system for real-time anomaly detection across millions of transactions per second. Outline the architectural components, data flow, and key technologies you would consider."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M05",
+        "label": "M05",
+        "t": "Senior Data Science Lead",
+        "sal": "₹30-35 LPA",
+        "o": "The learner can lead end-to-end data science initiatives, apply advanced NLP and Generative AI techniques, and strategically influence product decisions while ensuring ethical and responsible AI practices.",
+        "sc_n": 1,
+        "iv": 1,
+        "module_count_rationale": "3 modules are crucial for a Senior Data Science Lead, focusing on advanced NLP and Generative AI, responsible AI practices, and strategic data science leadership and communication.",
+        "identity_statement": "You are becoming a Senior Data Science Lead, driving innovation and strategic impact through advanced AI, and shaping the future of data-driven products.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Generative AI for Content Creation & Moderation",
+          "vibe_layers": [
+            "planning",
+            "solution",
+            "architecture"
+          ],
+          "description": "Develop a Generative AI solution for automating content creation (e.g., product descriptions, marketing copy) and implement a moderation layer to ensure safety and ethical guidelines. This involves fine-tuning a pre-trained LLM and designing a safety pipeline.",
+          "deliverable": "A fine-tuned LLM, a content generation API, and a detailed report on the safety and ethical considerations, including evaluation metrics for moderation.",
+          "seeded_errors": [
+            "The generative model occasionally produces biased or toxic content due to subtle biases in the fine-tuning data, which must be detected by the moderation layer and addressed through data augmentation or model adjustments."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M5.1",
+            "title": "NLP & Generative AI Applications",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "4 skills are essential for leveraging advanced NLP and Generative AI, enabling the learner to build innovative solutions for text-based problems and influence product decisions with cutting-edge AI.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M1_S1",
+                "n": "transformers_attention",
+                "title": "Transformers & Attention Mechanisms",
+                "auto_completed": false,
+                "why_this_skill": "Transformers are the foundation of modern NLP and Generative AI, essential for building state-of-the-art language models and understanding their underlying mechanics.",
+                "lessons": [
+                  "Self-Attention & Multi-Head Attention",
+                  "Encoder-Decoder Architecture",
+                  "Positional Encoding & Feed-Forward Networks"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.03,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M3_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S1",
+                    "title": "Understanding Transformer Architectures",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S1",
+                    "title": "Optimizing Transformer Inference Speed",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S2",
+                "n": "large_language_models_llms",
+                "title": "Large Language Models (LLMs) & Prompting",
+                "auto_completed": false,
+                "why_this_skill": "LLMs are transforming many industries; mastering their application and effective prompting is crucial for building intelligent text-based applications and driving innovation.",
+                "lessons": [
+                  "Foundations of Generative Models",
+                  "Advanced Prompt Engineering Techniques",
+                  "Few-shot & Zero-shot Learning"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.03,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S2",
+                    "title": "Leveraging LLMs for Business",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S2",
+                    "title": "Designing Prompts for a Customer Service Chatbot",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S3",
+                "n": "rag_fine_tuning",
+                "title": "RAG & Fine-Tuning LLMs",
+                "auto_completed": false,
+                "why_this_skill": "Customizing LLMs through RAG and fine-tuning is essential for building domain-specific, accurate, and context-aware generative AI applications.",
+                "lessons": [
+                  "Retrieval Augmented Generation (RAG) Architectures",
+                  "Data Preparation for Fine-Tuning",
+                  "Evaluating Fine-Tuned LLMs"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.03,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S3",
+                    "title": "Customizing LLMs with RAG and Fine-tuning",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S3",
+                    "title": "Reducing Hallucinations in a RAG System",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S4",
+                "n": "multimodal_ai",
+                "title": "Multimodal AI & Advanced Applications",
+                "auto_completed": false,
+                "why_this_skill": "Multimodal AI represents the next frontier, integrating different data types (text, image, audio) to create more comprehensive and intelligent systems.",
+                "lessons": [
+                  "Vision-Language Models (VLMs)",
+                  "Generative Adversarial Networks (GANs) for Images",
+                  "Diffusion Models for Content Generation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.03,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S4",
+                    "title": "Exploring Multimodal Generative Models",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S4",
+                    "title": "Building an Image Captioning System",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M5.2",
+            "title": "Responsible AI & Ethics",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "4 skills are critical for developing and deploying AI systems responsibly, ensuring fairness, transparency, and ethical considerations are integrated into the entire ML lifecycle.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M2_S1",
+                "n": "ai_fairness_bias_mitigation",
+                "title": "AI Fairness & Bias Mitigation",
+                "auto_completed": false,
+                "why_this_skill": "Addressing bias in AI is crucial for ethical deployment and ensuring equitable outcomes, preventing harm and building trust in AI systems.",
+                "lessons": [
+                  "Sources of Bias in ML",
+                  "Fairness Metrics & Definitions",
+                  "Techniques for Bias Mitigation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.02,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S1",
+                    "title": "Detecting and Mitigating AI Bias",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S1",
+                    "title": "Addressing Bias in a Hiring Recommendation System",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S2",
+                "n": "ai_explainability_transparency",
+                "title": "AI Explainability & Transparency",
+                "auto_completed": false,
+                "why_this_skill": "Ensuring AI models are explainable and transparent is vital for building trust, debugging, and complying with regulations, especially in sensitive applications.",
+                "lessons": [
+                  "Global vs. Local Explanations",
+                  "SHAP & LIME for Deep Learning",
+                  "Model Cards & Datasheets"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.02,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S2",
+                    "title": "Making AI Models Transparent",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S2",
+                    "title": "Explaining a Complex Medical Diagnosis Model",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S3",
+                "n": "ai_safety_security",
+                "title": "AI Safety & Security",
+                "auto_completed": false,
+                "why_this_skill": "Ensuring the safety and security of AI systems is paramount to prevent misuse, adversarial attacks, and unintended consequences.",
+                "lessons": [
+                  "Adversarial Attacks & Defenses",
+                  "Data Poisoning & Model Inversion",
+                  "Privacy-Preserving ML (Federated Learning)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.02,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S3",
+                    "title": "Securing AI Systems Against Attacks",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S3",
+                    "title": "Defending an Image Classifier from Adversarial Attacks",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S4",
+                "n": "ai_governance_policy",
+                "title": "AI Governance & Policy",
+                "auto_completed": false,
+                "why_this_skill": "Understanding AI governance and policy is crucial for navigating the regulatory landscape, ensuring compliance, and building ethical AI products at scale.",
+                "lessons": [
+                  "Ethical AI Frameworks & Guidelines",
+                  "Regulatory Compliance for AI (e.g., EU AI Act)",
+                  "Building an AI Ethics Review Process"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.02,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S4",
+                    "title": "Navigating AI Regulations and Ethics",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S4",
+                    "title": "Developing an Ethical AI Use Policy for a Company",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M5.3",
+            "title": "Data Science Strategy & Communication",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "skill_count_rationale": "4 skills are essential for a Senior Data Science Lead to drive strategic impact, effectively communicate complex insights, and manage data science projects from conception to deployment.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M3_S1",
+                "n": "data_science_product_strategy",
+                "title": "Data Science Product Strategy",
+                "auto_completed": false,
+                "why_this_skill": "Aligning data science initiatives with business goals and product strategy is crucial for driving tangible impact and influencing product decisions.",
+                "lessons": [
+                  "Identifying High-Impact ML Opportunities",
+                  "Defining Success Metrics for ML Products",
+                  "Roadmapping & Prioritization for DS Teams"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.02,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M3_S1",
+                    "title": "Strategic Impact of Data Science",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M3_S1",
+                    "title": "Proposing a New AI Product Feature to Leadership",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M3_S2",
+                "n": "technical_communication_storytelling",
+                "title": "Technical Communication & Storytelling",
+                "auto_completed": false,
+                "why_this_skill": "Effectively communicating complex technical concepts and insights to diverse audiences is a hallmark of a senior data scientist, enabling influence and adoption.",
+                "lessons": [
+                  "Crafting Compelling Data Narratives",
+                  "Presenting Technical Findings to Non-Technical Stakeholders",
+                  "Writing Clear & Concise Technical Documentation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.02,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M3_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M3_S2",
+                    "title": "Mastering Data Storytelling",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M3_S2",
+                    "title": "Presenting Complex Model Results to Executives",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M3_S3",
+                "n": "project_management_ds",
+                "title": "Project Management for Data Science",
+                "auto_completed": false,
+                "why_this_skill": "Leading data science projects requires strong project management skills, from scoping and planning to execution and stakeholder management.",
+                "lessons": [
+                  "Agile Methodologies for DS",
+                  "Stakeholder Management & Expectation Setting",
+                  "Resource Allocation & Team Leadership"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.02,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M3_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M3_S3",
+                    "title": "Leading Data Science Projects",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M3_S3",
+                    "title": "Managing a Data Science Project with Shifting Requirements",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M05_M3_S4",
+                "n": "career_growth_leadership",
+                "title": "Career Growth & Leadership in Data Science",
+                "auto_completed": false,
+                "why_this_skill": "Developing leadership skills and understanding career pathways is essential for advancing into senior and principal data scientist roles, driving impact and mentoring others.",
+                "lessons": [
+                  "Mentorship & Team Building",
+                  "Influencing Without Authority",
+                  "Building a Personal Brand in DS"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "locked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.02,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M3_S4",
+                    "title": "Becoming a Data Science Leader",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M3_S4",
+                    "title": "Mentoring a Junior Data Scientist on a Complex Project",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "As a senior data scientist, how do you balance technical depth with business impact, and how do you communicate complex machine learning concepts to non-technical stakeholders to drive product decisions?"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "current_salary_lpa": 0,
+    "known_skills": [],
+    "capability_gap": {
+      "gap_score": 0.7,
+      "recommended_milestones": 5,
+      "recommended_modules_per_milestone": 3,
+      "recommended_skill_density": 4,
+      "reasoning": "Gap analysis: identity_distance=0.60; experience_mod=0.10; time_mod=1.00; skill_mod=0.00; gap_score=0.70. Recommend 5 milestone(s), 3 module(s) per milestone, 4 skill(s) per module."
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": false,
+      "duration_weeks": 27,
+      "budget_hours": 172.8,
+      "demand_hours": 172.5,
+      "weekly_hours_needed": 13.5,
+      "breakdown": {
+        "video_hours": 45.0,
+        "mastery_hours": 90.0,
+        "scenario_hours": 2.5,
+        "interview_hours": 5.0,
+        "project_hours": 30.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": false,
+        "duration_weeks": 27,
+        "budget_hours": 172.8,
+        "demand_hours": 172.5,
+        "weekly_hours_needed": 13.5,
+        "breakdown": {
+          "video_hours": 45.0,
+          "mastery_hours": 90.0,
+          "scenario_hours": 2.5,
+          "interview_hours": 5.0,
+          "project_hours": 30.0
+        }
+      },
+      "time_budget": {
+        "pass": false,
+        "reason": "estimated 170.5h exceeds 125% of budget 102.4h",
+        "budget_hours": 102.4,
+        "estimated_total_hours": 170.5
+      },
+      "starts_where_they_are": {
+        "pass": false,
+        "reason": "Level='senior' but every M01 skill has p=0. ZPD rule requires pre-existing mastery priors for non-beginner learners."
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "beginner or no known_skills — skip check"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 8% (5/60). Full JD validation pending.",
+        "filler_ratio": 0.083,
+        "total_skills": 60
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 60 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "AI-first check passed — all milestones have multi-layer AI work"
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "current_salary_lpa not available"
+      },
+      "capability_gap_alignment": {
+        "pass": true,
+        "reason": "capability_gap alignment OK"
+      }
+    },
+    "quality_validators": {
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": true,
+        "reason": "All projects have meaningful implementation + deployment"
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "No forbidden skills for this target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "50 catalog violation(s)",
+        "violations": [
+          "Skill 'python_data_structures' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'scikit_learn_basics' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'data_visualization_advanced' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'decision_trees_ensembles' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'support_vector_machines' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'k_nearest_neighbors' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'missing_data_imputation' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'categorical_encoding' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'feature_generation' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'cross_validation_bootstrapping' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'hyperparameter_tuning' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'model_interpretability_xai' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'dimensionality_reduction' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'anomaly_outlier_detection' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'association_rule_mining' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'time_series_fundamentals' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'arima_prophet_forecasting' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'ab_testing_design' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'causal_inference_basics' in M2.3 not found in any AVAILABLE_COURSES",
+          "Module 'M3.1' ('MLOps Fundamentals & Model Serving') resembles unavailable course 'mlops'",
+          "Skill 'mlops_principles' in M3.1 not found in any AVAILABLE_COURSES",
+          "Skill 'model_api_development' in M3.1 not found in any AVAILABLE_COURSES",
+          "Skill 'model_registry_versioning' in M3.1 not found in any AVAILABLE_COURSES",
+          "Skill 'aws_sagemaker_basics' in M3.2 not found in any AVAILABLE_COURSES",
+          "Skill 'serverless_ml_lambda' in M3.2 not found in any AVAILABLE_COURSES",
+          "Skill 'cloud_security_compliance' in M3.2 not found in any AVAILABLE_COURSES",
+          "Skill 'data_model_drift_detection' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'ml_monitoring_alerting' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'automated_retraining_pipelines' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'incident_response_ml' in M3.3 not found in any AVAILABLE_COURSES",
+          "Skill 'neural_network_basics' in M4.1 not found in any AVAILABLE_COURSES",
+          "Skill 'convolutional_neural_networks' in M4.1 not found in any AVAILABLE_COURSES",
+          "Skill 'recurrent_neural_networks' in M4.1 not found in any AVAILABLE_COURSES",
+          "Skill 'automated_feature_engineering' in M4.2 not found in any AVAILABLE_COURSES",
+          "Skill 'feature_stores' in M4.2 not found in any AVAILABLE_COURSES",
+          "Skill 'data_validation_testing' in M4.2 not found in any AVAILABLE_COURSES",
+          "Skill 'data_pipeline_orchestration' in M4.2 not found in any AVAILABLE_COURSES",
+          "Skill 'ml_system_architecture' in M4.3 not found in any AVAILABLE_COURSES",
+          "Skill 'distributed_ml_training' in M4.3 not found in any AVAILABLE_COURSES",
+          "Skill 'data_governance_ml' in M4.3 not found in any AVAILABLE_COURSES",
+          "Module 'M5.1' ('NLP & Generative AI Applications') resembles unavailable course 'nlp'",
+          "Skill 'large_language_models_llms' in M5.1 not found in any AVAILABLE_COURSES",
+          "Skill 'multimodal_ai' in M5.1 not found in any AVAILABLE_COURSES",
+          "Skill 'ai_fairness_bias_mitigation' in M5.2 not found in any AVAILABLE_COURSES",
+          "Skill 'ai_explainability_transparency' in M5.2 not found in any AVAILABLE_COURSES",
+          "Skill 'ai_governance_policy' in M5.2 not found in any AVAILABLE_COURSES",
+          "Module 'M5.3' ('Data Science Strategy & Communication') resembles unavailable course 'data science'",
+          "Skill 'technical_communication_storytelling' in M5.3 not found in any AVAILABLE_COURSES",
+          "Skill 'project_management_ds' in M5.3 not found in any AVAILABLE_COURSES",
+          "Skill 'career_growth_leadership' in M5.3 not found in any AVAILABLE_COURSES"
+        ]
+      }
+    }
+  }
+}
