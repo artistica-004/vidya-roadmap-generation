@@ -609,10 +609,17 @@ onboarding_json_chain = onboarding_json_prompt | llm | StrOutputParser()
 # =====================================================
 # SIDEBAR
 # =====================================================
+<<<<<<< HEAD
 st.sidebar.markdown("## ⚙️ Test Settings")
 weekly_hours = st.sidebar.slider("Weekly Hours", 2, 20, 5)
 st.sidebar.markdown("---")
 st.sidebar.caption("Vidya V3 · Roadmap Lab · Gemini + Pinecone + BKT")
+=======
+# st.sidebar.markdown("## ⚙️ Test Settings")
+# weekly_hours = st.sidebar.slider("Weekly Hours", 2, 20, 5)
+# st.sidebar.markdown("---")
+# st.sidebar.caption("Vidya V3 · Roadmap Lab · Gemini + Pinecone + BKT")
+>>>>>>> 05dce03 (Clean initial commit)
 
 # =====================================================
 # HERO
@@ -1232,4 +1239,8 @@ if st.session_state.roadmap_data:
         file_name="vidya_roadmap_v3.json",
         mime="application/json",
         key="download_roadmap_json"
+<<<<<<< HEAD
     )
+=======
+    )
+>>>>>>> 05dce03 (Clean initial commit)
