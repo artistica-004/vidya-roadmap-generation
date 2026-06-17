@@ -609,10 +609,10 @@ onboarding_json_chain = onboarding_json_prompt | llm | StrOutputParser()
 # =====================================================
 # SIDEBAR
 # =====================================================
-# st.sidebar.markdown("## ⚙️ Test Settings")
-# weekly_hours = st.sidebar.slider("Weekly Hours", 2, 20, 5)
-# st.sidebar.markdown("---")
-# st.sidebar.caption("Vidya V3 · Roadmap Lab · Gemini + Pinecone + BKT")
+st.sidebar.markdown("## ⚙️ Test Settings")
+weekly_hours = st.sidebar.slider("Weekly Hours", 2, 20, 5)
+st.sidebar.markdown("---")
+st.sidebar.caption("Vidya V3 · Roadmap Lab · Gemini + Pinecone + BKT")
 
 # =====================================================
 # HERO
