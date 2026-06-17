@@ -1,0 +1,1585 @@
+{
+  "id": "2af4f73d-8212-4639-a090-18ad291e3d9c",
+  "user_id": "user_020",
+  "ai_session_id": "ai_sess_20260603161759_ca953e9e",
+  "ai_roadmap_id": "ai_roadmap_20260603161759_ffdb57c8",
+  "target_role": "IT Helpdesk Technician",
+  "icp_type": "low",
+  "language": "en",
+  "starting_milestone": "L1",
+  "current_active_milestone": "L1",
+  "vision_profile": {
+    "current_state": "Vivek is currently a Cyber Cafe Operator in Jabalpur, solving daily computer problems for customers but without formal recognition or a structured IT role.",
+    "main_blocker": "His biggest obstacle is the lack of formal training in core IT Helpdesk areas like Windows administration, LAN troubleshooting, and ticketing systems, which prevents him from converting his practical experience into a recognized IT job.",
+    "vision_12mo": "Within 12 months, Vivek aims to be a confident IT Helpdesk Technician, earning a stable salary of 30,000 INR/month, with his skills formally recognized and valued in a professional IT environment.",
+    "top_motivation": "He is highly motivated to formalize his existing problem-solving skills and gain a proper title and career path, moving beyond informal work where his efforts are often unacknowledged."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:19:16.668197",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "L1",
+      "identity_label": "IT Helpdesk Foundations",
+      "identity_statement": "Apne existing skills ko formalize karo aur IT Helpdesk ki buniyad mazboot banao!",
+      "market_value_display": "Entry-level IT Support (1.8 - 2.5 LPA)",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L1M1",
+          "title": "Hardware & OS Basics",
+          "description": "Apne hardware aur software ke basic gyan ko formalize karo aur Windows OS ki gehri samajh banao.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M1S1",
+              "title": "Computer Hardware Basics",
+              "description": "Computer ke andar kya hai aur kaise kaam karta hai, iski pehchan aur basic troubleshooting.",
+              "difficulty": 0.15,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S1",
+                  "title": "Hardware Components: Pehchan aur Kaam",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S1",
+                  "title": "Faulty RAM: Identify & Replace",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M1S2",
+              "title": "Windows OS Navigation & Settings",
+              "description": "Windows operating system ko effectively navigate karna aur zaruri settings ko manage karna seekho.",
+              "difficulty": 0.2,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S2",
+                  "title": "Windows 10/11 Interface aur Control Panel",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S2",
+                  "title": "User Profile Settings Adjust Karna",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M1S3",
+              "title": "Software Installation & Updates",
+              "description": "Applications ko install, uninstall aur update karne ka sahi tareeka seekho.",
+              "difficulty": 0.25,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S3",
+                  "title": "MS Office aur Drivers Install Karna",
+                  "duration_minutes": 14,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S3",
+                  "title": "Conflicting Software Uninstall Karna",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M2",
+          "title": "Windows Troubleshooting Fundamentals",
+          "description": "Windows ki common problems ko pehchanne aur theek karne ke tareeke seekho.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M2S1",
+              "title": "Basic Windows Error Resolution",
+              "description": "Common Windows errors jaise 'Blue Screen of Death' (BSOD) aur application crashes ko resolve karna.",
+              "difficulty": 0.3,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S1",
+                  "title": "Windows Troubleshooting Tools ka Istemal",
+                  "duration_minutes": 16,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S1",
+                  "title": "Application Crash Issue Ko Fix Karna",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M2S2",
+              "title": "Driver & Device Management",
+              "description": "Device drivers ko install, update aur troubleshoot karna, aur Device Manager ka istemal.",
+              "difficulty": 0.35,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S2",
+                  "title": "Device Manager aur Driver Updates",
+                  "duration_minutes": 13,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S2",
+                  "title": "Non-Functional Printer Driver Fix Karna",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M2S3",
+              "title": "User Account & Permissions",
+              "description": "Windows mein user accounts banana, manage karna aur permissions set karna.",
+              "difficulty": 0.4,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S3",
+                  "title": "Local User Accounts aur Group Policy",
+                  "duration_minutes": 17,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S3",
+                  "title": "New User Account Create aur Permissions Set Karna",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M3",
+          "title": "Network Essentials for Support",
+          "description": "Basic networking concepts aur connectivity issues ko samajhna aur theek karna.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M3S1",
+              "title": "Network Concepts & Topologies",
+              "description": "Networking ke buniyadi concepts, jaise LAN, WAN, aur network topologies ko samjho.",
+              "difficulty": 0.2,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S1",
+                  "title": "Network Types aur Unke Components",
+                  "duration_minutes": 14,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S1",
+                  "title": "Small Office Network Diagram Banana",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M3S2",
+              "title": "IP Addressing & Basic Connectivity",
+              "description": "IP addresses, subnet masks, aur basic network connectivity tests (ping, ipconfig) ko samjho.",
+              "difficulty": 0.3,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S2",
+                  "title": "IP Addressing Fundamentals aur Network Commands",
+                  "duration_minutes": 19,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S2",
+                  "title": "Network Connectivity Issue Diagnose Karna",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M3S3",
+              "title": "Wi-Fi & Printer Network Setup",
+              "description": "Wireless networks aur network printers ko setup aur troubleshoot karna.",
+              "difficulty": 0.35,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S2",
+                  "SKILL_L1M1S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S3",
+                  "title": "Wireless Router aur Network Printer Configuration",
+                  "duration_minutes": 16,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S3",
+                  "title": "Client ka Wi-Fi Connect Na Hona Fix Karna",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L2",
+      "identity_label": "Advanced Troubleshooting & Support Systems",
+      "identity_statement": "Apni troubleshooting skills ko next level par le jao aur professional IT tools ka istemal seekho!",
+      "market_value_display": "Junior IT Helpdesk (2.5 - 3.5 LPA)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L2M1",
+          "title": "Advanced Windows Administration",
+          "description": "Windows ke advanced features ko manage karna aur system performance ko optimize karna seekho.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M1S1",
+              "title": "Disk Management & File Systems",
+              "description": "Hard drive partitions, file systems (NTFS, FAT32), aur disk health management ko samjho.",
+              "difficulty": 0.45,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S1",
+                  "title": "Disk Partitioning aur File System Repair",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S1",
+                  "title": "Corrupted Drive ko Recover Karna",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M1S2",
+              "title": "System Performance & Task Manager",
+              "description": "System performance ko monitor karna, Task Manager aur Resource Monitor ka istemal karke bottlenecks identify karna.",
+              "difficulty": 0.5,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S2",
+                  "title": "Performance Monitor aur Startup Programs",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S2",
+                  "title": "Slow PC Performance ko Diagnose Karna",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M1S3",
+              "title": "Remote Desktop & Assistance",
+              "description": "Remote Desktop Connection aur Remote Assistance ka istemal karke users ko remotely support karna.",
+              "difficulty": 0.55,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S3",
+                  "title": "Remote Access Tools ka Safe Istemal",
+                  "duration_minutes": 14,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S3",
+                  "title": "Remote User ki Problem Solve Karna",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M2",
+          "title": "LAN Troubleshooting & Connectivity",
+          "description": "Local Area Network (LAN) ki gehri troubleshooting aur connectivity issues ko resolve karna.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M2S1",
+              "title": "Network Command Line Tools",
+              "description": "Advanced network commands jaise tracert, netstat, nslookup ka istemal karna.",
+              "difficulty": 0.45,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S1",
+                  "title": "Advanced Network Diagnostics Commands",
+                  "duration_minutes": 17,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S1",
+                  "title": "Website Access Issue Diagnose Karna",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M2S2",
+              "title": "Router/Modem Configuration Basics",
+              "description": "Basic router aur modem settings ko access aur configure karna (DHCP, DNS, Port Forwarding).",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S2",
+                  "title": "Home Router Settings aur Security",
+                  "duration_minutes": 19,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S2",
+                  "title": "New Router Setup aur Wi-Fi Password Change Karna",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M2S3",
+              "title": "Common LAN Issues & Solutions",
+              "description": "LAN mein aane wali common problems jaise slow network, intermittent connectivity ko diagnose aur resolve karna.",
+              "difficulty": 0.55,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S3",
+                  "title": "LAN Troubleshooting Best Practices",
+                  "duration_minutes": 16,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S3",
+                  "title": "Office Network Slowdown Issue Fix Karna",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M3",
+          "title": "Ticketing Systems & IT Best Practices",
+          "description": "Professional IT support mein ticketing systems aur best practices ka istemal karna seekho.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M3S1",
+              "title": "Introduction to Ticketing Systems",
+              "description": "Ticketing systems (jaise Zendesk, Freshdesk) ka parichay aur unka mahatva IT support mein.",
+              "difficulty": 0.4,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S1",
+                  "title": "Ticketing System ka Overview",
+                  "duration_minutes": 12,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S1",
+                  "title": "New Support Ticket Create Karna",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M3S2",
+              "title": "Incident Management Workflow",
+              "description": "ITIL-based incident management workflow ko samjho aur tickets ko effectively manage karna.",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S2",
+                  "title": "Incident Lifecycle aur Resolution Steps",
+                  "duration_minutes": 17,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S2",
+                  "title": "High Priority Ticket ko Handle Karna",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M3S3",
+              "title": "Documentation & Knowledge Base",
+              "description": "Solutions ko document karna aur knowledge base articles banana, taaki future mein help mile.",
+              "difficulty": 0.55,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S3",
+                  "title": "Effective Documentation ke Tips",
+                  "duration_minutes": 13,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S3",
+                  "title": "Common Printer Issue ke liye KB Article Likhna",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L3",
+      "identity_label": "Job Readiness & Professional IT Skills",
+      "identity_statement": "Apne skills ko polish karo, confidence build karo, aur IT Helpdesk job ke liye taiyar ho jao!",
+      "market_value_display": "IT Helpdesk Technician (3.0 - 4.0 LPA)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L3M1",
+          "title": "Practical IT Scenarios & Tools",
+          "description": "Real-world IT problems ko solve karne ke liye advanced tools aur techniques ka istemal karo.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M1S1",
+              "title": "Troubleshooting Complex Scenarios",
+              "description": "Multiple components (hardware, software, network) se jude complex issues ko systematically troubleshoot karna.",
+              "difficulty": 0.6,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M1S2",
+                  "SKILL_L2M2S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S1",
+                  "title": "Systematic Troubleshooting Approach",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S1",
+                  "title": "Intermittent Network aur Application Crash Issue",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M1S2",
+              "title": "Essential IT Support Tools",
+              "description": "Third-party tools jaise CCleaner, Malwarebytes, aur remote monitoring tools ka istemal karna.",
+              "difficulty": 0.65,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S2",
+                  "title": "Popular IT Support Utilities",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S2",
+                  "title": "PC Cleanup aur Optimization Karna",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M1S3",
+              "title": "Customer Communication & Etiquette",
+              "description": "Users ke saath effective communication skills, empathy aur professional etiquette develop karna.",
+              "difficulty": 0.6,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S3",
+                  "title": "Customer Service ke Golden Rules",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S3",
+                  "title": "Frustrated Customer ko Handle Karna",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M2",
+          "title": "IT Security Awareness",
+          "description": "Basic cybersecurity hygiene aur data protection ke principles ko samjho.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M2S1",
+              "title": "Basic Cybersecurity Hygiene",
+              "description": "Strong passwords, phishing awareness, aur safe browsing habits jaise basic security practices.",
+              "difficulty": 0.6,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S1",
+                  "title": "Cybersecurity ke Buniyadi Niyam",
+                  "duration_minutes": 14,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S1",
+                  "title": "Suspicious Email ko Identify Karna",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M2S2",
+              "title": "Malware & Antivirus Management",
+              "description": "Malware ke types, antivirus software ka istemal aur system ko clean rakhna.",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S2",
+                  "title": "Antivirus aur Malware Removal Tools",
+                  "duration_minutes": 16,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S2",
+                  "title": "Virus Infected PC ko Clean Karna",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M2S3",
+              "title": "Data Backup & Recovery Basics",
+              "description": "Important data ka backup lena aur basic data recovery methods ko samjhna.",
+              "difficulty": 0.75,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S3",
+                  "title": "Windows Backup aur Restore Options",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S3",
+                  "title": "Lost Files ko Recover Karna",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M3",
+          "title": "Interview Prep & Career Growth",
+          "description": "Resume banana, interview ki taiyari karna aur apne IT career ko aage badhane ke liye plan karna.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M3S1",
+              "title": "Resume & Portfolio Building",
+              "description": "Ek strong resume aur portfolio banana jo aapki skills aur experience ko highlight kare.",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M1S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S1",
+                  "title": "Impressive Resume kaise banaye",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S1",
+                  "title": "Apne Cyber Cafe Experience ko Resume mein Add Karna",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M3S2",
+              "title": "Mock Interviews & Technical Questions",
+              "description": "Common IT Helpdesk interview questions ki practice karna aur mock interviews dena.",
+              "difficulty": 0.8,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M1S1",
+                  "SKILL_L3M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S2",
+                  "title": "IT Helpdesk Interview Questions aur Answers",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S2",
+                  "title": "Mock Interview: 'Tell me about a time you failed'",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M3S3",
+              "title": "Career Pathing & Continuous Learning",
+              "description": "IT industry mein future career paths ko explore karna aur continuous learning ki importance.",
+              "difficulty": 0.85,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S3",
+                  "title": "IT Certifications aur Growth Opportunities",
+                  "duration_minutes": 12,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S3",
+                  "title": "Apne liye 5-Year Career Plan Banana",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:19:16.668197",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:19:16.668197",
+  "updated_at": "2026-06-03T16:19:16.668197",
+  "confirmed_at": "2026-06-03T16:19:16.668197",
+  "published_at": null
+}

@@ -1,0 +1,1481 @@
+{
+  "id": "beef5f3b-38e1-442e-aa24-7c0294c1d81c",
+  "user_id": "user_012",
+  "ai_session_id": "ai_sess_20260603160514_5690e1e6",
+  "ai_roadmap_id": "ai_roadmap_20260603160514_b1ab6c1e",
+  "target_role": "Technical Support Associate",
+  "icp_type": "low",
+  "language": "en",
+  "starting_milestone": "L1",
+  "current_active_milestone": "L1",
+  "vision_profile": {
+    "current_state": "Mohit is a 23-year-old B.Com graduate from Kota, currently working as a Customer Support Executive, earning 18,000 INR monthly with 1 year of experience.",
+    "main_blocker": "His biggest fear is that his commerce background will lead to rejection from technical roles, and he lacks specific skills in networking, SQL, and advanced troubleshooting.",
+    "vision_12mo": "Within 12 months, Mohit aims to transition into a Technical Support Associate role, earning 32,000 INR monthly, securing a stable job with growth potential, free from call targets and rotational shifts.",
+    "top_motivation": "He is driven by the desire for a stable career with predictable salary growth, where his efforts are valued beyond call metrics, and he can avoid the demanding schedule of rotational shifts."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:06:31.432898",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "L1",
+      "identity_label": "Foundations of Technical Support",
+      "identity_statement": "Build a strong base in technical communication and core IT concepts to confidently step into the world of technical support.",
+      "market_value_display": "Entry-Level Technical Support (2.5 - 3.5 LPA)",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L1M1",
+          "title": "Professional Communication for Tech Support",
+          "description": "Learn to communicate clearly and professionally, a critical skill for any technical support role, especially in writing.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M1S1",
+              "title": "Crafting Clear Support Emails",
+              "description": "Master the art of writing concise, professional, and empathetic emails to users and colleagues.",
+              "difficulty": 0.15,
+              "estimated_hours": 2,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S1",
+                  "title": "Effective Email Writing for Technical Support",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S1",
+                  "title": "Drafting a Resolution Email",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M1S2",
+              "title": "Active Listening & Empathy in Tech",
+              "description": "Develop skills to truly understand user issues and respond with empathy, even in technical contexts.",
+              "difficulty": 0.2,
+              "estimated_hours": 2,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S2",
+                  "title": "Listening Skills for Problem Solving",
+                  "duration_minutes": 10,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S2",
+                  "title": "Handling a Frustrated User Call",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M1S3",
+              "title": "Explaining Technical Concepts Simply",
+              "description": "Learn to break down complex technical information into easy-to-understand language for non-technical users.",
+              "difficulty": 0.25,
+              "estimated_hours": 2,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S1",
+                  "SKILL_L1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S3",
+                  "title": "Simplifying Tech Jargon",
+                  "duration_minutes": 12,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S3",
+                  "title": "Explaining 'Cache' to a Beginner",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M2",
+          "title": "Introduction to IT & Networking Basics",
+          "description": "Get familiar with fundamental computer hardware, operating systems, and the very basics of how networks function.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M2S4",
+              "title": "Understanding Computer Hardware & OS",
+              "description": "Identify key computer components and understand the role of an operating system (Windows, macOS, Linux basics).",
+              "difficulty": 0.2,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S4",
+                  "title": "Computer Hardware & OS Fundamentals",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S4",
+                  "title": "Identifying PC Components",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S4",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M2S5",
+              "title": "Basic Network Components & Topologies",
+              "description": "Learn about routers, switches, cables, and how devices connect in different network layouts.",
+              "difficulty": 0.25,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S4"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S5",
+                  "title": "Networking 101: Devices & Layouts",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S5",
+                  "title": "Mapping a Small Office Network",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S5",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M2S6",
+              "title": "IP Addressing & DNS Fundamentals",
+              "description": "Understand how devices get addresses (IPs) and how domain names (like google.com) are translated.",
+              "difficulty": 0.3,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S5"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S6",
+                  "title": "IP Addresses & DNS Explained",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S6",
+                  "title": "Troubleshooting a 'Website Not Found' Error",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S6",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M3",
+          "title": "Essential Troubleshooting Mindset",
+          "description": "Develop a systematic approach to problem-solving, learning how to gather information and diagnose issues effectively.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M3S7",
+              "title": "The Troubleshooting Process Flow",
+              "description": "Understand the logical steps to diagnose and resolve technical issues, from identification to resolution.",
+              "difficulty": 0.28,
+              "estimated_hours": 2,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S6"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S7",
+                  "title": "Structured Problem Solving for Tech",
+                  "duration_minutes": 14,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S7",
+                  "title": "Diagnosing a Printer Issue",
+                  "difficulty": 0.32,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S7",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M3S8",
+              "title": "Gathering Information Effectively",
+              "description": "Learn to ask the right questions and collect relevant data to understand the root cause of a problem.",
+              "difficulty": 0.3,
+              "estimated_hours": 2,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S7"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S8",
+                  "title": "Asking Smart Questions in Support",
+                  "duration_minutes": 10,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S8",
+                  "title": "Investigating a Slow Computer Report",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S8",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L2",
+      "identity_label": "Core Technical Skills for Support",
+      "identity_statement": "Dive deeper into networking, learn essential SQL for data handling, and practice hands-on system troubleshooting.",
+      "market_value_display": "Junior Technical Support (3.5 - 4.5 LPA)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L2M1",
+          "title": "Deeper Networking & Connectivity",
+          "description": "Expand your networking knowledge to understand common protocols, diagnostic tools, and wireless issues.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M1S9",
+              "title": "Common Network Protocols (TCP/IP, HTTP)",
+              "description": "Understand how different protocols enable communication over networks and the internet.",
+              "difficulty": 0.35,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S6"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S9",
+                  "title": "Network Protocols Explained",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S9",
+                  "title": "Identifying Protocol Issues",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S9",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M1S10",
+              "title": "Network Troubleshooting Tools (Ping, Tracert, Ipconfig)",
+              "description": "Learn to use essential command-line tools to diagnose network connectivity issues.",
+              "difficulty": 0.4,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M1S9",
+                  "SKILL_L1M3S8"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S10",
+                  "title": "Using Network Diagnostic Commands",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S10",
+                  "title": "Diagnosing 'No Internet Access'",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S10",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M1S11",
+              "title": "Wi-Fi & Wireless Network Issues",
+              "description": "Understand common problems with wireless networks and how to troubleshoot them.",
+              "difficulty": 0.45,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M1S10"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S11",
+                  "title": "Troubleshooting Wireless Connectivity",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S11",
+                  "title": "Resolving a 'Weak Wi-Fi Signal'",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S11",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M2",
+          "title": "Database Basics with SQL",
+          "description": "Learn the fundamentals of databases and how to retrieve and manipulate data using basic SQL queries.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M2S12",
+              "title": "Introduction to Databases & SQL",
+              "description": "Understand what databases are, why they are used, and the role of SQL in managing them.",
+              "difficulty": 0.38,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S4"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S12",
+                  "title": "What is a Database? SQL Basics",
+                  "duration_minutes": 16,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S12",
+                  "title": "Understanding Database Structure",
+                  "difficulty": 0.42,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S12",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M2S13",
+              "title": "Basic SQL Queries (SELECT, WHERE, ORDER BY)",
+              "description": "Learn to retrieve specific data from databases using fundamental SQL commands.",
+              "difficulty": 0.45,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M2S12"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S13",
+                  "title": "SQL Data Retrieval Essentials",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S13",
+                  "title": "Finding Customer Information",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S13",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M2S14",
+              "title": "Modifying Data with SQL (INSERT, UPDATE, DELETE)",
+              "description": "Practice adding, changing, and removing records in a database using SQL commands.",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M2S13"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S14",
+                  "title": "SQL Data Manipulation Language (DML)",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S14",
+                  "title": "Updating User Account Details",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S14",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M3",
+          "title": "Practical System Troubleshooting",
+          "description": "Gain hands-on experience in diagnosing and resolving issues across different operating systems and applications.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M3S15",
+              "title": "OS-Specific Troubleshooting (Windows/Linux Basics)",
+              "description": "Learn common troubleshooting steps for Windows and basic command-line diagnostics for Linux.",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S4",
+                  "SKILL_L1M3S8"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S15",
+                  "title": "Windows & Linux Basic Troubleshooting",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S15",
+                  "title": "Fixing a Frozen Windows Application",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S15",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M3S16",
+              "title": "Application & Software Troubleshooting",
+              "description": "Learn to diagnose and resolve issues related to specific software applications and their configurations.",
+              "difficulty": 0.55,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S15"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S16",
+                  "title": "Diagnosing Software Problems",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S16",
+                  "title": "Troubleshooting a Software Installation Failure",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S16",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L3",
+      "identity_label": "Advanced Troubleshooting & Job Readiness",
+      "identity_statement": "Master advanced problem-solving, efficient ticket management, and prepare confidently for your Technical Support Associate role.",
+      "market_value_display": "Technical Support Associate (4.5 - 6 LPA)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L3M1",
+          "title": "Advanced Troubleshooting Techniques",
+          "description": "Learn to use remote tools, tackle complex network issues, and analyze logs for deeper problem diagnosis.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M1S17",
+              "title": "Remote Support Tools & Best Practices",
+              "description": "Become proficient with tools like TeamViewer or AnyDesk and understand the etiquette of remote assistance.",
+              "difficulty": 0.6,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S16"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S17",
+                  "title": "Mastering Remote Desktop Support",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S17",
+                  "title": "Guiding a User Through Remote Access",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S17",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M1S18",
+              "title": "Advanced Network Problem Solving",
+              "description": "Tackle more complex network issues, including firewall configurations, VPN connectivity, and performance bottlenecks.",
+              "difficulty": 0.65,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M1S11"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S18",
+                  "title": "Deep Dive into Network Diagnostics",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S18",
+                  "title": "Troubleshooting VPN Connection Failure",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S18",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M1S19",
+              "title": "Log Analysis for Troubleshooting",
+              "description": "Learn to read and interpret system and application logs to pinpoint the root cause of issues.",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S16"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S19",
+                  "title": "Understanding System Logs",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S19",
+                  "title": "Diagnosing a Server Crash from Logs",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S19",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M2",
+          "title": "Efficient Ticket Management & Documentation",
+          "description": "Master the art of managing support tickets, documenting solutions, and adhering to service level agreements.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M2S20",
+              "title": "Incident Management & Prioritization",
+              "description": "Learn to categorize, prioritize, and manage technical incidents efficiently using ITIL principles.",
+              "difficulty": 0.68,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S3",
+                  "SKILL_L1M3S8"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S20",
+                  "title": "ITIL Basics for Support Professionals",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S20",
+                  "title": "Prioritizing Incoming Support Tickets",
+                  "difficulty": 0.72,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S20",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M2S21",
+              "title": "Effective Ticket Documentation",
+              "description": "Learn to write clear, comprehensive, and actionable notes for every support ticket.",
+              "difficulty": 0.72,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M2S20"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S21",
+                  "title": "Best Practices for Ticket Notes",
+                  "duration_minutes": 12,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S21",
+                  "title": "Documenting a Complex Resolution",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S21",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M2S22",
+              "title": "SLA Adherence & Escalation Procedures",
+              "description": "Understand Service Level Agreements and when and how to escalate issues appropriately.",
+              "difficulty": 0.75,
+              "estimated_hours": 2,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M2S21"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S22",
+                  "title": "Meeting SLAs and Escalation Paths",
+                  "duration_minutes": 10,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S22",
+                  "title": "Deciding When to Escalate",
+                  "difficulty": 0.78,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S22",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M3",
+          "title": "Technical Support Interview Preparation",
+          "description": "Prepare for job interviews by practicing common questions, refining your resume, and building confidence.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M3S23",
+              "title": "Common Technical Support Interview Questions",
+              "description": "Practice answering frequently asked technical and behavioral questions for support roles.",
+              "difficulty": 0.8,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M1S19",
+                  "SKILL_L3M2S22"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S23",
+                  "title": "Top Tech Support Interview Questions",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S23",
+                  "title": "Responding to a 'Tell Me About Yourself' Prompt",
+                  "difficulty": 0.82,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S23",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M3S24",
+              "title": "Resume & Cover Letter for Tech Support",
+              "description": "Tailor your resume and cover letter to highlight your new technical skills and customer service experience.",
+              "difficulty": 0.82,
+              "estimated_hours": 2,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M3S23"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S24",
+                  "title": "Crafting a Winning Tech Support Resume",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S24",
+                  "title": "Customizing Your Resume for a Job Posting",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S24",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M3S25",
+              "title": "Mock Interview Practice",
+              "description": "Engage in simulated interviews to build confidence and refine your responses before real job applications.",
+              "difficulty": 0.85,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M3S24"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S25",
+                  "title": "Live Mock Interview Session",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S25",
+                  "title": "Simulated Technical Support Interview",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S25",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:06:31.432898",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:06:31.432898",
+  "updated_at": "2026-06-03T16:06:31.432898",
+  "confirmed_at": "2026-06-03T16:06:31.432898",
+  "published_at": null
+}

@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging into AWS ECR...
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 471112784201.dkr.ecr.ap-south-1.amazonaws.com
+  build:
+    commands:
+      - echo Build started on $(date)
+      - echo Building roadmap_generator Docker image...
+      - docker build -t $REPO_NAME:$IMAGE_TAG -f roadmap_plan/Dockerfile roadmap_plan
+      - docker tag $REPO_NAME:$IMAGE_TAG 471112784201.dkr.ecr.ap-south-1.amazonaws.com/$REPO_NAME:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo Build completed on $(date)
+      - echo Pushing roadmap_generator image to ECR...
+      - docker push 471112784201.dkr.ecr.ap-south-1.amazonaws.com/$REPO_NAME:$IMAGE_TAG
+      - "echo Deploying to Lambda with Serverless..."
+      - export ROADMAP_IMAGE_URI=471112784201.dkr.ecr.ap-south-1.amazonaws.com/$REPO_NAME:$IMAGE_TAG
+      - npm install -g serverless@3.38.0
+      - serverless deploy function --function generateRoadmap --stage $STAGE --region ap-south-1
+      - echo Lambda deployment completed successfully!

@@ -1,0 +1,1053 @@
+{
+  "id": "c4cca718-c3c7-4a4f-858b-145adb830255",
+  "user_id": "user_014",
+  "ai_session_id": "ai_sess_20260603161006_dbaf89fb",
+  "ai_roadmap_id": "ai_roadmap_20260603161006_f2eb5ff6",
+  "target_role": "Digital Operations Associate",
+  "icp_type": "low",
+  "language": "en",
+  "starting_milestone": "L1",
+  "current_active_milestone": "L1",
+  "vision_profile": {
+    "current_state": "Sameer is an unemployed fresher with a B.A. in English, currently facing pressure from relatives regarding his job prospects and degree.",
+    "main_blocker": "His biggest obstacle is a lack of specific, in-demand digital operations skills like advanced Excel, basic SQL, and process documentation, coupled with uncertainty about employer expectations and job interview preparation.",
+    "vision_12mo": "Within 12 months, Sameer envisions himself confidently employed as a Digital Operations Associate, earning 25,000 INR monthly, and proving his capabilities to himself and his family.",
+    "top_motivation": "His primary motivation is to start earning quickly to alleviate financial pressure and gain respect and validation from his relatives, who have started questioning his career path."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:11:07.969217",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "L1",
+      "identity_label": "Digital Foundations & Workplace Readiness",
+      "identity_statement": "Sameer, let's build a strong base of digital literacy and professional communication to confidently step into the corporate world and silence those doubts!",
+      "market_value_display": "Entry Level Digital Skills",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L1M1",
+          "title": "Digital Workplace Essentials",
+          "description": "Strengthen your fundamental computer skills and learn how to navigate the digital tools used in every modern office.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKL_L1M1S1",
+              "title": "Basic Computer & Internet Proficiency",
+              "description": "Master essential computer operations, file management, and efficient internet usage for professional tasks.",
+              "difficulty": 0.1,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S1",
+                  "title": "Computer Basics: Files, Folders & Browsers",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S1",
+                  "title": "Organizing Your Digital Workspace",
+                  "difficulty": 0.1,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L1M1S2",
+              "title": "Effective Google Search & Information Gathering",
+              "description": "Learn advanced search techniques to quickly find reliable information, a crucial skill for any digital role.",
+              "difficulty": 0.15,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M1S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S2",
+                  "title": "Google Search Hacks for Professionals",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S2",
+                  "title": "Researching a New Project Topic",
+                  "difficulty": 0.15,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L1M1S3",
+              "title": "Professional Email & Calendar Management",
+              "description": "Learn to write clear, concise emails and manage your schedule effectively using digital calendars.",
+              "difficulty": 0.2,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M1S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S3",
+                  "title": "Email Etiquette & Google Calendar Basics",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S3",
+                  "title": "Scheduling a Team Meeting & Sending a Follow-up",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M2",
+          "title": "Workplace Communication Basics",
+          "description": "Leverage your English degree to master professional written and verbal communication, essential for any job.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKL_L1M2S1",
+              "title": "Clear Written Communication (English)",
+              "description": "Refine your English writing for professional contexts, focusing on clarity, conciseness, and tone in reports and messages.",
+              "difficulty": 0.25,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M1S3"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S1",
+                  "title": "Professional Writing: Reports & Memos",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S1",
+                  "title": "Drafting a Project Update Email",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L1M2S2",
+              "title": "Basic Presentation Skills (MS PowerPoint)",
+              "description": "Create impactful presentations using PowerPoint to convey information clearly and professionally.",
+              "difficulty": 0.3,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M1S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S2",
+                  "title": "PowerPoint for Beginners: Design & Delivery",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S2",
+                  "title": "Designing a Simple Project Overview Deck",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M3",
+          "title": "Introduction to Digital Operations",
+          "description": "Understand what Digital Operations is all about and how your skills fit into this exciting field.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKL_L1M3S1",
+              "title": "Understanding Digital Operations Roles",
+              "description": "Explore the responsibilities and daily tasks of a Digital Operations Associate, setting the stage for your career.",
+              "difficulty": 0.35,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M2S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S1",
+                  "title": "What is Digital Operations? A Career Guide",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S1",
+                  "title": "Day in the Life of a Digital Ops Associate",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L2",
+      "identity_label": "Core Digital Operations Tools",
+      "identity_statement": "Sameer, now let's master the essential tools like Excel and SQL that drive efficiency in digital operations and make you highly employable!",
+      "market_value_display": "Digital Operations Associate (2-3 LPA)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L2M1",
+          "title": "Excel for Operations",
+          "description": "Become proficient in Excel, a cornerstone tool for data management and analysis in digital operations.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKL_L2M1S1",
+              "title": "Intermediate Excel Functions",
+              "description": "Learn VLOOKUP, HLOOKUP, IF statements, and other key functions to manipulate and analyze data efficiently.",
+              "difficulty": 0.4,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M1S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S1",
+                  "title": "Excel Power-Up: VLOOKUP, IF & More",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S1",
+                  "title": "Automating Customer Data Lookup",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L2M1S2",
+              "title": "Data Cleaning & Formatting in Excel",
+              "description": "Clean messy datasets, remove duplicates, and format data for clear presentation and accurate analysis.",
+              "difficulty": 0.45,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M1S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S2",
+                  "title": "Clean Data, Clear Insights: Excel Techniques",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S2",
+                  "title": "Cleaning a Raw Sales Report",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L2M1S3",
+              "title": "Basic Data Analysis with Pivot Tables",
+              "description": "Summarize and analyze large datasets quickly using Pivot Tables to extract meaningful insights.",
+              "difficulty": 0.5,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M1S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S3",
+                  "title": "Pivot Tables: Your Data Storyteller",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S3",
+                  "title": "Analyzing Customer Feedback with Pivot Tables",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M2",
+          "title": "SQL Fundamentals",
+          "description": "Get started with SQL to query and understand data stored in databases, a key skill for digital operations.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKL_L2M2S1",
+              "title": "Introduction to Databases & SQL Queries",
+              "description": "Understand what databases are and how SQL is used to interact with them, starting with basic query structure.",
+              "difficulty": 0.55,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M3S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S1",
+                  "title": "SQL 101: What are Databases & Your First Query",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S1",
+                  "title": "Exploring a Customer Database Schema",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L2M2S2",
+              "title": "Basic Data Retrieval (SELECT, FROM, WHERE)",
+              "description": "Write fundamental SQL queries to select specific data, filter results, and retrieve information from tables.",
+              "difficulty": 0.6,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M2S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S2",
+                  "title": "SQL SELECT, FROM, WHERE: Your First Data Pull",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S2",
+                  "title": "Finding Customers from a Specific City",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M3",
+          "title": "Workflow & Process Basics",
+          "description": "Understand how business processes work and how to identify opportunities for improvement, a core part of digital operations.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKL_L2M3S1",
+              "title": "Understanding Business Workflows",
+              "description": "Learn to identify and map out simple business processes, understanding their steps and dependencies.",
+              "difficulty": 0.65,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M3S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S1",
+                  "title": "Business Processes: From Start to Finish",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S1",
+                  "title": "Mapping a Customer Onboarding Process",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L3",
+      "identity_label": "Job Readiness & Placement",
+      "identity_statement": "Sameer, you've built the skills! Now, let's prepare thoroughly for interviews, create a compelling profile, and confidently land your first digital operations role. Your hard work will pay off!",
+      "market_value_display": "Digital Operations Associate (2.5-3.5 LPA)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L3M1",
+          "title": "Process Documentation & Optimization",
+          "description": "Learn to document and improve operational processes, adding significant value to any organization.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKL_L3M1S1",
+              "title": "Process Mapping & Documentation",
+              "description": "Create clear process maps and documentation, a critical skill for maintaining efficiency and knowledge transfer.",
+              "difficulty": 0.7,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M3S1",
+                  "SKL_L1M2S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S1",
+                  "title": "Documenting Processes: Best Practices",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S1",
+                  "title": "Documenting a Software Bug Reporting Process",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L3M1S2",
+              "title": "Identifying Process Improvement Areas",
+              "description": "Analyze existing processes to find bottlenecks and suggest improvements for greater efficiency.",
+              "difficulty": 0.75,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L3M1S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S2",
+                  "title": "Finding & Fixing Process Bottlenecks",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S2",
+                  "title": "Suggesting Improvements for a Support Ticket System",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M2",
+          "title": "Interview & Profile Building",
+          "description": "Craft a compelling professional profile and master interview techniques to impress potential employers.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKL_L3M2S1",
+              "title": "Resume & Cover Letter Crafting",
+              "description": "Create a professional resume and cover letter that highlight your new skills and make you stand out.",
+              "difficulty": 0.8,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M2S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S1",
+                  "title": "Resume & Cover Letter That Get You Hired",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S1",
+                  "title": "Tailoring Your Resume for a Digital Ops Role",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L3M2S2",
+              "title": "Common Interview Questions & STAR Method",
+              "description": "Prepare for typical interview questions and learn the STAR method to structure compelling answers about your experiences.",
+              "difficulty": 0.85,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L3M2S1"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S2",
+                  "title": "Ace Your Interview: STAR Method Explained",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S2",
+                  "title": "Practicing Behavioral Interview Questions",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M3",
+          "title": "Effective Job Search Strategy",
+          "description": "Learn how to find relevant job openings, network effectively, and navigate the application process.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKL_L3M3S1",
+              "title": "Effective Job Search Platforms & Networking",
+              "description": "Discover the best platforms for digital operations jobs and learn basic networking strategies to find opportunities.",
+              "difficulty": 0.9,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L3M2S2"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "skill_mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S1",
+                  "title": "Job Search Mastery: Platforms & LinkedIn",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S1",
+                  "title": "Identifying Target Companies & Roles",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:11:07.969217",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:11:07.969217",
+  "updated_at": "2026-06-03T16:11:07.969217",
+  "confirmed_at": "2026-06-03T16:11:07.969217",
+  "published_at": null
+}

@@ -1,0 +1,1608 @@
+{
+  "status": "success",
+  "user_id": "001",
+  "ai_session_id": "ai_sess_c4fd7b3a731e",
+  "ai_roadmap_id": "ai_roadmap_20260523112606_8b0b2879",
+  "roadmap": {
+    "id": "f1f43a58-0077-472e-adc2-66e6239ac9be",
+    "user_id": 1,
+    "ai_session_id": "ai_sess_c4fd7b3a731e",
+    "ai_roadmap_id": "ai_roadmap_20260523112606_8b0b2879",
+    "title": "Architectural Foundations for Senior Engineers",
+    "description": "A comprehensive program designed to elevate Senior Full Stack Engineers into proficient system architects, focusing on architectural decision-making, scalability, and best practices for modern cloud environments.",
+    "estimated_duration_weeks": 6,
+    "difficulty_level": "intermediate",
+    "roadmap_structure": {
+      "course": {
+        "ai_course_id": "ai_course_03c88e5fe062",
+        "title": "Architectural Foundations for Senior Engineers",
+        "description": "A comprehensive program designed to elevate Senior Full Stack Engineers into proficient system architects, focusing on architectural decision-making, scalability, and best practices for modern cloud environments.",
+        "difficulty_level": "intermediate",
+        "chapters": [
+          {
+            "ai_chapter_id": "ai_chapter_4cea618ada4f",
+            "title": "Introduction to System Design",
+            "sequence_number": 1,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_b5be9424ec96",
+                "title": "What is System Design?",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_b659acdf3d4b",
+                "title": "Goals of System Design",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_c11e2176a517",
+                "title": "Scalability, Availability, Reliability",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_68e88a46f8ba",
+                "title": "Performance, Security, Maintainability",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_28ee2261ac1c",
+                "title": "Trade-offs in System Design",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_14c7ad544f86",
+                "title": "CAP Theorem",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which of the following best describes the primary goal of system design?",
+                "options": [
+                  "To create the most technologically advanced system possible.",
+                  "To build a system that perfectly matches the initial requirements without considering future changes.",
+                  "To design a system that effectively meets specific needs while balancing various constraints and trade-offs.",
+                  "To minimize development costs regardless of performance or scalability."
+                ],
+                "correct_answer": "To design a system that effectively meets specific needs while balancing various constraints and trade-offs.",
+                "explanation": "System design is about finding the optimal solution within given constraints, not necessarily about using the newest technology or ignoring future needs. It's a balancing act.",
+                "ai_quiz_id": "ai_quiz_004157c36bcf",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_b5be9424ec96"
+              },
+              {
+                "question": "A system experiences a sudden surge in user traffic. Which of the following design considerations is MOST directly related to handling this situation effectively?",
+                "options": [
+                  "Maintainability",
+                  "Security",
+                  "Scalability",
+                  "Reliability"
+                ],
+                "correct_answer": "Scalability",
+                "explanation": "Scalability refers to the system's ability to handle increased load or traffic. While the other options are important, scalability is the most direct concern when dealing with a traffic surge.",
+                "ai_quiz_id": "ai_quiz_0d2bcf677d81",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_b659acdf3d4b"
+              },
+              {
+                "question": "According to the CAP Theorem, a distributed system can, at most, guarantee which two of the following three properties?",
+                "options": [
+                  "Consistency, Availability, Partition Tolerance",
+                  "Consistency, Performance, Security",
+                  "Availability, Reliability, Security",
+                  "Scalability, Availability, Consistency"
+                ],
+                "correct_answer": "Consistency, Availability, Partition Tolerance",
+                "explanation": "The CAP Theorem states that a distributed system can only guarantee two out of Consistency, Availability, and Partition Tolerance. You must choose two and make trade-offs.",
+                "ai_quiz_id": "ai_quiz_7eb870506d8e",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_c11e2176a517"
+              },
+              {
+                "question": "You are designing a system that requires extremely low latency. Which of the following trade-offs might you consider making to achieve this?",
+                "options": [
+                  "Increasing data redundancy to improve reliability.",
+                  "Prioritizing strong consistency over availability.",
+                  "Implementing complex security measures.",
+                  "Reducing the number of features offered by the system."
+                ],
+                "correct_answer": "Prioritizing strong consistency over availability.",
+                "explanation": "Strong consistency often requires more coordination between nodes, which can increase latency. Relaxing consistency requirements can improve availability and reduce latency, making it a common trade-off.",
+                "ai_quiz_id": "ai_quiz_63f11db57665",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_68e88a46f8ba"
+              },
+              {
+                "question": "Which of the following is the BEST example of a design decision that improves system maintainability?",
+                "options": [
+                  "Using a single, monolithic codebase for all system components.",
+                  "Writing code with minimal comments to reduce file size.",
+                  "Adopting a modular architecture with well-defined interfaces.",
+                  "Optimizing code for maximum performance, even if it reduces readability."
+                ],
+                "correct_answer": "Adopting a modular architecture with well-defined interfaces.",
+                "explanation": "A modular architecture makes it easier to understand, modify, and test individual components of the system, improving maintainability. Monolithic codebases and unreadable code hinder maintainability.",
+                "ai_quiz_id": "ai_quiz_944be4c691aa",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_28ee2261ac1c"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_f4e642ca4fea",
+            "title": "Architectural Patterns",
+            "sequence_number": 2,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_ae171f12c817",
+                "title": "Monolithic Architecture",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_6bfe0c2f0829",
+                "title": "Microservices Architecture",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_31ba1625a603",
+                "title": "Layered Architecture",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_01372af4630c",
+                "title": "Event-Driven Architecture",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_39e2fe3df9fb",
+                "title": "Service-Oriented Architecture (SOA)",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_66c6fe829f55",
+                "title": "Space-Based Architecture",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which architectural pattern is MOST suitable for a small startup with limited resources and a relatively simple application?",
+                "options": [
+                  "A. Microservices Architecture",
+                  "B. Monolithic Architecture",
+                  "C. Event-Driven Architecture",
+                  "D. Space-Based Architecture"
+                ],
+                "correct_answer": "B. Monolithic Architecture",
+                "explanation": "Monolithic architecture is simpler to develop, deploy, and maintain initially, making it a good fit for small teams with limited resources and simpler applications. The overhead of managing distributed systems in microservices is usually not justified at this stage.",
+                "ai_quiz_id": "ai_quiz_ab83a6f35978",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_ae171f12c817"
+              },
+              {
+                "question": "A large e-commerce platform needs to handle a massive influx of orders during a flash sale. Which architectural pattern would be MOST effective in scaling the order processing component independently?",
+                "options": [
+                  "A. Layered Architecture",
+                  "B. Service-Oriented Architecture (SOA)",
+                  "C. Space-Based Architecture",
+                  "D. Monolithic Architecture"
+                ],
+                "correct_answer": "C. Space-Based Architecture",
+                "explanation": "Space-Based Architecture is designed for high scalability and fault tolerance. It allows for independent scaling of processing units (e.g., order processing) by replicating them across multiple nodes, making it ideal for handling peak loads.",
+                "ai_quiz_id": "ai_quiz_66e5961c7bc1",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_6bfe0c2f0829"
+              },
+              {
+                "question": "In which architectural pattern do services communicate with each other through a central intermediary, often using a standardized protocol like SOAP?",
+                "options": [
+                  "A. Microservices Architecture",
+                  "B. Event-Driven Architecture",
+                  "C. Service-Oriented Architecture (SOA)",
+                  "D. Layered Architecture"
+                ],
+                "correct_answer": "C. Service-Oriented Architecture (SOA)",
+                "explanation": "SOA relies on a central service bus or intermediary for communication between services. This often involves standardized protocols like SOAP for interoperability.",
+                "ai_quiz_id": "ai_quiz_c52fdf238c1c",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_31ba1625a603"
+              },
+              {
+                "question": "Which architectural pattern promotes loose coupling and asynchronous communication between components, often using message queues or topics?",
+                "options": [
+                  "A. Monolithic Architecture",
+                  "B. Event-Driven Architecture",
+                  "C. Layered Architecture",
+                  "D. Space-Based Architecture"
+                ],
+                "correct_answer": "B. Event-Driven Architecture",
+                "explanation": "Event-Driven Architecture is characterized by its use of events to trigger actions in different components. This promotes loose coupling and asynchronous communication, allowing components to operate independently.",
+                "ai_quiz_id": "ai_quiz_e28b9d1710f2",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_01372af4630c"
+              },
+              {
+                "question": "A system is designed with distinct tiers for presentation, business logic, and data access. Which architectural pattern is being used?",
+                "options": [
+                  "A. Microservices Architecture",
+                  "B. Event-Driven Architecture",
+                  "C. Layered Architecture",
+                  "D. Space-Based Architecture"
+                ],
+                "correct_answer": "C. Layered Architecture",
+                "explanation": "Layered Architecture organizes the system into distinct layers, each with a specific responsibility (e.g., presentation, business logic, data access). This promotes separation of concerns and modularity.",
+                "ai_quiz_id": "ai_quiz_7eff37372945",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_39e2fe3df9fb"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_ff4a316c82c4",
+            "title": "Design Patterns",
+            "sequence_number": 3,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_ef26d8fd9910",
+                "title": "Creational Patterns (Singleton, Factory)",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_844f17ad8b6f",
+                "title": "Structural Patterns (Adapter, Decorator)",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_853ba87e0b26",
+                "title": "Behavioral Patterns (Observer, Strategy)",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_e3f4248521d4",
+                "title": "Anti-Patterns",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_e3bed6fa91d2",
+                "title": "Choosing the Right Pattern",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_f063d36eeeb2",
+                "title": "Benefits of Design Patterns",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which design pattern would be MOST suitable for ensuring that only one instance of a database connection exists throughout an application?",
+                "options": [
+                  "A) Factory",
+                  "B) Singleton",
+                  "C) Observer",
+                  "D) Adapter"
+                ],
+                "correct_answer": "B) Singleton",
+                "explanation": "The Singleton pattern restricts the instantiation of a class to one object. This is ideal for managing resources like database connections where multiple instances could lead to conflicts or inefficiencies.",
+                "ai_quiz_id": "ai_quiz_184a11fd5e95",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_ef26d8fd9910"
+              },
+              {
+                "question": "You have a legacy system that uses XML for data exchange. Your new system uses JSON. Which design pattern would be MOST appropriate to enable communication between these two systems without modifying either system's core logic?",
+                "options": [
+                  "A) Decorator",
+                  "B) Strategy",
+                  "C) Adapter",
+                  "D) Observer"
+                ],
+                "correct_answer": "C) Adapter",
+                "explanation": "The Adapter pattern allows classes with incompatible interfaces to work together. It acts as a translator, converting the interface of one class into an interface that another class expects.",
+                "ai_quiz_id": "ai_quiz_81ce632fc020",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_844f17ad8b6f"
+              },
+              {
+                "question": "Consider a scenario where you have multiple algorithms for calculating shipping costs, and you want to be able to switch between them at runtime. Which design pattern would be MOST appropriate?",
+                "options": [
+                  "A) Observer",
+                  "B) Strategy",
+                  "C) Factory",
+                  "D) Decorator"
+                ],
+                "correct_answer": "B) Strategy",
+                "explanation": "The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. This allows the algorithm to vary independently from clients that use it.",
+                "ai_quiz_id": "ai_quiz_8c403dafffe4",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_853ba87e0b26"
+              },
+              {
+                "question": "Which of the following is a common anti-pattern that involves tightly coupling different parts of a system, making it difficult to change or test?",
+                "options": [
+                  "A) God Class",
+                  "B) Singleton",
+                  "C) Factory Method",
+                  "D) Observer"
+                ],
+                "correct_answer": "A) God Class",
+                "explanation": "A God Class is an anti-pattern where a single class becomes excessively large and responsible for too many unrelated tasks, leading to tight coupling and reduced maintainability.",
+                "ai_quiz_id": "ai_quiz_88e2e6661bb7",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_e3f4248521d4"
+              },
+              {
+                "question": "You are building a GUI application where multiple views need to be updated whenever the underlying data changes. Which design pattern would be MOST suitable for managing this relationship?",
+                "options": [
+                  "A) Adapter",
+                  "B) Strategy",
+                  "C) Decorator",
+                  "D) Observer"
+                ],
+                "correct_answer": "D) Observer",
+                "explanation": "The Observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This is perfect for GUI applications where views need to reflect changes in the data model.",
+                "ai_quiz_id": "ai_quiz_42210a715a1f",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_e3bed6fa91d2"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_bed1775a806e",
+            "title": "Scalability and Performance",
+            "sequence_number": 4,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_986030f99d95",
+                "title": "Vertical Scaling vs. Horizontal Scaling",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_cd754bde0a97",
+                "title": "Load Balancing",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_b9ae5711b8a4",
+                "title": "Caching Strategies (CDN, In-Memory)",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_80d26db8d36d",
+                "title": "Database Optimization",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_2b4788350dce",
+                "title": "Asynchronous Processing",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_5ee0427c68e6",
+                "title": "Message Queues",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which of the following scenarios is BEST suited for horizontal scaling?",
+                "options": [
+                  "A database server requiring more RAM to handle larger datasets.",
+                  "An application experiencing increased traffic during peak hours.",
+                  "A single-threaded application that is CPU-bound.",
+                  "A legacy system with tightly coupled components."
+                ],
+                "correct_answer": "An application experiencing increased traffic during peak hours.",
+                "explanation": "Horizontal scaling involves adding more machines to distribute the workload. Increased traffic is a classic scenario where distributing requests across multiple servers improves performance and availability.",
+                "ai_quiz_id": "ai_quiz_ebc201d0b275",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_986030f99d95"
+              },
+              {
+                "question": "Which caching strategy is MOST effective for reducing latency for users accessing static content from geographically diverse locations?",
+                "options": [
+                  "In-memory caching on the application server.",
+                  "Database caching.",
+                  "Content Delivery Network (CDN).",
+                  "Browser caching."
+                ],
+                "correct_answer": "Content Delivery Network (CDN).",
+                "explanation": "CDNs store content on geographically distributed servers, allowing users to access content from a server closer to their location, thus reducing latency.",
+                "ai_quiz_id": "ai_quiz_ce419346f2c9",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_cd754bde0a97"
+              },
+              {
+                "question": "Which of the following database optimization techniques is MOST likely to improve the performance of frequently executed read queries?",
+                "options": [
+                  "Adding more indexes to all tables.",
+                  "Denormalizing the database schema.",
+                  "Using stored procedures for all queries.",
+                  "Optimizing query execution plans and adding relevant indexes."
+                ],
+                "correct_answer": "Optimizing query execution plans and adding relevant indexes.",
+                "explanation": "Optimizing query execution plans ensures the database uses the most efficient method to retrieve data. Relevant indexes speed up data retrieval by allowing the database to quickly locate specific rows.",
+                "ai_quiz_id": "ai_quiz_10309d0b22de",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_b9ae5711b8a4"
+              },
+              {
+                "question": "What is the PRIMARY benefit of using asynchronous processing and message queues in a system?",
+                "options": [
+                  "Improved security of data transmission.",
+                  "Increased code complexity and maintainability.",
+                  "Decoupling of components and improved responsiveness.",
+                  "Reduced resource utilization on the server."
+                ],
+                "correct_answer": "Decoupling of components and improved responsiveness.",
+                "explanation": "Asynchronous processing allows components to communicate without waiting for immediate responses, decoupling them and improving the overall responsiveness of the system. Message queues facilitate this communication.",
+                "ai_quiz_id": "ai_quiz_d96d4c89364d",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_80d26db8d36d"
+              },
+              {
+                "question": "A company is experiencing performance bottlenecks due to a large number of concurrent requests hitting a single API endpoint. Which load balancing strategy would be MOST effective in distributing the load evenly across multiple servers?",
+                "options": [
+                  "Sticky sessions.",
+                  "Round Robin.",
+                  "Least Connections.",
+                  "IP Hash."
+                ],
+                "correct_answer": "Least Connections.",
+                "explanation": "The Least Connections algorithm directs new requests to the server with the fewest active connections, ensuring a more even distribution of load, especially when request processing times vary.",
+                "ai_quiz_id": "ai_quiz_e919fbd07a90",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_2b4788350dce"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_2d5dcb8b83cf",
+            "title": "High Availability and Reliability",
+            "sequence_number": 5,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_c4d718248536",
+                "title": "Redundancy and Failover",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_b9e9d4482e20",
+                "title": "Replication and Sharding",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_135538e8d91b",
+                "title": "Monitoring and Alerting",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_78de05a171ea",
+                "title": "Disaster Recovery",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_4cf9721d2b46",
+                "title": "Fault Tolerance",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_a764e8ff2499",
+                "title": "Circuit Breakers",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which of the following strategies is MOST effective in minimizing downtime during a server failure by automatically switching to a backup server?",
+                "options": [
+                  "A. Load Balancing",
+                  "B. Redundancy and Failover",
+                  "C. Replication",
+                  "D. Sharding"
+                ],
+                "correct_answer": "B. Redundancy and Failover",
+                "explanation": "Redundancy and Failover specifically addresses the scenario of a server failure by having a backup server ready to take over, minimizing downtime. Load balancing distributes traffic but doesn't inherently handle server failures. Replication copies data, but doesn't automatically switch traffic. Sharding partitions data, not servers.",
+                "ai_quiz_id": "ai_quiz_91ff7742c4c5",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_c4d718248536"
+              },
+              {
+                "question": "A database administrator is implementing a strategy to distribute data across multiple database servers to improve performance and scalability. Which technique is being employed?",
+                "options": [
+                  "A. Replication",
+                  "B. Sharding",
+                  "C. Load Balancing",
+                  "D. Caching"
+                ],
+                "correct_answer": "B. Sharding",
+                "explanation": "Sharding involves partitioning data across multiple database servers, which directly addresses performance and scalability concerns by distributing the load. Replication creates copies of data, load balancing distributes traffic, and caching stores frequently accessed data for faster retrieval.",
+                "ai_quiz_id": "ai_quiz_c262fc98c422",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_b9e9d4482e20"
+              },
+              {
+                "question": "Which of the following is the PRIMARY purpose of a circuit breaker pattern in a microservices architecture?",
+                "options": [
+                  "A. To improve network bandwidth utilization.",
+                  "B. To prevent cascading failures by stopping requests to failing services.",
+                  "C. To automatically scale up resources during peak loads.",
+                  "D. To encrypt data transmitted between services."
+                ],
+                "correct_answer": "B. To prevent cascading failures by stopping requests to failing services.",
+                "explanation": "The circuit breaker pattern is designed to prevent cascading failures. When a service is failing, the circuit breaker 'opens' and stops sending requests to that service, preventing the failure from propagating to other services. It does not directly address bandwidth, scaling, or encryption.",
+                "ai_quiz_id": "ai_quiz_d5c329575e4c",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_135538e8d91b"
+              },
+              {
+                "question": "Which of the following is the MOST critical component for proactively identifying and addressing potential issues before they impact system availability?",
+                "options": [
+                  "A. Disaster Recovery Plan",
+                  "B. Redundant Hardware",
+                  "C. Monitoring and Alerting",
+                  "D. Data Replication"
+                ],
+                "correct_answer": "C. Monitoring and Alerting",
+                "explanation": "Monitoring and Alerting systems continuously track system performance and health, allowing for early detection and resolution of potential issues. Disaster recovery plans are for recovering from major incidents, redundant hardware provides backup, and data replication ensures data availability, but none of these proactively identify issues like monitoring and alerting does.",
+                "ai_quiz_id": "ai_quiz_f35af521336b",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_78de05a171ea"
+              },
+              {
+                "question": "Which strategy is MOST appropriate for ensuring business continuity in the event of a complete data center outage due to a natural disaster?",
+                "options": [
+                  "A. Implementing a robust firewall.",
+                  "B. Regularly backing up data to the same data center.",
+                  "C. Developing and testing a Disaster Recovery plan with offsite backups.",
+                  "D. Increasing server CPU capacity."
+                ],
+                "correct_answer": "C. Developing and testing a Disaster Recovery plan with offsite backups.",
+                "explanation": "A Disaster Recovery (DR) plan with offsite backups is specifically designed to address complete data center outages. It outlines the steps to restore operations in a different location using backups stored separately from the primary data center. A firewall protects against network threats, backing up to the same data center is ineffective in a disaster, and increasing CPU capacity doesn't address a data center outage.",
+                "ai_quiz_id": "ai_quiz_63e8125f48ae",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_4cf9721d2b46"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_fc26c9ca628b",
+            "title": "Database Design",
+            "sequence_number": 6,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_07fd383f689b",
+                "title": "Relational vs. NoSQL Databases",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_def823989154",
+                "title": "Database Indexing",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_d7b8ecc6dbc0",
+                "title": "Data Partitioning",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_20b9480f1597",
+                "title": "ACID Properties",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_9dda634a1174",
+                "title": "CAP Theorem Revisited",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_08d07e4652cd",
+                "title": "Choosing the Right Database",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which of the following scenarios would MOST benefit from using a NoSQL database over a traditional relational database?",
+                "options": [
+                  "A. Managing financial transactions requiring strict adherence to ACID properties.",
+                  "B. Storing and querying highly structured data with complex relationships and frequent joins.",
+                  "C. Handling rapidly changing, unstructured data from social media feeds with high read/write volumes.",
+                  "D. Maintaining a consistent inventory of products with predefined schemas and reporting requirements."
+                ],
+                "correct_answer": "C. Handling rapidly changing, unstructured data from social media feeds with high read/write volumes.",
+                "explanation": "NoSQL databases excel at handling unstructured or semi-structured data, high volumes of data, and rapid changes, making them suitable for social media feeds. Relational databases are better for structured data and ACID compliance.",
+                "ai_quiz_id": "ai_quiz_7d98dafbb6a9",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_07fd383f689b"
+              },
+              {
+                "question": "Which of the following is the PRIMARY benefit of database indexing?",
+                "options": [
+                  "A. Reducing the overall storage space required by the database.",
+                  "B. Improving the speed of data retrieval operations.",
+                  "C. Guaranteeing complete data consistency across all database nodes.",
+                  "D. Simplifying the process of database schema design."
+                ],
+                "correct_answer": "B. Improving the speed of data retrieval operations.",
+                "explanation": "Database indexes are primarily used to speed up data retrieval by creating a lookup table that allows the database to quickly locate specific rows without scanning the entire table.",
+                "ai_quiz_id": "ai_quiz_429261f1f0ff",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_def823989154"
+              },
+              {
+                "question": "Which data partitioning strategy involves distributing data across multiple database instances based on a range of values in a specific column (e.g., customer ID)?",
+                "options": [
+                  "A. Horizontal Partitioning (Sharding)",
+                  "B. Vertical Partitioning",
+                  "C. Functional Partitioning",
+                  "D. Geographical Partitioning"
+                ],
+                "correct_answer": "A. Horizontal Partitioning (Sharding)",
+                "explanation": "Horizontal partitioning, also known as sharding, divides a table into multiple tables (shards) based on a range of values in a specific column. This allows for distributing the data across multiple database instances.",
+                "ai_quiz_id": "ai_quiz_d04794f199e5",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_d7b8ecc6dbc0"
+              },
+              {
+                "question": "In the context of the CAP theorem, which two properties are typically prioritized when designing a distributed database system for an e-commerce platform that needs to handle a large volume of transactions and can tolerate occasional inconsistencies?",
+                "options": [
+                  "A. Consistency and Availability",
+                  "B. Consistency and Partition Tolerance",
+                  "C. Availability and Partition Tolerance",
+                  "D. Atomicity and Durability"
+                ],
+                "correct_answer": "C. Availability and Partition Tolerance",
+                "explanation": "E-commerce platforms often prioritize availability and partition tolerance to ensure that the system remains operational even during network failures or partitions. They might sacrifice strict consistency to achieve this.",
+                "ai_quiz_id": "ai_quiz_bd6beac25140",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_20b9480f1597"
+              },
+              {
+                "question": "Which ACID property ensures that a transaction is treated as a single, indivisible unit of work, meaning either all changes are applied, or none are?",
+                "options": [
+                  "A. Atomicity",
+                  "B. Consistency",
+                  "C. Isolation",
+                  "D. Durability"
+                ],
+                "correct_answer": "A. Atomicity",
+                "explanation": "Atomicity guarantees that a transaction is treated as a single, indivisible unit. If any part of the transaction fails, the entire transaction is rolled back, ensuring that the database remains in a consistent state.",
+                "ai_quiz_id": "ai_quiz_1a53b6d90e07",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_9dda634a1174"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_3efd236cd138",
+            "title": "Cloud Architecture",
+            "sequence_number": 7,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_d003cda6303e",
+                "title": "Cloud Computing Models (IaaS, PaaS, SaaS)",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_74844cedcae7",
+                "title": "AWS, Azure, GCP Overview",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_5aa656f42c5b",
+                "title": "Serverless Computing",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_3e3c77ab4970",
+                "title": "Microservices in the Cloud",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_1e2f73ff9aa7",
+                "title": "Containerization (Docker, Kubernetes)",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_175bcfd784f7",
+                "title": "Cloud Security",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "A company wants to migrate its existing monolithic application to the cloud. They aim to minimize operational overhead and focus primarily on developing and deploying code. Which cloud computing model would be most suitable for this scenario?",
+                "options": [
+                  "A) Infrastructure as a Service (IaaS)",
+                  "B) Platform as a Service (PaaS)",
+                  "C) Software as a Service (SaaS)",
+                  "D) Function as a Service (FaaS)"
+                ],
+                "correct_answer": "B) Platform as a Service (PaaS)",
+                "explanation": "PaaS provides a platform for developing, running, and managing applications without the complexity of managing the underlying infrastructure. This allows the company to focus on code development and deployment.",
+                "ai_quiz_id": "ai_quiz_4ee4d0c2228b",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_d003cda6303e"
+              },
+              {
+                "question": "Which of the following best describes the primary benefit of using containerization technologies like Docker in a cloud environment?",
+                "options": [
+                  "A) Reduced hardware costs by eliminating the need for physical servers.",
+                  "B) Improved application portability and consistency across different environments.",
+                  "C) Enhanced security by isolating applications from the operating system.",
+                  "D) Automated scaling of infrastructure resources based on application demand."
+                ],
+                "correct_answer": "B) Improved application portability and consistency across different environments.",
+                "explanation": "Containerization packages an application with all its dependencies, ensuring it runs consistently across different environments (development, testing, production) regardless of the underlying infrastructure.",
+                "ai_quiz_id": "ai_quiz_f9816c3796a8",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_74844cedcae7"
+              },
+              {
+                "question": "A development team is building a new application that needs to automatically scale based on fluctuating user demand. They want to avoid managing servers and prefer a pay-per-use model. Which cloud computing approach would be most appropriate?",
+                "options": [
+                  "A) Deploying the application on a virtual machine using IaaS.",
+                  "B) Using a container orchestration platform like Kubernetes.",
+                  "C) Implementing a serverless architecture using Function as a Service (FaaS).",
+                  "D) Utilizing a managed database service within a PaaS environment."
+                ],
+                "correct_answer": "C) Implementing a serverless architecture using Function as a Service (FaaS).",
+                "explanation": "FaaS allows developers to execute code in response to events without managing servers. It automatically scales and charges only for the actual execution time, making it ideal for applications with fluctuating demand.",
+                "ai_quiz_id": "ai_quiz_dbc58c9442ac",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_5aa656f42c5b"
+              },
+              {
+                "question": "Which of the following is a key characteristic of microservices architecture in the cloud?",
+                "options": [
+                  "A) A single, monolithic codebase for the entire application.",
+                  "B) Tightly coupled components that share the same database.",
+                  "C) Independent deployability and scalability of individual services.",
+                  "D) Centralized management of all application resources through a single interface."
+                ],
+                "correct_answer": "C) Independent deployability and scalability of individual services.",
+                "explanation": "Microservices are designed to be independent, allowing each service to be deployed, scaled, and updated independently without affecting other parts of the application.",
+                "ai_quiz_id": "ai_quiz_1948246892fe",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_3e3c77ab4970"
+              },
+              {
+                "question": "In the context of cloud security, what is the primary responsibility of the cloud provider when using an Infrastructure as a Service (IaaS) model?",
+                "options": [
+                  "A) Securing the application code and data stored within the virtual machines.",
+                  "B) Managing user access control and authentication for the application.",
+                  "C) Ensuring the physical security of the data centers and the underlying infrastructure.",
+                  "D) Implementing network security policies and firewalls for the virtual machines."
+                ],
+                "correct_answer": "C) Ensuring the physical security of the data centers and the underlying infrastructure.",
+                "explanation": "In IaaS, the cloud provider is responsible for the security *of* the cloud (physical infrastructure, data centers), while the customer is responsible for security *in* the cloud (operating systems, applications, data).",
+                "ai_quiz_id": "ai_quiz_b5fee995bcd9",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_1e2f73ff9aa7"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_071f03a119b1",
+            "title": "API Design",
+            "sequence_number": 8,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_f3247450e958",
+                "title": "RESTful API Principles",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_0e9d7c25e4e2",
+                "title": "GraphQL API Principles",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_45585aa3644c",
+                "title": "API Versioning",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_7d58a0ab4438",
+                "title": "API Security",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_5f6e3c7b5c97",
+                "title": "API Documentation",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_bc607917cdd1",
+                "title": "API Rate Limiting",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which of the following is the MOST significant advantage of using GraphQL over REST when fetching data from multiple related resources?",
+                "options": [
+                  "A. GraphQL inherently provides better caching mechanisms than REST.",
+                  "B. GraphQL allows clients to request only the specific data they need, reducing over-fetching.",
+                  "C. REST APIs are always more complex to implement than GraphQL APIs.",
+                  "D. GraphQL is supported by all web browsers natively, unlike REST."
+                ],
+                "correct_answer": "B. GraphQL allows clients to request only the specific data they need, reducing over-fetching.",
+                "explanation": "GraphQL's primary advantage is its ability to fetch only the required data, avoiding the over-fetching problem common in REST where endpoints often return more data than needed.",
+                "ai_quiz_id": "ai_quiz_87b7718b90f7",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_f3247450e958"
+              },
+              {
+                "question": "Which HTTP status code is MOST appropriate to return when a client attempts to access a resource they are not authorized to view?",
+                "options": [
+                  "A. 400 Bad Request",
+                  "B. 401 Unauthorized",
+                  "C. 403 Forbidden",
+                  "D. 500 Internal Server Error"
+                ],
+                "correct_answer": "C. 403 Forbidden",
+                "explanation": "403 Forbidden indicates that the server understands the request, but the client does not have permission to access the requested resource. 401 Unauthorized means authentication is required.",
+                "ai_quiz_id": "ai_quiz_5364ef20dee0",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_0e9d7c25e4e2"
+              },
+              {
+                "question": "Which of the following is the BEST practice for API versioning when introducing breaking changes?",
+                "options": [
+                  "A. Modify the existing API without versioning to avoid complexity.",
+                  "B. Introduce a new API version (e.g., /v2/) while maintaining the old version for a transition period.",
+                  "C. Deprecate the old API immediately and force all clients to upgrade.",
+                  "D. Only document the breaking changes and expect clients to adapt."
+                ],
+                "correct_answer": "B. Introduce a new API version (e.g., /v2/) while maintaining the old version for a transition period.",
+                "explanation": "Introducing a new version allows existing clients to continue using the old API while new clients can use the updated API. This provides a smooth transition and avoids breaking existing integrations.",
+                "ai_quiz_id": "ai_quiz_de26e6fec199",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_45585aa3644c"
+              },
+              {
+                "question": "Which security measure is MOST effective in preventing Cross-Site Scripting (XSS) attacks in an API?",
+                "options": [
+                  "A. Implementing strong password policies for API users.",
+                  "B. Validating and sanitizing all input data received by the API.",
+                  "C. Using HTTPS for all API communication.",
+                  "D. Implementing API rate limiting."
+                ],
+                "correct_answer": "B. Validating and sanitizing all input data received by the API.",
+                "explanation": "XSS attacks are primarily mitigated by ensuring that any data received from the client is properly validated and sanitized before being used or displayed. This prevents malicious scripts from being injected into the API's responses.",
+                "ai_quiz_id": "ai_quiz_e405b0dafd43",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_7d58a0ab4438"
+              },
+              {
+                "question": "What is the primary purpose of API rate limiting?",
+                "options": [
+                  "A. To improve the API's response time for all users.",
+                  "B. To prevent denial-of-service (DoS) attacks and protect the API's resources.",
+                  "C. To enforce authentication and authorization for API access.",
+                  "D. To reduce the amount of data transferred between the client and the server."
+                ],
+                "correct_answer": "B. To prevent denial-of-service (DoS) attacks and protect the API's resources.",
+                "explanation": "Rate limiting is primarily used to protect the API from being overwhelmed by excessive requests, which can lead to denial-of-service. It helps ensure fair usage and maintains the API's availability for all users.",
+                "ai_quiz_id": "ai_quiz_a7008710e558",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_5f6e3c7b5c97"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_67e1687d26fa",
+            "title": "Security Considerations",
+            "sequence_number": 9,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_474d5e7cbed1",
+                "title": "Authentication and Authorization",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_216185269037",
+                "title": "OWASP Top 10",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_eebd9feea769",
+                "title": "Data Encryption",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_303aeb2e8192",
+                "title": "Network Security",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_3afc8060b1d4",
+                "title": "Security Auditing",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_ac646f9c40a1",
+                "title": "Penetration Testing",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which of the following is the MOST effective method to prevent SQL injection attacks?",
+                "options": [
+                  "A. Using parameterized queries or prepared statements",
+                  "B. Encoding all user input before displaying it",
+                  "C. Limiting the length of user input fields",
+                  "D. Regularly changing the database password"
+                ],
+                "correct_answer": "A. Using parameterized queries or prepared statements",
+                "explanation": "Parameterized queries/prepared statements treat user input as data, not as executable code, effectively preventing SQL injection. Encoding user input prevents cross-site scripting (XSS), limiting input length offers some mitigation but is not a complete solution, and changing database passwords doesn't directly address SQL injection vulnerabilities.",
+                "ai_quiz_id": "ai_quiz_9f7194f41918",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_474d5e7cbed1"
+              },
+              {
+                "question": "Which of the following authentication methods provides the STRONGEST security against replay attacks?",
+                "options": [
+                  "A. Using static passwords",
+                  "B. Using multi-factor authentication (MFA) with time-based one-time passwords (TOTP)",
+                  "C. Using digital certificates",
+                  "D. Using API keys"
+                ],
+                "correct_answer": "B. Using multi-factor authentication (MFA) with time-based one-time passwords (TOTP)",
+                "explanation": "TOTP, as part of MFA, generates new codes at short intervals, making replayed codes invalid. Static passwords are very vulnerable. Digital certificates can be replayed if the private key is compromised. API keys are susceptible to replay unless additional security measures are implemented.",
+                "ai_quiz_id": "ai_quiz_bb7ae1169f43",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_216185269037"
+              },
+              {
+                "question": "When designing a system that handles sensitive personal data, which encryption method is generally preferred for data at rest?",
+                "options": [
+                  "A. Hashing with a salt",
+                  "B. Symmetric encryption (e.g., AES)",
+                  "C. Asymmetric encryption (e.g., RSA)",
+                  "D. Obfuscation"
+                ],
+                "correct_answer": "B. Symmetric encryption (e.g., AES)",
+                "explanation": "Symmetric encryption is generally preferred for data at rest because it's faster and more efficient than asymmetric encryption for large amounts of data. Hashing is one-way and not suitable for decrypting data. Asymmetric encryption is better suited for key exchange. Obfuscation is not a form of encryption and offers minimal security.",
+                "ai_quiz_id": "ai_quiz_201bc8777d59",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_eebd9feea769"
+              },
+              {
+                "question": "During a penetration test, what type of testing involves providing the testers with full knowledge of the system's architecture, code, and configurations?",
+                "options": [
+                  "A. Black-box testing",
+                  "B. Gray-box testing",
+                  "C. White-box testing",
+                  "D. Blind testing"
+                ],
+                "correct_answer": "C. White-box testing",
+                "explanation": "White-box testing (also known as clear-box testing) provides the testers with complete knowledge of the system. Black-box testing provides no knowledge, gray-box provides partial knowledge, and blind testing is similar to black-box but the testers may have some limited information about the target organization.",
+                "ai_quiz_id": "ai_quiz_870a2eeaa613",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_303aeb2e8192"
+              },
+              {
+                "question": "Which of the following OWASP Top 10 vulnerabilities is MOST directly related to insufficient input validation?",
+                "options": [
+                  "A. Broken Authentication",
+                  "B. Security Misconfiguration",
+                  "C. Injection",
+                  "D. Cross-Site Scripting (XSS)",
+                  "E. Insecure Design"
+                ],
+                "correct_answer": "C. Injection",
+                "explanation": "Injection flaws, such as SQL injection, OS command injection, and LDAP injection, occur when untrusted data is sent to an interpreter as part of a command or query. Insufficient input validation is the primary cause, as it allows malicious code to be injected into the system. While other vulnerabilities can be indirectly related, injection is the most direct consequence.",
+                "ai_quiz_id": "ai_quiz_641e830dc8cf",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_3afc8060b1d4"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_c6fd2b4eccdd",
+            "title": "Microservices Communication",
+            "sequence_number": 10,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_fac6f3350e24",
+                "title": "Synchronous vs. Asynchronous Communication",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_ddeab757c310",
+                "title": "REST vs. Message Queues",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_bb1003224af9",
+                "title": "Service Discovery",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_9d0010ef75b6",
+                "title": "API Gateways",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_513746842b02",
+                "title": "Circuit Breakers",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_21e69be7ea96",
+                "title": "Distributed Tracing",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which of the following scenarios is BEST suited for asynchronous communication between microservices?",
+                "options": [
+                  "A. Processing a user's credit card payment in real-time.",
+                  "B. Retrieving a user's profile information for immediate display.",
+                  "C. Sending a welcome email to a new user after account creation.",
+                  "D. Checking inventory levels before allowing a customer to place an order."
+                ],
+                "correct_answer": "C. Sending a welcome email to a new user after account creation.",
+                "explanation": "Asynchronous communication is ideal for tasks that don't require immediate responses and can be processed in the background. Sending a welcome email doesn't need to block the user's account creation process.",
+                "ai_quiz_id": "ai_quiz_93c7af53b858",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_fac6f3350e24"
+              },
+              {
+                "question": "What is the primary purpose of an API Gateway in a microservices architecture?",
+                "options": [
+                  "A. To manage and orchestrate internal communication between microservices.",
+                  "B. To provide a single entry point for external clients and handle cross-cutting concerns like authentication and rate limiting.",
+                  "C. To store and manage data for all microservices.",
+                  "D. To automatically scale microservices based on traffic demands."
+                ],
+                "correct_answer": "B. To provide a single entry point for external clients and handle cross-cutting concerns like authentication and rate limiting.",
+                "explanation": "An API Gateway acts as a facade, simplifying the interaction between clients and the microservices. It also handles common tasks like authentication, authorization, and rate limiting, reducing the burden on individual microservices.",
+                "ai_quiz_id": "ai_quiz_82bd77fd2d64",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_ddeab757c310"
+              },
+              {
+                "question": "Which of the following is a key benefit of using a message queue for inter-service communication?",
+                "options": [
+                  "A. Guaranteed immediate delivery of messages.",
+                  "B. Reduced complexity in service discovery.",
+                  "C. Increased system resilience and fault tolerance.",
+                  "D. Simplified synchronous request/response patterns."
+                ],
+                "correct_answer": "C. Increased system resilience and fault tolerance.",
+                "explanation": "Message queues decouple services, allowing them to operate independently. If one service is unavailable, messages can still be queued and processed later, improving system resilience.",
+                "ai_quiz_id": "ai_quiz_9f900fa4d8f7",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_bb1003224af9"
+              },
+              {
+                "question": "What problem does a circuit breaker pattern primarily address in a microservices environment?",
+                "options": [
+                  "A. Managing and routing requests to different microservice instances.",
+                  "B. Preventing cascading failures by stopping requests to failing services.",
+                  "C. Automatically scaling microservices based on resource utilization.",
+                  "D. Implementing security policies and access control for microservices."
+                ],
+                "correct_answer": "B. Preventing cascading failures by stopping requests to failing services.",
+                "explanation": "The circuit breaker pattern prevents a failing service from overwhelming other services by temporarily stopping requests to it, giving it time to recover and preventing cascading failures throughout the system.",
+                "ai_quiz_id": "ai_quiz_b0cb8ae1c67c",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_9d0010ef75b6"
+              },
+              {
+                "question": "Which of the following technologies is MOST commonly used for implementing distributed tracing in a microservices architecture?",
+                "options": [
+                  "A. Kubernetes",
+                  "B. Docker",
+                  "C. Zipkin or Jaeger",
+                  "D. Kafka"
+                ],
+                "correct_answer": "C. Zipkin or Jaeger",
+                "explanation": "Zipkin and Jaeger are specifically designed for distributed tracing. They collect and aggregate trace data from different microservices, allowing developers to visualize and analyze request flows and identify performance bottlenecks.",
+                "ai_quiz_id": "ai_quiz_baef01b534ee",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_513746842b02"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_955a66df1f13",
+            "title": "System Monitoring and Logging",
+            "sequence_number": 11,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_d72e237031de",
+                "title": "Centralized Logging",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_d466df482276",
+                "title": "Metrics Collection",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_e880440dfb8f",
+                "title": "Alerting Systems",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_c5cf245a4751",
+                "title": "Log Analysis",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_b506114e9641",
+                "title": "Performance Monitoring",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_9209b30e4937",
+                "title": "Application Performance Monitoring (APM)",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "Which of the following is the MOST significant benefit of using a centralized logging system compared to relying solely on local logs on individual servers?",
+                "options": [
+                  "A. Reduced disk space usage on individual servers.",
+                  "B. Simplified log analysis and correlation across multiple systems.",
+                  "C. Elimination of the need for log rotation.",
+                  "D. Increased security of individual servers."
+                ],
+                "correct_answer": "B. Simplified log analysis and correlation across multiple systems.",
+                "explanation": "Centralized logging allows for easier analysis and correlation of events across different systems, which is crucial for troubleshooting and identifying patterns. While other options might be side effects, they are not the primary benefit.",
+                "ai_quiz_id": "ai_quiz_4dcb57814793",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_d72e237031de"
+              },
+              {
+                "question": "When choosing a metrics collection tool, which factor is MOST important to consider when dealing with a highly dynamic and scalable cloud environment?",
+                "options": [
+                  "A. The tool's ability to generate visually appealing dashboards.",
+                  "B. The tool's compatibility with legacy systems.",
+                  "C. The tool's ability to automatically discover and monitor new instances.",
+                  "D. The tool's cost per server license."
+                ],
+                "correct_answer": "C. The tool's ability to automatically discover and monitor new instances.",
+                "explanation": "In a dynamic cloud environment, instances are frequently created and destroyed. A tool that can automatically discover and monitor these instances without manual configuration is essential for maintaining comprehensive monitoring.",
+                "ai_quiz_id": "ai_quiz_4634b3c779a7",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_d466df482276"
+              },
+              {
+                "question": "Which of the following scenarios would be BEST addressed by implementing Application Performance Monitoring (APM)?",
+                "options": [
+                  "A. Monitoring the CPU utilization of a database server.",
+                  "B. Tracking the end-to-end response time of user requests in a web application.",
+                  "C. Detecting network latency between servers.",
+                  "D. Analyzing operating system security logs for intrusion attempts."
+                ],
+                "correct_answer": "B. Tracking the end-to-end response time of user requests in a web application.",
+                "explanation": "APM is specifically designed to monitor the performance of applications, including tracking user requests, identifying bottlenecks, and providing insights into the application's overall health and performance.",
+                "ai_quiz_id": "ai_quiz_442ea016b003",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_e880440dfb8f"
+              },
+              {
+                "question": "An alerting system triggers an alert based on a sudden spike in CPU utilization on a production server. What is the MOST important next step to take?",
+                "options": [
+                  "A. Immediately restart the server to clear the CPU spike.",
+                  "B. Investigate the root cause of the CPU spike to determine if it's a legitimate issue.",
+                  "C. Disable the alerting system to prevent further notifications.",
+                  "D. Increase the CPU allocation for the server without further investigation."
+                ],
+                "correct_answer": "B. Investigate the root cause of the CPU spike to determine if it's a legitimate issue.",
+                "explanation": "While a CPU spike might indicate a problem, it's crucial to investigate the cause before taking any drastic action. Restarting the server or increasing CPU allocation without understanding the root cause could mask the underlying issue or lead to further problems.",
+                "ai_quiz_id": "ai_quiz_b2b511ecb1bd",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_c5cf245a4751"
+              },
+              {
+                "question": "Which log analysis technique is MOST effective for identifying unusual patterns and anomalies in a large volume of log data?",
+                "options": [
+                  "A. Manually reviewing each log entry.",
+                  "B. Using grep to search for specific keywords.",
+                  "C. Implementing machine learning algorithms for anomaly detection.",
+                  "D. Sorting logs by timestamp and reviewing them sequentially."
+                ],
+                "correct_answer": "C. Implementing machine learning algorithms for anomaly detection.",
+                "explanation": "Machine learning algorithms can automatically learn the normal patterns in log data and identify deviations from those patterns, making them highly effective for detecting anomalies in large volumes of data. Manual review and simple keyword searches are less efficient and less likely to uncover subtle anomalies.",
+                "ai_quiz_id": "ai_quiz_0c74aacf603d",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_b506114e9641"
+              }
+            ]
+          },
+          {
+            "ai_chapter_id": "ai_chapter_0433f4000910",
+            "title": "Case Studies",
+            "sequence_number": 12,
+            "topics": [
+              {
+                "ai_topic_id": "ai_topic_b7f039afbdf8",
+                "title": "Designing a Social Media Platform",
+                "content_type": "video",
+                "sequence_number": 1
+              },
+              {
+                "ai_topic_id": "ai_topic_3aa188df00f0",
+                "title": "Designing an E-commerce Platform",
+                "content_type": "video",
+                "sequence_number": 2
+              },
+              {
+                "ai_topic_id": "ai_topic_24046c2d78d1",
+                "title": "Designing a Streaming Service",
+                "content_type": "video",
+                "sequence_number": 3
+              },
+              {
+                "ai_topic_id": "ai_topic_ac2dace0eb97",
+                "title": "Designing a Search Engine",
+                "content_type": "video",
+                "sequence_number": 4
+              },
+              {
+                "ai_topic_id": "ai_topic_a4f6776559fb",
+                "title": "Designing a Ride-Sharing App",
+                "content_type": "video",
+                "sequence_number": 5
+              },
+              {
+                "ai_topic_id": "ai_topic_ec78cace2bca",
+                "title": "Analyzing Existing Architectures",
+                "content_type": "video",
+                "sequence_number": 6
+              }
+            ],
+            "quiz_questions": [
+              {
+                "question": "When designing a social media platform, which of the following architectural choices is MOST critical for handling a large volume of user-generated content and interactions?",
+                "options": [
+                  "A. A monolithic architecture with a single, large database.",
+                  "B. A microservices architecture with independent services for different features like posts, comments, and user profiles.",
+                  "C. A serverless architecture relying heavily on third-party APIs for all core functionalities.",
+                  "D. A client-server architecture with minimal server-side processing."
+                ],
+                "correct_answer": "B. A microservices architecture with independent services for different features like posts, comments, and user profiles.",
+                "explanation": "Microservices allow for independent scaling and fault isolation, which is crucial for handling the high volume and complexity of a social media platform. This approach enables teams to work independently on different features and deploy updates without affecting the entire system.",
+                "ai_quiz_id": "ai_quiz_120cda9c6a9e",
+                "sequence_number": 1,
+                "ai_topic_id": "ai_topic_b7f039afbdf8"
+              },
+              {
+                "question": "In the context of designing an e-commerce platform, which of the following is the MOST important consideration for ensuring a smooth and reliable checkout process, especially during peak shopping seasons?",
+                "options": [
+                  "A. Optimizing the website's visual design to attract more customers.",
+                  "B. Implementing a robust caching strategy and a scalable database to handle high transaction volumes.",
+                  "C. Focusing solely on marketing and advertising campaigns to drive traffic to the website.",
+                  "D. Minimizing the number of product categories to simplify navigation."
+                ],
+                "correct_answer": "B. Implementing a robust caching strategy and a scalable database to handle high transaction volumes.",
+                "explanation": "A reliable checkout process hinges on the system's ability to handle a large number of concurrent transactions without performance degradation. Caching and a scalable database are essential for achieving this, ensuring a smooth experience even during peak loads.",
+                "ai_quiz_id": "ai_quiz_d92443dd6563",
+                "sequence_number": 2,
+                "ai_topic_id": "ai_topic_3aa188df00f0"
+              },
+              {
+                "question": "When designing a streaming service, what is the primary trade-off to consider when choosing between different video encoding formats and bitrates?",
+                "options": [
+                  "A. The trade-off between video quality and storage space on the user's device.",
+                  "B. The trade-off between video quality and the amount of bandwidth required for streaming.",
+                  "C. The trade-off between the complexity of the encoding algorithm and the cost of the streaming infrastructure.",
+                  "D. The trade-off between the number of available subtitles and the user's preferred language."
+                ],
+                "correct_answer": "B. The trade-off between video quality and the amount of bandwidth required for streaming.",
+                "explanation": "Streaming services must balance providing high-quality video with the need to deliver content efficiently over varying network conditions. Higher bitrates result in better quality but require more bandwidth, which can lead to buffering and a poor user experience for users with slower internet connections.",
+                "ai_quiz_id": "ai_quiz_2c89b3163d87",
+                "sequence_number": 3,
+                "ai_topic_id": "ai_topic_24046c2d78d1"
+              },
+              {
+                "question": "Which of the following is a key challenge in designing a search engine, particularly concerning the indexing process?",
+                "options": [
+                  "A. Ensuring that the search engine's logo is visually appealing and memorable.",
+                  "B. Efficiently crawling and indexing a vast and constantly changing web.",
+                  "C. Limiting the number of search results displayed to avoid overwhelming users.",
+                  "D. Providing customer support for users who have difficulty using the search engine."
+                ],
+                "correct_answer": "B. Efficiently crawling and indexing a vast and constantly changing web.",
+                "explanation": "The core challenge of a search engine lies in its ability to discover, process, and index the immense and dynamic content of the internet. This requires sophisticated crawling algorithms, efficient data structures, and distributed processing to keep the index up-to-date and relevant.",
+                "ai_quiz_id": "ai_quiz_094b0250b897",
+                "sequence_number": 4,
+                "ai_topic_id": "ai_topic_ac2dace0eb97"
+              },
+              {
+                "question": "In the design of a ride-sharing app, which of the following is MOST critical for efficiently matching riders with drivers in real-time?",
+                "options": [
+                  "A. A complex algorithm for calculating the optimal fare for each ride.",
+                  "B. A real-time location tracking system and a matching algorithm that considers proximity, availability, and driver preferences.",
+                  "C. A user interface that allows riders to customize their ride preferences extensively.",
+                  "D. A comprehensive system for rating and reviewing drivers based on their performance."
+                ],
+                "correct_answer": "B. A real-time location tracking system and a matching algorithm that considers proximity, availability, and driver preferences.",
+                "explanation": "The core functionality of a ride-sharing app depends on its ability to quickly and accurately connect riders with available drivers. This requires a real-time location tracking system to know the location of both riders and drivers, and a matching algorithm that takes into account factors like distance, driver availability, and driver preferences to find the best match.",
+                "ai_quiz_id": "ai_quiz_ea8444b69e04",
+                "sequence_number": 5,
+                "ai_topic_id": "ai_topic_a4f6776559fb"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "total_courses": 1,
+        "total_chapters": 12,
+        "total_topics": 72,
+        "total_quiz_questions": 60
+      }
+    },
+    "milestones": [
+      {
+        "code": "M01",
+        "title": "Architecture Apprentice",
+        "salary_tier": "Current CTC",
+        "unlock_statement": "You will confidently participate in architectural discussions, proposing solutions based on established design principles without hesitation.",
+        "blur_level": 0,
+        "assessment_count": 5,
+        "scenarios": [
+          {
+            "type": "mock_interview",
+            "title": "Foundational Architecture Concepts Interview",
+            "description": "Answer questions about basic architectural patterns like microservices, monolithic, and layered architectures, demonstrating your understanding of their trade-offs.",
+            "difficulty": "easy"
+          },
+          {
+            "type": "workplace_scenario",
+            "title": "Architecture Diagram Review",
+            "description": "You are asked to review a high-level architecture diagram for a new feature. Identify potential bottlenecks or areas for improvement based on your understanding of system design principles.",
+            "difficulty": "easy"
+          }
+        ],
+        "scenario_count": 2,
+        "mock_interview_count": 1
+      },
+      {
+        "code": "M02",
+        "title": "Design Pattern Practitioner",
+        "salary_tier": "Current CTC +10%",
+        "unlock_statement": "You will independently identify and apply appropriate design patterns to solve common software engineering problems in your current projects.",
+        "blur_level": 0,
+        "assessment_count": 5,
+        "scenarios": [
+          {
+            "type": "project_discussion",
+            "title": "Applying Design Patterns to a New Feature",
+            "description": "During a project planning meeting, you suggest using the Strategy pattern to handle different payment gateway integrations. Explain the benefits of this approach to the team.",
+            "difficulty": "easy"
+          },
+          {
+            "type": "code_review",
+            "title": "Reviewing Code with Applied Design Patterns",
+            "description": "Review a colleague's code that implements the Observer pattern for event handling. Provide feedback on the clarity and efficiency of the implementation.",
+            "difficulty": "easy"
+          }
+        ],
+        "scenario_count": 2,
+        "mock_interview_count": 0
+      },
+      {
+        "code": "M03",
+        "title": "Scalability Strategist",
+        "salary_tier": "Current CTC +25%",
+        "unlock_statement": "You will proactively identify scalability bottlenecks in existing systems and propose viable solutions to improve performance and handle increased load.",
+        "blur_level": 1,
+        "assessment_count": 5,
+        "scenarios": [
+          {
+            "type": "standup_review",
+            "title": "Discussing Scalability Challenges in Standup",
+            "description": "In the daily standup, you bring up concerns about the database performance under peak load. You suggest exploring caching strategies or database sharding to mitigate the issue.",
+            "difficulty": "medium"
+          },
+          {
+            "type": "debugging_task",
+            "title": "Diagnosing Performance Issues",
+            "description": "You are tasked with investigating slow API response times. Use monitoring tools and profiling techniques to identify the root cause of the performance bottleneck.",
+            "difficulty": "medium"
+          }
+        ],
+        "scenario_count": 2,
+        "mock_interview_count": 0
+      },
+      {
+        "code": "M04",
+        "title": "Availability Advocate",
+        "salary_tier": "Current CTC +40%",
+        "unlock_statement": "You will confidently design systems with high availability in mind, incorporating redundancy and failover mechanisms to minimize downtime.",
+        "blur_level": 2,
+        "assessment_count": 5,
+        "scenarios": [
+          {
+            "type": "stakeholder_meeting",
+            "title": "Presenting High Availability Architecture",
+            "description": "Present your proposed architecture for a critical service to stakeholders, emphasizing the redundancy and failover mechanisms you've implemented to ensure high availability.",
+            "difficulty": "medium"
+          },
+          {
+            "type": "deployment_review",
+            "title": "Reviewing Deployment Strategy for Availability",
+            "description": "During a deployment review, you question the lack of a rollback strategy in case of deployment failure. You propose implementing blue-green deployments to minimize downtime.",
+            "difficulty": "medium"
+          }
+        ],
+        "scenario_count": 2,
+        "mock_interview_count": 0
+      },
+      {
+        "code": "M05",
+        "title": "Architectural Decision-Maker",
+        "salary_tier": "2x Current CTC",
+        "unlock_statement": "You will lead architectural design sessions, making informed decisions based on a thorough understanding of trade-offs and business requirements.",
+        "blur_level": 3,
+        "assessment_count": 5,
+        "scenarios": [
+          {
+            "type": "escalation_handling",
+            "title": "Handling a Production Incident",
+            "description": "A critical service experiences a major outage. As the on-call architect, you lead the incident response, coordinating efforts to identify the root cause and implement a fix while communicating with stakeholders.",
+            "difficulty": "hard"
+          },
+          {
+            "type": "mock_interview",
+            "title": "System Design Interview for a Senior Architect Role",
+            "description": "Design a system for handling millions of concurrent users, considering factors like scalability, availability, and security. Explain your architectural choices and justify your decisions.",
+            "difficulty": "hard"
+          }
+        ],
+        "scenario_count": 2,
+        "mock_interview_count": 1
+      },
+      {
+        "code": "M06",
+        "title": "Cloud Architecture Strategist",
+        "salary_tier": "2.5x Current CTC",
+        "unlock_statement": "You will develop and champion cloud-native architectural strategies that align with business goals, optimizing for cost, performance, and security.",
+        "blur_level": 3,
+        "assessment_count": 5,
+        "scenarios": [
+          {
+            "type": "stakeholder_meeting",
+            "title": "Presenting a Cloud Migration Strategy",
+            "description": "Present a comprehensive cloud migration strategy to senior management, outlining the benefits, risks, and costs associated with moving on-premise applications to the cloud.",
+            "difficulty": "hard"
+          },
+          {
+            "type": "workplace_scenario",
+            "title": "Optimizing Cloud Costs",
+            "description": "Analyze cloud spending reports and identify opportunities to reduce costs without compromising performance or availability. Implement strategies like reserved instances or auto-scaling to optimize resource utilization.",
+            "difficulty": "hard"
+          }
+        ],
+        "scenario_count": 2,
+        "mock_interview_count": 0
+      },
+      {
+        "code": "M07",
+        "title": "Principal Architect",
+        "salary_tier": "3x+ Current CTC",
+        "unlock_statement": "You will mentor other engineers, establish architectural standards, and drive innovation across the organization, shaping the future of the company's technology landscape.",
+        "blur_level": 3,
+        "assessment_count": 5,
+        "scenarios": [
+          {
+            "type": "reporting_task",
+            "title": "Creating Architectural Roadmaps",
+            "description": "Develop a multi-year architectural roadmap that outlines the evolution of the company's technology infrastructure, aligning with business objectives and anticipating future trends.",
+            "difficulty": "hard"
+          },
+          {
+            "type": "project_discussion",
+            "title": "Mentoring Junior Architects",
+            "description": "Guide a junior architect through the design process for a complex system, providing feedback on their architectural choices and helping them navigate trade-offs.",
+            "difficulty": "hard"
+          }
+        ],
+        "scenario_count": 2,
+        "mock_interview_count": 0
+      }
+    ],
+    "ai_metadata": {
+      "generated_at": "2026-05-23T11:28:05.123031",
+      "weekly_hours": 5,
+      "learning_style": "theory",
+      "session_source": "pinecone",
+      "generation_model": "roadmap-gen-v2.1",
+      "personalization_score": 0.92
+    },
+    "status": "confirmed",
+    "payment_id": null,
+    "is_paid": false,
+    "created_at": "2026-05-23T11:28:05.123031",
+    "updated_at": "2026-05-23T11:28:05.123031",
+    "confirmed_at": "2026-05-23T11:28:05.123031",
+    "published_at": null
+  },
+  "backend_submission": {
+    "success": false,
+    "error": "Unable to locate credentials"
+  },
+  "metadata": {
+    "total_courses": 1,
+    "total_chapters": 12,
+    "total_topics": 72,
+    "total_quiz_questions": 60
+  }
+}

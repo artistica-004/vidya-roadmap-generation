@@ -1,0 +1,2097 @@
+{
+  "id": "dfc6d8cf-2c9d-4923-8998-dc6f8c249a4f",
+  "user_id": "user_001",
+  "ai_session_id": "ai_sess_20260603155000_f5879fc5",
+  "ai_roadmap_id": "ai_roadmap_20260603155000_d49326b6",
+  "target_role": "Senior Backend Engineer",
+  "icp_type": "high",
+  "language": "en",
+  "starting_milestone": "P1",
+  "current_active_milestone": "P1",
+  "vision_profile": {
+    "current_state": "Aarav is a Backend Engineer with 6 years of experience, proficient in Java, Spring Boot, REST APIs, PostgreSQL, and Redis, currently earning 145,000 monthly.",
+    "main_blocker": "His biggest fear is that weak system design depth, particularly in distributed systems, Kafka, and AWS deployment patterns, will prevent him from securing a senior role and owning larger engineering decisions.",
+    "vision_12mo": "Within 12 months, Aarav aims to be a Senior Backend Engineer, earning 230,000 monthly, capable of designing and architecting complex distributed systems, and leading significant technical decisions.",
+    "top_motivation": "He is highly motivated to move beyond executing assigned tickets and take ownership of larger engineering decisions, driving architectural direction and impact."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T15:51:40.532497",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "P1",
+      "identity_label": "Foundational System Design & Distributed Principles",
+      "identity_statement": "Build a robust understanding of core system design principles and the fundamentals of distributed systems to lay the groundwork for senior engineering.",
+      "market_value_display": "Mid-level to Senior-ready Backend Engineer",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P1M1",
+          "title": "Core System Design Principles",
+          "description": "Master the essential concepts of building scalable, available, and reliable backend systems.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_P1M1S1",
+              "title": "Scalability & Load Balancing",
+              "description": "Understand horizontal vs. vertical scaling, various load balancing algorithms, and their impact on system performance.",
+              "difficulty": 0.15,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S1",
+                  "title": "Introduction to Scalability and Load Balancers",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S1",
+                  "title": "Design a Scalable Web Service for 1 Million Users",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P1M1S2",
+              "title": "High Availability & Fault Tolerance",
+              "description": "Learn techniques to ensure continuous system operation, including redundancy, failover, and disaster recovery strategies.",
+              "difficulty": 0.25,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S2",
+                  "title": "Achieving High Availability with Redundancy and Failover",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S2",
+                  "title": "Architecting a Fault-Tolerant Payment Gateway",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P1M1S3",
+              "title": "Data Partitioning & Sharding",
+              "description": "Explore strategies for distributing data across multiple databases or servers to improve scalability and performance.",
+              "difficulty": 0.3,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S3",
+                  "title": "Understanding Data Sharding and Partitioning Techniques",
+                  "duration_minutes": 14,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S3",
+                  "title": "Design a Sharding Strategy for a Large User Database",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M2",
+          "title": "Distributed Systems Fundamentals",
+          "description": "Dive into the core challenges and solutions in building robust distributed systems.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_P1M2S1",
+              "title": "CAP Theorem & Consistency Models",
+              "description": "Understand the trade-offs between Consistency, Availability, and Partition Tolerance, and various consistency models (strong, eventual).",
+              "difficulty": 0.35,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M1S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S1",
+                  "title": "Demystifying CAP Theorem and Distributed Consistency",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S1",
+                  "title": "Choosing a Consistency Model for a Global Social Media Feed",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P1M2S2",
+              "title": "Distributed Transactions & Concurrency",
+              "description": "Learn about challenges and solutions for maintaining data integrity across multiple services, including 2PC and Saga patterns.",
+              "difficulty": 0.4,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M2S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S2",
+                  "title": "Managing Transactions in Distributed Systems",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S2",
+                  "title": "Designing a Distributed Order Fulfillment System",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P1M2S3",
+              "title": "Idempotency & Retries in Distributed Systems",
+              "description": "Implement robust error handling by understanding idempotent operations and effective retry mechanisms.",
+              "difficulty": 0.45,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M2S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S3",
+                  "title": "Building Resilient Systems with Idempotency and Retries",
+                  "duration_minutes": 16,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S3",
+                  "title": "Ensuring Exactly-Once Processing for a Financial Transaction",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M3",
+          "title": "Performance Optimization & Monitoring Basics",
+          "description": "Learn initial strategies for optimizing system performance and setting up basic monitoring.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_P1M3S1",
+              "title": "API Gateway & Rate Limiting",
+              "description": "Implement API Gateways for request routing, authentication, and protecting services with rate limiting.",
+              "difficulty": 0.3,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M1S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S1",
+                  "title": "API Gateways and Rate Limiting Strategies",
+                  "duration_minutes": 17,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S1",
+                  "title": "Implementing a Rate Limiter for a Public API",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P1M3S2",
+              "title": "Caching Strategies",
+              "description": "Understand different caching layers (client, CDN, application, database) and invalidation strategies.",
+              "difficulty": 0.35,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S2",
+                  "title": "Effective Caching for Backend Systems",
+                  "duration_minutes": 16,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S2",
+                  "title": "Designing a Caching Layer for a News Feed Service",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P1M3S3",
+              "title": "Basic Monitoring & Alerting",
+              "description": "Set up fundamental metrics, logging, and alerting to understand system health and react to issues proactively.",
+              "difficulty": 0.4,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M1S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S3",
+                  "title": "Introduction to System Monitoring and Alerting",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S3",
+                  "title": "Setting up Basic Monitoring for a Microservice",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P2",
+      "identity_label": "Deep Dive into Distributed Messaging & Data",
+      "identity_statement": "Master event-driven architectures, Kafka, and advanced data strategies to build highly scalable and resilient backend systems.",
+      "market_value_display": "Senior Backend Engineer (Distributed Systems Specialist)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P2M1",
+          "title": "Kafka Architecture & Design Patterns",
+          "description": "Gain in-depth knowledge of Kafka for building robust, high-throughput messaging systems.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_P2M1S1",
+              "title": "Kafka Core Concepts & Architecture",
+              "description": "Understand Kafka brokers, topics, partitions, producers, consumers, and consumer groups.",
+              "difficulty": 0.45,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M2S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S1",
+                  "title": "Kafka Fundamentals: Brokers, Topics, and Partitions",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S1",
+                  "title": "Designing a High-Throughput Data Ingestion Pipeline with Kafka",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P2M1S2",
+              "title": "Designing Event-Driven Systems with Kafka",
+              "description": "Apply Kafka to build reactive, event-driven microservices architectures, including event sourcing and CQRS patterns.",
+              "difficulty": 0.55,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P2M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S2",
+                  "title": "Building Event-Driven Microservices with Kafka",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S2",
+                  "title": "Architecting an Event-Sourced E-commerce Checkout Flow",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P2M1S3",
+              "title": "Kafka Connect & Streams API",
+              "description": "Utilize Kafka Connect for data integration and Kafka Streams for real-time data processing and transformations.",
+              "difficulty": 0.6,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P2M1S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S3",
+                  "title": "Real-time Data Processing with Kafka Connect and Streams",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S3",
+                  "title": "Building a Real-time Fraud Detection System with Kafka Streams",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M2",
+          "title": "Advanced Data Storage & Caching Strategies",
+          "description": "Explore various NoSQL databases, advanced caching techniques, and robust data replication strategies.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_P2M2S1",
+              "title": "NoSQL Databases (Cassandra, MongoDB)",
+              "description": "Understand the use cases and architectural patterns of popular NoSQL databases for specific data needs.",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M1S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S1",
+                  "title": "Deep Dive into NoSQL: Cassandra and MongoDB",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S1",
+                  "title": "Choosing the Right NoSQL Database for a User Profile Service",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P2M2S2",
+              "title": "Distributed Caching with Redis Cluster",
+              "description": "Implement and manage highly available and scalable caching solutions using Redis Cluster.",
+              "difficulty": 0.55,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M3S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S2",
+                  "title": "Scaling Caching with Redis Cluster",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S2",
+                  "title": "Designing a Global Distributed Cache for Real-time Analytics",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P2M2S3",
+              "title": "Data Replication & Disaster Recovery",
+              "description": "Design and implement strategies for data replication, backups, and disaster recovery to ensure data durability and business continuity.",
+              "difficulty": 0.6,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P2M2S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S3",
+                  "title": "Strategies for Data Replication and Disaster Recovery",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S3",
+                  "title": "Architecting a Multi-Region Disaster Recovery Plan for a Critical Database",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M3",
+          "title": "Microservices Communication & Resilience",
+          "description": "Enhance microservice interactions with advanced communication patterns and resilience techniques.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_P2M3S1",
+              "title": "Service Mesh (Istio/Linkerd) Fundamentals",
+              "description": "Understand how service meshes provide traffic management, observability, and security for microservices.",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M2S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S1",
+                  "title": "Introduction to Service Mesh: Istio and Linkerd",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S1",
+                  "title": "Implementing Traffic Management with a Service Mesh",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P2M3S2",
+              "title": "Circuit Breakers & Bulkheads",
+              "description": "Implement resilience patterns like circuit breakers and bulkheads to prevent cascading failures in distributed systems.",
+              "difficulty": 0.55,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P2M3S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S2",
+                  "title": "Resilience Patterns: Circuit Breakers and Bulkheads",
+                  "duration_minutes": 16,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S2",
+                  "title": "Applying Resilience Patterns to a Microservice Ecosystem",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P2M3S3",
+              "title": "Observability (Logging, Tracing, Metrics)",
+              "description": "Implement advanced observability techniques to gain deep insights into system behavior and troubleshoot complex issues.",
+              "difficulty": 0.6,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P1M3S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S3",
+                  "title": "Advanced Observability: Logging, Tracing, and Metrics",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S3",
+                  "title": "Setting up Distributed Tracing for a Microservice Application",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P3",
+      "identity_label": "Cloud Architecture & Deployment Patterns on AWS",
+      "identity_statement": "Become proficient in designing, deploying, and managing scalable and resilient backend systems on AWS, leveraging cloud-native services.",
+      "market_value_display": "Senior Backend Engineer (AWS Specialist)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P3M1",
+          "title": "AWS Core Services for Backend",
+          "description": "Master the fundamental AWS services essential for building and operating backend applications.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_P3M1S1",
+              "title": "AWS Compute (EC2, Lambda) & Networking (VPC)",
+              "description": "Understand EC2, Lambda for compute, and VPC for secure, isolated network environments.",
+              "difficulty": 0.6,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P2M3S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S1",
+                  "title": "AWS Compute and Networking Essentials",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S1",
+                  "title": "Designing a Secure and Scalable VPC for a Multi-Tier Application",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P3M1S2",
+              "title": "AWS Storage (S3, EBS, EFS) & Databases (RDS, DynamoDB)",
+              "description": "Learn to choose and utilize appropriate AWS storage and database services for various backend needs.",
+              "difficulty": 0.65,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S2",
+                  "title": "AWS Storage and Database Services Deep Dive",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S2",
+                  "title": "Selecting Data Stores for a High-Traffic E-commerce Platform on AWS",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P3M1S3",
+              "title": "AWS Security & IAM Best Practices",
+              "description": "Implement robust security measures and manage access control using AWS Identity and Access Management (IAM).",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S3",
+                  "title": "Securing Your AWS Environment with IAM",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S3",
+                  "title": "Designing an IAM Policy for a New Microservice",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M2",
+          "title": "AWS Deployment & Orchestration",
+          "description": "Master containerization, orchestration, and CI/CD pipelines for efficient and automated deployments on AWS.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_P3M2S1",
+              "title": "Containerization with Docker & ECR",
+              "description": "Learn to containerize applications using Docker and manage container images with AWS Elastic Container Registry (ECR).",
+              "difficulty": 0.65,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S1",
+                  "title": "Docker and AWS ECR for Container Image Management",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S1",
+                  "title": "Containerizing a Spring Boot Application and Pushing to ECR",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P3M2S2",
+              "title": "Orchestration with ECS/EKS",
+              "description": "Deploy and manage containerized applications at scale using AWS Elastic Container Service (ECS) or Elastic Kubernetes Service (EKS).",
+              "difficulty": 0.7,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M2S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S2",
+                  "title": "Container Orchestration with AWS ECS and EKS",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S2",
+                  "title": "Deploying a Microservice Architecture on AWS EKS",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P3M2S3",
+              "title": "CI/CD Pipelines with AWS (CodePipeline, CodeBuild)",
+              "description": "Automate the software release process using AWS CodePipeline, CodeBuild, and CodeDeploy.",
+              "difficulty": 0.75,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M2S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S3",
+                  "title": "Building Automated CI/CD Pipelines on AWS",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S3",
+                  "title": "Implementing a CI/CD Pipeline for a Containerized Backend Service",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M3",
+          "title": "Serverless & Event-Driven Architectures on AWS",
+          "description": "Design and implement highly scalable, cost-effective serverless and event-driven solutions using AWS services.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_P3M3S1",
+              "title": "AWS Lambda & API Gateway for Serverless APIs",
+              "description": "Build and deploy serverless APIs using AWS Lambda and API Gateway, focusing on efficiency and scalability.",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S1",
+                  "title": "Building Serverless APIs with AWS Lambda and API Gateway",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S1",
+                  "title": "Designing a Serverless Backend for a Mobile Application",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P3M3S2",
+              "title": "Event-Driven Architectures with SQS, SNS, EventBridge",
+              "description": "Leverage AWS messaging services to build loosely coupled, scalable event-driven architectures.",
+              "difficulty": 0.75,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M3S1",
+                  "SKILL_P2M1S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S2",
+                  "title": "AWS Messaging Services for Event-Driven Design",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S2",
+                  "title": "Architecting an Event-Driven Notification System on AWS",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P3M3S3",
+              "title": "Infrastructure as Code with AWS CloudFormation/Terraform",
+              "description": "Automate infrastructure provisioning and management using Infrastructure as Code (IaC) tools like CloudFormation or Terraform.",
+              "difficulty": 0.8,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M2S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S3",
+                  "title": "IaC on AWS: CloudFormation and Terraform",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S3",
+                  "title": "Automating the Deployment of a Serverless Application with IaC",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P4",
+      "identity_label": "Senior Engineering Leadership & Design Ownership",
+      "identity_statement": "Consolidate your expertise, hone your technical leadership skills, and prepare to confidently own and drive complex architectural decisions.",
+      "market_value_display": "Lead/Principal Backend Engineer",
+      "sequence_order": 4,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P4M1",
+          "title": "Technical Design Documentation & Communication",
+          "description": "Develop strong communication and documentation skills crucial for senior engineering roles.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_P4M1S1",
+              "title": "Crafting High-Quality Design Documents",
+              "description": "Learn to write clear, concise, and comprehensive technical design documents (RFCs, ADRs).",
+              "difficulty": 0.75,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M3S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S1",
+                  "title": "Effective Technical Design Documentation",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S1",
+                  "title": "Writing a Design Document for a New Microservice Feature",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P4M1S2",
+              "title": "Presenting & Defending Technical Designs",
+              "description": "Develop skills to effectively present architectural proposals and defend design choices to peers and stakeholders.",
+              "difficulty": 0.8,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P4M1S1"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S2",
+                  "title": "Mastering Technical Presentations and Design Reviews",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S2",
+                  "title": "Leading a Design Review for a Critical System Component",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P4M1S3",
+              "title": "Cross-Functional Communication for Senior Engineers",
+              "description": "Improve communication with product managers, QA, and other teams to drive successful project outcomes.",
+              "difficulty": 0.85,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P4M1S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S3",
+                  "title": "Advanced Communication for Technical Leaders",
+                  "duration_minutes": 16,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S3",
+                  "title": "Mediating a Technical vs. Product Conflict",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M2",
+          "title": "Advanced System Design Case Studies",
+          "description": "Apply all learned concepts to solve complex, real-world system design challenges.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_P4M2S1",
+              "title": "Designing a Scalable E-commerce Platform",
+              "description": "Architect a complete e-commerce system, covering product catalog, order processing, payment, and search.",
+              "difficulty": 0.8,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M3S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S1",
+                  "title": "System Design Case Study: E-commerce Platform",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S1",
+                  "title": "Design a Global E-commerce Platform with 100M Daily Users",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P4M2S2",
+              "title": "Building a Real-time Data Processing Pipeline",
+              "description": "Design end-to-end real-time data pipelines for analytics, monitoring, or recommendations.",
+              "difficulty": 0.85,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P3M3S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S2",
+                  "title": "Case Study: Real-time Data Pipeline Architecture",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S2",
+                  "title": "Architect a Real-time Recommendation Engine",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P4M2S3",
+              "title": "Architecting a Global Distributed Service",
+              "description": "Tackle the complexities of designing services that operate across multiple regions and continents.",
+              "difficulty": 0.9,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P4M2S2"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S3",
+                  "title": "Designing Geo-Distributed Systems",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S3",
+                  "title": "Design a Global Chat Application with Low Latency",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M3",
+          "title": "Senior Backend Interview Preparation",
+          "description": "Prepare comprehensively for senior backend engineering interviews, focusing on system design, behavioral, and advanced coding questions.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_P4M3S1",
+              "title": "Behavioral & Leadership Interview Skills",
+              "description": "Practice answering behavioral questions, demonstrating leadership, mentorship, and conflict resolution skills.",
+              "difficulty": 0.8,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P4M1S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S1",
+                  "title": "Acing Behavioral Interviews for Senior Roles",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S1",
+                  "title": "Responding to 'Tell me about a time you failed' (Senior Level)",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P4M3S2",
+              "title": "System Design Interview Practice",
+              "description": "Practice solving common and advanced system design interview questions with structured approaches.",
+              "difficulty": 0.9,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P4M2S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S2",
+                  "title": "Mastering Senior System Design Interviews",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S2",
+                  "title": "Mock Interview: Design a URL Shortening Service (Senior)",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_P4M3S3",
+              "title": "Advanced Coding & Problem Solving",
+              "description": "Refine advanced data structures, algorithms, and problem-solving techniques relevant to senior backend roles.",
+              "difficulty": 0.9,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_P4M2S3"
+                ],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S3",
+                  "title": "Advanced Algorithms and Data Structures for Backend",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S3",
+                  "title": "Coding Challenge: Implement a Distributed Cache Eviction Policy",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T15:51:40.532497",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T15:51:40.532497",
+  "updated_at": "2026-06-03T15:51:40.532497",
+  "confirmed_at": "2026-06-03T15:51:40.532497",
+  "published_at": null
+}

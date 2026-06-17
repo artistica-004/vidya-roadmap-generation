@@ -1,0 +1,1460 @@
+{
+  "id": "985a497d-e3c0-4850-9167-57aefb1737ef",
+  "user_id": "user_006",
+  "ai_session_id": "ai_sess_20260603155703_e12aee5a",
+  "ai_roadmap_id": "ai_roadmap_20260603155703_3e4fb633",
+  "target_role": "AI Product Manager",
+  "icp_type": "high",
+  "language": "en",
+  "starting_milestone": "P1",
+  "current_active_milestone": "P1",
+  "vision_profile": {
+    "current_state": "Meera is a Product Analyst with 6 years of experience, strong in product analytics, SQL, A/B testing, and user research. She currently focuses on post-launch analysis.",
+    "main_blocker": "Her biggest obstacle is a lack of specific AI product strategy, LLM evaluation, prompt engineering, and technical communication skills with ML teams, leading to a fear of being outcompeted by technical PMs.",
+    "vision_12mo": "Within 12 months, Meera aims to be actively involved in AI product building, defining AI features, evaluating model capabilities, and leading AI product initiatives, moving beyond post-launch analytics.",
+    "top_motivation": "She is highly motivated to be an early contributor to AI product development and leverage her analytical background to shape innovative AI solutions."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T15:58:03.746134",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "P1",
+      "identity_label": "Foundations of AI Product Management",
+      "identity_statement": "Build a robust understanding of AI/ML fundamentals and the unique lifecycle of AI products to confidently step into the AI domain.",
+      "market_value_display": "AI-Ready Product Analyst",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P1M1",
+          "title": "Core AI/ML Concepts for PMs",
+          "description": "Understand the fundamental principles of Artificial Intelligence and Machine Learning relevant to product management.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P1M1S1",
+              "title": "AI/ML Fundamentals for PMs",
+              "description": "Grasp the core concepts of AI, ML, Deep Learning, and their applications in product development.",
+              "difficulty": 0.1,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S1",
+                  "title": "AI/ML Basics: What Every PM Needs to Know",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S1",
+                  "title": "Identifying AI Opportunities in Existing Products",
+                  "difficulty": 0.15,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M1S2",
+              "title": "Understanding Model Capabilities & Limitations",
+              "description": "Learn to identify what different types of AI models can and cannot do, and their inherent biases.",
+              "difficulty": 0.2,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S2",
+                  "title": "Model Strengths & Weaknesses for Product Decisions",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S2",
+                  "title": "Assessing Feasibility for a New AI Feature",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M2",
+          "title": "The AI Product Lifecycle",
+          "description": "Explore the distinct phases of developing and launching AI-powered products, from ideation to deployment.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P1M2S3",
+              "title": "AI Product Discovery & Definition",
+              "description": "Master the process of identifying user needs and defining AI-driven solutions, including problem framing.",
+              "difficulty": 0.25,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S3",
+                  "title": "From Problem to AI Solution: Discovery Phase",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S3",
+                  "title": "Defining an MVP for an AI Recommendation Engine",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M2S4",
+              "title": "Data Strategy for AI Products",
+              "description": "Understand the critical role of data collection, labeling, and management in building effective AI products.",
+              "difficulty": 0.3,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M2S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S4",
+                  "title": "Data as Fuel: Crafting a Data Strategy for AI",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S4",
+                  "title": "Designing a Data Collection Plan for a New AI Feature",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S4",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M3",
+          "title": "Ethical AI & Responsible Innovation",
+          "description": "Learn to identify and mitigate ethical risks and biases in AI systems, ensuring responsible product development.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P1M3S5",
+              "title": "AI Ethics & Bias Mitigation",
+              "description": "Identify common sources of bias in AI and strategies to build fair and ethical AI products.",
+              "difficulty": 0.35,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M2S4"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S5",
+                  "title": "Building Fair AI: Ethics, Bias, and Trust",
+                  "duration_minutes": 27,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S5",
+                  "title": "Addressing Bias in an AI-Powered Hiring Tool",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S5",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M3S6",
+              "title": "Regulatory Landscape for AI",
+              "description": "Understand emerging regulations and compliance requirements for AI products globally and locally.",
+              "difficulty": 0.4,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M3S5"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S6",
+                  "title": "Navigating AI Regulations: A PM's Guide",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S6",
+                  "title": "Ensuring GDPR Compliance for an AI Chatbot",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S6",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P2",
+      "identity_label": "Designing & Experimenting with AI Features",
+      "identity_statement": "Translate user needs into compelling AI features, design effective experiments, and begin mastering prompt workflows.",
+      "market_value_display": "AI Feature Designer",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P2M1",
+          "title": "Ideating AI-Powered Features",
+          "description": "Learn to identify high-impact AI use cases and design user-centric AI features.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P2M1S7",
+              "title": "Identifying AI Use Cases & Value Props",
+              "description": "Develop a framework for discovering and prioritizing AI applications that deliver significant user and business value.",
+              "difficulty": 0.4,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M3S6"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S7",
+                  "title": "From Problem to AI Solution: Ideation Techniques",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S7",
+                  "title": "Brainstorming AI Features for a Fintech App",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S7",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M1S8",
+              "title": "AI Feature Design Principles",
+              "description": "Understand best practices for designing intuitive and effective user experiences for AI-driven features.",
+              "difficulty": 0.45,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M1S7"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S8",
+                  "title": "UX for AI: Designing Intelligent Interfaces",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S8",
+                  "title": "Designing User Flows for an AI-Powered Assistant",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S8",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M2",
+          "title": "Experimentation & Validation in AI",
+          "description": "Apply robust experimentation techniques to validate AI features and measure their impact.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P2M2S9",
+              "title": "A/B Testing & Experimentation for AI",
+              "description": "Adapt your existing A/B testing knowledge to design and analyze experiments for AI features.",
+              "difficulty": 0.5,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M1S8"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S9",
+                  "title": "Experimentation Strategies for AI Products",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S9",
+                  "title": "Designing an A/B Test for an AI Search Algorithm",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S9",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M2S10",
+              "title": "User Feedback & AI Feature Iteration",
+              "description": "Learn methods for collecting and integrating user feedback specifically for AI-driven product improvements.",
+              "difficulty": 0.55,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M2S9"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S10",
+                  "title": "Iterating AI: Leveraging User Feedback Loops",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S10",
+                  "title": "Analyzing User Feedback for an AI Content Generator",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S10",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M3",
+          "title": "Introduction to Prompt Workflows",
+          "description": "Gain foundational knowledge in prompt engineering and how to design effective prompt-based interactions.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P2M3S11",
+              "title": "Basics of Prompt Engineering",
+              "description": "Understand the principles of crafting effective prompts for Large Language Models (LLMs) to achieve desired outputs.",
+              "difficulty": 0.6,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M2S10"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S11",
+                  "title": "Prompt Engineering 101: Getting Started with LLMs",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S11",
+                  "title": "Crafting Prompts for a Customer Service Chatbot",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S11",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M3S12",
+              "title": "Designing Basic Prompt Workflows",
+              "description": "Learn to structure sequences of prompts to guide LLMs through multi-step tasks and complex interactions.",
+              "difficulty": 0.65,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M3S11"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S12",
+                  "title": "Workflow Design: Orchestrating LLM Interactions",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S12",
+                  "title": "Building a Prompt Chain for a Content Summarizer",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S12",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P3",
+      "identity_label": "Evaluating & Communicating AI Solutions",
+      "identity_statement": "Master the evaluation of LLMs, bridge communication gaps with ML teams, and formulate robust AI product strategies.",
+      "market_value_display": "AI Product Strategist",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P3M1",
+          "title": "Evaluating LLM Performance",
+          "description": "Develop expertise in assessing the quality and effectiveness of Large Language Models for product use cases.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P3M1S13",
+              "title": "LLM Evaluation Metrics & Methods",
+              "description": "Learn quantitative and qualitative metrics to evaluate LLM outputs, including perplexity, ROUGE, and human preference.",
+              "difficulty": 0.65,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M3S12"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S13",
+                  "title": "Measuring Success: LLM Evaluation Deep Dive",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S13",
+                  "title": "Selecting Metrics for an LLM-Powered Search Engine",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S13",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M1S14",
+              "title": "Human-in-the-Loop Evaluation",
+              "description": "Design and implement human evaluation processes to gather nuanced feedback on AI model performance.",
+              "difficulty": 0.7,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M1S13"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S14",
+                  "title": "Human Feedback: The Gold Standard for AI Evaluation",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S14",
+                  "title": "Setting up a Human Annotation Task for LLM Responses",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S14",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M2",
+          "title": "Bridging the Gap with ML Teams",
+          "description": "Enhance your technical communication skills to collaborate effectively with machine learning engineers.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P3M2S15",
+              "title": "Technical Communication for AI PMs",
+              "description": "Learn to articulate product requirements and technical constraints clearly to ML engineers and data scientists.",
+              "difficulty": 0.75,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M1S14"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S15",
+                  "title": "Speaking ML: Effective Communication with Engineers",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S15",
+                  "title": "Translating Product Goals into ML Requirements",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S15",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M2S16",
+              "title": "ML System Design for PMs",
+              "description": "Gain a high-level understanding of ML system architecture, deployment, and monitoring to inform product decisions.",
+              "difficulty": 0.8,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M2S15"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S16",
+                  "title": "Architecting AI: A PM's View of ML Systems",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S16",
+                  "title": "Evaluating Trade-offs in ML Model Deployment",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S16",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M3",
+          "title": "Crafting AI Product Strategy",
+          "description": "Develop the ability to formulate compelling AI product strategies and roadmaps that align with business goals.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P3M3S17",
+              "title": "Developing an AI Product Strategy",
+              "description": "Learn to define a vision, market positioning, and competitive advantage for AI-powered products.",
+              "difficulty": 0.8,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M2S16"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S17",
+                  "title": "Strategic AI: Building a Winning Product Vision",
+                  "duration_minutes": 27,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S17",
+                  "title": "Formulating a 3-Year AI Product Strategy for a SaaS Company",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S17",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M3S18",
+              "title": "AI Roadmapping & Prioritization",
+              "description": "Master techniques for creating AI product roadmaps and prioritizing features based on impact and feasibility.",
+              "difficulty": 0.85,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M3S17"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S18",
+                  "title": "AI Product Roadmaps: Planning for Innovation",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S18",
+                  "title": "Prioritizing AI Features for a Q3 Product Launch",
+                  "difficulty": 0.88,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S18",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P4",
+      "identity_label": "Leading AI Product Development",
+      "identity_statement": "Refine your prompt engineering skills, understand AI system architecture, and build a compelling portfolio to secure your AI PM role.",
+      "market_value_display": "Senior AI Product Manager",
+      "sequence_order": 4,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P4M1",
+          "title": "Advanced Prompt Engineering",
+          "description": "Dive deeper into sophisticated prompt techniques for complex AI interactions and robust system design.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P4M1S19",
+              "title": "Advanced Prompt Techniques",
+              "description": "Explore few-shot learning, chain-of-thought, and other advanced prompting strategies for complex tasks.",
+              "difficulty": 0.85,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M3S18"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S19",
+                  "title": "Mastering Prompts: Advanced Strategies for LLMs",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S19",
+                  "title": "Implementing Chain-of-Thought for Complex Reasoning",
+                  "difficulty": 0.88,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S19",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P4M1S20",
+              "title": "Prompt Optimization & Guardrails",
+              "description": "Learn to refine prompts for efficiency, reduce hallucinations, and implement safety guardrails for production AI systems.",
+              "difficulty": 0.88,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M1S19"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S20",
+                  "title": "Robust Prompts: Optimization, Safety, and Control",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S20",
+                  "title": "Designing Guardrails for a Public-Facing AI Assistant",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S20",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M2",
+          "title": "AI System Design & Architecture",
+          "description": "Gain a deeper understanding of AI system architecture to effectively collaborate on complex AI product builds.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P4M2S21",
+              "title": "AI Architecture & Scalability for PMs",
+              "description": "Understand the components of scalable AI systems, including data pipelines, model serving, and infrastructure considerations.",
+              "difficulty": 0.9,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M1S20"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S21",
+                  "title": "Scaling AI: Architecture for Production Systems",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S21",
+                  "title": "Designing a Scalable AI System for Real-time Personalization",
+                  "difficulty": 0.92,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S21",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P4M2S22",
+              "title": "Integrating AI into Existing Products",
+              "description": "Learn strategies for seamlessly embedding AI capabilities into established product ecosystems.",
+              "difficulty": 0.92,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M2S21"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S22",
+                  "title": "Seamless AI: Integration Strategies for PMs",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S22",
+                  "title": "Planning AI Integration for a Legacy E-commerce Platform",
+                  "difficulty": 0.95,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S22",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M3",
+          "title": "Real-World AI PM Application",
+          "description": "Apply your accumulated knowledge to a capstone project and prepare to showcase your expertise in the job market.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P4M3S23",
+              "title": "Building an AI PM Capstone Project",
+              "description": "Design and document a comprehensive AI product from concept to launch strategy, demonstrating all learned skills.",
+              "difficulty": 0.95,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M2S22"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S23",
+                  "title": "Your AI PM Capstone: Bringing it All Together",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S23",
+                  "title": "Developing a Full AI Product Proposal & Roadmap",
+                  "difficulty": 0.98,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S23",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P4M3S24",
+              "title": "Interview Prep & Portfolio Showcase",
+              "description": "Prepare for AI PM interviews by refining your resume, portfolio, and practicing common interview questions.",
+              "difficulty": 0.98,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M3S23"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S24",
+                  "title": "Ace Your AI PM Interview: Strategies & Tips",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S24",
+                  "title": "Mock AI PM Interview: Product Sense & Technical Fluency",
+                  "difficulty": 0.99,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S24",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T15:58:03.746134",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T15:58:03.746134",
+  "updated_at": "2026-06-03T15:58:03.746134",
+  "confirmed_at": "2026-06-03T15:58:03.746134",
+  "published_at": null
+}

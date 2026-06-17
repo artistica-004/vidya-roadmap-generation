@@ -1,0 +1,1464 @@
+{
+  "id": "28598d01-484a-4221-ada1-094817b0500c",
+  "user_id": "user_009",
+  "ai_session_id": "ai_sess_20260603160021_0f112cb1",
+  "ai_roadmap_id": "ai_roadmap_20260603160021_fabfb9b9",
+  "target_role": "AI Application Engineer",
+  "icp_type": "high",
+  "language": "en",
+  "starting_milestone": "P1",
+  "current_active_milestone": "P1",
+  "vision_profile": {
+    "current_state": "Aditya is a 25-year-old Software Engineer in Bengaluru with 2 years of experience, proficient in Python, FastAPI, and MongoDB. He earns 68000/month and is eager to transition into AI.",
+    "main_blocker": "His biggest fear is missing the AI hiring wave due to a lack of strong, production-ready AI portfolio projects to demonstrate his capabilities in LLM application design, RAG architecture, and AI response evaluation.",
+    "vision_12mo": "Within 12 months, Aditya will be a skilled AI Application Engineer, confidently building and deploying AI-powered applications using LLM APIs, vector databases, and RAG pipelines. He will have a robust portfolio, securing a role with a target salary of 150000/month.",
+    "top_motivation": "He is highly motivated by the excitement of AI tools and a strong desire to move beyond tutorials to build real, impactful AI applications that solve practical problems."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:02:36.011250",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "P1",
+      "identity_label": "Foundations of AI Application Engineering",
+      "identity_statement": "Lay a robust foundation in LLM concepts and API integration to kickstart your journey into AI application development.",
+      "market_value_display": "Bridging to AI Development (80k-100k/month potential)",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P1M1",
+          "title": "Core LLM Concepts & Prompt Engineering",
+          "description": "Understand the fundamentals of Large Language Models and master the art of crafting effective prompts for various applications.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P1M1S1",
+              "title": "LLM Basics & Architectures",
+              "description": "Learn about different LLM architectures (e.g., Transformers), their capabilities, limitations, and key terminology.",
+              "difficulty": 0.15,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S1",
+                  "title": "Introduction to LLMs: Transformers & Beyond",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S1",
+                  "title": "Identify LLM Use Cases for Business Problems",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M1S2",
+              "title": "Advanced Prompt Engineering Techniques",
+              "description": "Master techniques like few-shot prompting, chain-of-thought, and self-consistency to guide LLMs for better outputs.",
+              "difficulty": 0.25,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S2",
+                  "title": "Mastering Advanced Prompting: CoT, Few-Shot, and More",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S2",
+                  "title": "Design a Multi-Turn Conversational Prompt",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M2",
+          "title": "Python for LLM Development & API Integration",
+          "description": "Leverage your Python skills to interact with LLM APIs and build robust backend services using frameworks like FastAPI.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P1M2S1",
+              "title": "LLM API Interaction (OpenAI, Anthropic)",
+              "description": "Integrate with leading LLM providers (OpenAI, Anthropic) using their Python SDKs for text generation, embeddings, and more.",
+              "difficulty": 0.2,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S1",
+                  "title": "Connecting to LLM APIs: OpenAI & Anthropic SDKs",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S1",
+                  "title": "Build a Simple Text Summarization API Endpoint",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M2S2",
+              "title": "LangChain/LlamaIndex Fundamentals",
+              "description": "Explore foundational concepts of LLM orchestration frameworks like LangChain or LlamaIndex for building complex applications.",
+              "difficulty": 0.3,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M1S2",
+                  "SK_P1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S2",
+                  "title": "Getting Started with LangChain: Chains & Agents",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S2",
+                  "title": "Create a Simple LangChain Sequence for Q&A",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M3",
+          "title": "Building Production-Ready LLM Endpoints",
+          "description": "Develop robust and scalable backend services for your LLM applications using FastAPI, incorporating best practices for production.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P1M3S1",
+              "title": "FastAPI for LLM Backend Services",
+              "description": "Design and implement RESTful APIs using FastAPI to serve LLM functionalities, leveraging your existing backend skills.",
+              "difficulty": 0.28,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S1",
+                  "title": "Building LLM APIs with FastAPI: From Request to Response",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S1",
+                  "title": "Implement a FastAPI Endpoint for an LLM-powered Content Generator",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P1M3S2",
+              "title": "Error Handling & Rate Limiting for LLM APIs",
+              "description": "Implement robust error handling, retry mechanisms, and rate limiting strategies for resilient LLM API integrations.",
+              "difficulty": 0.32,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S2",
+                  "title": "Resilient LLM Integrations: Error Handling & Rate Limiting",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S2",
+                  "title": "Add Rate Limiting to an Existing FastAPI LLM Endpoint",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P2",
+      "identity_label": "Vector Databases & Retrieval Augmented Generation (RAG)",
+      "identity_statement": "Master the art of integrating external knowledge into LLMs using vector databases and RAG pipelines to build context-aware applications.",
+      "market_value_display": "AI Data Integration Specialist (100k-120k/month potential)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P2M1",
+          "title": "Vector Embeddings & Similarity Search",
+          "description": "Understand how text is transformed into numerical representations and how these are used for efficient information retrieval.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P2M1S1",
+              "title": "Text Embedding Models",
+              "description": "Learn about various embedding models, their properties, and how to generate high-quality vector representations of text.",
+              "difficulty": 0.35,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S1",
+                  "title": "Understanding Text Embeddings: The Core of Semantic Search",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S1",
+                  "title": "Generate Embeddings for a Document Corpus using OpenAI API",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M1S2",
+              "title": "Vector Space Concepts & Similarity Metrics",
+              "description": "Grasp the mathematical concepts behind vector spaces and how metrics like cosine similarity are used for retrieval.",
+              "difficulty": 0.4,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S2",
+                  "title": "Vector Math for AI: Cosine Similarity and Distance",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S2",
+                  "title": "Calculate Cosine Similarity Between Two Text Embeddings",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M2",
+          "title": "Introduction to Vector Databases",
+          "description": "Learn to store, index, and retrieve vector embeddings efficiently using specialized vector databases like Pinecone or ChromaDB.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P2M2S1",
+              "title": "Pinecone/ChromaDB Fundamentals",
+              "description": "Understand the core concepts of vector databases, focusing on Pinecone and ChromaDB for indexing and querying vector data.",
+              "difficulty": 0.45,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S1",
+                  "title": "Getting Started with Pinecone: Indexing and Querying",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S1",
+                  "title": "Index a Small Document Dataset into Pinecone",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M2S2",
+              "title": "Data Indexing & Metadata Filtering",
+              "description": "Learn strategies for efficient data chunking, indexing, and leveraging metadata for precise retrieval in vector databases.",
+              "difficulty": 0.5,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S2",
+                  "title": "Optimizing Vector Search: Chunking and Metadata",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S2",
+                  "title": "Implement Metadata Filtering for a Product Catalog Search",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M3",
+          "title": "Basic RAG Pipeline Design",
+          "description": "Construct your first Retrieval Augmented Generation (RAG) pipelines to empower LLMs with external, up-to-date information.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P2M3S1",
+              "title": "Document Loading & Chunking Strategies",
+              "description": "Learn to load various document types (PDFs, web pages) and apply effective chunking strategies for RAG.",
+              "difficulty": 0.48,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S1",
+                  "title": "Preparing Data for RAG: Loaders and Chunkers",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S1",
+                  "title": "Process a PDF Document for RAG using LangChain Document Loaders",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P2M3S2",
+              "title": "Implementing a Simple RAG Pipeline",
+              "description": "Build an end-to-end RAG system using LangChain/LlamaIndex, integrating an LLM with a vector database for Q&A.",
+              "difficulty": 0.55,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S2",
+                  "title": "Building Your First RAG Application: A Step-by-Step Guide",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S2",
+                  "title": "Develop a RAG-powered Chatbot for Internal Company Documents",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P3",
+      "identity_label": "Advanced RAG, Evaluation & Productionization",
+      "identity_statement": "Elevate your RAG systems with advanced techniques, learn to rigorously evaluate AI responses, and prepare your applications for production deployment.",
+      "market_value_display": "Senior AI Application Engineer (120k-150k/month potential)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P3M1",
+          "title": "Advanced RAG Techniques",
+          "description": "Explore sophisticated RAG strategies to improve retrieval accuracy, context integration, and overall LLM performance.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P3M1S1",
+              "title": "RAG Optimization (Re-ranking, Multi-query)",
+              "description": "Implement advanced retrieval techniques like re-ranking retrieved documents and generating multiple queries for better context.",
+              "difficulty": 0.6,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P2M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S1",
+                  "title": "Boosting RAG Performance: Re-ranking and Query Expansion",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S1",
+                  "title": "Integrate a Re-ranking Model into an Existing RAG Pipeline",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M1S2",
+              "title": "Agentic RAG & Tool Use",
+              "description": "Design LLM agents that can dynamically use tools (e.g., search engines, APIs) and perform multi-step reasoning for complex tasks.",
+              "difficulty": 0.68,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S2",
+                  "title": "Building Intelligent Agents with LLMs and Tools",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S2",
+                  "title": "Create an LLM Agent that can Browse the Web and Answer Questions",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M2",
+          "title": "AI Response Evaluation & Monitoring",
+          "description": "Develop strategies to quantitatively and qualitatively evaluate the performance of your LLM and RAG systems, ensuring high-quality outputs.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P3M2S1",
+              "title": "RAG Metrics (Faithfulness, Relevance, Context Recall)",
+              "description": "Learn to define and measure key metrics for RAG systems, such as faithfulness, relevance, and context recall, using frameworks like Ragas.",
+              "difficulty": 0.65,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S1",
+                  "title": "Evaluating RAG Systems: Key Metrics and Tools",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S1",
+                  "title": "Evaluate a RAG Pipeline's Faithfulness using Ragas",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M2S2",
+              "title": "A/B Testing & Monitoring for LLM Applications",
+              "description": "Set up A/B tests for different LLM prompts/models and implement monitoring for performance, cost, and safety in production.",
+              "difficulty": 0.72,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S2",
+                  "title": "Productionizing LLMs: A/B Testing and Observability",
+                  "duration_minutes": 32,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S2",
+                  "title": "Design an A/B Test for Two Different Prompt Strategies",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M3",
+          "title": "Deployment & Scalability for AI Apps",
+          "description": "Prepare your AI applications for production by containerizing them and deploying them to cloud platforms, ensuring scalability and reliability.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P3M3S1",
+              "title": "Containerization with Docker for AI Services",
+              "description": "Package your FastAPI and LLM applications into Docker containers for consistent deployment across environments.",
+              "difficulty": 0.7,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P1M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S1",
+                  "title": "Dockerizing Your FastAPI LLM Application",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S1",
+                  "title": "Create a Dockerfile for a RAG-powered FastAPI Service",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P3M3S2",
+              "title": "Cloud Deployment (AWS/GCP/Azure)",
+              "description": "Deploy containerized AI applications to cloud platforms (e.g., AWS ECS/Lambda, GCP Cloud Run, Azure Container Apps) for scalability and reliability.",
+              "difficulty": 0.78,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S2",
+                  "title": "Deploying AI Apps to the Cloud: AWS ECS Walkthrough",
+                  "duration_minutes": 45,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S2",
+                  "title": "Deploy a Dockerized FastAPI LLM Service to AWS ECS",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P4",
+      "identity_label": "Building & Deploying Portfolio Projects",
+      "identity_statement": "Consolidate your skills by building and deploying impactful, end-to-end AI applications, creating a strong portfolio to showcase your expertise.",
+      "market_value_display": "Sought-After AI Application Engineer (150k+/month potential)",
+      "sequence_order": 4,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P4M1",
+          "title": "End-to-End Project Development",
+          "description": "Apply all learned concepts to design, develop, and integrate a complete AI application from scratch, focusing on real-world problems.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SK_P4M1S1",
+              "title": "AI Project Scoping & Design",
+              "description": "Learn to identify suitable AI application ideas, define project scope, and design architecture for complex AI systems.",
+              "difficulty": 0.75,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P3M1S2",
+                  "SK_P3M2S2",
+                  "SK_P3M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S1",
+                  "title": "From Idea to Architecture: Designing Your AI Application",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S1",
+                  "title": "Design a RAG-powered Customer Support Chatbot Architecture",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P4M1S2",
+              "title": "Full-Stack AI Application Development",
+              "description": "Build a complete AI application, integrating frontend (JavaScript) with your FastAPI backend and LLM services.",
+              "difficulty": 0.82,
+              "estimated_hours": 10,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S2",
+                  "title": "Building a Complete AI App: Frontend to Backend Integration",
+                  "duration_minutes": 45,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S2",
+                  "title": "Develop a Full-Stack AI Assistant for Code Generation",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M2",
+          "title": "Advanced Backend & API Design for AI",
+          "description": "Refine your backend skills for AI applications, focusing on microservices architecture, security, and authentication.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SK_P4M2S1",
+              "title": "Microservices Architecture for AI Applications",
+              "description": "Design and implement AI applications using a microservices approach for better scalability, maintainability, and fault tolerance.",
+              "difficulty": 0.8,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S1",
+                  "title": "Microservices for AI: Breaking Down Monoliths",
+                  "duration_minutes": 38,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S1",
+                  "title": "Refactor an AI Monolith into Microservices with FastAPI",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P4M2S2",
+              "title": "API Security & Authentication for AI Services",
+              "description": "Implement robust security measures, including authentication (JWT, OAuth) and authorization, for your AI application APIs.",
+              "difficulty": 0.88,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S2",
+                  "title": "Securing Your AI APIs: JWT and OAuth Best Practices",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S2",
+                  "title": "Add JWT Authentication to a FastAPI LLM Endpoint",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M3",
+          "title": "Showcase & Interview Preparation",
+          "description": "Learn to effectively present your AI projects and prepare for technical interviews, focusing on system design and problem-solving.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SK_P4M3S1",
+              "title": "Building a Compelling AI Portfolio",
+              "description": "Curate and present your AI projects effectively, highlighting your contributions, technical decisions, and impact.",
+              "difficulty": 0.85,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S1",
+                  "title": "Crafting Your AI Portfolio: Projects that Impress",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S1",
+                  "title": "Create a Project README and Demo Video for your AI App",
+                  "difficulty": 0.88,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SK_P4M3S2",
+              "title": "AI System Design Interviews",
+              "description": "Prepare for AI-specific system design interviews, focusing on scaling LLM applications, RAG architectures, and evaluation strategies.",
+              "difficulty": 0.9,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SK_P4M2S2",
+                  "SK_P4M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S2",
+                  "title": "Cracking the AI System Design Interview",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S2",
+                  "title": "Design a Scalable RAG System for a Large Enterprise",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:02:36.011250",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:02:36.011250",
+  "updated_at": "2026-06-03T16:02:36.011250",
+  "confirmed_at": "2026-06-03T16:02:36.011250",
+  "published_at": null
+}

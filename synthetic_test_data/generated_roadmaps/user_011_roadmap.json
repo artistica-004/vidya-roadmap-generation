@@ -1,0 +1,1105 @@
+{
+  "id": "b2541d78-5052-4afa-a42d-d49509067477",
+  "user_id": "user_011",
+  "ai_session_id": "ai_sess_20260603160406_fac128e3",
+  "ai_roadmap_id": "ai_roadmap_20260603160406_ba78edbb",
+  "target_role": "Junior Frontend Developer",
+  "icp_type": "low",
+  "language": "en",
+  "starting_milestone": "L1",
+  "current_active_milestone": "L1",
+  "vision_profile": {
+    "current_state": "Ritika is a final year B.Sc Math student with basic computer skills, no prior frontend development experience, and low confidence about her technical abilities compared to peers from bigger cities.",
+    "main_blocker": "Her biggest obstacles are a lack of structured learning for frontend development, fear of competition due to perceived disadvantages (device access, English proficiency), and limited exposure to practical web development workflows.",
+    "vision_12mo": "In 12 months, Ritika aims to become a confident Junior Frontend Developer, capable of building basic web applications, with a strong portfolio, and securing an entry-level job to achieve financial independence.",
+    "top_motivation": "Her primary motivation is to become financially independent before her younger brother starts college, enabling her to support her family and build a stable future."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:05:08.230573",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "L1",
+      "identity_label": "Frontend Ke Fundamentals",
+      "identity_statement": "Apni web development journey ki mazboot neev rakho, Ritika! Har choti seekh tumhe aage badhayegi.",
+      "market_value_display": "Basic Web Understanding",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L1M1",
+          "title": "Web Ki Duniya Aur HTML Ka Jaadu",
+          "description": "Iss module mein hum web ki basics samjhenge aur HTML se web pages ka structure banana seekhenge.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKL_L1M1S1",
+              "title": "Web Basics & HTML Structure",
+              "description": "Internet kaise kaam karta hai aur HTML se web page ka basic ढाँचा (structure) kaise banate hain.",
+              "difficulty": 0.15,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S1_1",
+                  "title": "Internet Kya Hai aur HTML Ka Pehla Kadam",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S1_1",
+                  "title": "Apna Pehla HTML Page Banao",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S1_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L1M1S2",
+              "title": "Basic HTML Elements",
+              "description": "Headings, paragraphs, links, images jaise common HTML elements ko use karna seekho.",
+              "difficulty": 0.2,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S2_1",
+                  "title": "Common HTML Elements: Text, Links, Images",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S2_1",
+                  "title": "Ek Simple Blog Post Design Karo",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S2_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M2",
+          "title": "CSS Se Styling Ka Safar",
+          "description": "HTML pages ko CSS se sundar aur attractive banana seekhenge.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKL_L1M2S1",
+              "title": "CSS Selectors & Properties",
+              "description": "CSS ka use karke HTML elements ko target karna aur unhe color, font, size dena seekho.",
+              "difficulty": 0.25,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S1_1",
+                  "title": "CSS Introduction: Selectors aur Basic Properties",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S1_1",
+                  "title": "Apni Website Ko Rang Do",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S1_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L1M2S2",
+              "title": "Box Model & Basic Layouts",
+              "description": "Margin, padding, border ka use karke elements ko sahi jagah par rakhna aur simple layouts banana seekho.",
+              "difficulty": 0.3,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S2_1",
+                  "title": "CSS Box Model aur Simple Layouts",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S2_1",
+                  "title": "Ek Simple Card Component Design Karo",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S2_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M3",
+          "title": "Mobile Pe Dev Setup",
+          "description": "Apne mobile device par web development ke liye environment set up karna aur debugging seekhna.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKL_L1M3S1",
+              "title": "Mobile-Friendly Dev Environment",
+              "description": "Apne mobile par code editor aur browser ka use karke web pages banana aur test karna seekho.",
+              "difficulty": 0.35,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S1_1",
+                  "title": "Mobile Par Web Dev Setup: Apps aur Tips",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S1_1",
+                  "title": "Apne Phone Pe Ek Simple Page Host Karo",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S1_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L1M3S2",
+              "title": "Basic Debugging (Browser Dev Tools)",
+              "description": "Apne code mein galtiyan dhoondhna aur theek karna seekho, browser ke developer tools ka use karke.",
+              "difficulty": 0.4,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S2_1",
+                  "title": "Browser Dev Tools: Galtiyan Kaise Dhoondhein",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S2_1",
+                  "title": "Ek Broken Page Ko Theek Karo",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S2_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L2",
+      "identity_label": "Interactive Web Aur JavaScript Ka Power",
+      "identity_statement": "Ab apni websites ko interactive banao aur JavaScript ki shakti dekho, Ritika! Tum kar sakti ho.",
+      "market_value_display": "Junior Frontend Ready (Basic)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L2M1",
+          "title": "JavaScript Ki Pehli Pehchaan",
+          "description": "JavaScript ke fundamentals seekhenge, jo web pages ko dynamic banata hai.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKL_L2M1S1",
+              "title": "JS Variables & Data Types",
+              "description": "JavaScript mein data store karna aur different types ke data ko samajhna seekho.",
+              "difficulty": 0.45,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L1M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S1_1",
+                  "title": "JavaScript Basics: Variables aur Data Types",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S1_1",
+                  "title": "Ek Simple Calculator Logic Banao",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S1_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L2M1S2",
+              "title": "Control Flow & Functions",
+              "description": "Conditions (if/else), loops (for/while) aur functions ka use karke code ko control karna seekho.",
+              "difficulty": 0.5,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S2_1",
+                  "title": "JS Control Flow: Conditions, Loops aur Functions",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S2_1",
+                  "title": "Ek Simple Quiz Game Banao",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S2_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M2",
+          "title": "DOM Manipulation Ka Khel",
+          "description": "JavaScript se web page ke elements ko dynamically change karna seekhenge.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKL_L2M2S1",
+              "title": "Selecting & Modifying DOM",
+              "description": "JavaScript se HTML elements ko select karna, unka content aur style badalna seekho.",
+              "difficulty": 0.55,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S1_1",
+                  "title": "DOM Manipulation: Elements Ko Select aur Change Karna",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S1_1",
+                  "title": "Ek Dynamic To-Do List Banao",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S1_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L2M2S2",
+              "title": "Event Handling",
+              "description": "User actions (click, hover, submit) par JavaScript code run karna seekho.",
+              "difficulty": 0.6,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S2_1",
+                  "title": "Events: User Interactions Ko Handle Karna",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S2_1",
+                  "title": "Ek Button Click Par Text Change Karo",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S2_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M3",
+          "title": "Responsive Design Ka Raaz",
+          "description": "Websites ko alag-alag screen sizes (mobile, tablet, desktop) ke liye adjust karna seekhenge.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKL_L2M3S1",
+              "title": "Media Queries & Flexbox Basics",
+              "description": "Media queries se screen size ke hisaab se styling badalna aur Flexbox se layouts banana seekho.",
+              "difficulty": 0.65,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S1_1",
+                  "title": "Responsive Design: Media Queries aur Flexbox",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S1_1",
+                  "title": "Ek Simple Responsive Navbar Banao",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S1_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L2M3S2",
+              "title": "Mobile-First Approach",
+              "description": "Pehle mobile ke liye design karna aur phir bade screens ke liye adjust karna seekho.",
+              "difficulty": 0.7,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S2_1",
+                  "title": "Mobile-First Design Strategy",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S2_1",
+                  "title": "Ek Responsive Product Card Banao",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S2_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L3",
+      "identity_label": "Projects Aur Job Readiness",
+      "identity_statement": "Apne skills ko projects mein badlo aur job market ke liye taiyaar ho jao, Ritika! Tumhe koi nahi rok sakta.",
+      "market_value_display": "Junior Frontend Developer (2-3 LPA)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L3M1",
+          "title": "Portfolio Projects Banana",
+          "description": "Apne seekhe hue skills ko real-world projects mein apply karna aur ek strong portfolio banana.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKL_L3M1S1",
+              "title": "Simple Static Website Project",
+              "description": "HTML aur CSS ka use karke ek complete static website (e.g., personal portfolio page) banao.",
+              "difficulty": 0.75,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L2M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S1_1",
+                  "title": "Project Guide: Personal Portfolio Website",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S1_1",
+                  "title": "Apna Portfolio Page Design aur Build Karo",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S1_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L3M1S2",
+              "title": "Interactive Mini-App Project",
+              "description": "HTML, CSS aur JavaScript ka use karke ek chota interactive web application (e.g., weather app, calculator) banao.",
+              "difficulty": 0.8,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L3M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S2_1",
+                  "title": "Project Guide: Interactive Weather App",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S2_1",
+                  "title": "Ek Weather App Build Karo",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S2_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M2",
+          "title": "Code Management Aur Collaboration",
+          "description": "Apne code ko manage karna aur online publish karna seekhenge, jo job ke liye bahut zaroori hai.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKL_L3M2S1",
+              "title": "Git & GitHub Basics",
+              "description": "Version control (Git) ka use karke code changes ko track karna aur GitHub par projects share karna seekho.",
+              "difficulty": 0.85,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L3M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S1_1",
+                  "title": "Git aur GitHub: Code Version Control",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S1_1",
+                  "title": "Apna Project GitHub Par Upload Karo",
+                  "difficulty": 0.88,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S1_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L3M2S2",
+              "title": "Project Deployment (Netlify/Vercel)",
+              "description": "Apne banaye hue web projects ko online publish karna seekho, taki sab dekh sakein.",
+              "difficulty": 0.88,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L3M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S2_1",
+                  "title": "Projects Ko Online Kaise Daalein (Netlify/Vercel)",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S2_1",
+                  "title": "Apne Portfolio Website Ko Deploy Karo",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S2_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M3",
+          "title": "Job Search Aur Interview Ki Taiyari",
+          "description": "Job search, resume building aur interview skills par focus karenge, taki tum confidently job pa sako.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKL_L3M3S1",
+              "title": "Resume & Cover Letter Basics",
+              "description": "Ek effective resume aur cover letter banana seekho jo tumhare skills ko highlight kare.",
+              "difficulty": 0.9,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L3M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S1_1",
+                  "title": "Resume aur Cover Letter Kaise Banayein",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S1_1",
+                  "title": "Apna Pehla Frontend Resume Draft Karo",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S1_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKL_L3M3S2",
+              "title": "Mock Interviews & Soft Skills",
+              "description": "Interview ke liye taiyari karna, common questions ka jawab dena aur communication skills improve karna seekho.",
+              "difficulty": 0.9,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKL_L3M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S2_1",
+                  "title": "Interview Tips aur Soft Skills Improvement",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S2_1",
+                  "title": "Ek Mock Interview Mein Participate Karo",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S2_1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:05:08.230573",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:05:08.230573",
+  "updated_at": "2026-06-03T16:05:08.230573",
+  "confirmed_at": "2026-06-03T16:05:08.230573",
+  "published_at": null
+}

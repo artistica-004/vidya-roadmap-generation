@@ -1,0 +1,1460 @@
+{
+  "id": "b28cbe98-bf7b-4df6-ba07-1ca4870475e6",
+  "user_id": "user_003",
+  "ai_session_id": "ai_sess_20260603155258_5cad15c2",
+  "ai_roadmap_id": "ai_roadmap_20260603155258_84a28d4c",
+  "target_role": "Cloud Solutions Architect",
+  "icp_type": "high",
+  "language": "en",
+  "starting_milestone": "P1",
+  "current_active_milestone": "P1",
+  "vision_profile": {
+    "current_state": "Rohan is a Cloud Support Engineer with 4 years of experience, skilled in AWS basics, Linux, and incident management, but feels stuck in reactive support.",
+    "main_blocker": "Lack of architectural design experience, specific skills in Kubernetes architecture, Terraform, cloud cost optimization, and enterprise solution design.",
+    "vision_12mo": "Within 12 months, Rohan aims to transition into a Cloud Solutions Architect role, designing and implementing scalable AWS and Kubernetes infrastructure, earning 180,000 INR/month, and moving away from night shifts.",
+    "top_motivation": "To stop working night shifts, leverage his existing cloud exposure into higher-impact engineering work, and advance his career beyond reactive support roles."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T15:54:13.626267",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "P1",
+      "identity_label": "Architectural Foundations & IaC Basics",
+      "identity_statement": "Lay a robust foundation in advanced AWS services and Infrastructure as Code to transition from support to proactive design.",
+      "market_value_display": "Associate Cloud Architect / Senior Cloud Engineer (10-15 LPA)",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P1M1",
+          "title": "Advanced AWS Infrastructure & Security",
+          "description": "Deepen your understanding of core AWS services, focusing on design patterns, security best practices, and cost implications.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "P1M1S1_AWS_VPC_Design",
+              "title": "AWS VPC Design & Advanced Networking",
+              "description": "Master designing secure, scalable, and highly available Virtual Private Clouds, including subnets, routing, NAT gateways, and peering.",
+              "difficulty": 0.2,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S1",
+                  "title": "Deep Dive into AWS VPC Architecture",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S1",
+                  "title": "Design a Multi-AZ VPC for a Web Application",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P1M1S2_IAM_Best_Practices",
+              "title": "AWS IAM Best Practices & Federation",
+              "description": "Implement robust identity and access management, including roles, policies, identity federation, and cross-account access.",
+              "difficulty": 0.25,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1M1S1_AWS_VPC_Design"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S2",
+                  "title": "Securing AWS with IAM Roles and Policies",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S2",
+                  "title": "Configure Least Privilege IAM for a Development Team",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M2",
+          "title": "Infrastructure as Code with Terraform",
+          "description": "Learn to provision and manage cloud infrastructure efficiently and repeatably using Terraform.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "P1M2S1_Terraform_HCL_Basics",
+              "title": "Terraform HCL Basics & State Management",
+              "description": "Understand HashiCorp Configuration Language (HCL), Terraform workflow, and managing state files securely.",
+              "difficulty": 0.3,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1M1S1_AWS_VPC_Design"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S1",
+                  "title": "Getting Started with Terraform and HCL",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S1",
+                  "title": "Provision an EC2 Instance with Terraform",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P1M2S2_Terraform_AWS_Provider",
+              "title": "Terraform AWS Provider & Resource Management",
+              "description": "Utilize the AWS provider to manage various AWS resources, including VPCs, EC2, S3, and RDS.",
+              "difficulty": 0.35,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1M2S1_Terraform_HCL_Basics",
+                  "P1M1S2_IAM_Best_Practices"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S2",
+                  "title": "Managing AWS Resources with Terraform",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S2",
+                  "title": "Deploy a Secure S3 Bucket and IAM Policy with Terraform",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M3",
+          "title": "Linux & Networking for Cloud Architects",
+          "description": "Reinforce advanced Linux administration and networking concepts crucial for designing robust cloud solutions.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "P1M3S1_Linux_System_Hardening",
+              "title": "Linux System Hardening & Automation",
+              "description": "Implement security best practices for Linux servers, including firewall configuration, user management, and basic automation.",
+              "difficulty": 0.2,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S1",
+                  "title": "Securing Linux Servers in the Cloud",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S1",
+                  "title": "Harden an Ubuntu Server for Production Use",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P1M3S2_Advanced_Networking_Concepts",
+              "title": "Advanced Networking Concepts for Cloud",
+              "description": "Explore advanced networking topics like VPNs, Direct Connect, DNS management, and load balancing strategies.",
+              "difficulty": 0.3,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1M1S1_AWS_VPC_Design",
+                  "P1M3S1_Linux_System_Hardening"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S2",
+                  "title": "Cloud Networking Deep Dive: VPNs and Load Balancers",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S2",
+                  "title": "Configure a Site-to-Site VPN between On-Prem and AWS",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P2",
+      "identity_label": "Kubernetes & Container Orchestration Mastery",
+      "identity_statement": "Become proficient in designing, deploying, and managing scalable applications with Kubernetes and container technologies.",
+      "market_value_display": "Cloud Solutions Architect / Kubernetes Specialist (15-20 LPA)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P2M1",
+          "title": "Kubernetes Core & Deployment Strategies",
+          "description": "Understand the fundamental concepts of Kubernetes, from containerization to deploying and managing applications.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "P2M1S1_Docker_for_Cloud",
+              "title": "Docker for Cloud-Native Applications",
+              "description": "Master Docker for building, shipping, and running containerized applications, essential for Kubernetes.",
+              "difficulty": 0.35,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1M3S1_Linux_System_Hardening"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S1",
+                  "title": "Containerizing Your Applications with Docker",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S1",
+                  "title": "Build and Run a Multi-Container Application with Docker Compose",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P2M1S2_Kubernetes_Cluster_Setup",
+              "title": "Kubernetes Cluster Setup & Management (EKS/AKS)",
+              "description": "Learn to provision and manage Kubernetes clusters on AWS (EKS) or Azure (AKS), including node groups and networking.",
+              "difficulty": 0.4,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2M1S1_Docker_for_Cloud",
+                  "P1M2S2_Terraform_AWS_Provider"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S2",
+                  "title": "Deploying Your First EKS Cluster with Terraform",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S2",
+                  "title": "Provision an EKS Cluster and Worker Nodes",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P2M1S3_Kubernetes_Deployments_Services",
+              "title": "Kubernetes Deployments, Services & Ingress",
+              "description": "Learn to deploy applications using Deployments, expose them with Services, and manage external access with Ingress controllers.",
+              "difficulty": 0.45,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2M1S2_Kubernetes_Cluster_Setup"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S3",
+                  "title": "Managing Applications with Kubernetes Deployments",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S3",
+                  "title": "Deploy a Sample Application to Kubernetes with a Service and Ingress",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M2",
+          "title": "Advanced Kubernetes Architecture & Operations",
+          "description": "Dive into advanced Kubernetes features for scaling, resource management, and package management.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "P2M2S1_Pod_Scheduling_Resource_Management",
+              "title": "Pod Scheduling & Resource Management",
+              "description": "Optimize resource allocation and scheduling using requests, limits, taints, tolerations, and node selectors.",
+              "difficulty": 0.5,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2M1S3_Kubernetes_Deployments_Services"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S1",
+                  "title": "Kubernetes Resource Management and Scheduling",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S1",
+                  "title": "Optimize Pod Resource Requests and Limits for a High-Traffic Service",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P2M2S2_Helm_Charts",
+              "title": "Helm Charts for Kubernetes Package Management",
+              "description": "Package, deploy, and manage Kubernetes applications using Helm charts for repeatable deployments.",
+              "difficulty": 0.55,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2M1S3_Kubernetes_Deployments_Services"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S2",
+                  "title": "Introduction to Helm for Kubernetes Deployments",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S2",
+                  "title": "Create and Deploy a Custom Helm Chart for an Application",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P2M2S3_Container_Security",
+              "title": "Container & Kubernetes Security Best Practices",
+              "description": "Implement security measures for Docker containers and Kubernetes clusters, including image scanning, network policies, and RBAC.",
+              "difficulty": 0.6,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2M1S1_Docker_for_Cloud",
+                  "P1M1S2_IAM_Best_Practices"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S3",
+                  "title": "Securing Your Kubernetes Deployments",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S3",
+                  "title": "Implement Network Policies and RBAC for a Multi-Tenant Cluster",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P3",
+      "identity_label": "Scalable & Cost-Optimized Cloud Solutions",
+      "identity_statement": "Design and implement highly available, fault-tolerant, and cost-efficient cloud solutions for enterprise-grade applications.",
+      "market_value_display": "Senior Cloud Solutions Architect (20-25 LPA)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P3M1",
+          "title": "Cloud Cost Management & Optimization",
+          "description": "Learn strategies and tools to monitor, analyze, and optimize cloud spending effectively.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "P3M1S1_AWS_Cost_Explorer_Budgets",
+              "title": "AWS Cost Explorer & Budgets",
+              "description": "Utilize AWS Cost Explorer and Budgets to track, forecast, and control cloud expenditure.",
+              "difficulty": 0.5,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1M1S2_IAM_Best_Practices"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S1",
+                  "title": "Mastering AWS Cost Management Tools",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S1",
+                  "title": "Set Up Cost Allocation Tags and Budget Alerts for a Project",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P3M1S2_Reserved_Instances_Savings_Plans",
+              "title": "Reserved Instances & Savings Plans Strategy",
+              "description": "Develop strategies for cost savings using Reserved Instances, Savings Plans, and Spot Instances.",
+              "difficulty": 0.55,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P3M1S1_AWS_Cost_Explorer_Budgets"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S2",
+                  "title": "Optimizing AWS Costs with RIs and Savings Plans",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S2",
+                  "title": "Recommend a Cost Optimization Strategy for a Growing Startup",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M2",
+          "title": "Enterprise Solution Design Patterns",
+          "description": "Explore common architectural patterns for building resilient, scalable, and maintainable enterprise applications in the cloud.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "P3M2S1_Microservices_Architecture_Patterns",
+              "title": "Microservices Architecture Patterns",
+              "description": "Design and implement microservices architectures, including service discovery, API gateways, and data consistency.",
+              "difficulty": 0.6,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2M1S3_Kubernetes_Deployments_Services"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S1",
+                  "title": "Designing Scalable Microservices in the Cloud",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S1",
+                  "title": "Design a Microservices Architecture for an E-commerce Platform",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P3M2S2_Serverless_Design",
+              "title": "Serverless Architecture Design",
+              "description": "Architect event-driven, serverless applications using AWS Lambda, API Gateway, DynamoDB, and SQS/SNS.",
+              "difficulty": 0.65,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1M1S2_IAM_Best_Practices"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S2",
+                  "title": "Building Event-Driven Serverless Applications on AWS",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S2",
+                  "title": "Design a Serverless Data Processing Pipeline",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M3",
+          "title": "Monitoring, Logging & Security in Cloud",
+          "description": "Implement comprehensive monitoring, logging, and advanced security measures for cloud environments.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "P3M3S1_CloudWatch_Prometheus",
+              "title": "CloudWatch & Prometheus for Observability",
+              "description": "Set up robust monitoring and logging solutions using AWS CloudWatch, Prometheus, and Grafana.",
+              "difficulty": 0.6,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2M1S3_Kubernetes_Deployments_Services"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S1",
+                  "title": "Implementing Cloud Observability with CloudWatch and Prometheus",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S1",
+                  "title": "Configure Monitoring and Alerting for a Kubernetes Application",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P3M3S2_AWS_Security_Hub_GuardDuty",
+              "title": "AWS Security Hub & GuardDuty for Threat Detection",
+              "description": "Implement advanced threat detection and security posture management using AWS Security Hub, GuardDuty, and WAF.",
+              "difficulty": 0.65,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1M1S2_IAM_Best_Practices",
+                  "P2M2S3_Container_Security"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S2",
+                  "title": "Enhancing Cloud Security with AWS GuardDuty and Security Hub",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S2",
+                  "title": "Configure Automated Threat Detection and Response for an AWS Account",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P4",
+      "identity_label": "Architecting for Impact & Interview Readiness",
+      "identity_statement": "Synthesize your knowledge into comprehensive solution designs, demonstrate expertise through a capstone project, and prepare for architect-level interviews.",
+      "market_value_display": "Lead Cloud Architect / Principal Architect (25+ LPA)",
+      "sequence_order": 4,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P4M1",
+          "title": "Advanced IaC & Automation for Architects",
+          "description": "Master advanced Terraform techniques and integrate IaC into CI/CD pipelines for fully automated deployments.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "P4M1S1_Terraform_Modules_Workspaces",
+              "title": "Terraform Modules & Workspaces for Enterprise",
+              "description": "Design reusable Terraform modules and manage multiple environments using workspaces and remote state.",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1M2S2_Terraform_AWS_Provider"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S1",
+                  "title": "Advanced Terraform: Modules, Workspaces, and Best Practices",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S1",
+                  "title": "Refactor Existing Terraform Code into Reusable Modules",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P4M1S2_CI_CD_for_Infrastructure",
+              "title": "CI/CD for Infrastructure as Code",
+              "description": "Implement continuous integration and continuous deployment pipelines for Terraform and Kubernetes configurations.",
+              "difficulty": 0.75,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P4M1S1_Terraform_Modules_Workspaces",
+                  "P2M1S3_Kubernetes_Deployments_Services"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S2",
+                  "title": "Automating Infrastructure Deployments with CI/CD",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S2",
+                  "title": "Build a GitOps Pipeline for Kubernetes Deployments",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M2",
+          "title": "System Design & Architecture Interviews",
+          "description": "Prepare for architect-level system design interviews by mastering common design patterns, trade-offs, and communication skills.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "P4M2S1_Distributed_System_Design",
+              "title": "Distributed System Design Principles",
+              "description": "Understand principles of distributed systems, including consistency, availability, partitioning, and fault tolerance.",
+              "difficulty": 0.75,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P3M2S1_Microservices_Architecture_Patterns",
+                  "P3M2S2_Serverless_Design"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S1",
+                  "title": "Core Concepts of Distributed System Design",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S1",
+                  "title": "Design a Distributed Caching System for High Throughput",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P4M2S2_High_Availability_Disaster_Recovery",
+              "title": "High Availability & Disaster Recovery Strategies",
+              "description": "Design and implement highly available and disaster-resilient architectures using multi-region deployments, backup, and recovery strategies.",
+              "difficulty": 0.8,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P4M2S1_Distributed_System_Design",
+                  "P3M3S1_CloudWatch_Prometheus"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S2",
+                  "title": "Architecting for High Availability and Disaster Recovery",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S2",
+                  "title": "Develop a DR Plan for a Critical Application with RTO/RPO Requirements",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M3",
+          "title": "Capstone Project: Scalable Cloud Solution",
+          "description": "Apply all learned skills to design and implement a comprehensive, scalable cloud solution, building a strong portfolio piece.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "P4M3S1_Cloud_Solutions_Architecture_Case_Study",
+              "title": "Cloud Solutions Architecture Case Study",
+              "description": "Analyze and design a complex cloud solution based on real-world requirements, considering all architectural pillars.",
+              "difficulty": 0.85,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P4M2S2_High_Availability_Disaster_Recovery",
+                  "P4M1S2_CI_CD_for_Infrastructure",
+                  "P3M1S2_Reserved_Instances_Savings_Plans"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S1",
+                  "title": "Approaching Complex Cloud Architecture Problems",
+                  "duration_minutes": 45,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S1",
+                  "title": "Design a Global SaaS Platform Architecture on AWS",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P4M3S2_Portfolio_Project_Implementation",
+              "title": "Portfolio Project: Scalable Cloud Solution Implementation",
+              "description": "Build a hands-on, end-to-end cloud solution, demonstrating your architectural and implementation skills for your portfolio.",
+              "difficulty": 0.9,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P4M3S1_Cloud_Solutions_Architecture_Case_Study"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S2",
+                  "title": "Building Your Cloud Architect Portfolio Project",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S2",
+                  "title": "Implement a Scalable Serverless Microservices Application",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T15:54:13.626267",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T15:54:13.626267",
+  "updated_at": "2026-06-03T15:54:13.626267",
+  "confirmed_at": "2026-06-03T15:54:13.626267",
+  "published_at": null
+}

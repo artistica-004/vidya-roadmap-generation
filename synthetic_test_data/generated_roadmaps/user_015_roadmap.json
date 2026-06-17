@@ -1,0 +1,1582 @@
+{
+  "id": "2ded8f5f-20ae-404d-8634-fbd2aae71924",
+  "user_id": "user_015",
+  "ai_session_id": "ai_sess_20260603161114_e69760a7",
+  "ai_roadmap_id": "ai_roadmap_20260603161114_bb43a46c",
+  "target_role": "Software Developer Trainee",
+  "icp_type": "low",
+  "language": "en",
+  "starting_milestone": "L1",
+  "current_active_milestone": "L1",
+  "vision_profile": {
+    "current_state": "Anjali is a final semester BCA student with basic knowledge in C, Java, HTML, and database concepts, but lacks confidence in DSA, algorithmic thinking, and building resume-worthy projects.",
+    "main_blocker": "Her biggest fear is freezing during technical interviews, which stems from a lack of confidence in her problem-solving and DSA skills.",
+    "vision_12mo": "Within 12 months, Anjali aims to secure her first private-sector tech job as a Software Developer Trainee, earning 30,000 INR monthly, and becoming a role model for her family.",
+    "top_motivation": "She is highly motivated to be the first person in her family to achieve a private-sector tech job, driven by a strong desire for personal and family upliftment."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T16:12:33.172506",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "L1",
+      "identity_label": "Programming & Problem Solving Basics",
+      "identity_statement": "Let's build a strong foundation in Java and problem-solving, step by step, to boost your confidence!",
+      "market_value_display": "Entry-level readiness for basic coding assessments",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L1M1",
+          "title": "Core Programming Refresher (Java Focus)",
+          "description": "Strengthen your Java fundamentals and Object-Oriented Programming concepts, essential for any software role.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M1S1",
+              "title": "Java Basics & OOP Concepts",
+              "description": "Understand core Java syntax, data types, variables, and fundamental Object-Oriented Programming principles like classes, objects, inheritance, and polymorphism.",
+              "difficulty": 0.15,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S1",
+                  "title": "Java Fundamentals: Variables, Data Types & Operators",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S1",
+                  "title": "Build a Simple Java Calculator Class",
+                  "difficulty": 0.2,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M1S2",
+              "title": "Control Flow & Functions in Java",
+              "description": "Learn to control program execution using if-else, loops (for, while), and organize code into reusable functions/methods.",
+              "difficulty": 0.2,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S2",
+                  "title": "Mastering Java Loops and Conditional Statements",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S2",
+                  "title": "Implement a Java Program for Prime Number Check",
+                  "difficulty": 0.25,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M1S3",
+              "title": "Debugging & Error Handling",
+              "description": "Learn to identify and fix bugs in your code using debugging tools and implement robust error handling mechanisms.",
+              "difficulty": 0.25,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M1S3",
+                  "title": "Effective Debugging in IntelliJ IDEA & Exception Handling",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M1S3",
+                  "title": "Debug a Java Program with Logical Errors",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M2",
+          "title": "Basic Problem Solving & Logic Building",
+          "description": "Develop your analytical skills to break down problems and build logical solutions, a core skill for interviews.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M2S1",
+              "title": "Introduction to Problem Solving Strategies",
+              "description": "Learn common approaches like breaking down problems, pattern recognition, and working through examples to solve coding challenges.",
+              "difficulty": 0.2,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M1S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S1",
+                  "title": "How to Approach Coding Problems: A Beginner's Guide",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S1",
+                  "title": "Solve a Simple Number Pattern Problem",
+                  "difficulty": 0.28,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M2S2",
+              "title": "Basic Array & String Manipulation",
+              "description": "Practice common operations on arrays and strings, like searching, reversing, and counting, which are fundamental for DSA.",
+              "difficulty": 0.28,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S2",
+                  "title": "Essential Array Operations in Java",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S2",
+                  "title": "Find the Largest Element in an Array",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M2S3",
+              "title": "Time & Space Complexity Basics",
+              "description": "Understand how to analyze the efficiency of your code in terms of time and space, crucial for optimizing solutions.",
+              "difficulty": 0.32,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M2S3",
+                  "title": "Introduction to Big O Notation: Time Complexity Explained",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M2S3",
+                  "title": "Analyze the Complexity of a Given Code Snippet",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L1M3",
+          "title": "Introduction to Data Structures",
+          "description": "Get started with fundamental data structures like arrays and strings, and basic searching/sorting algorithms.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L1M3S1",
+              "title": "Arrays & 2D Arrays",
+              "description": "Deep dive into single and multi-dimensional arrays, their operations, and common use cases in problem-solving.",
+              "difficulty": 0.35,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M2S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S1",
+                  "title": "Working with Arrays and Matrices in Java",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S1",
+                  "title": "Rotate a 2D Array by 90 Degrees",
+                  "difficulty": 0.42,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M3S2",
+              "title": "Strings & String Builders",
+              "description": "Explore advanced string manipulation techniques, immutability, and efficient string operations using StringBuilder.",
+              "difficulty": 0.38,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S2",
+                  "title": "Java Strings vs. StringBuilder: When and Why?",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S2",
+                  "title": "Check if a String is a Palindrome",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L1M3S3",
+              "title": "Basic Searching & Sorting",
+              "description": "Learn fundamental algorithms like Linear Search, Binary Search, Bubble Sort, and Selection Sort.",
+              "difficulty": 0.4,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L1M3S3",
+                  "title": "Introduction to Searching and Sorting Algorithms",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L1M3S3",
+                  "title": "Implement Binary Search on a Sorted Array",
+                  "difficulty": 0.48,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L1M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L2",
+      "identity_label": "DSA & Algorithmic Mastery",
+      "identity_statement": "Now, let's dive deep into Data Structures and Algorithms to sharpen your problem-solving skills for tough interviews!",
+      "market_value_display": "Competitive for coding rounds in product-based companies",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L2M1",
+          "title": "Advanced Data Structures",
+          "description": "Master complex data structures like Linked Lists, Trees, Stacks, and Queues, crucial for efficient solutions.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M1S1",
+              "title": "Linked Lists",
+              "description": "Understand singly, doubly, and circular linked lists, their operations, and when to use them over arrays.",
+              "difficulty": 0.42,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L1M3S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S1",
+                  "title": "Demystifying Linked Lists: Concepts and Implementations",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S1",
+                  "title": "Reverse a Singly Linked List",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M1S2",
+              "title": "Stacks & Queues",
+              "description": "Learn about LIFO and FIFO data structures, their applications, and implement them using arrays or linked lists.",
+              "difficulty": 0.45,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S2",
+                  "title": "Stacks and Queues: Data Structures for Order",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S2",
+                  "title": "Implement a Queue using Two Stacks",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M1S3",
+              "title": "Trees & Binary Trees",
+              "description": "Understand hierarchical data structures like trees, binary trees, and their traversals (inorder, preorder, postorder).",
+              "difficulty": 0.5,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M1S3",
+                  "title": "Introduction to Trees and Binary Tree Traversals",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M1S3",
+                  "title": "Find the Height of a Binary Tree",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M2",
+          "title": "Core Algorithms & Time Complexity",
+          "description": "Explore essential algorithms and advanced complexity analysis to write optimized and efficient code.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M2S1",
+              "title": "Recursion & Backtracking",
+              "description": "Master recursive problem-solving, understand the call stack, and apply backtracking for combinatorial problems.",
+              "difficulty": 0.55,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M1S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S1",
+                  "title": "Recursion Explained: From Basics to Backtracking",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S1",
+                  "title": "Generate All Permutations of a String using Backtracking",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M2S2",
+              "title": "Hashing & Hash Maps",
+              "description": "Understand hash functions, collision resolution, and efficiently store/retrieve data using HashMaps/HashSets.",
+              "difficulty": 0.58,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S2",
+                  "title": "Hashing and HashMaps in Java: A Deep Dive",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S2",
+                  "title": "Find Duplicate Elements in an Array using a HashMap",
+                  "difficulty": 0.68,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M2S3",
+              "title": "Greedy Algorithms",
+              "description": "Learn to solve optimization problems by making locally optimal choices at each step, hoping to find a global optimum.",
+              "difficulty": 0.62,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M2S3",
+                  "title": "Introduction to Greedy Algorithms with Examples",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M2S3",
+                  "title": "Solve the Activity Selection Problem using Greedy Approach",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L2M3",
+          "title": "Practical Algorithmic Problem Solving",
+          "description": "Apply advanced algorithms like Dynamic Programming and Graphs to solve complex problems, preparing you for real challenges.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L2M3S1",
+              "title": "Dynamic Programming Basics",
+              "description": "Learn to solve problems by breaking them into overlapping subproblems and storing results to avoid recomputation.",
+              "difficulty": 0.65,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M2S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S1",
+                  "title": "Dynamic Programming: The Art of Optimization",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S1",
+                  "title": "Solve the Fibonacci Sequence using Dynamic Programming",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M3S2",
+              "title": "Graphs & Graph Traversal",
+              "description": "Understand graph representations (adjacency list/matrix) and traversal algorithms like BFS and DFS.",
+              "difficulty": 0.68,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S2",
+                  "title": "Graphs: Representation and Traversal (BFS/DFS)",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S2",
+                  "title": "Implement Breadth-First Search (BFS) on a Graph",
+                  "difficulty": 0.78,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L2M3S3",
+              "title": "Advanced Sorting & Searching",
+              "description": "Explore efficient sorting algorithms like Merge Sort, Quick Sort, and advanced searching techniques.",
+              "difficulty": 0.7,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L2M3S3",
+                  "title": "Merge Sort and Quick Sort: Divide and Conquer",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L2M3S3",
+                  "title": "Implement Merge Sort Algorithm",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L2M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "L3",
+      "identity_label": "Project Building & Interview Readiness",
+      "identity_statement": "It's time to build impressive projects and master interviews, turning your knowledge into a job offer!",
+      "market_value_display": "Ready for Software Developer Trainee roles (3-5 LPA)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "L3M1",
+          "title": "Web Development Basics for Projects",
+          "description": "Learn the essentials of web development to build practical, resume-worthy projects.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M1S1",
+              "title": "HTML/CSS/JS Refresher",
+              "description": "Quickly revise foundational web technologies to build user interfaces for your projects.",
+              "difficulty": 0.72,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L2M3S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S1",
+                  "title": "Crash Course: HTML, CSS, and JavaScript for Beginners",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S1",
+                  "title": "Build a Responsive Navigation Bar with HTML/CSS/JS",
+                  "difficulty": 0.82,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M1S2",
+              "title": "Basic Backend with Java (Spring Boot Intro)",
+              "description": "Learn to build simple backend APIs using Java with the popular Spring Boot framework.",
+              "difficulty": 0.75,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M1S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S2",
+                  "title": "Spring Boot for Beginners: Building Your First API",
+                  "duration_minutes": 40,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S2",
+                  "title": "Create a REST API for a To-Do List Application",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M1S3",
+              "title": "Database Integration (SQL Refresher)",
+              "description": "Connect your Java backend to a database, perform CRUD operations, and refresh your SQL knowledge.",
+              "difficulty": 0.78,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M1S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M1S3",
+                  "title": "SQL Basics & Connecting Spring Boot to MySQL",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M1S3",
+                  "title": "Design a Database Schema for a Blog Application",
+                  "difficulty": 0.88,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M1S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M2",
+          "title": "Building Resume-Worthy Projects",
+          "description": "Apply your skills to build practical projects that showcase your abilities to potential employers.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M2S1",
+              "title": "Mini Project: CRUD Application",
+              "description": "Build a complete Create, Read, Update, Delete (CRUD) application using your learned web dev and database skills.",
+              "difficulty": 0.8,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M1S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S1",
+                  "title": "Full Stack CRUD App Tutorial: Java Spring Boot & HTML/CSS/JS",
+                  "duration_minutes": 60,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S1",
+                  "title": "Implement User Authentication for Your CRUD App",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M2S2",
+              "title": "Version Control with Git & GitHub",
+              "description": "Learn to manage your code effectively using Git and collaborate on projects using GitHub, an industry standard.",
+              "difficulty": 0.82,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M2S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S2",
+                  "title": "Git & GitHub Essentials for Developers",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S2",
+                  "title": "Collaborate on a Project using Git Branches and Pull Requests",
+                  "difficulty": 0.92,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M2S3",
+              "title": "Project Deployment Basics",
+              "description": "Learn how to deploy your web application to a cloud platform, making it accessible to others.",
+              "difficulty": 0.85,
+              "estimated_hours": 4,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M2S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M2S3",
+                  "title": "Deploying Your Spring Boot App to Heroku/Render",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M2S3",
+                  "title": "Troubleshoot a Failed Application Deployment",
+                  "difficulty": 0.95,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "L3M3",
+          "title": "Technical Interview Mastery & Confidence",
+          "description": "Prepare for all aspects of technical interviews, build a strong resume, and overcome your fear of freezing.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "SKILL_L3M3S1",
+              "title": "Resume Building & Portfolio Creation",
+              "description": "Craft an impactful resume and build an online portfolio to highlight your skills and projects.",
+              "difficulty": 0.88,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M2S3"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S1",
+                  "title": "Resume & Portfolio That Get You Hired",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S1",
+                  "title": "Review and Optimize Your Resume for a Trainee Role",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M3S2",
+              "title": "Behavioral & HR Interview Prep",
+              "description": "Prepare for common behavioral questions, learn to articulate your strengths, and manage interview anxiety.",
+              "difficulty": 0.9,
+              "estimated_hours": 3,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M3S1"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S2",
+                  "title": "Cracking Behavioral Interviews: STAR Method",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S2",
+                  "title": "Practice Answering 'Tell Me About Yourself' Confidently",
+                  "difficulty": 0.92,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "SKILL_L3M3S3",
+              "title": "Mock Interviews & Feedback",
+              "description": "Engage in realistic mock interviews to practice under pressure, receive feedback, and build confidence to overcome your fear of freezing.",
+              "difficulty": 0.92,
+              "estimated_hours": 5,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "SKILL_L3M3S2"
+                ],
+                "minimum_mastery": 0.7,
+                "unlock_type": "mastery_gated"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_L3M3S3",
+                  "title": "The Ultimate Mock Interview Guide: Practice Makes Perfect",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_L3M3S3",
+                  "title": "Simulated Technical Interview with Live Feedback",
+                  "difficulty": 0.98,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_L3M3S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T16:12:33.172506",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T16:12:33.172506",
+  "updated_at": "2026-06-03T16:12:33.172506",
+  "confirmed_at": "2026-06-03T16:12:33.172506",
+  "published_at": null
+}

@@ -1,0 +1,1460 @@
+{
+  "id": "4aef98f7-ef1c-4fac-9781-13637e7786d5",
+  "user_id": "user_005",
+  "ai_session_id": "ai_sess_20260603155523_893ecfac",
+  "ai_roadmap_id": "ai_roadmap_20260603155523_cdd539ff",
+  "target_role": "SDET Lead",
+  "icp_type": "high",
+  "language": "en",
+  "starting_milestone": "P1",
+  "current_active_milestone": "P1",
+  "vision_profile": {
+    "current_state": "Karan is a QA Automation Engineer with 5 years of experience, proficient in Selenium, Java, Postman, and Jenkins basics. He's currently focused on automation scripting.",
+    "main_blocker": "His primary blockers are skill gaps in test framework architecture, API contract testing, CI/CD pipeline integration, and foundational performance testing, which prevent him from transitioning to a lead SDET role.",
+    "vision_12mo": "Within 12 months, Karan aims to be a highly skilled SDET Lead, capable of designing robust test frameworks, implementing comprehensive backend and API contract tests, integrating automation seamlessly into CI/CD pipelines, and initiating performance testing efforts. He envisions his work being recognized as true engineering.",
+    "top_motivation": "Karan is driven by the desire to elevate QA from a final checklist to a critical engineering discipline, ensuring quality is built in. He wants to avoid repetitive automation by deeply understanding architecture and backend testing."
+  },
+  "roadmap_meta": {
+    "generated_at": "2026-06-03T15:56:56.845738",
+    "version": "v3.1",
+    "science_model": [
+      "ZPD",
+      "Mastery Learning",
+      "CLT",
+      "BKT",
+      "Possible Selves"
+    ]
+  },
+  "milestones": [
+    {
+      "milestone_id": "P1",
+      "identity_label": "Automation Architect Foundations",
+      "identity_statement": "Elevate your automation skills from scripting to designing scalable and maintainable test frameworks, laying the groundwork for true engineering impact.",
+      "market_value_display": "Mid-Senior QA Automation Engineer (10-15 LPA)",
+      "sequence_order": 1,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P1M1",
+          "title": "Advanced Java for Test Automation",
+          "description": "Deepen your Java expertise to build more robust, maintainable, and scalable test automation solutions.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "P1S1_JavaDesignPatterns",
+              "title": "Java Design Patterns for Test Automation",
+              "description": "Learn to apply common design patterns (e.g., Factory, Singleton, Builder) to improve the structure and reusability of your test code.",
+              "difficulty": 0.15,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [],
+                "minimum_mastery": 0.0,
+                "unlock_type": "immediate"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S1",
+                  "title": "Introduction to Design Patterns in Java for QA",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S1",
+                  "title": "Refactor a Test Suite using Factory Pattern",
+                  "difficulty": 0.3,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P1S2_RefactoringCodeQuality",
+              "title": "Refactoring & Code Quality in Java Tests",
+              "description": "Master techniques for refactoring existing test code, applying SOLID principles, and ensuring high code quality through static analysis tools.",
+              "difficulty": 0.2,
+              "estimated_hours": 9,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1S1_JavaDesignPatterns"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M1S2",
+                  "title": "Best Practices for Clean Code in Test Automation",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M1S2",
+                  "title": "Improve Readability and Maintainability of a Selenium Test",
+                  "difficulty": 0.35,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M2",
+          "title": "Test Framework Design Principles",
+          "description": "Transition from individual test scripts to architecting a robust, scalable, and maintainable test automation framework.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "P1S3_POMBeyond",
+              "title": "Page Object Model (POM) & Beyond",
+              "description": "Master advanced POM implementations, including Page Factory, and explore alternative patterns for complex UI automation scenarios.",
+              "difficulty": 0.25,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1S2_RefactoringCodeQuality"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S3",
+                  "title": "Advanced POM Strategies for Large-Scale Projects",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S3",
+                  "title": "Design a Robust POM for an E-commerce Application",
+                  "difficulty": 0.4,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P1S4_DataKeywordDriven",
+              "title": "Data-Driven & Keyword-Driven Frameworks",
+              "description": "Learn to implement data-driven and keyword-driven approaches to make your test frameworks flexible and reusable for various test scenarios.",
+              "difficulty": 0.3,
+              "estimated_hours": 9,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1S3_POMBeyond"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M2S4",
+                  "title": "Building Flexible Test Frameworks with Data & Keywords",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M2S4",
+                  "title": "Convert a Hardcoded Test to Data-Driven using Excel",
+                  "difficulty": 0.45,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M2S4",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P1M3",
+          "title": "Building a Modular Test Framework",
+          "description": "Assemble the components into a cohesive and extensible test framework, ready for advanced integration.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "P1S5_TestNGEnhancements",
+              "title": "Integrating TestNG/JUnit for Reporting & Parallel Execution",
+              "description": "Leverage advanced features of TestNG or JUnit for comprehensive test reporting, parallel test execution, and test grouping.",
+              "difficulty": 0.35,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1S4_DataKeywordDriven"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S5",
+                  "title": "Advanced TestNG Features for Enterprise Automation",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S5",
+                  "title": "Configure Parallel Test Execution for a Selenium Suite",
+                  "difficulty": 0.5,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S5",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P1S6_ConfigManagement",
+              "title": "Configuration Management for Test Frameworks",
+              "description": "Implement robust configuration management strategies to handle different environments, test data, and sensitive information securely.",
+              "difficulty": 0.4,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1S5_TestNGEnhancements"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P1M3S6",
+                  "title": "Dynamic Configuration for Scalable Test Automation",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P1M3S6",
+                  "title": "Implement Environment-Specific Configurations using Properties Files",
+                  "difficulty": 0.55,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P1M3S6",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P2",
+      "identity_label": "Backend & API Test Specialization",
+      "identity_statement": "Master the art of testing APIs and backend services, ensuring robust system integrity and preventing issues before they reach the UI.",
+      "market_value_display": "Senior SDET / API Test Lead (15-20 LPA)",
+      "sequence_order": 2,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P2M1",
+          "title": "Advanced API Testing with RestAssured",
+          "description": "Move beyond basic Postman usage to programmatically automate API tests with Java and RestAssured.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "P2S1_RestAssuredAutomation",
+              "title": "RestAssured for RESTful API Automation",
+              "description": "Learn to write comprehensive automated tests for RESTful APIs using the RestAssured library in Java, covering various HTTP methods and authentication.",
+              "difficulty": 0.45,
+              "estimated_hours": 9,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P1S6_ConfigManagement"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S1",
+                  "title": "Getting Started with RestAssured for API Testing",
+                  "duration_minutes": 28,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S1",
+                  "title": "Automate CRUD Operations for a Sample REST API",
+                  "difficulty": 0.6,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P2S2_APIValidation",
+              "title": "API Request & Response Validation",
+              "description": "Implement robust validation for API requests (schema, parameters) and responses (data, status codes, headers) using JSON Schema and Hamcrest matchers.",
+              "difficulty": 0.5,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2S1_RestAssuredAutomation"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M1S2",
+                  "title": "Deep Dive into API Response Validation with RestAssured",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M1S2",
+                  "title": "Validate JSON Schema and Data Integrity for a Complex API Response",
+                  "difficulty": 0.65,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M2",
+          "title": "Contract Testing & Microservices",
+          "description": "Learn to implement contract testing to ensure compatibility between microservices, a crucial skill for modern distributed systems.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "P2S3_IntroContractTesting",
+              "title": "Introduction to API Contract Testing",
+              "description": "Understand the principles and benefits of contract testing, its role in microservices architectures, and how it differs from traditional API testing.",
+              "difficulty": 0.55,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2S2_APIValidation"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S3",
+                  "title": "Why Contract Testing is Essential for Microservices",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S3",
+                  "title": "Identify Use Cases for Contract Testing in a Distributed System",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P2S4_PactImplementation",
+              "title": "Implementing Pact for Consumer-Driven Contracts",
+              "description": "Gain hands-on experience with Pact, a popular framework for consumer-driven contract testing, to ensure seamless integration between services.",
+              "difficulty": 0.6,
+              "estimated_hours": 10,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2S3_IntroContractTesting"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M2S4",
+                  "title": "Pact Workshop: Consumer-Driven Contract Testing in Java",
+                  "duration_minutes": 35,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M2S4",
+                  "title": "Write Consumer and Provider Pact Tests for a Microservice Interaction",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M2S4",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P2M3",
+          "title": "Database & Data Layer Testing",
+          "description": "Develop skills to validate data integrity and consistency directly at the database level, complementing API tests.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "P2S5_SQLTestData",
+              "title": "SQL for Backend Test Data Management",
+              "description": "Master advanced SQL queries for setting up test data, verifying database states, and cleaning up after tests.",
+              "difficulty": 0.65,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2S4_PactImplementation"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S5",
+                  "title": "Advanced SQL for SDETs: Data Setup and Verification",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S5",
+                  "title": "Write SQL Scripts to Prepare and Validate Test Data for an Order Service",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S5",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P2S6_JDBCAutomation",
+              "title": "JDBC/Hibernate for Database Test Automation",
+              "description": "Integrate database interactions directly into your Java test framework using JDBC or an ORM like Hibernate for programmatic data validation.",
+              "difficulty": 0.7,
+              "estimated_hours": 9,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2S5_SQLTestData"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P2M3S6",
+                  "title": "Automating Database Tests with JDBC in Java",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P2M3S6",
+                  "title": "Develop a Java Utility to Connect and Query a Database for Test Verification",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P2M3S6",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P3",
+      "identity_label": "DevOps-Enabled SDET",
+      "identity_statement": "Seamlessly integrate your tests into CI/CD pipelines and lay the groundwork for performance engineering, becoming a true enabler of continuous delivery.",
+      "market_value_display": "Lead SDET / Test Architect (20-25 LPA)",
+      "sequence_order": 3,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P3M1",
+          "title": "CI/CD Pipeline Integration",
+          "description": "Automate the execution and reporting of your tests within continuous integration and delivery pipelines.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "P3S1_JenkinsPipeline",
+              "title": "Advanced Jenkins Pipeline Scripting",
+              "description": "Learn to write robust Jenkinsfile scripts (Groovy DSL) to orchestrate complex CI/CD pipelines for test automation, including stages, parallel steps, and conditional execution.",
+              "difficulty": 0.75,
+              "estimated_hours": 10,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P2S6_JDBCAutomation"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S1",
+                  "title": "Building Declarative Jenkins Pipelines for SDETs",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S1",
+                  "title": "Create a Jenkins Pipeline to Build, Test, and Deploy a Sample Application",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P3S2_TestReportsCI",
+              "title": "Integrating Test Reports into CI/CD",
+              "description": "Configure Jenkins and other CI tools to publish and visualize test results (e.g., Allure, Extent Reports) for quick feedback and trend analysis.",
+              "difficulty": 0.8,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P3S1_JenkinsPipeline"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M1S2",
+                  "title": "Visualizing Test Results in CI/CD with Allure Reports",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M1S2",
+                  "title": "Integrate Allure Reporting into an Existing Jenkins Pipeline",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M2",
+          "title": "Containerization for Testing",
+          "description": "Utilize Docker to create consistent, isolated, and scalable test environments.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "P3S3_DockerBasics",
+              "title": "Docker Basics for Test Environments",
+              "description": "Understand Docker fundamentals, including images, containers, volumes, and networks, to set up reproducible test environments.",
+              "difficulty": 0.8,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P3S2_TestReportsCI"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S3",
+                  "title": "Docker for QA: Setting Up Isolated Test Environments",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S3",
+                  "title": "Create a Dockerfile for a Simple Web Application and Run It",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P3S4_TestsInDocker",
+              "title": "Running Tests in Docker Containers",
+              "description": "Configure your test automation suite to run inside Docker containers, enabling consistent execution across different environments and scaling.",
+              "difficulty": 0.85,
+              "estimated_hours": 9,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P3S3_DockerBasics"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M2S4",
+                  "title": "Containerizing Your Selenium Tests with Docker Compose",
+                  "duration_minutes": 30,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M2S4",
+                  "title": "Run a Selenium Test Suite in a Docker Container with Chrome",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M2S4",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P3M3",
+          "title": "Performance Testing Fundamentals",
+          "description": "Gain foundational knowledge in performance testing to identify bottlenecks and ensure application responsiveness and scalability.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "P3S5_IntroPerformance",
+              "title": "Introduction to Performance Testing Concepts",
+              "description": "Understand key performance testing types (load, stress, soak), metrics (response time, throughput, error rate), and common methodologies.",
+              "difficulty": 0.6,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P3S4_TestsInDocker"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S5",
+                  "title": "The Basics of Performance Testing for SDETs",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S5",
+                  "title": "Analyze a Performance Requirement and Suggest a Testing Approach",
+                  "difficulty": 0.7,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S5",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P3S6_JMeterBasics",
+              "title": "Basic Load Testing with JMeter",
+              "description": "Get hands-on with Apache JMeter to design and execute basic load tests for web applications and APIs, and interpret the results.",
+              "difficulty": 0.7,
+              "estimated_hours": 10,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P3S5_IntroPerformance"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P3M3S6",
+                  "title": "JMeter Quick Start: Your First Load Test",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P3M3S6",
+                  "title": "Design and Execute a Load Test for a Login API using JMeter",
+                  "difficulty": 0.75,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P3M3S6",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "milestone_id": "P4",
+      "identity_label": "SDET Lead & Strategist",
+      "identity_statement": "Transition into a leadership role, driving quality initiatives, designing comprehensive test strategies, and mentoring teams to achieve engineering excellence.",
+      "market_value_display": "SDET Lead / Principal SDET (25-30 LPA)",
+      "sequence_order": 4,
+      "checkpoint_rule": {
+        "required_mastery": 0.9,
+        "checkpoint_type": "mock_interview"
+      },
+      "modules": [
+        {
+          "module_id": "P4M1",
+          "title": "Advanced Test Strategy & Planning",
+          "description": "Develop the strategic mindset required to lead quality efforts across complex software projects and distributed systems.",
+          "sequence_order": 1,
+          "skills": [
+            {
+              "skill_id": "P4S1_RiskBasedTesting",
+              "title": "Risk-Based Testing & Test Prioritization",
+              "description": "Learn to identify, assess, and mitigate risks in software projects by applying risk-based testing principles and prioritizing test efforts effectively.",
+              "difficulty": 0.75,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P3S6_JMeterBasics"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S1",
+                  "title": "Strategic Risk Management in SDET Leadership",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S1",
+                  "title": "Develop a Risk-Based Test Plan for a New Feature Release",
+                  "difficulty": 0.8,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S1",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P4S2_MicroservicesTestStrategy",
+              "title": "Test Strategy for Microservices Architectures",
+              "description": "Design comprehensive test strategies tailored for microservices, including unit, integration, contract, and end-to-end testing across distributed components.",
+              "difficulty": 0.8,
+              "estimated_hours": 9,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P4S1_RiskBasedTesting"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M1S2",
+                  "title": "Building a Robust Test Strategy for Microservices",
+                  "duration_minutes": 25,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M1S2",
+                  "title": "Propose a Test Strategy for a New Microservice-Based E-commerce Platform",
+                  "difficulty": 0.85,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M1S2",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M2",
+          "title": "System Design for Testability",
+          "description": "Influence architectural decisions to build systems that are inherently easier to test, monitor, and maintain.",
+          "sequence_order": 2,
+          "skills": [
+            {
+              "skill_id": "P4S3_ObservabilityMonitoring",
+              "title": "Designing for Observability & Monitoring",
+              "description": "Understand how to integrate logging, metrics, and tracing into applications to improve testability, debugging, and production monitoring.",
+              "difficulty": 0.85,
+              "estimated_hours": 8,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P4S2_MicroservicesTestStrategy"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S3",
+                  "title": "Observability Best Practices for SDETs",
+                  "duration_minutes": 22,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S3",
+                  "title": "Suggest Observability Improvements for a Troubled Production System",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S3",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P4S4_ChaosEngineering",
+              "title": "Chaos Engineering Principles",
+              "description": "Explore the concepts of Chaos Engineering to proactively identify system weaknesses and build more resilient applications by intentionally injecting failures.",
+              "difficulty": 0.9,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P4S3_ObservabilityMonitoring"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M2S4",
+                  "title": "Introduction to Chaos Engineering for Quality Assurance",
+                  "duration_minutes": 18,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M2S4",
+                  "title": "Design a Simple Chaos Experiment for a Microservice",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M2S4",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        },
+        {
+          "module_id": "P4M3",
+          "title": "Leading Quality Engineering Initiatives",
+          "description": "Develop the leadership and communication skills necessary to drive quality culture and influence stakeholders.",
+          "sequence_order": 3,
+          "skills": [
+            {
+              "skill_id": "P4S5_MentoringQA",
+              "title": "Mentoring & Building High-Performing QA Teams",
+              "description": "Learn strategies for mentoring junior engineers, fostering a culture of quality, and building efficient, collaborative QA teams.",
+              "difficulty": 0.85,
+              "estimated_hours": 6,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P4S4_ChaosEngineering"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S5",
+                  "title": "Effective Mentorship for Aspiring SDETs",
+                  "duration_minutes": 15,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S5",
+                  "title": "Coach a Junior Engineer on Best Practices for Test Automation",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S5",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            },
+            {
+              "skill_id": "P4S6_StakeholderCommunication",
+              "title": "Presenting Test Strategies & Results to Stakeholders",
+              "description": "Develop strong communication and presentation skills to articulate test strategies, report quality metrics, and influence product and engineering decisions.",
+              "difficulty": 0.9,
+              "estimated_hours": 7,
+              "mastery_state": {
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {
+                  "prior": 0.15,
+                  "learn_rate": 0.25,
+                  "guess": 0.1,
+                  "slip": 0.05
+                }
+              },
+              "unlock_rules": {
+                "requires": [
+                  "P4S5_MentoringQA"
+                ],
+                "minimum_mastery": 0.75,
+                "unlock_type": "mastery_based"
+              },
+              "content_flow": {
+                "video": {
+                  "content_id": "VID_P4M3S6",
+                  "title": "Communicating Quality: Reports and Presentations for Leaders",
+                  "duration_minutes": 20,
+                  "status": "locked"
+                },
+                "scenario": {
+                  "content_id": "SCN_P4M3S6",
+                  "title": "Prepare and Deliver a Quality Report to a Leadership Team",
+                  "difficulty": 0.9,
+                  "status": "locked"
+                },
+                "mock": {
+                  "content_id": "MOCK_P4M3S6",
+                  "unlock_mastery": 0.75,
+                  "status": "locked"
+                },
+                "review": {
+                  "review_type": "spaced_repetition",
+                  "next_review_at": null
+                }
+              },
+              "analytics": {
+                "attempts": 0,
+                "average_score": 0,
+                "time_spent_minutes": 0,
+                "last_activity_at": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinecone_stored": true,
+  "ai_metadata": {
+    "generated_at": "2026-06-03T15:56:56.845738",
+    "session_source": "generated",
+    "generation_model": "roadmap-gen-v3.1",
+    "personalization_score": 0.92
+  },
+  "status": "confirmed",
+  "created_at": "2026-06-03T15:56:56.845738",
+  "updated_at": "2026-06-03T15:56:56.845738",
+  "confirmed_at": "2026-06-03T15:56:56.845738",
+  "published_at": null
+}
