@@ -416,26 +416,18 @@ def retrieve_raw_context(user_id: str) -> str:
     except Exception as exc:
         print(f"[RAW CTX] resume error for user {user_id}: {exc}")
 
-    # ── Onboarding ──
+    # ── Onboarding (direct key fetch per POC spec) ──
     try:
-        query_embedding = get_embedding(
-            "onboarding questions answers learning goals",
-            task_type="RETRIEVAL_QUERY",   # ← was "retrieval_query" — now fixed
-        )
-        query_response = index.query(
-            vector=query_embedding,
-            top_k=20,
-            namespace=user_id,
-            include_metadata=True,
-            filter={"doc_type": {"$eq": "onboarding"}},
-        )
-        matches = query_response.matches if query_response else []
-
-        if matches:
-            sorted_matches  = sorted(matches, key=lambda x: x.metadata.get("question_number", 0))
-            onboarding_text = "\n\n".join(m.metadata.get("text", "") for m in sorted_matches)
-            if onboarding_text.strip():
-                context_parts.append(f"ONBOARDING RESPONSES\n{onboarding_text}")
+        # Try bare key per spec first, then prefixed key for backward compat
+        onboarding_text = ""
+        for key in ("onboarding_conversation", f"{user_id}_onboarding_conversation"):
+            if onboarding_text:
+                break
+            result = index.fetch(ids=[key], namespace=user_id)
+            if result and result.vectors and key in result.vectors:
+                onboarding_text = (result.vectors[key].metadata or {}).get("text", "")
+        if onboarding_text.strip():
+            context_parts.append(f"ONBOARDING RESPONSES\n{onboarding_text}")
     except Exception as exc:
         print(f"[RAW CTX] onboarding error for user {user_id}: {exc}")
 

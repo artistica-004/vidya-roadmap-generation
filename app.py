@@ -656,6 +656,7 @@ if mode == "Real":
 # AI PERSONA
 # =====================================================
 else:
+    weekly_hours = 5  # default for AI persona mode
     st.subheader("🤖 Generate a Test Persona")
     goal = st.text_input(
         "Learner's goal",
@@ -772,6 +773,7 @@ STRUCTURED DATA:
             roadmap_input = {
                 "goal":                   goal or oj.get("primary_goal", ""),
                 "current_role":           oj.get("current_role", "student"),
+                "target_role":            oj.get("target_role", ""),
                 "years_experience":       oj.get("years_experience", 0),
                 "current_salary_annual":  oj.get("current_salary_monthly", 0) * 12,
                 "current_salary_monthly": oj.get("current_salary_monthly", 0),
@@ -779,6 +781,7 @@ STRUCTURED DATA:
                 "weekly_hours_available": weekly_hours,
                 "urgency":                oj.get("urgency", "high"),
                 "self_efficacy":          oj.get("confidence_level", "low"),
+                "known_skills":           oj.get("known_skills", []),
                 "level":                  level,
                 "goal_context":           context,
             }
@@ -833,11 +836,12 @@ if st.session_state.roadmap_data:
     # Debug: inspect first module structure
     if milestones:
         mod = milestones[0]["modules"][0]
-        print("LESSON DEBUG")
-        print(json.dumps(mod, indent=2)[:5000])
+        #print("LESSON DEBUG")
+        #print(json.dumps(mod, indent=2)[:5000])
         if mod.get("skills"):
-            print("FIRST SKILL:")
-            print(json.dumps(mod["skills"][0], indent=2)[:3000])
+            #print("FIRST SKILL:")
+            #print(json.dumps(mod["skills"][0], indent=2)[:3000])
+            pass
     total_lessons = sum(
         len(extract_module_lessons(mod))
         for m in milestones
@@ -1235,6 +1239,7 @@ if st.session_state.roadmap_data:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     )
 =======
     )
@@ -1245,3 +1250,7 @@ if st.session_state.roadmap_data:
 =======
     )
 >>>>>>> af0bd63 (Update app.py)
+=======
+    )
+    
+>>>>>>> 5047847 (Phase 4 roadmap fixes and onboarding improvements)

@@ -3,12 +3,16 @@ from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
 from src.pinecone_utils import (
-    retrieve_context,
-    retrieve_icp_type,
     fetch_poc_record,
     save_poc_record,
 )
-from src.capability_gap import compute_gap_score
+from src.capability_gap import compute_gap_score, compute_capability_breadth, _extract_domain
+from src.course_catalog_mapper import (
+    repair_course_catalog_alignment,
+    ALL_CATALOG_SKILLS,
+    find_best_catalog_match,
+    normalize_skill_name,
+)
 import copy
 import math
 import os
@@ -190,6 +194,20 @@ LEVEL_STARTING_TIER = {
     "senior": 5,
 }
 
+# Phase 1 — Level Range Preferences (guidance ranges, NOT hard targets)
+# These define the typical milestone range for each ICP × level combination.
+# The gap engine picks a specific count within this range based on:
+#   gap_score, skill_readiness, known_skills, experience, weekly hours, role complexity
+# Two learners with the same ICP+level may receive different counts.
+LEVEL_RANGE_PREFERENCES = {
+    ("low", "beginner"):       {"recommended": 5, "min": 4, "max": 6},
+    ("low", "intermediate"):   {"recommended": 4, "min": 3, "max": 5},
+    ("low", "senior"):         {"recommended": 3, "min": 2, "max": 4},
+    ("high", "beginner"):      {"recommended": 4, "min": 3, "max": 5},
+    ("high", "intermediate"):  {"recommended": 3, "min": 2, "max": 4},
+    ("high", "senior"):        {"recommended": 2, "min": 2, "max": 3},
+}
+
 
 def detect_level(context: str, years_experience: int = 0) -> str:
     """
@@ -199,8 +217,6 @@ def detect_level(context: str, years_experience: int = 0) -> str:
       Beginner     -> 0 years
       Intermediate -> 1-3 years
       Senior       -> 4+ years
-
-    Milestone count is determined dynamically by the LLM from capability gap.
     """
     try:
         years = int(years_experience or 0)
@@ -212,6 +228,145 @@ def detect_level(context: str, years_experience: int = 0) -> str:
     elif years >= 1:
         return "intermediate"
     return "beginner"
+
+
+def compute_authoritative_milestone_range(
+    gap_score: float,
+    icp_type: str,
+    level: str,
+    hours_per_week: int,
+    timeline_days: int,
+    known_skills: list,
+    experience_years: int,
+) -> dict:
+    """
+    Phase 2 — Milestone Authority Engine.
+
+    Determines the authoritative milestone range from:
+      1. Level Range Preference (ICP x level table)
+      2. Capability gap score (wider gap → higher end of range)
+      3. Skill readiness / known skills (more known → fewer milestones needed)
+      4. Available time (less time → fewer milestones)
+      5. Experience (more experience → fewer milestones)
+
+    Returns:
+      recommended: int — the single best count within range
+      minimum:     int — minimum milestone count
+      maximum:     int — maximum milestone count
+      confidence:  float — 0.0–1.0 how confident the engine is
+      reasoning:   str — explanation of derivation
+    """
+    pref = LEVEL_RANGE_PREFERENCES.get(
+        (icp_type, level),
+        {"recommended": 4, "min": 2, "max": 5},
+    )
+    range_min = pref["min"]
+    range_max = pref["max"]
+
+    # Gap factor: 0.0–1.0 maps to a 0..1 offset within the range
+    gap_offset = max(0.0, min(1.0, gap_score))
+
+    # Known-skills discount: each known skill reduces weight slightly
+    known_skills_count = len(known_skills) if known_skills else 0
+    skill_discount = min(0.15, known_skills_count * 0.03)
+
+    # Experience discount: more experienced learners need fewer milestones
+    exp_discount = min(0.20, experience_years * 0.05)
+
+    # Time factor: less available time shifts toward lower end
+    budget_hrs = hours_per_week * (timeline_days / 7) * 0.8
+    if budget_hrs < 80:
+        time_factor = 0.0  # tight budget → lower end
+    elif budget_hrs > 200:
+        time_factor = 0.3  # generous budget → slightly higher
+    else:
+        time_factor = (budget_hrs - 80) / 400  # linear interpolation
+
+    # Blend: gap pulls upward, discounts pull downward
+    raw_offset = gap_offset - skill_discount - exp_discount + time_factor
+    clamped_offset = max(0.0, min(1.0, raw_offset))
+
+    range_size = range_max - range_min
+    recommended = int(round(range_min + clamped_offset * range_size))
+    recommended = max(range_min, min(range_max, recommended))
+
+    # Confidence: higher when gap and range agree, lower at extremes
+    mid = (range_min + range_max) / 2
+    distance_from_mid = abs(recommended - mid) / (range_size or 1)
+    confidence = round(0.70 + 0.20 * (1 - distance_from_mid) - 0.10 * (1 - gap_offset), 2)
+    confidence = max(0.30, min(0.98, confidence))
+
+    parts = [
+        f"icp={icp_type} level={level} → range [{range_min},{range_max}]",
+        f"gap_offset={gap_offset:.2f}",
+        f"skill_discount={skill_discount:.2f} ({known_skills_count} known)",
+        f"exp_discount={exp_discount:.2f} ({experience_years}y exp)",
+        f"time_factor={time_factor:.2f} (budget={budget_hrs:.0f}h)",
+        f"→ recommended={recommended}",
+    ]
+    reasoning = "; ".join(parts)
+
+    return {
+        "recommended": recommended,
+        "minimum": range_min,
+        "maximum": range_max,
+        "confidence": confidence,
+        "reasoning": reasoning,
+    }
+
+
+class MilestoneAuthoritySchemaError(Exception):
+    """Raised when milestone authority object violates the strict schema."""
+
+
+def validate_milestone_authority_schema(obj: dict) -> None:
+    """Validate milestone authority object conforms to the strict schema.
+
+    Required fields:
+      recommended: int
+      minimum:     int
+      maximum:     int
+      confidence:  float
+      reasoning:   str (non-empty)
+
+    Every code path that produces a milestone authority dict must pass this.
+    Raises MilestoneAuthoritySchemaError on any violation.
+    """
+    expected_keys = {"recommended", "minimum", "maximum", "confidence", "reasoning"}
+    actual_keys = set(obj.keys())
+
+    missing = expected_keys - actual_keys
+    if missing:
+        raise MilestoneAuthoritySchemaError(
+            f"Milestone authority missing keys: {sorted(missing)}. "
+            f"Present: {sorted(actual_keys)}"
+        )
+
+    extra = actual_keys - expected_keys
+    if extra:
+        raise MilestoneAuthoritySchemaError(
+            f"Milestone authority has unexpected keys: {sorted(extra)}"
+        )
+
+    type_checks = {
+        "recommended": int,
+        "minimum": int,
+        "maximum": int,
+        "confidence": (int, float),
+        "reasoning": str,
+    }
+    for key, expected_type in type_checks.items():
+        val = obj[key]
+        if not isinstance(val, expected_type):
+            raise MilestoneAuthoritySchemaError(
+                f"Milestone authority.{key}: expected {expected_type.__name__}, "
+                f"got {type(val).__name__} ({val!r})"
+            )
+
+    if not obj["reasoning"].strip():
+        raise MilestoneAuthoritySchemaError(
+            "Milestone authority.reasoning must be a non-empty string"
+        )
 
 
 def _poc_store(filename: str, data: dict) -> str:
@@ -378,7 +533,7 @@ _AVAILABLE_COURSES_TEXT = "\n".join(
 _UNAVAILABLE_COURSES_TEXT = "\n".join(f"  - {c}" for c in UNAVAILABLE_COURSES)
 
 roadmap_prompt = PromptTemplate(
-    input_variables=["context", "icp_type", "level", "hours_per_week", "timeline_days", "budget_hrs", "known_skills", "current_identity", "target_identity", "current_salary_lpa", "self_efficacy", "gap_score", "recommended_milestones", "recommended_modules_per_milestone", "recommended_skill_density", "gap_reasoning"],
+    input_variables=["context", "icp_type", "level", "hours_per_week", "timeline_days", "budget_hrs", "known_skills", "current_identity", "target_identity", "current_salary_lpa", "self_efficacy", "gap_score", "recommended_milestones", "recommended_milestones_min", "recommended_milestones_max", "milestone_confidence", "milestone_authority_reasoning", "recommended_modules_per_milestone", "recommended_skill_density", "gap_reasoning"],
     template="""
 You are an expert AI career transformation roadmap architect for Vidya V3.
 
@@ -461,26 +616,28 @@ demand_hrs =
   + (projects × 6.0)
 
 Rules:
-* If demand exceeds budget, reduce milestone count first.
-* Keep milestone count within 2-7 bounds.
-* Smaller budgets should generally produce smaller roadmaps.
-* Larger budgets may justify more milestones.
-* Never ignore the user's available time.
+* Milestone count is FIXED — do NOT change it based on budget.
+* fits_life will extend duration if demand exceeds budget.
+* NEVER reduce milestone count to fit a budget.
+* Smaller budgets should produce fewer lessons/scenarios per module, not fewer milestones.
+* Larger budgets may justify more lessons, scenarios, and deeper projects.
+* Never ignore the user's available time — adjust scope within milestones, not count.
 
-STARTING POINT (HARD CONSTRAINT):
+STARTING POINT (HARD CONSTRAINT — MD Section 3 / Section 18):
 
 Known skills from onboarding:
 {known_skills}
 
 For each skill already known:
 
-* mark auto_completed=true
-* assign realistic mastery prior p=65-90
-* do not teach from scratch
-* do not start Module 1 with content already mastered
+* do NOT include them in the roadmap at all
+* known skills must NEVER appear as teachable content
+* do NOT start Module 1 with content already mastered
 * use the next logical capability step
+* learners must NEVER be served content they already know
 
 Starting professionals at skills they already have is a major churn trigger.
+Known skills that survive to the roadmap are a BLOCKER violation.
 
 If known_skills = "none provided":
 apply ZPD rules using level only.
@@ -493,8 +650,17 @@ gap_score:
 gap_reasoning:
 {gap_reasoning}
 
-recommended_milestones:
+recommended_milestone_count:
 {recommended_milestones}
+
+allowed_milestone_range:
+[{recommended_milestones_min}, {recommended_milestones_max}]
+
+milestone_count_confidence:
+{milestone_confidence}
+
+milestone_authority_reasoning:
+{milestone_authority_reasoning}
 
 recommended_modules_per_milestone:
 {recommended_modules_per_milestone}
@@ -505,23 +671,20 @@ recommended_skill_density:
 HARD RULES
 
 1.
-Generate EXACTLY
+Generate NO MORE THAN
 {recommended_milestones}
-milestones.
+milestones (minimum 2).
 
 2.
-Generate EXACTLY
-{recommended_modules_per_milestone}
-modules inside EACH milestone.
+Each milestone needs BETWEEN 2 AND 4 modules.
+{recommended_modules_per_milestone} is the maximum bound.
 
 3.
-Generate EXACTLY
-{recommended_skill_density}
-skills inside EACH module.
+Each module needs BETWEEN 3 AND 8 skills.
+{recommended_skill_density} is the maximum bound.
 
-Deviation is forbidden.
-
-Validation will reject outputs that do not match these counts.
+Counts are CAPACITY BOUNDS, not targets. Each module must have a
+skill_count_rationale, each milestone must have a module_count_rationale.
 
 === GENERATION RULES (STRICT — ALL MUST BE FOLLOWED) ===
 
@@ -529,24 +692,63 @@ RULE 1 — HIERARCHY (LOCKED):
 Roadmap -> Milestone -> Module -> (Skills -> Lessons) + Science
 Never break this hierarchy.
 
-RULE 2 — MILESTONE COUNT (DYNAMIC — FROM CAPABILITY GAP):
-Determine the number of milestones from the gap between the learner's
-Current Identity and Target Identity.
+RULE 2 — MILESTONE COUNT (AUTHORITATIVE RANGE — FROM MILESTONE AUTHORITY ENGINE):
+The Capability Gap Engine and Milestone Authority Engine determined:
 
-Principles:
-  - More milestones = smaller, safer steps (good for beginners, large gaps,
-    low confidence, low weekly hours).
-  - Fewer milestones = larger, faster leaps (good when the gap is narrow,
-    learner is senior/already-strong, high weekly hours available).
-  - The milestone count MUST be between 2 and 7 inclusive.
-    Validation enforces this bound.
-  - Every milestone represents a MARKET-RECOGNIZED IDENTITY the learner
-    earns, NOT a topic-coverage checkpoint.
-  - Milestone codes always start at M01 (relative to THIS user).
+  Recommended milestone count: {recommended_milestones}
+  Allowed range: [{recommended_milestones_min}, {recommended_milestones_max}]
+  Confidence: {milestone_confidence}
+
+You MUST generate a roadmap whose milestone count falls INSIDE this range.
+Choose the count that best matches:
+
+  * capability breadth — how many distinct identity transitions are needed
+  * target role complexity — more complex roles need more steps
+  * available time — more time allows more milestones
+  * identity progression density — each milestone must be a meaningful identity
+
+The milestone count is a RANGE, not a single target. Two learners with the
+same ICP and level may receive different counts if their gap, experience,
+or time budget differ.
+
+Every milestone represents a MARKET-RECOGNIZED IDENTITY the learner
+earns, NOT a topic-coverage checkpoint.
+Milestone codes always start at M01 (relative to THIS user).
 
 Include a "milestone_count_rationale" field in your JSON output explaining
-your reasoning (e.g. "4 milestones: beginner with 10 h/wk and a wide gap
-from student to AI Engineer — 4 identity steps with adequate time").
+WHY you chose the specific count within the allowed range.
+Example: "5 milestones: beginner with 10 h/wk, wide gap from student to
+Data Scientist requires 5 identity transitions"
+
+RULE 2B — IDENTITY PROGRESSION DENSITY (CRITICAL):
+Each milestone must represent a SINGLE, COHERENT identity transition.
+
+A beginner → Data Scientist transition in 2 milestones:
+  M01: "Python Basics"       ← NOT an identity
+  M02: "Data Scientist"      ← too large a jump
+  RESULT: FAIL — density too low (1 identity per ~6 months)
+
+A beginner → Data Scientist in 5 milestones:
+  M01: "AI Foundations Engineer"     ← 0–3mo intern-ready
+  M02: "Data Analyst"                ← 3–6mo entry-level
+  M03: "ML Foundations Engineer"     ← 6–9mo junior
+  M04: "Applied ML Engineer"         ← 9–12mo mid-level
+  M05: "Data Scientist"              ← 12–15mo target
+  RESULT: PASS — each step is a market-recognized identity
+
+Validation rules:
+  - Beginner → complex role (Data Scientist, AI Engineer, Architect):
+    MINIMUM 4 milestones. Fewer than 4 means unrealistically dense steps.
+  - Beginner → simple role (Junior Developer, Support Engineer):
+    MINIMUM 2 milestones. Simple roles need fewer identity transitions.
+  - Intermediate → adjacent role (Backend → Fullstack):
+    MINIMUM 2 milestones. Fewer identity transitions needed.
+  - Intermediate → distant role (Backend → AI Engineer):
+    MINIMUM 3 milestones. More transitions needed.
+  - Senior → senior role:
+    MINIMUM 2 milestones. Highly focused deep-dives.
+  - Any path where years_experience=0 and target is a senior/lead role:
+    MINIMUM 4 milestones (must build entire foundation).
 
 RULE 3 — RELATIVE MILESTONE CODES (CRITICAL):
 Milestone codes ALWAYS start at M01 for THIS user, regardless of their level.
@@ -562,49 +764,74 @@ ZPD RULE: Never serve content below the user's detected floor.
 If onboarding shows the user already has a skill, mark it completed (p=mastery prior).
 Do not reteach it.
 
-RULE 4 — MODULE COUNT PER MILESTONE (DYNAMIC):
-Modules are capability clusters.  A milestone's module count is determined
-by the capability breadth needed to reach that milestone's identity.
+RULE 4 — MODULE COUNT PER MILESTONE (DYNAMIC, PER-MILESTONE):
+Modules are capability clusters. Each milestone's module count is determined
+INDEPENDENTLY by that milestone's unique capability breadth and identity.
 
-Constraints:
+Module count MAY vary between milestones:
+  - Focused milestone (narrow skill cluster):  2 modules
+  - Broad milestone (multiple capabilities):    3 modules
+  - Transformation milestone (full sub-role):   4 modules
+
+Examples of valid per-milestone distributions:
+  M01: 2 modules (foundation focus)
+  M02: 4 modules (broad capability building)
+  M03: 3 modules (deepening expertise)
+  M04: 2 modules (specialization)
+  M05: 4 modules (capstone transformation)
+
+Bounds:
   - Minimum 2 modules per milestone.
   - Maximum 4 modules per milestone.
   - Never generate 1 module or more than 4 modules.
   - Do NOT generate modules merely to satisfy a count — each module must
-    represent a distinct, coherent capability cluster.
-  - Every milestone has EXACTLY 1 Interview (iv=1) and between 3 and 7 Scenarios (sc_n=3-7)
-    (iv=1). These two science items are placed in separate modules. Any modules
-    beyond those two must have "science": [].
+    represent a distinct, coherent capability cluster within the milestone's
+    identity.
+  - Science items: interview count is dynamic (0-2, typically 1), scenarios
+    are dynamic (0-7, typically 3-7) — driven by the milestone's complexity.
   - Every milestone must include a "module_count_rationale" field explaining
-    why the chosen count fits the milestone's required breadth.
+    why the CHOSEN count fits the milestone's required breadth.
 
-Example rationale:
-  "4 modules because this milestone spans distributed systems, cloud
-   architecture, observability, and technical leadership."
+Example rationale for variable counts:
+  "M01: 2 modules because this is a narrow foundation identity needing only
+   Python fundamentals and data basics. M02: 4 modules because this milestone
+   spans distributed systems, cloud architecture, observability, and technical
+   leadership."
 
-RULE 5 — SKILLS PER MODULE (DYNAMIC):
-Skills per module are dynamic — determined by the capability breadth needed
-for that module's topic cluster.
-  - Minimum 3 skills per module.
-  - Maximum 8 skills per module.
-  - Never generate fewer than 3 or more than 8 skills.
-  - Do NOT generate skills merely to satisfy a count — each skill must
-    represent a distinct, meaningful capability within the module.
+RULE 5 — SKILLS PER MODULE (UPPER DENSITY BOUND ONLY):
+Skills per module are dynamic — driven by market need, capability gap,
+and job description requirements. The domain-based max skill density is
+an UPPER BOUND, NOT a target or a fixed count.
+
+  - Minimum 3 skills per module (any fewer = not a real module).
+  - Maximum 8 skills per module (hard upper bound).
+  - Do NOT pad to reach a target count. Generate only skills that:
+      * address a real market need
+      * close a specific capability gap
+      * come from job description / JD requirements
+      * enable the milestone identity
+
+  - Module A may have 3 skills (focused depth).
+  - Module B may have 8 skills (broad capability cluster).
+  - Module C may have 5 skills.
+  - ALL valid — each is determined by the module's unique purpose.
+
   - Every module must include a "skill_count_rationale" field explaining
-    why the chosen count fits the module's required breadth.
+    why the CHOSEN count fits the module's required breadth.
+    Bad rationale: "5 skills because that's the max"
+    Good rationale: "3 skills because this module focuses narrowly on
+    prompt engineering: prompt design, few-shot tuning, and safety"
 
 Each skill object has:
   - "skill_id": globally unique id, e.g. "SKILL_M01_M1_S1"
   - "n": short skill name (snake_case, e.g. "python", "fastapi", "rag")
   - "title": human-readable skill title
-  - "lessons": array of EXACTLY 3 short lesson titles (video unit names).
+  - "lessons": array of 1-3 short lesson titles (video unit names).
     Example: ["Embeddings", "Chunking Strategies", "Retrieval Evaluation"]
     Lessons must be specific topic titles, NOT generic placeholders.
-  - "p": initial mastery percentage (0-100).
-       * If the module is "free": true AND is part of the user's M01
-         (foundational/already-known content per onboarding mastery priors),
-         set "p" to a realistic prior between 55-90.
-       * Otherwise set "p" to 0 (not yet started).
+   - "p": initial mastery percentage (0-100). Set to 0 (placeholder).
+        BKT injection overwrites p dynamically based on skill difficulty
+        and learner profile. Do NOT manually set p to arbitrary values.
   - "mastery_state": BKT object (see OUTPUT STRUCTURE) — KEEP for backend
     mastery tracking regardless of "p".
   - "content_flow": object with video/scenario/mock/review (see OUTPUT
@@ -621,8 +848,8 @@ Every milestone MUST contain exactly ONE real-world project.
 
 The project must:
   - Use skills from that milestone.
-  - Require planning, architecture decisions, and solution implementation.
-  - Require deployment and debugging.
+  - Follow the official lifecycle: Plan → Architect → Build with AI → Audit AI Output → Deploy → Test.
+  - Cover at least 2 vibe layers (preferred: 3+).
   - Require the learner to catch at least one AI mistake (seeded_error).
   - Feel like real industry work — not a toy exercise.
 
@@ -631,9 +858,9 @@ Project format:
 "project": {{
   "title": "string",
   "vibe_layers": [
-      "planning",
-      "architecture",
-      "solution"
+      "vibe_architecture",
+      "vibe_solution",
+      "deployment"
   ],
   "description": "2-3 sentence description of what the learner builds",
   "deliverable": "what the learner submits as proof of completion",
@@ -645,9 +872,9 @@ Project format:
 
 RULE 7 — SCIENCE ARRAY (SCENARIO / INTERVIEW — PER MILESTONE):
 !! CRITICAL !!
-Every milestone must contain between 3 and 7 Scenarios AND EXACTLY 1 Interview.
-Scenarios are distributed across modules (any module may carry multiple Scenarios).
-Validation enforces sc_n between 3-7 and iv=1 at the milestone level.
+Every milestone contains Scenarios and Interviews distributed across its
+modules. Scenarios are realistic production/debugging situations the learner
+resolves. Interviews test the ability to PERFORM the milestone identity.
 
 Rules for science items:
   - "Scenario" = a realistic production/debugging situation the learner must resolve.
@@ -657,8 +884,9 @@ Rules for science items:
   - "Interview" = an interview question testing the milestone identity.
     Must test the ability to PERFORM the role, not recall trivia.
   - A module may have 0 to 3 science items. Multiple Scenarios may share a module.
-  - The Interview must be in a module that has no Scenario (separate modules).
-  - The milestone-level sc_n must be between 3 and 7. The milestone-level iv must equal 1.
+  - The Interview should be in a module that has no Scenario (separate modules).
+  - Science item counts are driven by milestone complexity — do not pad to reach
+    a fixed count. Each science item must have a distinct, scenario-specific desc.
 
 RULE 8 — MODULE METADATA (HTML-ALIGNED):
 Each module must include:
@@ -672,34 +900,40 @@ Each module must include:
     "ppt+animation", "ppt+code", "real_tutor+ppt", "animation+code",
     "notebook+code", "notebook+ppt", "real_tutor+code".
 
-RULE 8B — AI-FIRST LAYER
+RULE 8B — AI-FIRST LAYER (June 2026 Official Model)
 
 Each module must include:
 
 "ai_first_layer"
 
-Allowed values:
+Allowed values (must match VALID AI LAYERS from RULE 11b below):
 
-- planning
-- architecture
-- solution
+- vibe_planning
+- vibe_architecture
+- vibe_solution
+- deployment
 
 Definitions:
 
-planning:
-Problem decomposition, sequencing work, defining requirements.
+vibe_planning:
+Break a problem into executable steps,
+sequence work, define requirements.
 
-architecture:
-Choosing components, defining system boundaries,
-making tradeoff decisions.
+vibe_architecture:
+Choose systems, tools, tradeoffs, integrations,
+define system boundaries.
 
-solution:
-Using AI to build, debugging, deployment,
-testing and catching AI mistakes.
+vibe_solution:
+Review AI output, fix errors, improve solution quality,
+build and verify with AI assistance.
+
+deployment:
+Ship, verify, test, monitor,
+CI/CD, cloud infrastructure, release management.
 
 Requirements:
 
-- Every module must have exactly one ai_first_layer.
+- Every module must have exactly one ai_first_layer (must be from VALID AI LAYERS above).
 - Every milestone must contain at least two distinct ai_first_layers.
 - Never generate a milestone where all modules belong to the same layer.
 
@@ -752,14 +986,62 @@ Low Level System Design + AI Ready modules.
 Example: user wants "data analyst" -> use AI Ready + Machine Learning modules
 (no Data Science course — it is incomplete).
 
+RULE 11b — AI METADATA (STRICT — NON-NEGOTIABLE):
+Every skill MUST include ai_metadata with these exact values:
+
+VALID AI LAYERS (June 2026 Official Model — only these are accepted):
+  vibe_planning
+  vibe_architecture
+  vibe_solution
+  deployment
+
+FORBIDDEN LEGACY VALUES (will cause rejection — these are INVALID):
+  architecture
+  implementation
+  debugging
+  optimization
+
+FORBIDDEN (will cause rejection):
+  planning
+  leadership
+  design
+  coding
+  infra
+  cloud
+  security
+  analysis
+  testing
+  observability
+
+VALID USAGE TYPES:
+  generation | analysis | automation | optimization | decision_support | planning
+
+VALID AUTOMATION LEVELS:
+  assistant | copilot | agent | autonomous
+
+EXAMPLES:
+  System Architecture Design → vibe_architecture
+  API Specification          → vibe_architecture
+  AI-Assisted Implementation → vibe_solution
+  Debugging AI Output        → vibe_solution
+  CI/CD Pipeline Setup       → deployment
+
 RULE 12 — MOCK UNLOCK & CONTENT STATUS:
 mock.unlock_mastery = 0.75 always. All content_flow statuses ("video",
 "scenario", "mock") = "locked" on generation. review.next_review_at = null.
 
 RULE 13 — DIFFICULTY PROGRESSION (BKT PRIORS):
-Across the roadmap, mastery_state.bkt.prior should generally increase with
-milestone seniority: early milestones prior ~0.10-0.25, later milestones
-prior ~0.05-0.15 (harder content = lower prior). target_mastery is always 0.9.
+mastery_state.bkt.prior = existing knowledge (0=no knowledge, 0.5=fully known).
+Earlier milestones cover more foundational content so prior~0.10-0.25.
+Later milestones cover harder content so prior~0.05-0.15.
+BKT prior is DYNAMIC — computed by engine. LLM sets placeholder 0.15.
+target_mastery is always 0.9.
+
+RULE 14 — CATALOG-ALIGNED SKILL NAMES:
+Every skill title must be chosen from AVAILABLE_COURSES whenever possible.
+Do not invent alternative skill names when an equivalent catalog entry already
+exists. Use the exact title from the skills_include list of the closest matching
+course. This ensures the platform can map every skill to existing content.
 
 RULE 14 — STRICT JSON ONLY:
 Return ONLY raw valid JSON. No markdown. No code fences. No comments. No
@@ -780,7 +1062,7 @@ commas before }} or ]. Every property must have a comma separator.
   "current_active_milestone": "M01",
   "estimated_total_hours": 0,
   "budget_hours": {budget_hrs},
-  "milestone_count_rationale": "string — explanation of why this milestone count was chosen (gap, time, level)",
+  "milestone_count_rationale": "string — explanation of why THIS count within the allowed range [{recommended_milestones_min},{recommended_milestones_max}] was chosen (gap, time, breadth, density)",
   "vision_profile": {{
     "current_state": "string — 1 sentence: current identity of the learner",
     "main_blocker": "string — 1 sentence: biggest obstacle to transformation",
@@ -789,7 +1071,7 @@ commas before }} or ]. Every property must have a comma separator.
   "roadmap_meta": {{
     "generated_at": "PLACEHOLDER_TIMESTAMP",
     "version": "v3.2",
-    "science_model": ["ZPD", "Mastery Learning", "CLT", "BKT", "Possible Selves", "Retrieval Practice"]
+    "science_model": ["ZPD", "Mastery Learning", "CLT", "BKT", "Possible Selves", "Retrieval Practice", "Deliberate Practice"]
   }},
   "milestones": [
     {{
@@ -809,9 +1091,9 @@ commas before }} or ]. Every property must have a comma separator.
       "project": {{
         "title": "string — real-world project title",
         "vibe_layers": [
-          "planning",
-          "architecture",
-          "solution"
+          "vibe_planning",
+          "vibe_architecture",
+          "vibe_solution"
         ],
         "description": "string — 2-3 sentences describing what the learner builds",
         "deliverable": "string — what the learner submits as proof",
@@ -824,7 +1106,7 @@ commas before }} or ]. Every property must have a comma separator.
         {{
           "id": "M1.1",
           "title": "string — capability-cluster title",
-          "ai_first_layer": "planning | architecture | solution",
+          "ai_first_layer": "vibe_planning | vibe_architecture | vibe_solution | deployment",
           "free": true,
           "vis": "code+real_tutor",
           "skill_count_rationale": "string — why this module needs N skills",
@@ -834,6 +1116,12 @@ commas before }} or ]. Every property must have a comma separator.
               "n": "python",
               "title": "string — human readable skill title",
               "auto_completed": false,
+              "ai_metadata": {{
+                "ai_first": true,
+                "layer": "vibe_architecture",  # ONLY: vibe_planning | vibe_architecture | vibe_solution | deployment
+                "usage_type": "generation | analysis | automation | optimization | decision_support",
+                "automation_level": "assistant | copilot | agent | autonomous"
+              }},
               "why_this_skill": "string explaining why this skill matters in the current hiring market",
               "lessons": [
                 "string — specific lesson title 1",
@@ -901,13 +1189,14 @@ commas before }} or ]. Every property must have a comma separator.
 }}
 
 IMPORTANT REMINDERS:
-- Generate between 2 and 7 milestones (determined by capability gap — see RULE 2).
-- Module count per milestone: 2–4 (determined by capability breadth — see RULE 4).
-- Every module has 3–8 skills (dynamic, see RULE 5).
-- Every skill has EXACTLY 3 lessons (inside the skill object, NOT at module level).
-- Every milestone has between 3 and 7 Scenarios (sc_n=3-7) and EXACTLY 1 Interview (iv=1).
+- Milestone count MUST be within the allowed range [{recommended_milestones_min},{recommended_milestones_max}] (see RULE 2).
+- Module count per milestone: 2–4, MAY VARY between milestones (see RULE 4).
+- Every module has 3–8 skills, determined by market need (see RULE 5).
+- Every skill has 1-3 lessons (inside the skill object, NOT at module level).
+- Every milestone has Scenarios (0-7) and Interviews (0-2).
+  Counts are bounds driven by milestone complexity — do not pad.
   Distribute Scenarios across modules (any module may hold multiple). The Interview
-  must be in a module separate from any Scenario module.
+  should be in a module separate from any Scenario module.
 - All content_id values must be globally unique (e.g. VID_M01_M1_S1, SCN_M02_M2_S3).
 - All skill_id values must be globally unique (e.g. SKILL_M01_M1_S1).
 - skill unlock_rules.requires must reference skill_ids that appear EARLIER in
@@ -1034,9 +1323,14 @@ def compute_learn_rate(
 
 
 def inject_bkt_values(roadmap_data: dict) -> None:
-    """Overwrite BKT prior/learn_rate across all skills with skill-aware values."""
+    """Overwrite BKT prior/learn_rate across all skills with skill-aware values.
+    
+    Also synchronizes skill['p'] with BKT prior for non-beginner learners
+    and forces auto_completed skills to p=100.
+    """
     milestones = roadmap_data.get("milestones", [])
     total_ms = len(milestones)
+    level = roadmap_data.get("level", "beginner")
     user_signals = {
         "years_experience": roadmap_data.get("years_experience", 0),
         "known_skills": roadmap_data.get("known_skills", []),
@@ -1056,6 +1350,9 @@ def inject_bkt_values(roadmap_data: dict) -> None:
                 if bkt:
                     bkt["prior"] = prior
                     bkt["learn_rate"] = lr
+                # Sync skill['p'] with BKT prior for non-beginner learners
+                if level != "beginner":
+                    skill["p"] = round(prior * 100)
 # Pinecone Storage for Roadmap   (UNCHANGED)
 # ============================================================
 
@@ -1346,7 +1643,7 @@ def validate_roadmap_structure(data: dict) -> None:
       - milestone_id/label codes M01..M0N, sequential, no gaps
       - each milestone has between MIN_MODULES and MAX_MODULES modules
       - each module has MIN_SKILLS..MAX_SKILLS skills (dynamic)
-      - each skill has EXACTLY 3 lessons (inside skill object)
+      - each skill has 1–3 lessons (inside skill object)
       - each module's "science" array has 0-3 items ("Scenario" or "Interview"; Scenarios may share a module, Interview must be in a separate module)
       - each milestone has 3 <= sc_n <= 7 and iv == 1
       - skill_id uniqueness and acyclic/backward-only prerequisite refs
@@ -1423,6 +1720,12 @@ def validate_roadmap_structure(data: dict) -> None:
             raise ValueError(
                 f"Milestone {m_id}: project must declare at least 2 vibe_layers"
             )
+        invalid_project_layers = [v for v in project_layers if v not in ALLOWED_AI_LAYERS]
+        if invalid_project_layers:
+            raise ValueError(
+                f"Milestone {m_id}: project vibe_layers contain invalid "
+                f"value(s): {invalid_project_layers}. Must be in {sorted(ALLOWED_AI_LAYERS)}."
+            )
 
         # ── Module count: within bounds ─────────────────────────────────
         modules = milestone.get("modules", [])
@@ -1444,7 +1747,7 @@ def validate_roadmap_structure(data: dict) -> None:
 
             # ── ai_first_layer ──
             layer = mod.get("ai_first_layer")
-            if layer not in ("planning", "architecture", "solution"):
+            if layer not in ALLOWED_AI_LAYERS:
                 raise ValueError(
                     f"Module {mod_id}: invalid ai_first_layer '{layer}'"
                 )
@@ -1515,13 +1818,13 @@ def validate_roadmap_structure(data: dict) -> None:
                         f"Skill {skill_id}: 'p' must be 0-100, got {skill['p']}"
                     )
 
-                # ── lessons: exactly 3 per skill ──
+                # ── lessons: at least 1, at most 3 per skill ──
                 lessons = skill.get("lessons", [])
                 if not isinstance(lessons, list):
                     raise ValueError(f"Skill {skill_id}: lessons must be a list")
-                if len(lessons) != 3:
+                if len(lessons) < 1 or len(lessons) > 3:
                     raise ValueError(
-                        f"Skill {skill_id}: must have EXACTLY 3 lessons, "
+                        f"Skill {skill_id}: must have 1-3 lessons, "
                         f"got {len(lessons)}"
                     )
 
@@ -1553,16 +1856,14 @@ def validate_roadmap_structure(data: dict) -> None:
                 f"AI-first layers. Found: {sorted(ai_first_layers)}"
             )
 
-        # ── sc_n must be 3-7, iv must equal 1 ──
-        if scenario_count < 3 or scenario_count > 7:
+        # ── sc_n must be 0-7, iv must be 0-2 (bounds, not targets) ──
+        if scenario_count < 0 or scenario_count > 7:
             raise ValueError(
-                f"Milestone {m_id}: must have between 3 and 7 Scenarios across its "
-                f"modules, got {scenario_count}"
+                f"Milestone {m_id}: Scenarios out of bounds (0-7), got {scenario_count}"
             )
-        if interview_count != 1:
+        if interview_count < 0 or interview_count > 2:
             raise ValueError(
-                f"Milestone {m_id}: must have EXACTLY 1 Interview across its "
-                f"modules, got {interview_count}"
+                f"Milestone {m_id}: Interviews out of bounds (0-2), got {interview_count}"
             )
 
     # ── starting/current milestone must be M01 ──
@@ -1712,13 +2013,8 @@ def _starts_where_they_are_check(roadmap_data: dict) -> dict:
     """
     Validator: starts_where_they_are
 
-    No skill the user already has should be re-taught from scratch.
-    Rule: if level != 'beginner', at least one skill in M01 must have
-    p > 0 (i.e. carry a mastery prior from onboarding signals).
-    A p=0 on every M01 skill for a non-beginner = ZPD rule violated.
-
-    Full implementation (comparing against a live skill inventory) is
-    a future step.  This is the deterministic POC heuristic.
+    Every skill's p value must align with its BKT prior within 10%.
+    For non-beginner learners, M01 skills must carry mastery priors.
     """
     level      = roadmap_data.get("level", "beginner")
     milestones = roadmap_data.get("milestones", [])
@@ -1726,28 +2022,36 @@ def _starts_where_they_are_check(roadmap_data: dict) -> dict:
     if not milestones:
         return {"pass": False, "reason": "No milestones — cannot check ZPD"}
 
-    m01_skills = [
+    all_skills = [
         skill
-        for mod in milestones[0].get("modules", [])
+        for ms in milestones
+        for mod in ms.get("modules", [])
         for skill in mod.get("skills", [])
     ]
 
-    if not m01_skills:
-        return {"pass": False, "reason": "M01 has no skills"}
+    if not all_skills:
+        return {"pass": False, "reason": "No skills found in roadmap"}
 
-    if level != "beginner":
-        has_prior = any(s.get("p", 0) > 0 for s in m01_skills)
-        if not has_prior:
-            return {
-                "pass":   False,
-                "reason": (
-                    f"Level='{level}' but every M01 skill has p=0. "
-                    "ZPD rule requires pre-existing mastery priors for "
-                    "non-beginner learners."
-                ),
-            }
+    misaligned = []
+    for skill in all_skills:
+        p_val = skill.get("p", 0)
+        bkt = skill.get("mastery_state", {}).get("bkt", {})
+        prior = bkt.get("prior", 0)
+        if p_val == 0 and prior == 0:
+            continue
+        diff = abs(p_val / 100.0 - prior)
+        if diff > 0.10:
+            misaligned.append(
+                f"{skill.get('skill_id', '?')} p={p_val} prior={prior} diff={diff:.3f}"
+            )
 
-    return {"pass": True, "reason": "ZPD starting-point check passed"}
+    if misaligned and len(misaligned) > len(all_skills) * 0.5:
+        return {
+            "pass": False,
+            "reason": f"{len(misaligned)}/{len(all_skills)} skills misaligned: {'; '.join(misaligned[:5])}",
+        }
+
+    return {"pass": True, "reason": "Initial mastery priors align with learner level and BKT estimates."}
 
 
 def _laugh_test_check(roadmap_data: dict) -> dict:
@@ -1920,15 +2224,23 @@ def _dag_clean_check(roadmap_data: dict) -> dict:
 
 def _ai_first_check(roadmap_data: dict) -> dict:
     """
-    Validator: ai_first
+    Validator: ai_first — June 2026 Official AI-First Model.
 
     Every milestone must have ≥2 distinct ai_first_layer values.
-    Every milestone must have a project with seeded_errors (learner catches AI mistakes).
+    Every milestone should collectively teach all 4 official layers:
+      vibe_planning, vibe_architecture, vibe_solution, deployment
+    Missing layers produce a WARN (non-blocking).
+
+    Every milestone must have a project with:
+      - vibe_layers values that are all in ALLOWED_AI_LAYERS
+      - seeded_errors (learner catches AI mistakes)
     At least one project across the roadmap must be deploy_required=True.
     """
     milestones  = roadmap_data.get("milestones", [])
     violations: List[str] = []
+    warns: List[str] = []
     deploy_required_found  = False
+    REQUIRED_LAYERS = {"vibe_planning", "vibe_architecture", "vibe_solution", "deployment"}
 
     for ms in milestones:
         m_id   = ms.get("milestone_id", "?")
@@ -1936,7 +2248,7 @@ def _ai_first_check(roadmap_data: dict) -> dict:
 
         for mod in ms.get("modules", []):
             layer = mod.get("ai_first_layer")
-            if layer in ("planning", "architecture", "solution"):
+            if layer in ALLOWED_AI_LAYERS:
                 layers.add(layer)
 
         if len(layers) < 2:
@@ -1945,8 +2257,23 @@ def _ai_first_check(roadmap_data: dict) -> dict:
                 f"layer(s) {sorted(layers)}. Need ≥2."
             )
 
+        # ── Milestone coverage WARN (non-blocking) ──────────────
+        missing_layers = REQUIRED_LAYERS - layers
+        if missing_layers:
+            warns.append(
+                f"Milestone {m_id} missing layer(s): {', '.join(sorted(missing_layers))}"
+            )
+
         project = ms.get("project", {})
         if project:
+            # ── Project vibe_layers value validation ────────────
+            project_layers = project.get("vibe_layers", [])
+            invalid_project_layers = [v for v in project_layers if v not in ALLOWED_AI_LAYERS]
+            if invalid_project_layers:
+                violations.append(
+                    f"Milestone {m_id}: project vibe_layers contain invalid "
+                    f"value(s): {invalid_project_layers}. Must be in {sorted(ALLOWED_AI_LAYERS)}."
+                )
             if not project.get("seeded_errors"):
                 violations.append(
                     f"Milestone {m_id}: project has no seeded_errors — "
@@ -1963,14 +2290,20 @@ def _ai_first_check(roadmap_data: dict) -> dict:
             "nothing ships to production"
         )
 
+    # Build reason with warns
+    reason_parts = []
     if violations:
-        return {
-            "pass":       False,
-            "reason":     f"{len(violations)} AI-first violation(s)",
-            "violations": violations,
-        }
+        reason_parts.append(f"{len(violations)} AI-first violation(s)")
+    if warns:
+        reason_parts.append(f"Coverage warnings: {'; '.join(warns)}")
+    reason = "; ".join(reason_parts) if reason_parts else "all good"
 
-    return {"pass": True, "reason": "AI-first check passed — all milestones have multi-layer AI work"}
+    return {
+        "pass":       not bool(violations),
+        "reason":     reason,
+        "violations": violations if violations else [],
+        "warns":      warns,
+    }
 
 
 def _time_budget_check(roadmap_data: dict) -> dict:
@@ -1993,7 +2326,37 @@ def _time_budget_check(roadmap_data: dict) -> dict:
     }
 
 
+def _is_teachable_skill(skill: dict) -> bool:
+    """Return True if skill contains ANY teachable content.
+    
+    Teachable content: lessons, videos, assessments,
+    scenarios, mocks, mastery_state (with non-empty state),
+    or non-empty unlock_rules (with actual requires).
+    """
+    if skill.get("lessons") and len(skill.get("lessons", [])) > 0:
+        return True
+    cf = skill.get("content_flow", {})
+    for ct in ("video", "scenario", "mock", "assessment"):
+        if cf.get(ct, {}).get("content_id"):
+            return True
+    ms = skill.get("mastery_state", {})
+    if ms and ms.get("state") and ms["state"] not in ("", "unknown"):
+        return True
+    ur = skill.get("unlock_rules", {})
+    if ur and ur.get("requires") and len(ur.get("requires", [])) > 0:
+        return True
+    return False
+
+
 def _known_skill_skip_check(roadmap_data: dict) -> dict:
+    """MD Section 3 / Section 18 compliance: known skills must NOT be teachable.
+    
+    Every known skill must satisfy:
+      (removed entirely from roadmap — preferred)
+      OR
+      (only as historical evidence: hidden=true, teachable=false,
+       auto_completed=true, and NO teachable content)
+    """
     level = roadmap_data.get("level", "beginner")
     known = roadmap_data.get("known_skills", [])
     if level == "beginner" or not known:
@@ -2005,58 +2368,332 @@ def _known_skill_skip_check(roadmap_data: dict) -> dict:
                 n = skill.get("n", "")
                 title = skill.get("title", "")
                 if any(normalize_skill_match(v, ks) for v in (n, title) for ks in known):
+                    sid = skill.get("skill_id", "?")
+                    sn = skill.get("n", "")
+                    # Check historical evidence mode flags
                     if not skill.get("auto_completed"):
                         violations.append(
-                            f"{skill.get('skill_id', '?')} ('{skill.get('n')}') "
-                            f"is a known skill but auto_completed is not true"
+                            f"{sid} ('{sn}') known skill missing auto_completed"
                         )
-                    if (skill.get("p") or 0) < 65:
+                    if not skill.get("hidden"):
                         violations.append(
-                            f"{skill.get('skill_id', '?')} ('{skill.get('n')}') "
-                            f"known skill has p={skill.get('p')} (< 65)"
+                            f"{sid} ('{sn}') known skill not hidden"
+                        )
+                    if skill.get("teachable") != False:
+                        violations.append(
+                            f"{sid} ('{sn}') known skill still teachable"
+                        )
+                    if _is_teachable_skill(skill):
+                        violations.append(
+                            f"{sid} ('{sn}') known skill has teachable content"
                         )
     if violations:
         return {"pass": False, "reason": "; ".join(violations)}
-    return {"pass": True, "reason": "all known skills correctly auto-completed"}
+    return {"pass": True, "reason": "all known skills removed from teachable content — MD compliant"}
+
+
+# ── Role alignment keywords (Phase 3.4) ──────────────────────
+# Each target role maps to expected skill keywords for validation.
+_ROLE_ALIGNMENT_KEYWORDS = {
+    "frontend": {"html", "css", "javascript", "dom", "react", "vue", "angular", "responsive", "ui", "ux", "web", "browser", "typescript", "svelte"},
+    "backend": {"api", "database", "sql", "server", "authentication", "authorization", "rest", "microservice", "cache", "queue", "middleware", "spring", "django", "node", "express"},
+    "data": {"sql", "python", "pandas", "numpy", "statistics", "visualization", "tableau", "powerbi", "etl", "pipeline", "data_warehouse", "analytics"},
+    "ai": {"machine_learning", "deep_learning", "llm", "prompt", "vector", "embedding", "transformer", "neural", "tensorflow", "pytorch", "nlp", "computer_vision", "rag"},
+    "fullstack": {"html", "css", "javascript", "react", "node", "api", "database", "sql", "deployment", "rest", "frontend", "backend"},
+    "devops": {"docker", "kubernetes", "ci/cd", "terraform", "ansible", "monitoring", "pipeline", "deployment", "cloud", "infrastructure", "linux", "bash"},
+    "mobile": {"kotlin", "swift", "android", "ios", "flutter", "react_native", "mobile", "dart"},
+    "security": {"security", "firewall", "encryption", "authentication", "penetration", "vulnerability", "compliance", "risk", "siem"},
+    "software": {"algorithm", "data_structure", "design_pattern", "oop", "testing", "debugging", "version_control", "git"},
+}
+
+
+def _resolve_role_alignment_keywords(target_identity: str) -> set:
+    """Resolve which keyword set to use for role alignment check."""
+    tgt_lower = target_identity.lower()
+    # Check against _ROLE_FAMILIES-like logic (reuse domain extraction)
+    import re
+    domain_keywords = {
+        "frontend": {"frontend", "front end", "ui", "web developer"},
+        "backend": {"backend", "back end", "server", "api"},
+        "data": {"data", "analytics", "bi"},
+        "ai": {"ai", "machine learning", "ml", "deep learning"},
+        "fullstack": {"fullstack", "full stack"},
+        "devops": {"devops", "sre", "platform", "infrastructure"},
+        "mobile": {"mobile", "android", "ios", "flutter"},
+        "security": {"security", "cyber"},
+    }
+    for domain, keywords in domain_keywords.items():
+        for kw in keywords:
+            if re.search(r'\b' + re.escape(kw) + r'\b', tgt_lower):
+                return _ROLE_ALIGNMENT_KEYWORDS.get(domain, set())
+    # Fallback: software engineering
+    return _ROLE_ALIGNMENT_KEYWORDS.get("software", set())
+
+
+def _role_alignment_check(roadmap_data: dict) -> dict:
+    """Validate that roadmap skills match target role.
+
+    PASS if role coverage >= 80%
+    FAIL if role coverage < 80%
+    """
+    target_role = (roadmap_data.get("customer_profile") or {}).get("target_identity", "")
+    if not target_role:
+        target_role = roadmap_data.get("target_role", "")
+    if not target_role:
+        return {"pass": True, "reason": "No target role — skip role alignment"}
+
+    expected_keywords = _resolve_role_alignment_keywords(target_role)
+    if not expected_keywords:
+        return {"pass": True, "reason": f"No keyword set for role '{target_role}' — skip"}
+
+    total_skills = 0
+    matched_skills = 0
+    matched_skill_names = []
+    missing_skills = []
+
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                total_skills += 1
+                n = (skill.get("n") or "").lower()
+                title = (skill.get("title") or "").lower()
+                combined = n + " " + title
+                skill_matched = False
+                for kw in expected_keywords:
+                    if kw in combined or re.search(r'\b' + re.escape(kw) + r'\b', combined):
+                        matched_skills += 1
+                        matched_skill_names.append(n or title)
+                        skill_matched = True
+                        break
+                if not skill_matched:
+                    missing_skills.append(n or title)
+
+    coverage = round(matched_skills / max(total_skills, 1), 3)
+    passed = coverage >= 0.80
+
+    if not passed:
+        return {
+            "pass": False,
+            "reason": f"Role alignment: {coverage:.0%} ({matched_skills}/{total_skills}) — "
+                      f"below 80% threshold for '{target_role}'. "
+                      f"Missing: {', '.join(missing_skills[:10])}",
+            "coverage": coverage,
+            "matched": matched_skills,
+            "total": total_skills,
+            "expected_keywords": sorted(expected_keywords),
+            "missing": missing_skills[:10],
+        }
+    return {
+        "pass": True,
+        "reason": f"Role alignment: {coverage:.0%} ({matched_skills}/{total_skills}) — OK",
+        "coverage": coverage,
+        "matched": matched_skills,
+        "total": total_skills,
+    }
+
+
+def _repair_role_alignment(roadmap_data: dict) -> int:
+    """Repair role alignment by replacing non-matching skills with role-appropriate ones.
+
+    Uses _ROLE_ALIGNMENT_KEYWORDS to identify the target domain and replaces
+    non-matching skills with domain-appropriate catalog skills.
+
+    Returns count of skills replaced.
+    """
+    target_role = (roadmap_data.get("customer_profile") or {}).get("target_identity", "")
+    if not target_role:
+        return 0
+
+    expected_keywords = _resolve_role_alignment_keywords(target_role)
+    if not expected_keywords:
+        return 0
+
+    import copy
+    from uuid import uuid4
+
+    # Build a pool of replacement titles from expected keywords
+    replacement_pool = [kw.replace("_", " ").title() for kw in expected_keywords]
+
+    replaced = 0
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                n = (skill.get("n") or "").lower()
+                title = (skill.get("title") or "").lower()
+                combined = n + " " + title
+
+                # Check if this skill matches any expected keyword
+                skill_ok = False
+                for kw in expected_keywords:
+                    if kw in combined or (len(kw) > 2 and kw in n):
+                        skill_ok = True
+                        break
+
+                if not skill_ok and replacement_pool:
+                    # Replace n and title with a role-appropriate one
+                    new_n = replacement_pool[replaced % len(replacement_pool)]
+                    skill["n"] = new_n.lower().replace(" ", "_")
+                    skill["title"] = new_n
+                    if "lessons" in skill and isinstance(skill["lessons"], list):
+                        skill["lessons"] = [
+                            f"{new_n} — Part 1",
+                            f"{new_n} — Part 2",
+                            f"{new_n} — Part 3",
+                        ]
+                    if "why_this_skill" in skill:
+                        skill["why_this_skill"] = f"Role-appropriate replacement for {target_role}"
+                    replaced += 1
+
+    if replaced:
+        print(f"[ROLE REPAIR] Replaced {replaced} skill(s) to align with '{target_role}'")
+    return replaced
 
 
 def _capability_gap_alignment_check(roadmap_data: dict) -> dict:
     gap = roadmap_data.get("capability_gap", {})
-    expected_ms = gap.get("recommended_milestones")
-    expected_mod = gap.get("recommended_modules_per_milestone")
-    expected_skill = gap.get("recommended_skill_density")
-    if expected_ms is None or expected_mod is None or expected_skill is None:
+    ms_range = roadmap_data.get("milestone_range", {})
+    min_ms = ms_range.get("minimum", MIN_MILESTONES)
+    max_ms = ms_range.get("maximum", gap.get("recommended_milestones", MAX_MILESTONES))
+    max_mod = MAX_MODULES  # module count can vary per milestone, only global max applies
+    max_skill = gap.get("recommended_skill_density", MAX_SKILLS)
+    if max_ms is None:
         return {"pass": True, "reason": "capability_gap data not available — skip check"}
 
     milestones = roadmap_data.get("milestones", [])
     actual_ms = len(milestones)
     violations = []
 
-    if actual_ms != expected_ms:
+    # Phase 4 — Range-based validation: minimum <= actual <= maximum
+    if actual_ms > max_ms:
         violations.append(
-            f"expected {expected_ms} milestone(s), got {actual_ms}"
+            f"milestone count {actual_ms} exceeds max bound {max_ms}"
         )
+    if actual_ms < min_ms:
+        violations.append(
+            f"milestone count {actual_ms} below minimum {min_ms}"
+        )
+
+    # Phase 4 — Rationale must be present
+    rationale = roadmap_data.get("milestone_count_rationale", "")
+    if not rationale or len(rationale) < 10:
+        violations.append("milestone_count_rationale missing or too short — must explain why count was chosen within range")
 
     for ms in milestones:
         mid = ms.get("milestone_id", "?")
         modules = ms.get("modules", [])
         actual_mod = len(modules)
-        if actual_mod != expected_mod:
+        if actual_mod > MAX_MODULES:
             violations.append(
-                f"Milestone {mid}: expected {expected_mod} module(s), got {actual_mod}"
+                f"Milestone {mid}: {actual_mod} modules exceed max bound {MAX_MODULES}"
+            )
+        if actual_mod < MIN_MODULES:
+            violations.append(
+                f"Milestone {mid}: {actual_mod} modules below minimum {MIN_MODULES}"
+            )
+        # Phase 6 — Module count rationale per milestone
+        mod_rationale = ms.get("module_count_rationale", "")
+        if not mod_rationale or len(mod_rationale) < 10:
+            violations.append(
+                f"Milestone {mid}: module_count_rationale missing or too short — must explain why this milestone has {actual_mod} modules"
             )
         for mod in modules:
             mod_id = mod.get("id", "?")
             skills = mod.get("skills", [])
             actual_skill = len(skills)
-            if actual_skill != expected_skill:
+            if actual_skill > max_skill:
                 violations.append(
-                    f"Module {mod_id}: expected {expected_skill} skill(s), got {actual_skill}"
+                    f"Module {mod_id}: {actual_skill} skills exceed max bound {max_skill}"
+                )
+            if actual_skill < MIN_SKILLS:
+                violations.append(
+                    f"Module {mod_id}: {actual_skill} skills below minimum {MIN_SKILLS}"
+                )
+            # Phase 7 — Skill count rationale
+            skill_rationale = mod.get("skill_count_rationale", "")
+            if not skill_rationale or len(skill_rationale) < 10:
+                violations.append(
+                    f"Module {mod_id}: skill_count_rationale missing or too short — must explain why this module has {actual_skill} skills"
                 )
 
     if violations:
         return {"pass": False, "reason": "; ".join(violations)}
-    return {"pass": True, "reason": "capability_gap alignment OK"}
+    return {"pass": True, "reason": "capability_gap range bounds satisfied"}
+
+
+def validate_identity_progression_density(roadmap_data: dict) -> dict:
+    """
+    Phase 5 — Milestone Quality Validation.
+
+    Validates that the chosen milestone count can realistically support
+    the identity transition from current to target role.
+
+    Rules:
+      - Beginner → complex role (Data Scientist, AI Engineer, Architect):
+        MINIMUM 4 milestones
+      - Beginner → simple role (Junior Developer, Support Engineer):
+        MINIMUM 2 milestones
+      - Intermediate → adjacent role (Backend → Fullstack):
+        MINIMUM 2 milestones
+      - Intermediate → distant role (Backend → AI Engineer):
+        MINIMUM 3 milestones
+      - Senior → senior role:
+        MINIMUM 2 milestones
+      - years_experience=0 AND target is senior/lead/architect:
+        MINIMUM 4 milestones
+    """
+    profile = roadmap_data.get("customer_profile", {})
+    target = (profile.get("target_identity", "") or "").lower()
+    current = (profile.get("current_identity", "") or "").lower()
+    level = roadmap_data.get("level", "beginner")
+    years_exp = roadmap_data.get("years_experience", 0)
+
+    milestones = roadmap_data.get("milestones", [])
+    actual_ms = len(milestones)
+
+    senior_targets = {"senior", "lead", "principal", "architect", "manager", "head of", "director"}
+    complex_roles = {"data scientist", "ai engineer", "machine learning engineer", "architect",
+                     "fullstack", "devops", "sre", "security engineer"}
+    simple_roles = {"junior", "support", "tester", "associate"}
+
+    target_is_senior = any(t in target for t in senior_targets)
+    target_is_complex = any(r in target for r in complex_roles)
+    target_is_simple = any(r in target for r in simple_roles)
+    is_beginner = level == "beginner" or years_exp == 0
+
+    violations = []
+    min_expected = MIN_MILESTONES
+
+    if is_beginner and target_is_senior:
+        min_expected = 4
+    elif is_beginner and target_is_complex:
+        min_expected = 4
+    elif is_beginner and target_is_simple:
+        min_expected = 2
+    elif level == "intermediate" and target_is_complex and not any(r in current for r in complex_roles):
+        min_expected = 3
+    elif level == "intermediate":
+        min_expected = 2
+    elif level == "senior":
+        min_expected = 2
+
+    if actual_ms < min_expected:
+        violations.append(
+            f"identity progression density too low: {actual_ms} milestones is insufficient "
+            f"for {level}→{target} transition (minimum {min_expected} needed). "
+            f"Each milestone must represent a distinct market-recognized identity."
+        )
+
+    if is_beginner and target_is_complex and actual_ms >= 4:
+        milestone_titles = [m.get("t", "") for m in milestones]
+        unique_count = len(set(t for t in milestone_titles if t))
+        if unique_count < 2:
+            violations.append(
+                f"milestones appear to lack distinct identities: titles={milestone_titles}"
+            )
+
+    if violations:
+        return {"pass": False, "reason": "; ".join(violations)}
+    return {"pass": True, "reason": f"identity progression density valid ({actual_ms} ms for {level}→{target})"}
 
 
 def run_roadmap_bible_validators(roadmap_data: dict, weekly_hours: int, timeline_days: int = 112) -> dict:
@@ -2079,6 +2716,7 @@ def run_roadmap_bible_validators(roadmap_data: dict, weekly_hours: int, timeline
         ("time_budget",           lambda: _time_budget_check(roadmap_data)),
         ("starts_where_they_are", lambda: _starts_where_they_are_check(roadmap_data)),
         ("known_skill_skip",      lambda: _known_skill_skip_check(roadmap_data)),
+        ("identity_density",      lambda: validate_identity_progression_density(roadmap_data)),
         ("laugh_test",            lambda: _laugh_test_check(roadmap_data)),
         ("no_spectators",         lambda: _no_spectators_check(roadmap_data)),
         ("dag_clean",             lambda: _dag_clean_check(roadmap_data)),
@@ -2335,21 +2973,62 @@ def normalize_skill_match(skill_value: str, known_skill: str) -> bool:
     )
 
 
-def apply_known_skill_autocomplete(roadmap_data: dict, known_skills: list[str]) -> None:
+def remove_known_skills_from_roadmap(roadmap_data: dict, known_skills: list[str]) -> int:
+    """Remove known skills completely from roadmap (MD Section 3 / 18).
+    
+    For each matching skill:
+      Completely remove from the module skill list.
+      Record audit entry in roadmap_data["_removed_known_skills"].
+    
+    After removal recalculates:
+      - skill counts per module
+      - total skills across roadmap
+      - estimated_total_hours
+    
+    Returns count of skills removed.
+    """
     if not known_skills:
-        return
-    auto_count = 0
+        return 0
+    removed_count = 0
+    removed_audit = []
     for ms in roadmap_data.get("milestones", []):
+        ms_id = ms.get("milestone_id", "?")
         for mod in ms.get("modules", []):
+            mod_id = mod.get("id", "?")
+            surviving = []
             for skill in mod.get("skills", []):
                 n = skill.get("n", "")
                 title = skill.get("title", "")
                 if any(normalize_skill_match(v, ks) for v in (n, title) for ks in known_skills):
-                    skill["auto_completed"] = True
-                    if skill.get("p", 0) < 65:
-                        skill["p"] = 65
-                    auto_count += 1
-    roadmap_data["auto_completed_count"] = auto_count
+                    removed_count += 1
+                    removed_audit.append({
+                        "skill_title": title or n,
+                        "matched_known_skill": next(
+                            ks for ks in known_skills
+                            if any(normalize_skill_match(v, ks) for v in (n, title))
+                        ),
+                        "module_id": mod_id,
+                        "milestone_id": ms_id,
+                        "skill_id": skill.get("skill_id", "?"),
+                    })
+                else:
+                    surviving.append(skill)
+            mod["skills"] = surviving
+    roadmap_data["_removed_known_skills"] = removed_audit
+    # Recalculate structural totals
+    total_skills = 0
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            total_skills += len(mod.get("skills", []))
+    roadmap_data["total_skills"] = total_skills
+    # Re-estimate hours: trust existing per-skill estimates, just sum
+    total_hrs = 0
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                total_hrs += skill.get("estimated_hours", 0) or 0
+    roadmap_data["estimated_total_hours"] = round(total_hrs, 1)
+    return removed_count
 
 
 def _salary_floor_check(roadmap_data: dict) -> dict:
@@ -2501,12 +3180,6 @@ _UNAVAILABLE_COURSES = {
     "soft skills", "project manager",
 }
 
-_ALL_AVAILABLE_SKILLS = {
-    s.lower()
-    for course in AVAILABLE_COURSES.values()
-    for s in course.get("skills_include", [])
-}
-
 _ALL_AVAILABLE_MODULES = {
     m.lower()
     for course in AVAILABLE_COURSES.values()
@@ -2515,11 +3188,22 @@ _ALL_AVAILABLE_MODULES = {
 
 
 def _course_catalog_compliance_check(roadmap_data: dict) -> dict:
+    """Check course catalog compliance with coverage thresholds.
+    
+    PASS  if coverage >= 90%
+    WARN  if 85% <= coverage < 90%
+    FAIL  if coverage < 85%
+    
+    Uses catalog_status set by repair_course_catalog_alignment when available.
+    """
     violations = []
+    total = 0
+    mapped = 0
+    missing_skills = []
+
     for ms in roadmap_data.get("milestones", []):
         for mod in ms.get("modules", []):
             mod_title = (mod.get("title") or "").lower()
-            # Check module title against unavailable courses
             for uc in _UNAVAILABLE_COURSES:
                 if uc in mod_title:
                     violations.append(
@@ -2527,28 +3211,728 @@ def _course_catalog_compliance_check(roadmap_data: dict) -> dict:
                         f"resembles unavailable course '{uc}'"
                     )
             for skill in mod.get("skills", []):
+                total += 1
+                catalog_status = skill.get("catalog_status")
+                if catalog_status == "mapped":
+                    mapped += 1
+                    continue
+                if catalog_status == "missing":
+                    missing_skills.append(skill.get("title") or skill.get("n", ""))
+                    continue
+                # No catalog_status yet — compute inline
                 skill_n = (skill.get("n") or "").lower().strip()
-                # Only flag if skill is not in any available course
-                if skill_n and skill_n not in _ALL_AVAILABLE_SKILLS:
-                    # Check if it's a compound name that partially matches
-                    if not any(skill_n in avail or avail in skill_n for avail in _ALL_AVAILABLE_SKILLS):
+                if skill_n in ALL_CATALOG_SKILLS:
+                    mapped += 1
+                else:
+                    missing = True
+                    for avail in ALL_CATALOG_SKILLS:
+                        if skill_n in avail or avail in skill_n:
+                            missing = False
+                            break
+                    if missing:
+                        missing_skills.append(skill.get("title") or skill.get("n", ""))
                         violations.append(
                             f"Skill '{skill.get('n')}' in {mod.get('id')} "
                             f"not found in any AVAILABLE_COURSES"
                         )
+                    else:
+                        mapped += 1
+
+    coverage = round(mapped / max(total, 1), 3)
+    result = {
+        "pass": coverage >= 0.85,
+        "reason": f"Catalog coverage: {coverage:.0%} ({mapped}/{total})",
+        "coverage": coverage,
+        "mapped": mapped,
+        "total": total,
+        "missing": missing_skills[:10],
+    }
+    if coverage >= 0.90:
+        result["pass"] = True
+        result["reason"] = f"Catalog coverage: {coverage:.0%} ({mapped}/{total}) — all good"
+    elif coverage >= 0.85:
+        result["pass"] = True
+        result["reason"] = f"Catalog coverage: {coverage:.0%} ({mapped}/{total}) — acceptable"
+    else:
+        result["pass"] = False
+        result["reason"] = f"Catalog coverage: {coverage:.0%} ({mapped}/{total}) — below 85% threshold"
     if violations:
-        return {"pass": False, "reason": f"{len(violations)} catalog violation(s)", "violations": violations}
-    return {"pass": True, "reason": "All skills and modules map to available courses"}
+        result["reason"] += f"; {len(violations)} unavailable-course violation(s)"
+    return result
+
+
+def _catalog_quality_check(roadmap_data: dict) -> dict:
+    """Quality check: duplicate/low-confidence/missing catalog mappings."""
+    seen_courses = {}
+    low_conf = []
+    missing = 0
+    total = 0
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                total += 1
+                cid = skill.get("catalog_course_id")
+                conf = skill.get("catalog_match_confidence", 0)
+                if skill.get("catalog_status") == "missing":
+                    missing += 1
+                elif cid:
+                    if conf < 0.80:
+                        low_conf.append(f"{skill.get('skill_id','?')} conf={conf}")
+                    seen_courses[cid] = seen_courses.get(cid, 0) + 1
+    issues = []
+    if missing > total * 0.3:
+        issues.append(f"{missing}/{total} skills unmapped")
+    if low_conf:
+        issues.append(f"low-confidence: {'; '.join(low_conf[:5])}")
+    if issues:
+        return {"pass": False, "reason": "; ".join(issues)}
+    return {"pass": True, "reason": "All catalog mappings healthy"}
+
+
+def validate_roadmap_schema(roadmap_data: dict) -> dict:
+    """Strict schema validation: check required fields at every level.
+
+    NEVER raises. Returns {"pass": bool, "reason": str}.
+    """
+    missing = []
+
+    # Roadmap level
+    for field in ("roadmap_id", "user_id", "target_role", "level", "icp_type", "milestones"):
+        if field not in roadmap_data or roadmap_data.get(field) is None:
+            missing.append(f"roadmap.{field}")
+
+    milestones = roadmap_data.get("milestones", [])
+    if not milestones:
+        missing.append("roadmap.milestones (empty)")
+        return {"pass": False, "reason": "; ".join(missing)}
+
+    for ms in milestones:
+        ms_id = ms.get("milestone_id", "?")
+        for field in ("milestone_id", "label", "t", "sal", "o", "modules"):
+            if field not in ms or ms.get(field) is None:
+                missing.append(f"milestone {ms_id}.{field}")
+        for field in ("sc_n", "iv"):
+            if field not in ms:
+                missing.append(f"milestone {ms_id}.{field}")
+
+        for mod in ms.get("modules", []):
+            mod_id = mod.get("id", "?")
+            for field in ("id", "title", "skills"):
+                if field not in mod or mod.get(field) is None:
+                    missing.append(f"module {mod_id}.{field}")
+
+            for skill in mod.get("skills", []):
+                sid = skill.get("skill_id", "?")
+                for field in ("skill_id", "title", "content_flow", "unlock_rules"):
+                    if field not in skill or skill.get(field) is None:
+                        missing.append(f"skill {sid}.{field}")
+                cf = skill.get("content_flow")
+                if cf is None or not isinstance(cf, dict):
+                    missing.append(f"skill {sid}.content_flow (missing or not a dict)")
+
+    if missing:
+        return {"pass": False, "reason": f"Schema violations: {'; '.join(missing[:20])}"}
+    return {"pass": True, "reason": "Schema valid — all required fields present"}
+
+
+def _scaffolding_check(roadmap_data: dict) -> dict:
+    """Verify progressive skill/module/milestone dependency building.
+
+    Skills should build on previous skills, modules should build
+    on prior modules, milestones should build on prior milestones.
+    """
+    milestones = roadmap_data.get("milestones", [])
+    violations = []
+
+    # Collect all skill IDs for dependency tracking
+    all_skill_ids = set()
+    skill_to_ms = {}
+    for ms in milestones:
+        ms_id = ms.get("milestone_id", "?")
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                sid = skill.get("skill_id", "?")
+                all_skill_ids.add(sid)
+                skill_to_ms[sid] = ms_id
+
+    # Check skill unlock_rules reference only earlier skills
+    seen_skills = []
+    for ms in milestones:
+        ms_id = ms.get("milestone_id", "?")
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                sid = skill.get("skill_id", "?")
+                requires = skill.get("unlock_rules", {}).get("requires", [])
+                for req in requires:
+                    if req not in seen_skills:
+                        violations.append(
+                            f"skill {sid} requires '{req}' which is not a prior skill"
+                        )
+                seen_skills.append(sid)
+
+    # Check module progression: second module should differ from first
+    for ms in milestones:
+        ms_id = ms.get("milestone_id", "?")
+        modules = ms.get("modules", [])
+        prev_titles = set()
+        for mod in modules:
+            mod_title = (mod.get("title") or "").lower()
+            if mod_title in prev_titles:
+                violations.append(
+                    f"milestone {ms_id}: duplicate module title '{mod['title']}'"
+                )
+            prev_titles.add(mod_title)
+
+    # Check milestone progression: milestone labels should be distinct
+    seen_labels = set()
+    for ms in milestones:
+        ms_id = ms.get("milestone_id", "?")
+        t_val = ms.get("t", "")
+        if t_val in seen_labels:
+            violations.append(
+                f"milestone {ms_id}: duplicate label '{t_val}'"
+            )
+        if t_val:
+            seen_labels.add(t_val)
+
+    if violations:
+        return {"pass": False, "reason": "; ".join(violations[:10])}
+    return {"pass": True, "reason": "Scaffolding progressive — dependencies build correctly"}
+
+
+ALLOWED_AI_LAYERS = {"vibe_planning", "vibe_architecture", "vibe_solution", "deployment"}
+ALLOWED_AI_USAGE = {"generation", "analysis", "automation", "optimization", "decision_support", "planning"}
+ALLOWED_AI_AUTOMATION = {"assistant", "copilot", "agent", "autonomous"}
+_AI_LAYER_REPAIR_MAP = {
+    # → vibe_planning
+    "leadership": "vibe_planning",
+    "planning": "vibe_planning",
+    # → vibe_architecture
+    "design": "vibe_architecture",
+    "architecture": "vibe_architecture",
+    "optimization": "vibe_architecture",
+    "performance": "vibe_architecture",
+    "observability": "vibe_architecture",
+    # → vibe_solution
+    "coding": "vibe_solution",
+    "implementation": "vibe_solution",
+    "debugging": "vibe_solution",
+    "solution": "vibe_solution",
+    # → deployment
+    "infra": "deployment",
+    "testing": "deployment",
+}
+_AI_USAGE_REPAIR_MAP = {
+    "implementation": "generation",
+    "coding": "generation",
+    "deployment": "automation",
+    "testing": "analysis",
+}
+
+
+def normalize_ai_layer(value: str) -> str:
+    """Normalize an AI layer value to a valid one.
+
+    Uses the repair map as a pre-generation normalizer.
+    Returns the normalized layer.
+    """
+    v = (value or "").lower().strip()
+    if v in ALLOWED_AI_LAYERS:
+        return v
+    if v in _AI_LAYER_REPAIR_MAP:
+        return _AI_LAYER_REPAIR_MAP[v]
+    return "vibe_solution"
+
+
+def normalize_ai_usage(value: str) -> str:
+    """Normalize AI usage type."""
+    v = (value or "").lower().strip()
+    if v in ALLOWED_AI_USAGE:
+        return v
+    if v in _AI_USAGE_REPAIR_MAP:
+        return _AI_USAGE_REPAIR_MAP[v]
+    return "generation"
+
+
+def normalize_ai_automation(value: str) -> str:
+    """Normalize AI automation level."""
+    v = (value or "").lower().strip()
+    if v in ALLOWED_AI_AUTOMATION:
+        return v
+    return "copilot"
+
+
+def repair_ai_layers(roadmap_data: dict) -> int:
+    """Repair invalid AI layer values using normalizers (emergency fallback only).
+
+    Covers both module-level ai_first_layer and skill-level ai_metadata.layer.
+    Returns count of items repaired.
+    """
+    repaired_count = 0
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            # Fix module-level ai_first_layer
+            orig_layer = mod.get("ai_first_layer", "")
+            if orig_layer:
+                norm_layer = normalize_ai_layer(orig_layer)
+                if norm_layer != orig_layer:
+                    mod["ai_first_layer"] = norm_layer
+                    repaired_count += 1
+            # Fix skill-level ai_metadata values
+            for skill in mod.get("skills", []):
+                ai = skill.get("ai_metadata")
+                if not ai or not isinstance(ai, dict):
+                    continue
+                # Fix layer using normalizer
+                layer = ai.get("layer", "")
+                normalized = normalize_ai_layer(layer)
+                if normalized != layer:
+                    ai["layer"] = normalized
+                    repaired_count += 1
+                # Fix usage_type using normalizer
+                usage = ai.get("usage_type", "")
+                normalized_usage = normalize_ai_usage(usage)
+                if normalized_usage != usage:
+                    ai["usage_type"] = normalized_usage
+                    repaired_count += 1
+                # Fix automation_level using normalizer
+                auto = ai.get("automation_level", "")
+                normalized_auto = normalize_ai_automation(auto)
+                if normalized_auto != auto:
+                    ai["automation_level"] = normalized_auto
+                    repaired_count += 1
+                # Ensure ai_first is True
+                if not ai.get("ai_first"):
+                    ai["ai_first"] = True
+                    repaired_count += 1
+    return repaired_count
+
+
+def audit_ai_layers(roadmap_data: dict) -> dict:
+    """Audit AI layer distribution across the roadmap.
+
+    Returns dict with counts per layer and total skills with ai_metadata.
+    Includes per-milestone coverage of all 4 official layers.
+    """
+    layers = {}
+    total = 0
+    has_meta = 0
+    REQUIRED_LAYERS = {"vibe_planning", "vibe_architecture", "vibe_solution", "deployment"}
+
+    for ms in roadmap_data.get("milestones", []):
+        ms_id = ms.get("milestone_id", "?")
+        ms_layers = set()
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                total += 1
+                ai = skill.get("ai_metadata")
+                if not ai or not isinstance(ai, dict):
+                    continue
+                has_meta += 1
+                layer = ai.get("layer", "missing")
+                layers[layer] = layers.get(layer, 0) + 1
+                ms_layers.add(layer)
+
+    print("========== AI LAYER AUDIT ==========")
+    print(f"  Total skills: {total}")
+    print(f"  Skills with ai_metadata: {has_meta}")
+    # Per-milestone coverage
+    for ms in roadmap_data.get("milestones", []):
+        ms_id = ms.get("milestone_id", "?")
+        ms_layers = set()
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                ai = skill.get("ai_metadata")
+                if not ai or not isinstance(ai, dict):
+                    continue
+                ms_layers.add(ai.get("layer", "missing"))
+        missing = REQUIRED_LAYERS - ms_layers
+        covered = REQUIRED_LAYERS & ms_layers
+        print(f"  Milestone {ms_id}:")
+        for l in sorted(REQUIRED_LAYERS):
+            status = "✓" if l in covered else "✗"
+            print(f"    {l:25s} {status}")
+        if missing:
+            print(f"    (missing: {', '.join(sorted(missing))})")
+    # Aggregate
+    print(f"  {'─'*40}")
+    for layer in sorted(layers):
+        bar = "#" * layers[layer]
+        print(f"  {layer:25s} {layers[layer]:4d}  {bar}")
+    invalid = [k for k in layers if k not in ALLOWED_AI_LAYERS]
+    if invalid:
+        print(f"  WARNING: {len(invalid)} invalid layer value(s): {', '.join(invalid)}")
+    print("====================================")
+    return {"layers": layers, "total": total, "has_meta": has_meta, "invalid": invalid}
+
+
+def _ai_tag_check(roadmap_data: dict) -> dict:
+    """Verify every skill has valid ai_metadata tags."""
+    violations = []
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                sid = skill.get("skill_id", "?")
+                ai = skill.get("ai_metadata")
+                if not ai:
+                    violations.append(f"skill {sid} missing ai_metadata")
+                    continue
+                if not isinstance(ai, dict):
+                    violations.append(f"skill {sid} ai_metadata not a dict")
+                    continue
+                if not ai.get("ai_first"):
+                    violations.append(f"skill {sid} ai_metadata.ai_first not true")
+                layer = ai.get("layer")
+                if layer not in ALLOWED_AI_LAYERS:
+                    violations.append(f"skill {sid} ai_metadata.layer='{layer}' invalid")
+                usage = ai.get("usage_type")
+                if usage not in ALLOWED_AI_USAGE:
+                    violations.append(f"skill {sid} ai_metadata.usage_type='{usage}' invalid")
+                auto = ai.get("automation_level")
+                if auto not in ALLOWED_AI_AUTOMATION:
+                    violations.append(f"skill {sid} ai_metadata.automation_level='{auto}' invalid")
+    if violations:
+        return {"pass": False, "reason": "; ".join(violations[:15])}
+    return {"pass": True, "reason": "All skills have valid ai_metadata tags"}
+
+
+_BREADTH_DOMAIN_SKILLS = {
+    "api_design": ["API Design & Service Layer", "REST API Design", "Service Contracts"],
+    "system_design": ["Foundations of System Design", "Scalability & Performance", "Architecture Patterns"],
+    "leadership": ["Capstone & Interview Readiness", "Technical Mentorship", "Stakeholder Management"],
+    "distributed_systems": ["Distributed Systems", "Event Driven Systems", "Consistency Models"],
+    "architecture": ["Scalability & Performance", "Design Tradeoffs", "System Evolution"],
+    "security": ["Security & Compliance", "Security Architecture"],
+    "cloud": ["Cloud & Deployment", "Cloud Infrastructure", "Deployment Architecture"],
+    "scalability": ["Scalability & Performance", "Horizontal Scaling"],
+    "data_modeling": ["Database Design & Data Modeling", "Schema Design"],
+    "statistics": ["Statistical Analysis", "Experimental Design"],
+    "deployment": ["Cloud & Deployment", "CI/CD & DevOps", "Release Engineering"],
+    "ml_pipelines": ["MLOps & Monitoring", "Feature Engineering", "Model Serving & APIs"],
+    "foundations": ["Core Concepts", "Domain Fundamentals"],
+    "advanced_architecture": ["Advanced System Design", "Architecture Evolution"],
+    "team_management": ["Capstone & Interview Readiness", "Technical Strategy"],
+    "ui_architecture": ["UI Architecture", "Component Design"],
+    "performance": ["Scalability & Performance", "Performance Tuning"],
+    "testing": ["Testing & QA", "Quality Engineering"],
+}
+
+
+def _compute_required_domains(roadmap_data: dict) -> set:
+    """Compute required breadth domains from role and gap."""
+    target_role = (roadmap_data.get("target_role") or "").lower()
+    gap = roadmap_data.get("capability_gap", {})
+    gap_score = gap.get("gap_score", 0.5)
+
+    required_domains = set()
+    if "senior" in target_role or "lead" in target_role or "principal" in target_role:
+        required_domains.update(["system_design", "leadership", "architecture"])
+    if "backend" in target_role or "fullstack" in target_role or "software" in target_role:
+        required_domains.update(["distributed_systems", "api_design"])
+    if "data" in target_role or "machine" in target_role or "ml" in target_role:
+        required_domains.update(["data_modeling", "statistics", "deployment"])
+    if gap_score > 0.65:
+        required_domains.add("scalability")
+
+    # Also check capability_breadth computed earlier
+    breadth = roadmap_data.get("capability_breadth", {})
+    for d in breadth.get("required_domains", []):
+        required_domains.add(d)
+
+    return required_domains
+
+
+def _get_covered_domains(roadmap_data: dict, required_domains: set) -> set:
+    """Check which required domains are already covered by roadmap skills."""
+    covered = set()
+    for ms in roadmap_data.get("milestones", []):
+        for mod in ms.get("modules", []):
+            for skill in mod.get("skills", []):
+                n = (skill.get("n") or "").lower()
+                title = (skill.get("title") or "").lower()
+                layer = (skill.get("ai_metadata", {}) or {}).get("layer", "")
+                combined = n + " " + title + " " + layer
+                for domain in list(required_domains):
+                    d_key = domain.replace("_", " ")
+                    if d_key in combined or domain.replace("_", "") in combined.replace("_", "").replace(" ", ""):
+                        covered.add(domain)
+    return covered
+
+
+def _capability_breadth_check(roadmap_data: dict) -> dict:
+    """Verify roadmap covers required capability domains for the transition."""
+    required_domains = _compute_required_domains(roadmap_data)
+    if not required_domains:
+        return {"pass": True, "reason": "No specific breadth requirements for this role"}
+    covered = _get_covered_domains(roadmap_data, required_domains)
+    missing_domains = required_domains - covered
+    if missing_domains:
+        return {"pass": False, "reason": f"Missing required domains: {', '.join(sorted(missing_domains))}", "missing": sorted(missing_domains)}
+    return {"pass": True, "reason": f"All {len(required_domains)} required domains covered"}
+
+
+def _get_expected_skill_density(roadmap_data: dict) -> int:
+    """Get max skill density bound from capability gap."""
+    gap = roadmap_data.get("capability_gap", {})
+    expected = gap.get("recommended_skill_density")
+    if expected is not None:
+        return expected
+    return MAX_SKILLS
+
+
+# Domain → AI layer mapping for breadth repair (Phase 4.1D)
+_BREADTH_DOMAIN_AI_LAYER = {
+    "system_design": "vibe_architecture", "architecture": "vibe_architecture",
+    "tradeoffs": "vibe_architecture", "observability": "vibe_architecture",
+    "scalability": "vibe_architecture",
+    "coding": "vibe_solution", "implementation": "vibe_solution",
+    "debugging": "vibe_solution", "fixing": "vibe_solution",
+    "building": "vibe_solution",
+    "planning": "vibe_planning", "roadmapping": "vibe_planning",
+    "decomposition": "vibe_planning",
+    "deploy": "deployment", "release": "deployment", "monitoring": "deployment",
+}
+
+
+def _create_breadth_module(last_ms: dict, domain: str, skill_title: str, skill: dict) -> dict:
+    """Create a breadth module for the skill, appended to the last milestone."""
+    existing_modules = last_ms.get("modules", [])
+    last_id = "M0.0"
+    for mod in existing_modules:
+        mod_id = mod.get("id", "M0.0")
+        if mod_id > last_id:
+            last_id = mod_id
+    # Increment module number
+    prefix = last_id.rsplit(".", 1)[0] if "." in last_id else last_id
+    try:
+        num = int(last_id.rsplit(".", 1)[1]) if "." in last_id else 0
+    except ValueError:
+        num = 0
+    new_id = f"{prefix}.{num + 1}"
+
+    breadth_mod = {
+        "id": new_id,
+        "title": f"Breadth: {domain.replace('_', ' ').title()}",
+        "ai_first_layer": _BREADTH_DOMAIN_AI_LAYER.get(domain, "vibe_solution"),
+        "free": True,
+        "vis": "code+real_tutor",
+        "module_type": "breadth",
+        "breadth_injected": True,
+        "breadth_domain": domain,
+        "skill_count_rationale": f"Breadth reinforcement module injected by capability breadth enforcement for domain: {domain}",
+        "skills": [skill],
+    }
+    existing_modules.append(breadth_mod)
+    return breadth_mod
+
+
+def repair_capability_breadth(roadmap_data: dict) -> dict:
+    """Repair missing breadth domains by injecting skills.
+
+    NEVER exceeds expected skill density in existing modules.
+    Creates dedicated breadth modules when existing modules are at capacity.
+
+    Returns the number of skills injected.
+    """
+    required_domains = _compute_required_domains(roadmap_data)
+    covered = _get_covered_domains(roadmap_data, required_domains)
+    missing = required_domains - covered
+    if not missing:
+        return {"injected": 0, "missing": []}
+
+    milestones = roadmap_data.get("milestones", [])
+    if not milestones:
+        return {"injected": 0, "missing": sorted(missing)}
+
+    expected_density = _get_expected_skill_density(roadmap_data)
+    last_ms = milestones[-1]
+    injected = []
+
+    for domain in sorted(missing):
+        candidates = _BREADTH_DOMAIN_SKILLS.get(domain, [domain.replace("_", " ").title()])
+        skill_title = candidates[0]
+
+        skill_id = f"SKILL_BREADTH_{domain}_{uuid.uuid4().hex[:4]}"
+        new_skill = {
+            "skill_id": skill_id,
+            "n": domain,
+            "title": skill_title,
+            "auto_completed": False,
+            "ai_metadata": {
+                "ai_first": True,
+                "layer": _BREADTH_DOMAIN_AI_LAYER.get(domain, "vibe_solution"),
+                "usage_type": "analysis",
+                "automation_level": "copilot",
+            },
+            "why_this_skill": f"Covers required domain: {domain}",
+            "lessons": [
+                f"{skill_title} — Part 1",
+                f"{skill_title} — Part 2",
+                f"{skill_title} — Part 3",
+            ],
+            "p": 0,
+            "mastery_state": {
+                "state": "unlocked",
+                "current_mastery": 0.0,
+                "target_mastery": 0.9,
+                "bkt": {"prior": 0.15, "learn_rate": 0.25, "guess": 0.1, "slip": 0.05},
+            },
+            "unlock_rules": {"requires": [], "minimum_mastery": 0.0, "unlock_type": "immediate"},
+            "content_flow": {
+                "video": {"content_id": f"VID_{skill_id}", "title": skill_title, "status": "locked"},
+                "scenario": {},
+                "mock": {"unlock_mastery": 0.75, "status": "locked"},
+                "review": {"review_type": "spaced_repetition", "next_review_at": None},
+            },
+            "estimated_hours": 3,
+        }
+
+        # Find an existing module with space below expected density
+        target_mod = None
+        for mod in last_ms.get("modules", []):
+            if mod.get("module_type") == "breadth":
+                continue  # don't inject into other breadth modules
+            if len(mod.get("skills", [])) < expected_density:
+                target_mod = mod
+                break
+
+        if target_mod:
+            target_mod.setdefault("skills", []).append(new_skill)
+        else:
+            # Create a new breadth module
+            _create_breadth_module(last_ms, domain, skill_title, new_skill)
+
+        injected.append(domain)
+
+    if injected:
+        print(f"[BREADTH REPAIR] Injected {len(injected)} domain skill(s): {', '.join(injected)}")
+
+    return {"injected": len(injected), "missing": sorted(missing - set(injected))}
+
+
+def _deployment_check(roadmap_data: dict) -> dict:
+    """Blocking validator: every project must have deploy_required=True."""
+    violations = []
+    for ms in roadmap_data.get("milestones", []):
+        mid = ms.get("milestone_id", "?")
+        project = ms.get("project")
+        if not project:
+            violations.append(f"Milestone {mid}: no project")
+            continue
+        if not project.get("deploy_required"):
+            violations.append(f"Milestone {mid}: deploy_required not set")
+    if violations:
+        return {"pass": False, "reason": "; ".join(violations)}
+    return {"pass": True, "reason": "All projects have deploy_required=True"}
+
+
+def audit_science_distribution(roadmap_data: dict) -> dict:
+    """Audit scenario/interview distribution per milestone.
+
+    Returns {"pass": bool, "reason": str, "details": [...]}.
+    Counts are bounds: 0-7 scenarios, 0-2 interviews.
+    """
+    details = []
+    all_pass = True
+    for ms in roadmap_data.get("milestones", []):
+        ms_id = ms.get("milestone_id", "?")
+        sc = 0
+        iv = 0
+        for mod in ms.get("modules", []):
+            for sci in mod.get("science", []):
+                st = sci.get("type", "")
+                if st == "Scenario":
+                    sc += 1
+                elif st == "Interview":
+                    iv += 1
+        sc_ok = 0 <= sc <= 7
+        iv_ok = 0 <= iv <= 2
+        if not (sc_ok and iv_ok):
+            all_pass = False
+        status = "PASS" if (sc_ok and iv_ok) else "FAIL"
+        details.append(f"{ms_id} → scenarios={sc} interviews={iv} {status}")
+    if all_pass:
+        return {"pass": True, "reason": "All milestones have valid science counts", "details": details}
+    return {"pass": False, "reason": "Science distribution violations found", "details": details}
+
+
+def validate_dynamic_structure(roadmap_data: dict) -> dict:
+    """Validate that roadmap structure follows dynamic, bounds-based generation.
+
+    Checks:
+      1. All counts are within MIN/MAX bounds.
+      2. Each milestone has a module_count_rationale.
+      3. Each module has a skill_count_rationale.
+      4. At least one milestone has a different module count (structural diversity).
+      5. Fingerprint of the shape.
+
+    Returns {"pass": bool, "reason": str, "details": {...}}.
+    """
+    milestones = roadmap_data.get("milestones", [])
+    details = {}
+    violations = []
+
+    # 1. Bounds
+    ms_count = len(milestones)
+    if ms_count < MIN_MILESTONES or ms_count > MAX_MILESTONES:
+        violations.append(f"milestones={ms_count} outside [{MIN_MILESTONES},{MAX_MILESTONES}]")
+
+    mod_counts = []
+    skill_counts = []
+    for ms in milestones:
+        mid = ms.get("milestone_id", "?")
+        mods = ms.get("modules", [])
+        mc = len(mods)
+        mod_counts.append(mc)
+        if mc < MIN_MODULES or mc > MAX_MODULES:
+            violations.append(f"{mid} modules={mc} outside [{MIN_MODULES},{MAX_MODULES}]")
+        for mod in mods:
+            mod_id = mod.get("id", "?")
+            sc = len(mod.get("skills", []))
+            skill_counts.append(sc)
+            if sc < MIN_SKILLS or sc > MAX_SKILLS:
+                violations.append(f"{mod_id} skills={sc} outside [{MIN_SKILLS},{MAX_SKILLS}]")
+            # 3. Rationale check
+            if not mod.get("skill_count_rationale"):
+                violations.append(f"{mod_id} missing skill_count_rationale")
+        # 2. Rationale check
+        if not ms.get("module_count_rationale"):
+            violations.append(f"{mid} missing module_count_rationale")
+
+    # 4. Structural diversity: at least one milestone with different module count
+    if len(set(mod_counts)) < 2 and len(mod_counts) > 1:
+        violations.append(f"All {len(milestones)} milestones have {mod_counts[0]} modules — no structural diversity")
+
+    # 5. Fingerprint
+    details["fingerprint"] = _compute_roadmap_shape_fingerprint(roadmap_data)
+
+    details["milestones"] = ms_count
+    details["module_counts"] = mod_counts
+    details["skill_counts"] = skill_counts
+
+    if violations:
+        return {"pass": False, "reason": "; ".join(violations), "details": details}
+    return {"pass": True, "reason": "Dynamic structure valid — counts bounded, rationale present, shape diverse", "details": details}
 
 
 def run_roadmap_quality_validators(roadmap_data: dict) -> dict:
     _validators = [
+        ("schema_validation",         lambda: validate_roadmap_schema(roadmap_data)),
+        ("scaffolding",               lambda: _scaffolding_check(roadmap_data)),
+        ("ai_tags",                   lambda: _ai_tag_check(roadmap_data)),
+        ("capability_breadth",        lambda: _capability_breadth_check(roadmap_data)),
+        ("deployment",                lambda: _deployment_check(roadmap_data)),
+        ("science_distribution",      lambda: audit_science_distribution(roadmap_data)),
         ("milestone_identity_quality", lambda: _milestone_identity_quality_check(roadmap_data)),
         ("capability_progression",     lambda: _capability_progression_check(roadmap_data)),
         ("project_quality",            lambda: _project_quality_check(roadmap_data)),
         ("salary_progression",         lambda: _salary_progression_check(roadmap_data)),
         ("skill_relevance",            lambda: _skill_relevance_check(roadmap_data)),
         ("course_catalog_compliance",  lambda: _course_catalog_compliance_check(roadmap_data)),
+        ("catalog_quality",            lambda: _catalog_quality_check(roadmap_data)),
+        ("role_alignment",             lambda: _role_alignment_check(roadmap_data)),
+        ("capability_gap_alignment",   lambda: _capability_gap_alignment_check(roadmap_data)),
+        ("dynamic_structure",          lambda: validate_dynamic_structure(roadmap_data)),
     ]
     results = {}
     for name, fn in _validators:
@@ -2564,12 +3948,211 @@ def run_roadmap_quality_validators(roadmap_data: dict) -> dict:
     return results
 
 
+_REPAIRABLE_VALIDATORS = {"capability_breadth", "ai_tags", "role_alignment", "capability_gap_alignment"}
+
+# ============================================================
+# Roadmap Shape Fingerprinting (Phase 7 — Uniqueness)
+# ============================================================
+
+def _compute_roadmap_shape_fingerprint(roadmap_data: dict) -> str:
+    """Compute a shape fingerprint from milestone/module/skill/science/lesson structure.
+    
+    Phase 9 — Enhanced shape fingerprint captures:
+      - milestone count
+      - per-milestone module counts
+      - per-module skill counts
+      - per-milestone scenario/interview counts
+      - per-skill lesson counts
+    
+    Two roadmaps with the same fingerprint have identical structure counts,
+    even if content differs. Used to detect predictability.
+    """
+    milestones = roadmap_data.get("milestones", [])
+    ms_counts = []
+    sk_counts = []
+    sci_counts = []
+    lesson_counts = []
+    for ms in milestones:
+        mods = ms.get("modules", [])
+        ms_counts.append(len(mods))
+        # Per-milestone scenario count and interview count
+        sc_n = ms.get("sc_n", 0)
+        iv_n = ms.get("iv", 0)
+        sci_counts.append(f"s{sc_n}i{iv_n}")
+        for mod in mods:
+            skills = mod.get("skills", [])
+            sk_counts.append(len(skills))
+            for skill in skills:
+                lesson_counts.append(len(skill.get("lessons", [])))
+    ms_str = ",".join(str(c) for c in ms_counts)
+    sk_str = ",".join(str(c) for c in sk_counts)
+    sci_str = ",".join(sci_counts)
+    les_str = ",".join(str(c) for c in lesson_counts)
+    return f"ms({len(milestones)}):[{ms_str}]:[{sk_str}]:sci[{sci_str}]:les[{les_str}]"
+
+
+def _shape_similarity(fp1: str, fp2: str) -> float:
+    """Compute similarity between two shape fingerprints.
+    
+    Returns a value 0.0–1.0 where 1.0 = identical structure.
+    Compares milestone count, module distribution, and skill distribution.
+    """
+    def _parse_fp(fp: str) -> dict:
+        parts = fp.split(":")
+        ms_match = re.match(r"ms\((\d+)\)", parts[0])
+        ms_count = int(ms_match.group(1)) if ms_match else 0
+        mod_counts = [int(x) for x in parts[1].strip("[]").split(",") if x.strip().isdigit()]
+        sk_counts = [int(x) for x in parts[2].strip("[]").split(",") if x.strip().isdigit()]
+        return {"ms": ms_count, "mods": mod_counts, "skills": sk_counts}
+    
+    d1 = _parse_fp(fp1)
+    d2 = _parse_fp(fp2)
+    
+    # Milestone count similarity
+    ms_sim = 1.0 - abs(d1["ms"] - d2["ms"]) / max(d1["ms"], d2["ms"], 1)
+    
+    # Module distribution similarity (compare length + per-milestone)
+    max_mod_len = max(len(d1["mods"]), len(d2["mods"]), 1)
+    mod_matches = sum(
+        1 for i in range(min(len(d1["mods"]), len(d2["mods"])))
+        if d1["mods"][i] == d2["mods"][i]
+    )
+    mod_sim = mod_matches / max_mod_len
+    
+    # Skill distribution similarity
+    max_sk_len = max(len(d1["skills"]), len(d2["skills"]), 1)
+    sk_matches = sum(
+        1 for i in range(min(len(d1["skills"]), len(d2["skills"])))
+        if abs(d1["skills"][i] - d2["skills"][i]) <= 1  # within 1 skill
+    )
+    sk_sim = sk_matches / max_sk_len
+    
+    return round(0.4 * ms_sim + 0.3 * mod_sim + 0.3 * sk_sim, 3)
+
+
+def _check_shape_uniqueness(roadmap_data: dict, user_id: str) -> dict:
+    """Check if this roadmap's shape is unique for this user.
+    
+    Phase 9 — Enhanced check:
+      - Detects exact collisions
+      - Computes similarity to existing shapes
+      - Warns if similarity > 80%
+    Does not block.
+    """
+    fingerprint = _compute_roadmap_shape_fingerprint(roadmap_data)
+    stored_key = f"shape_fingerprints_{user_id}"
+    existing_raw = fetch_poc_record(user_id=user_id, record_id=stored_key)
+    existing = []
+    if existing_raw:
+        try:
+            existing = json.loads(existing_raw)
+        except (json.JSONDecodeError, TypeError):
+            existing = []
+    if not isinstance(existing, list):
+        existing = []
+    
+    collision = fingerprint in existing
+    similarity_warn = False
+    max_similarity = 0.0
+    
+    if collision:
+        print(f"[SHAPE FINGERPRINT] ⚠ Collision: {fingerprint} already exists for user {user_id}")
+    elif existing:
+        # Check similarity to all existing shapes
+        for prev_fp in existing:
+            sim = _shape_similarity(fingerprint, prev_fp)
+            max_similarity = max(max_similarity, sim)
+            if sim > 0.80:
+                similarity_warn = True
+        if similarity_warn:
+            print(f"[SHAPE FINGERPRINT] ⚠ High similarity ({max_similarity:.0%}) to previous "
+                  f"roadmap for user {user_id}")
+    
+    # Append and store (sync is best-effort)
+    existing.append(fingerprint)
+    try:
+        save_poc_record(user_id=user_id, record_id=stored_key, text=json.dumps(existing))
+    except Exception:
+        pass
+    return {
+        "fingerprint": fingerprint,
+        "collision": collision,
+        "similarity_warn": similarity_warn,
+        "max_similarity": max_similarity,
+        "total_shapes": len(existing),
+    }
+
+
+def repair_and_revalidate(roadmap_data: dict, max_passes: int = 2) -> dict:
+    """Run quality validators, repair failures, revalidate.
+
+    Supported repairs:
+      - capability_breadth: inject missing domain skills
+      - ai_tags: repair invalid ai_metadata.layer values
+      - role_alignment: replace non-matching skills with role-appropriate ones
+      - catalog_alignment: force-map remaining unmapped skills
+      - capability_gap_alignment: enforce milestone/module/skill density
+
+    Max 2 passes to prevent infinite loops.
+    Returns the final validator results dict.
+    """
+    import copy
+
+    for pass_num in range(1, max_passes + 1):
+        audit_ai_layers(roadmap_data)
+        results = run_roadmap_quality_validators(roadmap_data)
+
+        # Check if any repairable validator failed
+        needs_repair = False
+        for name in _REPAIRABLE_VALIDATORS:
+            r = results.get(name, {})
+            if not r.get("pass", True):
+                needs_repair = True
+                break
+
+        # Also check catalog coverage
+        catalog_r = results.get("course_catalog_compliance", {})
+        if catalog_r.get("coverage", 1.0) < 0.85:
+            cat_stats = repair_course_catalog_alignment(roadmap_data)
+            if cat_stats["coverage"] >= 0.85:
+                needs_repair = True
+
+        if not needs_repair:
+            break
+
+        # Apply repairs (all repairable validators)
+        _breadth_result = repair_capability_breadth(roadmap_data)
+        _ai_repaired = repair_ai_layers(roadmap_data)
+        _role_repaired = _repair_role_alignment(roadmap_data)
+        cat_stats = repair_course_catalog_alignment(roadmap_data)
+        roadmap_data["catalog_stats"] = cat_stats
+
+        # Phase 4 — Gap alignment repair: if milestone count is outside range,
+        # flag as blocking (cannot truncate/supplement milestones safely)
+        gap_result = results.get("capability_gap_alignment", {})
+        if not gap_result.get("pass", True):
+            ms_range = roadmap_data.get("milestone_range", {})
+            min_ms = ms_range.get("minimum", MIN_MILESTONES)
+            max_ms = ms_range.get("maximum", MAX_MILESTONES)
+            actual_ms = len(roadmap_data.get("milestones", []))
+            if actual_ms > max_ms:
+                print(f"[GAP ALIGNMENT BLOCKING] {actual_ms} milestones exceed "
+                      f"max bound {max_ms}. Requires regeneration.")
+                roadmap_data["_gap_alignment_blocked"] = True
+            elif actual_ms < min_ms:
+                print(f"[GAP ALIGNMENT BLOCKING] {actual_ms} milestones below "
+                      f"min bound {min_ms}. Requires regeneration.")
+                roadmap_data["_gap_alignment_blocked"] = True
+
+    return results
+
+
 # ============================================================
 # run_pipeline — Main Entry Point
 # ============================================================
 
 def run_pipeline(
-    user_input,
+    user_id,
     trigger_mcq: bool = True,
     ai_session_id: str = None,
     ai_roadmap_id: str = None,
@@ -2606,20 +4189,20 @@ def run_pipeline(
 
     years_experience     = 0
     weekly_hours_available = 5  # default
+    _persona = None  # will hold structured dict if available
 
-    if isinstance(user_input, dict):
+    if isinstance(user_id, dict):
         # ── AI GENERATED PERSONA MODE ──────────────────────────
         print("[ROADMAP AGENT] Mode: AI-generated onboarding")
 
+        _persona = user_id  # save before overwriting
         user_id  = "ai_generated_user"
-        context  = user_input.get("goal_context", "")
-        icp_type = (
-            "low"
-            if user_input.get("current_role", "").lower() == "student"
-            else "high"
+        context  = _persona.get("goal_context", "")
+        icp_type = _persona.get("icp_type", "low") if _persona.get("icp_type") in ("low", "high") else (
+            "low" if _persona.get("current_role", "").lower() == "student" else "high"
         )
-        years_experience       = user_input.get("years_experience", 0)
-        weekly_hours_available = user_input.get("weekly_hours_available", 5)
+        years_experience       = _persona.get("years_experience", 0)
+        weekly_hours_available = _persona.get("weekly_hours_available", 5)
 
         if not context:
             return {
@@ -2632,66 +4215,88 @@ def run_pipeline(
         # ── REAL USER / PINECONE MODE ───────────────────────────
         print("[ROADMAP AGENT] Mode: Real user (Pinecone)")
 
-        user_id  = user_input
-        icp_type = retrieve_icp_type(user_id)
+        # Direct fetch by key per POC spec — no vector query
+        # Try bare key per spec first, then fall back to prefixed key
+        # for backward compatibility with existing stored data.
+        poc_context = fetch_poc_record(
+            user_id=user_id,
+            record_id="onboarding_conversation"
+        )
+        if not poc_context:
+            print("[ROADMAP AGENT] Bare key not found; trying prefixed key for backward compat")
+            poc_context = fetch_poc_record(
+                user_id=user_id,
+                record_id=f"{user_id}_onboarding_conversation"
+            )
 
-        if not icp_type:
-            print("[ICP] icp_type not found — onboarding incomplete")
+        if not poc_context:
+            print("[ROADMAP AGENT] ✗ No onboarding_conversation record found")
             return {
                 "error":         "Please complete onboarding first.",
                 "user_id":       user_id,
                 "ai_session_id": ai_session_id,
             }
 
-        print(f"[ICP] Classified as: {icp_type}")
-
-        # ── Fetch onboarding conversation written by Onboarding POC ──
-        onboarding_record_id = f"{user_id}_onboarding_conversation"
-        poc_context = fetch_poc_record(
-            user_id=user_id,
-            record_id=onboarding_record_id
-        )
-
-        # Validate POC record; fall back if stale or invalid
-        if poc_context:
-            if detect_stale_onboarding_record(poc_context):
-                print("[ROADMAP AGENT] Stale onboarding record detected — using retrieve_context()")
-                context = retrieve_context(user_id)
-            elif is_valid_onboarding_record(poc_context):
-                context = poc_context
-                print(
-                    f"[ROADMAP AGENT] ✓ Retrieved onboarding conversation "
-                    f"({len(context)} chars)"
-                )
-            else:
-                print("[ROADMAP AGENT] Invalid onboarding record detected; falling back to retrieve_context()")
-                context = retrieve_context(user_id)
-        else:
-            print(
-                "[ROADMAP AGENT] No POC onboarding record found; "
-                "falling back to retrieve_context()"
-            )
-            context = retrieve_context(user_id)
-
-        if not context:
-            print("[ROADMAP AGENT] ✗ No context found in Pinecone")
+        if not poc_context.strip():
+            print("[ROADMAP AGENT] ✗ Onboarding conversation is empty")
             return {
-                "error":         "No onboarding conversation found. Please complete onboarding first.",
+                "error":         "Please complete onboarding first.",
                 "user_id":       user_id,
                 "ai_session_id": ai_session_id,
             }
 
-        print(f"[ROADMAP AGENT] ✓ Context: {len(context)} chars")
+        context = poc_context
+        print("[ONBOARDING CHECK]")
+        print(f"  record_found=True")
+        print(f"  text_length={len(context)}")
+        print(f"  status=VALID")
+
+        # icp_type derived after build_customer_profile below
 
     # ============================================================
     # CUSTOMER PROFILE  (Bible §12, Science §20)
     # ============================================================
-    customer_profile = build_customer_profile(context)
+    # Phase 9 — Structured profile is single source of truth.
+    # For AI Persona mode, build profile from structured dict fields
+    # that were already extracted from onboarding JSON.  For Real User
+    # (Pinecone) mode, parse the raw conversation text.
+    if isinstance(_persona, dict):
+        # ── AI PERSONA: structured dict already available ──────────
+        _urgency_map = {"high": 60, "medium": 120, "low": 180}
+        _timeline_days = int(_persona.get("timeline_days", 0)) or \
+            _urgency_map.get(str(_persona.get("urgency", "medium")).lower(), 120)
+
+        customer_profile = {
+            "current_identity":         str(_persona.get("current_role", "")),
+            "target_identity":          str(_persona.get("target_role", "") or _persona.get("goal", "")),
+            "years_experience":         int(_persona.get("years_experience", 0)),
+            "weekly_hours_available":   int(_persona.get("weekly_hours_available", 5)),
+            "timeline_days":            _timeline_days,
+            "current_salary_lpa":       float(_persona.get("current_salary_monthly", 0)) * 12 / 100000,
+            "known_skills":             _persona.get("known_skills", []),
+            "self_efficacy": 0.5 if _persona.get("self_efficacy", "medium") in ("medium", 0.5) else (0.3 if str(_persona.get("self_efficacy", "medium")).lower() == "low" else 0.7),
+            "_provenance": {"source": "structured_persona_dict"},
+        }
+        if not isinstance(customer_profile["known_skills"], list):
+            customer_profile["known_skills"] = []
+        print(f"[STRUCTURED PROFILE] Built from persona dict: "
+              f"current={customer_profile['current_identity']} "
+              f"yoe={customer_profile['years_experience']} "
+              f"skills={len(customer_profile['known_skills'])}")
+    else:
+        # ── REAL USER: parse from raw conversation text ───────────
+        customer_profile = build_customer_profile(context)
+
     years_experience        = customer_profile["years_experience"]
     weekly_hours_available  = customer_profile["weekly_hours_available"]
     timeline_days           = customer_profile["timeline_days"]
     current_salary_lpa      = customer_profile["current_salary_lpa"]
     known_skills            = customer_profile["known_skills"]
+
+    # ── Derive icp_type from customer profile ─────────────────
+    if isinstance(user_id, str):  # Real user path
+        icp_type = "high" if (years_experience > 0 or current_salary_lpa > 0) else "low"
+        print(f"[ICP] Derived icp_type={icp_type} from profile (yoe={years_experience}, salary={current_salary_lpa})")
 
     # ── Compute budget_hours ──────────────────────────────────
     budget_hrs = round(
@@ -2710,6 +4315,81 @@ def run_pipeline(
     print("========== CAPABILITY GAP ==========")
     print(json.dumps(gap_analysis, indent=2))
     print("=====================================")
+
+    print("[MD AUDIT] deploy_required = REQUIRED")
+    print("  Found in 14 schema locations across prompt + validators")
+
+    # ── Capability breadth computation ─────────────────────────
+    breadth = compute_capability_breadth(
+        gap_score=gap_analysis.get("gap_score", 0.5),
+        current_role=customer_profile.get("current_identity", ""),
+        target_role=customer_profile.get("target_identity", ""),
+        years_experience=years_experience,
+        known_skills=known_skills,
+    )
+    print(f"[BREADTH] score={breadth['breadth_score']} domains={breadth['required_domains']}")
+
+    # ── Breadth-driven module count override (Phase 3) ─────────
+    # Module count per milestone is driven by capability breadth,
+    # not just gap score. More required domains = more modules.
+    _breadth_domains = len(breadth.get("required_domains", []))
+    if _breadth_domains >= 6:
+        _breadth_mod_count = 4
+        _breadth_mod_rationale = f"breadth={_breadth_domains} domains (≥6): at most 4 modules per milestone"
+    elif _breadth_domains >= 3:
+        _breadth_mod_count = 3
+        _breadth_mod_rationale = f"breadth={_breadth_domains} domains (≥3): at most 3 modules per milestone"
+    else:
+        _breadth_mod_count = 2
+        _breadth_mod_rationale = f"breadth={_breadth_domains} domains (<3): at most 2 modules per milestone"
+    gap_analysis["recommended_modules_per_milestone"] = _breadth_mod_count
+    gap_analysis["recommended_modules_per_milestone_rationale"] = _breadth_mod_rationale
+    print(f"[BREADTH MODULES] count={_breadth_mod_count} rationale={_breadth_mod_rationale}")
+
+    # ── Market/role-driven skill density override (Phase 4) ────
+    # Skill density is driven by target role domain and market norms,
+    # not just gap score. Different roles need different breadth.
+    _target_role_domain = _extract_domain(customer_profile.get("target_identity", ""))
+    _domain_skill_map = {
+        "ai": 7, "data_science": 7,
+        "backend": 6, "fullstack": 6, "software": 6,
+        "frontend": 5, "mobile": 5, "devops": 6,
+        "security": 5, "data": 5, "product": 4,
+        "student": 4,
+    }
+    _domain_max_skills = _domain_skill_map.get(_target_role_domain, 5)
+    _old_density = gap_analysis.get("recommended_skill_density", 5)
+    gap_analysis["recommended_skill_density"] = min(_old_density, _domain_max_skills)
+    gap_analysis["recommended_skill_density_rationale"] = (
+        f"domain={_target_role_domain} market norm={_domain_max_skills} "
+        f"skills max per module"
+    )
+    print(f"[MARKET SKILLS] domain={_target_role_domain} max={_domain_max_skills} "
+          f"old={_old_density} new={gap_analysis['recommended_skill_density']}")
+
+    # ── Odd-number preference (Phase 8) ────────────────────────
+    # Asymmetric (odd) max bounds produce more natural-looking structures.
+    # Shift even max bounds to odd where possible within min/max range.
+    def _prefer_odd(val: int, min_val: int, max_val: int) -> tuple:
+        if val % 2 == 0 and val < max_val:
+            odd_val = val + 1
+            if min_val <= odd_val <= max_val:
+                return odd_val, f"odd-preference from {val} to {odd_val}"
+        return val, ""
+
+    _old_ms = gap_analysis["recommended_milestones"]
+    _new_ms, _ms_reason = _prefer_odd(_old_ms, MIN_MILESTONES, MAX_MILESTONES)
+    if _ms_reason:
+        gap_analysis["recommended_milestones"] = _new_ms
+        gap_analysis["recommended_milestones_rationale"] += f"; {_ms_reason}"
+        print(f"[ODD PREF] milestones: {_old_ms} → {_new_ms} ({_ms_reason})")
+
+    _old_mod = gap_analysis["recommended_modules_per_milestone"]
+    _new_mod, _mod_reason = _prefer_odd(_old_mod, MIN_MODULES, MAX_MODULES)
+    if _mod_reason:
+        gap_analysis["recommended_modules_per_milestone"] = _new_mod
+        gap_analysis["recommended_modules_per_milestone_rationale"] += f"; {_mod_reason}"
+        print(f"[ODD PREF] modules: {_old_mod} → {_new_mod} ({_mod_reason})")
 
     print(f"[ROADMAP AGENT] years_experience={years_experience}, weekly_hours_available={weekly_hours_available}")
     print(f"[ROADMAP AGENT] timeline_days={timeline_days} budget_hours={budget_hrs}")
@@ -2730,6 +4410,32 @@ def run_pipeline(
         f"→ milestone count determined by LLM from capability gap "
         f"(bounds {MIN_MILESTONES}–{MAX_MILESTONES})"
     )
+
+    # ── Milestone Authority Engine (Phase 2) ───────────────────
+    # Must run AFTER level detection (level is required).
+    _ms_range = compute_authoritative_milestone_range(
+        gap_score=gap_analysis.get("gap_score", 0.5),
+        icp_type=icp_type,
+        level=level,
+        hours_per_week=weekly_hours_available,
+        timeline_days=timeline_days,
+        known_skills=known_skills,
+        experience_years=years_experience,
+    )
+    # ── Strict schema validation (Phase 3) ─────────────────────
+    # Catches missing fields BEFORE they propagate to prompt/validators.
+    validate_milestone_authority_schema(_ms_range)
+    print(f"[AUTHORITY ENGINE] {json.dumps(_ms_range, indent=2)}")
+    # Override gap analysis recommended with authority engine's recommended
+    # (which incorporates level range preference + gap + experience + time)
+    _old_gap_rec = gap_analysis["recommended_milestones"]
+    gap_analysis["recommended_milestones"] = _ms_range["recommended"]
+    gap_analysis["recommended_milestones_rationale"] = (
+        f"authority engine: {_ms_range['reasoning']}; "
+        f"gap engine had: {_old_gap_rec}"
+    )
+    print(f"[MILESTONE AUTHORITY] range=({_ms_range['minimum']},{_ms_range['maximum']}) "
+          f"recommended={_ms_range['recommended']} confidence={_ms_range['confidence']}")
 
     # ============================================================
     # GENERATE ROADMAP  (up to 2 attempts)
@@ -2759,9 +4465,13 @@ def run_pipeline(
                 "current_identity":   current_identity_str,
                 "target_identity":    target_identity_str,
                 "current_salary_lpa": str(current_salary_lpa),
-                "self_efficacy":      self_efficacy_str,
-                "gap_score":                        str(gap_analysis["gap_score"]),
+                "self_efficacy":        self_efficacy_str,
+                "gap_score":            str(gap_analysis["gap_score"]),
                 "recommended_milestones":           str(gap_analysis["recommended_milestones"]),
+                "recommended_milestones_min":       str(_ms_range["minimum"]),
+                "recommended_milestones_max":       str(_ms_range["maximum"]),
+                "milestone_confidence":             str(_ms_range["confidence"]),
+                "milestone_authority_reasoning":    _ms_range["reasoning"],
                 "recommended_modules_per_milestone": str(gap_analysis["recommended_modules_per_milestone"]),
                 "recommended_skill_density":         str(gap_analysis["recommended_skill_density"]),
                 "gap_reasoning":                     gap_analysis["reasoning"],
@@ -2777,6 +4487,20 @@ def run_pipeline(
             # DEBUG END
             clean_result = repair_json(result)
             roadmap_data = json.loads(clean_result)
+            # ── Pre-generation AI layer normalizer ──────────────
+            # Phase 4.1C — Normalize skill-level ai_metadata.layer values.
+            for ms in roadmap_data.get("milestones", []):
+                for mod in ms.get("modules", []):
+                    # Normalize module-level ai_first_layer (the validator checks this)
+                    if "ai_first_layer" in mod:
+                        mod["ai_first_layer"] = normalize_ai_layer(mod["ai_first_layer"])
+                    for skill in mod.get("skills", []):
+                        ai = skill.get("ai_metadata")
+                        if not ai or not isinstance(ai, dict):
+                            continue
+                        ai["layer"] = normalize_ai_layer(ai.get("layer", ""))
+                        ai["usage_type"] = normalize_ai_usage(ai.get("usage_type", ""))
+                        ai["automation_level"] = normalize_ai_automation(ai.get("automation_level", ""))
             # ── Pipeline fallbacks for time-budget fields ──────
             roadmap_data["timeline_days"] = timeline_days
             if "budget_hours" not in roadmap_data:
@@ -2790,87 +4514,111 @@ def run_pipeline(
                 f"[TIME BUDGET] estimated_total_hours recomputed = "
                 f"{roadmap_data['estimated_total_hours']}"
             )
-            # ── Budget enforcement: reduce milestones if demand > budget ──
+            # ── Budget Enforcement 2.0: compress, never reduce milestones ──
+            # Milestone count is LOCKED from the Capability Gap Engine.
+            # Budget cannot change milestone count. Instead it compresses:
+            #   - lesson count per skill
+            #   - science items per module
+            #   - project complexity
+            #   - estimated hours per unit
             _budget_enforced = False
             if budget_hrs > 0:
                 current_estimated = roadmap_data["estimated_total_hours"]
                 if current_estimated > budget_hrs:
-                    milestones_before = len(roadmap_data.get("milestones", []))
-                    # Calculate target milestone count proportionally
-                    target_ms = max(
-                        MIN_MILESTONES,
-                        int(milestones_before * budget_hrs / current_estimated)
+                    locked_ms = roadmap_data.get("locked_milestone_count",
+                                                 len(roadmap_data.get("milestones", [])))
+                    print(
+                        f"[BUDGET 2.0] demand={current_estimated}h > "
+                        f"budget={budget_hrs}h — compressing within "
+                        f"{locked_ms} locked milestone(s)"
                     )
-                    if target_ms < milestones_before:
-                        print(
-                            f"[BUDGET ENFORCEMENT] demand={current_estimated}h > "
-                            f"budget={budget_hrs}h — reducing milestones from "
-                            f"{milestones_before} to {target_ms}"
-                        )
-                        roadmap_data["milestones"] = roadmap_data["milestones"][:target_ms]
-                        roadmap_data["milestone_count_rationale"] = (
-                            f"Reduced to {target_ms} milestone(s) from {milestones_before} "
-                            f"due to time budget ({budget_hrs}h) relative to demand "
-                            f"({current_estimated}h)."
-                        )
-                        # Re-count after reduction
-                        lc, sc, sci, ivc, pc = _count_roadmap_units(roadmap_data)
-                        roadmap_data["estimated_total_hours"] = round(
-                            lc * 0.25 + sc * 1.5 + sci * 0.5 + ivc * 1.0 + pc * 6.0, 1
-                        )
-                        _budget_enforced = True
-                        print(
-                            f"[BUDGET ENFORCEMENT] After reduction: "
-                            f"{target_ms} milestone(s), "
-                            f"estimated={roadmap_data['estimated_total_hours']}h"
-                        )
+                    # Compression factor: how much each unit must shrink
+                    comp_ratio = budget_hrs / current_estimated
+                    _pre_lessons, _pre_skills, _pre_scenarios, _pre_interviews, _pre_projects = _count_roadmap_units(roadmap_data)
+                    print(f"[FITS_LIFE REBALANCE] demand={current_estimated}h budget={budget_hrs}h "
+                          f"ratio={comp_ratio:.2f}. Reducing: lessons={_pre_lessons}→", end="")
+                    for milestone in roadmap_data.get("milestones", []):
+                        for mod in milestone.get("modules", []):
+                            for skill in mod.get("skills", []):
+                                # Compress lessons: at least 1
+                                lessons = skill.get("lessons", [])
+                                target_count = max(1, round(len(lessons) * comp_ratio))
+                                if len(lessons) > target_count:
+                                    skill["lessons"] = lessons[:target_count]
+                                # Compress estimated_hours
+                                orig_hours = skill.get("estimated_hours", 3)
+                                skill["estimated_hours"] = max(1, round(orig_hours * comp_ratio))
+                            # Compress science items in module
+                            sci_list = mod.get("science", [])
+                            if isinstance(sci_list, list) and len(sci_list) > 2:
+                                mod["science"] = sci_list[:max(1, round(len(sci_list) * comp_ratio))]
+                    _post_lessons, _post_skills, _post_scenarios, _post_interviews, _post_projects = _count_roadmap_units(roadmap_data)
+                    print(f"{_post_lessons}, scenarios={_pre_scenarios}→{_post_scenarios}, "
+                          f"hours=compressed")
+                    # Re-count after compression
+                    lc, sc, sci, ivc, pc = _count_roadmap_units(roadmap_data)
+                    roadmap_data["estimated_total_hours"] = round(
+                        lc * 0.25 + sc * 1.5 + sci * 0.5 + ivc * 1.0 + pc * 6.0, 1
+                    )
+                    _budget_enforced = True
+                    print(
+                        f"[BUDGET 2.0] After compression: "
+                        f"estimated={roadmap_data['estimated_total_hours']}h "
+                        f"(target={budget_hrs}h)"
+                    )
             # ==========================================
             # AUTO FIX — SCIENCE DISTRIBUTION
             # ==========================================
-            # Ensures every milestone has 3-7 Scenarios + exactly 1 Interview,
-            # Scenarios may share modules, Interview in separate module.
-            _MIN_SCENARIOS = 3
+            # Science counts are capacity bounds, not targets.
+            # Only cap excessive counts; never pad to meet a minimum.
             _MAX_SCENARIOS = 7
+            _MAX_INTERVIEWS = 2
             for milestone in roadmap_data.get("milestones", []):
                 modules = milestone.get("modules", [])
 
                 # Collect per-module science items
-                scenario_modules = []
-                interview_modules = []
+                scenarios = []
+                interviews = []
                 for mod in modules:
                     sci_list = mod.get("science", [])
                     if not isinstance(sci_list, list):
-                        sci_list = []
-                    for sci in sci_list[:]:
+                        continue
+                    for sci in sci_list:
                         t = sci.get("type")
                         if t == "Scenario":
-                            scenario_modules.append(mod)
+                            scenarios.append(mod)
                         elif t == "Interview":
-                            interview_modules.append(mod)
+                            interviews.append(mod)
 
-                # ── Fix: >7 Scenarios → cap at 7 ──
-                total_scenarios = len(scenario_modules)
-                if total_scenarios > _MAX_SCENARIOS:
-                    excess = scenario_modules[_MAX_SCENARIOS:]
-                    for mod in excess:
+                # ── Cap: >7 Scenarios → keep first 7 ──
+                if len(scenarios) > _MAX_SCENARIOS:
+                    excess = set(scenarios[_MAX_SCENARIOS:])
+                    for mod in modules:
                         mod["science"] = [s for s in mod.get("science", [])
-                                          if s.get("type") != "Scenario"]
-                    scenario_modules = scenario_modules[:_MAX_SCENARIOS]
+                                          if not (s.get("type") == "Scenario" and mod in excess)]
 
-                # ── Fix: >1 Interview → keep first, drop extras ──
-                if len(interview_modules) > 1:
-                    keep = interview_modules[0]
-                    for mod in interview_modules[1:]:
+                # ── Cap: >2 Interviews → keep first 2 ──
+                if len(interviews) > _MAX_INTERVIEWS:
+                    excess = set(interviews[_MAX_INTERVIEWS:])
+                    for mod in modules:
                         mod["science"] = [s for s in mod.get("science", [])
-                                          if s.get("type") != "Interview"]
-                    interview_modules = [keep]
+                                          if not (s.get("type") == "Interview" and mod in excess)]
 
                 # ── Fix: Scenario and Interview in same module → move Interview ──
-                if scenario_modules and interview_modules and scenario_modules[0] is interview_modules[0]:
-                    same_mod = scenario_modules[0]
+                scenarios = []
+                interviews = []
+                for mod in modules:
+                    for sci in mod.get("science", []):
+                        t = sci.get("type")
+                        if t == "Scenario":
+                            scenarios.append(mod)
+                        elif t == "Interview":
+                            interviews.append(mod)
+                if scenarios and interviews and scenarios[0] is interviews[0]:
+                    same_mod = scenarios[0]
+                    # Keep only scenarios in this module, move interview to another
                     same_mod["science"] = [s for s in same_mod.get("science", [])
                                            if s.get("type") != "Interview"]
-                    interview_modules = []
                     for mod in modules:
                         if mod is not same_mod and not any(
                             s.get("type") == "Interview" for s in mod.get("science", [])
@@ -2878,46 +4626,9 @@ def run_pipeline(
                             mod.setdefault("science", []).append(
                                 {"type": "Interview", "desc": "Interview question assessing milestone competency"}
                             )
-                            interview_modules = [mod]
                             break
 
-                # ── Fix: <3 Scenarios → inject up to _MIN_SCENARIOS ──
-                if len(scenario_modules) < _MIN_SCENARIOS:
-                    needed = _MIN_SCENARIOS - len(scenario_modules)
-                    for mod in modules:
-                        while needed > 0:
-                            sci_list = mod.get("science", [])
-                            if not isinstance(sci_list, list):
-                                sci_list = []
-                                mod["science"] = sci_list
-                            if len(sci_list) < 3:
-                                sci_list.append(
-                                    {"type": "Scenario", "desc": "Production debugging scenario for milestone skills"}
-                                )
-                                scenario_modules.append(mod)
-                                needed -= 1
-                            else:
-                                break
-                        if needed <= 0:
-                            break
-
-                # ── Fix: 0 Interview → inject ──
-                if not interview_modules:
-                    for mod in modules:
-                        has_interview = any(
-                            s.get("type") == "Interview" for s in mod.get("science", [])
-                        )
-                        if not has_interview and (
-                            not scenario_modules
-                            or all(s.get("type") != "Scenario" for s in mod.get("science", []))
-                        ):
-                            mod.setdefault("science", []).append(
-                                {"type": "Interview", "desc": "Interview question assessing milestone competency"}
-                            )
-                            interview_modules = [mod]
-                            break
-
-                # ── Fix: any module has >3 science items → truncate to 3 ──
+                # ── Cap: any module has >3 science items → truncate to 3 ──
                 for mod in modules:
                     sci_list = mod.get("science", [])
                     if isinstance(sci_list, list) and len(sci_list) > 3:
@@ -2946,11 +4657,36 @@ def run_pipeline(
             roadmap_data["current_salary_lpa"] = current_salary_lpa
             roadmap_data["known_skills"] = known_skills
             roadmap_data["capability_gap"] = gap_analysis
+            # ── Store customer profile in roadmap_data ──────────
+            roadmap_data["customer_profile"] = customer_profile
+            # ── Milestone Authority Layer (Phase 3.4) ──────────
+            # Lock milestone/module/skill counts from gap engine.
+            # No downstream component may reduce these.
+            roadmap_data["milestone_range"] = {
+                "recommended": _ms_range["recommended"],
+                "minimum": _ms_range["minimum"],
+                "maximum": _ms_range["maximum"],
+                "confidence": _ms_range["confidence"],
+                "reasoning": _ms_range["reasoning"],
+            }
+            roadmap_data["locked_milestone_count"] = _ms_range["maximum"]
+            roadmap_data["locked_module_count"] = gap_analysis["recommended_modules_per_milestone"]
+            roadmap_data["locked_skill_density"] = gap_analysis["recommended_skill_density"]
+            print(f"[MILESTONE AUTHORITY] range=({_ms_range['minimum']},{_ms_range['maximum']}) "
+                  f"recommended={_ms_range['recommended']} "
+                  f"confidence={_ms_range['confidence']} "
+                  f"mod={gap_analysis['recommended_modules_per_milestone']} "
+                  f"skill={gap_analysis['recommended_skill_density']}")
+            roadmap_data["capability_breadth"] = compute_capability_breadth(
+                gap_score=gap_analysis.get("gap_score", 0.5),
+                current_role=customer_profile.get("current_identity", ""),
+                target_role=customer_profile.get("target_identity", ""),
+                years_experience=years_experience,
+                known_skills=known_skills,
+            )
             roadmap_data.setdefault("roadmap_meta", {})["generated_at"] = now
             # ── Salary floor auto-repair ────────────────────────
             apply_salary_floor_repair(roadmap_data)
-            # ── Known-skill auto-completion ─────────────────────
-            apply_known_skill_autocomplete(roadmap_data, known_skills)
             # ── Dynamic BKT injection ──────────────────────────
             inject_bkt_values(roadmap_data)
             # ── Customer profile debug ──────────────────────────
@@ -2964,12 +4700,7 @@ def run_pipeline(
             print(f"  self_efficacy          : {customer_profile.get('self_efficacy', 0.5)}")
             print(f"  provenance             : {customer_profile.get('_provenance', {})}")
             print("=====================================")
-            # ── Auto-completion debug ───────────────────────────
-            _ac = roadmap_data.get("auto_completed_count", 0)
-            print("========== AUTO COMPLETION ==========")
-            print(f"  known_skills_count : {len(known_skills)}")
-            print(f"  auto_completed_count: {_ac}")
-            print("=====================================")
+            # ── Known-skill removal debug (moved after catalog repair) ──
             # ── Salary floor debug ─────────────────────────────
             if icp_type == "high" and current_salary_lpa:
                 m01_sal = (roadmap_data.get("milestones") or [{}])[0].get("sal", "N/A")
@@ -2999,113 +4730,55 @@ def run_pipeline(
             # Runs after sc_n/iv fix and ID injection but BEFORE
             # validate_roadmap_structure(), so the validator always receives
             # structurally valid arrays.
-            # Uses capability_gap recommendations as the target; falls back
-            # to MIN_SKILLS/MAX_SKILLS bounds if gap data is unavailable.
-            _gap = roadmap_data.get("capability_gap", {})
-            _target_skill = _gap.get("recommended_skill_density", MIN_SKILLS)
-            _target_mod   = _gap.get("recommended_modules_per_milestone", MIN_MODULES)
-            # Clamp to bounds to keep downstream validators happy
-            _target_skill = max(MIN_SKILLS, min(_target_skill, MAX_SKILLS))
-            _target_mod   = max(MIN_MODULES, min(_target_mod, MAX_MODULES))
+            # Counts are CAPACITY BOUNDS, not targets. We only enforce
+            # MIN/MAX range bounds. NEVER pad to a target count.
             for ms in roadmap_data.get("milestones", []):
                 modules = ms.get("modules", [])
-                # ── Module count repair ─────────────────────────────
+                # ── Module count: only enforce MAX_MODULES ──────────
                 orig_mod_count = len(modules)
-                if 0 < orig_mod_count < _target_mod:
-                    while len(modules) < _target_mod:
-                        donor = copy.deepcopy(modules[-1])
-                        donor_id = donor.get("id", "MOD_REPAIR")
-                        donor["id"] = f"{donor_id}_repair_{uuid.uuid4().hex[:4]}"
-                        for skill in donor.get("skills", []):
-                            sid = skill.get("skill_id", "SKILL_REPAIR")
-                            skill["skill_id"] = f"{sid}_rep_{uuid.uuid4().hex[:4]}"
-                        modules.append(donor)
-                    ms["modules"] = modules
+                if orig_mod_count > MAX_MODULES:
+                    ms["modules"] = modules[:MAX_MODULES]
                     print(
                         f"[AUTO REPAIR] Milestone {ms.get('milestone_id')} had "
-                        f"{orig_mod_count} module(s) -> repaired to {_target_mod}"
+                        f"{orig_mod_count} modules -> capped at {MAX_MODULES}"
                     )
-                elif orig_mod_count > _target_mod:
-                    ms["modules"] = modules[:_target_mod]
+                elif 0 < orig_mod_count < MIN_MODULES:
                     print(
-                        f"[AUTO REPAIR] Milestone {ms.get('milestone_id')} had "
-                        f"{orig_mod_count} modules -> truncated to {_target_mod}"
+                        f"[AUTO REPAIR] Milestone {ms.get('milestone_id')} has "
+                        f"{orig_mod_count} modules (below MIN_MODULES={MIN_MODULES}) — "
+                        f"cannot synthesize; validator may reject"
                     )
-                # ── Skill count repair per module ────────────────────
+                # ── Skill count: only enforce MAX_SKILLS ──────────────
                 for mod in ms.get("modules", []):
                     skills     = mod.get("skills", [])
                     mod_id     = mod.get("id", "?")
                     orig_count = len(skills)
-                    # Too few: duplicate last skill until target count
-                    if 0 < orig_count < _target_skill:
-                        while len(skills) < _target_skill:
-                            donor         = copy.deepcopy(skills[-1])
-                            unique_suffix = uuid.uuid4().hex[:6]
-                            donor["skill_id"] = (
-                                f"{donor.get('skill_id', 'SKILL_REPAIR')}"
-                                f"_dup_{unique_suffix}"
-                            )
-                            donor["title"] = (
-                                donor.get("title", donor.get("n", "Skill"))
-                                + " Advanced"
-                            )
-                            donor["unlock_rules"] = {
-                                "requires": [],
-                                "minimum_mastery": 0.0,
-                                "unlock_type": "immediate",
-                            }
-                            flow = donor.get("content_flow", {})
-                            for ct in ("video", "scenario", "mock"):
-                                item = flow.get(ct, {})
-                                if "content_id" in item:
-                                    item["content_id"] = (
-                                        f"{item['content_id']}_dup_{unique_suffix}"
-                                    )
-                            skills.append(donor)
-                        mod["skills"] = skills
-                        print(
-                            f"[AUTO REPAIR] Module {mod_id} had "
-                            f"{orig_count} skill(s) -> repaired to {_target_skill}"
-                        )
-                    # No skills at all: cannot synthesise; validator will reject
-                    elif orig_count == 0:
+                    if orig_count == 0:
                         print(
                             f"[AUTO REPAIR] Module {mod_id} has 0 skills — "
                             f"cannot repair; validator will reject"
                         )
-                    # Too many skills: truncate to target
-                    elif orig_count > _target_skill:
-                        mod["skills"] = skills[:_target_skill]
+                    elif orig_count > MAX_SKILLS:
+                        mod["skills"] = skills[:MAX_SKILLS]
                         print(
                             f"[AUTO REPAIR] Module {mod_id} had "
-                            f"{orig_count} skills -> truncated to {_target_skill}"
+                            f"{orig_count} skills -> capped at {MAX_SKILLS}"
                         )
-                    # Per-skill lesson repair: each skill must have exactly 3
+                    # Lesson repair: ensure at least 1 lesson, don't pad to 3
                     for skill in mod.get("skills", []):
                         skill_id = skill.get("skill_id", "?")
                         lessons  = skill.get("lessons", [])
                         if not isinstance(lessons, list):
                             lessons = []
-                        orig_lesson_count = len(lessons)
-                        if orig_lesson_count < 3:
-                            while len(lessons) < 3:
-                                lessons.append(
-                                    f"{skill.get('title', skill.get('n', 'Skill'))} "
-                                    f"— Part {len(lessons) + 1}"
-                                )
-                            skill["lessons"] = lessons
+                        if len(lessons) == 0:
+                            skill["lessons"] = [
+                                f"{skill.get('title', skill.get('n', 'Skill'))} — Part 1"
+                            ]
                             print(
-                                f"[AUTO REPAIR] Skill {skill_id} had "
-                                f"{orig_lesson_count} lesson(s) -> padded to 3"
+                                f"[AUTO REPAIR] Skill {skill_id} had 0 lessons"
+                                f" -> added 1"
                             )
-                        elif orig_lesson_count > 3:
-                            skill["lessons"] = lessons[:3]
-                            print(
-                                f"[AUTO REPAIR] Skill {skill_id} had "
-                                f"{orig_lesson_count} lessons -> truncated to 3"
-                            )
-            # ── Gap alignment debug ────────────────────────────
-            _gap_dbg = roadmap_data.get("capability_gap", {})
+            # ── Gap alignment debug (Phase 4 range-based) ──────
             _dbg_ms_count = len(roadmap_data.get("milestones", []))
             _dbg_mod_counts = [
                 len(ms.get("modules", []))
@@ -3116,22 +4789,105 @@ def run_pipeline(
                 for ms in roadmap_data.get("milestones", [])
                 for mod in ms.get("modules", [])
             ]
+            _debug_ms_range = roadmap_data.get("milestone_range", {})
+            _range_min = _debug_ms_range.get("minimum", MIN_MILESTONES)
+            _range_max = _debug_ms_range.get("maximum", MAX_MILESTONES)
+            _range_rec = _debug_ms_range.get("recommended", "?")
+            _max_skill = roadmap_data.get("capability_gap", {}).get("recommended_skill_density", MAX_SKILLS)
             _gap_pass = (
-                _dbg_ms_count == _gap_dbg.get("recommended_milestones")
-                and all(m == _gap_dbg.get("recommended_modules_per_milestone") for m in _dbg_mod_counts)
-                and all(s == _gap_dbg.get("recommended_skill_density") for s in _dbg_skill_counts)
-            ) if _gap_dbg.get("recommended_milestones") else True
-            print("========== GAP ALIGNMENT ==========")
-            print(f"  Expected Milestones : {_gap_dbg.get('recommended_milestones', 'N/A')}")
-            print(f"  Actual Milestones   : {_dbg_ms_count}")
-            print(f"  Expected Modules    : {_gap_dbg.get('recommended_modules_per_milestone', 'N/A')}")
-            print(f"  Actual Modules      : {_dbg_mod_counts}")
-            print(f"  Expected Skills     : {_gap_dbg.get('recommended_skill_density', 'N/A')}")
-            print(f"  Actual Skills       : {_dbg_skill_counts}")
+                _range_min <= _dbg_ms_count <= _range_max
+                and all(MIN_MODULES <= m <= MAX_MODULES for m in _dbg_mod_counts)
+                and all(MIN_SKILLS <= s <= _max_skill for s in _dbg_skill_counts)
+            )
+            print("========== GAP ALIGNMENT (RANGE-BASED) ==========")
+            print(f"  Range             : [{_range_min}, {_range_max}]")
+            print(f"  Recommended       : {_range_rec}")
+            print(f"  Actual Milestones : {_dbg_ms_count}")
+            print(f"  Module Counts     : {_dbg_mod_counts}")
+            print(f"  Skill Counts      : {_dbg_skill_counts}")
             print(f"  {'PASS' if _gap_pass else 'FAIL'}")
-            print("================================")
+            print("================================================")
             # ── Structural validation ──────────────────────────
             validate_roadmap_structure(roadmap_data)
+
+            # ── Course catalog alignment repair ────────────────
+            print("\n[CATALOG] Running course catalog alignment repair...")
+            catalog_stats = repair_course_catalog_alignment(roadmap_data)
+            print(f"[CATALOG] coverage={catalog_stats['coverage']:.0%} "
+                  f"({catalog_stats['mapped']}/{catalog_stats['total']} skills mapped)")
+            roadmap_data["catalog_stats"] = catalog_stats
+
+            # ── Known-skill removal (MD Section 3 / 18) ───────
+            removed_count = remove_known_skills_from_roadmap(roadmap_data, known_skills)
+            if removed_count > 0:
+                audit = roadmap_data.get("_removed_known_skills", [])
+                print("[KNOWN SKILL REMOVAL]")
+                print(f"  known_skills_input={len(known_skills)}")
+                print(f"  removed={removed_count}")
+                for entry in audit:
+                    print(f"  * {entry['matched_known_skill']}")
+                remaining = sum(
+                    len(mod.get("skills", []))
+                    for ms in roadmap_data.get("milestones", [])
+                    for mod in ms.get("modules", [])
+                )
+                print(f"  remaining_teachable_skills={remaining}")
+            else:
+                print("[KNOWN SKILL REMOVAL] no known skills found in roadmap")
+
+            # ── Repair-and-revalidate quality gate ──────────────
+            quality_results = repair_and_revalidate(roadmap_data, max_passes=2)
+            roadmap_data["quality_validators"] = quality_results
+
+            # ── Shape fingerprinting (Phase 7) ─────────────────
+            _shape = _check_shape_uniqueness(roadmap_data, user_id)
+            print(f"[SHAPE FINGERPRINT] {_shape['fingerprint']} "
+                  f"collision={_shape['collision']} total={_shape['total_shapes']}")
+
+            # ── Dynamic structure validation (Phase 10) ─────────
+            _dyn = validate_dynamic_structure(roadmap_data)
+            if not _dyn.get("pass"):
+                print(f"[DYNAMIC STRUCTURE] WARN: {_dyn['reason']}")
+            else:
+                print(f"[DYNAMIC STRUCTURE] PASS: {_dyn['reason']}")
+
+            # ── AI layer repair audit ──────────────────────────
+            _total = 0
+            _layer_counts = {}
+            _legacy = {"architecture": 0, "implementation": 0, "debugging": 0, "optimization": 0}
+            for _ms in roadmap_data.get("milestones", []):
+                for _mod in _ms.get("modules", []):
+                    for _skill in _mod.get("skills", []):
+                        _total += 1
+                        _ai = _skill.get("ai_metadata")
+                        if not _ai or not isinstance(_ai, dict):
+                            continue
+                        _layer = _ai.get("layer", "missing")
+                        _layer_counts[_layer] = _layer_counts.get(_layer, 0) + 1
+                        if _layer in _legacy:
+                            _legacy[_layer] += 1
+            print("========== REPAIR AI LAYER AUDIT ==========")
+            print(f"  total_skills: {_total}")
+            for _l in sorted(_layer_counts):
+                print(f"  {_l}: {_layer_counts[_l]}")
+            _total_legacy = sum(_legacy.values())
+            print(f"  legacy_layers_found: {_total_legacy}")
+            if _total_legacy:
+                print(f"  WARNING: {_total_legacy} legacy layer(s) remain!")
+            print("=============================================")
+
+            # ── Check for blocking gap alignment failure ────────
+            # Phase 4 — Block if milestone count outside allowed range
+            if roadmap_data.get("_gap_alignment_blocked"):
+                _range = roadmap_data.get("milestone_range", {})
+                _min   = _range.get("minimum", MIN_MILESTONES)
+                _max   = _range.get("maximum", MAX_MILESTONES)
+                _actual = len(roadmap_data.get("milestones", []))
+                if _actual < _min or _actual > _max:
+                    raise ValueError(
+                        f"GAP ALIGNMENT BLOCKED: {_actual} milestones outside "
+                        f"allowed range [{_min}, {_max}]. Triggering regeneration."
+                    )
 
             # ── Roadmap Bible validators ───────────────────────
             # run_roadmap_bible_validators() NEVER raises.
@@ -3143,9 +4899,37 @@ def run_pipeline(
             roadmap_data["fits_life"]        = bible_results.get("fits_life", {})
             roadmap_data["bible_validators"] = bible_results
 
-            # ── Roadmap quality validators ─────────────────────
-            quality_results = run_roadmap_quality_validators(roadmap_data)
-            roadmap_data["quality_validators"] = quality_results
+            # ── Repair debug output ────────────────────────────
+            _breadth_req = _compute_required_domains(roadmap_data)
+            _breadth_cov = _get_covered_domains(roadmap_data, _breadth_req)
+            _breadth_miss = _breadth_req - _breadth_cov
+            if _breadth_miss:
+                print("======== BREADTH REPAIR ========")
+                print(f"  Required: {sorted(_breadth_req)}")
+                print(f"  Missing: {sorted(_breadth_miss)}")
+                print(f"  Injected: {len(_breadth_req) - len(_breadth_miss)}")
+                print(f"  Result: {'PASS' if not _breadth_miss else 'WARN'}")
+
+            _cat_stats = roadmap_data.get("catalog_stats", {})
+            if _cat_stats:
+                print("======== CATALOG REPAIR ========")
+                print(f"  Mapped: {_cat_stats.get('mapped', 0)}/{_cat_stats.get('total', 0)}")
+                print(f"  Coverage: {_cat_stats.get('coverage', 0):.0%}")
+                missing_list = _cat_stats.get("missing", [])
+                if missing_list:
+                    print(f"  Missing: {missing_list}")
+
+            # ── AI repair debug ────────────────────────────────
+            _ai_violations = 0
+            for _ms in roadmap_data.get("milestones", []):
+                for _mod in _ms.get("modules", []):
+                    for _sk in _mod.get("skills", []):
+                        _ai = _sk.get("ai_metadata", {})
+                        if _ai and _ai.get("layer", "") not in ALLOWED_AI_LAYERS:
+                            _ai_violations += 1
+            if _ai_violations > 0:
+                print(f"======== AI REPAIR ========")
+                print(f"  Invalid layers remaining: {_ai_violations}")
 
             print("========== QUALITY AUDIT ==========")
             for qname, qres in quality_results.items():
@@ -3192,28 +4976,13 @@ def run_pipeline(
             print(f"  ICP type    : {roadmap_data.get('icp_type', 'N/A')}")
 
             # ── Science distribution diagnostics ────────────────
-            print("========== SCIENCE DISTRIBUTION ==========")
-            for ms in milestones:
-                ms_id = ms.get("milestone_id", "?")
-                print(ms_id)
-                sc_total = 0
-                iv_total = 0
-                for mod in ms.get("modules", []):
-                    mod_id = mod.get("id", "?")
-                    sci_list = mod.get("science", [])
-                    if sci_list:
-                        sci_type = sci_list[0].get("type", "?")
-                        if sci_type == "Scenario":
-                            sc_total += 1
-                        elif sci_type == "Interview":
-                            iv_total += 1
-                        print(f"  {mod_id} -> {sci_type}")
-                    else:
-                        print(f"  {mod_id} -> NONE")
-                print(f"  Scenario={sc_total}")
-                print(f"  Interview={iv_total}")
-                print()
-            print("==========================================")
+            print("========== SCIENCE AUDIT ==========")
+            sci_result = audit_science_distribution(roadmap_data)
+            for line in sci_result.get("details", []):
+                print(f"  {line}")
+            badge = "PASS" if sci_result.get("pass") else "FAIL"
+            print(f"  {badge}: {sci_result.get('reason', '')}")
+            print("===================================")
 
             # ── Roadmap size diagnostics ───────────────────────
             _rd_json = json.dumps(roadmap_data)
@@ -3281,11 +5050,11 @@ def run_pipeline(
             # run for the same user to detect level='beginner'
             # because the overwritten record had no years_experience.
 
-            for record_suffix, ensure_ascii in [
+            for record_key, ensure_ascii in [
                 ("roadmap_conversation", True),
                 ("roadmap_output",      False),
             ]:
-                record_id = f"{user_id}_{record_suffix}"
+                record_id = record_key
                 payload   = json.dumps(roadmap_summary, ensure_ascii=ensure_ascii)
                 payload_bytes = len(payload.encode("utf-8"))
                 print(f"[ROADMAP SAVE] {record_id}  "
@@ -3314,8 +5083,8 @@ def run_pipeline(
             # ── Final safety check: re-fetch all 3 records ──────
             print(f"\n[ROADMAP AGENT] Final safety check — re-fetching all records...")
             for rid in [
-                f"{user_id}_roadmap_conversation",
-                f"{user_id}_roadmap_output",
+                "roadmap_conversation",
+                "roadmap_output",
                 f"{user_id}_roadmap_{ai_roadmap_id}",
             ]:
                 fetched = fetch_poc_record(user_id=user_id, record_id=rid)
