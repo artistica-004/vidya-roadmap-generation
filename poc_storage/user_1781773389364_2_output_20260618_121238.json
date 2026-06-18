@@ -1,0 +1,2735 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_1781773389364",
+  "roadmap_id": "ai_roadmap_20260618120745_957145fa",
+  "generated_at": "2026-06-18T12:12:38.388503",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260618120745_957145fa",
+    "user_id": "user_1781773389364",
+    "icp_type": "high",
+    "level": "beginner",
+    "target_role": "Product Company Backend Engineer",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 106.5,
+    "budget_hours": 64.0,
+    "milestone_count_rationale": "Reduced to 2 milestone(s) from 5 due to time budget (64.0h) relative to demand (266.0h).",
+    "vision_profile": {
+      "current_state": "A web developer at Accenture with 2 years of experience in Python and Django, possessing basic DSA knowledge.",
+      "main_blocker": "Perceived gap in advanced DSA, System Design, and self-efficacy concerns about college background for product companies like Barclays.",
+      "top_motivation": "To transition into a product company like Barclays and advance career opportunities."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-18T12:12:16.306098",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Foundational Problem Solver",
+        "sal": "₹6-9 LPA",
+        "o": "Demonstrate strong foundational data structures and algorithms skills, capable of solving common coding challenges efficiently in Python.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "4 modules are needed to cover core data structures, algorithmic thinking, Python efficiency for competitive programming, and common problem-solving patterns.",
+        "identity_statement": "You are building the bedrock of your problem-solving identity, transforming from a basic coder to an efficient algorithmic thinker.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Task Scheduler with Priority Queue",
+          "vibe_layers": [
+            "planning",
+            "architecture",
+            "solution"
+          ],
+          "description": "Design and implement a task scheduler that manages tasks based on priority and execution time using appropriate data structures. The system should handle adding, removing, and executing tasks.",
+          "deliverable": "A runnable Python application with unit tests and a brief design document explaining data structure choices.",
+          "seeded_errors": [
+            "Priority queue implementation has a bug where higher priority tasks are not always processed first, requiring debugging of heap operations."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Core Data Structures",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "5 skills cover the essential data structures required for competitive programming and backend development.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "arrays_linked_lists",
+                "title": "Arrays & Linked Lists",
+                "auto_completed": false,
+                "why_this_skill": "Fundamental building blocks for more complex data structures and crucial for optimizing memory access and dynamic data handling.",
+                "lessons": [
+                  "Dynamic Arrays vs. Static Arrays",
+                  "Singly & Doubly Linked Lists",
+                  "Circular Linked List Implementations"
+                ],
+                "p": 65,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Understanding Arrays and Linked Lists",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Optimizing Memory for Large Datasets",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "stacks_queues",
+                "title": "Stacks & Queues",
+                "auto_completed": false,
+                "why_this_skill": "Essential for managing function calls, breadth-first/depth-first traversals, and handling sequential data processing.",
+                "lessons": [
+                  "LIFO & FIFO Principles",
+                  "Array-based vs. Linked List Stacks/Queues",
+                  "Deque Implementations"
+                ],
+                "p": 68,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Implementing Stacks and Queues",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Processing Asynchronous Tasks with Queues",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "trees_binary_search_trees",
+                "title": "Trees & BSTs",
+                "auto_completed": false,
+                "why_this_skill": "Crucial for hierarchical data organization, efficient searching, and understanding more complex data structures like heaps and tries.",
+                "lessons": [
+                  "Tree Traversals (Inorder, Preorder, Postorder)",
+                  "Binary Search Tree Operations",
+                  "Balancing Trees (AVL, Red-Black - Concepts)"
+                ],
+                "p": 65,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Introduction to Trees and BSTs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Designing a File System Hierarchy",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S4",
+                "n": "hash_tables",
+                "title": "Hash Tables & Maps",
+                "auto_completed": false,
+                "why_this_skill": "Provides near O(1) average time complexity for lookups, insertions, and deletions, making them indispensable for caching, databases, and symbol tables.",
+                "lessons": [
+                  "Hashing Functions & Collision Resolution",
+                  "Separate Chaining vs. Open Addressing",
+                  "Python Dictionary Implementation Details"
+                ],
+                "p": 70,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S4",
+                    "title": "Exploring Hash Tables and Their Uses",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S4",
+                    "title": "Optimizing User Session Management",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S5",
+                "n": "heaps_priority_queues",
+                "title": "Heaps & Priority Queues",
+                "auto_completed": false,
+                "why_this_skill": "Essential for efficiently retrieving the minimum or maximum element, critical in scheduling algorithms, graph algorithms, and event simulations.",
+                "lessons": [
+                  "Min-Heap vs. Max-Heap Operations",
+                  "Heapify Algorithm",
+                  "Implementing Priority Queues with Heaps"
+                ],
+                "p": 60,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S5",
+                    "title": "Mastering Heaps and Priority Queues",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S5",
+                    "title": "Building a Real-time Event Processor",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical backend service is experiencing slow response times due to inefficient data retrieval. Identify the bottleneck and propose a data structure optimization."
+              },
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Algorithmic Thinking & Complexity",
+            "ai_first_layer": "planning",
+            "free": true,
+            "vis": "code+ppt",
+            "skill_count_rationale": "5 skills are essential to understand algorithm efficiency, analyze performance, and choose optimal solutions.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "time_space_complexity",
+                "title": "Time & Space Complexity",
+                "auto_completed": false,
+                "why_this_skill": "Fundamental for evaluating algorithm efficiency and making informed decisions about data structure and algorithm choices in production systems.",
+                "lessons": [
+                  "Big O Notation Explained",
+                  "Analyzing Recursive Algorithms",
+                  "Amortized Analysis"
+                ],
+                "p": 70,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.24,
+                    "learn_rate": 0.142,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Understanding Big O Notation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Evaluating Performance of a New Feature",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "sorting_algorithms",
+                "title": "Sorting Algorithms",
+                "auto_completed": false,
+                "why_this_skill": "Crucial for organizing data efficiently, a prerequisite for many search and optimization problems, and a common interview topic.",
+                "lessons": [
+                  "Comparison Sorts (Merge, Quick, Heap)",
+                  "Non-Comparison Sorts (Radix, Counting)",
+                  "Stability and In-place Sorting"
+                ],
+                "p": 60,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.236,
+                    "learn_rate": 0.139,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Deep Dive into Sorting Algorithms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Optimizing a Large Dataset Sort",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "searching_algorithms",
+                "title": "Searching Algorithms",
+                "auto_completed": false,
+                "why_this_skill": "Fundamental for efficient data retrieval, from basic linear search to advanced binary search and its variations.",
+                "lessons": [
+                  "Linear Search & Binary Search",
+                  "Ternary Search & Jump Search",
+                  "Interpolation Search"
+                ],
+                "p": 70,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.233,
+                    "learn_rate": 0.136,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Efficient Searching Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Implementing a Fast Lookup Service",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S4",
+                "n": "recursion_backtracking",
+                "title": "Recursion & Backtracking",
+                "auto_completed": false,
+                "why_this_skill": "Powerful techniques for solving problems that can be broken down into smaller, self-similar subproblems, common in tree/graph traversals and combinatorial problems.",
+                "lessons": [
+                  "Base Cases & Recursive Steps",
+                  "Tail Recursion Optimization",
+                  "Backtracking for Combinatorial Problems"
+                ],
+                "p": 60,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S4",
+                    "title": "Mastering Recursive Problem Solving",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S4",
+                    "title": "Debugging a Recursive Pathfinding Algorithm",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S5",
+                "n": "graph_traversals",
+                "title": "Graph Traversals (BFS/DFS)",
+                "auto_completed": false,
+                "why_this_skill": "Essential for navigating interconnected data, critical for social networks, routing algorithms, and dependency resolution.",
+                "lessons": [
+                  "Breadth-First Search (BFS)",
+                  "Depth-First Search (DFS)",
+                  "Applications of BFS/DFS"
+                ],
+                "p": 60,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S5",
+                    "title": "Exploring Graphs with BFS and DFS",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S5",
+                    "title": "Finding Shortest Path in a Network",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M1.3",
+            "title": "Python for Efficient Coding",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "5 skills focus on leveraging Python's features for writing clean, efficient, and idiomatic code, crucial for competitive programming and production systems.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M3_S1",
+                "n": "python_data_structures",
+                "title": "Python Built-in Data Structures",
+                "auto_completed": false,
+                "why_this_skill": "Mastering Python's native lists, tuples, sets, and dictionaries is key to writing concise and performant code without reinventing the wheel.",
+                "lessons": [
+                  "List Comprehensions & Generators",
+                  "Set Operations for Uniqueness",
+                  "Dictionary Performance & Use Cases"
+                ],
+                "p": 80,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.24,
+                    "learn_rate": 0.142,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S1",
+                    "title": "Advanced Python Data Structures",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S1",
+                    "title": "Refactoring Inefficient Data Processing",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S2",
+                "n": "functional_programming_python",
+                "title": "Functional Programming in Python",
+                "auto_completed": false,
+                "why_this_skill": "Embracing functional paradigms like map, filter, and reduce leads to more readable, testable, and often more efficient code.",
+                "lessons": [
+                  "Map, Filter, Reduce",
+                  "Lambda Functions & Closures",
+                  "Decorators for Code Reusability"
+                ],
+                "p": 75,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S2",
+                    "title": "Functional Programming Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S2",
+                    "title": "Applying Functional Patterns to Data Transformation",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S3",
+                "n": "context_managers_iterators",
+                "title": "Context Managers & Iterators",
+                "auto_completed": false,
+                "why_this_skill": "Essential for resource management (e.g., file handling, database connections) and efficient, memory-friendly data processing in Python.",
+                "lessons": [
+                  "The 'with' Statement & Context Protocol",
+                  "Iterators vs. Iterables",
+                  "Building Custom Iterators and Generators"
+                ],
+                "p": 70,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S3",
+                    "title": "Resource Management with Context Managers",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S3",
+                    "title": "Ensuring Database Connection Closure",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S4",
+                "n": "profiling_debugging_python",
+                "title": "Profiling & Debugging Python",
+                "auto_completed": false,
+                "why_this_skill": "Indispensable for identifying performance bottlenecks and fixing errors in complex applications, ensuring robust and efficient code.",
+                "lessons": [
+                  "Using cProfile and timeit",
+                  "pdb Debugger Mastery",
+                  "Logging Best Practices"
+                ],
+                "p": 70,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S4",
+                    "title": "Python Performance Profiling",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S4",
+                    "title": "Diagnosing a Latency Spike in a Web API",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S5",
+                "n": "object_oriented_python",
+                "title": "Object-Oriented Python",
+                "auto_completed": false,
+                "why_this_skill": "Deep understanding of OOP principles in Python is crucial for building maintainable, scalable, and modular backend systems.",
+                "lessons": [
+                  "Classes, Objects, & Inheritance",
+                  "Polymorphism & Abstraction",
+                  "Magic Methods (__dunder__ methods)"
+                ],
+                "p": 75,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S5",
+                    "title": "Advanced OOP in Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S5",
+                    "title": "Designing a Flexible Plugin Architecture",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A Python script for data processing is consuming excessive memory. Identify the cause and refactor it using generators and iterators for efficiency."
+              }
+            ]
+          },
+          {
+            "id": "M1.4",
+            "title": "Problem Solving Patterns",
+            "ai_first_layer": "planning",
+            "free": true,
+            "vis": "notebook+code",
+            "skill_count_rationale": "5 skills cover common algorithmic patterns, enabling the learner to approach a wide range of problems systematically.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M4_S1",
+                "n": "two_pointers_sliding_window",
+                "title": "Two Pointers & Sliding Window",
+                "auto_completed": false,
+                "why_this_skill": "Efficient techniques for solving array and string problems, reducing time complexity from quadratic to linear in many cases.",
+                "lessons": [
+                  "Two Pointers for Sorted Arrays",
+                  "Fixed-Size Sliding Window",
+                  "Dynamic-Size Sliding Window"
+                ],
+                "p": 60,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S1",
+                    "title": "Optimizing Array Problems with Two Pointers",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S1",
+                    "title": "Finding Subarrays with Specific Sum",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S2",
+                "n": "dynamic_programming_basics",
+                "title": "Dynamic Programming Basics",
+                "auto_completed": false,
+                "why_this_skill": "Essential for solving optimization problems by breaking them into overlapping subproblems and storing results to avoid recomputation.",
+                "lessons": [
+                  "Memoization vs. Tabulation",
+                  "Identifying Optimal Substructure",
+                  "Common DP Patterns (Knapsack, Longest Common Subsequence)"
+                ],
+                "p": 55,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S2",
+                    "title": "Introduction to Dynamic Programming",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S2",
+                    "title": "Optimizing a Financial Portfolio Calculation",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S3",
+                "n": "greedy_algorithms",
+                "title": "Greedy Algorithms",
+                "auto_completed": false,
+                "why_this_skill": "A powerful paradigm for optimization problems where a locally optimal choice leads to a globally optimal solution, often simpler than DP.",
+                "lessons": [
+                  "Proof of Correctness for Greedy Algorithms",
+                  "Activity Selection Problem",
+                  "Fractional Knapsack"
+                ],
+                "p": 60,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.233,
+                    "learn_rate": 0.136,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S3",
+                    "title": "Understanding Greedy Approaches",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S3",
+                    "title": "Scheduling Tasks for Maximum Throughput",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S4",
+                "n": "bit_manipulation",
+                "title": "Bit Manipulation",
+                "auto_completed": false,
+                "why_this_skill": "Essential for low-level optimizations, working with flags, and solving certain problems efficiently in competitive programming and embedded systems.",
+                "lessons": [
+                  "Bitwise Operators (AND, OR, XOR, NOT)",
+                  "Bit Shifting for Multiplication/Division",
+                  "Common Bit Manipulation Tricks"
+                ],
+                "p": 50,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S4",
+                    "title": "Introduction to Bitwise Operations",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S4",
+                    "title": "Implementing Efficient Feature Flags",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S5",
+                "n": "math_for_algorithms",
+                "title": "Math for Algorithms",
+                "auto_completed": false,
+                "why_this_skill": "A solid grasp of mathematical concepts like number theory, combinatorics, and probability is crucial for solving many advanced algorithmic problems.",
+                "lessons": [
+                  "Modular Arithmetic & Primality Tests",
+                  "Combinatorics & Permutations",
+                  "Probability & Expected Value"
+                ],
+                "p": 50,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.225,
+                    "learn_rate": 0.13,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S5",
+                    "title": "Algorithmic Math Fundamentals",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S5",
+                    "title": "Calculating Probabilities in a Game Simulation",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Given a list of intervals, merge all overlapping intervals. Explain your approach, analyze its complexity, and write efficient Python code."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Backend Service Developer",
+        "sal": "₹9-12 LPA",
+        "o": "Design, implement, and test robust RESTful APIs and backend services using Python and Django, integrating with databases and handling common web development challenges.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "4 modules are necessary to cover advanced DSA application, API design, database interaction, and testing practices for building production-ready backend services.",
+        "identity_statement": "You are evolving into a capable backend developer, translating algorithmic knowledge into functional, well-structured web services.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "E-commerce Product Catalog API",
+          "vibe_layers": [
+            "planning",
+            "architecture",
+            "solution"
+          ],
+          "description": "Build a RESTful API for an e-commerce product catalog using Django. It should support CRUD operations for products, categories, and user reviews, including authentication and basic search functionality.",
+          "deliverable": "A deployed Django REST Framework application with database integration, API documentation (e.g., Swagger/OpenAPI), and a suite of integration tests.",
+          "seeded_errors": [
+            "The search endpoint returns incorrect results for partial matches due to a flawed database query or indexing strategy, requiring optimization."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Advanced Data Structures & Algorithms",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "5 skills focus on applying advanced DSA concepts to solve complex problems, crucial for interview success and efficient system design.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "advanced_graphs",
+                "title": "Advanced Graph Algorithms",
+                "auto_completed": false,
+                "why_this_skill": "Essential for solving complex network problems, pathfinding, and flow optimization, frequently encountered in system design and interviews.",
+                "lessons": [
+                  "Dijkstra's & Bellman-Ford Algorithms",
+                  "Floyd-Warshall & Prim's/Kruskal's",
+                  "Topological Sort & Strongly Connected Components"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.03,
+                    "learn_rate": 0.334,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Mastering Advanced Graph Algorithms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Optimizing Network Routing Paths",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "tries_suffix_structures",
+                "title": "Tries & Suffix Structures",
+                "auto_completed": false,
+                "why_this_skill": "Highly efficient for string matching, autocomplete, and dictionary implementations, crucial for text-heavy applications.",
+                "lessons": [
+                  "Trie (Prefix Tree) Implementation",
+                  "Suffix Arrays & Suffix Trees (Concepts)",
+                  "Applications in Text Search"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Efficient String Search with Tries",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Building an Autocomplete Search Feature",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "union_find",
+                "title": "Disjoint Set Union (Union-Find)",
+                "auto_completed": false,
+                "why_this_skill": "Highly efficient for tracking connected components in graphs and solving problems related to grouping elements, often used in Kruskal's algorithm.",
+                "lessons": [
+                  "Union-Find Data Structure Implementation",
+                  "Path Compression & Union by Rank/Size",
+                  "Applications in Connectivity Problems"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Understanding Disjoint Set Union",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Detecting Cycles in a Graph",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S4",
+                "n": "segment_fenwick_trees",
+                "title": "Segment & Fenwick Trees",
+                "auto_completed": false,
+                "why_this_skill": "Advanced data structures for efficient range queries and updates on arrays, critical for competitive programming and certain data analytics tasks.",
+                "lessons": [
+                  "Segment Tree Construction & Queries",
+                  "Fenwick Tree (BIT) Operations",
+                  "Lazy Propagation in Segment Trees"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S4",
+                    "title": "Range Queries with Segment Trees",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S4",
+                    "title": "Optimizing Real-time Stock Price Updates",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S5",
+                "n": "advanced_dynamic_programming",
+                "title": "Advanced Dynamic Programming",
+                "auto_completed": false,
+                "why_this_skill": "Mastering advanced DP techniques is crucial for solving complex optimization problems and excelling in technical interviews at top product companies.",
+                "lessons": [
+                  "DP on Trees & Graphs",
+                  "Digit DP & Profile DP",
+                  "Bitmask DP & State Compression"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.025,
+                    "learn_rate": 0.33,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S5",
+                    "title": "Complex DP Problem Solving",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S5",
+                    "title": "Solving the Traveling Salesperson Problem (Approximation)",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new feature requires finding the shortest path between two users in a social network. Implement an efficient algorithm considering millions of users."
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "API Design & Development",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "5 skills cover the full lifecycle of designing and implementing robust, secure, and scalable APIs, essential for any backend role.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "restful_api_principles",
+                "title": "RESTful API Principles",
+                "auto_completed": false,
+                "why_this_skill": "Understanding REST principles is fundamental for designing interoperable, scalable, and stateless web services, a core skill for backend engineers.",
+                "lessons": [
+                  "HTTP Methods & Status Codes",
+                  "Resource Naming & URI Design",
+                  "Statelessness & Idempotency"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.342,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Designing RESTful APIs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Refactoring a Non-RESTful API",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "django_rest_framework",
+                "title": "Django REST Framework (DRF)",
+                "auto_completed": false,
+                "why_this_skill": "Leveraging DRF allows rapid development of powerful and flexible web APIs, building upon existing Django knowledge for product companies.",
+                "lessons": [
+                  "Serializers & ModelSerializers",
+                  "ViewSets & Routers",
+                  "Authentication & Permissions in DRF"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Building APIs with DRF",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Implementing Custom DRF Permissions",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "api_security_best_practices",
+                "title": "API Security Best Practices",
+                "auto_completed": false,
+                "why_this_skill": "Securing APIs is paramount for protecting sensitive data and maintaining user trust, a non-negotiable skill for product companies.",
+                "lessons": [
+                  "Authentication (JWT, OAuth2)",
+                  "Authorization & Role-Based Access Control",
+                  "Input Validation & Rate Limiting"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.032,
+                    "learn_rate": 0.336,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Securing Your APIs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Mitigating API Abuse and Data Breaches",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S4",
+                "n": "api_documentation_versioning",
+                "title": "API Documentation & Versioning",
+                "auto_completed": false,
+                "why_this_skill": "Well-documented and versioned APIs are crucial for maintainability, developer experience, and backward compatibility in evolving systems.",
+                "lessons": [
+                  "OpenAPI/Swagger Specification",
+                  "API Versioning Strategies (URI, Header)",
+                  "Generating API Docs from Code"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S4",
+                    "title": "Documenting and Versioning APIs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S4",
+                    "title": "Managing API Changes for Multiple Clients",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S5",
+                "n": "graphql_basics",
+                "title": "GraphQL Basics",
+                "auto_completed": false,
+                "why_this_skill": "Understanding GraphQL provides an alternative API paradigm, offering flexibility and efficiency for clients, a valuable skill for modern product companies.",
+                "lessons": [
+                  "GraphQL Queries & Mutations",
+                  "Schemas & Type System",
+                  "Apollo Client/Server (Concepts)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S5",
+                    "title": "Introduction to GraphQL",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S5",
+                    "title": "Migrating a REST Endpoint to GraphQL",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new API endpoint is required to fetch complex user data. Design the API endpoint, considering data relationships, filtering, and pagination."
+              }
+            ]
+          },
+          {
+            "id": "M2.3",
+            "title": "Database Fundamentals & ORM",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "notebook+ppt",
+            "skill_count_rationale": "5 skills cover essential database concepts, SQL proficiency, and effective use of ORMs for robust data persistence in backend applications.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M3_S1",
+                "n": "relational_database_design",
+                "title": "Relational Database Design",
+                "auto_completed": false,
+                "why_this_skill": "Designing efficient and normalized relational databases is foundational for data integrity and performance in most backend systems.",
+                "lessons": [
+                  "Entity-Relationship Modeling",
+                  "Normalization Forms (1NF, 2NF, 3NF)",
+                  "Indexing Strategies"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.342,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S1",
+                    "title": "Designing Robust Relational Databases",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S1",
+                    "title": "Optimizing a Slow Database Query",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S2",
+                "n": "sql_advanced_queries",
+                "title": "SQL & Advanced Queries",
+                "auto_completed": false,
+                "why_this_skill": "Proficiency in SQL is non-negotiable for interacting with relational databases, writing complex queries, and debugging data issues.",
+                "lessons": [
+                  "JOIN Types & Subqueries",
+                  "Window Functions & CTEs",
+                  "Database Transactions & ACID Properties"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.036,
+                    "learn_rate": 0.339,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S2",
+                    "title": "Advanced SQL Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S2",
+                    "title": "Aggregating Complex Business Metrics",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S3",
+                "n": "django_orm_advanced",
+                "title": "Django ORM Advanced",
+                "auto_completed": false,
+                "why_this_skill": "Mastering Django ORM allows efficient and Pythonic interaction with databases, crucial for building scalable Django applications.",
+                "lessons": [
+                  "QuerySet Optimization Techniques",
+                  "Custom Managers & QuerySets",
+                  "Raw SQL & Database Functions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.032,
+                    "learn_rate": 0.336,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S3",
+                    "title": "Optimizing Django ORM Queries",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S3",
+                    "title": "Reducing N+1 Query Problems",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S4",
+                "n": "nosql_databases_basics",
+                "title": "NoSQL Databases Basics",
+                "auto_completed": false,
+                "why_this_skill": "Understanding NoSQL databases (e.g., MongoDB, Redis) is crucial for handling unstructured data, high-volume reads/writes, and specific use cases where relational models fall short.",
+                "lessons": [
+                  "Document, Key-Value, Column-Family Models",
+                  "When to Use NoSQL vs. SQL",
+                  "Basic Operations in MongoDB/Redis"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S4",
+                    "title": "Introduction to NoSQL Databases",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S4",
+                    "title": "Choosing the Right Database for User Profiles",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S5",
+                "n": "database_migrations",
+                "title": "Database Migrations",
+                "auto_completed": false,
+                "why_this_skill": "Managing database schema changes reliably is critical for continuous deployment and maintaining data integrity in production environments.",
+                "lessons": [
+                  "Django Migrations Workflow",
+                  "Schema vs. Data Migrations",
+                  "Handling Backward Incompatible Changes"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S5",
+                    "title": "Managing Database Schema Changes",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S5",
+                    "title": "Rolling Back a Failed Migration in Production",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new feature requires storing user preferences, which are highly dynamic and unstructured. Recommend a suitable database solution and justify your choice."
+              }
+            ]
+          },
+          {
+            "id": "M2.4",
+            "title": "Testing & Debugging Backend Services",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "code+ppt",
+            "skill_count_rationale": "5 skills focus on comprehensive testing strategies and effective debugging techniques, crucial for delivering reliable and high-quality backend services.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M4_S1",
+                "n": "unit_testing_python",
+                "title": "Unit Testing in Python",
+                "auto_completed": false,
+                "why_this_skill": "Writing effective unit tests ensures individual components of your backend work correctly, catching bugs early and facilitating refactoring.",
+                "lessons": [
+                  "unittest & pytest Frameworks",
+                  "Test Doubles (Mocks, Stubs, Fakes)",
+                  "Test-Driven Development (TDD) Principles"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S1",
+                    "title": "Mastering Python Unit Testing",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S1",
+                    "title": "Writing Unit Tests for a Complex Business Logic Function",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S2",
+                "n": "integration_testing_django",
+                "title": "Integration Testing in Django",
+                "auto_completed": false,
+                "why_this_skill": "Integration tests verify the interaction between different components (e.g., API, database), ensuring the entire service works as expected.",
+                "lessons": [
+                  "Django Test Client & TestCase",
+                  "Database Fixtures & Factories",
+                  "Testing External Service Integrations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.036,
+                    "learn_rate": 0.339,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S2",
+                    "title": "Django Integration Testing",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S2",
+                    "title": "Verifying API Endpoint Functionality",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S3",
+                "n": "end_to_end_testing_concepts",
+                "title": "End-to-End Testing Concepts",
+                "auto_completed": false,
+                "why_this_skill": "Understanding E2E testing ensures the entire application flow, from frontend to backend, works correctly, simulating real user interactions.",
+                "lessons": [
+                  "Selenium/Playwright (Concepts)",
+                  "Test Environment Setup",
+                  "E2E Test Automation Strategies"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S3",
+                    "title": "Introduction to End-to-End Testing",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S3",
+                    "title": "Automating a User Registration Flow",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S4",
+                "n": "logging_monitoring_basics",
+                "title": "Logging & Monitoring Basics",
+                "auto_completed": false,
+                "why_this_skill": "Effective logging and monitoring are crucial for understanding application behavior, diagnosing issues in production, and ensuring system health.",
+                "lessons": [
+                  "Python Logging Module",
+                  "Structured Logging",
+                  "Basic Metrics & Alerting Concepts"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.029,
+                    "learn_rate": 0.333,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S4",
+                    "title": "Effective Logging for Backend Services",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S4",
+                    "title": "Setting Up Production Logging for a Django App",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S5",
+                "n": "postmortem_analysis",
+                "title": "Postmortem Analysis",
+                "auto_completed": false,
+                "why_this_skill": "Learning from incidents through postmortem analysis is crucial for continuous improvement, preventing recurrence, and building more resilient systems.",
+                "lessons": [
+                  "Incident Response Process",
+                  "Root Cause Analysis Techniques",
+                  "Writing Effective Postmortems"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S5",
+                    "title": "Learning from Production Incidents",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S5",
+                    "title": "Conducting a Postmortem for a Recent Outage",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe your approach to testing a new API endpoint that interacts with multiple external services and a database. What types of tests would you write?"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "years_experience": 0,
+    "current_salary_lpa": 0,
+    "known_skills": [],
+    "capability_gap": {
+      "gap_score": 0.9,
+      "recommended_milestones": 6,
+      "recommended_modules_per_milestone": 4,
+      "recommended_skill_density": 5,
+      "reasoning": "Gap analysis: identity_distance=0.60; experience_mod=0.30; time_mod=1.00; skill_mod=0.00; gap_score=0.90. Recommend 6 milestone(s), 4 module(s) per milestone, 5 skill(s) per module."
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": false,
+      "duration_weeks": 27,
+      "budget_hours": 108.0,
+      "demand_hours": 107.0,
+      "weekly_hours_needed": 8.4,
+      "breakdown": {
+        "video_hours": 30.0,
+        "mastery_hours": 60.0,
+        "scenario_hours": 3.0,
+        "interview_hours": 2.0,
+        "project_hours": 12.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": false,
+        "duration_weeks": 27,
+        "budget_hours": 108.0,
+        "demand_hours": 107.0,
+        "weekly_hours_needed": 8.4,
+        "breakdown": {
+          "video_hours": 30.0,
+          "mastery_hours": 60.0,
+          "scenario_hours": 3.0,
+          "interview_hours": 2.0,
+          "project_hours": 12.0
+        }
+      },
+      "time_budget": {
+        "pass": false,
+        "reason": "estimated 106.5h exceeds 125% of budget 64.0h",
+        "budget_hours": 64.0,
+        "estimated_total_hours": 106.5
+      },
+      "starts_where_they_are": {
+        "pass": true,
+        "reason": "ZPD starting-point check passed"
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "beginner or no known_skills — skip check"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 10% (4/40). Full JD validation pending.",
+        "filler_ratio": 0.1,
+        "total_skills": 40
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 40 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "AI-first check passed — all milestones have multi-layer AI work"
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "current_salary_lpa not available"
+      },
+      "capability_gap_alignment": {
+        "pass": false,
+        "reason": "expected 6 milestone(s), got 2"
+      }
+    },
+    "quality_validators": {
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": true,
+        "reason": "All projects have meaningful implementation + deployment"
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "All skills appear relevant for the target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "39 catalog violation(s)",
+        "violations": [
+          "Skill 'arrays_linked_lists' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'stacks_queues' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'trees_binary_search_trees' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'hash_tables' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'heaps_priority_queues' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'time_space_complexity' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'sorting_algorithms' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'searching_algorithms' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'recursion_backtracking' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'graph_traversals' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'python_data_structures' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'functional_programming_python' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'context_managers_iterators' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'profiling_debugging_python' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'object_oriented_python' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'two_pointers_sliding_window' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'dynamic_programming_basics' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'greedy_algorithms' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'bit_manipulation' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'math_for_algorithms' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'advanced_graphs' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'tries_suffix_structures' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'union_find' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'segment_fenwick_trees' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'advanced_dynamic_programming' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'restful_api_principles' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'django_rest_framework' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'api_security_best_practices' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'api_documentation_versioning' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'graphql_basics' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'relational_database_design' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'sql_advanced_queries' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'nosql_databases_basics' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'database_migrations' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'unit_testing_python' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'integration_testing_django' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'end_to_end_testing_concepts' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'logging_monitoring_basics' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'postmortem_analysis' in M2.4 not found in any AVAILABLE_COURSES"
+        ]
+      }
+    }
+  }
+}

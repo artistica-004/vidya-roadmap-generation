@@ -1,0 +1,2736 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_1781773874949",
+  "roadmap_id": "ai_roadmap_20260618121847_fd028221",
+  "generated_at": "2026-06-18T12:23:46.832583",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260618121847_fd028221",
+    "user_id": "user_1781773874949",
+    "icp_type": "high",
+    "level": "beginner",
+    "target_role": "AI Systems Engineer",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 106.5,
+    "budget_hours": 64.0,
+    "milestone_count_rationale": "Reduced to 2 milestone(s) from 5 due to time budget (64.0h) relative to demand (265.2h).",
+    "vision_profile": {
+      "current_state": "Kiara is a first-year student with no technical skills, seeking an internship and good placement in an IT company.",
+      "main_blocker": "The biggest obstacle is the lack of foundational coding skills and practical project experience required for entry-level technical roles.",
+      "top_motivation": "Kiara is highly motivated to secure a good placement and internship in a product-based IT company, aiming to build strong skills early in her academic career."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-18T12:23:28.018809",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "AI Foundations Engineer",
+        "sal": "Unpaid/stipend",
+        "o": "The learner can write clean, functional Python code, understand basic algorithms, manage code with Git, and perform fundamental data wrangling tasks, making them ready for entry-level technical internships.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "4 modules are essential to cover the foundational pillars of programming (Python, Algorithms), professional development (Tools), and initial data handling, which are critical for an AI Foundations Engineer.",
+        "identity_statement": "You are becoming a foundational coder, equipped with the essential skills to start building and collaborating on technical projects.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Automated Data Cleaner for a Startup",
+          "vibe_layers": [
+            "planning",
+            "solution"
+          ],
+          "description": "Build a Python script to clean and preprocess a messy CSV dataset from a simulated startup. This involves handling missing values, standardizing formats, and removing duplicates. The final script should be robust and well-documented.",
+          "deliverable": "A Python script, a cleaned CSV file, and a GitHub repository with version control history.",
+          "seeded_errors": [
+            "The provided raw data file contains inconsistent date formats that cause a parsing error, which the learner must identify and fix using Python's datetime module."
+          ],
+          "deploy_required": false
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Python for AI",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "5 skills are needed to establish a strong base in Python programming, covering syntax, data structures, functions, and error handling, which are fundamental for any AI work.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "python_fundamentals",
+                "title": "Python Fundamentals",
+                "auto_completed": false,
+                "why_this_skill": "Python is the lingua franca of AI and data science; mastering its fundamentals is the first step to building any AI application.",
+                "lessons": [
+                  "Variables and Data Types",
+                  "Operators and Expressions",
+                  "Control Flow (If/Else, Loops)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Introduction to Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Debugging a Simple Python Script",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "data_structures_python",
+                "title": "Python Data Structures",
+                "auto_completed": false,
+                "why_this_skill": "Efficiently storing and manipulating data is crucial; understanding lists, tuples, dictionaries, and sets is foundational for data processing.",
+                "lessons": [
+                  "Lists and Tuples",
+                  "Dictionaries and Sets",
+                  "List Comprehensions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.236,
+                    "learn_rate": 0.139,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Working with Python Collections",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Optimizing Data Storage",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "functions_modules",
+                "title": "Functions and Modules",
+                "auto_completed": false,
+                "why_this_skill": "Modularizing code with functions and organizing it into modules improves readability, reusability, and maintainability, essential for larger projects.",
+                "lessons": [
+                  "Defining and Calling Functions",
+                  "Scope and Arguments",
+                  "Importing and Creating Modules"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Building Reusable Code",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Refactoring a Monolithic Script",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S4",
+                "n": "error_handling",
+                "title": "Error Handling and Debugging",
+                "auto_completed": false,
+                "why_this_skill": "Robust code anticipates and handles errors gracefully; effective debugging skills are vital for identifying and fixing issues quickly.",
+                "lessons": [
+                  "Try-Except Blocks",
+                  "Raising Exceptions",
+                  "Using a Debugger"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S4",
+                    "title": "Making Code Robust",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S4",
+                    "title": "Handling File Not Found Errors",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S5",
+                "n": "basic_io",
+                "title": "Basic File I/O",
+                "auto_completed": false,
+                "why_this_skill": "Interacting with files (reading/writing) is fundamental for data processing, configuration, and logging in almost any application.",
+                "lessons": [
+                  "Reading Text Files",
+                  "Writing Text Files",
+                  "Working with CSV Files"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S5",
+                    "title": "Reading and Writing Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S5",
+                    "title": "Parsing Log Files",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A Python script for data processing is crashing due to a 'TypeError'. Identify the root cause and implement appropriate error handling."
+              },
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Algorithms & Data Handling",
+            "ai_first_layer": "planning",
+            "free": true,
+            "vis": "code+ppt",
+            "skill_count_rationale": "5 skills are chosen to introduce core algorithmic thinking, essential data structures, and basic operations, forming the backbone for efficient problem-solving.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "algorithmic_thinking",
+                "title": "Algorithmic Thinking",
+                "auto_completed": false,
+                "why_this_skill": "Developing a systematic approach to problem-solving is critical for designing efficient and effective code, especially in AI.",
+                "lessons": [
+                  "Problem Decomposition",
+                  "Step-by-Step Solutions",
+                  "Flowcharts and Pseudocode"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S5"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Introduction to Algorithms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Designing a Solution for a New Problem",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "time_space_complexity",
+                "title": "Time and Space Complexity",
+                "auto_completed": false,
+                "why_this_skill": "Understanding how algorithms scale is crucial for building performant systems, especially with large datasets common in AI.",
+                "lessons": [
+                  "Big O Notation",
+                  "Analyzing Time Complexity",
+                  "Analyzing Space Complexity"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.236,
+                    "learn_rate": 0.139,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Measuring Algorithm Efficiency",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Optimizing a Slow Function",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "array_operations",
+                "title": "Array Operations",
+                "auto_completed": false,
+                "why_this_skill": "Arrays are fundamental data structures; efficient manipulation of arrays is key for numerical computing and data processing.",
+                "lessons": [
+                  "Array Creation and Indexing",
+                  "Slicing and Reshaping Arrays",
+                  "Common Array Methods"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Working with Arrays in Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Processing Image Pixels",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S4",
+                "n": "string_manipulation",
+                "title": "String Manipulation",
+                "auto_completed": false,
+                "why_this_skill": "Text data is ubiquitous in AI; mastering string operations is essential for preprocessing and working with natural language.",
+                "lessons": [
+                  "String Methods",
+                  "Regular Expressions Basics",
+                  "String Formatting"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S4",
+                    "title": "Handling Text Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S4",
+                    "title": "Extracting Information from Logs",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S5",
+                "n": "basic_searching_sorting",
+                "title": "Basic Searching and Sorting",
+                "auto_completed": false,
+                "why_this_skill": "Efficiently finding and ordering data is a core computer science skill, directly applicable to optimizing data retrieval and processing in AI.",
+                "lessons": [
+                  "Linear Search",
+                  "Binary Search",
+                  "Bubble Sort and Selection Sort"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S5",
+                    "title": "Fundamental Data Operations",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S5",
+                    "title": "Optimizing a Customer List Search",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M1.3",
+            "title": "Collaboration & Tools",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "5 skills are included to equip the learner with essential development tools and collaborative practices, crucial for working in any professional software environment.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M3_S1",
+                "n": "git_basics",
+                "title": "Git Basics",
+                "auto_completed": false,
+                "why_this_skill": "Git is the industry standard for version control; mastering it is non-negotiable for collaborative software development and managing code changes.",
+                "lessons": [
+                  "Initializing a Git Repository",
+                  "Committing Changes",
+                  "Branching and Merging"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S5"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S1",
+                    "title": "Introduction to Version Control",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S1",
+                    "title": "Recovering from a Bad Commit",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S2",
+                "n": "github_workflow",
+                "title": "GitHub Workflow",
+                "auto_completed": false,
+                "why_this_skill": "GitHub is the most popular platform for hosting Git repositories and collaborating on projects, essential for open-source contributions and team work.",
+                "lessons": [
+                  "Pushing to Remote Repositories",
+                  "Pull Requests and Code Reviews",
+                  "Forking and Cloning"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S2",
+                    "title": "Collaborating with GitHub",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S2",
+                    "title": "Resolving Merge Conflicts",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S3",
+                "n": "command_line_interface",
+                "title": "Command Line Interface",
+                "auto_completed": false,
+                "why_this_skill": "Proficiency with the command line is fundamental for developers, enabling efficient navigation, scripting, and interaction with tools and systems.",
+                "lessons": [
+                  "Basic Commands (ls, cd, mkdir)",
+                  "File Permissions",
+                  "Piping and Redirection"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S3",
+                    "title": "Navigating Your System",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S3",
+                    "title": "Automating File Operations",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S4",
+                "n": "virtual_environments",
+                "title": "Virtual Environments",
+                "auto_completed": false,
+                "why_this_skill": "Managing project dependencies with virtual environments prevents conflicts and ensures reproducibility, a best practice in Python development.",
+                "lessons": [
+                  "Creating Virtual Environments",
+                  "Activating and Deactivating",
+                  "Managing Dependencies (pip)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S4",
+                    "title": "Isolating Project Dependencies",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S4",
+                    "title": "Resolving Package Conflicts",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S5",
+                "n": "code_review_principles",
+                "title": "Code Review Principles",
+                "auto_completed": false,
+                "why_this_skill": "Participating in code reviews improves code quality, fosters knowledge sharing, and is a standard practice in professional development teams.",
+                "lessons": [
+                  "Importance of Code Reviews",
+                  "Giving Constructive Feedback",
+                  "Receiving Feedback Gracefully"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.225,
+                    "learn_rate": 0.13,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S5",
+                    "title": "Improving Code Quality Together",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S5",
+                    "title": "Providing Feedback on a Pull Request",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A team member has submitted a pull request with code that doesn't follow style guidelines. Provide constructive feedback during a code review."
+              }
+            ]
+          },
+          {
+            "id": "M1.4",
+            "title": "Data Wrangling Basics",
+            "ai_first_layer": "solution",
+            "free": true,
+            "vis": "notebook+code",
+            "skill_count_rationale": "5 skills are chosen to introduce the learner to the fundamental operations of data manipulation using Pandas, a critical library for data-centric AI tasks.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M4_S1",
+                "n": "pandas_dataframes",
+                "title": "Pandas DataFrames",
+                "auto_completed": false,
+                "why_this_skill": "Pandas DataFrames are the primary data structure for tabular data in Python, essential for almost any data science or AI project.",
+                "lessons": [
+                  "Introduction to DataFrames",
+                  "Creating and Inspecting DataFrames",
+                  "Selecting Data (loc/iloc)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S5"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S1",
+                    "title": "Working with Tabular Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S1",
+                    "title": "Extracting Specific Columns",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S2",
+                "n": "data_loading_saving",
+                "title": "Data Loading and Saving",
+                "auto_completed": false,
+                "why_this_skill": "The ability to load data from various sources and save processed data is fundamental for any data pipeline.",
+                "lessons": [
+                  "Reading CSV and Excel Files",
+                  "Saving DataFrames to CSV",
+                  "Basic JSON Handling"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S2",
+                    "title": "Importing and Exporting Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S2",
+                    "title": "Loading Data from a Remote URL",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S3",
+                "n": "data_cleaning",
+                "title": "Data Cleaning",
+                "auto_completed": false,
+                "why_this_skill": "Real-world data is often messy; cleaning it is the most time-consuming yet crucial step to ensure reliable analysis and model performance.",
+                "lessons": [
+                  "Handling Missing Values",
+                  "Removing Duplicates",
+                  "Correcting Data Types"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S3",
+                    "title": "Preparing Data for Analysis",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S3",
+                    "title": "Cleaning a Customer Dataset",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S4",
+                "n": "data_transformation",
+                "title": "Data Transformation",
+                "auto_completed": false,
+                "why_this_skill": "Transforming data into suitable formats is often necessary for analysis or model input, involving operations like filtering, sorting, and creating new features.",
+                "lessons": [
+                  "Filtering and Sorting Data",
+                  "Applying Functions to DataFrames",
+                  "Creating New Columns"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S4",
+                    "title": "Manipulating Data for Insights",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S4",
+                    "title": "Aggregating Sales Data",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S5",
+                "n": "basic_aggregation",
+                "title": "Basic Data Aggregation",
+                "auto_completed": false,
+                "why_this_skill": "Summarizing data through aggregation (e.g., mean, sum, count) is fundamental for understanding patterns and preparing data for higher-level analysis.",
+                "lessons": [
+                  "Group By Operations",
+                  "Pivot Tables Basics",
+                  "Descriptive Statistics with Pandas"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S5",
+                    "title": "Summarizing Your Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S5",
+                    "title": "Calculating Monthly Averages",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Explain a problem you solved using code and how you approached it, including any challenges you faced and how you overcame them."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Junior AI Developer",
+        "sal": "₹3-5 LPA",
+        "o": "The learner can implement basic machine learning models, preprocess data effectively, and apply object-oriented programming principles to build more structured and maintainable AI applications.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "4 modules are chosen to transition from foundational programming to core AI development, covering advanced Python, essential math, supervised learning, and data preparation techniques.",
+        "identity_statement": "You are evolving into a Junior AI Developer, capable of building and understanding the core components of machine learning solutions.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Predictive Model for Customer Churn",
+          "vibe_layers": [
+            "planning",
+            "solution",
+            "architecture"
+          ],
+          "description": "Develop a machine learning model to predict customer churn for a telecom company. This project involves extensive data preprocessing, feature engineering, training a classification model, and evaluating its performance.",
+          "deliverable": "A Jupyter Notebook or Python script demonstrating the full ML pipeline (preprocessing, training, evaluation), including a clear explanation of model choices and results.",
+          "seeded_errors": [
+            "The initial dataset contains a significant class imbalance, leading to a model with high accuracy but poor recall for the minority class (churned customers). The learner must identify this and apply appropriate techniques like oversampling or different evaluation metrics."
+          ],
+          "deploy_required": false
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Python for Data & ML",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "5 skills are selected to deepen Python proficiency, focusing on object-oriented programming and advanced constructs crucial for building scalable and well-structured ML applications.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "oop_python",
+                "title": "Object-Oriented Programming in Python",
+                "auto_completed": false,
+                "why_this_skill": "OOP is essential for building modular, reusable, and maintainable codebases, critical for complex AI projects and frameworks.",
+                "lessons": [
+                  "Classes and Objects",
+                  "Inheritance and Polymorphism",
+                  "Encapsulation and Abstraction"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S5"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Structuring Your Code with OOP",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Designing a Data Loader Class",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "decorators_generators",
+                "title": "Decorators and Generators",
+                "auto_completed": false,
+                "why_this_skill": "Advanced Python features like decorators and generators enable more concise, efficient, and Pythonic code, particularly useful for logging, caching, and handling large data streams.",
+                "lessons": [
+                  "Understanding Decorators",
+                  "Building Custom Decorators",
+                  "Generators and Iterators"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Advanced Python Features",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Implementing a Caching Decorator",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "context_managers",
+                "title": "Context Managers",
+                "auto_completed": false,
+                "why_this_skill": "Context managers simplify resource management (e.g., files, network connections), ensuring resources are properly acquired and released, improving code reliability.",
+                "lessons": [
+                  "The 'with' Statement",
+                  "Creating Custom Context Managers",
+                  "Use Cases in Data Handling"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Managing Resources Safely",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Ensuring File Closure",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S4",
+                "n": "file_handling_advanced",
+                "title": "Advanced File Handling",
+                "auto_completed": false,
+                "why_this_skill": "Beyond basic I/O, advanced file handling techniques are necessary for working with diverse data formats and managing file systems in complex applications.",
+                "lessons": [
+                  "Binary File Operations",
+                  "Working with Zip Files",
+                  "Pathlib Module"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.029,
+                    "learn_rate": 0.333,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S4",
+                    "title": "Handling Complex File Structures",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S4",
+                    "title": "Processing Large Log Archives",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S5",
+                "n": "advanced_data_structures",
+                "title": "Advanced Data Structures",
+                "auto_completed": false,
+                "why_this_skill": "Understanding and utilizing more advanced data structures (e.g., collections module) can lead to more efficient and elegant solutions for specific programming challenges.",
+                "lessons": [
+                  "Collections Module (deque, Counter)",
+                  "Heaps and Priority Queues",
+                  "Graphs and Trees (Concepts)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.015,
+                    "learn_rate": 0.322,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S5",
+                    "title": "Beyond Basic Collections",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S5",
+                    "title": "Implementing a Least Recently Used (LRU) Cache",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A data processing script is running slowly due to inefficient data loading. Refactor it using generators to process data in chunks."
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "Math & Stats Essentials",
+            "ai_first_layer": "planning",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "5 skills are included to provide the fundamental mathematical and statistical understanding necessary to grasp the inner workings of machine learning algorithms.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "linear_algebra_basics",
+                "title": "Linear Algebra Basics",
+                "auto_completed": false,
+                "why_this_skill": "Linear algebra is the language of machine learning; understanding vectors, matrices, and their operations is crucial for comprehending algorithms.",
+                "lessons": [
+                  "Vectors and Scalars",
+                  "Matrix Operations",
+                  "Dot Product and Cross Product"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S5"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Foundations of ML Math",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Representing Data as Vectors",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "calculus_basics",
+                "title": "Calculus Basics",
+                "auto_completed": false,
+                "why_this_skill": "Understanding derivatives and gradients is fundamental for grasping how machine learning models learn and optimize their parameters.",
+                "lessons": [
+                  "Derivatives and Gradients",
+                  "Chain Rule",
+                  "Optimization with Calculus"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "The Math Behind Learning",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Minimizing a Cost Function",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "probability_basics",
+                "title": "Probability Basics",
+                "auto_completed": false,
+                "why_this_skill": "Probability theory provides the framework for understanding uncertainty and making predictions, which is at the heart of many AI algorithms.",
+                "lessons": [
+                  "Basic Probability Concepts",
+                  "Conditional Probability",
+                  "Bayes' Theorem Introduction"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Understanding Uncertainty",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Calculating Event Likelihood",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S4",
+                "n": "descriptive_statistics",
+                "title": "Descriptive Statistics",
+                "auto_completed": false,
+                "why_this_skill": "Descriptive statistics allow for summarizing and understanding the main features of a dataset, crucial for exploratory data analysis in ML.",
+                "lessons": [
+                  "Measures of Central Tendency",
+                  "Measures of Dispersion",
+                  "Data Distribution and Skewness"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S4",
+                    "title": "Summarizing Data Effectively",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S4",
+                    "title": "Analyzing Customer Demographics",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S5",
+                "n": "inferential_statistics",
+                "title": "Inferential Statistics",
+                "auto_completed": false,
+                "why_this_skill": "Inferential statistics allows drawing conclusions about populations from samples, crucial for hypothesis testing and understanding model generalization.",
+                "lessons": [
+                  "Hypothesis Testing Basics",
+                  "Confidence Intervals",
+                  "Correlation and Causation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S5",
+                    "title": "Making Predictions from Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S5",
+                    "title": "Testing A/B Test Results",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe the process of building a supervised learning model from data acquisition to prediction, highlighting key steps and considerations."
+              }
+            ]
+          },
+          {
+            "id": "M2.3",
+            "title": "Supervised Learning",
+            "ai_first_layer": "solution",
+            "free": false,
+            "vis": "notebook+ppt",
+            "skill_count_rationale": "5 skills are chosen to provide a comprehensive introduction to supervised learning, covering core algorithms, model training, and essential evaluation techniques.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M3_S1",
+                "n": "linear_regression",
+                "title": "Linear Regression",
+                "auto_completed": false,
+                "why_this_skill": "Linear regression is a foundational algorithm for predicting continuous values, serving as a gateway to more complex models and understanding model interpretability.",
+                "lessons": [
+                  "Simple Linear Regression",
+                  "Multiple Linear Regression",
+                  "Assumptions and Interpretations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S5"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S1",
+                    "title": "Predicting Continuous Values",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S1",
+                    "title": "Predicting House Prices",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S2",
+                "n": "logistic_regression",
+                "title": "Logistic Regression",
+                "auto_completed": false,
+                "why_this_skill": "Logistic regression is a fundamental classification algorithm, widely used for binary prediction tasks and understanding probabilities.",
+                "lessons": [
+                  "Binary Classification",
+                  "Sigmoid Function",
+                  "Decision Boundaries"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S2",
+                    "title": "Predicting Categories",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S2",
+                    "title": "Building an Email Spam Classifier",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S3",
+                "n": "decision_trees",
+                "title": "Decision Trees",
+                "auto_completed": false,
+                "why_this_skill": "Decision trees are intuitive and interpretable models, forming the basis for more advanced ensemble methods like Random Forests and Gradient Boosting.",
+                "lessons": [
+                  "Tree Structure and Splitting",
+                  "Information Gain and Gini Impurity",
+                  "Overfitting in Decision Trees"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S3",
+                    "title": "Interpretable Models",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S3",
+                    "title": "Diagnosing an Overfit Decision Tree",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S4",
+                "n": "model_evaluation_metrics",
+                "title": "Model Evaluation Metrics",
+                "auto_completed": false,
+                "why_this_skill": "Choosing and interpreting the correct evaluation metrics is crucial for assessing model performance accurately and making informed decisions about model selection.",
+                "lessons": [
+                  "Accuracy, Precision, Recall, F1-Score",
+                  "Confusion Matrix",
+                  "ROC Curve and AUC"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S4",
+                    "title": "Assessing Model Performance",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S4",
+                    "title": "Choosing Metrics for a Fraud Detection Model",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S5",
+                "n": "cross_validation",
+                "title": "Cross-Validation",
+                "auto_completed": false,
+                "why_this_skill": "Cross-validation is a robust technique for estimating model performance and preventing overfitting, ensuring models generalize well to unseen data.",
+                "lessons": [
+                  "Holdout vs. Cross-Validation",
+                  "K-Fold Cross-Validation",
+                  "Stratified K-Fold"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S5",
+                    "title": "Robust Model Evaluation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S5",
+                    "title": "Evaluating a Model with Limited Data",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "You've trained a classification model that achieves 95% accuracy, but stakeholders report it performs poorly on critical cases. Analyze the evaluation metrics to identify the problem."
+              }
+            ]
+          },
+          {
+            "id": "M2.4",
+            "title": "Feature Engineering & Pipelines",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "notebook+code",
+            "skill_count_rationale": "5 skills are chosen to equip the learner with practical techniques for preparing data for machine learning models, including feature transformation and building robust data pipelines.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M4_S1",
+                "n": "feature_scaling",
+                "title": "Feature Scaling",
+                "auto_completed": false,
+                "why_this_skill": "Scaling features is crucial for many ML algorithms to perform optimally, preventing features with larger ranges from dominating the learning process.",
+                "lessons": [
+                  "Standardization (Z-score)",
+                  "Normalization (Min-Max Scaling)",
+                  "When to Apply Scaling"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S5"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S1",
+                    "title": "Preparing Features for Models",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S1",
+                    "title": "Scaling Features for K-Means Clustering",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S2",
+                "n": "one_hot_encoding",
+                "title": "One-Hot Encoding",
+                "auto_completed": false,
+                "why_this_skill": "Converting categorical data into a numerical format suitable for machine learning models is a common and essential preprocessing step.",
+                "lessons": [
+                  "Categorical vs. Numerical Data",
+                  "One-Hot Encoding Implementation",
+                  "Label Encoding vs. One-Hot"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S2",
+                    "title": "Handling Categorical Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S2",
+                    "title": "Encoding Product Categories",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S3",
+                "n": "missing_value_imputation",
+                "title": "Missing Value Imputation",
+                "auto_completed": false,
+                "why_this_skill": "Effectively handling missing data is crucial to avoid errors and biases in machine learning models, ensuring data integrity.",
+                "lessons": [
+                  "Strategies for Missing Data",
+                  "Mean/Median/Mode Imputation",
+                  "Advanced Imputation Techniques"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S3",
+                    "title": "Dealing with Incomplete Data",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S3",
+                    "title": "Imputing Missing Customer Ages",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S4",
+                "n": "data_pipelines_sklearn",
+                "title": "Data Pipelines (Scikit-learn)",
+                "auto_completed": false,
+                "why_this_skill": "Building robust data pipelines ensures that preprocessing steps are applied consistently and correctly, preventing data leakage and simplifying model deployment.",
+                "lessons": [
+                  "Introduction to Pipelines",
+                  "Creating a Preprocessing Pipeline",
+                  "Integrating Models into Pipelines"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S4",
+                    "title": "Automating Data Preprocessing",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S4",
+                    "title": "Building an End-to-End ML Pipeline",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S5",
+                "n": "feature_selection",
+                "title": "Feature Selection",
+                "auto_completed": false,
+                "why_this_skill": "Selecting the most relevant features improves model performance, reduces training time, and enhances interpretability, crucial for efficient ML.",
+                "lessons": [
+                  "Filter Methods",
+                  "Wrapper Methods",
+                  "Embedded Methods"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S4"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S5",
+                    "title": "Identifying Important Features",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S5",
+                    "title": "Reducing Dimensionality for a Complex Dataset",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                }
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A machine learning model is performing poorly due to irrelevant or redundant features. Apply feature selection techniques to improve its performance."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "years_experience": 0,
+    "current_salary_lpa": 0,
+    "known_skills": [],
+    "capability_gap": {
+      "gap_score": 0.9,
+      "recommended_milestones": 6,
+      "recommended_modules_per_milestone": 4,
+      "recommended_skill_density": 5,
+      "reasoning": "Gap analysis: identity_distance=0.60; experience_mod=0.30; time_mod=1.00; skill_mod=0.00; gap_score=0.90. Recommend 6 milestone(s), 4 module(s) per milestone, 5 skill(s) per module."
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": false,
+      "duration_weeks": 27,
+      "budget_hours": 108.0,
+      "demand_hours": 107.0,
+      "weekly_hours_needed": 8.4,
+      "breakdown": {
+        "video_hours": 30.0,
+        "mastery_hours": 60.0,
+        "scenario_hours": 3.0,
+        "interview_hours": 2.0,
+        "project_hours": 12.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": false,
+        "duration_weeks": 27,
+        "budget_hours": 108.0,
+        "demand_hours": 107.0,
+        "weekly_hours_needed": 8.4,
+        "breakdown": {
+          "video_hours": 30.0,
+          "mastery_hours": 60.0,
+          "scenario_hours": 3.0,
+          "interview_hours": 2.0,
+          "project_hours": 12.0
+        }
+      },
+      "time_budget": {
+        "pass": false,
+        "reason": "estimated 106.5h exceeds 125% of budget 64.0h",
+        "budget_hours": 64.0,
+        "estimated_total_hours": 106.5
+      },
+      "starts_where_they_are": {
+        "pass": true,
+        "reason": "ZPD starting-point check passed"
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "beginner or no known_skills — skip check"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 12% (5/40). Full JD validation pending.",
+        "filler_ratio": 0.125,
+        "total_skills": 40
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 40 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": false,
+        "reason": "1 AI-first violation(s)",
+        "violations": [
+          "No project across the roadmap has deploy_required=True — nothing ships to production"
+        ]
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "current_salary_lpa not available"
+      },
+      "capability_gap_alignment": {
+        "pass": false,
+        "reason": "expected 6 milestone(s), got 2"
+      }
+    },
+    "quality_validators": {
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": false,
+        "reason": "Milestone M01: project 'Automated Data Cleaner for a Startup' is not deploy_required — no deployment artifact; Milestone M02: project 'Predictive Model for Customer Churn' is not deploy_required — no deployment artifact",
+        "violations": [
+          "Milestone M01: project 'Automated Data Cleaner for a Startup' is not deploy_required — no deployment artifact",
+          "Milestone M02: project 'Predictive Model for Customer Churn' is not deploy_required — no deployment artifact"
+        ]
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "No forbidden skills for this target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "34 catalog violation(s)",
+        "violations": [
+          "Skill 'python_fundamentals' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'data_structures_python' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'functions_modules' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'error_handling' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'basic_io' in M1.1 not found in any AVAILABLE_COURSES",
+          "Skill 'algorithmic_thinking' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'time_space_complexity' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'array_operations' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'string_manipulation' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'basic_searching_sorting' in M1.2 not found in any AVAILABLE_COURSES",
+          "Skill 'git_basics' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'github_workflow' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'command_line_interface' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'virtual_environments' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'code_review_principles' in M1.3 not found in any AVAILABLE_COURSES",
+          "Skill 'data_loading_saving' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'data_cleaning' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'basic_aggregation' in M1.4 not found in any AVAILABLE_COURSES",
+          "Skill 'oop_python' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'context_managers' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'file_handling_advanced' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'advanced_data_structures' in M2.1 not found in any AVAILABLE_COURSES",
+          "Skill 'linear_algebra_basics' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'calculus_basics' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'descriptive_statistics' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'inferential_statistics' in M2.2 not found in any AVAILABLE_COURSES",
+          "Skill 'decision_trees' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'model_evaluation_metrics' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'cross_validation' in M2.3 not found in any AVAILABLE_COURSES",
+          "Skill 'feature_scaling' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'one_hot_encoding' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'missing_value_imputation' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'data_pipelines_sklearn' in M2.4 not found in any AVAILABLE_COURSES",
+          "Skill 'feature_selection' in M2.4 not found in any AVAILABLE_COURSES"
+        ]
+      }
+    }
+  }
+}

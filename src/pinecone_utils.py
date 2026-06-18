@@ -93,6 +93,11 @@ def retrieve_icp_type(user_id: str) -> Optional[str]:
     try:
         index = pc.Index(INDEX_NAME)
         print(f"[ICP] Looking for icp_type for user: {user_id}")
+        try:
+            stats = index.describe_index_stats()
+            print(f"[ICP] Index stats: total_vectors={stats.get('total_vector_count', '?')}, namespaces={list((stats.get('namespaces') or {}).keys())}")
+        except Exception as se:
+            print(f"[ICP] Index stats error: {se}")
 
         query_embedding = get_embedding(
             "user onboarding profile",

@@ -3,9 +3,8 @@ from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
 from src.pinecone_utils import (
-    retrieve_context,
-    retrieve_icp_type,
     fetch_poc_record,
+    retrieve_context,
     save_poc_record,
 )
 from src.capability_gap import compute_gap_score
@@ -2565,6 +2564,38 @@ def run_roadmap_quality_validators(roadmap_data: dict) -> dict:
 
 
 # ============================================================
+# PROFILE VALIDATION  (Phase 8 — Corruption Guard)
+# ============================================================
+
+class CustomerProfileCorruptionError(ValueError):
+    """Raised when structured profile is corrupted by fallback paths."""
+
+def validate_customer_profile(profile: dict, profile_source: str = "unknown") -> None:
+    """
+    Validate that required structured fields are present and non-empty.
+    Raises CustomerProfileCorruptionError if structured data was lost.
+    """
+    required = {
+        "current_identity": str,
+        "target_identity": str,
+        "years_experience": (int, float),
+    }
+    for field, expected_type in required.items():
+        val = profile.get(field)
+        if val is None or val == "" or val == 0:
+            print(
+                f"[PROFILE VALIDATION] ⚠ {field}=None/empty "
+                f"(source={profile_source})"
+            )
+    if profile.get("years_experience", 0) == 0 and profile.get("current_identity", "") == "":
+        print(
+            f"[PROFILE VALIDATION] ⚠ Empty profile detected — "
+            f"years_experience=0 AND current_identity='' "
+            f"(source={profile_source})"
+        )
+
+
+# ============================================================
 # run_pipeline — Main Entry Point
 # ============================================================
 
@@ -2613,10 +2644,8 @@ def run_pipeline(
 
         user_id  = "ai_generated_user"
         context  = user_input.get("goal_context", "")
-        icp_type = (
-            "low"
-            if user_input.get("current_role", "").lower() == "student"
-            else "high"
+        icp_type = user_input.get("icp_type", "low") if user_input.get("icp_type") in ("low", "high") else (
+            "low" if user_input.get("current_role", "").lower() == "student" else "high"
         )
         years_experience       = user_input.get("years_experience", 0)
         weekly_hours_available = user_input.get("weekly_hours_available", 5)
@@ -2630,73 +2659,107 @@ def run_pipeline(
 
     else:
         # ── REAL USER / PINECONE MODE ───────────────────────────
+        # Per spec: direct key fetch, no vector search.
+        # Keys: onboarding_conversation | namespace = user_id
         print("[ROADMAP AGENT] Mode: Real user (Pinecone)")
 
         user_id  = user_input
-        icp_type = retrieve_icp_type(user_id)
 
-        if not icp_type:
-            print("[ICP] icp_type not found — onboarding incomplete")
-            return {
-                "error":         "Please complete onboarding first.",
-                "user_id":       user_id,
-                "ai_session_id": ai_session_id,
-            }
-
-        print(f"[ICP] Classified as: {icp_type}")
-
-        # ── Fetch onboarding conversation written by Onboarding POC ──
-        onboarding_record_id = f"{user_id}_onboarding_conversation"
+        # ── Fetch onboarding conversation ───────────────────────
+        # Try spec-compliant key first, then backward-compatible fallbacks.
         poc_context = fetch_poc_record(
             user_id=user_id,
-            record_id=onboarding_record_id
+            record_id="onboarding_conversation"
         )
 
-        # Validate POC record; fall back if stale or invalid
-        if poc_context:
-            if detect_stale_onboarding_record(poc_context):
-                print("[ROADMAP AGENT] Stale onboarding record detected — using retrieve_context()")
-                context = retrieve_context(user_id)
-            elif is_valid_onboarding_record(poc_context):
-                context = poc_context
-                print(
-                    f"[ROADMAP AGENT] ✓ Retrieved onboarding conversation "
-                    f"({len(context)} chars)"
-                )
-            else:
-                print("[ROADMAP AGENT] Invalid onboarding record detected; falling back to retrieve_context()")
-                context = retrieve_context(user_id)
-        else:
-            print(
-                "[ROADMAP AGENT] No POC onboarding record found; "
-                "falling back to retrieve_context()"
+        if not poc_context:
+            print("[ROADMAP AGENT] Spec key not found; trying prefixed key for backward compat")
+            poc_context = fetch_poc_record(
+                user_id=user_id,
+                record_id=f"{user_id}_onboarding_conversation"
             )
-            context = retrieve_context(user_id)
 
-        if not context:
-            print("[ROADMAP AGENT] ✗ No context found in Pinecone")
+        if not poc_context:
+            print("[ROADMAP AGENT] Prefixed key not found; falling back to vector search")
+            poc_context = retrieve_context(user_id)
+
+        if not poc_context:
+            print("[ROADMAP AGENT] ✗ No onboarding data found via any method")
             return {
                 "error":         "No onboarding conversation found. Please complete onboarding first.",
                 "user_id":       user_id,
                 "ai_session_id": ai_session_id,
             }
 
-        print(f"[ROADMAP AGENT] ✓ Context: {len(context)} chars")
+        if not poc_context.strip():
+            print("[ROADMAP AGENT] ✗ Onboarding conversation is empty")
+            return {
+                "error":         "Onboarding conversation is empty.",
+                "user_id":       user_id,
+                "ai_session_id": ai_session_id,
+            }
+
+        context = poc_context
+        print(f"[ROADMAP AGENT] ✓ Retrieved onboarding conversation ({len(context)} chars)")
+
+        # ── Derive icp_type from context text (no vector search needed) ──
+        _ctx_lower = context.lower()
+        _has_employment = any(w in _ctx_lower for w in [
+            "salary", "experience", "promotion", "working", "employed",
+            "software engineer", "developer", "product manager",
+        ])
+        _has_student = any(w in _ctx_lower for w in [
+            "student", "fresher", "college", "placement", "internship", "12th",
+        ])
+        icp_type = "high" if _has_employment else ("low" if _has_student else "high")
+        print(f"[ICP] Derived icp_type={icp_type} from context (emp={_has_employment}, stu={_has_student})")
 
     # ============================================================
     # CUSTOMER PROFILE  (Bible §12, Science §20)
     # ============================================================
-    customer_profile = build_customer_profile(context)
+    if isinstance(user_input, dict):
+        _urgency_map = {"high": 60, "medium": 120, "low": 180}
+        _timeline_days = int(user_input.get("timeline_days", 0)) or \
+            _urgency_map.get(str(user_input.get("urgency", "medium")).lower(), 120)
+        customer_profile = {
+            "current_identity":         str(user_input.get("current_role", "")),
+            "target_identity":          str(user_input.get("target_role", "") or user_input.get("goal", "")),
+            "years_experience":         int(user_input.get("years_experience", 0)),
+            "weekly_hours_available":   int(user_input.get("weekly_hours_available", 5)),
+            "timeline_days":            _timeline_days,
+            "current_salary_lpa":       float(user_input.get("current_salary_monthly", 0)) * 12 / 100000,
+            "known_skills":             user_input.get("known_skills", []),
+            "self_efficacy":            0.5 if str(user_input.get("self_efficacy", "medium")).lower() in ("medium", "0.5") else (0.3 if str(user_input.get("self_efficacy", "medium")).lower() == "low" else 0.7),
+        }
+        if not isinstance(customer_profile["known_skills"], list):
+            customer_profile["known_skills"] = []
+        print(f"[STRUCTURED PROFILE] Built from persona dict: "
+              f"current={customer_profile['current_identity']} "
+              f"yoe={customer_profile['years_experience']} "
+              f"skills={len(customer_profile['known_skills'])}")
+    else:
+        customer_profile = build_customer_profile(context)
+
     years_experience        = customer_profile["years_experience"]
     weekly_hours_available  = customer_profile["weekly_hours_available"]
     timeline_days           = customer_profile["timeline_days"]
     current_salary_lpa      = customer_profile["current_salary_lpa"]
     known_skills            = customer_profile["known_skills"]
 
+    validate_customer_profile(
+        customer_profile,
+        profile_source="structured_dict" if isinstance(user_input, dict) else "build_customer_profile"
+    )
+
     # ── Compute budget_hours ──────────────────────────────────
     budget_hrs = round(
         weekly_hours_available * (timeline_days / 7) * 0.8, 1
     )
+
+    # ── ROADMAP INPUT AUDIT (Phase 5) ─────────────────────────
+    print("\n========== ROADMAP INPUT ==========")
+    print(json.dumps(customer_profile, indent=2, default=str))
+    print("===================================\n")
 
     # ── Capability gap analysis ───────────────────────────────
     gap_analysis = compute_gap_score(

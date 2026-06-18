@@ -18,7 +18,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from src.roadmap_agent import run_pipeline
-from src.pinecone_utils import retrieve_raw_context
+from src.pinecone_utils import fetch_poc_record
 
 # =====================================================
 # SPEC-LOCKED MILESTONE SALARY DATA (M01–M07 keyed)
@@ -645,7 +645,12 @@ if mode == "Real":
     if user_id:
         if st.button("🔍 Fetch Pinecone Data"):
             with st.spinner("Fetching..."):
-                raw = retrieve_raw_context(user_id)
+                raw = fetch_poc_record(user_id=user_id, record_id="onboarding_conversation")
+                if not raw:
+                    raw = fetch_poc_record(user_id=user_id, record_id=f"{user_id}_onboarding_conversation")
+                if not raw:
+                    from src.pinecone_utils import retrieve_raw_context
+                    raw = retrieve_raw_context(user_id)
             if raw:
                 st.success("✅ Found")
                 st.text_area("Raw context", value=raw, height=180)
@@ -772,6 +777,7 @@ STRUCTURED DATA:
             roadmap_input = {
                 "goal":                   goal or oj.get("primary_goal", ""),
                 "current_role":           oj.get("current_role", "student"),
+                "target_role":            oj.get("target_role", ""),
                 "years_experience":       oj.get("years_experience", 0),
                 "current_salary_annual":  oj.get("current_salary_monthly", 0) * 12,
                 "current_salary_monthly": oj.get("current_salary_monthly", 0),
@@ -779,6 +785,7 @@ STRUCTURED DATA:
                 "weekly_hours_available": weekly_hours,
                 "urgency":                oj.get("urgency", "high"),
                 "self_efficacy":          oj.get("confidence_level", "low"),
+                "known_skills":           oj.get("known_skills", []),
                 "level":                  level,
                 "goal_context":           context,
             }
@@ -787,9 +794,14 @@ STRUCTURED DATA:
                 st.error("Enter a User ID.")
                 st.stop()
             with st.spinner("Fetching Pinecone context..."):
-                raw = retrieve_raw_context(user_id)
+                raw = fetch_poc_record(user_id=user_id, record_id="onboarding_conversation")
+                if not raw:
+                    raw = fetch_poc_record(user_id=user_id, record_id=f"{user_id}_onboarding_conversation")
+                if not raw:
+                    from src.pinecone_utils import retrieve_raw_context
+                    raw = retrieve_raw_context(user_id)
             if not raw:
-                st.error("❌ No data for this user.")
+                st.error("❌ Onboarding conversation not found for this user.")
                 st.stop()
             context       = raw
             roadmap_input = user_id
@@ -833,11 +845,12 @@ if st.session_state.roadmap_data:
     # Debug: inspect first module structure
     if milestones:
         mod = milestones[0]["modules"][0]
-        print("LESSON DEBUG")
-        print(json.dumps(mod, indent=2)[:5000])
+        #print("LESSON DEBUG")
+        #print(json.dumps(mod, indent=2)[:5000])
         if mod.get("skills"):
-            print("FIRST SKILL:")
-            print(json.dumps(mod["skills"][0], indent=2)[:3000])
+            #print("FIRST SKILL:")
+            #print(json.dumps(mod["skills"][0], indent=2)[:3000])
+            pass
     total_lessons = sum(
         len(extract_module_lessons(mod))
         for m in milestones
