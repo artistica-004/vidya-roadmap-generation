@@ -1,0 +1,1454 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "ai_generated_user",
+  "roadmap_id": "ai_roadmap_20260618085219_4f98f3c7",
+  "generated_at": "2026-06-18T08:54:00.078259",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260618085219_4f98f3c7",
+    "user_id": "ai_generated_user",
+    "icp_type": "low",
+    "level": "beginner",
+    "target_role": "Entry-Level Backend Developer",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 43.0,
+    "budget_hours": 64.0,
+    "milestone_count_rationale": "2 milestones: A beginner with 5 hours/week and a significant gap to an Entry-Level Backend Developer requires a highly focused and condensed roadmap to achieve job readiness within the limited time budget of 64 hours.",
+    "vision_profile": {
+      "current_state": "A B.Tech graduate with theoretical knowledge, struggling to apply concepts practically and overwhelmed by technology choices.",
+      "main_blocker": "Lack of practical coding experience, understanding of databases, and proficiency with popular backend frameworks, leading to low confidence.",
+      "top_motivation": "To become a proficient backend developer and secure a first job within six months of graduation to start a career in tech."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-18T08:53:39.236971",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Foundational Backend Builder",
+        "sal": "Unpaid/stipend",
+        "o": "The learner can write clean, modular Python code, apply object-oriented principles, and build a basic RESTful API endpoint capable of handling requests and returning JSON responses.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "2 modules because this milestone focuses on the absolute core of practical Python for backend development and initial API creation, providing a focused and achievable start for a beginner with limited weekly hours.",
+        "identity_statement": "You are building the essential practical coding and API development skills that form the bedrock of any backend career, transforming from a student into a capable builder.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Simple User Management API",
+          "vibe_layers": [
+            "vibe_planning",
+            "vibe_solution",
+            "deployment"
+          ],
+          "description": "Build a basic RESTful API for managing users (create, read, update, delete) using a Python web framework. The API should handle requests and return JSON responses, demonstrating core backend logic.",
+          "deliverable": "A functional and documented API endpoint accessible locally, with a GitHub repository containing the source code and clear instructions for setup.",
+          "seeded_errors": [
+            "AI-generated code uses an outdated library for request parsing, leading to unexpected errors for certain content types that the learner must identify and replace."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Practical Python & OOP for Backend",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "3 skills to cover essential practical Python for backend, including object-oriented design and effective data handling, without overwhelming a beginner.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "oop_principles",
+                "title": "OOP & SOLID Principles",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Mastering OOP and SOLID principles is crucial for writing maintainable, scalable, and testable backend code, a key expectation in the current job market.",
+                "lessons": [
+                  "Classes and Objects in Python for Backend",
+                  "Inheritance and Polymorphism in Practice",
+                  "Applying SOLID Principles to Backend Design"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.24,
+                    "learn_rate": 0.142,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "OOP & SOLID Principles Explained",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Refactoring a Monolithic Class",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "efficient_data_structures",
+                "title": "Data Structures",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Understanding and applying efficient data structures and algorithms is vital for optimizing backend performance and handling large datasets effectively.",
+                "lessons": [
+                  "Python Dictionaries and Sets for Performance",
+                  "List Comprehensions and Generators for Data Handling",
+                  "Basic Algorithm Analysis for Backend Performance"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.223,
+                    "learn_rate": 0.128,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Optimizing with Python Data Structures",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Optimizing Data Retrieval for User Profiles",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "testing_debugging_python",
+                "title": "Testing & QA",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Proficiency in testing and debugging is non-negotiable for building reliable backend systems and is a core skill for any developer.",
+                "lessons": [
+                  "Unit Testing with Pytest for Backend Logic",
+                  "Effective Debugging Techniques in Python",
+                  "Introduction to Test-Driven Development (TDD)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Testing Your Python Backend",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Debugging a Critical Backend Function",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical backend function is returning incorrect data due to a subtle bug in object state management; identify and fix the issue using debugging tools and unit tests."
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Introduction to API Development",
+            "ai_first_layer": "vibe_architecture",
+            "free": true,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "3 skills to introduce core API concepts, HTTP, and the basics of building a service layer, enabling the learner to create their first functional endpoint.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "api_design_principles",
+                "title": "API Design & Service Layer",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Designing well-structured APIs is fundamental for building interoperable and maintainable backend services, a core skill for any backend role.",
+                "lessons": [
+                  "RESTful API Principles and Best Practices",
+                  "Designing API Endpoints and Resources",
+                  "Understanding the Service Layer in Backend Architecture"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.23,
+                    "learn_rate": 0.134,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Fundamentals of API Design",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Designing a New API Endpoint for User Profiles",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "http_protocol",
+                "title": "HTTP & Web Protocols",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "A deep understanding of HTTP is essential for any backend developer to effectively interact with web clients and other services.",
+                "lessons": [
+                  "HTTP Methods, Status Codes, and Headers",
+                  "The Request/Response Cycle in Web Applications",
+                  "Working with JSON Data Format in APIs"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "HTTP Protocol Deep Dive",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Troubleshooting API Status Codes",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "web_framework_basics",
+                "title": "Web Framework Basics (e.g., Flask/FastAPI)",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Learning a popular web framework is crucial for rapidly building and structuring backend applications, a core requirement for entry-level roles.",
+                "lessons": [
+                  "Introduction to Flask/FastAPI for API Development",
+                  "Routing, Views, and Request Handling",
+                  "Building Your First API Endpoint"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Getting Started with Flask/FastAPI",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Implementing a New API Route",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new API endpoint is returning 404 errors despite correct routing; debug the framework configuration and HTTP request handling to resolve the issue."
+              },
+              {
+                "type": "Interview",
+                "desc": "Explain the core principles of RESTful API design and how you would structure an API for a simple e-commerce application, including common HTTP methods and status codes."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Data-Integrated Backend Developer",
+        "sal": "₹3-5 LPA",
+        "o": "The learner can design and implement database schemas, integrate a backend service with a relational database, perform CRUD operations, and deploy a basic application to a cloud environment, ready for entry-level roles.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "2 modules to cover essential database integration and basic deployment, enabling the learner to build and ship a data-backed application, crucial for securing an entry-level position.",
+        "identity_statement": "You are now capable of building and deploying backend services that interact with data, a crucial skill for entry-level roles, transforming into a job-ready backend developer.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Task Management API with Database",
+          "vibe_layers": [
+            "vibe_planning",
+            "vibe_architecture",
+            "deployment"
+          ],
+          "description": "Extend the User Management API to include task management, storing tasks in a relational database. Implement CRUD operations for tasks and deploy the entire application to a free-tier cloud service.",
+          "deliverable": "A deployed API endpoint with full database integration, accessible via a public URL, and a GitHub repository with schema migrations, application code, and deployment scripts.",
+          "seeded_errors": [
+            "The AI-generated database schema migration script contains a syntax error for a foreign key constraint, preventing successful database setup that the learner must debug and correct."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Database Integration",
+            "ai_first_layer": "vibe_architecture",
+            "free": false,
+            "vis": "notebook+code",
+            "skill_count_rationale": "3 skills to provide a solid foundation in database design, SQL, and ORM usage, crucial for any data-driven backend application.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "database_design_modeling",
+                "title": "Database Design & Data Modeling",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Effective database design is foundational for building robust and scalable backend systems, directly impacting application performance and maintainability.",
+                "lessons": [
+                  "Relational Database Concepts and Components",
+                  "Entity-Relationship Modeling for Backend Applications",
+                  "Normalization Forms and Schema Optimization"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.342,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Designing Your Backend Database",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Designing a Schema for a New Feature",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "sql_fundamentals",
+                "title": "SQL Fundamentals & Queries",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "SQL is the universal language for interacting with relational databases, a must-have skill for any backend developer working with data.",
+                "lessons": [
+                  "Basic SQL Queries (SELECT, INSERT, UPDATE, DELETE)",
+                  "Advanced SQL: Joins, Aggregations, and Subqueries",
+                  "Ensuring Data Integrity with Database Transactions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Mastering SQL for Backend",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Optimizing a Complex SQL Query",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "orm_integration",
+                "title": "ORM",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "ORMs simplify database interactions in backend applications, making development faster and less error-prone, a common tool in modern backend stacks.",
+                "lessons": [
+                  "Introduction to ORMs (e.g., SQLAlchemy) in Python",
+                  "Defining Models and Database Migrations",
+                  "Performing CRUD Operations with an ORM"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.025,
+                    "learn_rate": 0.33,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "ORM for Python Backend",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Debugging ORM Relationship Issues",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_BREADTH_advanced_architecture_ba5a",
+                "n": "advanced_architecture",
+                "title": "Foundations of System Design",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: advanced_architecture",
+                "lessons": [
+                  "Advanced System Design — Part 1",
+                  "Advanced System Design — Part 2",
+                  "Advanced System Design — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_advanced_architecture_ba5a",
+                    "title": "Advanced System Design",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_BREADTH_distributed_systems_ac5a",
+                "n": "distributed_systems",
+                "title": "Distributed Systems",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: distributed_systems",
+                "lessons": [
+                  "Distributed Systems — Part 1",
+                  "Distributed Systems — Part 2",
+                  "Distributed Systems — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_distributed_systems_ac5a",
+                    "title": "Distributed Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new feature requires fetching complex data with multiple joins, but the current ORM query is inefficient and causing performance bottlenecks; identify and optimize the query for better performance."
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "Basic Deployment & DevOps Foundations",
+            "ai_first_layer": "deployment",
+            "free": false,
+            "vis": "ppt+code",
+            "skill_count_rationale": "3 skills to cover essential deployment concepts, containerization, and basic logging, enabling the learner to get their application live and monitor its health.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "docker_basics",
+                "title": "Docker & Containerization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Docker is an industry standard for packaging and deploying applications, making it a critical skill for modern backend development and CI/CD pipelines.",
+                "lessons": [
+                  "Introduction to Docker and Container Concepts",
+                  "Building Docker Images for Python Applications",
+                  "Running and Managing Containers Locally"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.342,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Docker for Backend Developers",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Containerizing a Python API",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "cloud_deployment_basics",
+                "title": "Cloud & Deployment",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Deploying applications to the cloud is a fundamental skill, enabling developers to make their services accessible to users globally.",
+                "lessons": [
+                  "Choosing a Cloud Provider for Backend Deployment",
+                  "Deploying a Containerized Application to a PaaS",
+                  "Managing Environment Variables and Configuration in Cloud"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.032,
+                    "learn_rate": 0.336,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Deploying Your First Cloud App",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Troubleshooting Cloud Deployment Failures",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "logging_monitoring_basics",
+                "title": "Monitoring & Observability",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Effective logging and monitoring are essential for understanding application behavior, diagnosing issues, and ensuring the reliability of deployed services.",
+                "lessons": [
+                  "Implementing Structured Logging in Python Applications",
+                  "Basic Application Monitoring and Metrics",
+                  "Fundamentals of Error Tracking and Alerting"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.025,
+                    "learn_rate": 0.33,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Logging & Monitoring Best Practices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Diagnosing Production Issues with Logs",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_BREADTH_foundations_2235",
+                "n": "foundations",
+                "title": "Core Concepts",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: foundations",
+                "lessons": [
+                  "Core Concepts — Part 1",
+                  "Core Concepts — Part 2",
+                  "Core Concepts — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_foundations_2235",
+                    "title": "Core Concepts",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_BREADTH_scalability_cfe8",
+                "n": "scalability",
+                "title": "Scalability & Performance",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: scalability",
+                "lessons": [
+                  "Scalability & Performance — Part 1",
+                  "Scalability & Performance — Part 2",
+                  "Scalability & Performance — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_scalability_cfe8",
+                    "title": "Scalability & Performance",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A newly deployed application is crashing intermittently in production, but existing logs are not providing enough detail; implement enhanced logging and basic monitoring to diagnose the root cause."
+              },
+              {
+                "type": "Interview",
+                "desc": "Describe the steps you would take to deploy a simple Python backend application to a cloud platform, from local development to a live service, including containerization and basic monitoring considerations."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "years_experience": 0,
+    "current_salary_lpa": 0,
+    "known_skills": [],
+    "capability_gap": {
+      "gap_score": 1.0,
+      "recommended_milestones": 7,
+      "recommended_milestones_rationale": "gap_score=1.00 (>0.90): extreme gap, at most 7 milestones",
+      "recommended_modules_per_milestone": 3,
+      "recommended_modules_per_milestone_rationale": "breadth=3 domains (≥3): at most 3 modules per milestone",
+      "recommended_skill_density": 5,
+      "recommended_skill_density_rationale": "domain=software market norm=6 skills max per module",
+      "skill_readiness_score": 0.0,
+      "beginner_penalties": {
+        "career_transition": 0.0,
+        "foundation": 0.25,
+        "domain_switch": 0.0,
+        "readiness": 0.2,
+        "zero_experience": 0.15
+      },
+      "reasoning": "Gap analysis: identity_distance=0.60; experience_mod=0.30; career_penalty=0.00; foundation_penalty=0.25; domain_penalty=0.00; readiness_penalty=0.20; zero_exp_penalty=0.15; skill_mod=0.00; gap_score=1.00. Milestones: gap_score=1.00 (>0.90): extreme gap, at most 7 milestones. Modules: gap_score=1.00 (>0.70): wide gap, at most 4 modules. Skills: gap_score=1.00; gap>0.50 → +1; gap>0.75 → +1; max=5."
+    },
+    "customer_profile": {
+      "current_identity": "",
+      "target_identity": "",
+      "years_experience": 0,
+      "weekly_hours_available": 5,
+      "timeline_days": 112,
+      "current_salary_lpa": 0,
+      "known_skills": [],
+      "self_efficacy": 0.5,
+      "_provenance": {}
+    },
+    "locked_milestone_count": 7,
+    "locked_module_count": 3,
+    "locked_skill_density": 5,
+    "capability_breadth": {
+      "breadth_score": 0.6,
+      "required_domains": [
+        "foundations",
+        "scalability",
+        "advanced_architecture"
+      ]
+    },
+    "catalog_stats": {
+      "coverage": 0.75,
+      "mapped": 12,
+      "total": 16,
+      "missing": [
+        "HTTP & Web Protocols",
+        "Web Framework Basics (e.g., Flask/FastAPI)",
+        "SQL Fundamentals & Queries",
+        "Core Concepts"
+      ]
+    },
+    "quality_validators": {
+      "schema_validation": {
+        "pass": true,
+        "reason": "Schema valid — all required fields present"
+      },
+      "scaffolding": {
+        "pass": true,
+        "reason": "Scaffolding progressive — dependencies build correctly"
+      },
+      "ai_tags": {
+        "pass": true,
+        "reason": "All skills have valid ai_metadata tags"
+      },
+      "capability_breadth": {
+        "pass": true,
+        "reason": "All 5 required domains covered"
+      },
+      "deployment": {
+        "pass": true,
+        "reason": "All projects have deploy_required=True"
+      },
+      "science_distribution": {
+        "pass": true,
+        "reason": "All milestones have valid science counts",
+        "details": [
+          "M01 → scenarios=2 interviews=1 PASS",
+          "M02 → scenarios=2 interviews=1 PASS"
+        ]
+      },
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": true,
+        "reason": "All projects have meaningful implementation + deployment"
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "All skills appear relevant for the target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "Catalog coverage: 75% (12/16) — below 85% threshold; 1 unavailable-course violation(s)",
+        "coverage": 0.75,
+        "mapped": 12,
+        "total": 16,
+        "missing": [
+          "HTTP & Web Protocols",
+          "Web Framework Basics (e.g., Flask/FastAPI)",
+          "SQL Fundamentals & Queries",
+          "Core Concepts"
+        ]
+      },
+      "catalog_quality": {
+        "pass": true,
+        "reason": "All catalog mappings healthy"
+      },
+      "role_alignment": {
+        "pass": false,
+        "reason": "Role alignment: 25% (4/16) — below 80% threshold for 'Entry-Level Backend Developer'. Missing: oop_principles, efficient_data_structures, testing_debugging_python, http_protocol, orm_integration, advanced_architecture, distributed_systems, docker_basics, cloud_deployment_basics, logging_monitoring_basics",
+        "coverage": 0.25,
+        "matched": 4,
+        "total": 16,
+        "expected_keywords": [
+          "api",
+          "authentication",
+          "authorization",
+          "cache",
+          "database",
+          "django",
+          "express",
+          "microservice",
+          "middleware",
+          "node",
+          "queue",
+          "rest",
+          "server",
+          "spring",
+          "sql"
+        ],
+        "missing": [
+          "oop_principles",
+          "efficient_data_structures",
+          "testing_debugging_python",
+          "http_protocol",
+          "orm_integration",
+          "advanced_architecture",
+          "distributed_systems",
+          "docker_basics",
+          "cloud_deployment_basics",
+          "logging_monitoring_basics"
+        ]
+      },
+      "capability_gap_alignment": {
+        "pass": true,
+        "reason": "capability_gap bounds satisfied"
+      },
+      "dynamic_structure": {
+        "pass": false,
+        "reason": "All 2 milestones have 2 modules — no structural diversity",
+        "details": {
+          "fingerprint": "ms(2):[2,2]:[3,3,5,5]",
+          "milestones": 2,
+          "module_counts": [
+            2,
+            2
+          ],
+          "skill_counts": [
+            3,
+            3,
+            5,
+            5
+          ]
+        }
+      }
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": true,
+      "duration_weeks": 16,
+      "budget_hours": 64.0,
+      "demand_hours": 52.0,
+      "weekly_hours_needed": 4.1,
+      "breakdown": {
+        "video_hours": 12.0,
+        "mastery_hours": 24.0,
+        "scenario_hours": 2.0,
+        "interview_hours": 2.0,
+        "project_hours": 12.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": true,
+        "duration_weeks": 16,
+        "budget_hours": 64.0,
+        "demand_hours": 52.0,
+        "weekly_hours_needed": 4.1,
+        "breakdown": {
+          "video_hours": 12.0,
+          "mastery_hours": 24.0,
+          "scenario_hours": 2.0,
+          "interview_hours": 2.0,
+          "project_hours": 12.0
+        }
+      },
+      "time_budget": {
+        "pass": true,
+        "reason": "estimated 43.0h within 125% of budget 64.0h",
+        "budget_hours": 64.0,
+        "estimated_total_hours": 43.0
+      },
+      "starts_where_they_are": {
+        "pass": false,
+        "reason": "10/16 skills misaligned: SKILL_M01_M1_S1 p=0 prior=0.24 diff=0.240; SKILL_M01_M1_S2 p=0 prior=0.223 diff=0.223; SKILL_M01_M1_S3 p=0 prior=0.235 diff=0.235; SKILL_M01_M2_S1 p=0 prior=0.23 diff=0.230; SKILL_M01_M2_S2 p=0 prior=0.242 diff=0.242"
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "beginner or no known_skills — skip check"
+      },
+      "laugh_test": {
+        "pass": false,
+        "reason": "Filler skill ratio 31% exceeds 20 % threshold (5/16 skills look generic). A senior from this field would laugh at this roadmap.",
+        "filler_ratio": 0.312
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 16 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "Coverage warnings: Milestone M01 missing layer(s): deployment, vibe_planning; Milestone M02 missing layer(s): vibe_planning, vibe_solution",
+        "violations": [],
+        "warns": [
+          "Milestone M01 missing layer(s): deployment, vibe_planning",
+          "Milestone M02 missing layer(s): vibe_planning, vibe_solution"
+        ]
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "not applicable for low ICP"
+      },
+      "capability_gap_alignment": {
+        "pass": true,
+        "reason": "capability_gap bounds satisfied"
+      }
+    }
+  }
+}

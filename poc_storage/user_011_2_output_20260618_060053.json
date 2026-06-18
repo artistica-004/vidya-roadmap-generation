@@ -1,0 +1,4964 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_011",
+  "roadmap_id": "ai_roadmap_20260618055059_7939afeb",
+  "generated_at": "2026-06-18T06:00:53.888464",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260618055059_7939afeb",
+    "user_id": "user_011",
+    "icp_type": "low",
+    "level": "beginner",
+    "target_role": "Junior Frontend Developer",
+    "language": "hinglish",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 0,
+    "budget_hours": 179.2,
+    "milestone_count_rationale": "Reduced to 3 milestone(s) from 5 due to time budget (179.2h) relative to demand (230.5h).",
+    "vision_profile": {
+      "current_state": "A final-year B.Sc Math student with no professional experience, aiming for financial independence.",
+      "main_blocker": "Lack of foundational programming and web development skills, coupled with fear of competition from peers with more resources.",
+      "top_motivation": "Achieve financial independence to support her family before her younger brother starts college."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-18T06:00:34.138729",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Foundational Programmer",
+        "sal": "Unpaid/stipend",
+        "o": "After this milestone, you can write basic Python programs, understand core data structures, and collaborate using version control, laying the groundwork for any software development role.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "4 modules are needed to cover the breadth of fundamental programming concepts, from language basics to data handling, problem-solving, and essential collaboration tools.",
+        "identity_statement": "You are becoming a problem-solver, equipped with the basic tools to bring ideas to life through code.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Command-Line Utility for Text Analysis",
+          "vibe_layers": [
+            "implementation",
+            "debugging",
+            "deployment"
+          ],
+          "description": "Build a Python command-line tool that can read a text file, count words, characters, and identify the most frequent words. The tool should be version-controlled with Git.",
+          "deliverable": "A functional Python script, a Git repository with commit history, and a README.md explaining usage.",
+          "seeded_errors": [
+            "The word counter incorrectly handles punctuation attached to words, requiring regex or string cleaning to fix."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Python Fundamentals",
+            "ai_first_layer": "implementation",
+            "free": true,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "5 skills are essential to cover the core syntax, control flow, data types, and modularity required for basic Python programming.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "python_syntax_basics",
+                "title": "Python Syntax & Basics",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "generation",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Mastering Python basics is the first step for any developer, providing a versatile language foundation for scripting, web development, and data tasks.",
+                "lessons": [
+                  "Variables and Data Types",
+                  "Operators and Expressions",
+                  "Basic Input/Output"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Python Syntax & Basics",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Fixing a Basic Python Script",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "control_flow_functions",
+                "title": "Control Flow",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "generation",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Understanding control flow and functions is crucial for writing logical, reusable, and organized code, a core skill for any software project.",
+                "lessons": [
+                  "Conditional Statements (if/else)",
+                  "Loops (for/while)",
+                  "Defining and Calling Functions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Control Flow & Functions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Debugging a Loop Logic Error",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "data_types_collections",
+                "title": "Variables, Data Types, Operators",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Proficiency with Python's data types and collections is fundamental for storing, organizing, and manipulating data effectively in any application.",
+                "lessons": [
+                  "Lists and Tuples",
+                  "Dictionaries and Sets",
+                  "String Manipulation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Data Types & Collections",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Optimizing Data Storage for Performance",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S4",
+                "n": "modules_packages",
+                "title": "Modules & Packages",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Learning to organize code into modules and packages is vital for building maintainable and scalable applications, a key aspect of professional development.",
+                "lessons": [
+                  "Importing Modules",
+                  "Creating Custom Modules",
+                  "Understanding Python Packages"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S4",
+                    "title": "Modules & Packages",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S4",
+                    "title": "Resolving Module Import Errors",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S5",
+                "n": "error_handling",
+                "title": "File Handling",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Robust error handling is critical for building stable applications, preventing crashes, and providing a better user experience.",
+                "lessons": [
+                  "Try-Except Blocks",
+                  "Handling Specific Exceptions",
+                  "Custom Exceptions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S5",
+                    "title": "Error Handling",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S5",
+                    "title": "Implementing Graceful Error Recovery",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A user reports an unexpected crash in your script due to invalid input; identify the cause and implement error handling."
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Algorithms & Data Handling",
+            "ai_first_layer": "implementation",
+            "free": true,
+            "vis": "notebook+code",
+            "skill_count_rationale": "5 skills are necessary to build a foundational understanding of how to efficiently store and process data, which is critical for performance.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "basic_data_structures",
+                "title": "Data Structures",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Understanding fundamental data structures is key to choosing the right tools for efficient data storage and retrieval in any programming task.",
+                "lessons": [
+                  "Arrays and Linked Lists Concepts",
+                  "Stacks and Queues",
+                  "Hash Maps and Dictionaries"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.29,
+                    "learn_rate": 0.167,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Basic Data Structures (Lists, Dicts)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Choosing the Right Data Structure",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "algorithmic_thinking",
+                "title": "Algorithmic Thinking",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Developing algorithmic thinking helps in breaking down complex problems into manageable steps, a core skill for efficient coding and problem-solving.",
+                "lessons": [
+                  "Problem Decomposition Strategies",
+                  "Pattern Recognition",
+                  "Developing Step-by-Step Solutions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Algorithmic Thinking",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Designing an Algorithm for a New Feature",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "time_space_complexity",
+                "title": "Time & Space Complexity",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "optimization",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Understanding complexity helps in writing efficient code, which is vital for performance-critical applications and a common interview topic.",
+                "lessons": [
+                  "Big O Notation",
+                  "Analyzing Time Complexity",
+                  "Analyzing Space Complexity"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.233,
+                    "learn_rate": 0.136,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Time & Space Complexity",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Optimizing a Slow Function",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S4",
+                "n": "searching_algorithms",
+                "title": "Sorting & Searching",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Efficient searching is a common requirement in applications; mastering these algorithms improves data retrieval performance.",
+                "lessons": [
+                  "Linear Search",
+                  "Binary Search",
+                  "Hashing for Search"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.229,
+                    "learn_rate": 0.133,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S4",
+                    "title": "Searching Algorithms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S4",
+                    "title": "Implementing a Fast Search Feature",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S5",
+                "n": "sorting_algorithms",
+                "title": "Sorting & Searching",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Sorting is a fundamental operation in computer science, essential for organizing data and often a prerequisite for other efficient algorithms.",
+                "lessons": [
+                  "Bubble Sort and Selection Sort",
+                  "Insertion Sort and Merge Sort",
+                  "Quick Sort"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.225,
+                    "learn_rate": 0.13,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S5",
+                    "title": "Sorting Algorithms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S5",
+                    "title": "Comparing Sorting Algorithm Performance",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A large dataset needs to be sorted for display; choose the most efficient algorithm and implement it."
+              }
+            ]
+          },
+          {
+            "id": "M1.3",
+            "title": "Problem Solving & Debugging",
+            "ai_first_layer": "debugging",
+            "free": true,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "5 skills are crucial for developing a systematic approach to identifying, analyzing, and resolving issues in code, a core developer competency.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M3_S1",
+                "n": "problem_decomposition",
+                "title": "Problem Decomposition",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Breaking down complex problems into smaller, manageable parts is a foundational skill for effective problem-solving and software design.",
+                "lessons": [
+                  "Divide and Conquer Strategy",
+                  "Identifying Sub-problems",
+                  "Modularizing Solutions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S1",
+                    "title": "Problem Decomposition",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S1",
+                    "title": "Breaking Down a Complex Feature Request",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S2",
+                "n": "debugging_techniques",
+                "title": "Model Debugging & Explainability",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Effective debugging is an indispensable skill for any developer, enabling quick identification and resolution of issues in code.",
+                "lessons": [
+                  "Using Print Statements Effectively",
+                  "Introduction to Debuggers",
+                  "Stepping Through Code"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S2",
+                    "title": "Debugging Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S2",
+                    "title": "Debugging a Runtime Error in a Script",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S3",
+                "n": "test_case_generation",
+                "title": "Test Case Generation",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Creating effective test cases helps validate code correctness and prevent regressions, ensuring software quality.",
+                "lessons": [
+                  "Black Box Testing",
+                  "White Box Testing",
+                  "Edge Cases and Boundary Conditions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S3",
+                    "title": "Test Case Generation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S3",
+                    "title": "Writing Test Cases for a Calculator Function",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S4",
+                "n": "code_tracing",
+                "title": "Code Tracing",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "The ability to mentally trace code execution is fundamental for understanding program flow and pinpointing logic errors without relying solely on tools.",
+                "lessons": [
+                  "Manual Code Walkthroughs",
+                  "Tracing Variables and State",
+                  "Predicting Output"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S4",
+                    "title": "Code Tracing",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S4",
+                    "title": "Tracing a Recursive Function's Execution",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S5",
+                "n": "logical_error_identification",
+                "title": "Logical Error Identification",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Distinguishing between syntax and logical errors is crucial for efficient debugging and developing robust, correct software.",
+                "lessons": [
+                  "Common Logical Fallacies in Code",
+                  "Strategies for Isolating Logical Bugs",
+                  "Using Assertions for Logic Checks"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S5",
+                    "title": "Logical Error Identification",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S5",
+                    "title": "Finding a Subtle Logical Bug in a Calculation",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A newly implemented feature produces incorrect results under specific conditions; identify the logical flaw and propose a fix."
+              }
+            ]
+          },
+          {
+            "id": "M1.4",
+            "title": "Version Control & Collaboration",
+            "ai_first_layer": "deployment",
+            "free": true,
+            "vis": "code+ppt",
+            "skill_count_rationale": "5 skills are vital for managing code changes, collaborating with teams, and maintaining a robust development workflow, essential for any professional developer.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M4_S1",
+                "n": "git_basics",
+                "title": "OOP Basics",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Git is the industry standard for version control, essential for tracking changes, collaborating, and managing codebases effectively.",
+                "lessons": [
+                  "Initializing a Git Repository",
+                  "Committing Changes",
+                  "Viewing History"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S1",
+                    "title": "Git Basics",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S1",
+                    "title": "Recovering from an Accidental Commit",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S2",
+                "n": "github_workflow",
+                "title": "GitHub Workflow",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "GitHub is central to modern software development, enabling collaboration, code hosting, and project management for teams.",
+                "lessons": [
+                  "Creating a GitHub Repository",
+                  "Pushing and Pulling Changes",
+                  "Forking and Cloning"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S2",
+                    "title": "GitHub Workflow",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S2",
+                    "title": "Resolving a Merge Conflict on GitHub",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S3",
+                "n": "branching_merging",
+                "title": "Branching & Merging",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Mastering branching and merging is fundamental for collaborative development, allowing multiple developers to work on features concurrently without conflicts.",
+                "lessons": [
+                  "Creating and Switching Branches",
+                  "Merging Branches",
+                  "Rebasing vs. Merging"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S3",
+                    "title": "Branching & Merging",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S3",
+                    "title": "Managing Feature Branches for a New Release",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S4",
+                "n": "code_review_principles",
+                "title": "Code Review Principles",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Participating in code reviews improves code quality, shares knowledge, and fosters a collaborative development environment.",
+                "lessons": [
+                  "Purpose of Code Reviews",
+                  "Providing Constructive Feedback",
+                  "Responding to Feedback"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.229,
+                    "learn_rate": 0.133,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S4",
+                    "title": "Code Review Principles",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S4",
+                    "title": "Reviewing a Peer's Pull Request",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M4_S5",
+                "n": "collaborative_development",
+                "title": "Collaborative Development",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Working effectively in a team is crucial for delivering complex software projects and integrating seamlessly into a professional environment.",
+                "lessons": [
+                  "Pair Programming",
+                  "Agile Methodologies Overview",
+                  "Communication in Teams"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M4_S5",
+                    "title": "Collaborative Development",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M4_S5",
+                    "title": "Coordinating a Feature Implementation with a Teammate",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe a time you used Git to collaborate on a project and how you resolved a conflict."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Structured Code Developer",
+        "sal": "₹1-2 LPA",
+        "o": "After this milestone, you can design and implement modular, reusable code using object-oriented principles and common design patterns, improving code quality and maintainability.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "4 modules are required to cover the depth of object-oriented programming, design patterns, advanced language features, and code quality practices for building robust applications.",
+        "identity_statement": "You are evolving into an architect of clean, organized, and efficient code, building systems that are easy to understand and extend.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Object-Oriented Library Management System",
+          "vibe_layers": [
+            "architecture",
+            "implementation",
+            "debugging"
+          ],
+          "description": "Develop an object-oriented Python application for managing a small library. It should include classes for Books, Users, and the Library itself, demonstrating SOLID principles and basic design patterns.",
+          "deliverable": "A Python application with well-defined classes, unit tests, and a design document outlining the OOP structure.",
+          "seeded_errors": [
+            "The system allows a user to borrow a book that is already checked out, requiring a fix in the borrowing logic."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "OOP & SOLID Principles",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "real_tutor+ppt",
+            "skill_count_rationale": "5 skills are essential to grasp the core concepts of Object-Oriented Programming and the SOLID principles for designing maintainable and scalable software.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "object_oriented_programming_concepts",
+                "title": "Object-Oriented Programming Concepts",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "OOP is a fundamental paradigm for structuring complex applications, making code modular, reusable, and easier to manage.",
+                "lessons": [
+                  "Classes and Objects",
+                  "Constructors and Methods",
+                  "Class vs. Instance Variables"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M4_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Object-Oriented Programming Concepts",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Designing Classes for a Simple Game",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "encapsulation_abstraction",
+                "title": "Encapsulation & Abstraction",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "These principles hide implementation details and expose only necessary interfaces, leading to more robust and easier-to-maintain code.",
+                "lessons": [
+                  "Public, Private, and Protected Members",
+                  "Data Hiding",
+                  "Abstract Classes and Interfaces"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.146,
+                    "learn_rate": 0.247,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Encapsulation & Abstraction",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Refactoring for Better Encapsulation",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "inheritance_polymorphism",
+                "title": "Inheritance & Polymorphism",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "These concepts enable code reuse and flexible system design, allowing for extensible and adaptable software architectures.",
+                "lessons": [
+                  "Class Inheritance",
+                  "Method Overriding",
+                  "Polymorphism in Action"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.142,
+                    "learn_rate": 0.244,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Inheritance & Polymorphism",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Extending Functionality with Inheritance",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S4",
+                "n": "solid_principles",
+                "title": "SOLID Principles",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "SOLID principles are guidelines for writing maintainable, scalable, and testable object-oriented code, crucial for long-term project health.",
+                "lessons": [
+                  "Single Responsibility Principle (SRP)",
+                  "Open/Closed Principle (OCP)",
+                  "Liskov Substitution Principle (LSP)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.129,
+                    "learn_rate": 0.233,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S4",
+                    "title": "SOLID Principles",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S4",
+                    "title": "Applying SRP to a God Object",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S5",
+                "n": "interface_segregation",
+                "title": "Interface Segregation Principle (ISP)",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "ISP ensures that clients only depend on the interfaces they actually use, leading to more cohesive and decoupled systems.",
+                "lessons": [
+                  "Understanding ISP",
+                  "Designing Role-Specific Interfaces",
+                  "Refactoring Fat Interfaces"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.135,
+                    "learn_rate": 0.238,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S5",
+                    "title": "Interface Segregation Principle (ISP)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S5",
+                    "title": "Splitting a Generic Interface into Specific Ones",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              },
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "Design Patterns",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "5 skills are needed to understand and apply common design patterns, which provide proven solutions to recurring software design problems.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "creational_patterns",
+                "title": "State Pattern",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Creational patterns provide flexible ways to create objects, decoupling the client from the concrete implementation, improving system flexibility.",
+                "lessons": [
+                  "Singleton Pattern",
+                  "Factory Method Pattern",
+                  "Abstract Factory Pattern"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.14,
+                    "learn_rate": 0.242,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Creational Patterns (Singleton, Factory)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Implementing a Logger with Singleton Pattern",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "structural_patterns",
+                "title": "Creational & Structural Patterns",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Structural patterns simplify the design by identifying simple ways to realize relationships between entities, making systems more flexible and efficient.",
+                "lessons": [
+                  "Adapter Pattern",
+                  "Decorator Pattern",
+                  "Composite Pattern"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.136,
+                    "learn_rate": 0.239,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Structural Patterns (Adapter, Decorator)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Integrating an Old API with an Adapter",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "behavioral_patterns_overview",
+                "title": "Behavioral Design Patterns",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Behavioral patterns focus on communication between objects, improving flexibility and reusability by defining how objects interact.",
+                "lessons": [
+                  "Observer Pattern",
+                  "Strategy Pattern",
+                  "Command Pattern"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.133,
+                    "learn_rate": 0.236,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Behavioral Patterns Overview",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Implementing Undo/Redo with Command Pattern",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S4",
+                "n": "applying_design_patterns",
+                "title": "Behavioral Design Patterns",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "decision_support",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Knowing how to apply design patterns in real-world scenarios is crucial for writing elegant, maintainable, and scalable code.",
+                "lessons": [
+                  "Choosing the Right Pattern",
+                  "Refactoring to Patterns",
+                  "Case Studies in Pattern Usage"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.119,
+                    "learn_rate": 0.225,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S4",
+                    "title": "Applying Design Patterns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S4",
+                    "title": "Designing a Notification System with Observer Pattern",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S5",
+                "n": "anti_patterns_identification",
+                "title": "Anti-Patterns Identification",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "analysis",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Recognizing anti-patterns helps avoid common pitfalls in software design, leading to more robust and maintainable systems.",
+                "lessons": [
+                  "God Object Anti-Pattern",
+                  "Spaghetti Code and Lava Flow",
+                  "Identifying Design Smells"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.125,
+                    "learn_rate": 0.23,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S5",
+                    "title": "Anti-Patterns Identification",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S5",
+                    "title": "Refactoring a System with Multiple Anti-Patterns",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A legacy system is hard to maintain due to tightly coupled components; identify the anti-patterns and suggest refactoring strategies."
+              }
+            ]
+          },
+          {
+            "id": "M2.3",
+            "title": "Advanced Python Programming",
+            "ai_first_layer": "implementation",
+            "free": false,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "5 skills are necessary to deepen Python proficiency, enabling more advanced and efficient code writing for complex applications.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M3_S1",
+                "n": "decorators_generators",
+                "title": "Decorator",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Decorators allow for clean, reusable code modification, while generators provide memory-efficient iteration, both crucial for advanced Python development.",
+                "lessons": [
+                  "Understanding Decorators",
+                  "Building Custom Decorators",
+                  "Yield Keyword and Generators"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S1",
+                    "title": "Decorators & Generators",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S1",
+                    "title": "Implementing a Caching Decorator",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S2",
+                "n": "context_managers",
+                "title": "Context Managers",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Context managers ensure proper resource management (e.g., file handling, database connections), preventing leaks and improving code reliability.",
+                "lessons": [
+                  "The 'with' Statement",
+                  "Creating Custom Context Managers",
+                  "Contextlib Module"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.146,
+                    "learn_rate": 0.247,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S2",
+                    "title": "Context Managers",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S2",
+                    "title": "Ensuring Resource Cleanup with Context Managers",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S3",
+                "n": "functional_programming_in_python",
+                "title": "Functional Programming in Python",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Functional programming concepts lead to more concise, testable, and parallelizable code, improving overall software quality.",
+                "lessons": [
+                  "Lambda Functions",
+                  "Map, Filter, Reduce",
+                  "Immutability and Pure Functions"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.142,
+                    "learn_rate": 0.244,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S3",
+                    "title": "Functional Programming in Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S3",
+                    "title": "Refactoring a Loop with Map/Filter",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S4",
+                "n": "asynchronous_programming_basics",
+                "title": "Asynchronous Programming Basics",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Asynchronous programming is crucial for building responsive and high-performance applications, especially in web development and I/O-bound tasks.",
+                "lessons": [
+                  "Blocking vs. Non-Blocking I/O",
+                  "Futures and Callbacks",
+                  "Introduction to Async/Await"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.139,
+                    "learn_rate": 0.241,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S4",
+                    "title": "Asynchronous Programming Basics",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S4",
+                    "title": "Making Multiple API Calls Concurrently",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S5",
+                "n": "metaclasses_descriptors",
+                "title": "Metaclasses & Descriptors",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Understanding metaclasses and descriptors allows for powerful customization of class and object behavior, enabling advanced framework development.",
+                "lessons": [
+                  "Introduction to Metaclasses",
+                  "Customizing Class Creation",
+                  "Implementing Descriptors"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.135,
+                    "learn_rate": 0.238,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S5",
+                    "title": "Metaclasses & Descriptors",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S5",
+                    "title": "Creating a Custom ORM Field with Descriptors",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M2.4",
+            "title": "Code Quality & Refactoring",
+            "ai_first_layer": "debugging",
+            "free": false,
+            "vis": "code+ppt",
+            "skill_count_rationale": "5 skills are critical for writing clean, maintainable, and understandable code, which is essential for long-term project success and team collaboration.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M4_S1",
+                "n": "code_smells_detection",
+                "title": "Code Smells Detection",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Identifying code smells helps pinpoint areas in the codebase that indicate deeper problems, guiding refactoring efforts for better quality.",
+                "lessons": [
+                  "What are Code Smells?",
+                  "Common Code Smells (Long Method, Duplicated Code)",
+                  "Tools for Code Smell Detection"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S1",
+                    "title": "Code Smells Detection",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S1",
+                    "title": "Identifying Code Smells in a Legacy Function",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S2",
+                "n": "refactoring_techniques",
+                "title": "Refactoring Techniques",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Refactoring improves code structure without changing external behavior, making it easier to understand, maintain, and extend.",
+                "lessons": [
+                  "Extract Method",
+                  "Rename Variable/Method",
+                  "Introduce Explaining Variable"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.136,
+                    "learn_rate": 0.239,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S2",
+                    "title": "Refactoring Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S2",
+                    "title": "Refactoring a Long and Complex Function",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S3",
+                "n": "clean_code_principles",
+                "title": "Clean Code Principles",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Adhering to clean code principles makes software easier to read, understand, and modify, reducing bugs and development costs.",
+                "lessons": [
+                  "Meaningful Names",
+                  "Functions and Classes",
+                  "Comments and Formatting"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.133,
+                    "learn_rate": 0.236,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S3",
+                    "title": "Clean Code Principles",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S3",
+                    "title": "Improving Readability of a Complex Algorithm",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S4",
+                "n": "static_code_analysis",
+                "title": "Static Code Analysis",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Static analysis tools automatically detect potential bugs, style violations, and security vulnerabilities, improving code quality early in the development cycle.",
+                "lessons": [
+                  "Introduction to Linters (e.g., Pylint, Flake8)",
+                  "Configuring Static Analysis Tools",
+                  "Integrating into CI/CD"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.139,
+                    "learn_rate": 0.241,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S4",
+                    "title": "Static Code Analysis",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S4",
+                    "title": "Setting Up a Linter for a New Project",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M4_S5",
+                "n": "code_documentation",
+                "title": "Code Documentation",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "generation",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Good documentation makes code understandable for other developers and your future self, reducing onboarding time and maintenance effort.",
+                "lessons": [
+                  "Docstrings and Comments",
+                  "README Files",
+                  "Generating API Documentation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.135,
+                    "learn_rate": 0.238,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M4_S5",
+                    "title": "Code Documentation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M4_S5",
+                    "title": "Documenting a Complex Python Module",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Explain the SOLID principles and provide an example of how you would apply one in a real-world scenario."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M03",
+        "label": "M03",
+        "t": "Data Interaction Developer",
+        "sal": "₹2-3 LPA",
+        "o": "After this milestone, you can design simple data models, interact with databases using SQL, and build basic APIs to expose data, forming the backend foundation for web applications.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "4 modules are necessary to cover database design, data persistence, API design principles, and basic API implementation, which are core for data-driven applications.",
+        "identity_statement": "You are becoming a bridge between data and applications, capable of structuring information and making it accessible through well-defined interfaces.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Simple Blog API with Database",
+          "vibe_layers": [
+            "architecture",
+            "implementation",
+            "deployment"
+          ],
+          "description": "Build a basic RESTful API for a blog using Python and a relational database. The API should allow creating, reading, updating, and deleting blog posts and comments.",
+          "deliverable": "A functional API with database integration, API documentation (e.g., OpenAPI spec), and a deployed instance.",
+          "seeded_errors": [
+            "The API allows deleting a blog post without deleting its associated comments, leading to orphaned data in the database."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M3.1",
+            "title": "Database Design & Modeling",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "5 skills are crucial for designing efficient and well-structured databases, which is fundamental for any data-driven application.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M1_S1",
+                "n": "relational_database_concepts",
+                "title": "Relational Database Concepts",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Understanding relational databases is foundational for storing and managing structured data, a core component of most applications.",
+                "lessons": [
+                  "Tables, Rows, and Columns",
+                  "Primary and Foreign Keys",
+                  "Relationships (One-to-Many, Many-to-Many)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M4_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S1",
+                    "title": "Relational Database Concepts",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S1",
+                    "title": "Designing a Schema for an E-commerce Product Catalog",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S2",
+                "n": "er_diagramming",
+                "title": "ER Diagrams",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "generation",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "ER diagrams are essential for visually representing database schemas, facilitating communication and design clarity among developers.",
+                "lessons": [
+                  "Entities, Attributes, Relationships",
+                  "Cardinality and Ordinality",
+                  "Drawing ER Diagrams"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S2",
+                    "title": "ER Diagramming",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S2",
+                    "title": "Creating an ER Diagram for a Social Media App",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S3",
+                "n": "normalization_forms",
+                "title": "ORM",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Normalization reduces data redundancy and improves data integrity, leading to more efficient and reliable database systems.",
+                "lessons": [
+                  "First Normal Form (1NF)",
+                  "Second Normal Form (2NF)",
+                  "Third Normal Form (3NF)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S3",
+                    "title": "Normalization Forms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S3",
+                    "title": "Normalizing a Denormalized Customer Table",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S4",
+                "n": "sql_schema_design",
+                "title": "SQL Schema Design",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Designing effective SQL schemas is crucial for building performant and maintainable relational databases.",
+                "lessons": [
+                  "CREATE TABLE Statements",
+                  "Data Types in SQL",
+                  "Indexes and Constraints"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.029,
+                    "learn_rate": 0.333,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S4",
+                    "title": "SQL Schema Design",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S4",
+                    "title": "Designing a Database Schema for a Project Management Tool",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S5",
+                "n": "nosql_database_overview",
+                "title": "NoSQL Database Overview",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Understanding NoSQL databases expands your data storage options, allowing you to choose the best tool for different data models and scalability needs.",
+                "lessons": [
+                  "Introduction to NoSQL",
+                  "Document Databases (e.g., MongoDB concepts)",
+                  "Key-Value Stores"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S5",
+                    "title": "NoSQL Database Overview",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S5",
+                    "title": "Deciding Between SQL and NoSQL for a New Feature",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              },
+              {
+                "type": "Scenario",
+                "desc": "Production debugging scenario for milestone skills"
+              }
+            ]
+          },
+          {
+            "id": "M3.2",
+            "title": "Data Handling & Persistence",
+            "ai_first_layer": "implementation",
+            "free": false,
+            "vis": "notebook+code",
+            "skill_count_rationale": "5 skills are essential for interacting with databases, performing CRUD operations, and ensuring data integrity in applications.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M2_S1",
+                "n": "sql_queries_crud",
+                "title": "SQL Queries (CRUD)",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Mastering SQL CRUD operations is fundamental for any developer working with relational databases, enabling data manipulation and retrieval.",
+                "lessons": [
+                  "SELECT Statements",
+                  "INSERT, UPDATE, DELETE",
+                  "JOIN Operations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S1",
+                    "title": "SQL Queries (CRUD)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S1",
+                    "title": "Retrieving Complex Data with Joins",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S2",
+                "n": "orm_basics",
+                "title": "ORM",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "ORMs simplify database interactions by mapping database tables to objects, allowing developers to work with data using their preferred programming language.",
+                "lessons": [
+                  "Introduction to ORMs",
+                  "Mapping Objects to Tables",
+                  "Basic ORM Operations (CRUD)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S2",
+                    "title": "ORM Basics (e.g., SQLAlchemy concepts)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S2",
+                    "title": "Implementing Data Access with an ORM",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S3",
+                "n": "database_transactions",
+                "title": "Vector Databases",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Transactions ensure data consistency and integrity by grouping multiple operations into a single, atomic unit, preventing partial updates.",
+                "lessons": [
+                  "ACID Properties",
+                  "BEGIN, COMMIT, ROLLBACK",
+                  "Transaction Isolation Levels"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S3",
+                    "title": "Database Transactions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S3",
+                    "title": "Handling a Failed Money Transfer with Transactions",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "generative_ai",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S4",
+                "n": "data_validation",
+                "title": "Data Structures",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Validating input data is crucial for preventing errors, security vulnerabilities, and maintaining data integrity in your applications.",
+                "lessons": [
+                  "Input Validation Techniques",
+                  "Server-Side Validation",
+                  "Client-Side Validation Overview"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S4",
+                    "title": "Data Validation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S4",
+                    "title": "Implementing Robust User Input Validation",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S5",
+                "n": "file_io_serialization",
+                "title": "File I/O & Serialization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Handling file input/output and data serialization is essential for reading from and writing to files, and for data exchange between systems.",
+                "lessons": [
+                  "Reading and Writing Text Files",
+                  "JSON Serialization/Deserialization",
+                  "CSV File Handling"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S5",
+                    "title": "File I/O & Serialization",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S5",
+                    "title": "Parsing and Storing Configuration from a JSON File",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new feature requires storing user preferences; design a database schema and implement CRUD operations for it."
+              }
+            ]
+          },
+          {
+            "id": "M3.3",
+            "title": "API Design Fundamentals",
+            "ai_first_layer": "architecture",
+            "free": false,
+            "vis": "ppt+code",
+            "skill_count_rationale": "5 skills are critical for designing clear, consistent, and effective APIs, which are the backbone of modern web applications.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M3_S1",
+                "n": "restful_api_principles",
+                "title": "API Design & Service Layer",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "REST is the most common architectural style for web services; understanding its principles is essential for building and consuming web APIs.",
+                "lessons": [
+                  "Resources and URIs",
+                  "Statelessness",
+                  "Client-Server Architecture"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.342,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S1",
+                    "title": "RESTful API Principles",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S1",
+                    "title": "Designing RESTful Endpoints for a User Management System",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S2",
+                "n": "api_endpoints_resources",
+                "title": "API Design & Service Layer",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Properly defining API endpoints and resources is key to creating intuitive and consistent APIs that are easy to use and understand.",
+                "lessons": [
+                  "Resource Naming Conventions",
+                  "Endpoint Structure",
+                  "Sub-resources"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S2",
+                    "title": "API Endpoints & Resources",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S2",
+                    "title": "Refining API Endpoints for a Photo Sharing App",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S3",
+                "n": "http_methods_status_codes",
+                "title": "HTTP Methods & Status Codes",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Correctly using HTTP methods and status codes is essential for building semantically correct and easily debuggable RESTful APIs.",
+                "lessons": [
+                  "GET, POST, PUT, DELETE",
+                  "Common HTTP Status Codes (2xx, 4xx, 5xx)",
+                  "Idempotency of HTTP Methods"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S3",
+                    "title": "HTTP Methods & Status Codes",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S3",
+                    "title": "Choosing Correct HTTP Status Codes for API Responses",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S4",
+                "n": "request_response_formats_json",
+                "title": "ORM",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "JSON is the de-facto standard for data exchange in web APIs; understanding its structure and usage is critical for API development.",
+                "lessons": [
+                  "JSON Syntax and Structure",
+                  "Serializing and Deserializing JSON",
+                  "Designing JSON Payloads"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S4",
+                    "title": "Request & Response Formats (JSON)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S4",
+                    "title": "Designing a Consistent JSON API Response Structure",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S5",
+                "n": "api_versioning",
+                "title": "API Design & Service Layer",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Versioning APIs allows for backward compatibility and smooth evolution of services, crucial for long-term maintainability and client satisfaction.",
+                "lessons": [
+                  "Why API Versioning?",
+                  "Versioning Strategies (URI, Header, Query Parameter)",
+                  "Managing API Changes"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S5",
+                    "title": "API Versioning",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S5",
+                    "title": "Planning for API Evolution and Versioning",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": []
+          },
+          {
+            "id": "M3.4",
+            "title": "Basic API Implementation",
+            "ai_first_layer": "implementation",
+            "free": false,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "5 skills are necessary to translate API design principles into functional code, enabling the creation of basic web services.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M4_S1",
+                "n": "building_simple_web_server",
+                "title": "Building a Simple Web Server (e.g., Flask/FastAPI concepts)",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Implementing a basic web server is the first step to creating backend services that can be consumed by frontend applications.",
+                "lessons": [
+                  "Introduction to Web Frameworks",
+                  "Setting Up a Basic Server",
+                  "Handling HTTP Requests"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S1",
+                    "title": "Building a Simple Web Server (e.g., Flask/FastAPI concepts)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S1",
+                    "title": "Creating a 'Hello World' Web API",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M03_M4_S2",
+                "n": "route_handling",
+                "title": "File Handling",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Effective route handling directs incoming requests to the correct logic, forming the core of an API's functionality.",
+                "lessons": [
+                  "Defining API Routes",
+                  "Path Parameters",
+                  "Query Parameters"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M4_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S2",
+                    "title": "Route Handling",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S2",
+                    "title": "Implementing Routes for a CRUD API",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M4_S3",
+                "n": "request_parsing",
+                "title": "Request Parsing",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Correctly parsing incoming request data is essential for an API to understand and process client requests accurately.",
+                "lessons": [
+                  "Accessing Request Body (JSON, Form Data)",
+                  "Header Parsing",
+                  "Input Validation in Routes"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M4_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S3",
+                    "title": "Request Parsing",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S3",
+                    "title": "Handling Malformed JSON Requests",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M03_M4_S4",
+                "n": "response_generation",
+                "title": "Response Generation",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Generating appropriate and well-structured responses is crucial for an API to communicate effectively with its clients.",
+                "lessons": [
+                  "Returning JSON Responses",
+                  "Setting HTTP Status Codes",
+                  "Customizing Response Headers"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M4_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S4",
+                    "title": "Response Generation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S4",
+                    "title": "Returning Standardized Error Responses",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M03_M4_S5",
+                "n": "basic_authentication_api_keys",
+                "title": "OOP Basics",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Implementing basic authentication is a critical first step in securing your APIs, controlling access to sensitive data and functionality.",
+                "lessons": [
+                  "Introduction to API Security",
+                  "Implementing API Key Authentication",
+                  "Protecting API Endpoints"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.085,
+                    "learn_rate": 0.363,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M4_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M4_S5",
+                    "title": "Basic Authentication (API Keys)",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M4_S5",
+                    "title": "Securing an API Endpoint with an API Key",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M4_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe the process of designing a RESTful API for a new feature, from data modeling to endpoint definition."
+              }
+            ]
+          },
+          {
+            "id": "M3.5",
+            "title": "Breadth: Advanced Architecture",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "advanced_architecture",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: advanced_architecture",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_advanced_architecture_4a0b",
+                "n": "advanced_architecture",
+                "title": "Foundations of System Design",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: advanced_architecture",
+                "lessons": [
+                  "Advanced System Design — Part 1",
+                  "Advanced System Design — Part 2",
+                  "Advanced System Design — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_advanced_architecture_4a0b",
+                    "title": "Advanced System Design",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ]
+          },
+          {
+            "id": "M3.6",
+            "title": "Breadth: Foundations",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "foundations",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: foundations",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_foundations_d583",
+                "n": "foundations",
+                "title": "Core Concepts",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: foundations",
+                "lessons": [
+                  "Core Concepts — Part 1",
+                  "Core Concepts — Part 2",
+                  "Core Concepts — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_foundations_d583",
+                    "title": "Core Concepts",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_status": "missing"
+              }
+            ]
+          },
+          {
+            "id": "M3.7",
+            "title": "Breadth: Performance",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "performance",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: performance",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_performance_41d8",
+                "n": "performance",
+                "title": "Scalability & Performance",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: performance",
+                "lessons": [
+                  "Scalability & Performance — Part 1",
+                  "Scalability & Performance — Part 2",
+                  "Scalability & Performance — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_performance_41d8",
+                    "title": "Scalability & Performance",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ]
+          },
+          {
+            "id": "M3.8",
+            "title": "Breadth: Scalability",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "scalability",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: scalability",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_scalability_18c9",
+                "n": "scalability",
+                "title": "Scalability & Performance",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: scalability",
+                "lessons": [
+                  "Scalability & Performance — Part 1",
+                  "Scalability & Performance — Part 2",
+                  "Scalability & Performance — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_scalability_18c9",
+                    "title": "Scalability & Performance",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ]
+          },
+          {
+            "id": "M3.9",
+            "title": "Breadth: Testing",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "testing",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: testing",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_testing_0e1e",
+                "n": "testing",
+                "title": "Testing & QA",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: testing",
+                "lessons": [
+                  "Testing & QA — Part 1",
+                  "Testing & QA — Part 2",
+                  "Testing & QA — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_testing_0e1e",
+                    "title": "Testing & QA",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              }
+            ]
+          },
+          {
+            "id": "M3.10",
+            "title": "Breadth: Ui Architecture",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "ui_architecture",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: ui_architecture",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_ui_architecture_d579",
+                "n": "ui_architecture",
+                "title": "Transformer Architecture",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: ui_architecture",
+                "lessons": [
+                  "UI Architecture — Part 1",
+                  "UI Architecture — Part 2",
+                  "UI Architecture — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_ui_architecture_d579",
+                    "title": "UI Architecture",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "generative_ai",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "years_experience": 0,
+    "current_salary_lpa": 0.0,
+    "known_skills": [
+      "basic computer usage",
+      "college-level mathematics",
+      "MS Word",
+      "basic internet research"
+    ],
+    "capability_gap": {
+      "gap_score": 1.0,
+      "recommended_milestones": 7,
+      "recommended_modules_per_milestone": 4,
+      "recommended_skill_density": 5,
+      "skill_readiness_score": 0.0,
+      "beginner_penalties": {
+        "career_transition": 0.3,
+        "foundation": 0.25,
+        "domain_switch": 0.2,
+        "readiness": 0.2,
+        "zero_experience": 0.15
+      },
+      "reasoning": "Gap analysis: identity_distance=0.36; experience_mod=0.30; career_penalty=0.30; foundation_penalty=0.25; domain_penalty=0.20; readiness_penalty=0.20; zero_exp_penalty=0.15; skill_mod=-0.16; gap_score=1.00. Recommend 7 milestone(s), 4 module(s) per milestone, 5 skill(s) per module."
+    },
+    "capability_breadth": {
+      "breadth_score": 0.9,
+      "required_domains": [
+        "ui_architecture",
+        "performance",
+        "testing",
+        "foundations",
+        "scalability",
+        "advanced_architecture"
+      ]
+    },
+    "catalog_stats": {
+      "coverage": 0.455,
+      "mapped": 30,
+      "total": 66,
+      "missing": [
+        "Python Syntax & Basics",
+        "Modules & Packages",
+        "Algorithmic Thinking",
+        "Time & Space Complexity",
+        "Problem Decomposition",
+        "Test Case Generation",
+        "Code Tracing",
+        "Logical Error Identification",
+        "GitHub Workflow",
+        "Branching & Merging",
+        "Code Review Principles",
+        "Collaborative Development",
+        "Object-Oriented Programming Concepts",
+        "Encapsulation & Abstraction",
+        "Inheritance & Polymorphism",
+        "Interface Segregation Principle (ISP)",
+        "Anti-Patterns Identification",
+        "Context Managers",
+        "Functional Programming in Python",
+        "Asynchronous Programming Basics",
+        "Metaclasses & Descriptors",
+        "Code Smells Detection",
+        "Refactoring Techniques",
+        "Clean Code Principles",
+        "Static Code Analysis",
+        "Code Documentation",
+        "Relational Database Concepts",
+        "SQL Schema Design",
+        "NoSQL Database Overview",
+        "SQL Queries (CRUD)",
+        "File I/O & Serialization",
+        "HTTP Methods & Status Codes",
+        "Building a Simple Web Server (e.g., Flask/FastAPI concepts)",
+        "Request Parsing",
+        "Response Generation",
+        "Core Concepts"
+      ]
+    },
+    "_removed_known_skills": [],
+    "total_skills": 60,
+    "quality_validators": {
+      "schema_validation": {
+        "pass": true,
+        "reason": "Schema valid — all required fields present"
+      },
+      "scaffolding": {
+        "pass": true,
+        "reason": "Scaffolding progressive — dependencies build correctly"
+      },
+      "ai_tags": {
+        "pass": true,
+        "reason": "All skills have valid ai_metadata tags"
+      },
+      "capability_breadth": {
+        "pass": true,
+        "reason": "All 6 required domains covered"
+      },
+      "deployment": {
+        "pass": true,
+        "reason": "All projects have deploy_required=True"
+      },
+      "science_distribution": {
+        "pass": true,
+        "reason": "All milestones have 3-7 scenarios and 1 interview",
+        "details": [
+          "M01 → scenarios=3 interviews=1 PASS",
+          "M02 → scenarios=3 interviews=1 PASS",
+          "M03 → scenarios=3 interviews=1 PASS"
+        ]
+      },
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": false,
+        "reason": "Milestone M03: project 'Simple Blog API with Database' resembles a toy exercise (simple blog api with database)",
+        "violations": [
+          "Milestone M03: project 'Simple Blog API with Database' resembles a toy exercise (simple blog api with database)"
+        ]
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "No forbidden skills for this target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "Catalog coverage: 46% (30/66) — below 85% threshold",
+        "coverage": 0.455,
+        "mapped": 30,
+        "total": 66,
+        "missing": [
+          "Python Syntax & Basics",
+          "Modules & Packages",
+          "Algorithmic Thinking",
+          "Time & Space Complexity",
+          "Problem Decomposition",
+          "Test Case Generation",
+          "Code Tracing",
+          "Logical Error Identification",
+          "GitHub Workflow",
+          "Branching & Merging"
+        ]
+      },
+      "catalog_quality": {
+        "pass": false,
+        "reason": "36/66 skills unmapped; low-confidence: SKILL_BREADTH_ui_architecture_d579 conf=0.75"
+      }
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": true,
+      "duration_weeks": 16,
+      "budget_hours": 179.2,
+      "demand_hours": 174.0,
+      "weekly_hours_needed": 13.6,
+      "breakdown": {
+        "video_hours": 49.5,
+        "mastery_hours": 99.0,
+        "scenario_hours": 4.5,
+        "interview_hours": 3.0,
+        "project_hours": 18.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": true,
+        "duration_weeks": 16,
+        "budget_hours": 179.2,
+        "demand_hours": 174.0,
+        "weekly_hours_needed": 13.6,
+        "breakdown": {
+          "video_hours": 49.5,
+          "mastery_hours": 99.0,
+          "scenario_hours": 4.5,
+          "interview_hours": 3.0,
+          "project_hours": 18.0
+        }
+      },
+      "time_budget": {
+        "pass": true,
+        "reason": "estimated 0h within 125% of budget 179.2h",
+        "budget_hours": 179.2,
+        "estimated_total_hours": 0
+      },
+      "starts_where_they_are": {
+        "pass": false,
+        "reason": "46/66 skills misaligned: SKILL_M01_M1_S1 p=0 prior=0.25 diff=0.250; SKILL_M01_M1_S2 p=0 prior=0.246 diff=0.246; SKILL_M01_M1_S3 p=0 prior=0.242 diff=0.242; SKILL_M01_M1_S4 p=0 prior=0.239 diff=0.239; SKILL_M01_M1_S5 p=0 prior=0.235 diff=0.235"
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "beginner or no known_skills — skip check"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 9% (6/66). Full JD validation pending.",
+        "filler_ratio": 0.091,
+        "total_skills": 66
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 66 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "AI-first check passed — all milestones have multi-layer AI work"
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "not applicable for low ICP"
+      },
+      "capability_gap_alignment": {
+        "pass": false,
+        "reason": "expected 7 milestone(s), got 3; Milestone M03: expected 4 module(s), got 10"
+      }
+    }
+  }
+}

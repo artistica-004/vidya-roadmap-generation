@@ -1,0 +1,2392 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_002",
+  "roadmap_id": "ai_roadmap_20260618084212_4c2f318a",
+  "generated_at": "2026-06-18T08:45:00.705480",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260618084212_4c2f318a",
+    "user_id": "user_002",
+    "icp_type": "low",
+    "level": "beginner",
+    "target_role": "Data Scientist",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 61.0,
+    "budget_hours": 64.0,
+    "milestone_count_rationale": "2 milestones: beginner with 5 hrs/week and an extreme gap from current identity to Data Scientist, requiring a focused, foundational path within the 64-hour budget.",
+    "vision_profile": {
+      "current_state": "A motivated individual with no prior professional experience in data science or related fields, seeking to enter the AI industry.",
+      "main_blocker": "Lack of foundational technical skills, practical project experience, and understanding of the data science workflow.",
+      "top_motivation": "To secure an entry-level position as a Data Scientist or Data Analyst and build a rewarding career in AI, leveraging data to drive insights and innovation."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-18T08:44:41.166974",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Data Science Foundations Associate",
+        "sal": "Unpaid/stipend",
+        "o": "The learner can confidently manipulate, clean, and visualize data using Python, demonstrating foundational data analysis skills for entry-level roles or internships.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "2 modules because this milestone focuses on core programming and data handling, requiring distinct clusters for language fundamentals and practical data manipulation/visualization to establish a solid base.",
+        "identity_statement": "You are becoming a meticulous Data Foundations Associate, building the essential skills to understand and interact with data, preparing you for your first practical experiences.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Exploratory Data Analysis for a Public Dataset",
+          "vibe_layers": [
+            "vibe_planning",
+            "vibe_solution",
+            "deployment"
+          ],
+          "description": "Analyze a publicly available dataset (e.g., Kaggle dataset on housing prices or sales data) to uncover trends, patterns, and anomalies. Clean the data, perform exploratory analysis, and create compelling visualizations.",
+          "deliverable": "A Jupyter Notebook with documented code, analysis, visualizations, and a brief summary report of key findings, ready for presentation.",
+          "seeded_errors": [
+            "The AI-generated data cleaning script introduces NaN values in critical columns due to incorrect regex patterns, requiring the learner to debug and correct the data imputation logic."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Python for Data Handling",
+            "ai_first_layer": "vibe_planning",
+            "free": true,
+            "vis": "notebook+code",
+            "skill_count_rationale": "5 skills to cover essential Python programming constructs and the fundamental libraries for data manipulation, crucial for any data role.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "python_fundamentals",
+                "title": "Python Fundamentals",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "automation",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Python is the lingua franca of data science; mastering its basics is non-negotiable for writing efficient and readable data scripts.",
+                "lessons": [
+                  "Variables and Data Types",
+                  "Control Flow and Loops",
+                  "Functions and Modules"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Introduction to Python for AI",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Debugging a Syntax Error in a Data Script",
+                    "difficulty": 0.3,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "python_data_structures",
+                "title": "Data Structures",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Efficiently storing and accessing data is fundamental; understanding lists, dictionaries, and sets optimizes data manipulation tasks.",
+                "lessons": [
+                  "Lists and Tuples",
+                  "Dictionaries and Sets",
+                  "Working with Strings"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.236,
+                    "learn_rate": 0.139,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Core Python Data Structures",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Optimizing Data Storage for Performance",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "numpy",
+                "title": "NumPy",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "NumPy is the backbone for numerical operations in Python, essential for handling arrays and matrices efficiently in data science and machine learning.",
+                "lessons": [
+                  "NumPy Arrays and Operations",
+                  "Array Indexing and Slicing",
+                  "Broadcasting and Vectorization"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Introduction to NumPy",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Vectorizing a Slow Loop with NumPy",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S4",
+                "n": "pandas_dataframes",
+                "title": "Pandas",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Pandas DataFrames are the primary tool for tabular data manipulation, essential for loading, cleaning, and transforming real-world datasets.",
+                "lessons": [
+                  "Creating and Inspecting DataFrames",
+                  "Selecting and Filtering Data",
+                  "Handling Missing Data"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S4",
+                    "title": "Working with Pandas DataFrames",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S4",
+                    "title": "Cleaning Messy Customer Data with Pandas",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S5",
+                "n": "sql",
+                "title": "SQL vs NoSQL",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Sql — Part 1",
+                  "Sql — Part 2",
+                  "Sql — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S5",
+                    "title": "Advanced Pandas: Aggregation and Merging",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S5",
+                    "title": "Aggregating Sales Data for Regional Performance Analysis",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical data ingestion pipeline fails due to unexpected data types in the source, requiring you to debug the Pandas loading script and implement robust error handling."
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Data Analysis & Visualization",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "ppt+code",
+            "skill_count_rationale": "5 skills to cover the complete cycle of exploratory data analysis, statistical understanding, and effective visual communication of insights.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "powerbi",
+                "title": "Powerbi",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Powerbi — Part 1",
+                  "Powerbi — Part 2",
+                  "Powerbi — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Fundamentals of EDA",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Identifying Outliers in Customer Spending Data",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "machine_learning",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "matplotlib_seaborn",
+                "title": "Matplotlib & Seaborn for Visualization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Effective data visualization is key to communicating insights; Matplotlib and Seaborn are standard tools for creating publication-quality plots.",
+                "lessons": [
+                  "Basic Plotting with Matplotlib",
+                  "Statistical Plots with Seaborn",
+                  "Customizing Visualizations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.246,
+                    "learn_rate": 0.147,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Data Visualization with Matplotlib and Seaborn",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Creating an Effective Dashboard for Business Stakeholders",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "basic_statistics",
+                "title": "Basic Statistics for Data Analysis",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "A solid grasp of statistics is crucial for interpreting data, understanding distributions, and making informed decisions based on evidence.",
+                "lessons": [
+                  "Descriptive Statistics",
+                  "Probability Distributions",
+                  "Hypothesis Testing Basics"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "Math & Stats Essentials for ML",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Interpreting A/B Test Results for a Marketing Campaign",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S4",
+                "n": "pandas",
+                "title": "Pandas",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Pandas — Part 1",
+                  "Pandas — Part 2",
+                  "Pandas — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.239,
+                    "learn_rate": 0.141,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S4",
+                    "title": "Communicating Data Insights",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S4",
+                    "title": "Refining a Presentation for Executive Review",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S5",
+                "n": "sql_basics",
+                "title": "SQL for Data Retrieval",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "SQL is indispensable for querying and retrieving data from databases, a fundamental skill for any data professional.",
+                "lessons": [
+                  "SELECT, FROM, WHERE Clauses",
+                  "JOIN Operations",
+                  "Aggregation Functions in SQL"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S5",
+                    "title": "SQL for Data Analysts",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S5",
+                    "title": "Extracting Specific Customer Segments from a Database",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A stakeholder complains that a key visualization is misleading due to incorrect data aggregation, requiring you to identify the error and refine the plot for clarity and accuracy."
+              },
+              {
+                "type": "Interview",
+                "desc": "Describe your process for exploring a new dataset. What steps do you take, and what tools do you use to uncover initial insights and potential issues?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "Junior Data Analyst",
+        "sal": "₹3-5 LPA",
+        "o": "The learner can build, evaluate, and prepare basic machine learning models for deployment to solve business problems, effectively communicating predictive insights to stakeholders.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "2 modules to cover the transition from data analysis to foundational machine learning, focusing on core ML concepts and practical application with model deployment considerations.",
+        "identity_statement": "You are evolving into a Junior Data Analyst, capable of applying predictive models and extracting actionable insights, ready to contribute to data-driven decision-making.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Customer Churn Prediction Model",
+          "vibe_layers": [
+            "vibe_architecture",
+            "vibe_solution",
+            "deployment"
+          ],
+          "description": "Develop a machine learning model to predict customer churn for a subscription service. Preprocess data, train a classification model, evaluate its performance, and prepare it for potential deployment.",
+          "deliverable": "A Jupyter Notebook with the complete ML pipeline (data preprocessing, model training, evaluation), a model inference script, and a presentation summarizing findings and model limitations.",
+          "seeded_errors": [
+            "The AI-assisted feature engineering step introduces severe data leakage, causing the model to show unrealistically high performance on the test set. The learner must identify and rectify the leakage."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Introduction to Machine Learning",
+            "ai_first_layer": "vibe_architecture",
+            "free": false,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "5 skills to establish a strong theoretical and practical foundation in core machine learning concepts and common algorithms.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "python",
+                "title": "Python for AI",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Python — Part 1",
+                  "Python — Part 2",
+                  "Python — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Foundations of Machine Learning",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Choosing the Right ML Task for a Business Problem",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "tableau",
+                "title": "Tableau",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Tableau — Part 1",
+                  "Tableau — Part 2",
+                  "Tableau — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Supervised Learning: Regression",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Predicting Housing Prices with Linear Regression",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "machine_learning",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "etl",
+                "title": "Etl",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Etl — Part 1",
+                  "Etl — Part 2",
+                  "Etl — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Supervised Learning: Classification",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Building a Customer Churn Predictor",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "machine_learning",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S4",
+                "n": "pipeline",
+                "title": "Scikit-learn Pipelines",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Pipeline — Part 1",
+                  "Pipeline — Part 2",
+                  "Pipeline — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S4",
+                    "title": "Evaluating Machine Learning Models",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S4",
+                    "title": "Selecting the Best Metric for a Fraud Detection Model",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "machine_learning",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S5",
+                "n": "scikit_learn_fundamentals",
+                "title": "Scikit-learn Pipelines",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Scikit-learn is the most popular Python library for traditional machine learning, providing a unified interface for various algorithms and tools.",
+                "lessons": [
+                  "Scikit-learn API Overview",
+                  "Data Preprocessing with Scikit-learn",
+                  "Training and Predicting with Estimators"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S5",
+                    "title": "Practical Scikit-learn",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S5",
+                    "title": "Building an End-to-End ML Pipeline with Scikit-learn",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "machine_learning",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A newly trained classification model performs poorly on unseen data, showing signs of overfitting. You need to identify the cause and apply regularization techniques to improve generalization."
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "Applied Data Modeling & Deployment Basics",
+            "ai_first_layer": "vibe_solution",
+            "free": false,
+            "vis": "notebook+ppt",
+            "skill_count_rationale": "5 skills to bridge the gap from theoretical ML to practical application, including advanced preprocessing, model tuning, and basic deployment considerations.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "feature_engineering",
+                "title": "Feature Engineering & Pipelines",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Creating effective features from raw data is often the most impactful step in improving model performance and is a hallmark of skilled data scientists.",
+                "lessons": [
+                  "Categorical Feature Encoding",
+                  "Numerical Feature Scaling",
+                  "Feature Selection Techniques"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S5"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Feature Engineering & Pipelines",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Improving Model Performance with Custom Features",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "machine_learning",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "numpy",
+                "title": "NumPy",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Numpy — Part 1",
+                  "Numpy — Part 2",
+                  "Numpy — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.046,
+                    "learn_rate": 0.347,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Model Tuning and Validation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Optimizing a Classification Model for High Recall",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "statistics",
+                "title": "Statistics",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Statistics — Part 1",
+                  "Statistics — Part 2",
+                  "Statistics — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "NLP & Sequence Models Basics",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Analyzing Customer Reviews for Product Feedback",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "machine_learning",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S4",
+                "n": "visualization",
+                "title": "Data Visualization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Visualization — Part 1",
+                  "Visualization — Part 2",
+                  "Visualization — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.039,
+                    "learn_rate": 0.341,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S4",
+                    "title": "Model Serving & APIs",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S4",
+                    "title": "Deploying a Simple ML Model as a Web Service",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S4",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S5",
+                "n": "data_warehouse",
+                "title": "Data Structures",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Data Warehouse — Part 1",
+                  "Data Warehouse — Part 2",
+                  "Data Warehouse — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S4"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S5",
+                    "title": "GenAI & Responsible AI",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S5",
+                    "title": "Mitigating Bias in a Loan Approval Prediction Model",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S5",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A deployed model for personalized recommendations starts generating irrelevant suggestions for a specific user segment. You need to investigate potential data drift or model bias and propose a solution."
+              },
+              {
+                "type": "Interview",
+                "desc": "You've built a predictive model. How do you explain its predictions and limitations to a non-technical business stakeholder, and what steps would you take to ensure its ethical use?"
+              }
+            ]
+          },
+          {
+            "id": "M2.3",
+            "title": "Breadth: Advanced Architecture",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "advanced_architecture",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: advanced_architecture",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_advanced_architecture_2b2a",
+                "n": "analytics",
+                "title": "Analytics",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Analytics — Part 1",
+                  "Analytics — Part 2",
+                  "Analytics — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_advanced_architecture_2b2a",
+                    "title": "Advanced System Design",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_status": "missing"
+              }
+            ]
+          },
+          {
+            "id": "M2.4",
+            "title": "Breadth: Data Modeling",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "data_modeling",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: data_modeling",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_data_modeling_43f1",
+                "n": "sql",
+                "title": "SQL vs NoSQL",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Sql — Part 1",
+                  "Sql — Part 2",
+                  "Sql — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_data_modeling_43f1",
+                    "title": "Database Design & Data Modeling",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ]
+          },
+          {
+            "id": "M2.5",
+            "title": "Breadth: Foundations",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "foundations",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: foundations",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_foundations_f651",
+                "n": "powerbi",
+                "title": "Powerbi",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Powerbi — Part 1",
+                  "Powerbi — Part 2",
+                  "Powerbi — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_foundations_f651",
+                    "title": "Core Concepts",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_status": "missing"
+              }
+            ]
+          },
+          {
+            "id": "M2.6",
+            "title": "Breadth: Ml Pipelines",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "ml_pipelines",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: ml_pipelines",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_ml_pipelines_bce9",
+                "n": "ml_pipelines",
+                "title": "Monitoring & Observability",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: ml_pipelines",
+                "lessons": [
+                  "MLOps & Monitoring — Part 1",
+                  "MLOps & Monitoring — Part 2",
+                  "MLOps & Monitoring — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_ml_pipelines_bce9",
+                    "title": "MLOps & Monitoring",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              }
+            ]
+          },
+          {
+            "id": "M2.7",
+            "title": "Breadth: Scalability",
+            "ai_first_layer": "vibe_architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "scalability",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: scalability",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_scalability_3fc4",
+                "n": "pandas",
+                "title": "Pandas",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Pandas — Part 1",
+                  "Pandas — Part 2",
+                  "Pandas — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_scalability_3fc4",
+                    "title": "Scalability & Performance",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ]
+          },
+          {
+            "id": "M2.8",
+            "title": "Breadth: Advanced Architecture",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "advanced_architecture",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: advanced_architecture",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_advanced_architecture_d412",
+                "n": "sql",
+                "title": "SQL vs NoSQL",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Sql — Part 1",
+                  "Sql — Part 2",
+                  "Sql — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_advanced_architecture_d412",
+                    "title": "Advanced System Design",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.85,
+                "catalog_status": "mapped"
+              }
+            ]
+          },
+          {
+            "id": "M2.9",
+            "title": "Breadth: Data Modeling",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "data_modeling",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: data_modeling",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_data_modeling_3739",
+                "n": "powerbi",
+                "title": "Powerbi",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Powerbi — Part 1",
+                  "Powerbi — Part 2",
+                  "Powerbi — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_data_modeling_3739",
+                    "title": "Database Design & Data Modeling",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_status": "missing"
+              }
+            ]
+          },
+          {
+            "id": "M2.10",
+            "title": "Breadth: Foundations",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "foundations",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: foundations",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_foundations_d2ce",
+                "n": "pandas",
+                "title": "Pandas",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Pandas — Part 1",
+                  "Pandas — Part 2",
+                  "Pandas — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_foundations_d2ce",
+                    "title": "Core Concepts",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ]
+          },
+          {
+            "id": "M2.10",
+            "title": "Breadth: Scalability",
+            "ai_first_layer": "vibe_architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "scalability",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: scalability",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_scalability_d63a",
+                "n": "python",
+                "title": "Python for AI",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Role-appropriate replacement for Data Scientist",
+                "lessons": [
+                  "Python — Part 1",
+                  "Python — Part 2",
+                  "Python — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_scalability_d63a",
+                    "title": "Scalability & Performance",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 0.85,
+                "catalog_status": "mapped"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "years_experience": 0,
+    "current_salary_lpa": 0,
+    "known_skills": [],
+    "capability_gap": {
+      "gap_score": 1.0,
+      "recommended_milestones": 7,
+      "recommended_milestones_rationale": "gap_score=1.00 (>0.90): extreme gap, at most 7 milestones",
+      "recommended_modules_per_milestone": 4,
+      "recommended_modules_per_milestone_rationale": "breadth=7 domains (≥6): at most 4 modules per milestone",
+      "recommended_skill_density": 5,
+      "recommended_skill_density_rationale": "domain=data market norm=5 skills max per module",
+      "skill_readiness_score": 0.0,
+      "beginner_penalties": {
+        "career_transition": 0.0,
+        "foundation": 0.25,
+        "domain_switch": 0.2,
+        "readiness": 0.2,
+        "zero_experience": 0.15
+      },
+      "reasoning": "Gap analysis: identity_distance=0.60; experience_mod=0.30; career_penalty=0.00; foundation_penalty=0.25; domain_penalty=0.20; readiness_penalty=0.20; zero_exp_penalty=0.15; skill_mod=0.00; gap_score=1.00. Milestones: gap_score=1.00 (>0.90): extreme gap, at most 7 milestones. Modules: gap_score=1.00 (>0.70): wide gap, at most 4 modules. Skills: gap_score=1.00; gap>0.50 → +1; gap>0.75 → +1; max=5."
+    },
+    "customer_profile": {
+      "current_identity": "",
+      "target_identity": "Data Scientist",
+      "years_experience": 0,
+      "weekly_hours_available": 5,
+      "timeline_days": 112,
+      "current_salary_lpa": 0,
+      "known_skills": [],
+      "self_efficacy": 0.5,
+      "_provenance": {
+        "target_identity": "onboarding_json"
+      }
+    },
+    "locked_milestone_count": 7,
+    "locked_module_count": 4,
+    "locked_skill_density": 5,
+    "capability_breadth": {
+      "breadth_score": 1.0,
+      "required_domains": [
+        "data_modeling",
+        "statistics",
+        "ml_pipelines",
+        "deployment",
+        "foundations",
+        "scalability",
+        "advanced_architecture"
+      ]
+    },
+    "catalog_stats": {
+      "coverage": 0.621,
+      "mapped": 18,
+      "total": 29,
+      "missing": [
+        "Python Fundamentals",
+        "Powerbi",
+        "Matplotlib & Seaborn for Visualization",
+        "Basic Statistics for Data Analysis",
+        "SQL for Data Retrieval",
+        "Tableau",
+        "Etl",
+        "Statistics",
+        "Analytics",
+        "Powerbi",
+        "Powerbi"
+      ]
+    },
+    "quality_validators": {
+      "schema_validation": {
+        "pass": true,
+        "reason": "Schema valid — all required fields present"
+      },
+      "scaffolding": {
+        "pass": true,
+        "reason": "Scaffolding progressive — dependencies build correctly"
+      },
+      "ai_tags": {
+        "pass": true,
+        "reason": "All skills have valid ai_metadata tags"
+      },
+      "capability_breadth": {
+        "pass": false,
+        "reason": "Missing required domains: advanced_architecture, data_modeling, foundations, scalability",
+        "missing": [
+          "advanced_architecture",
+          "data_modeling",
+          "foundations",
+          "scalability"
+        ]
+      },
+      "deployment": {
+        "pass": true,
+        "reason": "All projects have deploy_required=True"
+      },
+      "science_distribution": {
+        "pass": true,
+        "reason": "All milestones have valid science counts",
+        "details": [
+          "M01 → scenarios=2 interviews=1 PASS",
+          "M02 → scenarios=2 interviews=1 PASS"
+        ]
+      },
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": true,
+        "reason": "All projects have meaningful implementation + deployment"
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "No forbidden skills for this target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "Catalog coverage: 60% (15/25) — below 85% threshold",
+        "coverage": 0.6,
+        "mapped": 15,
+        "total": 25,
+        "missing": [
+          "Python Fundamentals",
+          "Powerbi",
+          "Matplotlib & Seaborn for Visualization",
+          "Basic Statistics for Data Analysis",
+          "SQL for Data Retrieval",
+          "Tableau",
+          "Etl",
+          "Statistics",
+          "Analytics",
+          "Powerbi"
+        ]
+      },
+      "catalog_quality": {
+        "pass": false,
+        "reason": "10/25 skills unmapped; low-confidence: SKILL_M02_M2_S5 conf=0.75"
+      },
+      "role_alignment": {
+        "pass": true,
+        "reason": "Role alignment: 100% (25/25) — OK",
+        "coverage": 1.0,
+        "matched": 25,
+        "total": 25
+      },
+      "capability_gap_alignment": {
+        "pass": false,
+        "reason": "Milestone M02: 7 modules exceed max bound 4; Module M2.3: 1 skills below minimum 3; Module M2.4: 1 skills below minimum 3; Module M2.5: 1 skills below minimum 3; Module M2.6: 1 skills below minimum 3; Module M2.7: 1 skills below minimum 3"
+      },
+      "dynamic_structure": {
+        "pass": false,
+        "reason": "M02 modules=7 outside [2,4]; M2.3 skills=1 outside [3,8]; M2.4 skills=1 outside [3,8]; M2.5 skills=1 outside [3,8]; M2.6 skills=1 outside [3,8]; M2.7 skills=1 outside [3,8]",
+        "details": {
+          "fingerprint": "ms(2):[2,7]:[5,5,5,5,1,1,1,1,1]",
+          "milestones": 2,
+          "module_counts": [
+            2,
+            7
+          ],
+          "skill_counts": [
+            5,
+            5,
+            5,
+            5,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": false,
+      "duration_weeks": 21,
+      "budget_hours": 84.0,
+      "demand_hours": 81.3,
+      "weekly_hours_needed": 6.4,
+      "breakdown": {
+        "video_hours": 21.8,
+        "mastery_hours": 43.5,
+        "scenario_hours": 2.0,
+        "interview_hours": 2.0,
+        "project_hours": 12.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": false,
+        "duration_weeks": 21,
+        "budget_hours": 84.0,
+        "demand_hours": 81.3,
+        "weekly_hours_needed": 6.4,
+        "breakdown": {
+          "video_hours": 21.8,
+          "mastery_hours": 43.5,
+          "scenario_hours": 2.0,
+          "interview_hours": 2.0,
+          "project_hours": 12.0
+        }
+      },
+      "time_budget": {
+        "pass": true,
+        "reason": "estimated 61.0h within 125% of budget 64.0h",
+        "budget_hours": 64.0,
+        "estimated_total_hours": 61.0
+      },
+      "starts_where_they_are": {
+        "pass": false,
+        "reason": "19/29 skills misaligned: SKILL_M01_M1_S1 p=0 prior=0.25 diff=0.250; SKILL_M01_M1_S2 p=0 prior=0.236 diff=0.236; SKILL_M01_M1_S3 p=0 prior=0.242 diff=0.242; SKILL_M01_M1_S4 p=0 prior=0.239 diff=0.239; SKILL_M01_M1_S5 p=0 prior=0.235 diff=0.235"
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "beginner or no known_skills — skip check"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 10% (3/29). Full JD validation pending.",
+        "filler_ratio": 0.103,
+        "total_skills": 29
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": false,
+        "reason": "4 DAG violation(s)",
+        "violations": [
+          "Milestone M02: duplicate skill content 'sql'",
+          "Milestone M02: duplicate skill content 'powerbi'",
+          "Milestone M02: duplicate skill content 'pandas'",
+          "Milestone M02: duplicate skill content 'python'"
+        ]
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "Coverage warnings: Milestone M01 missing layer(s): deployment, vibe_architecture; Milestone M02 missing layer(s): deployment, vibe_planning",
+        "violations": [],
+        "warns": [
+          "Milestone M01 missing layer(s): deployment, vibe_architecture",
+          "Milestone M02 missing layer(s): deployment, vibe_planning"
+        ]
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "not applicable for low ICP"
+      },
+      "capability_gap_alignment": {
+        "pass": false,
+        "reason": "Milestone M02: 11 modules exceed max bound 4; Module M2.3: 1 skills below minimum 3; Module M2.4: 1 skills below minimum 3; Module M2.5: 1 skills below minimum 3; Module M2.6: 1 skills below minimum 3; Module M2.7: 1 skills below minimum 3; Module M2.8: 1 skills below minimum 3; Module M2.9: 1 skills below minimum 3; Module M2.10: 1 skills below minimum 3; Module M2.10: 1 skills below minimum 3"
+      }
+    }
+  }
+}

@@ -1,0 +1,4508 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "ai_generated_user",
+  "roadmap_id": "ai_roadmap_20260618094101_101c78d0",
+  "generated_at": "2026-06-18T09:47:31.237848",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260618094101_101c78d0",
+    "user_id": "ai_generated_user",
+    "icp_type": "low",
+    "level": "beginner",
+    "target_role": "Software Engineer at a Product-Based Company",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 142.5,
+    "budget_hours": 64.0,
+    "milestone_count_rationale": "6 milestones: Rohan is an intermediate web developer targeting a Software Engineer role at a product company. This requires a significant transformation across Advanced DSA, System Design, and Interview Problem Solving. Six distinct identity transitions are necessary to bridge this wide capability gap within the given time, ensuring each step is a market-recognized identity from a Foundational Problem Solver to an Interview-Ready Software Engineer.",
+    "vision_profile": {
+      "current_state": "A Web Developer with 2 years of experience, comfortable with Python, Django, and basic DSA.",
+      "main_blocker": "Struggles with advanced DSA, system design, and interview problem-solving skills required by product-based companies.",
+      "top_motivation": "To achieve significant career growth by transitioning into a Software Engineer role at a good product company within 90 days."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-18T09:46:29.133472",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice",
+        "Deliberate Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Foundational Problem Solver",
+        "sal": "₹8-12 LPA",
+        "o": "The learner can confidently analyze, design, and implement efficient solutions for complex algorithmic problems using advanced data structures and problem-solving paradigms.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "3 modules: This milestone focuses on building a strong foundation in advanced data structures, algorithms, and strategic problem-solving, which are distinct but highly interconnected capabilities essential for coding interviews.",
+        "identity_statement": "I am becoming a Foundational Problem Solver, capable of breaking down and efficiently solving complex technical challenges.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Optimized Ride-Sharing Matching Engine",
+          "vibe_layers": [
+            "vibe_planning",
+            "vibe_solution",
+            "deployment"
+          ],
+          "description": "Design and implement a core matching algorithm for a ride-sharing service, focusing on optimal driver-passenger pairing using advanced data structures and algorithms. The solution must handle real-time updates and demonstrate efficiency.",
+          "deliverable": "A functional Python application with unit tests, performance benchmarks, and a brief design document explaining algorithmic choices.",
+          "seeded_errors": [
+            "The initial AI-generated matching algorithm uses a brute-force approach, leading to O(N^2) complexity for N drivers, which fails performance tests for large datasets."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Advanced Data Structures",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "3 skills: This module focuses on the most critical advanced data structures frequently encountered in product company interviews, building directly on the learner's basic DSA knowledge.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "trees_graphs",
+                "title": "Trees and Graphs",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Mastery of trees and graphs is fundamental for modeling complex relationships and optimizing search/traversal problems, critical for many product company challenges.",
+                "lessons": [
+                  "Tree Traversal Algorithms"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Trees and Graphs Fundamentals",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Optimizing Network Routing with Graphs",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "heaps_priority_queues",
+                "title": "Heaps and Priority Queues",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Heaps are essential for efficient retrieval of min/max elements, crucial for scheduling, event processing, and various optimization problems.",
+                "lessons": [
+                  "Heap Data Structure & Operations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.242,
+                    "learn_rate": 0.144,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Heaps and Priority Queues in Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Real-time Task Scheduler with Priority Queues",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "hash_tables_sets",
+                "title": "Advanced Hash Tables and Sets",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Deep understanding of hash table mechanics and collision resolution is vital for optimizing lookup times and managing unique data efficiently in various applications.",
+                "lessons": [
+                  "Hash Collisions & Resolution"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.225,
+                    "learn_rate": 0.13,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Hash Table Performance Considerations",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Debugging Hash Collision Performance Issues",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical service experiences slow lookups under high load; identify if hash table collisions are the root cause and propose a fix."
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Advanced Algorithms",
+            "ai_first_layer": "vibe_solution",
+            "free": true,
+            "vis": "code+ppt",
+            "skill_count_rationale": "3 skills: This module covers core advanced algorithmic paradigms, moving beyond basic sorting/searching to more complex problem-solving techniques like dynamic programming and graph algorithms.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "dynamic_programming",
+                "title": "Dynamic Programming",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Dynamic Programming is a powerful technique for solving complex optimization problems by breaking them into overlapping subproblems, a common pattern in product company interviews.",
+                "lessons": [
+                  "Memoization vs. Tabulation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Introduction to Dynamic Programming",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S1",
+                    "title": "Optimizing Resource Allocation with DP",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "graph_algorithms",
+                "title": "Advanced Graph Algorithms",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Advanced graph algorithms like Dijkstra's, Floyd-Warshall, and MST are crucial for solving complex network, routing, and dependency problems in real-world systems.",
+                "lessons": [
+                  "Shortest Path Algorithms (Dijkstra, Bellman-Ford)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.223,
+                    "learn_rate": 0.128,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Advanced Graph Traversal Techniques",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S2",
+                    "title": "Finding Optimal Delivery Routes",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "greedy_algorithms",
+                "title": "Greedy Algorithms",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Greedy algorithms offer efficient solutions for problems where a locally optimal choice leads to a globally optimal solution, a common pattern in competitive programming and interviews.",
+                "lessons": [
+                  "Proof of Correctness for Greedy Algorithms"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.225,
+                    "learn_rate": 0.13,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "When to Apply Greedy Algorithms",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M2_S3",
+                    "title": "Resource Allocation with Greedy Strategy",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new feature requires optimizing a sequence of tasks; determine if a greedy approach is suitable and implement it, or explain why not."
+              }
+            ]
+          },
+          {
+            "id": "M1.3",
+            "title": "Problem Solving Strategies",
+            "ai_first_layer": "vibe_planning",
+            "free": true,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "3 skills: This module focuses on meta-skills for approaching and solving algorithmic problems, crucial for interview performance beyond just knowing algorithms.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M3_S1",
+                "n": "problem_decomposition",
+                "title": "Problem Decomposition & Abstraction",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Breaking down complex problems into manageable sub-problems is a critical skill for both coding interviews and real-world software engineering.",
+                "lessons": [
+                  "Identifying Subproblems"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.25,
+                    "learn_rate": 0.15,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S1",
+                    "title": "Structured Problem Solving Approach",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S1",
+                    "title": "Decomposing a Complex Interview Problem",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S2",
+                "n": "time_space_complexity",
+                "title": "Advanced Time & Space Complexity Analysis",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Accurate complexity analysis is crucial for evaluating algorithm efficiency, optimizing solutions, and communicating technical trade-offs in interviews and design discussions.",
+                "lessons": [
+                  "Amortized Analysis"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.223,
+                    "learn_rate": 0.128,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S2",
+                    "title": "Mastering Big O Notation",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S2",
+                    "title": "Refactoring for Optimal Complexity",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M01_M3_S3",
+                "n": "test_case_generation",
+                "title": "Test Case Generation & Edge Cases",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Identifying and handling edge cases is crucial for robust solutions and demonstrates thoroughness in technical interviews, preventing common pitfalls.",
+                "lessons": [
+                  "Boundary Conditions & Invalid Inputs"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.235,
+                    "learn_rate": 0.138,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M3_S3",
+                    "title": "Strategies for Handling Edge Cases",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M3_S3",
+                    "title": "Identifying Edge Cases in a String Manipulation Problem",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Design an algorithm to find the Kth largest element in a stream of numbers. Discuss time and space complexity, and handle edge cases."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "System Design Associate",
+        "sal": "₹10-15 LPA",
+        "o": "The learner can understand, analyze, and contribute to the high-level design of scalable and reliable software systems, identifying key components and trade-offs.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "3 modules: This milestone introduces the foundational pillars of system design: overall architecture, data persistence, and inter-service communication, each representing a distinct capability cluster.",
+        "identity_statement": "I am evolving into a System Design Associate, capable of understanding and contributing to the architectural decisions of robust software systems.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Distributed URL Shortener Service",
+          "vibe_layers": [
+            "vibe_architecture",
+            "vibe_planning",
+            "deployment"
+          ],
+          "description": "Design a highly available and scalable URL shortening service, considering components like API gateway, database, caching, and unique ID generation. Focus on the high-level architecture and data flow.",
+          "deliverable": "A detailed system design document including architectural diagrams, API specifications, and database schema, along with a basic proof-of-concept for ID generation.",
+          "seeded_errors": [
+            "The AI-generated design initially proposes a single database instance for all URL mappings, which would become a severe bottleneck under high write load."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Foundations of System Design",
+            "ai_first_layer": "vibe_architecture",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "3 skills: This module establishes core system design principles and common architectural patterns, essential for understanding how large-scale systems are built.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "system_design_principles",
+                "title": "Foundations of System Design",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Understanding principles like scalability, reliability, and maintainability is crucial for designing robust systems and making informed architectural trade-offs.",
+                "lessons": [
+                  "CAP Theorem & Trade-offs"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.18,
+                    "learn_rate": 0.166,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Introduction to System Design",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Choosing Consistency Model for a Financial Service",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "load_balancing",
+                "title": "API Design & Service Layer",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Load balancing is critical for distributing traffic, ensuring high availability, and scaling applications horizontally in distributed systems.",
+                "lessons": [
+                  "Layer 4 vs. Layer 7 Load Balancers"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.202,
+                    "learn_rate": 0.184,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Implementing Load Balancers",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Traffic Spikes and Load Balancer Configuration",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "api_design",
+                "title": "API Design & Service Layer",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "planning",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Well-designed APIs are the backbone of modern distributed systems, enabling clear communication and integration between services and clients.",
+                "lessons": [
+                  "RESTful API Principles"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.185,
+                    "learn_rate": 0.17,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "API Gateway Patterns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Designing a Public API for a New Service",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new microservice needs to expose an API. Design the API endpoints, request/response formats, and authentication mechanisms."
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "Databases & Storage",
+            "ai_first_layer": "vibe_architecture",
+            "free": false,
+            "vis": "notebook+ppt",
+            "skill_count_rationale": "3 skills: This module covers various data storage solutions and their appropriate use cases, a critical aspect of any scalable system design.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "sql_nosql_databases",
+                "title": "SQL vs NoSQL",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Choosing the right database is fundamental for system performance, scalability, and data integrity. Understanding the trade-offs is essential.",
+                "lessons": [
+                  "Relational Database Design"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.21,
+                    "learn_rate": 0.19,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Database Selection for Scalability",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S1",
+                    "title": "Migrating from SQL to NoSQL for User Profiles",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "database_sharding",
+                "title": "Sharding",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "optimization",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Sharding and replication are essential techniques for scaling databases horizontally and ensuring high availability and fault tolerance in large-scale systems.",
+                "lessons": [
+                  "Sharding Strategies (Range, Hash, Directory)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.202,
+                    "learn_rate": 0.184,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Scaling Databases with Sharding",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S2",
+                    "title": "Designing a Sharding Key for a Social Media Feed",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "distributed_file_systems",
+                "title": "RAG",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "planning",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Understanding how large files and unstructured data are stored and accessed in distributed environments is crucial for handling media, backups, and big data.",
+                "lessons": [
+                  "HDFS Architecture & Concepts"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.185,
+                    "learn_rate": 0.17,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Introduction to Distributed Storage",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M2_S3",
+                    "title": "Storing User-Generated Content at Scale",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "generative_ai",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new feature requires storing large user-uploaded video files. Design a storage solution that is scalable, cost-effective, and highly available."
+              }
+            ]
+          },
+          {
+            "id": "M2.3",
+            "title": "Networking & Communication",
+            "ai_first_layer": "vibe_planning",
+            "free": false,
+            "vis": "ppt+code",
+            "skill_count_rationale": "3 skills: This module covers the fundamental communication protocols and patterns that enable services to interact in a distributed environment, crucial for understanding system behavior.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M3_S1",
+                "n": "tcp_ip_http",
+                "title": "TCP/IP and HTTP Protocols",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "A deep understanding of network protocols is essential for debugging connectivity issues, optimizing network performance, and designing robust communication between services.",
+                "lessons": [
+                  "TCP Handshake & Congestion Control"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.21,
+                    "learn_rate": 0.19,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S1",
+                    "title": "Network Layers Explained",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S1",
+                    "title": "Diagnosing High Latency in a Web Application",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S2",
+                "n": "message_queues",
+                "title": "Message Queues",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "automation",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Asynchronous communication via message queues and event streams is vital for decoupling services, handling back pressure, and building resilient distributed systems.",
+                "lessons": [
+                  "RabbitMQ vs. Kafka"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.202,
+                    "learn_rate": 0.184,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S2",
+                    "title": "Asynchronous Communication Patterns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S2",
+                    "title": "Designing an Asynchronous Notification System",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M3_S3",
+                "n": "rpc_grpc",
+                "title": "RPC and gRPC",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "gRPC offers high-performance, language-agnostic communication, making it a preferred choice for internal microservice communication in many product companies.",
+                "lessons": [
+                  "Protocol Buffers & IDL"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.195,
+                    "learn_rate": 0.178,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M3_S3",
+                    "title": "Building gRPC Services in Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M3_S3",
+                    "title": "Integrating a New Service with gRPC",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Design a system to handle millions of concurrent users for a live polling application. Discuss scalability, data storage, and communication protocols."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M03",
+        "label": "M03",
+        "t": "Backend Systems Engineer",
+        "sal": "₹12-18 LPA",
+        "o": "The learner can design and implement robust, scalable, and fault-tolerant backend services, understanding the complexities of distributed systems and microservices architectures.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "3 modules: This milestone focuses on advanced aspects of distributed systems, microservices, and performance optimization, which are distinct yet interconnected capabilities for building complex backend services.",
+        "identity_statement": "I am becoming a Backend Systems Engineer, capable of building and scaling the core services that power modern applications.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Scalable E-commerce Product Catalog Service",
+          "vibe_layers": [
+            "vibe_architecture",
+            "vibe_solution",
+            "deployment"
+          ],
+          "description": "Develop a microservice-based product catalog for an e-commerce platform, handling product data, search, and inventory. Focus on distributed data consistency, caching, and API design for high throughput.",
+          "deliverable": "A set of interconnected microservices (e.g., using Docker Compose), API documentation, and a report on chosen scaling strategies and consistency models.",
+          "seeded_errors": [
+            "The AI-generated microservice interaction pattern leads to a distributed transaction problem, causing inventory inconsistencies when multiple services update product stock simultaneously."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M3.1",
+            "title": "Distributed Systems",
+            "ai_first_layer": "vibe_architecture",
+            "free": false,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "3 skills: This module delves into the core challenges and solutions inherent in distributed computing, providing a solid theoretical and practical understanding.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M1_S1",
+                "n": "distributed_consensus",
+                "title": "Distributed Systems",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Understanding consensus algorithms is crucial for building fault-tolerant and consistent distributed systems, especially for critical services like leader election or distributed locks.",
+                "lessons": [
+                  "Raft Consensus Algorithm Explained"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.16,
+                    "learn_rate": 0.222,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S1",
+                    "title": "Introduction to Distributed Consensus",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S1",
+                    "title": "Implementing a Distributed Lock Service",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S2",
+                "n": "distributed_transactions",
+                "title": "Distributed Transactions & Sagas",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "planning",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Managing data consistency across multiple services is a major challenge in distributed systems; understanding patterns like Sagas is essential for reliable microservice interactions.",
+                "lessons": [
+                  "Two-Phase Commit (2PC) Limitations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.152,
+                    "learn_rate": 0.216,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S2",
+                    "title": "Achieving Consistency in Distributed Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S2",
+                    "title": "Ensuring Order Fulfillment Consistency",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M03_M1_S3",
+                "n": "fault_tolerance_resilience",
+                "title": "Fault Tolerance & Resilience Patterns",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Designing systems that can gracefully handle failures is paramount for high availability; patterns like Circuit Breaker and Bulkhead are essential for resilience.",
+                "lessons": [
+                  "Circuit Breaker Pattern"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.145,
+                    "learn_rate": 0.21,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M1_S3",
+                    "title": "Building Resilient Microservices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M1_S3",
+                    "title": "Implementing a Circuit Breaker for a Third-Party API",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A payment processing service frequently experiences timeouts with an external API. Design a fault-tolerant integration strategy."
+              }
+            ]
+          },
+          {
+            "id": "M3.2",
+            "title": "Microservices Architecture",
+            "ai_first_layer": "vibe_architecture",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "3 skills: This module focuses on the practical aspects of designing, implementing, and managing microservices, a dominant architectural style in product companies.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M2_S1",
+                "n": "microservice_patterns",
+                "title": "Behavioral Design Patterns",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "planning",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Understanding common microservice patterns helps in building well-structured, maintainable, and scalable distributed applications.",
+                "lessons": [
+                  "Service Discovery & Registration"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.214,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S1",
+                    "title": "Decomposing Monoliths to Microservices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S1",
+                    "title": "Designing a New Microservice Boundary",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S2",
+                "n": "containerization_docker",
+                "title": "Docker & Containerization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Docker is the industry standard for packaging and deploying microservices, ensuring consistency across development, testing, and production environments.",
+                "lessons": [
+                  "Dockerfile Best Practices"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.152,
+                    "learn_rate": 0.216,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S2",
+                    "title": "Introduction to Docker for Microservices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S2",
+                    "title": "Containerizing a Python Microservice",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M2_S3",
+                "n": "orchestration_kubernetes",
+                "title": "Kubernetes & Orchestration",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Kubernetes is the de facto standard for deploying, scaling, and managing containerized applications, essential for operating microservices at scale.",
+                "lessons": [
+                  "Kubernetes Pods, Deployments, Services"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.145,
+                    "learn_rate": 0.21,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M2_S3",
+                    "title": "Kubernetes Fundamentals",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M2_S3",
+                    "title": "Deploying a Microservice to Kubernetes",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A microservice deployment on Kubernetes is failing to start. Debug the Pod events, logs, and YAML configuration to identify and fix the issue."
+              }
+            ]
+          },
+          {
+            "id": "M3.3",
+            "title": "Scalability & Performance",
+            "ai_first_layer": "vibe_solution",
+            "free": false,
+            "vis": "notebook+code",
+            "skill_count_rationale": "3 skills: This module focuses on practical techniques and strategies to optimize system performance and ensure scalability under varying loads, a core concern for product companies.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M03_M3_S1",
+                "n": "caching_strategies",
+                "title": "Caching & Performance Optimization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Caching is a fundamental technique for improving performance and reducing database load in high-traffic applications. Understanding different strategies is key.",
+                "lessons": [
+                  "Cache-Aside vs. Write-Through"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.17,
+                    "learn_rate": 0.23,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S1",
+                    "title": "Introduction to Distributed Caching",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S1",
+                    "title": "Implementing a Cache for Product Details",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S2",
+                "n": "database_indexing",
+                "title": "Database Indexing & Query Optimization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Optimizing database queries and leveraging indexes are critical for ensuring fast data retrieval and preventing performance bottlenecks in data-intensive applications.",
+                "lessons": [
+                  "B-Tree vs. Hash Indexes"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.152,
+                    "learn_rate": 0.216,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S2",
+                    "title": "Advanced SQL Query Optimization",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S2",
+                    "title": "Optimizing a Slow Database Query",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M03_M3_S3",
+                "n": "concurrency_parallelism",
+                "title": "Concurrency & Multithreading",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Leveraging concurrency and parallelism is essential for maximizing resource utilization and improving the responsiveness and throughput of backend services.",
+                "lessons": [
+                  "Threads vs. Processes vs. AsyncIO"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.155,
+                    "learn_rate": 0.218,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M03_M3_S3",
+                    "title": "Python Concurrency Best Practices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M03_M3_S3",
+                    "title": "Optimizing a CPU-Bound Task with Multiprocessing",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M03_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Design a system for a real-time analytics dashboard that processes millions of events per second. Discuss data ingestion, processing, storage, and display."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M04",
+        "label": "M04",
+        "t": "Software Design Specialist",
+        "sal": "₹15-22 LPA",
+        "o": "The learner can apply advanced object-oriented design principles, design patterns, and concurrency models to build clean, maintainable, and extensible software components.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "3 modules: This milestone focuses on the core principles of low-level software design: object-oriented foundations, common design patterns, and handling concurrent execution, each representing a distinct capability for writing high-quality code.",
+        "identity_statement": "I am becoming a Software Design Specialist, crafting elegant and robust code that stands the test of time.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Extensible Plugin Architecture for a Text Editor",
+          "vibe_layers": [
+            "vibe_architecture",
+            "vibe_solution",
+            "vibe_planning"
+          ],
+          "description": "Design and implement a core text editor component with an extensible plugin architecture using OOP principles and design patterns. The editor should support adding new features without modifying core code.",
+          "deliverable": "A Python application demonstrating the plugin architecture, with at least two example plugins, and a design document detailing the applied OOP and design patterns.",
+          "seeded_errors": [
+            "The AI-generated initial design for plugin integration violates the Open/Closed Principle, requiring core editor modifications for every new plugin."
+          ],
+          "deploy_required": false
+        },
+        "modules": [
+          {
+            "id": "M4.1",
+            "title": "OOP & SOLID Principles",
+            "ai_first_layer": "vibe_solution",
+            "free": false,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "3 skills: This module reinforces fundamental object-oriented programming concepts and introduces the critical SOLID principles for writing maintainable and scalable code.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M1_S1",
+                "n": "oop_advanced",
+                "title": "Advanced OOP Concepts",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "A deep understanding of OOP is foundational for designing modular, reusable, and maintainable software components, especially in large codebases.",
+                "lessons": [
+                  "Inheritance vs. Composition"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.12,
+                    "learn_rate": 0.262,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M03_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S1",
+                    "title": "Mastering Object-Oriented Design",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S1",
+                    "title": "Refactoring a Monolithic Class into Modular Components",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S2",
+                "n": "solid_principles",
+                "title": "SOLID Principles",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "SOLID principles are guidelines for writing clean, maintainable, and extensible code, directly addressing common pitfalls in software design.",
+                "lessons": [
+                  "Single Responsibility Principle (SRP)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.113,
+                    "learn_rate": 0.256,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S2",
+                    "title": "Applying SOLID in Practice",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S2",
+                    "title": "Refactoring a God Object to Adhere to SRP",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M04_M1_S3",
+                "n": "dependency_injection",
+                "title": "Dependency Injection",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "DI and IoC are powerful techniques for decoupling components, making code more testable, flexible, and easier to maintain in complex applications.",
+                "lessons": [
+                  "Constructor vs. Setter Injection"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.115,
+                    "learn_rate": 0.258,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M1_S3",
+                    "title": "Implementing Dependency Injection",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M1_S3",
+                    "title": "Making a Legacy System Testable with DI",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new feature requires integrating with a third-party service. Design the integration using Dependency Injection to ensure testability and flexibility."
+              }
+            ]
+          },
+          {
+            "id": "M4.2",
+            "title": "Design Patterns",
+            "ai_first_layer": "vibe_architecture",
+            "free": false,
+            "vis": "ppt+code",
+            "skill_count_rationale": "3 skills: This module introduces widely recognized design patterns, providing a vocabulary and toolkit for solving common software design problems efficiently and elegantly.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M2_S1",
+                "n": "creational_patterns",
+                "title": "Behavioral Design Patterns",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Creational patterns provide flexible ways to create objects, decoupling the client from the concrete implementation and improving system flexibility.",
+                "lessons": [
+                  "Singleton & Factory Method"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.11,
+                    "learn_rate": 0.254,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S1",
+                    "title": "Introduction to Creational Patterns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S1",
+                    "title": "Designing a Flexible Object Creation System",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S2",
+                "n": "structural_patterns",
+                "title": "Behavioral Design Patterns",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Structural patterns help compose objects and classes into larger structures while maintaining flexibility and efficiency, crucial for building complex systems.",
+                "lessons": [
+                  "Adapter & Decorator Patterns"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.103,
+                    "learn_rate": 0.248,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S2",
+                    "title": "Applying Structural Patterns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S2",
+                    "title": "Integrating a Legacy API with the Adapter Pattern",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M04_M2_S3",
+                "n": "behavioral_patterns",
+                "title": "Behavioral Design Patterns",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "planning",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Behavioral patterns focus on object interaction and responsibility, improving communication and flexibility within complex systems.",
+                "lessons": [
+                  "Observer & Strategy Patterns"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.095,
+                    "learn_rate": 0.242,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M2_S3",
+                    "title": "Understanding Behavioral Patterns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M2_S3",
+                    "title": "Implementing a Notification System with Observer Pattern",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new feature requires different sorting algorithms based on user preference. Implement this using the Strategy Pattern."
+              }
+            ]
+          },
+          {
+            "id": "M4.3",
+            "title": "Concurrency & Multithreading",
+            "ai_first_layer": "vibe_planning",
+            "free": false,
+            "vis": "code+animation",
+            "skill_count_rationale": "3 skills: This module focuses on the intricacies of concurrent programming, including synchronization, thread safety, and common pitfalls, essential for high-performance applications.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M04_M3_S1",
+                "n": "thread_safety",
+                "title": "Safety",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Ensuring thread safety is paramount in concurrent applications to prevent data corruption and race conditions, leading to robust and predictable behavior.",
+                "lessons": [
+                  "Locks, Mutexes, Semaphores"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.13,
+                    "learn_rate": 0.27,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S1",
+                    "title": "Concurrency Primitives in Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S1",
+                    "title": "Debugging a Race Condition in a Shared Resource",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "generative_ai",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M04_M3_S2",
+                "n": "producer_consumer",
+                "title": "Producer Consumer",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "The Producer-Consumer pattern is a fundamental concurrency pattern for decoupling tasks and managing data flow between different parts of a system, improving throughput and responsiveness.",
+                "lessons": [
+                  "Bounded Buffer Implementation"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.122,
+                    "learn_rate": 0.264,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S2",
+                    "title": "Implementing Producer-Consumer in Python",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S2",
+                    "title": "Building a Concurrent Data Processing Pipeline",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M04_M3_S3",
+                "n": "async_io",
+                "title": "Asynchronous I/O with AsyncIO",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "AsyncIO is Python's native way to handle concurrent I/O operations efficiently, crucial for building high-performance network applications and web services.",
+                "lessons": [
+                  "Event Loop & Coroutines"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.115,
+                    "learn_rate": 0.258,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M04_M3_S3",
+                    "title": "Advanced AsyncIO Patterns",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M04_M3_S3",
+                    "title": "Building a High-Concurrency Web Scraper with AsyncIO",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M04_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Design a system for a multi-user online chat application. Discuss how to handle concurrent connections, message delivery, and scaling."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M05",
+        "label": "M05",
+        "t": "Production-Ready Engineer",
+        "sal": "₹18-25 LPA",
+        "o": "The learner can build, deploy, and maintain production-grade software systems, ensuring reliability, performance, and operational excellence through effective monitoring and testing strategies.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "3 modules: This milestone focuses on the critical aspects of operationalizing software: ensuring reliability, optimizing performance, and establishing robust testing and deployment pipelines, each a distinct capability for production readiness.",
+        "identity_statement": "I am becoming a Production-Ready Engineer, ensuring that software not only works but thrives in real-world environments.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "CI/CD Pipeline for a Microservice",
+          "vibe_layers": [
+            "deployment",
+            "vibe_solution",
+            "vibe_planning"
+          ],
+          "description": "Set up a complete CI/CD pipeline for a given microservice, including automated testing, container image building, and deployment to a staging environment. Implement monitoring and logging.",
+          "deliverable": "A working CI/CD pipeline configuration (e.g., GitHub Actions, GitLab CI), a deployed microservice, and a dashboard showing its operational metrics.",
+          "seeded_errors": [
+            "The AI-generated CI/CD pipeline configuration has a security vulnerability, exposing sensitive environment variables in the build logs."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M5.1",
+            "title": "Reliability & Observability",
+            "ai_first_layer": "deployment",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "3 skills: This module covers the essential practices for monitoring system health, identifying issues, and ensuring continuous operation in production environments.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M1_S1",
+                "n": "monitoring_alerting",
+                "title": "Monitoring & Observability",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Effective monitoring and alerting are critical for quickly detecting and responding to production issues, minimizing downtime and impact on users.",
+                "lessons": [
+                  "Key Metrics for Services"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.302,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M04_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S1",
+                    "title": "Introduction to Prometheus & Grafana",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S1",
+                    "title": "Setting Up Alerts for High CPU Usage",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S2",
+                "n": "logging_tracing",
+                "title": "Monitoring & Observability",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Comprehensive logging and distributed tracing are indispensable for debugging complex issues in microservice architectures and understanding request flows.",
+                "lessons": [
+                  "Structured Logging Best Practices"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.072,
+                    "learn_rate": 0.296,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S2",
+                    "title": "Debugging Microservices with Tracing",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S2",
+                    "title": "Tracing a Failed Request Across Multiple Services",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M05_M1_S3",
+                "n": "site_reliability_engineering",
+                "title": "Feature Engineering",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "SRE principles focus on operational excellence, automation, and error budgeting, essential for maintaining highly reliable and scalable systems in product companies.",
+                "lessons": [
+                  "Service Level Objectives (SLOs) & Error Budgets"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.065,
+                    "learn_rate": 0.29,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M1_S3",
+                    "title": "Introduction to SRE Practices",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M1_S3",
+                    "title": "Conducting a Post-Mortem for a Production Outage",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "machine_learning",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A critical service has an SLO of 99.9% availability. Design a monitoring and alerting strategy to meet this SLO and identify potential breaches."
+              }
+            ]
+          },
+          {
+            "id": "M5.2",
+            "title": "Caching & Performance Optimization",
+            "ai_first_layer": "vibe_solution",
+            "free": false,
+            "vis": "notebook+ppt",
+            "skill_count_rationale": "3 skills: This module deepens the understanding of performance optimization techniques, focusing on advanced caching strategies and efficient resource management.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M2_S1",
+                "n": "distributed_caching",
+                "title": "Caching & Performance Optimization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Distributed caching is essential for scaling high-traffic applications, reducing database load, and improving response times by storing frequently accessed data closer to the application.",
+                "lessons": [
+                  "Redis Data Structures & Use Cases"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.302,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S1",
+                    "title": "Scaling with Redis",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S1",
+                    "title": "Optimizing a Read-Heavy API with Redis Cache",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S2",
+                "n": "content_delivery_networks",
+                "title": "Content Delivery Networks (CDNs)",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "optimization",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "CDNs are vital for delivering static and dynamic content quickly and reliably to users globally, significantly improving user experience and reducing server load.",
+                "lessons": [
+                  "CDN Caching & Edge Locations"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.082,
+                    "learn_rate": 0.304,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S2",
+                    "title": "Leveraging CDNs for Global Performance",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S2",
+                    "title": "Reducing Latency for Global Users with CDN",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M05_M2_S3",
+                "n": "performance_testing",
+                "title": "Testing & QA",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Proactive performance testing helps identify bottlenecks before they impact users, ensuring systems can handle expected and peak loads.",
+                "lessons": [
+                  "Load Testing vs. Stress Testing"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.065,
+                    "learn_rate": 0.29,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M2_S3",
+                    "title": "Automated Performance Testing",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M2_S3",
+                    "title": "Identifying Performance Bottlenecks with Load Testing",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "A new marketing campaign is expected to triple traffic. Design a performance testing plan to ensure the system can handle the increased load."
+              }
+            ]
+          },
+          {
+            "id": "M5.3",
+            "title": "Testing, Logging & DevOps Foundations",
+            "ai_first_layer": "deployment",
+            "free": false,
+            "vis": "code+real_tutor",
+            "skill_count_rationale": "3 skills: This module covers the essential practices for ensuring software quality through various testing types, effective logging, and foundational DevOps principles for efficient delivery.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M05_M3_S1",
+                "n": "unit_integration_testing",
+                "title": "Testing & QA",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Robust unit and integration tests are the first line of defense against bugs, ensuring individual components and their interactions work as expected.",
+                "lessons": [
+                  "Test-Driven Development (TDD)"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.08,
+                    "learn_rate": 0.302,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M3_S1",
+                    "title": "Writing Effective Python Tests",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M3_S1",
+                    "title": "Adding Unit Tests to a Critical Function",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M05_M3_S2",
+                "n": "ci_cd_pipelines",
+                "title": "CI/CD",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "CI/CD pipelines automate the software delivery process, enabling faster, more reliable, and frequent releases, which is standard in product companies.",
+                "lessons": [
+                  "Continuous Integration Best Practices"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.072,
+                    "learn_rate": 0.296,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M3_S2",
+                    "title": "Building a CI/CD Pipeline with GitHub Actions",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M3_S2",
+                    "title": "Troubleshooting a Failed CI/CD Build",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M05_M3_S3",
+                "n": "infrastructure_as_code",
+                "title": "Infrastructure as Code (IaC)",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "automation",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "IaC enables automated, consistent, and repeatable provisioning of infrastructure, reducing manual errors and accelerating deployment cycles.",
+                "lessons": [
+                  "Terraform Fundamentals"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.075,
+                    "learn_rate": 0.298,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M05_M3_S3",
+                    "title": "Introduction to Terraform",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M05_M3_S3",
+                    "title": "Provisioning Cloud Resources with Terraform",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M05_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Explain the principles of DevOps and how CI/CD pipelines contribute to faster and more reliable software delivery."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M06",
+        "label": "M06",
+        "t": "Interview-Ready Software Engineer",
+        "sal": "₹20-30 LPA",
+        "o": "The learner can confidently articulate technical solutions, demonstrate strong problem-solving abilities, and effectively communicate their experience and skills in technical and behavioral interviews for product-based companies.",
+        "sc_n": 2,
+        "iv": 1,
+        "module_count_rationale": "3 modules: This final milestone consolidates all learned skills, focusing specifically on interview performance, behavioral aspects, and career readiness, which are distinct but crucial for securing a target role.",
+        "identity_statement": "I am becoming an Interview-Ready Software Engineer, equipped with the skills and confidence to excel in the most challenging technical interviews.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Mock Interview Simulation & Portfolio Refinement",
+          "vibe_layers": [
+            "vibe_planning",
+            "vibe_solution",
+            "deployment"
+          ],
+          "description": "Conduct a series of full-stack mock interviews (coding, system design, behavioral), receive feedback, and refine your technical portfolio and resume based on identified areas for improvement.",
+          "deliverable": "Recordings of mock interviews, detailed self-reflection and feedback analysis, an updated resume, and a polished online portfolio showcasing key projects.",
+          "seeded_errors": [
+            "During a mock system design interview, the AI-generated solution overlooks a critical security vulnerability related to data encryption at rest."
+          ],
+          "deploy_required": false
+        },
+        "modules": [
+          {
+            "id": "M6.1",
+            "title": "Advanced Interview Problem Solving",
+            "ai_first_layer": "vibe_planning",
+            "free": false,
+            "vis": "real_tutor+code",
+            "skill_count_rationale": "3 skills: This module focuses on refining problem-solving skills specifically for interview settings, including advanced techniques and effective communication during the coding process.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M06_M1_S1",
+                "n": "advanced_dsa_review",
+                "title": "Advanced DSA Review & Practice",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Consistent practice and review of advanced data structures and algorithms are essential to maintain proficiency and speed for coding interviews.",
+                "lessons": [
+                  "Top 10 LeetCode Hard Problems"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.342,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M05_M3_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S1",
+                    "title": "Mastering Interview-Style DSA",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M1_S1",
+                    "title": "Solving a Multi-Dimensional DP Problem",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M06_M1_S2",
+                "n": "system_design_case_studies",
+                "title": "Foundations of System Design",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "decision_support",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Practicing real-world system design case studies is crucial for developing the ability to apply theoretical knowledge to practical, open-ended problems in interviews.",
+                "lessons": [
+                  "Designing a Distributed Cache"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.022,
+                    "learn_rate": 0.328,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S2",
+                    "title": "Deep Dive into System Design Interviews",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M1_S2",
+                    "title": "Designing a Global News Feed Service",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M06_M1_S3",
+                "n": "mock_coding_interviews",
+                "title": "Mock Coding Interviews",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Simulating real coding interviews under timed conditions is essential for building confidence, identifying weaknesses, and refining communication skills.",
+                "lessons": [
+                  "Effective Communication During Coding"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M1_S3",
+                    "title": "Strategies for Acing Coding Interviews",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M1_S3",
+                    "title": "Live Coding Session with Feedback",
+                    "difficulty": 0.9,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_BREADTH_advanced_architecture_7e90",
+                "n": "advanced_architecture",
+                "title": "Foundations of System Design",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_solution",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: advanced_architecture",
+                "lessons": [
+                  "Advanced System Design — Part 1",
+                  "Advanced System Design — Part 2",
+                  "Advanced System Design — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_advanced_architecture_7e90",
+                    "title": "Advanced System Design",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_BREADTH_scalability_d1e1",
+                "n": "scalability",
+                "title": "Scalability & Performance",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_architecture",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: scalability",
+                "lessons": [
+                  "Scalability & Performance — Part 1",
+                  "Scalability & Performance — Part 2",
+                  "Scalability & Performance — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_scalability_d1e1",
+                    "title": "Scalability & Performance",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "You are given a complex coding problem during a mock interview. Articulate your thought process, write clean code, and handle edge cases while communicating effectively."
+              }
+            ]
+          },
+          {
+            "id": "M6.2",
+            "title": "Behavioral & Communication Skills",
+            "ai_first_layer": "vibe_planning",
+            "free": false,
+            "vis": "ppt+real_tutor",
+            "skill_count_rationale": "3 skills: This module focuses on the non-technical but equally critical aspects of interviewing, including articulating experience, handling behavioral questions, and showcasing soft skills.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M06_M2_S1",
+                "n": "star_method",
+                "title": "STAR Method for Behavioral Questions",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "The STAR method provides a structured way to answer behavioral questions, ensuring comprehensive and impactful responses that highlight relevant skills and experiences.",
+                "lessons": [
+                  "Crafting Compelling Stories"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.05,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M1_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S1",
+                    "title": "Mastering Behavioral Interviews",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M2_S1",
+                    "title": "Responding to 'Tell me about a time you failed'",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M06_M2_S2",
+                "n": "technical_communication",
+                "title": "Networking & Communication",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Clearly articulating complex technical concepts is vital for system design interviews, team collaboration, and influencing technical decisions.",
+                "lessons": [
+                  "Explaining System Design Choices"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S2",
+                    "title": "Effective Whiteboard Communication",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M2_S2",
+                    "title": "Presenting a System Design to a Technical Panel",
+                    "difficulty": 0.8,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M06_M2_S3",
+                "n": "negotiation_strategies",
+                "title": "Salary Negotiation Strategies",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Effective salary negotiation can significantly impact career earnings; understanding negotiation tactics is crucial for securing fair compensation.",
+                "lessons": [
+                  "Researching Market Value"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M2_S3",
+                    "title": "Winning Salary Negotiations",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M2_S3",
+                    "title": "Role-playing a Salary Negotiation",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "You receive a job offer. Prepare and execute a salary negotiation strategy to maximize your compensation package."
+              }
+            ]
+          },
+          {
+            "id": "M6.3",
+            "title": "Capstone & Career Readiness",
+            "ai_first_layer": "deployment",
+            "free": false,
+            "vis": "notebook+ppt",
+            "skill_count_rationale": "3 skills: This module focuses on the final steps of career readiness, including refining professional presence, understanding career paths, and continuous learning.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M06_M3_S1",
+                "n": "resume_portfolio_optimization",
+                "title": "Caching & Performance Optimization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "A compelling resume and portfolio are essential for capturing recruiter attention and showcasing your technical capabilities and project experience.",
+                "lessons": [
+                  "Tailoring Resumes for Product Companies"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.04,
+                    "learn_rate": 0.342,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M2_S3"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M3_S1",
+                    "title": "Crafting a Winning Software Engineer Resume",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M3_S1",
+                    "title": "Reviewing and Optimizing Your Resume for ATS",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M3_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M06_M3_S2",
+                "n": "career_path_planning",
+                "title": "Career Path Planning & Growth",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Understanding different career paths and growth opportunities helps in long-term professional development and setting future goals.",
+                "lessons": [
+                  "Individual Contributor vs. Management Track"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.042,
+                    "learn_rate": 0.344,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M3_S1"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M3_S2",
+                    "title": "Navigating Your Software Engineering Career",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M3_S2",
+                    "title": "Developing a 5-Year Career Plan",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M3_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              },
+              {
+                "skill_id": "SKILL_M06_M3_S3",
+                "n": "job_search_strategies",
+                "title": "Effective Job Search Strategies",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "vibe_planning",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "A targeted and strategic job search maximizes opportunities and reduces the time to land a desired role in a product-based company.",
+                "lessons": [
+                  "Networking & Referrals"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.035,
+                    "learn_rate": 0.338,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M06_M3_S2"
+                  ],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M06_M3_S3",
+                    "title": "Optimizing Your Job Search",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M06_M3_S3",
+                    "title": "Crafting a Personalized Outreach Message to a Recruiter",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M06_M3_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "estimated_hours": 1,
+                "catalog_status": "missing"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Participate in a full mock interview simulation covering coding, system design, and behavioral questions, followed by comprehensive feedback and strategy refinement."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "years_experience": 0,
+    "current_salary_lpa": 0,
+    "known_skills": [],
+    "capability_gap": {
+      "gap_score": 1.0,
+      "recommended_milestones": 6,
+      "recommended_milestones_rationale": "authority engine: icp=low level=beginner → range [4,6]; gap_offset=1.00; skill_discount=0.00 (0 known); exp_discount=0.00 (0y exp); time_factor=0.00 (budget=64h); → recommended=6; gap engine had: 7",
+      "recommended_modules_per_milestone": 3,
+      "recommended_modules_per_milestone_rationale": "breadth=3 domains (≥3): at most 3 modules per milestone",
+      "recommended_skill_density": 5,
+      "recommended_skill_density_rationale": "domain=software market norm=6 skills max per module",
+      "skill_readiness_score": 0.0,
+      "beginner_penalties": {
+        "career_transition": 0.0,
+        "foundation": 0.25,
+        "domain_switch": 0.0,
+        "readiness": 0.2,
+        "zero_experience": 0.15
+      },
+      "reasoning": "Gap analysis: identity_distance=0.60; experience_mod=0.30; career_penalty=0.00; foundation_penalty=0.25; domain_penalty=0.00; readiness_penalty=0.20; zero_exp_penalty=0.15; skill_mod=0.00; gap_score=1.00. Milestones: gap_score=1.00 (>0.90): extreme gap, at most 7 milestones. Modules: gap_score=1.00 (>0.70): wide gap, at most 4 modules. Skills: gap_score=1.00; gap>0.50 → +1; gap>0.75 → +1; max=5."
+    },
+    "customer_profile": {
+      "current_identity": "",
+      "target_identity": "",
+      "years_experience": 0,
+      "weekly_hours_available": 5,
+      "timeline_days": 112,
+      "current_salary_lpa": 0,
+      "known_skills": [],
+      "self_efficacy": 0.5,
+      "_provenance": {}
+    },
+    "milestone_range": {
+      "recommended": 6,
+      "minimum": 4,
+      "maximum": 6,
+      "confidence": 0.8,
+      "reasoning": "icp=low level=beginner → range [4,6]; gap_offset=1.00; skill_discount=0.00 (0 known); exp_discount=0.00 (0y exp); time_factor=0.00 (budget=64h); → recommended=6"
+    },
+    "locked_milestone_count": 6,
+    "locked_module_count": 3,
+    "locked_skill_density": 5,
+    "capability_breadth": {
+      "breadth_score": 0.6,
+      "required_domains": [
+        "foundations",
+        "scalability",
+        "advanced_architecture"
+      ]
+    },
+    "catalog_stats": {
+      "coverage": 0.571,
+      "mapped": 32,
+      "total": 56,
+      "missing": [
+        "Trees and Graphs",
+        "Heaps and Priority Queues",
+        "Advanced Hash Tables and Sets",
+        "Dynamic Programming",
+        "Advanced Graph Algorithms",
+        "Greedy Algorithms",
+        "Problem Decomposition & Abstraction",
+        "Advanced Time & Space Complexity Analysis",
+        "Test Case Generation & Edge Cases",
+        "TCP/IP and HTTP Protocols",
+        "RPC and gRPC",
+        "Distributed Transactions & Sagas",
+        "Fault Tolerance & Resilience Patterns",
+        "Database Indexing & Query Optimization",
+        "Advanced OOP Concepts",
+        "Asynchronous I/O with AsyncIO",
+        "Content Delivery Networks (CDNs)",
+        "Infrastructure as Code (IaC)",
+        "Advanced DSA Review & Practice",
+        "Mock Coding Interviews",
+        "STAR Method for Behavioral Questions",
+        "Salary Negotiation Strategies",
+        "Career Path Planning & Growth",
+        "Effective Job Search Strategies"
+      ]
+    },
+    "quality_validators": {
+      "schema_validation": {
+        "pass": true,
+        "reason": "Schema valid — all required fields present"
+      },
+      "scaffolding": {
+        "pass": true,
+        "reason": "Scaffolding progressive — dependencies build correctly"
+      },
+      "ai_tags": {
+        "pass": true,
+        "reason": "All skills have valid ai_metadata tags"
+      },
+      "capability_breadth": {
+        "pass": true,
+        "reason": "All 5 required domains covered"
+      },
+      "deployment": {
+        "pass": false,
+        "reason": "Milestone M04: deploy_required not set; Milestone M06: deploy_required not set"
+      },
+      "science_distribution": {
+        "pass": true,
+        "reason": "All milestones have valid science counts",
+        "details": [
+          "M01 → scenarios=2 interviews=1 PASS",
+          "M02 → scenarios=2 interviews=1 PASS",
+          "M03 → scenarios=2 interviews=1 PASS",
+          "M04 → scenarios=2 interviews=1 PASS",
+          "M05 → scenarios=2 interviews=1 PASS",
+          "M06 → scenarios=2 interviews=1 PASS"
+        ]
+      },
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": false,
+        "reason": "Milestone M04: project 'Extensible Plugin Architecture for a Text Editor' is not deploy_required — no deployment artifact; Milestone M06: project 'Mock Interview Simulation & Portfolio Refinement' is not deploy_required — no deployment artifact",
+        "violations": [
+          "Milestone M04: project 'Extensible Plugin Architecture for a Text Editor' is not deploy_required — no deployment artifact",
+          "Milestone M06: project 'Mock Interview Simulation & Portfolio Refinement' is not deploy_required — no deployment artifact"
+        ]
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "All skills appear relevant for the target role"
+      },
+      "course_catalog_compliance": {
+        "pass": false,
+        "reason": "Catalog coverage: 57% (32/56) — below 85% threshold; 1 unavailable-course violation(s)",
+        "coverage": 0.571,
+        "mapped": 32,
+        "total": 56,
+        "missing": [
+          "Trees and Graphs",
+          "Heaps and Priority Queues",
+          "Advanced Hash Tables and Sets",
+          "Dynamic Programming",
+          "Advanced Graph Algorithms",
+          "Greedy Algorithms",
+          "Problem Decomposition & Abstraction",
+          "Advanced Time & Space Complexity Analysis",
+          "Test Case Generation & Edge Cases",
+          "TCP/IP and HTTP Protocols"
+        ]
+      },
+      "catalog_quality": {
+        "pass": false,
+        "reason": "24/56 skills unmapped"
+      },
+      "role_alignment": {
+        "pass": false,
+        "reason": "Role alignment: 9% (5/56) — below 80% threshold for 'Software Engineer at a Product-Based Company'. Missing: trees_graphs, heaps_priority_queues, hash_tables_sets, dynamic_programming, problem_decomposition, time_space_complexity, test_case_generation, system_design_principles, load_balancing, api_design",
+        "coverage": 0.089,
+        "matched": 5,
+        "total": 56,
+        "expected_keywords": [
+          "algorithm",
+          "data_structure",
+          "debugging",
+          "design_pattern",
+          "git",
+          "oop",
+          "testing",
+          "version_control"
+        ],
+        "missing": [
+          "trees_graphs",
+          "heaps_priority_queues",
+          "hash_tables_sets",
+          "dynamic_programming",
+          "problem_decomposition",
+          "time_space_complexity",
+          "test_case_generation",
+          "system_design_principles",
+          "load_balancing",
+          "api_design"
+        ]
+      },
+      "capability_gap_alignment": {
+        "pass": true,
+        "reason": "capability_gap range bounds satisfied"
+      },
+      "dynamic_structure": {
+        "pass": false,
+        "reason": "All 6 milestones have 3 modules — no structural diversity",
+        "details": {
+          "fingerprint": "ms(6):[3,3,3,3,3,3]:[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3]:sci[s2i1,s2i1,s2i1,s2i1,s2i1,s2i1]:les[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1]",
+          "milestones": 6,
+          "module_counts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "skill_counts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            3,
+            3
+          ]
+        }
+      }
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": false,
+      "duration_weeks": 37,
+      "budget_hours": 148.0,
+      "demand_hours": 147.0,
+      "weekly_hours_needed": 11.5,
+      "breakdown": {
+        "video_hours": 15.0,
+        "mastery_hours": 84.0,
+        "scenario_hours": 6.0,
+        "interview_hours": 6.0,
+        "project_hours": 36.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": false,
+        "duration_weeks": 37,
+        "budget_hours": 148.0,
+        "demand_hours": 147.0,
+        "weekly_hours_needed": 11.5,
+        "breakdown": {
+          "video_hours": 15.0,
+          "mastery_hours": 84.0,
+          "scenario_hours": 6.0,
+          "interview_hours": 6.0,
+          "project_hours": 36.0
+        }
+      },
+      "time_budget": {
+        "pass": false,
+        "reason": "estimated 142.5h exceeds 125% of budget 64.0h",
+        "budget_hours": 64.0,
+        "estimated_total_hours": 142.5
+      },
+      "starts_where_they_are": {
+        "pass": false,
+        "reason": "37/56 skills misaligned: SKILL_M01_M1_S1 p=0 prior=0.25 diff=0.250; SKILL_M01_M1_S2 p=0 prior=0.242 diff=0.242; SKILL_M01_M1_S3 p=0 prior=0.225 diff=0.225; SKILL_M01_M2_S1 p=0 prior=0.25 diff=0.250; SKILL_M01_M2_S2 p=0 prior=0.223 diff=0.223"
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "beginner or no known_skills — skip check"
+      },
+      "identity_density": {
+        "pass": true,
+        "reason": "identity progression density valid (6 ms for beginner→)"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 0% (0/56). Full JD validation pending.",
+        "filler_ratio": 0.0,
+        "total_skills": 56
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 56 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "Coverage warnings: Milestone M01 missing layer(s): deployment, vibe_architecture; Milestone M02 missing layer(s): deployment, vibe_solution; Milestone M03 missing layer(s): deployment, vibe_planning; Milestone M04 missing layer(s): deployment; Milestone M05 missing layer(s): vibe_architecture, vibe_planning; Milestone M06 missing layer(s): vibe_architecture, vibe_solution",
+        "violations": [],
+        "warns": [
+          "Milestone M01 missing layer(s): deployment, vibe_architecture",
+          "Milestone M02 missing layer(s): deployment, vibe_solution",
+          "Milestone M03 missing layer(s): deployment, vibe_planning",
+          "Milestone M04 missing layer(s): deployment",
+          "Milestone M05 missing layer(s): vibe_architecture, vibe_planning",
+          "Milestone M06 missing layer(s): vibe_architecture, vibe_solution"
+        ]
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "not applicable for low ICP"
+      },
+      "capability_gap_alignment": {
+        "pass": true,
+        "reason": "capability_gap range bounds satisfied"
+      }
+    }
+  }
+}

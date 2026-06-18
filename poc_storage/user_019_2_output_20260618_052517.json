@@ -1,0 +1,1207 @@
+{
+  "artifact_type": "output_roadmap",
+  "user_id": "user_019",
+  "roadmap_id": "ai_roadmap_20260618052240_6216e85a",
+  "generated_at": "2026-06-18T05:25:17.604072",
+  "roadmap": {
+    "roadmap_id": "ai_roadmap_20260618052240_6216e85a",
+    "user_id": "user_019",
+    "icp_type": "low",
+    "level": "intermediate",
+    "target_role": "HR Operations Associate",
+    "language": "en",
+    "starting_milestone": "M01",
+    "current_active_milestone": "M01",
+    "estimated_total_hours": 0,
+    "budget_hours": 89.6,
+    "milestone_count_rationale": "2 milestones: Farheen is an intermediate learner with 7 hours/week, aiming for a significant career shift from school admin to HR operations. Two identity steps provide a balanced progression, building foundational data skills first, then applying them to HR-specific contexts, which aligns with her available time and confidence level.",
+    "vision_profile": {
+      "current_state": "Farheen is a School Admin Assistant with foundational administrative skills, seeking a more growth-oriented office career.",
+      "main_blocker": "Her biggest obstacle is the perceived lack of value of her school admin experience in corporate HR roles and her skill gaps in HR-specific tools and advanced data handling.",
+      "top_motivation": "She is motivated by the desire for a respectable office career with better growth opportunities, while remaining close to her family."
+    },
+    "roadmap_meta": {
+      "generated_at": "2026-06-18T05:24:58.515813",
+      "version": "v3.2",
+      "science_model": [
+        "ZPD",
+        "Mastery Learning",
+        "CLT",
+        "BKT",
+        "Possible Selves",
+        "Retrieval Practice"
+      ]
+    },
+    "milestones": [
+      {
+        "milestone_id": "M01",
+        "label": "M01",
+        "t": "Data & Administrative Operations Specialist",
+        "sal": "₹2-3 LPA",
+        "o": "Learner can efficiently manage, analyze, and present administrative data, demonstrating strong organizational and communication skills applicable to various office environments.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "2 modules because this milestone focuses on two core capability clusters: advanced data handling/reporting and professional communication/presentation, which are essential for a data-driven administrative role.",
+        "identity_statement": "You are transforming into a Data & Administrative Operations Specialist, a professional who brings clarity and efficiency to administrative tasks through data-driven insights and effective communication.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Automated Monthly Attendance & Performance Report",
+          "vibe_layers": [
+            "architecture",
+            "implementation",
+            "deployment"
+          ],
+          "description": "Design and implement a system to collect, clean, and visualize monthly attendance and basic performance data for a small team. The system should generate a clear, presentable report automatically.",
+          "deliverable": "A functional data processing script (conceptual, e.g., using advanced Excel features or basic Python logic) and a dashboard/report template with sample data, along with a brief presentation explaining the system.",
+          "seeded_errors": [
+            "The generated report incorrectly aggregates data for employees with similar names, leading to inaccurate totals."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M1.1",
+            "title": "Advanced Data Handling & Reporting",
+            "ai_first_layer": "implementation",
+            "free": true,
+            "vis": "notebook+code",
+            "skill_count_rationale": "3 skills are needed to cover the progression from basic Excel to structured data wrangling, visualization, and foundational data handling concepts.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M1_S1",
+                "n": "data_wrangling",
+                "title": "Data Wrangling",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Mastering data wrangling is crucial for cleaning and preparing raw data from various sources, a common task in HR operations to ensure data accuracy for reporting and analysis.",
+                "lessons": [
+                  "Data Cleaning Techniques",
+                  "Data Transformation with Pandas (conceptual)",
+                  "Handling Missing Values"
+                ],
+                "p": 27,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.266,
+                    "learn_rate": 0.162,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S1",
+                    "title": "Introduction to Data Wrangling",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S1",
+                    "title": "Correcting Inconsistent Employee Records",
+                    "difficulty": 0.4,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S2",
+                "n": "data_visualization",
+                "title": "Data Visualization",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "analysis",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Effective data visualization allows HR professionals to present complex employee data, trends, and reports in an easily understandable format to stakeholders, aiding decision-making.",
+                "lessons": [
+                  "Choosing Chart Types",
+                  "Creating Basic Dashboards",
+                  "Interpreting Visualizations"
+                ],
+                "p": 26,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.259,
+                    "learn_rate": 0.156,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S2",
+                    "title": "Principles of Effective Data Visualization",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S2",
+                    "title": "Generating a Monthly Attendance Report from Raw Data",
+                    "difficulty": 0.5,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M1_S3",
+                "n": "algorithms_data_handling",
+                "title": "Algorithms & Data Handling",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "optimization",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Understanding basic algorithms and data handling principles helps in organizing and retrieving employee data efficiently, laying the groundwork for more complex HR systems.",
+                "lessons": [
+                  "Introduction to Data Structures",
+                  "Searching and Sorting Concepts",
+                  "Basic Database Interactions (conceptual)"
+                ],
+                "p": 24,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.241,
+                    "learn_rate": 0.142,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M1_S3",
+                    "title": "Efficient Data Storage and Retrieval",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M01_M1_S3",
+                    "title": "Optimizing Record Search for a Large Employee Database",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M01_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "You need to consolidate employee contact information from three different spreadsheets, each with varying formats and missing entries, into a single, clean master list."
+              },
+              {
+                "type": "Scenario",
+                "desc": "A manager requests a visual report on departmental leave trends for the last quarter. You must choose appropriate charts and present the data clearly to highlight key insights."
+              },
+              {
+                "type": "Scenario",
+                "desc": "You are tasked with designing a simple system to track employee training completions. How would you structure the data to allow for quick lookups and reporting on compliance?"
+              }
+            ]
+          },
+          {
+            "id": "M1.2",
+            "title": "Professional Communication & Data Presentation",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "real_tutor+ppt",
+            "skill_count_rationale": "3 skills are selected to develop capabilities in structured communication, presenting analytical findings, and understanding data flow for effective cross-system communication.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M01_M2_S1",
+                "n": "collaboration_tools",
+                "title": "Collaboration & Tools",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Effective collaboration and tool usage are essential for working in a team-based HR environment, ensuring smooth information exchange and project coordination.",
+                "lessons": [
+                  "Effective Email Communication",
+                  "Documenting Processes",
+                  "Collaborative Document Editing"
+                ],
+                "p": 27,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.266,
+                    "learn_rate": 0.162,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S1",
+                    "title": "Mastering Workplace Communication Tools",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S2",
+                "n": "case_studies",
+                "title": "Case Studies",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Analyzing and presenting solutions from case studies helps develop critical thinking and the ability to articulate data-backed recommendations in a professional setting.",
+                "lessons": [
+                  "Problem Framing & Analysis",
+                  "Structuring a Business Report",
+                  "Presenting Findings Clearly"
+                ],
+                "p": 26,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.259,
+                    "learn_rate": 0.156,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S2",
+                    "title": "Crafting Compelling Business Presentations",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M01_M2_S3",
+                "n": "api_design_conceptual",
+                "title": "API Design & Service Layer",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "automation",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Understanding conceptual API design helps in comprehending how different HR systems exchange data, which is crucial for integrating tools and troubleshooting data flow issues in HR operations.",
+                "lessons": [
+                  "Understanding Data Requests",
+                  "Data Exchange Formats (JSON/CSV)",
+                  "Basic System Integration Concepts"
+                ],
+                "p": 24,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.241,
+                    "learn_rate": 0.142,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M01_M2_S3",
+                    "title": "How Systems Talk: An Introduction to APIs",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M01_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "low_level_system_design",
+                "catalog_match_confidence": 0.95,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe how you would explain a complex administrative process or a data-driven insight to a non-technical stakeholder, ensuring clarity and understanding."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "milestone_id": "M02",
+        "label": "M02",
+        "t": "HR Operations Support Associate",
+        "sal": "₹3-5 LPA",
+        "o": "Learner can apply data management principles to HR-specific tasks, handle employee data securely, assist with payroll reporting, and understand the functionality of HR tools and processes.",
+        "sc_n": 3,
+        "iv": 1,
+        "module_count_rationale": "2 modules are chosen to cover the application of data skills to HR-specific contexts, including employee data management, basic payroll, and familiarity with HR process automation and tools.",
+        "identity_statement": "You are now an HR Operations Support Associate, equipped to manage critical employee data, streamline HR processes, and contribute to a smooth and efficient HR department.",
+        "checkpoint_rule": {
+          "required_mastery": 0.9,
+          "checkpoint_type": "mock_interview"
+        },
+        "project": {
+          "title": "Employee Onboarding Data Flow & Reporting System",
+          "vibe_layers": [
+            "architecture",
+            "implementation",
+            "deployment"
+          ],
+          "description": "Design a conceptual system for managing employee onboarding data, from initial entry to integration with a basic payroll system. Include data validation, reporting capabilities for new hires, and a plan for data security.",
+          "deliverable": "A detailed process flow diagram, conceptual database schema, a sample 'new hire' report, and a brief document outlining data security and privacy considerations.",
+          "seeded_errors": [
+            "The proposed data flow inadvertently creates duplicate entries for employees who have previously worked for the company, leading to inaccurate headcount."
+          ],
+          "deploy_required": true
+        },
+        "modules": [
+          {
+            "id": "M2.1",
+            "title": "Employee Data Management & Basic Payroll Reporting",
+            "ai_first_layer": "implementation",
+            "free": false,
+            "vis": "notebook+ppt",
+            "skill_count_rationale": "3 skills are necessary to cover the core aspects of structured data storage, building data processing pipelines for HR, and ensuring data quality in operational contexts.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M1_S1",
+                "n": "databases_storage",
+                "title": "Databases & Storage",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "automation",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Understanding databases is fundamental for managing large volumes of employee data securely and efficiently, which is a core responsibility in HR operations.",
+                "lessons": [
+                  "Relational Database Concepts",
+                  "Basic SQL Queries (conceptual)",
+                  "Data Security & Privacy Basics"
+                ],
+                "p": 7,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.066,
+                    "learn_rate": 0.362,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M01_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S1",
+                    "title": "Foundations of Data Storage for HR",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S1",
+                    "title": "Designing a Simple Employee Database Schema",
+                    "difficulty": 0.6,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S2",
+                "n": "feature_engineering_pipelines",
+                "title": "Feature Engineering & Pipelines",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "automation",
+                  "automation_level": "autonomous"
+                },
+                "why_this_skill": "Learning about data pipelines helps automate routine HR data processing tasks, such as preparing data for payroll or benefits administration, reducing manual effort and errors.",
+                "lessons": [
+                  "Data Ingestion & Transformation",
+                  "Building Data Pipelines (conceptual)",
+                  "Automating Report Generation"
+                ],
+                "p": 6,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.058,
+                    "learn_rate": 0.356,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S2",
+                    "title": "Automating HR Data Workflows",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S2",
+                    "title": "Reconciling Payroll Discrepancies from Multiple Sources",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "machine_learning",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M1_S3",
+                "n": "mlops_monitoring",
+                "title": "Monitoring & Observability",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "debugging",
+                  "usage_type": "optimization",
+                  "automation_level": "agent"
+                },
+                "why_this_skill": "Applying monitoring principles to HR data processes ensures data quality, identifies issues early, and maintains the integrity of critical employee information, preventing costly errors.",
+                "lessons": [
+                  "Data Quality Checks",
+                  "Process Monitoring & Alerts",
+                  "Troubleshooting Data Discrepancies"
+                ],
+                "p": 4,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.041,
+                    "learn_rate": 0.342,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M1_S3",
+                    "title": "Ensuring Data Integrity in HR Systems",
+                    "status": "locked"
+                  },
+                  "scenario": {
+                    "content_id": "SCN_M02_M1_S3",
+                    "title": "Updating Employee Records Across Multiple Systems",
+                    "difficulty": 0.7,
+                    "status": "locked"
+                  },
+                  "mock": {
+                    "content_id": "MOCK_M02_M1_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "",
+                "catalog_match_confidence": 0.9,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Scenario",
+                "desc": "You discover that the employee attendance data from the biometric system is not syncing correctly with the HRMS, leading to discrepancies in leave balances. How do you identify and resolve the root cause?"
+              },
+              {
+                "type": "Scenario",
+                "desc": "A new regulatory requirement demands a specific format for employee demographic data. You need to transform existing data to meet this new standard without losing information."
+              },
+              {
+                "type": "Scenario",
+                "desc": "The monthly payroll report shows an anomaly where several employees have incorrect overtime calculations. You must trace the data flow to pinpoint where the error occurred and correct it."
+              }
+            ]
+          },
+          {
+            "id": "M2.2",
+            "title": "HR Process Automation & Tool Familiarity",
+            "ai_first_layer": "optimization",
+            "free": false,
+            "vis": "ppt+animation",
+            "skill_count_rationale": "3 skills are selected to introduce conceptual understanding of cloud-based HR tools, leveraging AI for HR tasks, and synthesizing all learned skills into practical HR operations projects.",
+            "skills": [
+              {
+                "skill_id": "SKILL_M02_M2_S1",
+                "n": "cloud_deployment_conceptual",
+                "title": "Cloud & Deployment",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "deployment",
+                  "usage_type": "decision_support",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "Understanding cloud concepts is vital as most modern HRMS and HR tools are cloud-based SaaS solutions. This knowledge helps in navigating and utilizing these platforms effectively.",
+                "lessons": [
+                  "Introduction to Cloud Services",
+                  "SaaS Application Concepts",
+                  "Data Access & Permissions in Cloud Tools"
+                ],
+                "p": 6,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.056,
+                    "learn_rate": 0.354,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M1_S3"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S1",
+                    "title": "Navigating Cloud-Based HR Systems",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S1",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "ai_ready",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S2",
+                "n": "prompting_inference_hr",
+                "title": "Prompting & Inference Techniques",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "generation",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "As AI integrates into HR tools, understanding how to effectively 'prompt' or interact with these systems (e.g., chatbots, report generators) is crucial for maximizing their utility in HR operations.",
+                "lessons": [
+                  "Crafting Clear Instructions for AI",
+                  "Interpreting AI Responses",
+                  "Using AI for Document Generation (basic)"
+                ],
+                "p": 6,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.058,
+                    "learn_rate": 0.356,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S1"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S2",
+                    "title": "Interacting with AI-Powered HR Assistants",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S2",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "generative_ai",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              },
+              {
+                "skill_id": "SKILL_M02_M2_S3",
+                "n": "capstone_career_readiness_hr",
+                "title": "Capstone & Career Readiness",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "architecture",
+                  "usage_type": "planning",
+                  "automation_level": "assistant"
+                },
+                "why_this_skill": "This capstone skill integrates all learned concepts into a practical HR operations project, preparing the learner for real-world challenges and demonstrating job readiness.",
+                "lessons": [
+                  "Project Planning & Scoping",
+                  "Stakeholder Management",
+                  "Presenting Project Outcomes"
+                ],
+                "p": 5,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.051,
+                    "learn_rate": 0.35,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [
+                    "SKILL_M02_M2_S2"
+                  ],
+                  "minimum_mastery": 0.7,
+                  "unlock_type": "prerequisite"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_M02_M2_S3",
+                    "title": "Building Your HR Operations Portfolio",
+                    "status": "locked"
+                  },
+                  "scenario": null,
+                  "mock": {
+                    "content_id": "MOCK_M02_M2_S3",
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "analytics": {
+                  "attempts": 0,
+                  "average_score": 0,
+                  "time_spent_minutes": 0,
+                  "last_activity_at": null
+                },
+                "catalog_course_id": "high_level_system_design",
+                "catalog_match_confidence": 1.0,
+                "catalog_status": "mapped"
+              }
+            ],
+            "science": [
+              {
+                "type": "Interview",
+                "desc": "Describe how you would approach implementing a new HR policy or process (e.g., a new leave request system) using data and existing HR tools, from planning to execution and monitoring."
+              }
+            ]
+          },
+          {
+            "id": "M2.3",
+            "title": "Breadth: Foundations",
+            "ai_first_layer": "architecture",
+            "free": true,
+            "vis": "code+real_tutor",
+            "module_type": "breadth",
+            "breadth_injected": true,
+            "breadth_domain": "foundations",
+            "skill_count_rationale": "Breadth reinforcement module injected by capability breadth enforcement for domain: foundations",
+            "skills": [
+              {
+                "skill_id": "SKILL_BREADTH_foundations_6231",
+                "n": "foundations",
+                "title": "Core Concepts",
+                "auto_completed": false,
+                "ai_metadata": {
+                  "ai_first": true,
+                  "layer": "implementation",
+                  "usage_type": "analysis",
+                  "automation_level": "copilot"
+                },
+                "why_this_skill": "Covers required domain: foundations",
+                "lessons": [
+                  "Core Concepts — Part 1",
+                  "Core Concepts — Part 2",
+                  "Core Concepts — Part 3"
+                ],
+                "p": 0,
+                "mastery_state": {
+                  "state": "unlocked",
+                  "current_mastery": 0.0,
+                  "target_mastery": 0.9,
+                  "bkt": {
+                    "prior": 0.15,
+                    "learn_rate": 0.25,
+                    "guess": 0.1,
+                    "slip": 0.05
+                  }
+                },
+                "unlock_rules": {
+                  "requires": [],
+                  "minimum_mastery": 0.0,
+                  "unlock_type": "immediate"
+                },
+                "content_flow": {
+                  "video": {
+                    "content_id": "VID_SKILL_BREADTH_foundations_6231",
+                    "title": "Core Concepts",
+                    "status": "locked"
+                  },
+                  "scenario": {},
+                  "mock": {
+                    "unlock_mastery": 0.75,
+                    "status": "locked"
+                  },
+                  "review": {
+                    "review_type": "spaced_repetition",
+                    "next_review_at": null
+                  }
+                },
+                "estimated_hours": 3,
+                "catalog_status": "missing"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timeline_days": 112,
+    "years_experience": 2,
+    "current_salary_lpa": 1.7,
+    "known_skills": [
+      "record keeping",
+      "parent communication",
+      "MS Word",
+      "basic Excel",
+      "document filing"
+    ],
+    "capability_gap": {
+      "gap_score": 0.14,
+      "recommended_milestones": 2,
+      "recommended_modules_per_milestone": 2,
+      "recommended_skill_density": 3,
+      "skill_readiness_score": 0.3,
+      "beginner_penalties": {
+        "career_transition": 0.0,
+        "foundation": 0.0,
+        "domain_switch": 0.0,
+        "readiness": 0.14,
+        "zero_experience": 0.0
+      },
+      "reasoning": "Gap analysis: identity_distance=0.00; experience_mod=0.20; career_penalty=0.00; foundation_penalty=0.00; domain_penalty=0.00; readiness_penalty=0.14; zero_exp_penalty=0.00; skill_mod=-0.20; gap_score=0.14. Recommend 2 milestone(s), 2 module(s) per milestone, 3 skill(s) per module."
+    },
+    "capability_breadth": {
+      "breadth_score": 0.4,
+      "required_domains": [
+        "foundations"
+      ]
+    },
+    "catalog_stats": {
+      "coverage": 0.923,
+      "mapped": 12,
+      "total": 13,
+      "missing": [
+        "Core Concepts"
+      ]
+    },
+    "_removed_known_skills": [],
+    "total_skills": 12,
+    "quality_validators": {
+      "schema_validation": {
+        "pass": true,
+        "reason": "Schema valid — all required fields present"
+      },
+      "scaffolding": {
+        "pass": true,
+        "reason": "Scaffolding progressive — dependencies build correctly"
+      },
+      "ai_tags": {
+        "pass": true,
+        "reason": "All skills have valid ai_metadata tags"
+      },
+      "capability_breadth": {
+        "pass": true,
+        "reason": "All 1 required domains covered"
+      },
+      "deployment": {
+        "pass": true,
+        "reason": "All projects have deploy_required=True"
+      },
+      "science_distribution": {
+        "pass": true,
+        "reason": "All milestones have 3-7 scenarios and 1 interview",
+        "details": [
+          "M01 → scenarios=3 interviews=1 PASS",
+          "M02 → scenarios=3 interviews=1 PASS"
+        ]
+      },
+      "milestone_identity_quality": {
+        "pass": true,
+        "reason": "All milestone titles are professional identities"
+      },
+      "capability_progression": {
+        "pass": true,
+        "reason": "Capability progression is sound — no duplicate titles, no regression"
+      },
+      "project_quality": {
+        "pass": true,
+        "reason": "All projects have meaningful implementation + deployment"
+      },
+      "salary_progression": {
+        "pass": true,
+        "reason": "Salary progression is non-decreasing"
+      },
+      "skill_relevance": {
+        "pass": true,
+        "reason": "No forbidden skills for this target role"
+      },
+      "course_catalog_compliance": {
+        "pass": true,
+        "reason": "Catalog coverage: 92% (12/13) — all good",
+        "coverage": 0.923,
+        "mapped": 12,
+        "total": 13,
+        "missing": [
+          "Core Concepts"
+        ]
+      },
+      "catalog_quality": {
+        "pass": true,
+        "reason": "All catalog mappings healthy"
+      }
+    },
+    "fits_life": {
+      "fits": true,
+      "fits_at_default": true,
+      "duration_weeks": 16,
+      "budget_hours": 89.6,
+      "demand_hours": 46.3,
+      "weekly_hours_needed": 3.6,
+      "breakdown": {
+        "video_hours": 9.8,
+        "mastery_hours": 19.5,
+        "scenario_hours": 3.0,
+        "interview_hours": 2.0,
+        "project_hours": 12.0
+      }
+    },
+    "bible_validators": {
+      "fits_life": {
+        "fits": true,
+        "fits_at_default": true,
+        "duration_weeks": 16,
+        "budget_hours": 89.6,
+        "demand_hours": 46.3,
+        "weekly_hours_needed": 3.6,
+        "breakdown": {
+          "video_hours": 9.8,
+          "mastery_hours": 19.5,
+          "scenario_hours": 3.0,
+          "interview_hours": 2.0,
+          "project_hours": 12.0
+        }
+      },
+      "time_budget": {
+        "pass": true,
+        "reason": "estimated 0h within 125% of budget 89.6h",
+        "budget_hours": 89.6,
+        "estimated_total_hours": 0
+      },
+      "starts_where_they_are": {
+        "pass": true,
+        "reason": "Initial mastery priors align with learner level and BKT estimates."
+      },
+      "known_skill_skip": {
+        "pass": true,
+        "reason": "all known skills removed from teachable content — MD compliant"
+      },
+      "laugh_test": {
+        "pass": true,
+        "reason": "Laugh test passed — filler ratio 0% (0/13). Full JD validation pending.",
+        "filler_ratio": 0.0,
+        "total_skills": 13
+      },
+      "no_spectators": {
+        "pass": true,
+        "reason": "No spectator violations — every skill has applied activities"
+      },
+      "dag_clean": {
+        "pass": true,
+        "reason": "DAG clean — 13 unique skills, all prerequisites backward-only"
+      },
+      "ai_first": {
+        "pass": true,
+        "reason": "AI-first check passed — all milestones have multi-layer AI work"
+      },
+      "salary_floor": {
+        "pass": true,
+        "reason": "not applicable for low ICP"
+      },
+      "capability_gap_alignment": {
+        "pass": false,
+        "reason": "Milestone M02: expected 2 module(s), got 3"
+      }
+    }
+  }
+}
