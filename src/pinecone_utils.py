@@ -14,11 +14,8 @@ CHANGES vs. original (all HF-deployment bugs fixed):
 
 import os
 import re
-<<<<<<< HEAD
 import gzip
 import base64
-=======
->>>>>>> 05dce03 (Clean initial commit)
 from typing import Optional
 
 # ── Use the centralised, sanitised config ────────────────────
@@ -443,12 +440,9 @@ def fetch_poc_record(
 ) -> str:
     """
     Fetch a single record from Pinecone namespace.
-<<<<<<< HEAD
 
     Handles both uncompressed and gzip-compressed records
     (``compressed=True`` in metadata).
-=======
->>>>>>> 05dce03 (Clean initial commit)
     """
 
     try:

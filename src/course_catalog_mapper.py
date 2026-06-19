@@ -168,6 +168,18 @@ AVAILABLE_COURSES = {
     },
 }
 
+UNAVAILABLE_COURSES = [
+    "Data Science Course (44% complete — not ready)",
+    "NLP (20% complete — not ready)",
+    "Robotics (not started)",
+    "FastAPI standalone (not started)",
+    "Git & Github standalone (not started)",
+    "AWS Masterclass (not started)",
+    "DevOps (not started)",
+    "MLOps (not started)",
+    "Soft Skills (not started)",
+    "Project Manager (not started)",
+]
 
 def normalize_skill_name(name: str) -> str:
     """Lowercase, remove punctuation, replace underscores with spaces, collapse whitespace.

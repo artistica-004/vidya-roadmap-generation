@@ -18,7 +18,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from src.roadmap_agent import run_pipeline
-from src.pinecone_utils import retrieve_raw_context
+from src.pinecone_utils import fetch_poc_record, retrieve_raw_context
 
 # =====================================================
 # SPEC-LOCKED MILESTONE SALARY DATA (M01–M07 keyed)
@@ -645,7 +645,12 @@ if mode == "Real":
     if user_id:
         if st.button("🔍 Fetch Pinecone Data"):
             with st.spinner("Fetching..."):
-                raw = retrieve_raw_context(user_id)
+                raw = fetch_poc_record(user_id=user_id, record_id=f"{user_id}_onboarding_conversation")
+                if not raw:
+                    raw = fetch_poc_record(user_id=user_id, record_id="onboarding_conversation")
+                if not raw:
+                    from src.pinecone_utils import retrieve_raw_context
+                    raw = retrieve_raw_context(user_id)
             if raw:
                 st.success("✅ Found")
                 st.text_area("Raw context", value=raw, height=180)
@@ -790,7 +795,12 @@ STRUCTURED DATA:
                 st.error("Enter a User ID.")
                 st.stop()
             with st.spinner("Fetching Pinecone context..."):
-                raw = retrieve_raw_context(user_id)
+                raw = fetch_poc_record(user_id=user_id, record_id=f"{user_id}_onboarding_conversation")
+                if not raw:
+                    raw = fetch_poc_record(user_id=user_id, record_id="onboarding_conversation")
+                if not raw:
+                    from src.pinecone_utils import retrieve_raw_context
+                    raw = retrieve_raw_context(user_id)
             if not raw:
                 st.error("❌ No data for this user.")
                 st.stop()
@@ -854,6 +864,9 @@ if st.session_state.roadmap_data:
         or st.session_state.generated_onboarding_json.get("target_role", "")
     ).lower().strip()
 
+    # ── Career stage (separate from icp_type) ──
+    _stage = rd.get("career_stage", "fresher" if is_low else "professional")
+
     # ── ICP + Level badges ──
     st.markdown("---")
     icp_style = (
@@ -863,7 +876,7 @@ if st.session_state.roadmap_data:
     )
     icp_label = (
         "🏢 Professional Track"
-        if not is_low else
+        if _stage == "professional" else
         "🎓 Fresher / Student Track"
     )
 
@@ -1086,13 +1099,12 @@ if st.session_state.roadmap_data:
                 is_free   = mod.get("free", False)
                 vis_type  = mod.get("vis", "")
                 skills    = mod.get("skills", [])
-                lessons   = extract_module_lessons(mod)
                 science   = mod.get("science", [])
 
                 free_tag = " 🔓 Free" if is_free else " 🔒"
                 expander_label = (
                     f"📦 {mod_id}. {mod_title}{free_tag}"
-                    f"  ·  {len(skills)} skills  ·  {len(lessons)} lessons"
+                    f"  ·  {len(skills)} skills"
                 )
 
                 with st.expander(expander_label):
@@ -1113,20 +1125,6 @@ if st.session_state.roadmap_data:
                             f'<div class="module-desc">{mod_desc}</div>',
                             unsafe_allow_html=True
                         )
-
-                    # ── Lessons list ──
-                    if lessons:
-                        st.markdown(
-                            '<div style="font-size:12px;font-weight:700;color:#6b7280;'
-                            'text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">'
-                            '🎬 Lessons</div>',
-                            unsafe_allow_html=True
-                        )
-                        lessons_html = "".join(
-                            f'<div class="lesson-item">▶ {lesson}</div>'
-                            for lesson in lessons
-                        )
-                        st.markdown(lessons_html, unsafe_allow_html=True)
 
                     # ── Science: Scenarios / Interviews ──
                     if science:
@@ -1159,9 +1157,11 @@ if st.session_state.roadmap_data:
                             unsafe_allow_html=True
                         )
 
-                    for skill in skills:
+                    for skill_idx, skill in enumerate(skills):
+                        s_ordinal = skill.get("ordinal", skill_idx + 1)
                         s_title = skill.get("title", skill.get("n", ""))
                         s_desc  = skill.get("description", "")
+                        skill_lessons = skill.get("lessons", [])
 
                         mastery_state = skill.get("mastery_state", {})
                         p_val         = skill.get("p", None)
@@ -1183,6 +1183,14 @@ if st.session_state.roadmap_data:
 
                         bg, border, state_lbl = skill_state_color(s_state)
 
+                        # Lessons inside skill card
+                        skill_lessons_html = ""
+                        if skill_lessons:
+                            skill_lessons_html = '<div style="margin-top:10px;margin-bottom:10px;">'
+                            for lesson in skill_lessons:
+                                skill_lessons_html += f'<div class="lesson-item">▶ {lesson}</div>'
+                            skill_lessons_html += '</div>'
+
                         content_flow  = skill.get("content_flow", {})
                         video    = content_flow.get("video", {})
                         scenario = content_flow.get("scenario", {})
@@ -1202,7 +1210,7 @@ if st.session_state.roadmap_data:
                         st.markdown(f"""
 <div class="skill-card" style="background:{bg};border-color:{border};">
   <div class="skill-status-row">
-    <div class="skill-title">{s_title}</div>
+    <div class="skill-title">Skill {s_ordinal}: {s_title}</div>
     <span class="state-pill" style="background:{bg};border:1px solid {border};color:{border};">
       {state_lbl}
     </span>
@@ -1214,6 +1222,7 @@ if st.session_state.roadmap_data:
   <div style="font-size:11px;color:#5a5a7a;margin-bottom:10px;">
     Progress: {mastery_pct}% &nbsp;·&nbsp; Target: {int(target_mastery * 100)}%
   </div>
+  {skill_lessons_html}
   <div class="content-tags">{content_tags}</div>
 </div>
 """, unsafe_allow_html=True)
@@ -1236,21 +1245,4 @@ if st.session_state.roadmap_data:
         file_name="vidya_roadmap_v3.json",
         mime="application/json",
         key="download_roadmap_json"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     )
-=======
-    )
->>>>>>> 05dce03 (Clean initial commit)
-=======
-    )
->>>>>>> 05dce03 (Clean initial commit)
-=======
-    )
->>>>>>> af0bd63 (Update app.py)
-=======
-    )
-    
->>>>>>> 5047847 (Phase 4 roadmap fixes and onboarding improvements)

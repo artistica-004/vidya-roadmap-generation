@@ -18,6 +18,7 @@ The returned dict contains:
 
     gap_score                    float  0.0–1.0
     recommended_milestones       int    2–7
+
     recommended_modules_per_milestone  int  2–4
     recommended_skill_density    int    3–8
     reasoning                    str    human-readable explanation
@@ -26,6 +27,10 @@ The returned dict contains:
 import math
 import re
 from typing import List, Dict, Tuple
+
+# Skill density bounds — single source of truth matching roadmap_agent.py constants
+MIN_SKILLS = 3
+MAX_SKILLS = 8
 
 # ── Role families ────────────────────────────────────────────────
 # Roles within the same family are considered adjacent; identity
@@ -437,8 +442,11 @@ def _recommend_modules(gap_score: float) -> tuple:
 
 
 def _recommend_skill_density(gap_score: float, weekly_hours: int) -> tuple:
-    """Return (max_skills, rationale). Count is a bound, not a target."""
-    base = 3
+    """Return (max_skills, rationale). Count is a bound, not a target.
+
+    Aligned with MIN_SKILLS=3 / MAX_SKILLS=8 from roadmap_agent.py constants.
+    """
+    base = MIN_SKILLS  # start from shared constant
     parts = [f"gap_score={gap_score:.2f}"]
     if gap_score > 0.50:
         base += 1
@@ -452,7 +460,7 @@ def _recommend_skill_density(gap_score: float, weekly_hours: int) -> tuple:
     if weekly_hours >= 25:
         base += 1
         parts.append(f"hours={weekly_hours}≥25 → +1")
-    max_skills = min(base, 8)
+    max_skills = min(base, MAX_SKILLS)
     parts.append(f"max={max_skills}")
     return max_skills, "; ".join(parts)
 
@@ -623,6 +631,84 @@ def compute_gap_score(
     }
 
 
+# ── Role-specific domain maps ─────────────────────────────────
+# Each role family maps to appropriate breadth domains.
+# Analyst roles get business/analytics domains (NOT engineering).
+_ROLE_DOMAIN_MAP: Dict[str, List[str]] = {
+    "analyst": [
+        "business_analytics", "data_visualization", "sql_analytics",
+        "statistical_analysis", "reporting",
+    ],
+    "data": [
+        "data_modeling", "statistics", "ml_pipelines", "deployment",
+    ],
+    "backend": [
+        "distributed_systems", "api_design", "architecture",
+    ],
+    "fullstack": [
+        "distributed_systems", "api_design", "architecture",
+    ],
+    "frontend": [
+        "ui_architecture", "performance", "testing",
+    ],
+    "ai": [
+        "ml_pipelines", "experimentation", "deployment",
+    ],
+    "devops": [
+        "infrastructure", "ci_cd", "monitoring", "cloud_architecture",
+    ],
+    "mobile": [
+        "mobile_architecture", "app_performance", "cross_platform",
+    ],
+    "security": [
+        "security_architecture", "threat_modeling", "compliance",
+    ],
+    "product": [
+        "product_strategy", "user_research", "metrics_analytics",
+    ],
+    "design": [
+        "design_systems", "user_research", "prototyping",
+    ],
+}
+
+
+def _detect_role_category(target_role: str) -> str:
+    """Classify target role into a breadth domain category.
+
+    Returns one of the keys in _ROLE_DOMAIN_MAP, or None.
+    """
+    tgt = target_role.lower()
+
+    # Analyst category is a subset of data roles that should NOT
+    # get engineering domains (deployment, ml_pipelines, etc.)
+    _analyst_keywords = {"analyst", "analytics", "bi ", "business intelligence",
+                         "reporting", "dashboard"}
+
+    for kw in _analyst_keywords:
+        if kw in tgt:
+            return "analyst"
+
+    role_categories = {
+        "data": {"data", "ml", "machine learning", "data science"},
+        "backend": {"backend", "back end", "server", "api"},
+        "fullstack": {"fullstack", "full stack"},
+        "frontend": {"frontend", "front end", "ui", "web developer"},
+        "ai": {"ai", "artificial intelligence", "deep learning", "llm"},
+        "devops": {"devops", "sre", "platform", "infrastructure", "cloud"},
+        "mobile": {"mobile", "android", "ios", "flutter"},
+        "security": {"security", "cyber"},
+        "product": {"product manager", "product analyst", "program manager"},
+        "design": {"designer", "ux", "ui designer"},
+    }
+
+    for category, keywords in role_categories.items():
+        for kw in keywords:
+            if kw in tgt:
+                return category
+
+    return None
+
+
 def compute_capability_breadth(
     gap_score: float = 0.5,
     current_role: str = "",
@@ -653,35 +739,33 @@ def compute_capability_breadth(
 
     required_domains = []
 
+    # Role-specific breadth domains (role-category-aware)
+    category = _detect_role_category(target_role)
+    if category and category in _ROLE_DOMAIN_MAP:
+        required_domains.extend(_ROLE_DOMAIN_MAP[category])
+
     # Leadership / seniority domains
     if "senior" in target_role or "lead" in target_role or "principal" in target_role or "architect" in target_role:
         required_domains.extend(["system_design", "leadership"])
     if "lead" in target_role or "manager" in target_role:
         required_domains.append("team_management")
 
-    # Technical domains by target role family
-    for family_name, _ in _ROLE_FAMILIES.items():
-        t_match = any(m in target_role for m in _ROLE_FAMILIES[family_name])
-        if not t_match:
-            continue
-        if family_name in ("backend", "fullstack", "software"):
-            required_domains.extend(["distributed_systems", "api_design", "architecture"])
-        elif family_name == "data":
-            required_domains.extend(["data_modeling", "statistics", "ml_pipelines", "deployment"])
-        elif family_name == "frontend":
-            required_domains.extend(["ui_architecture", "performance", "testing"])
-        elif family_name == "ai":
-            required_domains.extend(["ml_pipelines", "experimentation", "deployment"])
-
     # Cross-family transitions need more breadth
     if not same_family:
         required_domains.append("foundations")
 
-    # Gap amplifies breadth
+    # Gap amplifies breadth with role-appropriate domains
+    # (analyst roles get business_analytics_depth, NOT engineering domains)
     if gap_score > 0.65:
-        required_domains.append("scalability")
+        if category == "analyst":
+            required_domains.append("advanced_analytics")
+        else:
+            required_domains.append("scalability")
     if gap_score > 0.80:
-        required_domains.append("advanced_architecture")
+        if category == "analyst":
+            required_domains.append("data_strategy")
+        else:
+            required_domains.append("advanced_architecture")
 
     # Deduplicate while preserving order
     seen = set()
